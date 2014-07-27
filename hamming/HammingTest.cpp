@@ -1,6 +1,10 @@
 #include "CppUTest/TestHarness.h"
 
-#include "Hamming.h"
+// Intentional #include of non-header file. To those learning C++,
+// don't ever do this in a real project. Instead, #include only
+// header files with some sort of header guard or pragma.
+// Submit the following file to exercism:
+#include "Hamming.cpp"
 
 TEST_GROUP(HammingTestGroup)
 {
