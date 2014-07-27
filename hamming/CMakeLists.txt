@@ -13,5 +13,18 @@ set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
 set (CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/lib)
 set (CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/lib)
 
-add_subdirectory(src)
-add_subdirectory(tests)
+add_library(Hamming ./Hamming.cpp)
+
+# include CppUTest headers
+include_directories($ENV{CPPUTEST_HOME}/include)
+
+# add cpputest library
+add_library(imp_cpputest STATIC IMPORTED)
+set_property(TARGET imp_cpputest PROPERTY
+             IMPORTED_LOCATION $ENV{CPPUTEST_HOME}/lib/libCppUTest.a)
+
+# build test library for Hamming
+add_library(HammingTest ./HammingTest.cpp)
+
+add_executable(RunAllTests RunAllTests.cpp)
+target_link_libraries(RunAllTests imp_cpputest HammingTest Hamming)
