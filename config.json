@@ -6,7 +6,9 @@
   "problems": [
     "bob",
     "word-count",
-    "hamming"
+    "hamming",
+    "anagram",
+    "food-chain"
   ],
   "deprecated": [
 
