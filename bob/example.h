@@ -5,7 +5,7 @@
 
 namespace bob {
 
-std::string hey(std::string const& text);
+extern std::string hey(std::string const& text);
 
 }
 

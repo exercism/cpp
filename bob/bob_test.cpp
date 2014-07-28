@@ -54,16 +54,6 @@ BOOST_AUTO_TEST_CASE(shouting_with_special_characters)
     BOOST_REQUIRE_EQUAL("Woah, chill out!", bob::hey("ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!"));
 }
 
-BOOST_AUTO_TEST_CASE(shouting_with_umlauts)
-{
-    BOOST_REQUIRE_EQUAL("Woah, chill out!", bob::hey("\xdcML\xc4\xdcTS!"));
-}
-
-BOOST_AUTO_TEST_CASE(calmly_speaking_about_umlauts)
-{
-    BOOST_REQUIRE_EQUAL("Whatever.", bob::hey("\xdcML\xe4\xdcTS"));
-}
-
 BOOST_AUTO_TEST_CASE(shouting_with_no_exclamation_mark)
 {
     BOOST_REQUIRE_EQUAL("Woah, chill out!", bob::hey("I HATE YOU"));
