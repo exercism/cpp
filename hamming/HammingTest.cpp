@@ -1,10 +1,6 @@
 #include "CppUTest/TestHarness.h"
 
-// WARNING: Intentional #include of non-header file. Don't do this in a real
-// project. Instead, #include only header files with a header guard or pragma.
-//
-// Submit the following file to exercism:
-#include "Hamming.cpp"
+#include "Hamming.h"
 
 TEST_GROUP(HammingTestGroup)
 {
