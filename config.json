@@ -4,7 +4,8 @@
   "repository": "https://github.com/exercism/xcpp",
   "active": true,
   "problems": [
-    "bob"
+    "bob",
+    "word-count"
   ],
   "deprecated": [
 
