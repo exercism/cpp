@@ -5,7 +5,8 @@
   "active": true,
   "problems": [
     "bob",
-    "word-count"
+    "word-count",
+    "hamming"
   ],
   "deprecated": [
 
