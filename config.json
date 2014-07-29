@@ -9,7 +9,8 @@
     "hamming",
     "anagram",
     "food-chain",
-    "beer-song"
+    "beer-song",
+    "nucleotide-count"
   ],
   "deprecated": [
 
