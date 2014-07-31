@@ -11,9 +11,13 @@ public:
     std::string area_code() const;
     std::string number() const;
 
-    operator std::string() const;
+    explicit operator std::string() const;
 
 private:
+    std::string extension() const;
+
+    std::string exchange() const;
+
     const std::string digits_;
 };
 
