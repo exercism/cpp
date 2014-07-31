@@ -13,7 +13,8 @@
     "nucleotide-count",
     "rna-transcription",
     "point-mutations",
-    "phone-number"
+    "phone-number",
+    "grade-school"
   ],
   "deprecated": [
 
