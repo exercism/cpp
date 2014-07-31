@@ -16,7 +16,8 @@
     "phone-number",
     "grade-school",
     "robot-name",
-    "leap"
+    "leap",
+    "etl"
   ],
   "deprecated": [
 
