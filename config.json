@@ -19,7 +19,8 @@
     "leap",
     "etl",
     "spage-age",
-    "grains"
+    "grains",
+    "gigasecond"
   ],
   "deprecated": [
 
