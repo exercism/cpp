@@ -20,7 +20,8 @@
     "etl",
     "spage-age",
     "grains",
-    "gigasecond"
+    "gigasecond",
+    "triangle"
   ],
   "deprecated": [
 
