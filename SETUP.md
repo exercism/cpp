@@ -29,10 +29,14 @@ Each test file is meant to link against your implementation to provide a
 console executable that runs the tests.  The test executable prints messages
 on failure and reports a non-zero exit status when tests fail.
 
-CMake is recommended to simplify the procedure for any environment.  The
-solutions to the exercises were developed with the following CMake recipe in the
+CMake is recommended to simplify the procedure for any environment and is
+a [free download](http://www.cmake.org/).
+The solutions to the exercises were developed with the following CMake recipe in the
 `cpp` directory.  The recipe compiles and links the test executable and
-runs it as part of the build.  This makes failing tests fail the build.
+runs it as part of the build.  This makes failing tests fail the build.  In
+the following recipe, the `BOOST_INCLUDEDIR` variable tells CMake where it
+can find your Boost distribution.  You will need to edit this variable
+value to the appropriate location on your system.
 
 ```
 # cpp/CMakeLists.txt
