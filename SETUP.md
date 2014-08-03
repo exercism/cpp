@@ -72,7 +72,9 @@ exercism(bob)
 ```
 
 This function combines *exercise*`.h`, *exercise*`.cpp` and *exercise*`_test.cpp`
-where *exercise* is the name given to the `exercism()` CMake function.
+where *exercise* is the name given to the `exercism()` CMake function.  If your
+implementation is header-only, simply omit the *exercise*`.cpp` file, the CMake
+recipe above will only include it in the build if the file exists.
 
 ### Boost.Test Documentation
 
