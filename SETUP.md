@@ -38,7 +38,9 @@ set(BOOST_INCLUDEDIR D:/Code/boost/boost_1_55_0)
 set(Boost_USE_STATIC_LIBS ON)
 set(Boost_USE_MULTITHREADED ON)
 set(Boost_USE_STATIC_RUNTIME OFF)
-find_package(Boost 1.55)
+
+# TODO: add other boost library names you might need after "unit_test_framework"
+find_package(Boost 1.55 REQUIRED COMPONENTS unit_test_framework)
 
 function(exercism exe)
     string(REPLACE "-" "_" file ${exe})
@@ -48,8 +50,9 @@ function(exercism exe)
         set(exercise_cpp "")
     endif()
     add_executable(${exe} ${file}_test.cpp ${exercise_cpp} ${file}.h)
-    add_custom_command(TARGET ${exe} POST_BUILD COMMAND ${exe})
     target_include_directories(${exe} PRIVATE ${Boost_INCLUDE_DIRS})
+    target_link_libraries(${exe} ${Boost_LIBRARIES})
+    add_custom_command(TARGET ${exe} POST_BUILD COMMAND ${exe})
 endfunction()
 
 foreach(exercise
