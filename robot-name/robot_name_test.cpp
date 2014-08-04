@@ -7,12 +7,12 @@ using namespace std;
 
 namespace
 {
-const regex name_pattern{R"name(^\w{2}\d{3}$)name"};
 }
 
 BOOST_AUTO_TEST_CASE(has_a_name)
 {
     const robot_name::robot robot;
+const regex name_pattern{R"name(^\w{2}\d{3}$)name"};
 
     BOOST_REQUIRE(regex_match(robot.name(), name_pattern));
 }
