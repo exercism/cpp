@@ -1,6 +1,6 @@
+#include "rna_transcription.h"
 #include <algorithm>
 #include <iterator>
-#include "rna_transcription.h"
 
 using namespace std;
 

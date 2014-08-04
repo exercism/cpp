@@ -1,5 +1,5 @@
-#include <stdexcept>
 #include "nucleotide_count.h"
+#include <stdexcept>
 
 namespace dna
 {

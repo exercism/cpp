@@ -1,6 +1,7 @@
+#include "anagram.h"
+#include <boost/algorithm/string/case_conv.hpp>
 #include <algorithm>
 #include <cctype>
-#include "anagram.h"
 
 using namespace std;
 
@@ -9,9 +10,9 @@ namespace
 
 string to_lower(std::string const& s)
 {
-    string lowered{s};
-    transform(lowered.begin(), lowered.end(), lowered.begin(), tolower);
-    return lowered;
+    string result{s};
+    boost::to_lower(result);
+    return result;
 }
 
 string make_key(std::string const& s)

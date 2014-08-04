@@ -1,5 +1,5 @@
-#include <algorithm>
 #include "hamming.h"
+#include <algorithm>
 
 namespace hamming
 {
