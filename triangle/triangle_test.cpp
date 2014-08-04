@@ -78,7 +78,7 @@ BOOST_AUTO_TEST_CASE(triangles_with_no_size_are_illegal)
 {
     const triangle tri(0, 0, 0);
 
-    BOOST_REQUIRE_THROW(tri.kind(), std::domain_error);
+    BOOST_REQUIRE_THROW(tri.kind(), std::runtime_error);
 }
 
 BOOST_AUTO_TEST_CASE(triangles_with_negative_sides_are_illegal)

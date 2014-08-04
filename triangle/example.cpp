@@ -37,7 +37,7 @@ triangle::triangle(double a, double b, double c)
 std::string triangle::kind() const
 {
     if (kind_.empty()) {
-        throw std::domain_error("Zero triangle");
+        throw std::runtime_error("Zero triangle");
     }
     return kind_;
 }
