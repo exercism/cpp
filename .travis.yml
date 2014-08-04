@@ -4,7 +4,8 @@ compiler:
   - gcc
   - clang
 
-before_script: cmake -G "Unix Makefiles"
+before_script:
+  - cmake -G "Unix Makefiles"
 
 script:
   - bin/configlet-linux-amd64 .
