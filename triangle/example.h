@@ -1,17 +1,19 @@
 #if !defined(TRIANGLE_H)
 #define TRIANGLE_H
 
-#include <string>
-
-class triangle
+namespace triangle
 {
-public:
-    triangle(double a, double b, double c);
 
-    std::string kind() const;
+enum flavor
+{
+    equilateral,
+    isosceles,
+    scalene,
+    illegal
+};
 
-private:
-    const std::string kind_;
+extern flavor kind(double a, double b, double c);
+
 };
 
 #endif
