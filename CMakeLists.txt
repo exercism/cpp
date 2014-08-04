@@ -6,8 +6,7 @@ set(Boost_USE_MULTITHREADED ON)
 set(Boost_USE_STATIC_RUNTIME OFF)
 find_package(Boost 1.55 REQUIRED COMPONENTS unit_test_framework date_time)
 
-if("${CMAKE_CXX_COMPILER_ID}" MATCHES "GNU")
-    message("GNU C++ compiler ${CMAKE_CXX_COMPILER_VERSION}")
+if(("${CMAKE_CXX_COMPILER_ID}" MATCHES "GNU") OR ("${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang"))
     set(CMAKE_CXX_FLAGS "-std=c++11")
 endif()
 
