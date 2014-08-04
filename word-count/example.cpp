@@ -35,7 +35,8 @@ string to_lower(string const& text)
 string strip_punctuation(string const& text)
 {
     string stripped;
-    remove_copy_if(text.begin(), text.end(), back_inserter(stripped), ispunct);
+    remove_copy_if(text.begin(), text.end(), back_inserter(stripped),
+        [](char c) { return ispunct(c) != 0; });
     return stripped;
 }
 
