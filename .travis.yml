@@ -5,6 +5,7 @@ compiler:
   - clang
 
 before_script:
+  - sudo apt-get install boost
   - cmake -G "Unix Makefiles"
 
 script:
