@@ -17,7 +17,14 @@ are new to C++, but have programmed in C, beware of
 
 ## Building and Running the Tests
 
-### Using a Modern C++ Compiler
+The C++ language track assumes that you have the appropriate development tools
+installed on your system: a modern C++ compiler, some sort of build
+system and the Boost libraries.  MacOS Xcode and Windows Visual Studio
+IDEs combine the compiler and the build system into a single IDE (integrated
+development environment).  Unix environments more typically expose the
+compiler and build system as separate command-line tools.
+
+### Prerequisite: Using a Modern C++ Compiler
 
 This language track assumes C++11, the latest version of the ISO C++ standard.
 Free compilers exist for C++11 on all major platforms, although the version
@@ -27,7 +34,7 @@ doesn't fully support C++11.
 Unix users will need gcc 4.8 or later or clang 3.4 or later for the compiler
 and `make` will be needed for build engine.  Make is pre-installed on most
 unix systems, but is available via `sudo apt-get install make` if not present.
-Gcc 4.8 supports C++11 with the `-std=c++11` argument can be obtained and
+Gcc 4.8 supports C++11 with the `-std=c++11` argument and can be installed and
 set as the default compiler with the following recipe:
 
 ```bash
@@ -40,19 +47,16 @@ $ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 90
 Windows users can get
 [Visual Studio Express 2013 for Windows Desktop](http://www.visualstudio.com/downloads/download-visual-studio-vs#d-express-windows-desktop),
 a free download that will give you the Visual Studio 2013 IDE and the
-latest version of the Microsoft Visual C++ compiler.  The CMake generator
-name for this environment is `Visual Studio 12`.
+latest version of the Microsoft Visual C++ compiler.
 
 MacOS users can install gcc 4.8 with [Homebrew](http://brew.sh/) via
 `brew install gcc48`.
 
-### Installing Boost.Test
+### Prerequisite: Installing Boost.Test
 
 The unit tests use Boost.Test, the unit testing framework included with
 [Boost](http://www.boost.org/index.html).  You will need to download and
 install Boost.  As of this writing Boost 1.55 is the current version.
-Instructions are on their
-[getting started page](http://www.boost.org/doc/libs/release/more/getting_started/index.html).
 You will need a compiled version of the boost libraries Boost.Test,
 Boost.DateTime and Boost.Regex, or you will need to download
 from source and build the library yourself.
@@ -70,7 +74,12 @@ Windows users can download compiled binaries from [sourceforge](http://sourcefor
 MacOS users can install boost with [Homebrew](http://brew.sh/) via
 `brew install boost`.
 
-### Building the Exercise with CMake
+If all else fails you can download the source and build it yourself,
+but you should prefer a prebuilt distribution to make things easier.
+Bootstrap instructions are on the
+[Boost getting started page](http://www.boost.org/doc/libs/release/more/getting_started/index.html).
+
+### Building the Exercises with CMake
 
 Each test file is meant to link against your implementation to provide a
 console executable that runs the tests.  The test executable prints messages
@@ -81,9 +90,9 @@ a [free download](http://www.cmake.org/).
 The solutions to the exercises were developed with the following CMake recipe in the
 `cpp` directory.  The recipe compiles and links the test executable and
 runs it as part of the build.  This makes failing tests fail the build.  In
-the following recipe, the `BOOST_INCLUDEDIR` variable tells CMake where it
-can find your Boost distribution.  You will need to edit this variable
-value to the appropriate location on your system.
+the following recipe, the `BOOST_INCLUDEDIR` variable gives CMake a hint
+as to where it can find your Boost distribution.  You may need to edit this
+variable value to the appropriate location on your system.
 
 ```
 # cpp/CMakeLists.txt
@@ -130,15 +139,19 @@ exercism(bob)
 ```
 
 This function combines *exercise*`.h`, *exercise*`.cpp` and *exercise*`_test.cpp`
-where *exercise* is the name given to the `exercism()` CMake function.  If your
-implementation is header-only, simply omit the *exercise*`.cpp` file, the CMake
+where *exercise* is the name given to the `exercism()` CMake function.  For
+the example above, the files `bob.h`, `bob.cpp` and `bob_test.cpp` are combined
+into a unit test executable.  Your declarations of functionc, classes, etc.,
+are in `bob.h`, definitions for your functions and classes are in `bob.cpp`
+and the unit tests are in `bob_test.cpp`.
+If your implementation is header-only, simply omit the *exercise*`.cpp` file, the CMake
 recipe above will only include it in the build if the file exists.
 
 Using this recipe, CMake can generate a suitable project for your environment
 by running `cmake -G` with a suitable generator.  Examples are:
+* Unix with make: `cmake -G "Unix Makefiles"`
 * Windows with Visual Studio 2013: `cmake -G "Visual Studio 12"`
 * MacOS with Xcode: `cmake -G Xcode`, or with make: `cmake -G "Unix Makefiles"`
-* Unix with make: `cmake -G "Unix Makefiles"`
 
 ### Boost.Test Documentation
 
