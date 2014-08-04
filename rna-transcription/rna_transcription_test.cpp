@@ -7,7 +7,7 @@ BOOST_AUTO_TEST_CASE(transcribes_cytidine_to_guanosine)
     BOOST_REQUIRE_EQUAL('G', transcription::to_rna('C'));
 }
 
-#if 0
+#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(transcribes_guanosine_to_cytidine)
 {
     BOOST_REQUIRE_EQUAL('C', transcription::to_rna('G'));

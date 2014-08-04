@@ -7,7 +7,7 @@ BOOST_AUTO_TEST_CASE(stating_something)
     BOOST_REQUIRE_EQUAL("Whatever.", bob::hey("Tom-ay-to, tom-aaaah-to."));
 }
 
-#if 0
+#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(shouting)
 {
     BOOST_REQUIRE_EQUAL("Woah, chill out!", bob::hey("WATCH OUT!"));

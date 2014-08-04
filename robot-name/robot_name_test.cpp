@@ -17,7 +17,7 @@ BOOST_AUTO_TEST_CASE(has_a_name)
     BOOST_REQUIRE(boost::regex_match(robot.name(), name_pattern));
 }
 
-#if 0
+#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(name_is_the_same_each_time)
 {
     const robot_name::robot robot;

@@ -10,7 +10,7 @@ BOOST_AUTO_TEST_CASE(prints_the_hour)
     BOOST_REQUIRE_EQUAL("09:00", string(date_independent::clock::at(9)));
 }
 
-#if 0
+#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(prints_past_the_hour)
 {
     BOOST_REQUIRE_EQUAL("11:09", string(date_independent::clock::at(11, 9)));

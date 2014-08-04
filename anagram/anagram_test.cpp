@@ -13,7 +13,7 @@ BOOST_AUTO_TEST_CASE(no_matches)
     BOOST_REQUIRE_EQUAL_COLLECTIONS(expected.begin(), expected.end(), matches.begin(), matches.end());
 }
 
-#if 0
+#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(detects_simple_anagram)
 {
     auto subject = anagram::anagram("ant");
