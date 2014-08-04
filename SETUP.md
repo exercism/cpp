@@ -86,6 +86,12 @@ where *exercise* is the name given to the `exercism()` CMake function.  If your
 implementation is header-only, simply omit the *exercise*`.cpp` file, the CMake
 recipe above will only include it in the build if the file exists.
 
+Using this recipe, CMake can generate a suitable project for your environment
+by running `cmake -G` with a suitable named generator.  Examples are:
+* Windows with Visual Studio 2013: `cmake -G "Visual Studio 12"`
+* MacOS with Xcode: `cmake -G Xcode`
+* Unix with make: `cmake -G "Unix Makefiles"`
+
 ### Boost.Test Documentation
 
 The Boost.Test documentation is being rewritten and is nearly complete.
