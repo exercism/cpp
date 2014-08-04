@@ -1,8 +1,12 @@
 ## Passing the Tests
 
 Get the first test compiling, linking and passing.  Once you've done that,
-uncomment the next test by moving the line `#if defined(EXERCISM_RUN_ALL_TESTS)`
-past the next test.
+uncomment the next test by moving the following line past the next test.
+
+```C++
+#if defined(EXERCISM_RUN_ALL_TESTS)
+```
+
 This may result in compile errors as new constructs may be invoked that
 you haven't yet declared or defined.  Fix the compile errors minimally
 to get a failing test, then change the code minimally to pass the test,
