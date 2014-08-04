@@ -6,6 +6,10 @@ set(Boost_USE_MULTITHREADED ON)
 set(Boost_USE_STATIC_RUNTIME OFF)
 find_package(Boost 1.55 REQUIRED COMPONENTS unit_test_framework date_time)
 
+if("${CMAKE_CXX_COMPILER_ID}" MATCHES "GNU")
+    set(CMAKE_CXX_FLAGS "-std=c++11")
+endif()
+
 function(exercism exe)
     string(REPLACE "-" "_" file ${exe})
     if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/example.h)
