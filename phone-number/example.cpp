@@ -18,7 +18,8 @@ const string cleaned_invalid_number(valid_number_length, '0');
 string clean_number(const string& text)
 {
     string result;
-    copy_if(text.begin(), text.end(), back_inserter(result), isdigit);
+    copy_if(text.begin(), text.end(), back_inserter(result),
+        [](char c) { return isdigit(c) != 0; });
     if (result.length() == valid_number_length + 1) {
         if (result[0] == '1') {
             result.erase(result.begin());
