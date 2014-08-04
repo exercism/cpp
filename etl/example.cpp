@@ -6,7 +6,7 @@ using namespace std;
 namespace etl
 {
 
-extern map<char, int> etl::transform(map<int, vector<char>> const& old)
+extern map<char, int> transform(map<int, vector<char>> const& old)
 {
     map<char, int> result;
     for (auto const& item : old) {
