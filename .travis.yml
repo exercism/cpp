@@ -5,8 +5,7 @@ compiler:
   - clang
 
 before_script:
-  - sudo aptitude search libboost
-  - sudo apt-get install boost
+  - sudo apt-get install libboost-all-dev
   - cmake -G "Unix Makefiles"
 
 script:
