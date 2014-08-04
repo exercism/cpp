@@ -145,17 +145,18 @@ exercism(bob)
 This function combines *exercise*`.h`, *exercise*`.cpp` and *exercise*`_test.cpp`
 where *exercise* is the name given to the `exercism()` CMake function.  For
 the example above, the files `bob.h`, `bob.cpp` and `bob_test.cpp` are combined
-into a unit test executable.  Your declarations of functionc, classes, etc.,
+into a unit test executable.  Your declarations of functions, classes, etc.,
 are in `bob.h`, definitions for your functions and classes are in `bob.cpp`
 and the unit tests are in `bob_test.cpp`.
 If your implementation is header-only, simply omit the *exercise*`.cpp` file, the CMake
 recipe above will only include it in the build if the file exists.
 
 Using this recipe, CMake can generate a suitable project for your environment
-by running `cmake -G` with a suitable generator.  Examples are:
-* Unix with make: `cmake -G "Unix Makefiles"`
-* Windows with Visual Studio 2013: `cmake -G "Visual Studio 12"`
-* MacOS with Xcode: `cmake -G Xcode`, or with make: `cmake -G "Unix Makefiles"`
+by running `cmake -G` with a suitable generator and the location of the `cpp`
+directory.  Assuming the current directory is `cpp`, some examples are:
+* Unix with make: `cmake -G "Unix Makefiles" .`
+* Windows with Visual Studio 2013: `cmake -G "Visual Studio 12" .`
+* MacOS with Xcode: `cmake -G Xcode`, or with make: `cmake -G "Unix Makefiles" .`
 
 ### Boost.Test Documentation
 
