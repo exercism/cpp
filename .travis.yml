@@ -1,4 +1,7 @@
-language: bash
+language: cpp
+
+before_script: cmake -G "Unix Makefiles"
 
 script:
   - bin/configlet-linux-amd64 .
+  - make
