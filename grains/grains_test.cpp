@@ -1,5 +1,4 @@
 #include "grains.h"
-
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
 
@@ -10,6 +9,7 @@ BOOST_AUTO_TEST_CASE(square_1)
     BOOST_REQUIRE_EQUAL(1ULL, grains.square(1));
 }
 
+#if 0
 BOOST_AUTO_TEST_CASE(square_2)
 {
     const grains::grains grains;
@@ -58,3 +58,4 @@ BOOST_AUTO_TEST_CASE(total)
 
     BOOST_REQUIRE_EQUAL(18446744073709551615ULL, grains.total());
 }
+#endif

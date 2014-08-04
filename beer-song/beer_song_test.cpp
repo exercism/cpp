@@ -1,6 +1,6 @@
+#include "beer_song.h"
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
-#include "beer_song.h"
 
 using namespace std;
 
@@ -12,6 +12,7 @@ BOOST_AUTO_TEST_CASE(prints_an_arbitrary_verse)
     BOOST_REQUIRE_EQUAL(expected, beer::verse(8));
 }
 
+#if 0
 BOOST_AUTO_TEST_CASE(handles_1_bottle)
 {
     string expected = "1 bottle of beer on the wall, 1 bottle of beer.\n"
@@ -58,3 +59,4 @@ BOOST_AUTO_TEST_CASE(sings_the_rest_of_the_verses)
 
     BOOST_REQUIRE_EQUAL(expected, beer::sing(3));
 }
+#endif

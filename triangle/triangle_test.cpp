@@ -1,8 +1,6 @@
 #include "triangle.h"
-
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
-
 #include <stdexcept>
 
 BOOST_AUTO_TEST_CASE(equilateral_triangles_have_equal_sides)
@@ -12,6 +10,7 @@ BOOST_AUTO_TEST_CASE(equilateral_triangles_have_equal_sides)
     BOOST_REQUIRE_EQUAL("equilateral", tri.kind());
 }
 
+#if 0
 BOOST_AUTO_TEST_CASE(larger_equilateral_triangles_also_have_equal_sides)
 {
     const triangle tri(10, 10, 10);
@@ -109,3 +108,4 @@ BOOST_AUTO_TEST_CASE(larger_triangles_violating_triangle_inequality_are_illegal)
 
     BOOST_REQUIRE_EQUAL("illegal", tri.kind());
 }
+#endif

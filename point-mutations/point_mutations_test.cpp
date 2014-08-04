@@ -1,6 +1,6 @@
+#include "point_mutations.h"
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
-#include "point_mutations.h"
 
 BOOST_AUTO_TEST_CASE(no_difference_between_empty_strands)
 {
@@ -9,6 +9,7 @@ BOOST_AUTO_TEST_CASE(no_difference_between_empty_strands)
     BOOST_REQUIRE_EQUAL(0, dna.hamming_distance(""));
 }
 
+#if 0
 BOOST_AUTO_TEST_CASE(no_difference_between_identical_strands)
 {
     const auto dna = mutations::dna_sequence("GGACTGA");
@@ -57,3 +58,4 @@ BOOST_AUTO_TEST_CASE(shortens_original_strand_when_longer)
 
     BOOST_REQUIRE_EQUAL(5, dna.hamming_distance("GACATCGCACACC"));
 }
+#endif

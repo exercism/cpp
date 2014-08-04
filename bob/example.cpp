@@ -5,9 +5,10 @@
 
 using namespace std;
 
-namespace bob {
-
-namespace {
+namespace bob
+{
+namespace
+{
 
 const char upper_case_a_umlaut = '\xc4';
 const char upper_case_u_umlaut = '\xdc';

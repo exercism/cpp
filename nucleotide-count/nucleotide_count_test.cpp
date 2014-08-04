@@ -1,17 +1,17 @@
+#include "nucleotide_count.h"
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
-#include "nucleotide_count.h"
 #include <stdexcept>
 
-namespace boost {
+namespace boost
+{
 
 // teach Boost.Test how to print std::pair
 template <typename K, typename V>
 inline wrap_stringstream&
 operator<<(wrap_stringstream& wrapped, std::pair<const K, V> const& item)
 {
-    wrapped.stream() << '<' << item.first << ',' << item.second << '>';
-    return wrapped;
+    return wrapped << '<' << item.first << ',' << item.second << '>';
 }
 
 }
@@ -26,6 +26,7 @@ BOOST_AUTO_TEST_CASE(has_no_nucleotides)
     BOOST_REQUIRE_EQUAL_COLLECTIONS(expected.begin(), expected.end(), actual.begin(), actual.end());
 }
 
+#if 0
 BOOST_AUTO_TEST_CASE(has_no_adenosine)
 {
     const dna::counter dna("");
@@ -89,3 +90,4 @@ BOOST_AUTO_TEST_CASE(counts_all_nucleotides)
 
     BOOST_REQUIRE_EQUAL_COLLECTIONS(expected.begin(), expected.end(), actual.begin(), actual.end());
 }
+#endif
