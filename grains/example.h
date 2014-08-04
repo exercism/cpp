@@ -4,13 +4,9 @@
 namespace grains
 {
 
-class grains
-{
-public:
-    unsigned long long square(int which) const;
+extern unsigned long long square(int which);
 
-    unsigned long long total() const;
-};
+extern unsigned long long total();
 
 }
 
