@@ -12,7 +12,7 @@ BOOST_AUTO_TEST_CASE(prints_an_arbitrary_verse)
     BOOST_REQUIRE_EQUAL(expected, beer::verse(8));
 }
 
-#if 0
+#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(handles_1_bottle)
 {
     string expected = "1 bottle of beer on the wall, 1 bottle of beer.\n"

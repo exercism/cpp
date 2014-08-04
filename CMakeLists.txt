@@ -10,14 +10,20 @@ if(("${CMAKE_CXX_COMPILER_ID}" MATCHES "GNU") OR ("${CMAKE_CXX_COMPILER_ID}" MAT
     set(CMAKE_CXX_FLAGS "-std=c++11")
 endif()
 
-function(exercism exe)
-    string(REPLACE "-" "_" file ${exe})
+add_definitions(-DEXERCISM_RUN_ALL_TESTS)
+
+function(travis_fixup file)
     if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/example.h)
         file(RENAME ${CMAKE_CURRENT_SOURCE_DIR}/example.h ${CMAKE_CURRENT_SOURCE_DIR}/${file}.h)
     endif()
     if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/example.cpp)
         file(RENAME ${CMAKE_CURRENT_SOURCE_DIR}/example.cpp ${CMAKE_CURRENT_SOURCE_DIR}/${file}.cpp)
     endif()
+endfunction()
+
+function(exercism exe)
+    string(REPLACE "-" "_" file ${exe})
+    travis_fixup(${file})
     if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/${file}.cpp)
         set(exercise_cpp ${file}.cpp)
     else()

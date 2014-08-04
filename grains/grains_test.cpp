@@ -7,7 +7,7 @@ BOOST_AUTO_TEST_CASE(square_1)
     BOOST_REQUIRE_EQUAL(1ULL, grains::square(1));
 }
 
-#if 0
+#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(square_2)
 {
     BOOST_REQUIRE_EQUAL(2ULL, grains::square(2));

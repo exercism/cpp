@@ -10,7 +10,7 @@ BOOST_AUTO_TEST_CASE(equilateral_triangles_have_equal_sides)
     BOOST_REQUIRE_EQUAL("equilateral", tri.kind());
 }
 
-#if 0
+#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(larger_equilateral_triangles_also_have_equal_sides)
 {
     const triangle tri(10, 10, 10);

@@ -12,7 +12,7 @@ BOOST_AUTO_TEST_CASE(fly)
     BOOST_REQUIRE_EQUAL(expected, food_chain::verse(1));
 }
 
-#if 0
+#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(spider)
 {
     string expected = "I know an old lady who swallowed a spider.\n"

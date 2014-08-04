@@ -28,7 +28,7 @@ BOOST_AUTO_TEST_CASE(transforms_one_value)
     REQUIRE_EQUAL_CONTAINERS(expected, actual);
 }
 
-#if 0
+#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(transforms_more_values)
 {
     const std::map<int, std::vector<char>> old{{1, {'A', 'E', 'I', 'O', 'U'}}};

@@ -7,7 +7,7 @@ BOOST_AUTO_TEST_CASE(no_difference_between_identical_strands)
     BOOST_REQUIRE_EQUAL(0, hamming::compute("A", "A"));
 }
 
-#if 0
+#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(complete_hamming_distance_for_single_nucleotide_strand)
 {
     BOOST_REQUIRE_EQUAL(1, hamming::compute("A", "G"));

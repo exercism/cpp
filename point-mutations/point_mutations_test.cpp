@@ -9,7 +9,7 @@ BOOST_AUTO_TEST_CASE(no_difference_between_empty_strands)
     BOOST_REQUIRE_EQUAL(0, dna.hamming_distance(""));
 }
 
-#if 0
+#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(no_difference_between_identical_strands)
 {
     const auto dna = mutations::dna_sequence("GGACTGA");
