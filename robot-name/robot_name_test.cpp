@@ -1,20 +1,20 @@
 #include "robot_name.h"
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
-#include <regex>
+#include <boost/regex.hpp>
 
 using namespace std;
 
 namespace
 {
+const boost::regex name_pattern{R"name(^\w{2}\d{3}$)name"};
 }
 
 BOOST_AUTO_TEST_CASE(has_a_name)
 {
     const robot_name::robot robot;
-const regex name_pattern{R"name(^\w{2}\d{3}$)name"};
 
-    BOOST_REQUIRE(regex_match(robot.name(), name_pattern));
+    BOOST_REQUIRE(boost::regex_match(robot.name(), name_pattern));
 }
 
 #if 0
@@ -51,7 +51,7 @@ BOOST_AUTO_TEST_CASE(exhausting_digits_yields_different_names)
     for (int i = 0; i < 1000; ++i) {
         robot.reset();
         BOOST_REQUIRE_NE(last_name, robot.name());
-        BOOST_REQUIRE(regex_match(robot.name(), name_pattern));
+        BOOST_REQUIRE(boost::regex_match(robot.name(), name_pattern));
     }
 }
 #endif
