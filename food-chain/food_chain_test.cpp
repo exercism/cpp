@@ -1,6 +1,6 @@
+#include "food_chain.h"
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
-#include "food_chain.h"
 
 using namespace std;
 
@@ -12,6 +12,7 @@ BOOST_AUTO_TEST_CASE(fly)
     BOOST_REQUIRE_EQUAL(expected, food_chain::verse(1));
 }
 
+#if 0
 BOOST_AUTO_TEST_CASE(spider)
 {
     string expected = "I know an old lady who swallowed a spider.\n"
@@ -118,3 +119,4 @@ BOOST_AUTO_TEST_CASE(the_whole_song)
 {
     BOOST_REQUIRE_EQUAL(food_chain::verses(1, 8), food_chain::sing());
 }
+#endif

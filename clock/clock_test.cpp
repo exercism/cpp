@@ -1,5 +1,4 @@
 #include "clock.h"
-
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
 
@@ -11,6 +10,7 @@ BOOST_AUTO_TEST_CASE(prints_the_hour)
     BOOST_REQUIRE_EQUAL("09:00", string(date_independent::clock::at(9)));
 }
 
+#if 0
 BOOST_AUTO_TEST_CASE(prints_past_the_hour)
 {
     BOOST_REQUIRE_EQUAL("11:09", string(date_independent::clock::at(11, 9)));
@@ -81,3 +81,4 @@ BOOST_AUTO_TEST_CASE(wraps_around_midnight_backwards)
 
     BOOST_REQUIRE_EQUAL("23:59", string(clock));
 }
+#endif

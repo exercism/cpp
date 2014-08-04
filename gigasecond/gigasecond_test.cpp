@@ -1,5 +1,4 @@
 #include "gigasecond.h"
-
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
 
@@ -14,6 +13,7 @@ BOOST_AUTO_TEST_CASE(test_1)
     BOOST_REQUIRE_EQUAL(expected, actual);
 }
 
+#if 0
 BOOST_AUTO_TEST_CASE(test_2)
 {
     const auto actual = gigasecond::advance(boost::gregorian::date(1977, 6, 14));
@@ -29,3 +29,4 @@ BOOST_AUTO_TEST_CASE(test_3)
     const boost::gregorian::date expected(1991, 3, 28);
     BOOST_REQUIRE_EQUAL(expected, actual);
 }
+#endif

@@ -1,17 +1,16 @@
 #include "etl.h"
-
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
 
-namespace boost {
+namespace boost
+{
 
 // teach Boost.Test how to print std::pair
 template <typename K, typename V>
 inline wrap_stringstream&
 operator<<(wrap_stringstream& wrapped, std::pair<const K, V> const& item)
 {
-    wrapped.stream() << '<' << item.first << ',' << item.second << '>';
-    return wrapped;
+    return wrapped << '<' << item.first << ',' << item.second << '>';
 }
 
 }
@@ -29,6 +28,7 @@ BOOST_AUTO_TEST_CASE(transforms_one_value)
     REQUIRE_EQUAL_CONTAINERS(expected, actual);
 }
 
+#if 0
 BOOST_AUTO_TEST_CASE(transforms_more_values)
 {
     const std::map<int, std::vector<char>> old{{1, {'A', 'E', 'I', 'O', 'U'}}};
@@ -73,3 +73,4 @@ BOOST_AUTO_TEST_CASE(transforms_a_full_dataset)
     };
     REQUIRE_EQUAL_CONTAINERS(expected, actual);
 }
+#endif

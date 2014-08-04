@@ -1,9 +1,9 @@
 #include "grade_school.h"
-
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
 
-namespace boost {
+namespace boost
+{
 
 // teach Boost.Test how to print std::vector
 template <typename T>
@@ -16,8 +16,7 @@ operator<<(wrap_stringstream& wrapped, std::vector<T> const& item)
         wrapped << (!first ? "," : "") << element;
         first = false;
     }
-    wrapped << ']';
-    return wrapped;
+    return wrapped << ']';
 }
 
 // teach Boost.Test how to print std::pair
@@ -35,18 +34,19 @@ operator<<(wrap_stringstream& wrapped, std::pair<const K, V> const& item)
 
 using namespace std;
 
-struct test_school
+struct school_fixture
 {
     grade_school::school school_;
 };
 
-BOOST_FIXTURE_TEST_SUITE(school_suite, test_school);
+BOOST_FIXTURE_TEST_SUITE(school_suite, school_fixture);
 
 BOOST_AUTO_TEST_CASE(a_new_school_has_an_empty_roster)
 {
     BOOST_REQUIRE(school_.roster().empty());
 }
 
+#if 0
 BOOST_AUTO_TEST_CASE(adding_a_student_adds_them_to_the_roster_for_the_given_grade)
 {
     school_.add("Aimee", 2);
@@ -115,5 +115,6 @@ BOOST_AUTO_TEST_CASE(the_student_names_in_each_grade_in_the_roster_are_sorted)
         };
     REQUIRE_EQUAL_CONTAINERS(expected, actual);
 }
+#endif
 
 BOOST_AUTO_TEST_SUITE_END();
