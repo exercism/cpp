@@ -3,12 +3,12 @@
 namespace grains
 {
 
-unsigned long long grains::square(int which) const
+extern unsigned long long square(int which)
 {
     return 1ULL << (which-1);
 }
 
-unsigned long long grains::total() const
+extern unsigned long long total()
 {
     unsigned long long result = 0;
     for (int i = 1; i <= 64; ++i) {
