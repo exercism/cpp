@@ -1,5 +1,4 @@
 #include "etl.h"
-
 #include <cctype>
 
 using namespace std;

@@ -1,5 +1,4 @@
 #include "clock.h"
-
 #include <iomanip>
 #include <sstream>
 

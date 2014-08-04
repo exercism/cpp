@@ -1,9 +1,9 @@
+#include "word_count.h"
+#include <boost/algorithm/string/case_conv.hpp>
 #include <algorithm>
 #include <cctype>
 #include <iterator>
 #include <vector>
-
-#include "word_count.h"
 
 using namespace std;
 
@@ -27,8 +27,8 @@ vector<string> split_words(string const& text)
 
 string to_lower(string const& text)
 {
-    string lowered;
-    transform(text.begin(), text.end(), back_inserter(lowered), tolower);
+    string lowered{text};
+    boost::to_lower(lowered);
     return lowered;
 }
 

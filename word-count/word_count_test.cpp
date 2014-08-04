@@ -1,79 +1,96 @@
-#include <iostream>
-#include <map>
-#include <string>
+#include "word_count.h"
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
-#include "word_count.h"
+#include <map>
 
 using namespace std;
 
-boost::test_tools::predicate_result compare_counts(
-    map<string, int> const& expected,
-    map<string, int> const& actual)
+namespace boost
 {
-    boost::test_tools::predicate_result result{true};
-    if (expected.size() != actual.size()) {
-        result.message() << "\nMismatched sizes: " << expected.size() << " != " << actual.size();
-        result = false;
-    }
-    if (expected != actual) {
-        result.message() << "\nMismatched elements: ";
-        for (auto const& item : expected) {
-            result.message() << item.first << ',' << item.second << ' ';
-        }
-        result.message() << "!=";
-        for (auto const& item : actual) {
-            result.message() << ' ' << item.first << ',' << item.second;
-        }
-        result = false;
-    }
-    return result;
+
+// teach Boost.Test how to print std::pair
+template <typename K, typename V>
+inline wrap_stringstream&
+operator<<(wrap_stringstream& wrapped, std::pair<const K, V> const& item)
+{
+    return wrapped << '<' << item.first << ',' << item.second << '>';
 }
+
+}
+
+#define REQUIRE_EQUAL_CONTAINERS(left_, right_) \
+    BOOST_REQUIRE_EQUAL_COLLECTIONS(left_.begin(), left_.end(), right_.begin(), right_.end())
 
 BOOST_AUTO_TEST_CASE(counts_one_word)
 {
-    map<string, int> const expected_counts{{ "word", 1 }};
-    BOOST_REQUIRE(compare_counts(expected_counts, word_count::words("word")));
+    const map<string, int> expected{{"word", 1}};
+
+    const auto actual = word_count::words("word");
+
+    REQUIRE_EQUAL_CONTAINERS(expected, actual);
 }
 
+#if 0
 BOOST_AUTO_TEST_CASE(counts_one_of_each)
 {
-    map<string, int> expected_counts{{ "one", 1 }, { "of", 1 }, { "each", 1 }};
-    BOOST_REQUIRE(compare_counts(expected_counts, word_count::words("one of each")));
+    const map<string, int> expected{{"one", 1}, {"of", 1}, {"each", 1}};
+
+    const auto actual = word_count::words("one of each");
+
+    REQUIRE_EQUAL_CONTAINERS(expected, actual);
 }
 
 BOOST_AUTO_TEST_CASE(counts_multiple_occurrences)
 {
-    map<string, int> expected_counts{{ "one", 1 }, { "fish", 4 }, { "two", 1 }, { "red", 1 }, { "blue", 1 }};
-    BOOST_REQUIRE(compare_counts(expected_counts, word_count::words("one fish two fish red fish blue fish")));
+    const map<string, int> expected{{"one", 1}, {"fish", 4}, {"two", 1}, {"red", 1}, {"blue", 1}};
+
+    const auto actual = word_count::words("one fish two fish red fish blue fish");
+
+    REQUIRE_EQUAL_CONTAINERS(expected, actual);
 }
 
 BOOST_AUTO_TEST_CASE(ignores_punctuation)
 {
-    map<string, int> expected_counts{{ "car", 1 }, { "carpet", 1 }, { "as", 1 }, { "java", 1 }, { "javascript", 1 }};
-    BOOST_REQUIRE(compare_counts(expected_counts, word_count::words("car : carpet as java : javascript!!&@$%^&")));
+    const map<string, int> expected{{"car", 1}, {"carpet", 1}, {"as", 1}, {"java", 1}, {"javascript", 1}};
+
+    const auto actual = word_count::words("car : carpet as java : javascript!!&@$%^&");
+
+    REQUIRE_EQUAL_CONTAINERS(expected, actual);
 }
 
 BOOST_AUTO_TEST_CASE(includes_numbers)
 {
-    map<string, int> expected_counts{{ "testing", 2 }, { "1", 1 }, { "2", 1 }};
-    BOOST_REQUIRE(compare_counts(expected_counts, word_count::words("testing, 1, 2 testing")));
+    const map<string, int> expected{{"testing", 2}, {"1", 1}, {"2", 1}};
+
+    const auto actual = word_count::words("testing, 1, 2 testing");
+
+    REQUIRE_EQUAL_CONTAINERS(expected, actual);
 }
 
 BOOST_AUTO_TEST_CASE(normalizes_case)
 {
-    map<string, int> expected_counts{{ "go", 3 }};
-    BOOST_REQUIRE(compare_counts(expected_counts, word_count::words("go Go GO")));
+    const map<string, int> expected{{"go", 3}};
+
+    const auto actual = word_count::words("go Go GO");
+
+    REQUIRE_EQUAL_CONTAINERS(expected, actual);
 }
 
 BOOST_AUTO_TEST_CASE(counts_constructor)
 {
-    map<string, int> expected_counts{{ "constructor", 2 }};
-    BOOST_REQUIRE(compare_counts(expected_counts, word_count::words("constructor Constructor")));
+    const map<string, int> expected{{"constructor", 2}};
+
+    const auto actual = word_count::words("constructor Constructor");
+
+    REQUIRE_EQUAL_CONTAINERS(expected, actual);
 }
 
 BOOST_AUTO_TEST_CASE(counts_multiline)
 {
-    map<string, int> expected_counts{{ "hello", 1 }, { "world", 1 }};
-    BOOST_REQUIRE(compare_counts(expected_counts, word_count::words("hello\nworld")));
+    const map<string, int> expected{{"hello", 1}, {"world", 1}};
+
+    const auto actual = word_count::words("hello\nworld");
+
+    REQUIRE_EQUAL_CONTAINERS(expected, actual);
 }
+#endif

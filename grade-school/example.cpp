@@ -1,5 +1,4 @@
 #include "grade_school.h"
-
 #include <algorithm>
 
 using namespace std;

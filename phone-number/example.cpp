@@ -1,8 +1,8 @@
+#include "phone_number.h"
 #include <algorithm>
 #include <cctype>
 #include <iterator>
 #include <sstream>
-#include "phone_number.h"
 
 using namespace std;
 

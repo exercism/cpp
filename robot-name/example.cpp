@@ -1,5 +1,4 @@
 #include "robot_name.h"
-
 #include <sstream>
 #include <stdexcept>
 

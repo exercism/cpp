@@ -1,5 +1,5 @@
-#include <algorithm>
 #include "point_mutations.h"
+#include <algorithm>
 
 using namespace std;
 
