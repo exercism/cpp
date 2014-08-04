@@ -5,7 +5,7 @@ compiler:
   - clang
 
 before_install:
-  - cmake --version
+  - cmake --help-commands
   - sudo add-apt-repository ppa:boost-latest/ppa -y
   - sudo apt-get update -d
 
