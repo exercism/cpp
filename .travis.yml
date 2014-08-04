@@ -12,7 +12,7 @@ before_install:
 
 install:
   - sudo apt-get -qq install libboost1.55-all-dev cmake g++-4.8
-  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 90 
+  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 90
 
 script:
   - bin/configlet-linux-amd64 .
