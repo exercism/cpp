@@ -44,7 +44,6 @@ foreach(exercise
     beer-song
     nucleotide-count
     rna-transcription
-    point-mutations
     phone-number
     grade-school
     robot-name

@@ -1,1 +1,0 @@
-exercism(point-mutations)
