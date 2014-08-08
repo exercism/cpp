@@ -54,7 +54,7 @@ a free download that will give you the Visual Studio 2013 IDE and the
 latest version of the Microsoft Visual C++ compiler.
 
 MacOS users can install gcc 4.8 with [Homebrew](http://brew.sh/) via
-`brew install gcc48`.
+`brew install gcc`.
 
 ### Prerequisite: Installing Boost.Test
 
