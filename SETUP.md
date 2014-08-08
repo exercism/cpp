@@ -22,13 +22,13 @@ are new to C++, but have programmed in C, beware of
 ## Building and Running the Tests
 
 The C++ language track assumes that you have the appropriate development tools
-installed on your system: a modern C++ compiler, some sort of build
+installed on your system: a modern C++11 compiler, some sort of build
 system and the Boost libraries.  MacOS Xcode and Windows Visual Studio
 IDEs combine the compiler and the build system into a single IDE (integrated
-development environment).  Unix environments more typically expose the
+development environment).  Unix environments typically expose the
 compiler and build system as separate command-line tools.
 
-### Prerequisite: Using a Modern C++ Compiler
+### Prerequisite: Using a Modern C++11 Compiler
 
 This language track assumes C++11, the latest version of the ISO C++ standard.
 Free compilers exist for C++11 on all major platforms, although the version
@@ -60,7 +60,7 @@ MacOS users can install gcc 4.8 with [Homebrew](http://brew.sh/) via
 
 The unit tests use Boost.Test, the unit testing framework included with
 [Boost](http://www.boost.org/index.html).  You will need to download and
-install Boost.  As of this writing Boost 1.55 is the current version.
+install Boost.  As of this writing Boost 1.56 is the current version.
 You will need a compiled version of the boost libraries Boost.Test,
 Boost.DateTime and Boost.Regex, or you will need to download
 from source and build the library yourself.
@@ -70,10 +70,10 @@ Unix users may be able to get pre-built packages with the following recipe:
 ```bash
 $ sudo add-apt-repository -y ppa:boost-latest/ppa
 $ sudo apt-get -qq -d update
-$ sudo apt-get -qq install libboost1.55-all-dev
+$ sudo apt-get -qq install libboost1.56-all-dev
 ```
 
-Windows users can download compiled binaries from [sourceforge](http://sourceforge.net/projects/boost/files/boost-binaries/1.55.0-build2/).
+Windows users can download compiled binaries from [sourceforge](http://sourceforge.net/projects/boost/files/boost-binaries/1.56.0-build2/).
 
 MacOS users can install boost with [Homebrew](http://brew.sh/) via
 `brew install boost`.
@@ -89,14 +89,15 @@ Each test file is meant to link against your implementation to provide a
 console executable that runs the tests.  The test executable prints messages
 on failure and reports a non-zero exit status when tests fail.
 
-CMake is recommended to simplify the procedure for any environment and is
-a [free download](http://www.cmake.org/).
-The solutions to the exercises were developed with the following CMake recipe in the
-`cpp` directory.  The recipe compiles and links the test executable and
-runs it as part of the build.  This makes failing tests fail the build.  In
-the following recipe, the `BOOST_INCLUDEDIR` variable gives CMake a hint
-as to where it can find your Boost distribution.  You may need to edit this
-variable value to the appropriate location on your system.
+CMake 2.8.11 or later is recommended to simplify the procedure for any
+environment and is a [free download](http://www.cmake.org/).
+The solutions to the exercises were developed with the following CMake
+recipe in the `cpp` directory.  The recipe compiles and links the test
+executable and runs it as part of the build.  This makes failing tests
+fail the build.  In the following recipe, the `BOOST_INCLUDEDIR` variable
+gives CMake a hint as to where it can find your Boost distribution.
+You may need to edit this variable value to the appropriate location
+on your system.
 
 ```
 # cpp/CMakeLists.txt
@@ -105,13 +106,14 @@ project(exercism CXX)
 
 # TODO: a hint to the location of the Boost distribution on your system
 # CMake may be able to locate your boost distribution without this.
-set(BOOST_INCLUDEDIR D:/Code/boost/boost_1_55_0)
+# CMake always uses / as a path separator for this value, even on Windows.
+set(BOOST_INCLUDEDIR D:/Code/boost/boost_1_56_0)
 
 set(Boost_USE_STATIC_LIBS ON)
 set(Boost_USE_MULTITHREADED ON)
 set(Boost_USE_STATIC_RUNTIME OFF)
 
-find_package(Boost 1.55 REQUIRED COMPONENTS unit_test_framework date_time regex)
+find_package(Boost 1.56 REQUIRED COMPONENTS unit_test_framework date_time regex)
 
 if(("${CMAKE_CXX_COMPILER_ID}" MATCHES "GNU") OR ("${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang"))
     set(CMAKE_CXX_FLAGS "-std=c++11")
@@ -167,5 +169,5 @@ directory.  Assuming the current directory is `cpp`, some examples are:
 The Boost.Test documentation is being rewritten and is nearly complete.
 Prefer the documentation rewrite to look up something if you're unfamiliar
 with Boost.Test and want to know more.
-* [Boost.Test 1.55 official documentation](http://www.boost.org/doc/libs/1_55_0/libs/test/doc/html/index.html)
+* [Boost.Test 1.56 official documentation](http://www.boost.org/doc/libs/1_56_0/libs/test/doc/html/index.html)
 * [Boost.Test documentation rewrite](http://user.xmission.com/~legalize/boost.test/)
