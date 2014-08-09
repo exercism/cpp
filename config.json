@@ -2,7 +2,7 @@
   "slug": "cpp",
   "language": "C++",
   "repository": "https://github.com/exercism/xcpp",
-  "active": true,
+  "active": false,
   "problems": [
     "bob",
     "word-count",
