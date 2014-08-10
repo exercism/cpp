@@ -4,10 +4,27 @@
   "repository": "https://github.com/exercism/xcpp",
   "active": false,
   "problems": [
-
+    "bob",
+    "word-count",
+    "hamming",
+    "anagram",
+    "food-chain",
+    "beer-song",
+    "nucleotide-count",
+    "rna-transcription",
+    "phone-number",
+    "grade-school",
+    "robot-name",
+    "leap",
+    "etl",
+    "space-age",
+    "grains",
+    "gigasecond",
+    "triangle",
+    "clock"
   ],
   "deprecated": [
-
+    "point-mutations"
   ],
   "ignored": [
 
