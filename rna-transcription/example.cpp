@@ -7,7 +7,7 @@ using namespace std;
 namespace transcription
 {
 
-extern char to_rna(const char nucleotide)
+char to_rna(const char nucleotide)
 {
     const string dna_nucleotides("CGAT");
     const string rna_nucleotides("GCUA");
@@ -18,7 +18,7 @@ extern char to_rna(const char nucleotide)
     return 0;
 }
 
-extern string to_rna(string const& sequence)
+string to_rna(string const& sequence)
 {
     string transcription;
     transform(sequence.begin(), sequence.end(), back_inserter(transcription),
