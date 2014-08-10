@@ -15,12 +15,12 @@ endif()
 
 # Configure to run all the tests?
 if(${EXERCISM_RUN_ALL_TESTS})
-add_definitions(-DEXERCISM_RUN_ALL_TESTS)
+    add_definitions(-DEXERCISM_RUN_ALL_TESTS)
 endif()
 
 # Make an executable that runs the exercism unit tests against the implementation
 function(exercism)
-    # Get the exercise name
+    # Get the exercise name from the current directory
     get_filename_component(exercise ${CMAKE_CURRENT_SOURCE_DIR} NAME)
     # Replace -'s with _'s to get a filename from the exercise name
     string(REPLACE "-" "_" file ${exercise})
