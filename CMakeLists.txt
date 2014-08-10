@@ -60,4 +60,7 @@ foreach(exercise
     execute_process(
         COMMAND ${CMAKE_COMMAND} -DEXERCISM_RUN_ALL_TESTS:BOOL=1 -G ${CMAKE_GENERATOR} ${CMAKE_SOURCE_DIR}
         WORKING_DIRECTORY ${exercise})
+    add_custom_target(${exercise} ALL
+        COMMAND ${CMAKE_COMAMND} --build .
+        WORKING_DIRECTORY ${exercise})
 endforeach()
