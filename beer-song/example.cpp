@@ -57,14 +57,14 @@ void verse(ostream& stream, unsigned count)
 
 }
 
-extern string verse(unsigned num)
+string verse(unsigned num)
 {
     ostringstream stream;
     verse(stream, num);
     return stream.str();
 }
 
-extern string sing(unsigned begin, unsigned end)
+string sing(unsigned begin, unsigned end)
 {
     ostringstream stream;
     for (unsigned num = begin; num > end; --num) {
@@ -75,7 +75,7 @@ extern string sing(unsigned begin, unsigned end)
     return stream.str();
 }
 
-extern string sing(unsigned num)
+string sing(unsigned num)
 {
     return sing(num, 0);
 }

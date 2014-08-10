@@ -6,8 +6,8 @@
 namespace transcription
 {
 
-extern char to_rna(char nucleotide);
-extern std::string to_rna(std::string const& nucleotide);
+char to_rna(char nucleotide);
+std::string to_rna(std::string const& nucleotide);
 
 }
 

@@ -16,7 +16,7 @@ bool triangle_equality(double a, double b, double c)
 
 }
 
-extern flavor kind(double a, double b, double c)
+flavor kind(double a, double b, double c)
 {
     if (a == 0 || b == 0 || c == 0) {
         throw std::domain_error("Zero triangle");

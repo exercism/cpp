@@ -4,9 +4,9 @@
 namespace grains
 {
 
-extern unsigned long long square(int which);
+unsigned long long square(int which);
 
-extern unsigned long long total();
+unsigned long long total();
 
 }
 

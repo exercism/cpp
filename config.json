@@ -24,12 +24,12 @@
     "clock"
   ],
   "deprecated": [
-    "point-mutations"
+
   ],
   "ignored": [
 
   ],
   "foregone": [
-
+    "point-mutations"
   ]
 }
