@@ -80,7 +80,7 @@ song_verse const song_verses[] =
 
 }
 
-extern string verse(unsigned num)
+string verse(unsigned num)
 {
     if (num > 0 && num <= 8) {
         --num;
@@ -95,7 +95,7 @@ extern string verse(unsigned num)
     return "";
 }
 
-extern string verses(unsigned begin, unsigned end)
+string verses(unsigned begin, unsigned end)
 {
     string text;
     for (unsigned v = begin; v <= end; ++v) {
@@ -104,7 +104,7 @@ extern string verses(unsigned begin, unsigned end)
     return text;
 }
 
-extern string sing()
+string sing()
 {
     return verses(1, 8);
 }

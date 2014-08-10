@@ -7,7 +7,7 @@
 namespace word_count
 {
 
-extern std::map<std::string, int> words(std::string const& text);
+std::map<std::string, int> words(std::string const& text);
 
 }
 

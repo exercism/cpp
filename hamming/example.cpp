@@ -4,7 +4,7 @@
 namespace hamming
 {
 
-extern int compute(std::string const& lhs, std::string const& rhs)
+int compute(std::string const& lhs, std::string const& rhs)
 {
     if (rhs.length() < lhs.length()) {
         return compute(rhs, lhs);

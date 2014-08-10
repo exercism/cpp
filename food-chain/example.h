@@ -6,9 +6,9 @@
 namespace food_chain
 {
 
-extern std::string verse(unsigned which);
-extern std::string verses(unsigned begin, unsigned end);
-extern std::string sing();
+std::string verse(unsigned which);
+std::string verses(unsigned begin, unsigned end);
+std::string sing();
 
 }
 

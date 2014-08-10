@@ -3,7 +3,7 @@
 namespace gigasecond
 {
 
-extern boost::gregorian::date advance(const boost::gregorian::date& start)
+boost::gregorian::date advance(const boost::gregorian::date& start)
 {
     const unsigned long long seconds_per_minute = 60;
     const unsigned long long seconds_per_hour = 60*seconds_per_minute;
