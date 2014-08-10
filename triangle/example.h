@@ -12,7 +12,7 @@ enum flavor
     illegal
 };
 
-extern flavor kind(double a, double b, double c);
+flavor kind(double a, double b, double c);
 
 };
 

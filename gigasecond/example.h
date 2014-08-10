@@ -6,7 +6,7 @@
 namespace gigasecond
 {
 
-extern boost::gregorian::date advance(const boost::gregorian::date& start);
+boost::gregorian::date advance(const boost::gregorian::date& start);
 
 }
 

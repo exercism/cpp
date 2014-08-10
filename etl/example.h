@@ -7,7 +7,7 @@
 namespace etl
 {
 
-extern std::map<char, int> transform(std::map<int, std::vector<char>> const& old);
+std::map<char, int> transform(std::map<int, std::vector<char>> const& old);
 
 }
 

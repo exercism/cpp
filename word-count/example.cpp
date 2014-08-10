@@ -45,7 +45,7 @@ string strip_punctuation(string const& text)
 namespace word_count
 {
 
-extern map<string, int> words(string const& text)
+map<string, int> words(string const& text)
 {
     map<string, int> counts;
     for (string word : split_words(to_lower(strip_punctuation(text)))) {

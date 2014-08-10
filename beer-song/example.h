@@ -6,9 +6,9 @@
 namespace beer
 {
 
-extern std::string verse(unsigned bottles);
-extern std::string sing(unsigned begin, unsigned end);
-extern std::string sing(unsigned bottles);
+std::string verse(unsigned bottles);
+std::string sing(unsigned begin, unsigned end);
+std::string sing(unsigned bottles);
 
 }
 
