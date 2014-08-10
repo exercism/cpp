@@ -25,7 +25,7 @@ The C++ language track assumes that you have the appropriate development tools
 installed on your system: a modern C++11 compiler, some sort of build
 system and the Boost libraries.  MacOS Xcode and Windows Visual Studio
 IDEs combine the compiler and the build system into a single IDE (integrated
-development environment).  Unix environments typically expose the
+development environment).  Linux environments typically expose the
 compiler and build system as separate command-line tools.
 
 ### Prerequisite: Using a Modern C++11 Compiler
@@ -35,7 +35,7 @@ Free compilers exist for C++11 on all major platforms, although the version
 of the C++ compiler installed on your system may be an older version that
 doesn't fully support C++11.
 
-Unix users will need gcc 4.8 or later or clang 3.4 or later for the compiler
+Linux users will need gcc 4.8 or later or clang 3.4 or later for the compiler
 and `make` will be needed for build engine.  Make is pre-installed on most
 unix systems, but is available via `sudo apt-get install make` if not present.
 Gcc 4.8 supports C++11 with the `-std=c++11` argument and can be installed and
@@ -65,13 +65,17 @@ You will need a compiled version of the boost libraries Boost.Test,
 Boost.DateTime and Boost.Regex, or you will need to download
 from source and build the library yourself.
 
-Unix users may be able to get pre-built packages with the following recipe:
+Linux users may be able to get pre-built packages with the following recipe:
 
 ```bash
 $ sudo add-apt-repository -y ppa:boost-latest/ppa
 $ sudo apt-get -qq -d update
 $ sudo apt-get -qq install libboost1.55-all-dev
 ```
+
+Note: These prepackaged Linux binaries are not compiled with gcc 4.8 and
+some libraries may have issues as a result.  If you encounter any issues
+with these prepackaged libraries, try building from source.
 
 Windows users can download compiled binaries from [sourceforge](http://sourceforge.net/projects/boost/files/boost-binaries/1.55.0-build2/).
 
@@ -87,82 +91,42 @@ Bootstrap instructions are on the
 
 Each test file is meant to link against your implementation to provide a
 console executable that runs the tests.  The test executable prints messages
-on failure and reports a non-zero exit status when tests fail.
+on failure and reports a non-zero exit status when tests fail.  A canned
+CMake recipe is provided that builds the executable accordingly.
+CMake 2.8.11 or later is required to use the recipe.
+CMake is a [free download](http://www.cmake.org/).
 
-CMake 2.8.11 or later is recommended to simplify the procedure for any
-environment and is a [free download](http://www.cmake.org/).
-The solutions to the exercises were developed with the following CMake
-recipe in the `cpp` directory.  The recipe compiles and links the test
-executable and runs it as part of the build.  This makes failing tests
-fail the build.  In the following recipe, the `BOOST_INCLUDEDIR` variable
-gives CMake a hint as to where it can find your Boost distribution.
-You may need to edit this variable value to the appropriate location
-on your system.
+Each exercise will bring a `CMakeLists.txt` file along with the unit
+tests.  It contains the canned recipe to handle the build for you.
+You should not need to edit this file.  The provided recipe assumes that
+your implementation exists as a header file and a source file named after
+the exercise.
 
-```
-# cpp/CMakeLists.txt
-cmake_minimum_required(VERSION 2.8.11)
-project(exercism CXX)
+For instance, the exercise `bob` expects an implementation in `bob.h`
+and `bob.cpp`.  For exercises with dashes in their name, the source
+files are assumed to use underscores, so `word-count` expects
+`word_count.h` and `word_count.cpp`.  You may decide that your
+impementation is sufficiently simple that it can live entirely in the
+header, in which case you can omit the `cpp` file.
 
-# TODO: a hint to the location of the Boost distribution on your system
-# CMake may be able to locate your boost distribution without this.
-# CMake always uses / as a path separator for this value, even on Windows.
-set(BOOST_INCLUDEDIR D:/Code/boost/boost_1_55_0)
-
-set(Boost_USE_STATIC_LIBS ON)
-set(Boost_USE_MULTITHREADED ON)
-set(Boost_USE_STATIC_RUNTIME OFF)
-
-find_package(Boost 1.55 REQUIRED COMPONENTS unit_test_framework date_time regex)
-
-if(("${CMAKE_CXX_COMPILER_ID}" MATCHES "GNU") OR ("${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang"))
-    set(CMAKE_CXX_FLAGS "-std=c++11")
-endif()
-
-function(exercism exe)
-    string(REPLACE "-" "_" file ${exe})
-    if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/${file}.cpp)
-        set(exercise_cpp ${file}.cpp)
-    else()
-        set(exercise_cpp "")
-    endif()
-    add_executable(${exe} ${file}_test.cpp ${exercise_cpp} ${file}.h)
-    target_include_directories(${exe} PRIVATE ${Boost_INCLUDE_DIRS})
-    target_link_libraries(${exe} ${Boost_LIBRARIES})
-    add_custom_command(TARGET ${exe} POST_BUILD COMMAND ${exe})
-endfunction()
-
-foreach(exercise
-# TODO: add the name of each exercise subdirectory here as you progress
-    bob
-)
-    add_subdirectory(${exercise})
-endforeach()
-```
-
-Each exercise subdirectory has a `CMakeLists.txt` that invokes the `exercism`
-function defined at the top-level:
-
-```
-# cpp/bob/CMakeLists.txt
-exercism(bob)
-```
-
-This function combines *exercise*`.h`, *exercise*`.cpp` and *exercise*`_test.cpp`
-where *exercise* is the name given to the `exercism()` CMake function.  For
-the example above, the files `bob.h`, `bob.cpp` and `bob_test.cpp` are combined
-into a unit test executable.  Your declarations of functions, classes, etc.,
-are in `bob.h`, definitions for your functions and classes are in `bob.cpp`
-and the unit tests are in `bob_test.cpp`.
-If your implementation is header-only, simply omit the *exercise*`.cpp` file, the CMake
-recipe above will only include it in the build if the file exists.
+**Create your initial implementation files before running CMake.**  If
+you do not have files `bob.h` and `bob.cpp` when running
+CMake for exercise `bob`, then CMake will generate an error about files
+not being found.  These files can be empty, but they must exist.
 
 Using this recipe, CMake can generate a suitable project for your environment
-by running `cmake -G` with a suitable generator and the location of the `cpp`
-directory.  Assuming the current directory is `cpp`, some examples are:
-* Unix with make: `cmake -G "Unix Makefiles" .`
+by running `cmake -G` with a suitable generator and the location of the
+exercise specific directory.  Assuming the current directory is `bob`,
+some examples are:
+* Linux with make: `cmake -G "Unix Makefiles" .`
 * Windows with Visual Studio 2013: `cmake -G "Visual Studio 12" .`
 * MacOS with Xcode: `cmake -G Xcode`, or with make: `cmake -G "Unix Makefiles" .`
+
+Once the build environment has been created by CMake, you can build your
+code using the appropriate command for your environment:
+* Linux with make: `make`
+* Windows with Visual Studio 2013: Select Build / Build Solution from the menu.
+* MacOS with Xcode: Select Build from the toolbar
 
 ### Boost.Test Documentation
 
