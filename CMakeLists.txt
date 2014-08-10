@@ -6,24 +6,25 @@ set(Boost_USE_MULTITHREADED ON)
 set(Boost_USE_STATIC_RUNTIME OFF)
 find_package(Boost 1.55 REQUIRED COMPONENTS unit_test_framework date_time regex)
 
-if(("${CMAKE_CXX_COMPILER_ID}" MATCHES "GNU") OR ("${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang"))
+if("${CMAKE_CXX_COMPILER_ID}" MATCHES "(GNU|Clang)")
     set(CMAKE_CXX_FLAGS "-std=c++11")
 endif()
 
 add_definitions(-DEXERCISM_RUN_ALL_TESTS)
 
-function(travis_fixup file)
-    if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/example.h)
-        file(RENAME ${CMAKE_CURRENT_SOURCE_DIR}/example.h ${CMAKE_CURRENT_SOURCE_DIR}/${file}.h)
+function(travis_fixup dir)
+    string(REPLACE "-" "_" file ${dir})
+    set(subdir ${CMAKE_CURRENT_SOURCE_DIR}/${dir})
+    if(EXISTS ${subdir}/example.h)
+        file(RENAME ${subdir}/example.h ${subdir}/${file}.h)
     endif()
-    if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/example.cpp)
-        file(RENAME ${CMAKE_CURRENT_SOURCE_DIR}/example.cpp ${CMAKE_CURRENT_SOURCE_DIR}/${file}.cpp)
+    if(EXISTS ${subdir}/example.cpp)
+        file(RENAME ${subdir}/example.cpp ${subdir}/${file}.cpp)
     endif()
 endfunction()
 
 function(exercism exe)
     string(REPLACE "-" "_" file ${exe})
-    travis_fixup(${file})
     if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/${file}.cpp)
         set(exercise_cpp ${file}.cpp)
     else()
@@ -37,23 +38,26 @@ endfunction()
 
 foreach(exercise
     bob
-    word-count
-    hamming
-    anagram
-    food-chain
-    beer-song
-    nucleotide-count
-    rna-transcription
-    phone-number
-    grade-school
-    robot-name
-    leap
-    etl
-    space-age
-    grains
-    gigasecond
-    triangle
-    clock
+#    word-count
+#    hamming
+#    anagram
+#    food-chain
+#    beer-song
+#    nucleotide-count
+#    rna-transcription
+#    phone-number
+#    grade-school
+#    robot-name
+#    leap
+#    etl
+#    space-age
+#    grains
+#    gigasecond
+#    triangle
+#    clock
 )
-    add_subdirectory(${exercise})
+    travis_fixup(${exercise})
+    execute_process(
+        COMMAND ${CMAKE_COMMAND} -DEXERCISM_RUN_ALL_TESTS:BOOL=1 -G ${CMAKE_GENERATOR} ${CMAKE_SOURCE_DIR}
+        WORKING_DIRECTORY ${exercise})
 endforeach()
