@@ -18,7 +18,7 @@ if(${EXERCISM_RUN_ALL_TESTS})
 add_definitions(-DEXERCISM_RUN_ALL_TESTS)
 endif()
 
-# Make an executable that runs the exercism unit tests agains the implementation
+# Make an executable that runs the exercism unit tests against the implementation
 function(exercism)
     # Get the exercise name
     get_filename_component(exercise ${CMAKE_CURRENT_SOURCE_DIR} NAME)
@@ -30,6 +30,7 @@ function(exercism)
     else()
         set(exercise_cpp "")
     endif()
+    # Build executable from sources and headers
     add_executable(${exercise} ${file}_test.cpp ${exercise_cpp} ${file}.h)
     # We need boost includes
     target_include_directories(${exercise} PRIVATE ${Boost_INCLUDE_DIRS})
