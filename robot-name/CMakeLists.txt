@@ -1,6 +1,9 @@
-# basic CMake project
+# Get the exercise name from the current directory
+get_filename_component(exercise ${CMAKE_CURRENT_SOURCE_DIR} NAME)
+# Basic CMake project
 cmake_minimum_required(VERSION 2.8.11)
-project(exercism CXX)
+# Name the project after the exercise
+project(${exercise} CXX)
 
 # Locate Boost libraries: unit_test_framework, date_time and regex
 set(Boost_USE_STATIC_LIBS ON)
@@ -20,8 +23,6 @@ endif()
 
 # Make an executable that runs the exercism unit tests against the implementation
 function(exercism)
-    # Get the exercise name from the current directory
-    get_filename_component(exercise ${CMAKE_CURRENT_SOURCE_DIR} NAME)
     # Replace -'s with _'s to get a filename from the exercise name
     string(REPLACE "-" "_" file ${exercise})
     # Implementation could be only a header
