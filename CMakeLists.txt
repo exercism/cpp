@@ -31,6 +31,7 @@ foreach(exercise
     gigasecond
     triangle
     clock
+    raindrops
 )
     travis_fixup(${exercise})
     execute_process(
