@@ -32,6 +32,7 @@ foreach(exercise
     triangle
     clock
     raindrops
+    difference-of-squares
 )
     travis_fixup(${exercise})
     execute_process(
