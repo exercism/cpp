@@ -67,13 +67,6 @@ BOOST_AUTO_TEST_CASE(counts_a_nucleotide_only_once)
     BOOST_REQUIRE_EQUAL(2, dna.count('T'));
 }
 
-BOOST_AUTO_TEST_CASE(has_no_uracil)
-{
-    const dna::counter dna("GGTTGG");
-
-    BOOST_REQUIRE_EQUAL(0, dna.count('U'));
-}
-
 BOOST_AUTO_TEST_CASE(validates_nucleotides)
 {
     const dna::counter dna("GGTTGG");
