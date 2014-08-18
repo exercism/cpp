@@ -33,6 +33,7 @@ foreach(exercise
     clock
     raindrops
     difference-of-squares
+    roman-numerals
 )
     travis_fixup(${exercise})
     execute_process(
