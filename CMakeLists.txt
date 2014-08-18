@@ -35,6 +35,7 @@ foreach(exercise
     difference-of-squares
     roman-numerals
     nth-prime
+    sieve
 )
     travis_fixup(${exercise})
     execute_process(

@@ -25,7 +25,8 @@
     "raindrops",
     "difference-of-squares",
     "roman-numerals",
-    "nth-prime"
+    "nth-prime",
+    "sieve"
   ],
   "deprecated": [
 
