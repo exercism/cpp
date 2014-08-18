@@ -34,6 +34,7 @@ foreach(exercise
     raindrops
     difference-of-squares
     roman-numerals
+    nth-prime
 )
     travis_fixup(${exercise})
     execute_process(
