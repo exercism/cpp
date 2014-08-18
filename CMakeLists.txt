@@ -36,6 +36,7 @@ foreach(exercise
     roman-numerals
     nth-prime
     sieve
+    binary
 )
     travis_fixup(${exercise})
     execute_process(
