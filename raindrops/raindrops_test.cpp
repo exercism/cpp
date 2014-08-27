@@ -7,6 +7,7 @@ BOOST_AUTO_TEST_CASE(one_yields_itself)
     BOOST_REQUIRE_EQUAL("1", raindrops::convert(1));
 }
 
+#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(three_yields_pling)
 {
     BOOST_REQUIRE_EQUAL("Pling", raindrops::convert(3));
@@ -81,3 +82,4 @@ BOOST_AUTO_TEST_CASE(big_prime_yields_itself)
 {
     BOOST_REQUIRE_EQUAL("12121", raindrops::convert(12121));
 }
+#endif
