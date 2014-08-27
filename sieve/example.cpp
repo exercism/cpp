@@ -1,4 +1,5 @@
 #include "sieve.h"
+#include <cmath>
 
 namespace
 {
