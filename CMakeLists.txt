@@ -37,6 +37,7 @@ foreach(exercise
     nth-prime
     sieve
     binary
+    sum-of-multiples
 )
     travis_fixup(${exercise})
     execute_process(

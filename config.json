@@ -27,7 +27,8 @@
     "roman-numerals",
     "nth-prime",
     "sieve",
-    "binary"
+    "binary",
+    "sum-of-multiples"
   ],
   "deprecated": [
 
