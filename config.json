@@ -28,7 +28,8 @@
     "nth-prime",
     "sieve",
     "binary",
-    "sum-of-multiples"
+    "sum-of-multiples",
+    "series"
   ],
   "deprecated": [
 

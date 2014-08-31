@@ -38,6 +38,7 @@ foreach(exercise
     sieve
     binary
     sum-of-multiples
+    series
 )
     travis_fixup(${exercise})
     execute_process(
