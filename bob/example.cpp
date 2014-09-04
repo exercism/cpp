@@ -1,4 +1,5 @@
 #include "bob.h"
+#include <boost/algorithm/string/trim.hpp>
 #include <algorithm>
 #include <cctype>
 #include <iterator>
@@ -25,16 +26,6 @@ bool has_alpha(string const& text)
     return it != last;
 }
 
-string trim(string const& text)
-{
-    auto first = text.find_first_not_of(' ');
-    if (first == string::npos) {
-        return string{};
-    }
-    auto last = text.find_last_not_of(' ');
-    return string(&text[first], &text[last]);
-}
-
 bool is_shouting(string const &text)
 {
     return is_upper(text) && has_alpha(text);
@@ -47,7 +38,7 @@ bool is_question(string const &text)
 
 bool is_silence(string const& text)
 {
-    return trim(text).length() == 0;
+    return boost::algorithm::trim_copy(text).length() == 0;
 }
 
 }
