@@ -39,6 +39,7 @@ foreach(exercise
     binary
     sum-of-multiples
     series
+    prime-factors
 )
     travis_fixup(${exercise})
     execute_process(
