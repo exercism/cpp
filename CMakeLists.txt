@@ -40,6 +40,7 @@ foreach(exercise
     sum-of-multiples
     series
     prime-factors
+    trinary
 )
     travis_fixup(${exercise})
     execute_process(

@@ -30,7 +30,8 @@
     "binary",
     "sum-of-multiples",
     "series",
-    "prime-factors"
+    "prime-factors",
+    "trinary"
   ],
   "deprecated": [
 
