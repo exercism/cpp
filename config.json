@@ -29,7 +29,8 @@
     "sieve",
     "binary",
     "sum-of-multiples",
-    "series"
+    "series",
+    "prime-factors"
   ],
   "deprecated": [
 
