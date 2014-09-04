@@ -8,16 +8,9 @@ using namespace std;
 namespace
 {
 
-string to_lower(std::string const& s)
-{
-    string result{s};
-    boost::to_lower(result);
-    return result;
-}
-
 string make_key(std::string const& s)
 {
-    string key{to_lower(s)};
+    string key{boost::to_lower_copy(s)};
     sort(key.begin(), key.end());
     return key;
 }
@@ -38,7 +31,7 @@ vector<string> anagram::matches(vector<string> const& matches)
     vector<string> result;
     for (string const& s : matches) {
         if (s.length() == key_.length()
-                && to_lower(s) != to_lower(subject_)
+                && boost::to_lower_copy(s) != boost::to_lower_copy(subject_)
                 && make_key(s) == key_) {
             result.push_back(s);
         }
