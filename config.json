@@ -31,7 +31,8 @@
     "sum-of-multiples",
     "series",
     "prime-factors",
-    "trinary"
+    "trinary",
+    "crypto-square"
   ],
   "deprecated": [
 

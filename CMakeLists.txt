@@ -41,6 +41,7 @@ foreach(exercise
     series
     prime-factors
     trinary
+    crypto-square
 )
     travis_fixup(${exercise})
     execute_process(
