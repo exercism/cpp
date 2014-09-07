@@ -32,7 +32,8 @@
     "series",
     "prime-factors",
     "trinary",
-    "crypto-square"
+    "crypto-square",
+    "scrabble-score"
   ],
   "deprecated": [
 

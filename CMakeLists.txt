@@ -42,6 +42,7 @@ foreach(exercise
     prime-factors
     trinary
     crypto-square
+    scrabble-score
 )
     travis_fixup(${exercise})
     execute_process(
