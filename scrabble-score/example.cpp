@@ -1,5 +1,4 @@
 #include "scrabble_score.h"
-#include <algorithm>
 #include <cctype>
 
 namespace scrabble_score
@@ -41,12 +40,11 @@ const int letter_scores[26] = {
 int score(const std::string &word)
 {
     int result = 0;
-    std::for_each(word.begin(), word.end(),
-        [&result](char c) {
-            if (std::isalpha(c)) {
-                result += letter_scores[std::tolower(c) - 'a'];
-            }
-        });
+    for (const char c : word) {
+        if (std::isalpha(c)) {
+            result += letter_scores[std::tolower(c) - 'a'];
+        }
+    }
     return result;
 }
 
