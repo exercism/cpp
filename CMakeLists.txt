@@ -43,6 +43,7 @@ foreach(exercise
     trinary
     crypto-square
     scrabble-score
+    hexadecimal
 )
     travis_fixup(${exercise})
     execute_process(

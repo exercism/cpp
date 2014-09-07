@@ -33,7 +33,8 @@
     "prime-factors",
     "trinary",
     "crypto-square",
-    "scrabble-score"
+    "scrabble-score",
+    "hexadecimal"
   ],
   "deprecated": [
 
