@@ -6,7 +6,7 @@ BOOST_AUTO_TEST_CASE(primes_up_to_10)
 {
     const std::vector<int> expected{2, 3, 5, 7};
 
-    const std::vector<int> actual = sieve::primes(10);
+    const auto actual = sieve::primes(10);
 
     BOOST_REQUIRE_EQUAL_COLLECTIONS(expected.begin(), expected.end(), actual.begin(), actual.end());
 }
@@ -30,7 +30,7 @@ BOOST_AUTO_TEST_CASE(primes_up_to_1000)
         967, 971, 977, 983, 991, 997
     };
 
-    const std::vector<int> actual = sieve::primes(1000);
+    const auto actual = sieve::primes(1000);
 
     BOOST_REQUIRE_EQUAL_COLLECTIONS(expected.begin(), expected.end(), actual.begin(), actual.end());
 }
