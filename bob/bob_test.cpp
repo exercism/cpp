@@ -10,7 +10,7 @@ BOOST_AUTO_TEST_CASE(stating_something)
 #if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(shouting)
 {
-    BOOST_REQUIRE_EQUAL("Woah, chill out!", bob::hey("WATCH OUT!"));
+    BOOST_REQUIRE_EQUAL("Whoa, chill out!", bob::hey("WATCH OUT!"));
 }
 
 BOOST_AUTO_TEST_CASE(asking_a_question)
@@ -30,12 +30,12 @@ BOOST_AUTO_TEST_CASE(using_acronyms_in_regular_speech)
 
 BOOST_AUTO_TEST_CASE(forceful_questions)
 {
-    BOOST_REQUIRE_EQUAL("Woah, chill out!", bob::hey("WHAT THE HELL WERE YOU THINKING?"));
+    BOOST_REQUIRE_EQUAL("Whoa, chill out!", bob::hey("WHAT THE HELL WERE YOU THINKING?"));
 }
 
 BOOST_AUTO_TEST_CASE(shouting_numbers)
 {
-    BOOST_REQUIRE_EQUAL("Woah, chill out!", bob::hey("1, 2, 3 GO!"));
+    BOOST_REQUIRE_EQUAL("Whoa, chill out!", bob::hey("1, 2, 3 GO!"));
 }
 
 BOOST_AUTO_TEST_CASE(only_numbers)
@@ -50,12 +50,12 @@ BOOST_AUTO_TEST_CASE(question_with_only_numbers)
 
 BOOST_AUTO_TEST_CASE(shouting_with_special_characters)
 {
-    BOOST_REQUIRE_EQUAL("Woah, chill out!", bob::hey("ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!"));
+    BOOST_REQUIRE_EQUAL("Whoa, chill out!", bob::hey("ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!"));
 }
 
 BOOST_AUTO_TEST_CASE(shouting_with_no_exclamation_mark)
 {
-    BOOST_REQUIRE_EQUAL("Woah, chill out!", bob::hey("I HATE YOU"));
+    BOOST_REQUIRE_EQUAL("Whoa, chill out!", bob::hey("I HATE YOU"));
 }
 
 BOOST_AUTO_TEST_CASE(statement_containing_question_mark)
