@@ -13,7 +13,7 @@ find_package(Boost 1.55 REQUIRED COMPONENTS unit_test_framework date_time regex)
 
 # gcc/clang won't enable C++11 features without this flag
 if("${CMAKE_CXX_COMPILER_ID}" MATCHES "(GNU|Clang)")
-    set(CMAKE_CXX_FLAGS "-std=c++11")
+    set(CMAKE_CXX_FLAGS "-std=c++11 -stdlib=libc++")
 endif()
 
 # Configure to run all the tests?
