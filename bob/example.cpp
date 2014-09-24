@@ -49,7 +49,7 @@ string hey(string const& text)
         return "Fine. Be that way!";
     }
     if (is_shouting(text)) {
-        return "Woah, chill out!";
+        return "Whoa, chill out!";
     }
     if (is_question(text)) {
         return "Sure.";
