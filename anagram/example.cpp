@@ -20,7 +20,7 @@ string make_key(std::string const& s)
 namespace anagram
 {
 
-anagram::anagram(string const& subject)
+anagram::matcher(string const& subject)
     : subject_(subject),
     key_(make_key(subject))
 {
