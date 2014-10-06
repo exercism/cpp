@@ -10,7 +10,7 @@ namespace anagram
 class anagram
 {
 public:
-    anagram(std::string const& subject);
+    matcher(std::string const& subject);
 
     std::vector<std::string> matches(std::vector<std::string> const& matches);
 
