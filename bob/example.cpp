@@ -33,7 +33,7 @@ bool is_shouting(string const &text)
 
 bool is_question(string const &text)
 {
-    return text.back() == '?';
+    return boost::algorithm::trim_copy(text).back() == '?';
 }
 
 bool is_silence(string const& text)
