@@ -1,43 +1,52 @@
-#if defined(_MSC_VER) && _MSC_VER >= 1400 
-#pragma warning(push) 
-#pragma warning(disable:4996) 
-#endif 
-
 #include "word_count.h"
+#include <algorithm>
+#include <cctype>
+#include <iterator>
 #include <vector>
-#include <locale>
 #include <boost/algorithm/string.hpp>
 
 using namespace std;
+
+namespace
+{
+
+string normalize_text(string const& text)
+{
+    string normalized;
+    transform(text.begin(), text.end(), back_inserter(normalized),
+        [](const char c) { return (isalnum(c) || c == '\'') ? tolower(c) : ' '; });
+    return normalized;
+}
+
+string trim_word(string const& word)
+{
+    return boost::trim_copy_if(word, boost::is_any_of("' "));
+}
+
+vector<string> split_text_into_words(string const& text)
+{
+    vector<string> words;
+    boost::split(words, text, boost::is_any_of("\t "));
+    transform(words.begin(), words.end(), words.begin(), trim_word);
+    return words;
+}
+
+}
 
 namespace word_count
 {
 
 map<string, int> words(string const& text)
 {
-    // A less than ideal solution since I can't get regex building in GCC on Travis
     map<string, int> count;
-    string normalized = boost::to_lower_copy(text);
-    for (unsigned int i = 0; i < normalized.length(); i++)
+    for (auto const& word : split_text_into_words(normalize_text(text)))
     {
-        auto c = normalized[i];
-        normalized[i] = (isalnum(c, locale()) || c == '\'') ? c : ' ';
-    }
-    vector<string> words;
-    boost::split(words, normalized, boost::is_any_of("\t "));
-    for (auto const& word : words)
-    {
-        auto const& trimmed = boost::trim_copy_if(word, boost::is_any_of("' "));
-        if (!trimmed.empty())
+        if (!word.empty())
         {
-            count[trimmed]++;
+            ++count[word];
         }
     }
     return count;
 }
 
 }
-
-#if defined(_MSC_VER) && _MSC_VER >= 1400 
-#pragma warning(pop) 
-#endif 
