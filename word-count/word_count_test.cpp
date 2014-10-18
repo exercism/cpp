@@ -97,40 +97,40 @@ BOOST_AUTO_TEST_CASE(counts_multiline)
 BOOST_AUTO_TEST_CASE(count_everything_just_once)
 {
     const map<string, int> expected{{"all", 2}, {"the", 2}, {"kings", 2}, {"horses", 1}, {"and", 1}, {"men", 1}};
-    const auto actual = word_count::words( "all the kings horses and all the kings men");
+    const auto actual = word_count::words("all the kings horses and all the kings men");
     
-    REQUIRE_EQUAL_CONTAINERS( expected, actual );
+    REQUIRE_EQUAL_CONTAINERS(expected, actual);
 }
 
 BOOST_AUTO_TEST_CASE(handles_cramped_list)
 {
     const map<string, int> expected{{"one", 1}, {"two", 1}, {"three", 1}};
-    const auto actual = word_count::words( "one,two,three" );
+    const auto actual = word_count::words("one,two,three");
 
-    REQUIRE_EQUAL_CONTAINERS( expected, actual );
+    REQUIRE_EQUAL_CONTAINERS(expected, actual);
 }
 
 BOOST_AUTO_TEST_CASE(with_apostrophes)
 {
     const map<string, int> expected{{"first", 1}, {"don't", 2}, {"laugh", 1}, {"then", 1}, {"cry", 1}};
-    const auto actual = word_count::words( "First: don't laugh. Then: don't cry." );
+    const auto actual = word_count::words("First: don't laugh. Then: don't cry.");
 
-    REQUIRE_EQUAL_CONTAINERS( expected, actual );
+    REQUIRE_EQUAL_CONTAINERS(expected, actual);
 }
 
 BOOST_AUTO_TEST_CASE(with_free_standing_apostrophes)
 {
     const map<string, int> expected{{ "go", 3 }};
-    const auto actual = word_count::words( "go ' Go '' GO" );
+    const auto actual = word_count::words("go ' Go '' GO");
 
-    REQUIRE_EQUAL_CONTAINERS( expected, actual );
+    REQUIRE_EQUAL_CONTAINERS(expected, actual);
 }
 
 BOOST_AUTO_TEST_CASE(with_apostrophes_as_quotes)
 {
     const map<string, int> expected{{"she", 1}, {"said", 1}, {"let's", 1}, {"meet", 1}, {"at", 1}, {"twelve", 1}, {"o'clock", 1}};
-    const auto actual = word_count::words( "She said, 'let's meet at twelve o'clock'" );
+    const auto actual = word_count::words("She said, 'let's meet at twelve o'clock'");
 
-    REQUIRE_EQUAL_CONTAINERS( expected, actual );
+    REQUIRE_EQUAL_CONTAINERS(expected, actual);
 }
 #endif

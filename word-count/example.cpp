@@ -17,19 +17,21 @@ map<string, int> words(string const& text)
 {
     // A less than ideal solution since I can't get regex building in GCC on Travis
     std::map<std::string, int> count;
-    std::string normalized = boost::to_lower_copy( text );
-    for ( unsigned int i = 0; i < normalized.length(); i++ )
+    std::string normalized = boost::to_lower_copy(text);
+    for (unsigned int i = 0; i < normalized.length(); i++)
     {
         auto c = normalized[i];
-        normalized[i] = ( std::isalnum( c, std::locale() ) || c == '\'' ) ? c : ' ';
+        normalized[i] = (std::isalnum(c, std::locale()) || c == '\'') ? c : ' ';
     }
     std::vector<std::string> words;
-    boost::split( words, normalized, boost::is_any_of( "\t " ) );
-    for ( auto const& word : words )
+    boost::split(words, normalized, boost::is_any_of("\t "));
+    for (auto const& word : words)
     {
-        auto const& trimmed = boost::trim_copy_if( word, boost::is_any_of( "' " ) );
-        if ( !trimmed.empty() )
+        auto const& trimmed = boost::trim_copy_if(word, boost::is_any_of("' "));
+        if (!trimmed.empty())
+        {
             count[trimmed]++;
+        }
     }
     return count;
 }
