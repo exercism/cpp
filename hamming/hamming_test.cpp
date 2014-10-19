@@ -1,4 +1,5 @@
 #include "hamming.h"
+#include <stdexcept>
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
 
@@ -28,14 +29,14 @@ BOOST_AUTO_TEST_CASE(small_hamming_distance_in_longer_strand)
     BOOST_REQUIRE_EQUAL(1, hamming::compute("GGACG", "GGTCG"));
 }
 
-BOOST_AUTO_TEST_CASE(ignores_extra_length_on_first_strand_when_longer)
+BOOST_AUTO_TEST_CASE(domain_error_when_first_string_is_longer)
 {
-    BOOST_REQUIRE_EQUAL(0, hamming::compute("AAAG", "AAA"));
+    BOOST_REQUIRE_THROW(hamming::compute("AAAG", "AAA"), std::domain_error);
 }
 
-BOOST_AUTO_TEST_CASE(ignores_extra_length_on_other_strand_when_longer)
+BOOST_AUTO_TEST_CASE(domain_error_when_second_string_is_longer)
 {
-    BOOST_REQUIRE_EQUAL(0, hamming::compute("AAA", "AAAG"));
+    BOOST_REQUIRE_THROW(hamming::compute("AAA", "AAAG"), std::domain_error);
 }
 
 BOOST_AUTO_TEST_CASE(large_hamming_distance)
