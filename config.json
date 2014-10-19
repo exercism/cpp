@@ -34,7 +34,8 @@
     "trinary",
     "crypto-square",
     "scrabble-score",
-    "hexadecimal"
+    "hexadecimal",
+    "say"
   ],
   "deprecated": [
 
