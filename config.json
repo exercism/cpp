@@ -35,7 +35,8 @@
     "crypto-square",
     "scrabble-score",
     "hexadecimal",
-    "say"
+    "say",
+    "meetup"
   ],
   "deprecated": [
 

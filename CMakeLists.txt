@@ -45,6 +45,7 @@ foreach(exercise
     scrabble-score
     hexadecimal
     say
+    meetup
 )
     travis_fixup(${exercise})
     execute_process(
