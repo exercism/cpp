@@ -46,6 +46,7 @@ foreach(exercise
     hexadecimal
     say
     meetup
+    queen-attack
 )
     travis_fixup(${exercise})
     execute_process(
