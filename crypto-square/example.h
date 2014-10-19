@@ -14,7 +14,7 @@ public:
 
     std::string normalize_plain_text() const;
 
-    int size() const;
+    std::size_t size() const;
 
     std::vector<std::string> plain_text_segments() const;
 

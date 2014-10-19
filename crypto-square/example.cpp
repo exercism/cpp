@@ -32,19 +32,19 @@ string cipher::normalize_plain_text() const
     return text_;
 }
 
-int cipher::size() const
+size_t cipher::size() const
 {
-    int length = 1;
-    while (length*length < static_cast<int>(text_.size())) {
+    size_t length = 1;
+    while (length*length < text_.size()) {
         ++length;
     }
-    return length; //static_cast<int>(ceil(sqrt(text_.size())));
+    return length;
 }
 
 vector<string> cipher::plain_text_segments() const
 {
     vector<string> segments;
-    const int segment_size{size()};
+    const size_t segment_size{size()};
     for (size_t i = 0; i < text_.length(); i += segment_size) {
         segments.push_back(text_.substr(i, segment_size));
     }
@@ -55,10 +55,12 @@ string cipher::cipher_text() const
 {
     string result;
     const vector<string> segments{plain_text_segments()};
-    for (int i = 0, end = size(); i < end; ++i) {
-        for (int j = 0, end = static_cast<int>(segments.size()); j < end; ++j) {
-            if (i < static_cast<int>(segments[j].length())) {
-                result += segments[j].substr(i, 1);
+    const size_t rows{size()};
+    const size_t num_segments{segments.size()};
+    for (size_t i = 0; i < rows; ++i) {
+        for (size_t j = 0; j < num_segments; ++j) {
+            if (i < segments[j].length()) {
+                result += segments[j][i];
             }
         }
     }
@@ -68,12 +70,10 @@ string cipher::cipher_text() const
 string cipher::normalized_cipher_text() const
 {
     const string encoded{cipher_text()};
-    string result;
-    for (int i = 0; i < static_cast<int>(encoded.length()); i += 5) {
-        if (!result.empty()) {
-            result += ' ';
-        }
-        result += encoded.substr(i, 5);
+    const auto num_rows = size();
+    string result{encoded.substr(0, num_rows)};
+    for (auto i = num_rows; i < encoded.length(); i += num_rows) {
+        result += ' ' + encoded.substr(i, num_rows);
     }
     return result;
 }

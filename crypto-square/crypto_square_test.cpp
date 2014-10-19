@@ -15,17 +15,17 @@ BOOST_AUTO_TEST_CASE(normalize_numbers)
 
 BOOST_AUTO_TEST_CASE(size_of_small_square)
 {
-    BOOST_REQUIRE_EQUAL(2, crypto_square::cipher("1234").size());
+    BOOST_REQUIRE_EQUAL(2U, crypto_square::cipher("1234").size());
 }
 
 BOOST_AUTO_TEST_CASE(size_of_slightly_larger_square)
 {
-    BOOST_REQUIRE_EQUAL(3, crypto_square::cipher("123456789").size());
+    BOOST_REQUIRE_EQUAL(3U, crypto_square::cipher("123456789").size());
 }
 
 BOOST_AUTO_TEST_CASE(size_of_non_perfect_square)
 {
-    BOOST_REQUIRE_EQUAL(4, crypto_square::cipher("123456789abc").size());
+    BOOST_REQUIRE_EQUAL(4U, crypto_square::cipher("123456789abc").size());
 }
 
 BOOST_AUTO_TEST_CASE(plain_text_segments_from_phrase)
@@ -60,7 +60,7 @@ BOOST_AUTO_TEST_CASE(cipher_text_long_phrase)
 
 BOOST_AUTO_TEST_CASE(normalized_cipher_text1)
 {
-    BOOST_REQUIRE_EQUAL("msemo aanin dninn dlaet ltshu i",
+    BOOST_REQUIRE_EQUAL("msemoa anindn inndla etltsh ui",
         crypto_square::cipher("Madness, and then illumination.").normalized_cipher_text());
 }
 
