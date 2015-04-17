@@ -2,3 +2,5 @@
 .DS_Store
 .config
 tmp
+bin/configlet
+bin/configlet.exe
