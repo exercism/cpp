@@ -4,3 +4,7 @@
 tmp
 bin/configlet
 bin/configlet.exe
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
