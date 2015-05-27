@@ -41,7 +41,8 @@ bool chess_board::can_attack() const
 {
     return (white_.first == black_.first)
         || (white_.second == black_.second)
-        || ((white_.first - black_.first) == (white_.second - black_.second));
+        || ((white_.first - black_.first) == (white_.second - black_.second))
+        || ((white_.first - black_.first) == (black_.second - white_.second));
 }
 
 }
