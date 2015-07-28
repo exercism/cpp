@@ -42,4 +42,9 @@ BOOST_AUTO_TEST_CASE(carrot_is_decimal_0)
 {
     BOOST_REQUIRE_EQUAL(0, binary::convert("convert"));
 }
+
+BOOST_AUTO_TEST_CASE(x1100101b_is_decimal_0)
+{
+    BOOST_REQUIRE_EQUAL(0, binary::convert("1100101b"));
+}
 #endif
