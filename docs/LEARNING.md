@@ -38,12 +38,3 @@ If you are new to test-driven development, it is strongly recommended
 that you first work through the [Test-Driven Development in C++](https://github.com/boostcon/cppnow_presentations_2014/tree/master/files/test_driven)
 workshop from [C++ Now! 2014](http://cppnow.org/).  The same tools used
 in that workshop are used in the C++ language track on exercism.
-
-## Boost.Test Documentation
-
-The Boost.Test documentation is being rewritten to improve usability
-and is nearly complete.
-Prefer the documentation rewrite to look up something if you're unfamiliar
-with Boost.Test and want to know more.
-* [Boost.Test documentation rewrite](http://user.xmission.com/~legalize/boost.test/)
-* [Boost.Test 1.55 official documentation](http://www.boost.org/doc/libs/1_55_0/libs/test/doc/html/index.html)
