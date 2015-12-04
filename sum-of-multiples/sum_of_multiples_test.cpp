@@ -18,6 +18,11 @@ BOOST_AUTO_TEST_CASE(sum_to_10_yields_23)
     BOOST_REQUIRE_EQUAL(23, sum_of_multiples::to(10));
 }
 
+BOOST_AUTO_TEST_CASE(sum_to_100)
+{
+    BOOST_REQUIRE_EQUAL(2318, sum_of_multiples::to(100));
+}
+
 BOOST_AUTO_TEST_CASE(sum_to_1000)
 {
     BOOST_REQUIRE_EQUAL(233168, sum_of_multiples::to(1000));
