@@ -16,3 +16,4 @@ script:
 - bin/configlet .
 - cmake -G "Unix Makefiles"
 - make
+sudo: false
