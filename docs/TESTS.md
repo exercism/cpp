@@ -5,6 +5,8 @@ console executable that runs the tests.  Running the test executable
 prints messages for each failing test and reports a non-zero exit status
 when tests fail.
 
+*Note:* Your code is being tested against the test suite every time you build your project. If your code does not pass the one or more tests but is valid C++ code, it will still be compiled.
+
 Working through each exercise is a process of:
 * Creating the initial build with CMake
 * For each unit test:
