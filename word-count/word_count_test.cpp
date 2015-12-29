@@ -19,7 +19,7 @@ operator<<(wrap_stringstream& wrapped, std::pair<const K, V> const& item)
 }
 
 #define REQUIRE_EQUAL_CONTAINERS(left_, right_) \
-    BOOST_REQUIRE_EQUAL_COLLECTIONS(left_.begin(), left_.end(), right_.begin(), right_.end())
+    BOOST_TEST(left_ == right_);
 
 BOOST_AUTO_TEST_CASE(counts_one_word)
 {
