@@ -8,8 +8,7 @@ enum flavor
 {
     equilateral,
     isosceles,
-    scalene,
-    illegal
+    scalene
 };
 
 flavor kind(double a, double b, double c);

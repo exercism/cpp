@@ -61,21 +61,21 @@ BOOST_AUTO_TEST_CASE(triangles_with_no_size_are_illegal)
 
 BOOST_AUTO_TEST_CASE(triangles_with_negative_sides_are_illegal)
 {
-    BOOST_REQUIRE_EQUAL(triangle::illegal, triangle::kind(3, 4, -5));
+    BOOST_REQUIRE_THROW(triangle::kind(3, 4, -5), std::domain_error);
 }
 
 BOOST_AUTO_TEST_CASE(triangles_violating_triangle_inequality_are_illegal)
 {
-    BOOST_REQUIRE_EQUAL(triangle::illegal, triangle::kind(1, 1, 3));
+    BOOST_REQUIRE_THROW(triangle::kind(1, 1, 3), std::domain_error);
 }
 
 BOOST_AUTO_TEST_CASE(medium_triangles_violating_triangle_inequality_are_illegal)
 {
-    BOOST_REQUIRE_EQUAL(triangle::illegal, triangle::kind(2, 4, 2));
+    BOOST_REQUIRE_THROW(triangle::kind(2, 4, 2), std::domain_error);
 }
 
 BOOST_AUTO_TEST_CASE(larger_triangles_violating_triangle_inequality_are_illegal)
 {
-    BOOST_REQUIRE_EQUAL(triangle::illegal, triangle::kind(7, 3, 2));
+    BOOST_REQUIRE_THROW(triangle::kind(7, 3, 2), std::domain_error);
 }
 #endif
