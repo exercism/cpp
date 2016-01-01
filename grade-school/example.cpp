@@ -10,11 +10,7 @@ void school::add(string const& name, int grade)
 {
     vector<string>& grade_roster = roster_[grade];
     auto it = lower_bound(grade_roster.begin(), grade_roster.end(), name);
-    if (it == grade_roster.end()) {
-        grade_roster.push_back(name);
-    } else {
-        grade_roster.insert(it, name);
-    }
+    grade_roster.insert(it, name);
 }
 
 vector<string> school::grade(int grade) const
