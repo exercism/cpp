@@ -11,7 +11,7 @@ namespace robot_name
 namespace
 {
 
-string next_prefix(string prefix)
+string next_prefix(string const &prefix)
 {
     string next{prefix};
     const string letters{"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"};
