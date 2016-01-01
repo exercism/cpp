@@ -11,7 +11,7 @@ class robot
 public:
     robot();
 
-    std::string name() const { return name_; }
+    std::string const &name() const { return name_; }
 
     void reset();
 
