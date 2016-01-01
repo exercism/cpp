@@ -22,7 +22,7 @@ flavor kind(double a, double b, double c)
         throw std::domain_error("Zero triangle");
     }
     if (a < 0 || b < 0 || c < 0 || !triangle_equality(a, b, c)) {
-        return illegal;
+        throw std::domain_error("Invalid triangle");
     }
     if (a == b && b == c) {
         return equilateral;
