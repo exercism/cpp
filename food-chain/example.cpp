@@ -78,14 +78,16 @@ song_verse const song_verses[] =
     }
 };
 
+const int num_verses = sizeof(song_verses)/sizeof(song_verses[0]);
+
 }
 
 string verse(unsigned num)
 {
-    if (num > 0 && num <= 8) {
+    if (num > 0 && num <= num_verses) {
         --num;
         string text = song_verses[num].sing();
-        if (num < 7) {
+        if (num < num_verses-1) {
             while (num--) {
                 text += song_verses[num].verse();
             }
@@ -106,7 +108,7 @@ string verses(unsigned begin, unsigned end)
 
 string sing()
 {
-    return verses(1, 8);
+    return verses(1, num_verses);
 }
 
 }
