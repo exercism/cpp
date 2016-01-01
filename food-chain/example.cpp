@@ -78,7 +78,7 @@ song_verse const song_verses[] =
     }
 };
 
-const int num_verses = sizeof(song_verses)/sizeof(song_verses[0]);
+const unsigned num_verses = sizeof(song_verses)/sizeof(song_verses[0]);
 
 }
 
