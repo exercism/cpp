@@ -7,7 +7,7 @@ namespace space_age
 class space_age
 {
 public:
-    space_age(unsigned long long secs);
+    explicit space_age(unsigned long long secs);
 
     unsigned long long seconds() const;
     double on_earth() const;
