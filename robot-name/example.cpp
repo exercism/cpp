@@ -1,4 +1,5 @@
 #include "robot_name.h"
+#include <iomanip>
 #include <sstream>
 #include <stdexcept>
 
@@ -29,13 +30,13 @@ string next_prefix(string prefix)
 string generate_name()
 {
     static string prefix = "AA";
-    static int unit_number = 100;
+    static int unit_number = 0;
     ostringstream buff;
     if (unit_number > 999) {
         prefix = next_prefix(prefix);
-        unit_number = 100;
+        unit_number = 0;
     }
-    buff << prefix << unit_number++;
+    buff << prefix << setw(3) << setfill('0') << unit_number++;
     return buff.str();
 }
 
