@@ -17,7 +17,7 @@ vector<int> digits(string const& sequence)
 
 vector<vector<int>> slice(string const& sequence, int span)
 {
-    if (span > sequence.length()) {
+    if (span > static_cast<int>(sequence.length())) {
         throw domain_error("Requested span too long for sequence");
     }
     vector<vector<int>> result;
