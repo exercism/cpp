@@ -8,7 +8,8 @@ bool is_prime(int n)
     if (n % 2 == 0) {
         return false;
     }
-    for (int probe = 2, end = static_cast<int>(std::sqrt(n)); probe <= end; ++probe) {
+    const int max_factor = static_cast<int>(std::sqrt(n));
+    for (int probe = 2; probe <= max_factor; ++probe) {
         if (n % probe == 0) {
             return false;
         }
