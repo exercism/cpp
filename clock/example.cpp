@@ -4,16 +4,24 @@
 
 using namespace std;
 
+namespace
+{
+
+const int minutes_per_hour = 60;
+const int hours_per_day = 24;
+
+}
+
 namespace date_independent
 {
 
 clock& clock::plus(int minutes)
 {
     minute_ += minutes;
-    if (minute_ > 60) {
-        hour_ += (minute_/60);
-        hour_ %= 24;
-        minute_ %= 60;
+    if (minute_ > minutes_per_hour) {
+        hour_ += (minute_/minutes_per_hour);
+        hour_ %= hours_per_day;
+        minute_ %= minutes_per_hour;
     }
     return *this;
 }
@@ -23,10 +31,10 @@ clock& clock::minus(int minutes)
     minute_ -= minutes;
     while (minute_ < 0) {
         --hour_;
-        minute_ += 60;
+        minute_ += minutes_per_hour;
     }
     while (hour_ < 0) {
-        hour_ += 24;
+        hour_ += hours_per_day;
     }
     return *this;
 }
