@@ -30,13 +30,13 @@ public:
     std::string convert();
 
 private:
-    void convert_thousands();
-    void convert_hundreds();
-    void convert_tens();
-    void convert_ones();
-    void convert_place(int place);
-    void convert_place_numeral(int place);
-    void convert_place_numeral_penultimate(int place, int penultimate_place);
+    void thousands();
+    void hundreds();
+    void tens();
+    void ones();
+    void place(int place);
+    void place_numeral(int place);
+    void place_numeral_penultimate(int place, int penultimate_place);
 
     int n_;
     std::string result_;
@@ -44,44 +44,44 @@ private:
 
 std::string converter::convert()
 {
-    convert_thousands();
-    convert_hundreds();
-    convert_tens();
-    convert_ones();
+    thousands();
+    hundreds();
+    tens();
+    ones();
     return result_;
 }
 
-void converter::convert_thousands()
+void converter::thousands()
 {
-    convert_place(0);
+    place(0);
 }
 
-void converter::convert_hundreds()
+void converter::hundreds()
 {
-    convert_place(2);
+    place(2);
 }
 
-void converter::convert_tens()
+void converter::tens()
 {
-    convert_place(4);
+    place(4);
 }
 
-void converter::convert_ones()
+void converter::ones()
 {
     result_ += std::string(n_, 'I');
 }
 
-void converter::convert_place(int place)
+void converter::place(int place)
 {
     const int tenth_place = place + 2;
-    convert_place_numeral(place);
-    convert_place_numeral_penultimate(place, tenth_place);
+    place_numeral(place);
+    place_numeral_penultimate(place, tenth_place);
     const int half_place = place + 1;
-    convert_place_numeral(half_place);
-    convert_place_numeral_penultimate(half_place, tenth_place);
+    place_numeral(half_place);
+    place_numeral_penultimate(half_place, tenth_place);
 }
 
-void converter::convert_place_numeral(int place)
+void converter::place_numeral(int place)
 {
     while (n_ >= roman_numerals[place].value) {
         result_ += roman_numerals[place].numeral;
@@ -89,12 +89,13 @@ void converter::convert_place_numeral(int place)
     }
 }
 
-void converter::convert_place_numeral_penultimate(int place, int penultimate_place)
+void converter::place_numeral_penultimate(int place, int penultimate_place)
 {
-    if (n_ >= roman_numerals[place].value - roman_numerals[penultimate_place].value) {
+    const int amount = roman_numerals[place].value - roman_numerals[penultimate_place].value;
+    if (n_ >= amount) {
         result_ += roman_numerals[penultimate_place].numeral;
         result_ += roman_numerals[place].numeral;
-        n_ -= roman_numerals[place].value - roman_numerals[penultimate_place].value;
+        n_ -= amount;
     }
 }
 
