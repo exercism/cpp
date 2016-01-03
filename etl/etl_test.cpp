@@ -1,22 +1,7 @@
 #include "etl.h"
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
-
-namespace boost
-{
-
-// teach Boost.Test how to print std::pair
-template <typename K, typename V>
-inline wrap_stringstream&
-operator<<(wrap_stringstream& wrapped, std::pair<const K, V> const& item)
-{
-    return wrapped << '<' << item.first << ',' << item.second << '>';
-}
-
-}
-
-#define REQUIRE_EQUAL_CONTAINERS(left_, right_) \
-    BOOST_REQUIRE_EQUAL_COLLECTIONS(left_.begin(), left_.end(), right_.begin(), right_.end())
+#include "require_equal_containers.h"
 
 BOOST_AUTO_TEST_CASE(transforms_one_value)
 {

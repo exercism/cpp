@@ -2,19 +2,7 @@
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
 #include <stdexcept>
-
-namespace boost
-{
-
-// teach Boost.Test how to print std::pair
-template <typename K, typename V>
-inline wrap_stringstream&
-operator<<(wrap_stringstream& wrapped, std::pair<const K, V> const& item)
-{
-    return wrapped << '<' << item.first << ',' << item.second << '>';
-}
-
-}
+#include "require_equal_containers.h"
 
 BOOST_AUTO_TEST_CASE(has_no_nucleotides)
 {
@@ -23,7 +11,7 @@ BOOST_AUTO_TEST_CASE(has_no_nucleotides)
 
     const auto actual = dna.nucleotide_counts();
 
-    BOOST_REQUIRE_EQUAL_COLLECTIONS(expected.begin(), expected.end(), actual.begin(), actual.end());
+    REQUIRE_EQUAL_CONTAINERS(expected, actual);
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
@@ -48,7 +36,7 @@ BOOST_AUTO_TEST_CASE(repetitive_sequence_has_only_guanosine)
 
     const auto actual = dna.nucleotide_counts();
 
-    BOOST_REQUIRE_EQUAL_COLLECTIONS(expected.begin(), expected.end(), actual.begin(), actual.end());
+    REQUIRE_EQUAL_CONTAINERS(expected, actual);
 }
 
 BOOST_AUTO_TEST_CASE(counts_only_thymidine)
@@ -81,6 +69,6 @@ BOOST_AUTO_TEST_CASE(counts_all_nucleotides)
 
     auto actual = dna.nucleotide_counts();
 
-    BOOST_REQUIRE_EQUAL_COLLECTIONS(expected.begin(), expected.end(), actual.begin(), actual.end());
+    REQUIRE_EQUAL_CONTAINERS(expected, actual);
 }
 #endif

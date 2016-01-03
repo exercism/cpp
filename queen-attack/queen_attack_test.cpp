@@ -1,24 +1,7 @@
 #include "queen_attack.h"
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
-
-namespace boost
-{
-namespace test_tools
-{
-
-// teach Boost.Test how to print std::pair with BOOST_REQUIRE_EQUAL
-template<>
-struct print_log_value<std::pair<int, int>>
-{
-    void operator()(std::ostream& ostr, std::pair<int, int> const& item)
-    {
-        ostr << '<' << item.first << ',' << item.second << '>';
-    }
-};
-
-}
-}
+#include "require_equal_containers.h"
 
 BOOST_AUTO_TEST_CASE(queens_in_default_positions)
 {

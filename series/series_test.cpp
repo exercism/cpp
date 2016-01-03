@@ -2,25 +2,7 @@
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
 #include <stdexcept>
-
-namespace boost
-{
-
-// teach Boost.Test how to print std::vector
-template <typename T>
-inline wrap_stringstream&
-operator<<(wrap_stringstream& wrapped, std::vector<T> const& item)
-{
-    wrapped << '[';
-    bool first = true;
-    for (auto const& element : item) {
-        wrapped << (!first ? "," : "") << element;
-        first = false;
-    }
-    return wrapped << ']';
-}
-
-}
+#include "require_equal_containers.h"
 
 using namespace std;
 
