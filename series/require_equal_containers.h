@@ -42,19 +42,6 @@ inline std::ostream &operator<<(std::ostream &str, std::pair<K, V> const& item)
 namespace boost
 {
 
-// teach Boost.Test how to print std::vector<T> to std::ostream
-template <typename T>
-inline std::ostream &operator<<(std::ostream &str, std::vector<T> const &items)
-{
-    str << '[';
-    bool first = true;
-    for (auto const& element : items) {
-        str << (!first ? "," : "") << element;
-        first = false;
-    }
-    return str << ']';
-}
-
 // teach Boost.Test how to print std::vector to wrap_stringstream
 template <typename T>
 inline wrap_stringstream&
@@ -67,13 +54,6 @@ operator<<(wrap_stringstream& wrapped, std::vector<T> const& item)
         first = false;
     }
     return wrapped << ']';
-}
-
-// teach Boost.Test how to print std::pair<K,V> to std::ostream
-template <typename K, typename V>
-inline std::ostream &operator<<(std::ostream &str, std::pair<K, V> const& item)
-{
-    return str << '<' << item.first << ',' << item.second << '>';
 }
 
 // teach Boost.Test how to print std::pair<K,V> to wrap_stringstream
