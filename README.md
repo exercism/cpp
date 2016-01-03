@@ -1,3 +1,5 @@
+[![Travis Build Status](https://api.travis-ci.org/exercism/xcpp.png?branch=master)](https://travis-ci.org/exercism/xcpp)
+
 # xC++
 
 Exercism Exercises in C++
