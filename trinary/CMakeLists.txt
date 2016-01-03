@@ -33,8 +33,15 @@ else()
     set(exercise_cpp "")
 endif()
 
+# Include a test helper header if it exists
+if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/require_equal_containers.h)
+    set(test_helper require_equal_containers.h)
+else()
+    set(test_helper "")
+endif()
+
 # Build executable from sources and headers
-add_executable(${exercise} ${file}_test.cpp ${exercise_cpp} ${file}.h)
+add_executable(${exercise} ${file}_test.cpp ${test_helper} ${exercise_cpp} ${file}.h)
 
 # We need boost includes
 target_include_directories(${exercise} PRIVATE ${Boost_INCLUDE_DIRS})
