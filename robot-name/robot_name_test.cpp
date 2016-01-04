@@ -7,7 +7,7 @@ using namespace std;
 
 namespace
 {
-const boost::regex name_pattern{R"name(^\w{2}\d{3}$)name"};
+const boost::regex name_pattern{R"name(^[[:alpha:]]{2}\d{3}$)name"};
 }
 
 BOOST_AUTO_TEST_CASE(has_a_name)
