@@ -3,6 +3,7 @@
 
 #include <utility>
 #include <vector>
+#include <boost/version.hpp>
 
 #if BOOST_VERSION >= 105900
 
