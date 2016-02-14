@@ -64,6 +64,7 @@ latest version of the Microsoft Visual C++ compiler.
 CMake is an open source cross-platform build system that generates build
 scripts for your native build system (`make`, Visual Studio, Xcode, etc.).
 Exercism's C++ track uses CMake to give you a ready-made build that:
+
 * compiles the tests
 * compiles your solution
 * links the test executable
