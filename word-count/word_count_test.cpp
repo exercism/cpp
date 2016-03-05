@@ -5,6 +5,7 @@
 
 using namespace std;
 
+#if BOOST_VERSION < 105900
 namespace boost
 {
 
@@ -17,6 +18,20 @@ operator<<(wrap_stringstream& wrapped, std::pair<const K, V> const& item)
 }
 
 }
+
+#else
+
+namespace boost { namespace test_tools { namespace tt_detail {
+template<typename K, typename V>
+struct print_log_value<std::pair<const K, V>>
+{
+    void operator()(std::ostream& os, std::pair<const K, V> const& item)
+    {
+        os << '<' << item.first << ',' << item.second << '>';
+    }
+};
+}}}
+#endif
 
 #define REQUIRE_EQUAL_CONTAINERS(left_, right_) \
     BOOST_REQUIRE_EQUAL_COLLECTIONS(left_.begin(), left_.end(), right_.begin(), right_.end())

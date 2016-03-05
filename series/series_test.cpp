@@ -3,6 +3,7 @@
 #include <boost/test/unit_test.hpp>
 #include <stdexcept>
 
+#if BOOST_VERSION < 105900
 namespace boost
 {
 
@@ -21,6 +22,24 @@ operator<<(wrap_stringstream& wrapped, std::vector<T> const& item)
 }
 
 }
+#else
+namespace boost { namespace test_tools { namespace tt_detail {
+
+template <typename T>
+inline std::ostream&
+operator<<(std::ostream& os, std::vector<T> const& item)
+{
+    return os << '[';
+    bool first = true;
+    for (auto const& element : item) {
+        os << (!first ? "," : "") << element;
+        first = false;
+    }
+    return os << ']';
+}
+
+}}}
+#endif
 
 using namespace std;
 
