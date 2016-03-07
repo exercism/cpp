@@ -2,6 +2,7 @@
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
 
+#if BOOST_VERSION < 105900
 namespace boost
 {
 namespace test_tools
@@ -19,6 +20,18 @@ struct print_log_value<std::pair<int, int>>
 
 }
 }
+#else
+namespace boost { namespace test_tools { namespace tt_detail {
+
+template <typename K, typename V>
+inline std::ostream&
+operator<<(std::ostream& os, std::pair<K, V> const& item)
+{
+    return os << '<' << item.first << ',' << item.second << '>';
+}
+
+}}}
+#endif
 
 BOOST_AUTO_TEST_CASE(queens_in_default_positions)
 {
