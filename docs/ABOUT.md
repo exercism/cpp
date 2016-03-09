@@ -37,6 +37,6 @@ Standardization (ISO), and the current version of C++ as of December
 2014 is C++14 (named not as the 14th version of C++, but rather
 signifying that the standard was ratified in 2014).
 
-And the best thing about C++ is that it runs on everything from embedded
+The best thing about C++ is that it runs on everything from embedded
 processors with very limited resources to the largest mainframe
 supercomputer and every personal computer in between.
