@@ -50,6 +50,7 @@ batch file (Windows) for this command.
 
 Once the build environment has been created by CMake, you can build your
 code using the appropriate command for your environment:
+
 * Linux with make: `make`
 * Windows with Visual Studio 2013: Select Build / Build Solution from the menu.
 * MacOS with Xcode: Select Build from the toolbar
