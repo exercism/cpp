@@ -50,6 +50,7 @@ batch file (Windows) for this command.
 
 Once the build environment has been created by CMake, you can build your
 code using the appropriate command for your environment:
+
 * Linux with make: `make`
 * Windows with Visual Studio 2013: Select Build / Build Solution from the menu.
 * MacOS with Xcode: Select Build from the toolbar
@@ -142,5 +143,6 @@ The Boost.Test documentation is being rewritten to improve usability
 and is nearly complete.
 Prefer the documentation rewrite to look up something if you're unfamiliar
 with Boost.Test and want to know more.
+
 * [Boost.Test documentation rewrite](http://user.xmission.com/~legalize/boost.test/)
 * [Boost.Test 1.55 official documentation](http://www.boost.org/doc/libs/1_55_0/libs/test/doc/html/index.html)
