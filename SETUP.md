@@ -1,9 +1,8 @@
 ## Getting Started
 
-Make sure you have read the [getting started with C++](http://help.exercism.io/getting-started-with-cpp.html)
-page on the [exercism help site](http://help.exercism.io/).  This covers
-the basic information on setting up the development environment expected
-by the exercises.
+Make sure you have read [the C++ page](http://exercism.io/languages/cpp) on
+exercism.io.  This covers the basic information on setting up the development
+environment expected by the exercises.
 
 ## Passing the Tests
 
