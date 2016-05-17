@@ -37,7 +37,8 @@
     "beer-song",
     "nth-prime",
     "hexadecimal",
-    "queen-attack"
+    "queen-attack",
+    "circular-buffer"
   ],
   "deprecated": [
 
