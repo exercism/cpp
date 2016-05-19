@@ -25,7 +25,7 @@ BOOST_AUTO_TEST_CASE(scores_more_complicated_words_with_more)
 
 BOOST_AUTO_TEST_CASE(scores_case_insensitive_words)
 {
-    BOOST_REQUIRE_EQUAL(20, scrabble_score::score("MULTIBILLIONAIRE"));
+    BOOST_REQUIRE_EQUAL(41, scrabble_score::score("OXYPHENBUTAZONE"));
 }
 
 BOOST_AUTO_TEST_CASE(scores_z_word)
