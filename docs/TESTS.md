@@ -140,6 +140,25 @@ $ cmake -G "Unix Makefiles" /path/to/my/source/folder/bob/
 This example shows creating empty files for the implementation before
 running CMake.
 
+
+#### MacOS with GGC from Homebrew with Xcode Installed 
+
+Xcode will overide `gcc` to link to llvm so in order to use GCC from homebrew  
+you have to find the version of GCC you have installed by `$ brew list --versions`  
+Assming that you have version 5.3.0 of GCC, the current exercise is `bob`   
+and we're in the exercise folder:
+
+```
+$ cd /path/to/my/source/folder/bob/
+$ touch bob.{h,cpp}
+$ mkdir gccbuild
+$ cd gccbuild
+$ cmake -DCMAKE_CXX_COMPILER=/usr/local/Cellar/gcc/5.3.0/bin/g++-5 /path/to/my/source/folder/bob/
+```
+
+This example shows creating empty files for the implementation before
+running CMake.
+
 ## Boost.Test Documentation
 
 The Boost.Test documentation is being rewritten to improve usability
