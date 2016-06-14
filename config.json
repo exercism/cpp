@@ -43,7 +43,8 @@
 
   ],
   "ignored": [
-    "docs"
+    "docs",
+    "img"
   ],
   "foregone": [
     "point-mutations"
