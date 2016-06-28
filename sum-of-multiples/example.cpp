@@ -3,11 +3,6 @@
 namespace sum_of_multiples
 {
 
-int to(int num)
-{
-    return to({3, 5}, num);
-}
-
 int to(std::initializer_list<int> const& multiples, int num)
 {
     int sum = 0;
