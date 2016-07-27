@@ -14,7 +14,7 @@ namespace
 string next_prefix(string const &prefix)
 {
     string next{prefix};
-    const string letters{"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"};
+    const string letters{"ABCDEFGHIJKLMNOPQRSTUVWXYZ"};
     if (prefix[1] == letters.back()) {
         if (prefix[0] == letters.back()) {
             throw range_error("prefix combinations exhausted");
