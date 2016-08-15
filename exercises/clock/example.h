@@ -20,6 +20,7 @@ public:
 
 private:
     clock(int hour, int minute);
+    void clean();
     int hour_;
     int minute_;
 };
