@@ -6,7 +6,8 @@ using namespace std;
 
 BOOST_AUTO_TEST_CASE(no_matches)
 {
-    auto subject = anagram::anagram("diaper");
+    // 'anagram::anagram' defines a class
+    anagram::anagram subject = anagram::anagram("diaper");
     auto matches = subject.matches({"hello", "world", "zombies", "pants"});
     vector<string> expected;
 
