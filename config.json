@@ -3,42 +3,6 @@
   "language": "C++",
   "repository": "https://github.com/exercism/xcpp",
   "active": true,
-  "problems": [
-    "bob",
-    "leap",
-    "gigasecond",
-    "hamming",
-    "anagram",
-    "etl",
-    "word-count",
-    "difference-of-squares",
-    "nucleotide-count",
-    "food-chain",
-    "phone-number",
-    "grade-school",
-    "robot-name",
-    "sum-of-multiples",
-    "space-age",
-    "meetup",
-    "scrabble-score",
-    "triangle",
-    "grains",
-    "raindrops",
-    "roman-numerals",
-    "binary",
-    "prime-factors",
-    "crypto-square",
-    "trinary",
-    "rna-transcription",
-    "say",
-    "sieve",
-    "series",
-    "clock",
-    "beer-song",
-    "nth-prime",
-    "hexadecimal",
-    "queen-attack"
-  ],
   "deprecated": [
 
   ],
@@ -48,5 +12,177 @@
   ],
   "foregone": [
     "point-mutations"
+  ],
+  "exercises": [
+    {
+      "difficulty": 1,
+      "slug": "bob",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "leap",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "gigasecond",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "hamming",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "anagram",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "etl",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "word-count",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "difference-of-squares",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "nucleotide-count",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "food-chain",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "phone-number",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "grade-school",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "robot-name",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "sum-of-multiples",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "space-age",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "meetup",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "scrabble-score",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "triangle",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "grains",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "raindrops",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "roman-numerals",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "binary",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "prime-factors",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "crypto-square",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "trinary",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "rna-transcription",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "say",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "sieve",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "series",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "clock",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "beer-song",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "nth-prime",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "hexadecimal",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "queen-attack",
+      "topics": []
+    }
   ]
 }
