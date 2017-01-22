@@ -3,7 +3,7 @@ project(exercism CXX)
 
 function(travis_fixup dir)
     string(REPLACE "-" "_" file ${dir})
-    set(subdir ${CMAKE_CURRENT_SOURCE_DIR}/${dir})
+    set(subdir ${CMAKE_CURRENT_SOURCE_DIR}/exercises/${dir})
     if(EXISTS ${subdir}/example.h)
         file(RENAME ${subdir}/example.h ${subdir}/${file}.h)
     endif()
@@ -48,11 +48,12 @@ foreach(exercise
     meetup
     queen-attack
 )
+    set(exercise_dir exercises/${exercise})
     travis_fixup(${exercise})
     execute_process(
         COMMAND ${CMAKE_COMMAND} -DEXERCISM_RUN_ALL_TESTS:BOOL=1 -G ${CMAKE_GENERATOR} .
-        WORKING_DIRECTORY ${exercise})
+        WORKING_DIRECTORY ${exercise_dir})
     add_custom_target(${exercise} ALL
         COMMAND ${CMAKE_COMMAND} --build .
-        WORKING_DIRECTORY ${exercise})
+        WORKING_DIRECTORY ${exercise_dir})
 endforeach()
