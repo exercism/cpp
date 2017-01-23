@@ -1,7 +1,6 @@
 #include "queen_attack.h"
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
-#include "require_equal_containers.h"
 
 BOOST_AUTO_TEST_CASE(queens_in_default_positions)
 {
