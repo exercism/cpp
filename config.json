@@ -14,11 +14,13 @@
     "point-mutations"
   ],
   "exercises": [
-	{
-		"difficult": 1,
-		"slug": "hello-world",
-		"topics": []
-	},
+    {
+      "difficulty": 1,
+      "slug": "hello-world",
+      "topics": [
+        "strings"      
+      ]
+    },
     {
       "difficulty": 1,
       "slug": "bob",
