@@ -5,7 +5,7 @@ using namespace std;
 namespace hello_world
 {
 	
-std::string hello()
+string hello()
 {
     return "Hello, World!";
 }
