@@ -6,7 +6,3 @@ BOOST_AUTO_TEST_CASE(test_hello)
 {
     BOOST_REQUIRE_EQUAL("Hello, World!", hello_world::hello());
 }
-
-#if defined(EXERCISM_RUN_ALL_TESTS)
-
-#endif
