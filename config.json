@@ -16,6 +16,13 @@
   "exercises": [
     {
       "difficulty": 1,
+      "slug": "hello-world",
+      "topics": [
+        "strings"      
+      ]
+    },
+    {
+      "difficulty": 1,
       "slug": "bob",
       "topics": []
     },
