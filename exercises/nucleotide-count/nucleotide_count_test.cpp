@@ -62,6 +62,11 @@ BOOST_AUTO_TEST_CASE(validates_nucleotides)
     BOOST_REQUIRE_THROW(dna.count('X'), std::invalid_argument);
 }
 
+BOOST_AUTO_TEST_CASE(validates_nucleotides_on_construction)
+{
+    BOOST_REQUIRE_THROW(dna::counter("GGTTGGX"), std::invalid_argument);
+}
+
 BOOST_AUTO_TEST_CASE(counts_all_nucleotides)
 {
     const dna::counter dna("AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC");
