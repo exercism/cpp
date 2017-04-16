@@ -2,7 +2,7 @@
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
 
-// See <http://www.boost.org/doc/libs/1_55_0/doc/html/date_time.html>
+// See <http://www.boost.org/doc/libs/1_59_0/doc/html/date_time.html>
 // for documentation on boost::gregorian::date
 
 BOOST_AUTO_TEST_CASE(test_1)
