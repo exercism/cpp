@@ -1,7 +1,6 @@
 #include "grade_school.h"
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
-#include "require_equal_containers.h"
 
 using namespace std;
 
@@ -25,7 +24,7 @@ BOOST_AUTO_TEST_CASE(adding_a_student_adds_them_to_the_roster_for_the_given_grad
     const auto actual = school_.roster();
 
     const map<int, vector<string>> expected{{2, {"Aimee"}}};
-    REQUIRE_EQUAL_CONTAINERS(expected, actual);
+    BOOST_TEST(expected == actual);
 }
 
 BOOST_AUTO_TEST_CASE(adding_more_students_to_the_same_grade_adds_them_to_the_roster)
@@ -37,7 +36,7 @@ BOOST_AUTO_TEST_CASE(adding_more_students_to_the_same_grade_adds_them_to_the_ros
     const auto actual = school_.roster();
 
     const map<int, vector<string>> expected{{2, {"Blair", "James", "Paul"}}};
-    REQUIRE_EQUAL_CONTAINERS(expected, actual);
+    BOOST_TEST(expected == actual);
 }
 
 BOOST_AUTO_TEST_CASE(adding_students_to_different_grades_adds_them_to_the_roster)
@@ -48,7 +47,7 @@ BOOST_AUTO_TEST_CASE(adding_students_to_different_grades_adds_them_to_the_roster
     const auto actual = school_.roster();
 
     const map<int, vector<string>> expected{{3, {"Chelsea"}}, {7, {"Logan"}}};
-    REQUIRE_EQUAL_CONTAINERS(expected, actual);
+    BOOST_TEST(expected == actual);
 }
 
 BOOST_AUTO_TEST_CASE(grade_returns_the_students_in_that_grade_in_alphabetical_order)
@@ -60,7 +59,7 @@ BOOST_AUTO_TEST_CASE(grade_returns_the_students_in_that_grade_in_alphabetical_or
     const auto actual = school_.grade(5);
 
     const vector<string> expected{"Bradley", "Franklin"};
-    REQUIRE_EQUAL_CONTAINERS(expected, actual);
+    BOOST_TEST(expected == actual);
 }
 
 BOOST_AUTO_TEST_CASE(grade_returns_an_empty_array_if_there_are_no_students_in_that_grade)
@@ -84,7 +83,7 @@ BOOST_AUTO_TEST_CASE(the_student_names_in_each_grade_in_the_roster_are_sorted)
             {4, {"Christopher", "Jennifer"}},
             {6, {"Kareem"}}
         };
-    REQUIRE_EQUAL_CONTAINERS(expected, actual);
+    BOOST_TEST(expected == actual);
 }
 #endif
 
