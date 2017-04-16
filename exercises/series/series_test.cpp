@@ -2,9 +2,9 @@
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
 #include <stdexcept>
-#include "require_equal_containers.h"
 
 using namespace std;
+namespace tt = boost::test_tools;
 
 BOOST_AUTO_TEST_CASE(short_digits)
 {
@@ -12,7 +12,7 @@ BOOST_AUTO_TEST_CASE(short_digits)
 
     const vector<int> actual{series::digits("012345")};
 
-    BOOST_REQUIRE_EQUAL_COLLECTIONS(expected.begin(), expected.end(), actual.begin(), actual.end());
+    BOOST_TEST(expected == actual, tt::per_element());
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
@@ -22,7 +22,7 @@ BOOST_AUTO_TEST_CASE(long_digits)
 
     const vector<int> actual{series::digits("0123456789")};
 
-    BOOST_REQUIRE_EQUAL_COLLECTIONS(expected.begin(), expected.end(), actual.begin(), actual.end());
+    BOOST_TEST(expected == actual, tt::per_element());
 }
 
 BOOST_AUTO_TEST_CASE(keeps_the_digit_order_if_reversed)
@@ -31,7 +31,7 @@ BOOST_AUTO_TEST_CASE(keeps_the_digit_order_if_reversed)
 
     const vector<int> actual{series::digits("9876543210")};
 
-    BOOST_REQUIRE_EQUAL_COLLECTIONS(expected.begin(), expected.end(), actual.begin(), actual.end());
+    BOOST_TEST(expected == actual, tt::per_element());
 }
 
 BOOST_AUTO_TEST_CASE(keeps_arbitrary_digit_order)
@@ -40,7 +40,7 @@ BOOST_AUTO_TEST_CASE(keeps_arbitrary_digit_order)
 
     const vector<int> actual{series::digits("936923468")};
 
-    BOOST_REQUIRE_EQUAL_COLLECTIONS(expected.begin(), expected.end(), actual.begin(), actual.end());
+    BOOST_TEST(expected == actual, tt::per_element());
 }
 
 BOOST_AUTO_TEST_CASE(can_slice_by_1)
@@ -49,7 +49,7 @@ BOOST_AUTO_TEST_CASE(can_slice_by_1)
 
     const vector<vector<int>> actual{series::slice("01234", 1)};
 
-    BOOST_REQUIRE_EQUAL_COLLECTIONS(expected.begin(), expected.end(), actual.begin(), actual.end());
+    BOOST_TEST(expected == actual);
 }
 
 BOOST_AUTO_TEST_CASE(can_slice_by_2)
@@ -58,7 +58,7 @@ BOOST_AUTO_TEST_CASE(can_slice_by_2)
 
     const vector<vector<int>> actual{series::slice("98273463", 2)};
 
-    BOOST_REQUIRE_EQUAL_COLLECTIONS(expected.begin(), expected.end(), actual.begin(), actual.end());
+    BOOST_TEST(expected == actual);
 }
 
 BOOST_AUTO_TEST_CASE(can_slice_by_3)
@@ -67,7 +67,7 @@ BOOST_AUTO_TEST_CASE(can_slice_by_3)
 
     const vector<vector<int>> actual{series::slice("01234", 3)};
 
-    BOOST_REQUIRE_EQUAL_COLLECTIONS(expected.begin(), expected.end(), actual.begin(), actual.end());
+    BOOST_TEST(expected == actual);
 }
 
 BOOST_AUTO_TEST_CASE(can_slice_by_3_with_duplicate_digits)
@@ -76,7 +76,7 @@ BOOST_AUTO_TEST_CASE(can_slice_by_3_with_duplicate_digits)
 
     const vector<vector<int>> actual{series::slice("31001", 3)};
 
-    BOOST_REQUIRE_EQUAL_COLLECTIONS(expected.begin(), expected.end(), actual.begin(), actual.end());
+    BOOST_TEST(expected == actual);
 }
 
 BOOST_AUTO_TEST_CASE(can_slice_by_4)
@@ -85,7 +85,7 @@ BOOST_AUTO_TEST_CASE(can_slice_by_4)
 
     const vector<vector<int>> actual{series::slice("31001", 3)};
 
-    BOOST_REQUIRE_EQUAL_COLLECTIONS(expected.begin(), expected.end(), actual.begin(), actual.end());
+    BOOST_TEST(expected == actual);
 }
 
 BOOST_AUTO_TEST_CASE(can_slice_by_5)
@@ -94,7 +94,7 @@ BOOST_AUTO_TEST_CASE(can_slice_by_5)
 
     const vector<vector<int>> actual{series::slice("81228", 5)};
 
-    BOOST_REQUIRE_EQUAL_COLLECTIONS(expected.begin(), expected.end(), actual.begin(), actual.end());
+    BOOST_TEST(expected == actual);
 }
 
 BOOST_AUTO_TEST_CASE(domain_error_if_not_enough_digits_to_slice)
