@@ -10,8 +10,8 @@ C++ supports [procedural](https://en.wikipedia.org/wiki/Procedural_programming),
 [object-oriented](https://en.wikipedia.org/wiki/Object-oriented_programming),
 [functional](https://en.wikipedia.org/wiki/Functional_programming)
 and [generic](https://en.wikipedia.org/wiki/Generic_programming)
-programming. C++ runs on a variety of platforms, such as Windows,
-Mac OS, and the various versions of UNIX.
+programming. Compilers for C++ are available for essentially every platform,
+including Windows, Mac OS, and Linux.
 
 Key Benefits:
 - Type safety
