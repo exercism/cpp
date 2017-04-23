@@ -55,8 +55,8 @@ MacOS users can install gcc 4.8 with [Homebrew](http://brew.sh/) via
 #### Windows
 
 Windows users can get
-[Visual Studio Community 2013](http://www.visualstudio.com/en-us/products/visual-studio-community-vs),
-a free download that will give you the Visual Studio 2015 IDE and the
+[Visual Studio Community](https://www.visualstudio.com/vs/community/),
+a free download that will give you the Visual Studio IDE and the
 latest version of the Microsoft Visual C++ compiler.
 
 ### Prerequisite: CMake
@@ -83,7 +83,7 @@ improve the CMake support.
 
 [CMake 2.8.11 or later](http://www.cmake.org/) is required to use the provided build recipe.
 
-### Prerequisite: Boost
+### Prerequisite: Boost 1.59+
 
 The unit tests use Boost.Test, the unit testing framework included with
 [Boost](http://www.boost.org/index.html).  You may find other libraries
@@ -100,9 +100,18 @@ If you are having difficulties installing Boost for use with exercism,
 
 #### Linux
 
-Linux users can usually get Boost from your distributions package manager.
+Linux users can usually get Boost from your distribution's package manager.
 If a pre-built package is unavailable for your linux distribution, try
 [installing Boost from source](http://www.boost.org/doc/libs/release/more/getting_started/index.html).
+
+Alternately, there may be some other way to install Boost for your
+distribution without installing from source. For example, you can install
+Boost 1.60 for Ubuntu 16.04 LTS by using a PPA.
+
+```
+$ sudo add-apt-repository -y ppa:samuel-bachmann/boost
+$ sudo apt-get install boost1.60
+```
 
 #### Windows
 
