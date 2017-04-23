@@ -101,7 +101,7 @@ setting the `BOOST_INCLUDEDIR` variable on the command-line.  Here is an
 example using the Visual Studio 2013 generator:
 
 ```
-> cmake -G "Visual Studio 12" -DBOOST_INCLUDEDIR:PATH=D:/Code/boost/boost_1_55_0 ..
+> cmake -G "Visual Studio 12" -DBOOST_INCLUDEDIR:PATH=D:/Code/boost/boost_1_59_0 ..
 ```
 
 **Note:** Path locations passed to CMake always use slash (`/`) as the

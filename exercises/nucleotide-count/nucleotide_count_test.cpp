@@ -2,7 +2,6 @@
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
 #include <stdexcept>
-#include "require_equal_containers.h"
 
 BOOST_AUTO_TEST_CASE(has_no_nucleotides)
 {
@@ -11,7 +10,7 @@ BOOST_AUTO_TEST_CASE(has_no_nucleotides)
 
     const auto actual = dna.nucleotide_counts();
 
-    REQUIRE_EQUAL_CONTAINERS(expected, actual);
+    BOOST_TEST(expected == actual);
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
@@ -36,7 +35,7 @@ BOOST_AUTO_TEST_CASE(repetitive_sequence_has_only_guanosine)
 
     const auto actual = dna.nucleotide_counts();
 
-    REQUIRE_EQUAL_CONTAINERS(expected, actual);
+    BOOST_TEST(expected == actual);
 }
 
 BOOST_AUTO_TEST_CASE(counts_only_thymidine)
@@ -74,6 +73,6 @@ BOOST_AUTO_TEST_CASE(counts_all_nucleotides)
 
     auto actual = dna.nucleotide_counts();
 
-    REQUIRE_EQUAL_CONTAINERS(expected, actual);
+    BOOST_TEST(expected == actual);
 }
 #endif

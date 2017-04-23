@@ -2,7 +2,6 @@
 #define BOOST_TEST_MAIN
 #include <map>
 #include <boost/test/unit_test.hpp>
-#include "require_equal_containers.h"
 
 BOOST_AUTO_TEST_CASE(transforms_one_value)
 {
@@ -11,7 +10,7 @@ BOOST_AUTO_TEST_CASE(transforms_one_value)
     const auto actual = etl::transform(old);
 
     const std::map<char, int> expected{{'a', 1}};
-    REQUIRE_EQUAL_CONTAINERS(expected, actual);
+    BOOST_TEST(expected == actual);
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
@@ -22,7 +21,7 @@ BOOST_AUTO_TEST_CASE(transforms_more_values)
     const auto actual = etl::transform(old);
 
     const std::map<char, int> expected{{'a', 1}, {'e', 1}, {'i', 1}, {'o', 1}, {'u', 1}};
-    REQUIRE_EQUAL_CONTAINERS(expected, actual);
+    BOOST_TEST(expected == actual);
 }
 
 BOOST_AUTO_TEST_CASE(transforms_more_keys)
@@ -32,7 +31,7 @@ BOOST_AUTO_TEST_CASE(transforms_more_keys)
     const auto actual = etl::transform(old);
 
     const std::map<char, int> expected{{'a', 1}, {'e', 1}, {'d', 2}, {'g', 2}};
-    REQUIRE_EQUAL_CONTAINERS(expected, actual);
+    BOOST_TEST(expected == actual);
 }
 
 BOOST_AUTO_TEST_CASE(transforms_a_full_dataset)
@@ -57,6 +56,6 @@ BOOST_AUTO_TEST_CASE(transforms_a_full_dataset)
         {'u', 1}, {'v', 4},  {'w', 4}, {'x', 8}, {'y', 4},
         {'z', 10}
     };
-    REQUIRE_EQUAL_CONTAINERS(expected, actual);
+    BOOST_TEST(expected == actual);
 }
 #endif
