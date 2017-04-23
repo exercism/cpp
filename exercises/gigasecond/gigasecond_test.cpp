@@ -2,7 +2,7 @@
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
 
-// See <http://www.boost.org/doc/libs/1_61_0/doc/html/date_time/posix_time.html>
+// See <http://www.boost.org/doc/libs/1_59_0/doc/html/date_time/posix_time.html>
 // for documentation on boost::posix_time
 
 using namespace boost::posix_time;
