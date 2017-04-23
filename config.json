@@ -18,178 +18,282 @@
       "difficulty": 1,
       "slug": "hello-world",
       "topics": [
-        "strings"      
+        "strings"
+      ]
+    },
+    {
+      "difficulty": 5,
+      "slug": "bob",
+      "topics": [
+        "strings",
+        "control-flow (conditionals)",
+        "parsing"
       ]
     },
     {
       "difficulty": 1,
-      "slug": "bob",
-      "topics": []
-    },
-    {
-      "difficulty": 1,
       "slug": "leap",
-      "topics": []
+      "topics": [
+        "logic",
+        "control-flow (conditionals)"
+      ]
     },
     {
-      "difficulty": 1,
+      "difficulty": 2,
       "slug": "gigasecond",
-      "topics": []
+      "topics": [
+        "dates",
+        "interfaces"
+      ]
     },
     {
-      "difficulty": 1,
+      "difficulty": 3,
       "slug": "hamming",
-      "topics": []
+      "topics": [
+        "strings",
+        "control-flow (loops)"
+      ]
     },
     {
-      "difficulty": 1,
+      "difficulty": 5,
       "slug": "anagram",
-      "topics": []
+      "topics": [
+        "strings",
+        "filtering",
+        "arrays"
+      ]
     },
     {
-      "difficulty": 1,
+      "difficulty": 3,
       "slug": "etl",
-      "topics": []
+      "topics": [
+        "maps",
+        "arrays",
+        "control-flow (loops)"
+      ]
     },
     {
-      "difficulty": 1,
+      "difficulty": 5,
       "slug": "word-count",
-      "topics": []
+      "topics": [
+        "strings",
+        "arrays",
+        "maps",
+        "parsing"
+      ]
     },
     {
-      "difficulty": 1,
+      "difficulty": 3,
       "slug": "difference-of-squares",
-      "topics": []
+      "topics": [
+        "control-flow (loops)"
+      ]
     },
     {
-      "difficulty": 1,
+      "difficulty": 3,
       "slug": "nucleotide-count",
-      "topics": []
+      "topics": [
+        "strings",
+        "parsing"
+      ]
     },
     {
-      "difficulty": 1,
+      "difficulty": 7,
       "slug": "food-chain",
-      "topics": []
+      "topics": [
+        "strings",
+        "control-flow (loops)",
+        "pattern recognition"
+      ]
     },
     {
-      "difficulty": 1,
+      "difficulty": 5,
       "slug": "phone-number",
-      "topics": []
+      "topics": [
+        "strings",
+        "parsing"
+      ]
     },
     {
-      "difficulty": 1,
+      "difficulty": 3,
       "slug": "grade-school",
-      "topics": []
+      "topics": [
+        "arrays",
+        "parsing"
+      ]
     },
     {
-      "difficulty": 1,
+      "difficulty": 5,
       "slug": "robot-name",
-      "topics": []
+      "topics": [
+        "strings",
+        "randomness"
+      ]
     },
     {
-      "difficulty": 1,
+      "difficulty": 3,
       "slug": "sum-of-multiples",
-      "topics": []
+      "topics": [
+        "mathematics"
+      ]
     },
     {
       "difficulty": 1,
       "slug": "space-age",
-      "topics": []
+      "topics": [
+        "functions"
+      ]
     },
     {
-      "difficulty": 1,
+      "difficulty": 5,
       "slug": "meetup",
-      "topics": []
+      "topics": [
+        "interfaces",
+        "functions"
+      ]
     },
     {
-      "difficulty": 1,
+      "difficulty": 3,
       "slug": "scrabble-score",
-      "topics": []
+      "topics": [
+        "strings",
+        "maps"
+      ]
     },
     {
-      "difficulty": 1,
+      "difficulty": 3,
       "slug": "triangle",
-      "topics": []
+      "topics": [
+        "mathematics",
+        "control-flow (conditionals)"
+      ]
     },
     {
-      "difficulty": 1,
+      "difficulty": 2,
       "slug": "grains",
-      "topics": []
+      "topics": [
+        "bitwise operations"
+      ]
     },
     {
-      "difficulty": 1,
+      "difficulty": 2,
       "slug": "raindrops",
-      "topics": []
+      "topics": [
+        "strings"
+      ]
     },
     {
-      "difficulty": 1,
+      "difficulty": 7,
       "slug": "roman-numerals",
-      "topics": []
+      "topics": [
+        "strings",
+        "mathematics"
+      ]
     },
     {
-      "difficulty": 1,
+      "difficulty": 3,
       "slug": "binary",
-      "topics": []
+      "topics": [
+        "strings",
+        "mathematics"
+      ]
     },
     {
-      "difficulty": 1,
+      "difficulty": 5,
       "slug": "prime-factors",
-      "topics": []
+      "topics": [
+        "mathematics",
+        "control-flow (loops)"
+      ]
     },
     {
-      "difficulty": 1,
+      "difficulty": 7,
       "slug": "crypto-square",
-      "topics": []
+      "topics": [
+        "strings",
+        "filtering",
+        "text formatting"
+      ]
     },
     {
-      "difficulty": 1,
+      "difficulty": 3,
       "slug": "trinary",
-      "topics": []
+      "topics": [
+        "strings",
+        "mathematics"
+      ]
     },
     {
-      "difficulty": 1,
+      "difficulty": 3,
       "slug": "rna-transcription",
-      "topics": []
+      "topics": [
+        "strings"
+      ]
     },
     {
-      "difficulty": 1,
+      "difficulty": 10,
       "slug": "say",
-      "topics": []
+      "topics": [
+        "strings",
+        "logic",
+        "text formatting"
+      ]
     },
     {
-      "difficulty": 1,
+      "difficulty": 5,
       "slug": "sieve",
-      "topics": []
+      "topics": [
+        "mathematics",
+        "control-flow (loops)"
+      ]
     },
     {
-      "difficulty": 1,
+      "difficulty": 5,
       "slug": "series",
-      "topics": []
+      "topics": [
+        "strings",
+        "arrays",
+        "logic"
+      ]
     },
     {
-      "difficulty": 1,
+      "difficulty": 5,
       "slug": "clock",
-      "topics": []
+      "topics": [
+        "classes",
+        "time"
+      ]
     },
     {
-      "difficulty": 1,
+      "difficulty": 7,
       "slug": "beer-song",
-      "topics": []
+      "topics": [
+        "strings",
+        "text formatting"
+      ]
     },
     {
-      "difficulty": 1,
+      "difficulty": 5,
       "slug": "nth-prime",
-      "topics": []
+      "topics": [
+        "mathematics"
+      ]
     },
     {
-      "difficulty": 1,
+      "difficulty": 3,
       "slug": "hexadecimal",
-      "topics": []
+      "topics": [
+        "strings",
+        "mathematics"
+      ]
     },
     {
-      "difficulty": 1,
+      "difficulty": 5,
       "slug": "queen-attack",
-      "topics": []
+      "topics": [
+        "logic",
+        "control-flow (loops)"
+      ]
     }
   ]
 }
