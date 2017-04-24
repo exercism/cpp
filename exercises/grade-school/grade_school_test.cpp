@@ -1,5 +1,6 @@
 #include "grade_school.h"
 #define BOOST_TEST_MAIN
+#include <map>
 #include <boost/test/unit_test.hpp>
 #include "require_equal_containers.h"
 
