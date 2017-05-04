@@ -110,6 +110,7 @@ Boost 1.60 for Ubuntu 16.04 LTS by using a PPA.
 
 ```
 $ sudo add-apt-repository -y ppa:samuel-bachmann/boost
+$ sudo apt-get -qq -d update
 $ sudo apt-get install boost1.60
 ```
 
