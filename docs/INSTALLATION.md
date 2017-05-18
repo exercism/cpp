@@ -49,8 +49,9 @@ $ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 90
 
 #### MacOS
 
-MacOS users can install gcc 4.8 with [Homebrew](http://brew.sh/) via
-`brew install gcc`.
+MacOS users can install gcc 5.x with [Homebrew](http://brew.sh/) via
+`brew install gcc`.  
+Alternatively, you can use Clang/LLVM included in Xcode 7.x and above.
 
 #### Windows
 
