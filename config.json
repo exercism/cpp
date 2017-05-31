@@ -22,15 +22,6 @@
       ]
     },
     {
-      "difficulty": 5,
-      "slug": "bob",
-      "topics": [
-        "strings",
-        "control-flow (conditionals)",
-        "parsing"
-      ]
-    },
-    {
       "difficulty": 1,
       "slug": "leap",
       "topics": [
@@ -52,6 +43,15 @@
       "topics": [
         "strings",
         "control-flow (loops)"
+      ]
+    },
+    {
+      "difficulty": 5,
+      "slug": "bob",
+      "topics": [
+        "strings",
+        "control-flow (conditionals)",
+        "parsing"
       ]
     },
     {
