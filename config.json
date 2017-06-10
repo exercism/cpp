@@ -6,10 +6,6 @@
   "deprecated": [
 
   ],
-  "ignored": [
-    "docs",
-    "img"
-  ],
   "foregone": [
     "point-mutations"
   ],
