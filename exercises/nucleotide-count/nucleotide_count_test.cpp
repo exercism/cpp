@@ -1,6 +1,7 @@
 #include "nucleotide_count.h"
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
+#include <map>
 #include <stdexcept>
 
 BOOST_AUTO_TEST_CASE(has_no_nucleotides)
