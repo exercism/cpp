@@ -78,7 +78,7 @@ not worry about setting up a build for each exercise.
 
 Getting a portable build isn't easy and requires access to many kinds of
 systems.  If you encounter any problems with the supplied CMake recipe,
-please [report the issue](https://github.com/exercism/xcpp/issues) so we can
+please [report the issue](https://github.com/exercism/cpp/issues) so we can
 improve the CMake support.
 
 [CMake 2.8.11 or later](http://www.cmake.org/) is required to use the provided build recipe.
@@ -96,7 +96,7 @@ boost libraries Boost.Test, Boost.DateTime and Boost.Regex, or you will
 need to download from source and build the library yourself.
 
 If you are having difficulties installing Boost for use with exercism,
-[ask for help](https://github.com/exercism/xcpp/issues).
+[ask for help](https://github.com/exercism/cpp/issues).
 
 #### Linux
 
