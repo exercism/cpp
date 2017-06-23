@@ -23,7 +23,7 @@ allergy_test::allergy_test(const int test_result)
 bool allergy_test::is_allergic_to(std::string const& allergen)
 {
     int allergen_value = allergens.at(allergen);
-    return result & allergen_value == allergen_value;
+    return (result & allergen_value) == allergen_value;
 }
 
 }
