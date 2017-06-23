@@ -2,6 +2,9 @@
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
 
+#include <string>
+#include <set>
+
 BOOST_AUTO_TEST_CASE(has_no_allergies)
 {
     allergies::allergy_test test(0);
@@ -74,6 +77,22 @@ BOOST_AUTO_TEST_CASE(allergic_to_eggs_and_other_stuff)
     BOOST_REQUIRE_EQUAL(true, test.is_allergic_to("eggs"));
     BOOST_REQUIRE_EQUAL(true, test.is_allergic_to("shellfish"));
     BOOST_REQUIRE_EQUAL(false, test.is_allergic_to("peanuts"));
+}
+
+BOOST_AUTO_TEST_CASE(allergic_to_nothing)
+{
+    allergies::allergy_test test(0);
+    const std::set<std::string> no_allergies;
+
+    BOOST_TEST(no_allergies == test.get_allergies());
+}
+
+BOOST_AUTO_TEST_CASE(allergic_to_only_peanuts)
+{
+    allergies::allergy_test test(2);
+    const std::set<std::string> only_peanuts = {"peanuts"};
+
+    BOOST_TEST(only_peanuts == test.get_allergies());
 }
 
 
