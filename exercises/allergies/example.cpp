@@ -2,7 +2,8 @@
 
 #include <string>
 #include <map>
-#include <set>
+#include <vector>
+#include <algorithm>
 
 namespace allergies
 {
@@ -21,21 +22,25 @@ allergy_test::allergy_test(const int test_result)
    })
 {} 
 
-bool allergy_test::is_allergic_to(std::string const& allergen)
+bool allergy_test::is_allergic_to(std::string const& allergen) const
 {
     int allergen_value = allergens.at(allergen);
     return (result & allergen_value) == allergen_value;
 }
 
-std::set<std::string> allergy_test::get_allergies()
+std::vector<std::string> allergy_test::get_allergies() const
 {
-    std::set<std::string> allergy_set;
-    
-    for(auto const &ent : allergens)
-        if((result & ent.second) == ent.second)
-            allergy_set.insert(ent.first);
+    std::vector<std::string> allergy_list({"eggs", "peanuts", "shellfish", "strawberries",
+		    			   "tomatoes", "chocolate", "pollen", "cats"});
+    auto is_not_allergic = [this](std::string allergen){return !(this->is_allergic_to(allergen));};
 
-    return allergy_set;
+    allergy_list.erase(
+        std::remove_if(allergy_list.begin(),
+		       allergy_list.end(),
+		       is_not_allergic),
+	allergy_list.end());
+    
+    return allergy_list;
 }
 
 }
