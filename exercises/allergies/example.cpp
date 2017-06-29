@@ -2,45 +2,29 @@
 
 #include <string>
 #include <map>
-#include <vector>
+#include <unordered_set>
 #include <algorithm>
 
 namespace allergies
 {
 
-allergy_test::allergy_test(const int test_result)
-    : result(test_result)
-    , allergens({
-    	{"eggs", 1},
-	{"peanuts", 2},
-	{"shellfish", 4},
-	{"strawberries", 8},
-	{"tomatoes", 16},
-	{"chocolate", 32},
-    	{"pollen", 64},
-	{"cats", 128}
-   })
-{} 
+allergy_test::allergy_test(unsigned int test_result) : result(test_result){}
 
 bool allergy_test::is_allergic_to(std::string const& allergen) const
 {
-    int allergen_value = allergens.at(allergen);
+    unsigned int allergen_value = allergies::ALLERGENS.at(allergen);
     return (result & allergen_value) == allergen_value;
 }
 
-std::vector<std::string> allergy_test::get_allergies() const
+std::unordered_set<std::string> allergy_test::get_allergies() const
 {
-    std::vector<std::string> allergy_list({"eggs", "peanuts", "shellfish", "strawberries",
-		    			   "tomatoes", "chocolate", "pollen", "cats"});
-    auto is_not_allergic = [this](std::string allergen){return !(this->is_allergic_to(allergen));};
-
-    allergy_list.erase(
-        std::remove_if(allergy_list.begin(),
-		       allergy_list.end(),
-		       is_not_allergic),
-	allergy_list.end());
+    std::unordered_set<std::string> allergies; 
     
-    return allergy_list;
+    for(auto const& entry : allergies::ALLERGENS)
+        if((result & entry.second) == entry.second)
+            allergies.insert(entry.first);
+
+    return allergies;
 }
 
 }
