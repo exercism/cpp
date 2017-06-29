@@ -3,7 +3,7 @@
 #include <boost/test/unit_test.hpp>
 
 #include <string>
-#include <vector>
+#include <unordered_set>
 
 BOOST_AUTO_TEST_CASE(no_allergies_means_not_allergic)
 {
@@ -33,7 +33,7 @@ BOOST_AUTO_TEST_CASE(allergic_to_shellfish)
 {
     allergies::allergy_test score(4);
    
-    BOOST_REQUIRE_EQUAL(true,score.is_allergic_to("shellfish"));
+    BOOST_REQUIRE_EQUAL(true, score.is_allergic_to("shellfish"));
 }
 
 BOOST_AUTO_TEST_CASE(allergic_to_strawberries)
@@ -83,7 +83,7 @@ BOOST_AUTO_TEST_CASE(allergic_to_eggs_and_other_stuff)
 BOOST_AUTO_TEST_CASE(allergic_to_nothing)
 {
     allergies::allergy_test score(0);
-    const std::vector<std::string> no_allergies;
+    const std::unordered_set<std::string> no_allergies;
 
     BOOST_TEST(no_allergies == score.get_allergies());
 }
@@ -91,7 +91,7 @@ BOOST_AUTO_TEST_CASE(allergic_to_nothing)
 BOOST_AUTO_TEST_CASE(allergic_to_only_peanuts)
 {
     allergies::allergy_test score(2);
-    const std::vector<std::string> only_peanuts = {"peanuts"};
+    const std::unordered_set<std::string> only_peanuts = {"peanuts"};
 
     BOOST_TEST(only_peanuts == score.get_allergies());
 }
@@ -99,7 +99,7 @@ BOOST_AUTO_TEST_CASE(allergic_to_only_peanuts)
 BOOST_AUTO_TEST_CASE(allergic_to_only_strawberries)
 {
     allergies::allergy_test score(8);
-    const std::vector<std::string> only_strawberries = {"strawberries"};
+    const std::unordered_set<std::string> only_strawberries = {"strawberries"};
 
     BOOST_TEST(only_strawberries == score.get_allergies());
 }
@@ -107,7 +107,7 @@ BOOST_AUTO_TEST_CASE(allergic_to_only_strawberries)
 BOOST_AUTO_TEST_CASE(allergic_to_eggs_and_peanuts)
 {
     allergies::allergy_test score(3);
-    const std::vector<std::string> eggs_peanuts = {"eggs", "peanuts"};
+ s  const std::unordered_set<std::string> eggs_peanuts = {"eggs", "peanuts"};
 
     BOOST_TEST(eggs_peanuts == score.get_allergies());
 }
@@ -115,7 +115,7 @@ BOOST_AUTO_TEST_CASE(allergic_to_eggs_and_peanuts)
 BOOST_AUTO_TEST_CASE(allergic_to_more_than_eggs_but_not_peanuts)
 {
     allergies::allergy_test score(5);
-    const std::vector<std::string> eggs_shellfish = {"eggs", "shellfish"};
+    const std::unordered_set<std::string> eggs_shellfish = {"eggs", "shellfish"};
 
     BOOST_TEST(eggs_shellfish == score.get_allergies());
 }
@@ -123,7 +123,7 @@ BOOST_AUTO_TEST_CASE(allergic_to_more_than_eggs_but_not_peanuts)
 BOOST_AUTO_TEST_CASE(allergic_to_lots_of_stuff)
 {
     allergies::allergy_test score(248);
-    const std::vector<std::string> lots_of_stuff = {"strawberries", "tomatoes", "chocolate", "pollen", "cats"};
+    const std::unordered_set<std::string> lots_of_stuff = {"strawberries", "tomatoes", "chocolate", "pollen", "cats"};
 
     BOOST_TEST(lots_of_stuff == score.get_allergies());
 }
@@ -131,8 +131,8 @@ BOOST_AUTO_TEST_CASE(allergic_to_lots_of_stuff)
 BOOST_AUTO_TEST_CASE(allergic_to_everything)
 {
     allergies::allergy_test score(255);
-    const std::vector<std::string> everything = {"eggs", "peanuts", "shellfish", "strawberries",
-                                                    "tomatoes", "chocolate", "pollen", "cats"}; 
+    const std::unordered_set<std::string> everything = {"eggs", "peanuts", "shellfish", "strawberries",
+                                                        "tomatoes", "chocolate", "pollen", "cats"}; 
 
     BOOST_TEST(everything == score.get_allergies());
 }
@@ -140,8 +140,8 @@ BOOST_AUTO_TEST_CASE(allergic_to_everything)
 BOOST_AUTO_TEST_CASE(ignore_non_allergen_score_parts)
 {
     allergies::allergy_test score(509);
-    const std::vector<std::string> non_allergen = {"eggs", "shellfish", "strawberries", "tomatoes",
-	                               "chocolate", "pollen", "cats"};
+    const std::unordered_set<std::string> non_allergen = {"eggs", "shellfish", "strawberries", "tomatoes",
+                                                          "chocolate", "pollen", "cats"};
 
     BOOST_TEST(non_allergen == score.get_allergies());
 }
