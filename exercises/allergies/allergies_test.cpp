@@ -107,7 +107,7 @@ BOOST_AUTO_TEST_CASE(allergic_to_only_strawberries)
 BOOST_AUTO_TEST_CASE(allergic_to_eggs_and_peanuts)
 {
     allergies::allergy_test score(3);
- s  const std::unordered_set<std::string> eggs_peanuts = {"eggs", "peanuts"};
+    const std::unordered_set<std::string> eggs_peanuts = {"eggs", "peanuts"};
 
     BOOST_TEST(eggs_peanuts == score.get_allergies());
 }
