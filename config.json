@@ -290,6 +290,14 @@
         "logic",
         "control-flow (loops)"
       ]
+    },
+    {
+      "difficulty": 3,
+      "slug": "allergies",
+      "topics": [
+        "bitwise operations",
+        "filtering"
+      ]
     }
   ]
 }

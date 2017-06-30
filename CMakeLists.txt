@@ -47,6 +47,7 @@ foreach(exercise
     say
     meetup
     queen-attack
+    allergies
 )
     set(exercise_dir exercises/${exercise})
     travis_fixup(${exercise})
