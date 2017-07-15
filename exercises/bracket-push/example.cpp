@@ -21,9 +21,7 @@ bool check(string const& expression)
             st.pop();
         }
     }
-    if (!st.empty())
-        return false;
-    return true;
+    return st.empty();
 }
 
 }

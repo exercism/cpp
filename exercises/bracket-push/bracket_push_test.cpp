@@ -23,6 +23,11 @@ BOOST_AUTO_TEST_CASE(wrong_ordered_brackets)
     BOOST_REQUIRE(!bracket_push::check("}{"));
 }
 
+BOOST_AUTO_TEST_CASE(wrong_closing_bracket)
+{
+    BOOST_REQUIRE(!bracket_push::check("{]"));
+}
+
 BOOST_AUTO_TEST_CASE(paired_with_whitespace)
 {
     BOOST_REQUIRE(bracket_push::check("{ }"));
@@ -58,7 +63,7 @@ BOOST_AUTO_TEST_CASE(paired_wrong_nested_brackets)
     BOOST_REQUIRE(!bracket_push::check("[({]})"));
 }
 
-BOOST_AUTO_TEST_CASE(math_experssion)
+BOOST_AUTO_TEST_CASE(math_expression)
 {
     BOOST_REQUIRE(bracket_push::check("(((185 + 223.85) * 15) - 543)/2"));
 }
