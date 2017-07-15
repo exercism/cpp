@@ -6,5 +6,5 @@ Exercism Exercises in C++
 
 ## Contributing Guide
 
-Please see the [contributing guide](https://github.com/exercism/problem-specifications/blob/master/CONTRIBUTING.md)
+Please see the [contributing guide](https://github.com/exercism/docs/blob/master/contributing-to-language-tracks/README.md)
 
