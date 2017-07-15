@@ -298,6 +298,14 @@
         "bitwise operations",
         "filtering"
       ]
+    },
+    {
+      "difficulty": 3,
+      "slug": "atbash-cipher",
+      "topics": [
+        "strings",
+        "algorithms"
+      ]
     }
   ]
 }

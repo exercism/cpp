@@ -48,6 +48,7 @@ foreach(exercise
     meetup
     queen-attack
     allergies
+    atbash-cipher
 )
     set(exercise_dir exercises/${exercise})
     travis_fixup(${exercise})
