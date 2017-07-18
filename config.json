@@ -306,6 +306,14 @@
         "strings",
         "algorithms"
       ]
+    },
+    {
+      "difficulty": 3,
+      "slug": "bracket-push",
+      "topics": [
+        "pattern matching",
+        "stacks"
+      ]
     }
   ]
 }
