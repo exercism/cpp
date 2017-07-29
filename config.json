@@ -1,7 +1,5 @@
 {
-  "slug": "cpp",
   "language": "C++",
-  "repository": "https://github.com/exercism/cpp",
   "active": true,
   "foregone": [
     "point-mutations"
