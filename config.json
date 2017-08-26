@@ -403,16 +403,22 @@
       ]
     },
     {
-      "difficulty": 3,
+      "uuid": "ba4e0186-0389-af80-d3e4-695dfc4e63bff1fa503",
       "slug": "atbash-cipher",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
       "topics": [
         "strings",
         "algorithms"
       ]
     },
     {
-      "difficulty": 3,
+      "uuid": "ce9fd8ac-0beb-1a80-4ff6-be19ce1540d905c31b7",
       "slug": "bracket-push",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
       "topics": [
         "pattern matching",
         "stacks"
