@@ -1,11 +1,8 @@
 #include "hello_world.h"
 
-using namespace std;
+namespace hello_world {
 
-namespace hello_world
-{
-	
-string hello()
+std::string hello()
 {
     return "Hello, World!";
 }
