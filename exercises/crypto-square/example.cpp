@@ -34,7 +34,7 @@ string cipher::normalize_plain_text() const
 
 size_t cipher::size() const
 {
-    size_t length = 1;
+    size_t length = 0;
     while (length*length < text_.size()) {
         ++length;
     }
@@ -53,27 +53,31 @@ vector<string> cipher::plain_text_segments() const
 
 string cipher::cipher_text() const
 {
-    string result;
-    const vector<string> segments{plain_text_segments()};
-    const size_t rows{size()};
-    const size_t num_segments{segments.size()};
-    for (size_t i = 0; i < rows; ++i) {
-        for (size_t j = 0; j < num_segments; ++j) {
-            if (i < segments[j].length()) {
-                result += segments[j][i];
-            }
-        }
+    string s{normalized_cipher_text()};
+    if (!s.empty()) {
+        s.erase(remove(s.begin(), s.end(), ' '), s.end());
     }
-    return result;
+    return s;
 }
 
 string cipher::normalized_cipher_text() const
 {
-    const string encoded{cipher_text()};
     const auto num_rows = size();
-    string result{encoded.substr(0, num_rows)};
-    for (auto i = num_rows; i < encoded.length(); i += num_rows) {
-        result += ' ' + encoded.substr(i, num_rows);
+    const auto plain{plain_text_segments()};
+    string result;
+    for (size_t i = 0; i < num_rows; ++i) {
+        for (const auto s : plain) {
+            if (s.length() > i) {
+                result += s[i];
+            }
+            else {
+                result += ' ';
+            }
+        }
+        result += ' ';
+    }
+    if (!result.empty()) {
+        result.pop_back();
     }
     return result;
 }
