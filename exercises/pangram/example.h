@@ -1,9 +1,10 @@
-#ifndef PANGRAM
-#define PANGRAM
+#ifndef PANGRAM_H
+#define PANGRAM_H
 #include <string>
-#include <cctype>
-namespace pangram {
-    bool foundLetter(char a, std::string s);
-   bool isPangram(std::string s);
+
+namespace pangram
+{
+    
+   bool is_pangram(std::string s);
 }
 #endif
