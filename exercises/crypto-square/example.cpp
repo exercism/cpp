@@ -63,10 +63,10 @@ string cipher::cipher_text() const
 string cipher::normalized_cipher_text() const
 {
     const auto num_rows = size();
-    const auto plain{plain_text_segments()};
+    const auto plain = plain_text_segments();
     string result;
     for (size_t i = 0; i < num_rows; ++i) {
-        for (const auto s : plain) {
+        for (string const& s : plain) {
             if (s.length() > i) {
                 result += s[i];
             }
