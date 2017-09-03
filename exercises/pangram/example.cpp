@@ -1,4 +1,4 @@
-#include "example.h"
+#include "pangram.h"
 #include <cctype>
 
 namespace
