@@ -50,6 +50,7 @@ foreach(exercise
     allergies
     atbash-cipher
     bracket-push
+    pangram
 )
     set(exercise_dir exercises/${exercise})
     travis_fixup(${exercise})
