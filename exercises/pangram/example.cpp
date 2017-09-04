@@ -4,7 +4,7 @@
 namespace
 {
     
-bool found_letter(char a, std::string s)
+bool found_letter(char a, const std::string &s)
 {
     for(auto c: s) {
         if(tolower(c) ==a) {
@@ -19,7 +19,7 @@ bool found_letter(char a, std::string s)
 namespace pangram
 {
     
-bool is_pangram(std::string s)
+bool is_pangram(const std::string &s)
 {
     char letters[] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
     for(char l : letters)
