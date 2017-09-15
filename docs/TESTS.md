@@ -57,7 +57,7 @@ code using the appropriate command for your environment:
 
 Examples of running CMake for different environments are shown below.
 
-#### Linux with Make
+#### Linux\MacOS with Make
 
 The generator name for CMake is `Unix Makefiles`.
 Assuming the current exercise is `bob` and we're in the exercise folder:
@@ -71,6 +71,8 @@ $ cmake -G "Unix Makefiles" ..
 
 This example shows creating empty files for the implementation before
 running CMake.
+
+To run the tests simply type `make` in the `build` directory
 
 #### Windows with Visual Studio 2013
 
@@ -117,21 +119,6 @@ $ touch bob.{h,cpp}
 $ mkdir build
 $ cd build
 $ cmake -G Xcode ..
-```
-
-This example shows creating empty files for the implementation before
-running CMake.
-
-#### MacOS with Make
-
-The generator name for CMake is `Unix Makefiles`.
-Assuming the current exercise is `bob` and we're in the exercise folder:
-
-```
-$ touch bob.{h,cpp}
-$ mkdir build
-$ cd build
-$ cmake -G "Unix Makefiles" ..
 ```
 
 This example shows creating empty files for the implementation before
