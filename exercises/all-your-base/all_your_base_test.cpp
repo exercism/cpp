@@ -4,6 +4,7 @@
 #include <boost/test/unit_test.hpp>
 
 using namespace std;
+namespace utf = boost::unit_test;
 
 BOOST_AUTO_TEST_CASE(test1)
 {

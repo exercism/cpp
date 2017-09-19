@@ -423,7 +423,12 @@
     {
       "difficulty": 2,
       "slug": "all-your-base",
-      "topics": null,
+        "topics": [
+            "algorithms",
+            "loops",
+            "integers",
+            "mathematics"
+        ],
       "uuid": "0a3220c6-07a9-ed80-4d2d-1fc65de969b771a46d5"
     }
   ],
