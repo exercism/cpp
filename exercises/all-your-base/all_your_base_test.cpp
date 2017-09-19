@@ -1,5 +1,4 @@
 #include "all_your_base.h"
-
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
 
@@ -169,8 +168,5 @@ BOOST_AUTO_TEST_CASE(second_base_is_zero)
 
  BOOST_REQUIRE_EQUAL_COLLECTIONS(expected.begin(), expected.end(), out_digits.begin(), out_digits.end());
 }
-
-
-
 
 #endif
