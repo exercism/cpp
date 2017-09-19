@@ -430,6 +430,17 @@
             "mathematics"
         ],
       "uuid": "0a3220c6-07a9-ed80-4d2d-1fc65de969b771a46d5"
+    },
+    {
+      "uuid": "ea8d6224-0440-6d80-1569-a04127908a200d2ecf0",
+      "slug": "pangram",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+            "control-flow (loops)",
+            "strings"
+        ]
     }
   ],
   "foregone": [

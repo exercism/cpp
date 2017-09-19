@@ -86,6 +86,13 @@ BOOST_AUTO_TEST_CASE(the_student_names_in_each_grade_in_the_roster_are_sorted)
         };
     BOOST_TEST(expected == actual);
 }
+
+BOOST_AUTO_TEST_CASE(checking_a_grade_should_not_change_the_roster)
+{
+    school_.grade(1);
+    BOOST_REQUIRE(school_.roster().empty());
+}
+
 #endif
 
 BOOST_AUTO_TEST_SUITE_END();
