@@ -72,7 +72,9 @@ $ cmake -G "Unix Makefiles" ..
 This example shows creating empty files for the implementation before
 running CMake.
 
-To run the tests simply type `make` in the `build` directory
+"Simply type make in the build directory to compile the tests. This should 
+generate compile time errors. Once the errors are fixed make will build and 
+run the tests."
 
 #### Windows with Visual Studio 2013
 
