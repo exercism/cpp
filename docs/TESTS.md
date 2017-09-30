@@ -67,14 +67,15 @@ $ touch bob.{h,cpp}
 $ mkdir build
 $ cd build
 $ cmake -G "Unix Makefiles" ..
+$ make
 ```
 
 This example shows creating empty files for the implementation before
 running CMake.
 
-"Simply type make in the build directory to compile the tests. This should 
+Simply type make in the build directory to compile the tests. This should 
 generate compile time errors. Once the errors are fixed make will build and 
-run the tests."
+run the tests.
 
 #### Windows with Visual Studio 2013
 
