@@ -8,6 +8,9 @@ Exercism Exercises in C++
 
 Please see the [contributing guide](https://github.com/exercism/docs/blob/master/contributing-to-language-tracks/README.md)
 
+The most useful way to start contributing to this track is to review Pull Requests and/or some of the open track issues.
+There are not many active contributors, so anyone reviewing PRs or Issues, even just to +1 someone elses opinion, is appreciated.
+
 ## Adding an exercise
 
 Here is a list of things that need to be done to add an exercise to this track.
