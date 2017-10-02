@@ -9,7 +9,7 @@ using namespace boost::posix_time;
 
 BOOST_AUTO_TEST_CASE(test_1)
 {
-    const auto actual = gigasecond::advance(time_from_string("2011-04-25 00:00:00"));
+    const ptime actual = gigasecond::advance(time_from_string("2011-04-25 00:00:00"));
 
     const ptime expected(time_from_string("2043-01-01 01:46:40"));
     BOOST_REQUIRE_EQUAL(expected, actual);
