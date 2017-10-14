@@ -52,7 +52,7 @@ Once the build environment has been created by CMake, you can build your
 code using the appropriate command for your environment:
 
 * Linux with make: `make`
-* Windows with Visual Studio 2013: Select Build / Build Solution from the menu.
+* Windows with Visual Studio: Select Build / Build Solution from the menu.
 * MacOS with Xcode: Select Build from the toolbar
 
 Examples of running CMake for different environments are shown below.
@@ -77,36 +77,32 @@ Simply type make in the build directory to compile the tests. This should
 generate compile time errors. Once the errors are fixed make will build and 
 run the tests.
 
-#### Windows with Visual Studio 2013
+#### Windows with Visual Studio 2017
 
-The generator name for CMake is `Visual Studio 12`.  The same generator
-supports all editions of Visual Studio 2013: Express, Professional,
-Ultimate, etc.
-Assuming the current exercise is `bob` and we're in the exercise folder:
+The generator name for CMake is `Visual Studio 15`.  The same generator
+supports all IDE editions of Visual Studio 2017: Community, Professional,
+and Enterprise. Assuming the current exercise is `bob` and we're in the
+exercise folder:
 
 ```
 > copy nul: bob.h
 > copy nul: bob.cpp
 > mkdir build
 > cd build
-> cmake -G "Visual Studio 12" ..
+> cmake -G "Visual Studio 15" ..
 ```
 
 This example shows creating empty files for the implementation before
 running CMake.
 
-On Linux and MacOS boost packages install the headers and libraries to
-a standard global location on the system.  On Windows, you unpack the
-binaries wherever you like or build from source wherever you like and
-there is no standard install location on the system.
-
-If you get complaints from CMake about not being able to find Boost, you
+If you installed boost to the default location, Cmake may be able to
+find it for you automatically. If it can't find it, you will need to
 need to supply additional arguments to tell CMake where to find it by
 setting the `BOOST_INCLUDEDIR` variable on the command-line.  Here is an
-example using the Visual Studio 2013 generator:
+example using the Visual Studio 2017 generator:
 
 ```
-> cmake -G "Visual Studio 12" -DBOOST_INCLUDEDIR:PATH=D:/Code/boost/boost_1_59_0 ..
+> cmake -G "Visual Studio 15" -DBOOST_INCLUDEDIR:PATH=D:/Code/boost/boost_1_59_0 ..
 ```
 
 **Note:** Path locations passed to CMake always use slash (`/`) as the
@@ -129,10 +125,6 @@ running CMake.
 
 ## Boost.Test Documentation
 
-The Boost.Test documentation is being rewritten to improve usability
-and is nearly complete.
-Prefer the documentation rewrite to look up something if you're unfamiliar
-with Boost.Test and want to know more.
+If you need to consult the Boost.Test documentation you can find it here:
 
-* [Boost.Test documentation rewrite](http://user.xmission.com/~legalize/boost.test/)
-* [Boost.Test 1.55 official documentation](http://www.boost.org/doc/libs/1_55_0/libs/test/doc/html/index.html)
+* [Boost.Test 1.59 official documentation](http://www.boost.org/doc/libs/1_59_0/libs/test/doc/html/index.html)
