@@ -7,11 +7,11 @@ cmake_minimum_required(VERSION 2.8.11)
 # Name the project after the exercise
 project(${exercise} CXX)
 
-# Locate Boost libraries: unit_test_framework, date_time and regex
+# Locate Boost libraries: unit_test_framework and date_time
 set(Boost_USE_STATIC_LIBS ON)
 set(Boost_USE_MULTITHREADED ON)
 set(Boost_USE_STATIC_RUNTIME OFF)
-find_package(Boost 1.59 REQUIRED COMPONENTS unit_test_framework date_time regex)
+find_package(Boost 1.59 REQUIRED COMPONENTS unit_test_framework date_time)
 
 # Enable C++11 features on gcc/clang
 if("${CMAKE_CXX_COMPILER_ID}" MATCHES "(GNU|Clang)")

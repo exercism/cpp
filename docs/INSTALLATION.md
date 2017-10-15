@@ -81,8 +81,8 @@ The unit tests use Boost.Test, the unit testing framework included with
 in Boost useful to you as you work through the exercises.
 You will need to download and install Boost.  As of this writing Boost
 1.59+ is the required version.  You will need a compiled version of the
-boost libraries Boost.Test, Boost.DateTime and Boost.Regex, or you will
-need to download from source and build the library yourself.
+boost libraries Boost.Test and Boost.DateTime or you will need to 
+download from source and build the library yourself.
 
 If you are having difficulties installing Boost for use with exercism,
 [ask for help](https://github.com/exercism/cpp/issues).
@@ -143,7 +143,6 @@ CMake Error at C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/FindBoos
 
           boost_unit_test_framework
           boost_date_time
-          boost_regex
 
   No Boost libraries were found.  You may need to set BOOST_LIBRARYDIR to the
   directory containing Boost libraries or BOOST_ROOT to the location of
