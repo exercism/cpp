@@ -1,22 +1,25 @@
 #include "robot_name.h"
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
-#include <regex>
+#include <cctype>
 #include <string>
 #include <unordered_set>
 
 using namespace std;
 
-namespace
+static bool validate_name(string name)
 {
-const regex name_pattern("[A-Z]{2}[0-9]{3}");
+    if (name.length() != 5)
+        return false;
+    return isupper(name[0]) && isupper(name[1]) && isdigit(name[2])
+        && isdigit(name[3]) && isdigit(name[4]);
 }
 
 BOOST_AUTO_TEST_CASE(has_a_name)
 {
     const robot_name::robot robot;
 
-    BOOST_REQUIRE(regex_match(robot.name(), name_pattern));
+    BOOST_REQUIRE(validate_name(robot.name()));
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
@@ -54,7 +57,7 @@ BOOST_AUTO_TEST_CASE(exhausting_digits_yields_different_names)
     for (int i = 0; i < 1000; ++i) {
         robot.reset();
         BOOST_REQUIRE_EQUAL(names.count(robot.name()), 0);
-        BOOST_REQUIRE(regex_match(robot.name(), name_pattern));
+        BOOST_REQUIRE(validate_name(robot.name()));
         names.insert(robot.name());
     }
 }
