@@ -1,18 +1,18 @@
 #include "sieve.h"
-#define BOOST_TEST_MAIN
-#include <boost/test/unit_test.hpp>
+#define CATCH_CONFIG_MAIN
+#include "test/catch.hpp"
 
-BOOST_AUTO_TEST_CASE(primes_up_to_10)
+TEST_CASE("primes_up_to_10")
 {
     const std::vector<int> expected{2, 3, 5, 7};
 
     const std::vector<int> actual = sieve::primes(10);
 
-    BOOST_REQUIRE_EQUAL_COLLECTIONS(expected.begin(), expected.end(), actual.begin(), actual.end());
+    REQUIRE(expected == actual);
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
-BOOST_AUTO_TEST_CASE(primes_up_to_1000)
+TEST_CASE("primes_up_to_1000")
 {
     const std::vector<int> expected{
         2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59,
@@ -32,6 +32,6 @@ BOOST_AUTO_TEST_CASE(primes_up_to_1000)
 
     const std::vector<int> actual = sieve::primes(1000);
 
-    BOOST_REQUIRE_EQUAL_COLLECTIONS(expected.begin(), expected.end(), actual.begin(), actual.end());
+    REQUIRE(expected == actual);
 }
 #endif

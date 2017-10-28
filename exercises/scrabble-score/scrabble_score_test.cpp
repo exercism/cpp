@@ -1,35 +1,35 @@
 #include "scrabble_score.h"
-#define BOOST_TEST_MAIN
-#include <boost/test/unit_test.hpp>
+#define CATCH_CONFIG_MAIN
+#include "test/catch.hpp"
 
-BOOST_AUTO_TEST_CASE(scores_an_empty_word_as_zero)
+TEST_CASE("scores_an_empty_word_as_zero")
 {
-    BOOST_REQUIRE_EQUAL(0, scrabble_score::score(""));
+    REQUIRE(0 == scrabble_score::score(""));
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
-BOOST_AUTO_TEST_CASE(scores_a_very_short_word)
+TEST_CASE("scores_a_very_short_word")
 {
-    BOOST_REQUIRE_EQUAL(1, scrabble_score::score("a"));
+    REQUIRE(1 == scrabble_score::score("a"));
 }
 
-BOOST_AUTO_TEST_CASE(scores_the_word_by_the_number_of_letters)
+TEST_CASE("scores_the_word_by_the_number_of_letters")
 {
-    BOOST_REQUIRE_EQUAL(6, scrabble_score::score("street"));
+    REQUIRE(6 == scrabble_score::score("street"));
 }
 
-BOOST_AUTO_TEST_CASE(scores_more_complicated_words_with_more)
+TEST_CASE("scores_more_complicated_words_with_more")
 {
-    BOOST_REQUIRE_EQUAL(22, scrabble_score::score("quirky"));
+    REQUIRE(22 == scrabble_score::score("quirky"));
 }
 
-BOOST_AUTO_TEST_CASE(scores_case_insensitive_words)
+TEST_CASE("scores_case_insensitive_words")
 {
-    BOOST_REQUIRE_EQUAL(41, scrabble_score::score("OXYPHENBUTAZONE"));
+    REQUIRE(41 == scrabble_score::score("OXYPHENBUTAZONE"));
 }
 
-BOOST_AUTO_TEST_CASE(scores_z_word)
+TEST_CASE("scores_z_word")
 {
-    BOOST_REQUIRE_EQUAL(12, scrabble_score::score("zoo"));
+    REQUIRE(12 == scrabble_score::score("zoo"));
 }
 #endif

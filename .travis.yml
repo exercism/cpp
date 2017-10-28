@@ -1,5 +1,5 @@
 dist: trusty
-sudo: false 
+sudo: false
 language: cpp
 
 matrix:
@@ -30,7 +30,7 @@ before_install:
   - sudo apt-get -y -d update
   - eval "${MATRIX_EVAL}"
 install:
-  - sudo apt-get -y install libboost-test1.60-dev libboost-date-time1.60-dev
+  - sudo apt-get -y install libboost-date-time1.60-dev
 script:
   - bin/fetch-configlet
   - bin/configlet lint .

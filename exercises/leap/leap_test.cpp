@@ -1,30 +1,30 @@
 #include "leap.h"
-#define BOOST_TEST_MAIN
-#include <boost/test/unit_test.hpp>
+#define CATCH_CONFIG_MAIN
+#include "test/catch.hpp"
 
-BOOST_AUTO_TEST_CASE(a_known_leap_year)
+TEST_CASE("a_known_leap_year")
 {
-    BOOST_REQUIRE(leap::is_leap_year(1996));
+    REQUIRE(leap::is_leap_year(1996));
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
-BOOST_AUTO_TEST_CASE(any_old_year)
+TEST_CASE("any_old_year")
 {
-    BOOST_REQUIRE(!leap::is_leap_year(1997));
+    REQUIRE(!leap::is_leap_year(1997));
 }
 
-BOOST_AUTO_TEST_CASE(turn_of_the_20th_century)
+TEST_CASE("turn_of_the_20th_century")
 {
-    BOOST_REQUIRE(!leap::is_leap_year(1900));
+    REQUIRE(!leap::is_leap_year(1900));
 }
 
-BOOST_AUTO_TEST_CASE(turn_of_the_21st_century)
+TEST_CASE("turn_of_the_21st_century")
 {
-    BOOST_REQUIRE(leap::is_leap_year(2000));
+    REQUIRE(leap::is_leap_year(2000));
 }
 
-BOOST_AUTO_TEST_CASE(turn_of_the_25th_century)
+TEST_CASE("turn_of_the_25th_century")
 {
-    BOOST_REQUIRE(leap::is_leap_year(2400));
+    REQUIRE(leap::is_leap_year(2400));
 }
 #endif

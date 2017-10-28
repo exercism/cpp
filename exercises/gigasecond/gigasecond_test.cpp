@@ -1,6 +1,6 @@
 #include "gigasecond.h"
-#define BOOST_TEST_MAIN
-#include <boost/test/unit_test.hpp>
+#define CATCH_CONFIG_MAIN
+#include "test/catch.hpp"
 #include <cstdio>
 #include <ctime>
 
@@ -17,44 +17,44 @@ static time_t time_from_string(const std::string& s)
     return mktime(&date);
 }
 
-BOOST_AUTO_TEST_CASE(test_1)
+TEST_CASE("test_1")
 {
     const time_t actual = gigasecond::advance(time_from_string("2011-04-25 00:00:00"));
 
     const time_t expected(time_from_string("2043-01-01 01:46:40"));
-    BOOST_REQUIRE_EQUAL(expected, actual);
+    REQUIRE(expected == actual);
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
-BOOST_AUTO_TEST_CASE(test_2)
+TEST_CASE("test_2")
 {
     const auto actual = gigasecond::advance(time_from_string("1977-06-13 00:00:00"));
 
     const time_t expected(time_from_string("2009-02-19 01:46:40"));
-    BOOST_REQUIRE_EQUAL(expected, actual);
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(test_3)
+TEST_CASE("test_3")
 {
     const auto actual = gigasecond::advance(time_from_string("1959-07-19 00:00:00"));
 
     const time_t expected(time_from_string("1991-03-27 01:46:40"));
-    BOOST_REQUIRE_EQUAL(expected, actual);
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(test_4)
+TEST_CASE("test_4")
 {
     const auto actual = gigasecond::advance(time_from_string("2015-01-24 22:00:00"));
 
     const time_t expected(time_from_string("2046-10-02 23:46:40"));
-    BOOST_REQUIRE_EQUAL(expected, actual);
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(test_5)
+TEST_CASE("test_5")
 {
     const auto actual = gigasecond::advance(time_from_string("2015-01-24 23:59:59"));
 
     const time_t expected(time_from_string("2046-10-03 01:46:39"));
-    BOOST_REQUIRE_EQUAL(expected, actual);
+    REQUIRE(expected == actual);
 }
 #endif
