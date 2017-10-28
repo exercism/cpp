@@ -300,6 +300,17 @@
     },
     {
       "core": false,
+      "difficulty": 1,
+      "slug": "acronym",
+      "topics": [
+        "strings",
+        "regular_expressions"
+      ],
+      "unlocked_by": null,
+      "uuid": "9d6f19f3-416e-4aeb-b426-7499853b21de"
+    },
+    {
+      "core": false,
       "difficulty": 10,
       "slug": "say",
       "topics": [
