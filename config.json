@@ -304,6 +304,17 @@
       ]
     },
     {
+      "slug": "acronym",
+      "uuid": "9d6f19f3-416e-4aeb-b426-7499853b21de",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "regular_expressions",
+        "strings"
+      ]
+    },
+    {
       "slug": "say",
       "uuid": "090b2615-cd05-442b-be74-9f11bd5a83a5",
       "core": false,
