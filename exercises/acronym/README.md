@@ -40,7 +40,7 @@ are new to C++, but have programmed in C, beware of
 
 ## Source
 
-This is a classic toy problem, but we were reminded of it by seeing it in the Go Tour.
+Julien Vanier [https://github.com/monkbroc](https://github.com/monkbroc)
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
