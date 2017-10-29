@@ -1,5 +1,4 @@
 #include "bob.h"
-#include <boost/algorithm/string/trim.hpp>
 #include <algorithm>
 #include <cctype>
 #include <iterator>
@@ -10,6 +9,18 @@ namespace bob
 {
 namespace
 {
+
+string trim_copy(string const& s)
+{
+    string cpy(s);
+    // Trim front
+    while (!cpy.empty() && cpy.front() == ' ')
+        cpy.erase(cpy.begin());
+    // Trim back
+    while (!cpy.empty() && cpy.back() == ' ')
+        cpy.pop_back();
+    return cpy;
+}
 
 bool is_upper(string const& text)
 {
@@ -33,12 +44,12 @@ bool is_shouting(string const &text)
 
 bool is_question(string const &text)
 {
-    return boost::algorithm::trim_copy(text).back() == '?';
+    return trim_copy(text).back() == '?';
 }
 
 bool is_silence(string const& text)
 {
-    return boost::algorithm::trim_copy(text).length() == 0;
+    return trim_copy(text).length() == 0;
 }
 
 }
