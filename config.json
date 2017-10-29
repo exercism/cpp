@@ -33,7 +33,7 @@
       "uuid": "4dbe1bb3-0419-4749-8c2a-ec91539a8640",
       "core": true,
       "unlocked_by": null,
-      "difficulty": 2,
+      "difficulty": 5,
       "topics": [
         "dates",
         "interfaces"

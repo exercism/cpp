@@ -1,12 +1,12 @@
 #if !defined(GIGASECOND_H)
 #define GIGASECOND_H
 
-#include <ctime>
+#include <string>
 
 namespace gigasecond
 {
 
-std::time_t advance(const std::time_t& start);
+std::string advance(const std::string& start);
 
 }
 
