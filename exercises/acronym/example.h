@@ -5,7 +5,7 @@
 
 namespace acronym {
 
-const std::string acronym(std::string const&);
+std::string acronym(std::string const&);
 
 }
 
