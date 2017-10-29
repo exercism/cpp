@@ -30,10 +30,10 @@ before_install:
   - sudo apt-get -y -d update
   - eval "${MATRIX_EVAL}"
 install:
-  - sudo apt-get -y install libboost-date-time1.60-dev
+  - sudo apt-get -y install libboost-date-time1.60-dev ninja-build
 script:
   - bin/fetch-configlet
   - bin/configlet lint .
-  - cmake -G "Unix Makefiles"
-  - make
+  - cmake -G Ninja
+  - ninja
 
