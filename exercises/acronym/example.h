@@ -1,4 +1,4 @@
-#if !defined ACRONYM_H
+#if !defined(ACRONYM_H)
 #define ACRONYM_H
 
 #include <string>
