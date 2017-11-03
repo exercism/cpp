@@ -300,6 +300,17 @@
     },
     {
       "core": false,
+      "difficulty": 1,
+      "slug": "acronym",
+      "topics": [
+        "strings",
+        "regular_expressions"
+      ],
+      "unlocked_by": null,
+      "uuid": "9d6f19f3-416e-4aeb-b426-7499853b21de"
+    },
+    {
+      "core": false,
       "difficulty": 10,
       "slug": "say",
       "topics": [
@@ -343,6 +354,17 @@
       ],
       "unlocked_by": null,
       "uuid": "fab94f5a-d4da-4a18-a70a-b27c80b14851"
+    },
+    {
+      "core": true,
+      "difficulty": 3,
+      "slug": "binary-search",
+      "topics": [
+        "arrays",
+        "searching"
+      ],
+      "unlocked_by": null,
+      "uuid": "499acd6b-3f9e-4a50-86fb-dfc10b1d7f84"
     },
     {
       "core": false,
