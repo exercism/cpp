@@ -13,6 +13,7 @@ BOOST_AUTO_TEST_CASE(basic)
     BOOST_TEST(expected == actual);
 }
 
+#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(lowercase_words)
 {
     const string actual = acronym::acronym("Ruby on Rails");
@@ -57,5 +58,5 @@ BOOST_AUTO_TEST_CASE(hyphenated)
 
     BOOST_TEST(expected == actual);
 }
-#if defined(EXERCISM_RUN_ALL_TESTS)
+
 #endif
