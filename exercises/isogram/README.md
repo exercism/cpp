@@ -1,4 +1,4 @@
-# Hello World
+# Isogram 
 
 Determine if a word or phrase is an isogram.
 
