@@ -14,6 +14,18 @@
     {
       "core": false,
       "difficulty": 1,
+      "slug": "isogram",
+      "topics": [
+        "control_flow_if_else_statements",
+        "control_flow_loops",
+        "strings"
+      ],
+      "unlocked_by": null,
+      "uuid": "fcd69b30-63e4-485d-a3b5-71f5039a9180"
+    },
+    {
+      "core": false,
+      "difficulty": 1,
       "slug": "leap",
       "topics": [
         "control_flow_conditionals",
