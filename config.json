@@ -431,6 +431,18 @@
       "unlocked_by": null,
       "uuid": "ea8d6224-0440-6d80-1569-a04127908a200d2ecf0"
     }
+    {
+      "core": false,
+      "difficulty": 6,
+      "slug": "complex-numbers",
+      "topics": [
+        "mathematics",
+        "operator_overloading",
+        "classes"
+      ],
+      "unlocked_by": null,
+      "uuid": "16f814cc-5550-471b-aecb-733207c28b9c"
+    }
   ],
   "foregone": [
     "point-mutations"
