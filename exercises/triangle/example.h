@@ -1,18 +1,12 @@
 #if !defined(TRIANGLE_H)
 #define TRIANGLE_H
 
-namespace triangle
+struct triangle
 {
-
-enum flavor
-{
-    equilateral,
-    isosceles,
-    scalene
-};
-
-flavor kind(double a, double b, double c);
-
+	bool Equilateral = false,
+	     Isosceles   = false,
+	     Scalene     = false;
+	triangle(double , double , double);
 };
 
 #endif

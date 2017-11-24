@@ -1,76 +1,90 @@
 #include "triangle.h"
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
-#include <stdexcept>
 
-BOOST_AUTO_TEST_CASE(equilateral_triangles_have_equal_sides)
+BOOST_AUTO_TEST_CASE(equilateral_if_all_sides_equal)
 {
-    BOOST_REQUIRE_EQUAL(triangle::equilateral, triangle::kind(2, 2, 2));
+    BOOST_REQUIRE_EQUAL(true, triangle(2, 2, 2).Equilateral);
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
-BOOST_AUTO_TEST_CASE(larger_equilateral_triangles_also_have_equal_sides)
+BOOST_AUTO_TEST_CASE(not_equilateral_if_any_side_is_unequal)
 {
-    BOOST_REQUIRE_EQUAL(triangle::equilateral, triangle::kind(10, 10, 10));
+    BOOST_REQUIRE_EQUAL(false, triangle(2, 3, 2).Equilateral);
 }
 
-BOOST_AUTO_TEST_CASE(isosceles_triangles_have_last_two_sides_equal)
+BOOST_AUTO_TEST_CASE(not_equilateral_if_no_sides_are_equal)
 {
-    BOOST_REQUIRE_EQUAL(triangle::isosceles, triangle::kind(3, 4, 4));
+    BOOST_REQUIRE_EQUAL(false, triangle(5 , 4, 6).Equilateral);
 }
 
-BOOST_AUTO_TEST_CASE(isosceles_triangles_have_first_and_last_sides_equal)
+BOOST_AUTO_TEST_CASE(not_equilateral_if_all_sides_are_zero)
 {
-    BOOST_REQUIRE_EQUAL(triangle::isosceles, triangle::kind(4, 3, 4));
+    BOOST_REQUIRE_EQUAL(false, triangle(0, 0, 0).Equilateral);
 }
 
-BOOST_AUTO_TEST_CASE(isosceles_triangles_have_first_two_sides_equal)
+BOOST_AUTO_TEST_CASE(equilateral_sides_may_be_floats)
 {
-    BOOST_REQUIRE_EQUAL(triangle::isosceles, triangle::kind(4, 4, 3));
+    BOOST_REQUIRE_EQUAL(true, triangle(0.5, 0.5, 0.5).Equilateral);
 }
 
-BOOST_AUTO_TEST_CASE(isosceles_triangles_have_in_fact_exactly_two_sides_equal)
+BOOST_AUTO_TEST_CASE(isosceles_if_last_two_sides_are_equal)
 {
-    BOOST_REQUIRE_EQUAL(triangle::isosceles, triangle::kind(10, 10, 2));
+    BOOST_REQUIRE_EQUAL(true, triangle(3, 4, 4).Isosceles);
 }
 
-BOOST_AUTO_TEST_CASE(scalene_triangles_have_no_equal_sides)
+BOOST_AUTO_TEST_CASE(isosceles_if_first_two_sides_are_equal)
 {
-    BOOST_REQUIRE_EQUAL(triangle::scalene, triangle::kind(3, 4, 5));
+    BOOST_REQUIRE_EQUAL(true, triangle(4, 4, 3).Isosceles);
 }
 
-BOOST_AUTO_TEST_CASE(scalene_triangles_have_no_equal_sides_at_a_larger_scale_too)
+BOOST_AUTO_TEST_CASE(isosceles_if_first_and_last_sides_are_equal)
 {
-    BOOST_REQUIRE_EQUAL(triangle::scalene, triangle::kind(10, 11, 12));
+    BOOST_REQUIRE_EQUAL(true, triangle(4 , 3 , 4).Isosceles);
 }
 
-BOOST_AUTO_TEST_CASE(scalene_triangles_have_no_equal_sides_in_descending_order_either)
+BOOST_AUTO_TEST_CASE(equilateral_triangles_are_also_isosceles)
 {
-    BOOST_REQUIRE_EQUAL(triangle::scalene, triangle::kind(5, 4, 2));
+    BOOST_REQUIRE_EQUAL(true, triangle(4, 4, 4).Isosceles);
 }
 
-BOOST_AUTO_TEST_CASE(very_small_triangles_are_legal)
+BOOST_AUTO_TEST_CASE(not_isosceles_if_no_sides_are_equal)
 {
-    BOOST_REQUIRE_EQUAL(triangle::scalene, triangle::kind(0.4, 0.6, 0.3));
+    BOOST_REQUIRE_EQUAL(false, triangle(2, 3, 4).Isosceles);
 }
 
-BOOST_AUTO_TEST_CASE(triangles_with_no_size_are_illegal)
+BOOST_AUTO_TEST_CASE(not_isosceles_when_it_violates_triangle_inequality)
 {
-    BOOST_REQUIRE_THROW(triangle::kind(0, 0, 0), std::domain_error);
+    BOOST_REQUIRE_EQUAL(false , triangle(1 , 1, 3).Isosceles);
 }
 
-BOOST_AUTO_TEST_CASE(triangles_with_negative_sides_are_illegal)
+BOOST_AUTO_TEST_CASE(isosceles_sides_may_be_floats)
 {
-    BOOST_REQUIRE_THROW(triangle::kind(3, 4, -5), std::domain_error);
+    BOOST_REQUIRE_EQUAL(true , triangle(0.5 , 0.4, 0.5).Isosceles);
 }
 
-BOOST_AUTO_TEST_CASE(triangles_violating_triangle_inequality_are_illegal)
+BOOST_AUTO_TEST_CASE(scalene_if_no_sides_are_equal)
 {
-    BOOST_REQUIRE_THROW(triangle::kind(1, 1, 3), std::domain_error);
+    BOOST_REQUIRE_EQUAL(true , triangle(5 , 4, 6).Scalene);
 }
 
-BOOST_AUTO_TEST_CASE(larger_triangles_violating_triangle_inequality_are_illegal)
+BOOST_AUTO_TEST_CASE(not_scalene_if_all_sides_are_equal)
 {
-    BOOST_REQUIRE_THROW(triangle::kind(7, 3, 2), std::domain_error);
+    BOOST_REQUIRE_EQUAL(false , triangle(4 , 4 , 4).Scalene);
+}
+
+BOOST_AUTO_TEST_CASE(not_scalene_if_two_sides_are_equal)
+{
+    BOOST_REQUIRE_EQUAL(false , triangle(4 , 4, 3).Scalene);
+}
+
+BOOST_AUTO_TEST_CASE(not_scalene_when_it_violates_triangle_inequality)
+{
+    BOOST_REQUIRE_EQUAL(false , triangle(7 , 3 , 2).Scalene);
+}
+
+BOOST_AUTO_TEST_CASE(scalene_sides_may_be_floats)
+{
+    BOOST_REQUIRE_EQUAL(true , triangle(0.5 , 0.4 , 0.6).Scalene);
 }
 #endif
