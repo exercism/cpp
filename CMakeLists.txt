@@ -51,6 +51,7 @@ foreach(exercise
     atbash-cipher
     bracket-push
     pangram
+    robot-simulator
 )
     set(exercise_dir exercises/${exercise})
     travis_fixup(${exercise})

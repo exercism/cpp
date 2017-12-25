@@ -323,6 +323,20 @@
     },
     {
       "core": false,
+      "difficulty": 4,
+      "slug": "robot-simulator",
+      "topics": [
+        "control_flow_loops",
+        "classes",
+        "conditionals",
+        "variables",
+        "pairs"
+      ],
+      "unlocked_by": null,
+      "uuid": "ed2e467d-621d-42de-afdd-f9b49efbc263"
+    },
+    {
+      "core": false,
       "difficulty": 5,
       "slug": "series",
       "topics": [
