@@ -25,6 +25,6 @@ BOOST_AUTO_TEST_CASE(turn_of_the_21st_century)
 
 BOOST_AUTO_TEST_CASE(turn_of_the_25th_century)
 {
-    BOOST_REQUIRE(leap::is_leap_year(2400));;
+    BOOST_REQUIRE(leap::is_leap_year(2400));
 }
 #endif
