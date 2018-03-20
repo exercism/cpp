@@ -24,7 +24,6 @@ BOOST_AUTO_TEST_CASE(a_sentence_with_punctuation)
 {
     BOOST_REQUIRE_EQUAL("!yrgnuh m'I", reverse_string::reverse_string("I'm hungry!"));
 }
-}
 
 BOOST_AUTO_TEST_CASE(a_palindrome)
 {
