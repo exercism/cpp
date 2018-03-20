@@ -23,9 +23,6 @@ if(${EXERCISM_RUN_ALL_TESTS})
     add_definitions(-DEXERCISM_RUN_ALL_TESTS)
 endif()
 
-# Get a source filename from the exercise name by replacing -'s with _'s
-string(REPLACE "-" "_" file ${exercise})
-
 # Implementation could be only a header
 if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/${file}.cpp)
     set(exercise_cpp ${file}.cpp)
