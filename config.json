@@ -437,7 +437,7 @@
       "slug": "protein-translation",
       "topics": [
           "strings", 
-          "maps",
+          "vectors",
           "logic"
       ],
       "unlocked_by": null,
