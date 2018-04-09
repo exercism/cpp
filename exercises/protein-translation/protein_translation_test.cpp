@@ -59,7 +59,7 @@ BOOST_AUTO_TEST_CASE(cysteine2)
 }
 BOOST_AUTO_TEST_CASE(tryptophan)
 {
-  BOOST_REQUIRE_EQUAL("UGG", protein_translation::protein_translation("Tryptophan));
+  BOOST_REQUIRE_EQUAL("UGG", protein_translation::protein_translation("Tryptophan"));
 }
 BOOST_AUTO_TEST_CASE(stop1)
 {
