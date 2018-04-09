@@ -430,6 +430,18 @@
       ],
       "unlocked_by": null,
       "uuid": "22ada9c4-a2b5-4a54-83d6-597dc3b90b89"
+    },
+    {
+      "core": false,
+      "difficulty": 3,
+      "slug": "protein-translation",
+      "topics": [
+          "strings", 
+          "maps",
+          "logic"
+      ],
+      "unlocked_by": null,
+      "uuid": "0b4df096-adbf-46b7-85b7-34267d159531"
     }
   ],
   "foregone": [
