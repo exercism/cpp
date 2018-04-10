@@ -1,41 +1,74 @@
 #include "protein_translation.h"
 #include <string>
+#include <vector>
 
 namespace protein_translation
 {
-   void protein_translation(std::string rna)
-   {
-      int i;
-      std::vector<string> codons;
-      std::string sequence;
-      std::vector< std::make_pair<string, string> > table;
-      table.push_back(std::make_pair("AUG", "Methionine"));
-      table.push_back(std::make_pair("UUU", "Phenylalanine"));
-      table.push_back(std::make_pair("UUC", "Phenylalanine"));
-      table.push_back(std::make_pair("UUA", "Leucine"));
-      table.push_back(std::make_pair("UUG", "Leucine"));
-      table.push_back(std::make_pair("UCU", "Serine"));
-      table.push_back(std::make_pair("UCC", "Serine"));
-      table.push_back(std::make_pair("UCA", "Serine"));
-      table.push_back(std::make_pair("UCG", "Serine"));
-      table.push_back(std::make_pair("UAU", "Tyrosine"));
-      table.push_back(std::make_pair("UAC", "Tyrosine"));
-      table.push_back(std::make_pair("UGU", "Cysteine"));
-      table.push_back(std::make_pair("UGC", "Cysteine"));
-      table.push_back(std::make_pair("UGG", "Tryptophan"));
-      table.push_back(std::make_pair("UAA", "STOP"));
-      table.push_back(std::make_pair("UAG", "STOP"));
-      table.push_back(std::make_pair("UGA", "STOP"));
-      for(i = 0; i < strlen(rna); i = i+3)
-      {
-          sequence += rna[i];
-          sequence += rna[i+1];
-          sequence += rna[i+2];
-          codons.push_back(sequence);
-          sequence.clear();
-      }
-      
-      
-      
-   }
+//creates codons and checks if codon has valid protein translation, if it does
+//then it adds to vector of proteins and returns the vector 
+std::vector <std::string> protein_translation(std::string rna)
+{
+    std::vector<std::string> proteins;
+    std::vector <std::string> methionine = {"AUG"};
+    std::vector <std::string> phenylalanine= {"UUU", "UUC"};
+    std::vector <std::string> leucine = {"UUA","UUG"};
+    std::vector <std::string> serine = {"UCU","UCC","UCA","UCG"};
+    std::vector <std::string> tyrosine = {"UAU", "UAC"};
+    std::vector <std::string> cysteine = {"UGU", "UGC"};
+    std::vector <std::string> tryptophan = {"UGG"};
+    std::vector <std::string> stop = {"UAA", "UAG", "UGA"};
+    std::vector<std::string>::iterator it;
+    for(int i = 0; i < rna.length(); i = i+3)
+    {
+        std::string codon;
+        codon += rna[i];
+        codon += rna[i+1];
+        codon += rna[i+2];
+        if(isProtein(methionine, codon) == true)
+        {
+            proteins.push_back("Methionine");
+        }
+        else if(isProtein(phenylalanine, codon) == true)
+        {
+            proteins.push_back("Phenylalanine");
+        }
+        else if(isProtein(leucine, codon) == true)
+        {
+            proteins.push_back("Leucine");
+        }
+        else if(isProtein(serine, codon) == true)
+        {
+            proteins.push_back("Serine");
+        }
+        else if(isProtein(tyrosine, codon) == true)
+        {
+            proteins.push_back("Tyrosine");
+        }
+        else if(isProtein(cysteine, codon) == true)
+        {
+            proteins.push_back("Cysteine");
+        }
+        else if(isProtein(tryptophan, codon) == true)
+        {
+            proteins.push_back("Tryptophan");
+        }
+        else if (isProtein(stop, codon) == true)
+        {
+            break;
+        }
+        else
+        {
+            cout<<"invalid input\n";
+        }
+    }
+    return proteins;
+}
+//helper function to check if the codon has a valid protein translation
+bool isProtein(std::vector<std::string> tofind, std::string codon)
+{
+    bool check;
+    check = (std::find(tofind.begin(), tofind.end(), codon) != tofind.end());
+    return check;
+}
+    
 }
