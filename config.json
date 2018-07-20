@@ -155,6 +155,20 @@
       ]
     },
     {
+      "slug": "collatz-conjecture",
+      "uuid": "3c6c63a3-970d-40b2-a721-b73d6dd6c337",
+      "core": false,
+      "unlocked_by": "sum-of-multiples",
+      "difficulty": 2,
+      "topics": [
+        "algorithms",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "integers",
+        "mathematics"
+      ]
+    },
+    {
       "slug": "robot-name",
       "uuid": "67c3cb10-b893-428a-82d0-79602aef2775",
       "core": false,
@@ -168,8 +182,8 @@
     {
       "slug": "sum-of-multiples",
       "uuid": "a190ad11-db1c-4624-a477-e1d0c91d8b4f",
-      "core": false,
-      "unlocked_by": "gigasecond",
+      "core": true,
+      "unlocked_by": null,
       "difficulty": 3,
       "topics": [
         "mathematics"
@@ -391,6 +405,28 @@
       "topics": [
         "control_flow_loops",
         "logic"
+      ]
+    },
+    {
+      "slug": "isogram",
+      "uuid": "b9ae5be7-192c-440a-92eb-103caddeb0c7",
+      "core": false,
+      "unlocked_by": "hello-world",
+      "difficulty": 3,
+      "topics": [
+        "filtering",
+        "strings"
+      ]
+    },
+    {
+      "slug": "secret-handshake",
+      "uuid": "8bc51f50-a49b-4ba5-aa3e-1835834a0aef",
+      "core": false,
+      "unlocked_by": "sum-of-multiples",
+      "difficulty": 3,
+      "topics": [
+        "arrays",
+        "bitwise_operations"
       ]
     },
     {
