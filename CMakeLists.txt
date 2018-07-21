@@ -51,6 +51,9 @@ foreach(exercise
     atbash-cipher
     bracket-push
     pangram
+    isogram
+    collatz-conjecture
+    secret-handshake
 )
     set(exercise_dir exercises/${exercise})
     travis_fixup(${exercise})
