@@ -1,6 +1,4 @@
 #include "isogram.h"
-
-#include <string>
 #include <unordered_set>
 
 bool isogram::is_isogram(std::string word) {

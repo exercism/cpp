@@ -1,6 +1,4 @@
 #include "secret_handshake.h"
-#include <vector>
-#include <string>
 #include <algorithm>
 
 std::vector<std::string> handshake::commands(int num) {
