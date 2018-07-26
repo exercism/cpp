@@ -169,6 +169,19 @@
       ]
     },
     {
+      "slug": "binary-search",
+      "uuid": "7dde6954-c43f-460c-a810-7bcbcdd9e24e",
+      "core": false,
+      "unlocked_by": "gigasecond",
+      "difficulty": 5,
+      "topics": [
+        "algorithms",
+        "arrays",
+        "searching",
+        "sorting"
+      ]
+    },
+    {
       "slug": "robot-name",
       "uuid": "67c3cb10-b893-428a-82d0-79602aef2775",
       "core": false,

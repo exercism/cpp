@@ -54,6 +54,7 @@ foreach(exercise
     isogram
     collatz-conjecture
     secret-handshake
+	binary-search
 )
     set(exercise_dir exercises/${exercise})
     travis_fixup(${exercise})
