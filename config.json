@@ -106,7 +106,8 @@
       "unlocked_by": "leap",
       "difficulty": 3,
       "topics": [
-        "control_flow_loops"
+        "control_flow_loops",
+        "math"
       ]
     },
     {
@@ -172,7 +173,7 @@
       "unlocked_by": "gigasecond",
       "difficulty": 3,
       "topics": [
-        "mathematics"
+        "math"
       ]
     },
     {
@@ -214,8 +215,7 @@
       "unlocked_by": null,
       "difficulty": 3,
       "topics": [
-        "control_flow_conditionals",
-        "mathematics"
+        "control_flow_conditionals"
       ]
     },
     {
@@ -245,7 +245,6 @@
       "unlocked_by": "grains",
       "difficulty": 7,
       "topics": [
-        "mathematics",
         "strings"
       ]
     },
@@ -256,7 +255,7 @@
       "unlocked_by": null,
       "difficulty": 3,
       "topics": [
-        "mathematics",
+        "math",
         "strings"
       ]
     },
@@ -268,7 +267,7 @@
       "difficulty": 5,
       "topics": [
         "control_flow_loops",
-        "mathematics"
+        "math"
       ]
     },
     {
@@ -290,7 +289,7 @@
       "unlocked_by": "triangle",
       "difficulty": 3,
       "topics": [
-        "mathematics",
+        "math",
         "strings"
       ]
     },
@@ -324,7 +323,7 @@
       "difficulty": 5,
       "topics": [
         "control_flow_loops",
-        "mathematics"
+        "math"
       ]
     },
     {
@@ -368,7 +367,7 @@
       "unlocked_by": "leap",
       "difficulty": 5,
       "topics": [
-        "mathematics"
+        "math"
       ]
     },
     {
@@ -378,7 +377,7 @@
       "unlocked_by": null,
       "difficulty": 3,
       "topics": [
-        "mathematics",
+        "math",
         "strings"
       ]
     },
