@@ -13,6 +13,6 @@ enum flavor
 
 flavor kind(double a, double b, double c);
 
-};
+}
 
 #endif
