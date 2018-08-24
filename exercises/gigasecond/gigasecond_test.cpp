@@ -1,5 +1,6 @@
 #include "gigasecond.h"
 #define BOOST_TEST_MAIN
+#include <boost/date_time/posix_time/posix_time.hpp>
 #include <boost/test/unit_test.hpp>
 #include "boost/date_time/posix_time/posix_time.hpp"
 
