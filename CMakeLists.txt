@@ -12,6 +12,8 @@ function(travis_fixup dir)
     endif()
 endfunction()
 
+option(EXERCISM_RUN_ALL_TESTS "Run all Exercism tests" On)
+
 foreach(exercise
     bob
     word-count
@@ -52,12 +54,6 @@ foreach(exercise
     bracket-push
     pangram
 )
-    set(exercise_dir exercises/${exercise})
     travis_fixup(${exercise})
-    execute_process(
-        COMMAND ${CMAKE_COMMAND} -DEXERCISM_RUN_ALL_TESTS:BOOL=1 -G ${CMAKE_GENERATOR} .
-        WORKING_DIRECTORY ${exercise_dir})
-    add_custom_target(${exercise} ALL
-        COMMAND ${CMAKE_COMMAND} --build .
-        WORKING_DIRECTORY ${exercise_dir})
+    add_subdirectory(exercises/${exercise})
 endforeach()
