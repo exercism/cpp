@@ -13,6 +13,7 @@ function(travis_fixup dir)
 endfunction()
 
 foreach(exercise
+    hello-world
     bob
     word-count
     hamming
