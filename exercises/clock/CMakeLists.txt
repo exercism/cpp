@@ -13,11 +13,6 @@ set(Boost_USE_MULTITHREADED ON)
 set(Boost_USE_STATIC_RUNTIME OFF)
 find_package(Boost 1.59 REQUIRED COMPONENTS unit_test_framework date_time regex)
 
-# Configure to run all the tests?
-if(${EXERCISM_RUN_ALL_TESTS})
-    add_definitions(-DEXERCISM_RUN_ALL_TESTS)
-endif()
-
 # Get a source filename from the exercise name by replacing -'s with _'s
 string(REPLACE "-" "_" file ${exercise})
 
@@ -50,6 +45,11 @@ target_link_libraries(${exercise}
     Boost::date_time
     Boost::regex
 )
+
+# Configure to run all the tests?
+if(${EXERCISM_RUN_ALL_TESTS})
+    target_compile_definitions(${exercise} PRIVATE EXERCISM_RUN_ALL_TESTS)
+endif()
 
 # Tell MSVC not to warn us about unchecked iterators in debug builds
 if(${MSVC})
