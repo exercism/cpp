@@ -13,11 +13,6 @@ set(Boost_USE_MULTITHREADED ON)
 set(Boost_USE_STATIC_RUNTIME OFF)
 find_package(Boost 1.59 REQUIRED COMPONENTS unit_test_framework date_time regex)
 
-# Enable C++11 features on gcc/clang
-if("${CMAKE_CXX_COMPILER_ID}" MATCHES "(GNU|Clang)")
-    set(CMAKE_CXX_FLAGS "-std=c++11")
-endif()
-
 # Configure to run all the tests?
 if(${EXERCISM_RUN_ALL_TESTS})
     add_definitions(-DEXERCISM_RUN_ALL_TESTS)
@@ -35,6 +30,12 @@ endif()
 
 # Build executable from sources and headers
 add_executable(${exercise} ${file}_test.cpp ${exercise_cpp} ${file}.h)
+
+set_target_properties(${exercise} PROPERTIES
+    CXX_STANDARD 11
+    CXX_STANDARD_REQUIRED OFF
+    CXX_EXTENSIONS OFF
+)
 
 # We need boost includes
 target_include_directories(${exercise} PRIVATE ${Boost_INCLUDE_DIRS})
