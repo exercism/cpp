@@ -43,11 +43,13 @@ if("${CMAKE_CXX_COMPILER_ID}" MATCHES "(GNU|Clang)")
     )
 endif()
 
-# We need boost includes
-target_include_directories(${exercise} PRIVATE ${Boost_INCLUDE_DIRS})
-
 # We need boost libraries
-target_link_libraries(${exercise} ${Boost_LIBRARIES})
+target_link_libraries(${exercise}
+    PRIVATE
+    Boost::unit_test_framework
+    Boost::date_time
+    Boost::regex
+)
 
 # Tell MSVC not to warn us about unchecked iterators in debug builds
 if(${MSVC})
