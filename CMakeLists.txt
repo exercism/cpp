@@ -15,6 +15,7 @@ endfunction()
 option(EXERCISM_RUN_ALL_TESTS "Run all Exercism tests" On)
 
 foreach(exercise
+    hello-world
     bob
     word-count
     hamming
