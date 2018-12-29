@@ -2,8 +2,6 @@
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
 
-using namespace std;
-
 BOOST_AUTO_TEST_CASE(an_empty_string)
 {
     BOOST_REQUIRE_EQUAL("", reverse_string::reverse_string(""));

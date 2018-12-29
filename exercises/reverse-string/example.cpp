@@ -3,16 +3,9 @@
 namespace reverse_string
 {
 
-std::string reverse_string(std::string text)
+std::string reverse_string(const std::string& text)
 {
-    int length=text.size();
-    for(int i=0;i<length/2;i++)
-    {
-		char temp=text[i];
-		text[i]=text[length-1-i];
-		text[length-1-i]=temp;
-	}
-    return text;
+    return std::string(text.rbegin(), text.rend());
 }
 
 }
