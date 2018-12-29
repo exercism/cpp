@@ -29,6 +29,16 @@
       ]
     },
     {
+      "slug": "reverse-string",
+      "uuid": "c6946af0-3c2f-4f76-8b30-a1643cd5be63",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "strings"
+      ]
+    },
+    {
       "slug": "gigasecond",
       "uuid": "4dbe1bb3-0419-4749-8c2a-ec91539a8640",
       "core": true,
