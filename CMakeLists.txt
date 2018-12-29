@@ -53,6 +53,7 @@ foreach(exercise
     allergies
     atbash-cipher
     bracket-push
+    all-your-base
     pangram
     reverse-string
     acronym
