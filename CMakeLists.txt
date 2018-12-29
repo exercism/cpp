@@ -55,6 +55,7 @@ foreach(exercise
     bracket-push
     pangram
     reverse-string
+    acronym
 )
     travis_fixup(${exercise})
     add_subdirectory(exercises/${exercise})
