@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.11)
+cmake_minimum_required(VERSION 3.1.3)
 project(exercism CXX)
 
 function(travis_fixup dir)
@@ -12,7 +12,10 @@ function(travis_fixup dir)
     endif()
 endfunction()
 
+option(EXERCISM_RUN_ALL_TESTS "Run all Exercism tests" On)
+
 foreach(exercise
+    hello-world
     bob
     word-count
     hamming
@@ -52,13 +55,9 @@ foreach(exercise
     bracket-push
     all-your-base
     pangram
+    reverse-string
+    acronym
 )
-    set(exercise_dir exercises/${exercise})
     travis_fixup(${exercise})
-    execute_process(
-        COMMAND ${CMAKE_COMMAND} -DEXERCISM_RUN_ALL_TESTS:BOOL=1 -G ${CMAKE_GENERATOR} .
-        WORKING_DIRECTORY ${exercise_dir})
-    add_custom_target(${exercise} ALL
-        COMMAND ${CMAKE_COMMAND} --build .
-        WORKING_DIRECTORY ${exercise_dir})
+    add_subdirectory(exercises/${exercise})
 endforeach()

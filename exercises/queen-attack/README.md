@@ -11,7 +11,7 @@ A chessboard can be represented by an 8 by 8 array.
 So if you're told the white queen is at (2, 3) and the black queen at
 (5, 6), then you'd know you've got a set-up like so:
 
-```plain
+```text
 _ _ _ _ _ _ _ _
 _ _ _ _ _ _ _ _
 _ _ _ W _ _ _ _
@@ -28,8 +28,9 @@ share a diagonal.
 
 ## Getting Started
 
-Make sure you have read [the C++ page](http://exercism.io/languages/cpp) on
-exercism.io.  This covers the basic information on setting up the development
+Make sure you have read the [Installing](https://exercism.io/tracks/cpp/installing) and 
+[Running the Tests](https://exercism.io/tracks/cpp/tests) pages for C++ on exercism.io. 
+This covers the basic information on setting up the development
 environment expected by the exercises.
 
 ## Passing the Tests

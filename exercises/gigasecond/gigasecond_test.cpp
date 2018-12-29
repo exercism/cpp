@@ -1,6 +1,7 @@
 #include "gigasecond.h"
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
+#include "boost/date_time/posix_time/posix_time.hpp"
 
 // See <http://www.boost.org/doc/libs/1_59_0/doc/html/date_time/posix_time.html>
 // for documentation on boost::posix_time
@@ -9,7 +10,7 @@ using namespace boost::posix_time;
 
 BOOST_AUTO_TEST_CASE(test_1)
 {
-    const auto actual = gigasecond::advance(time_from_string("2011-04-25 00:00:00"));
+    const ptime actual = gigasecond::advance(time_from_string("2011-04-25 00:00:00"));
 
     const ptime expected(time_from_string("2043-01-01 01:46:40"));
     BOOST_REQUIRE_EQUAL(expected, actual);

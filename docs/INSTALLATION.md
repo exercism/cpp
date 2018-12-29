@@ -14,42 +14,33 @@ as separate command-line tools.
 
 ### Prerequisite: A Modern C++11 Compiler
 
-This language track assumes [C++11](http://en.wikipedia.org/wiki/C%2B%2B11),
-the latest version of the ISO C++ standard that is
-[widely supported](http://en.cppreference.com/w/cpp/compiler_support) on all
-major platforms (Linux, Windows and MacOS).
-[C++14](http://en.wikipedia.org/wiki/C%2B%2B14) has been recently ratified
-as the most recent version of the ISO standard.  The language track will
-be updated to C++14 once support is sufficiently mature in the development
-environments across all major platforms.
-
-Free compilers exist for C++11 on all major platforms, although the version
-of the C++ compiler installed on your system may be an older version that
-doesn't fully support C++11.  A comparison chart of
-[C++ compiler support](http://en.cppreference.com/w/cpp/compiler_support)
-and related [discussion](http://en.cppreference.com/w/Talk:cpp/compiler_support)
-shows that most of the major features of C++11 are available on all major
-platforms.
+This language track requires a compiler with [C++11](http://en.wikipedia.org/wiki/C%2B%2B11)
+support, which was released in 2011. All major compilers released in the last few years should
+be compatible, so as long as you are on a fairly recent version you should be fine.
+Specifically, GCC version 5.1 or later, Clang version 3.8 or later, or Visual
+Studio 2015 or later.
 
 #### Linux
 
-Linux users will need gcc 4.8 or later or clang 3.4 or later for the compiler
-and `make` will be needed for the native build.  Make is pre-installed on most
-unix systems, but is available via `sudo apt-get install make` if not present.
-Gcc 4.8 supports C++11 with the `-std=c++11` argument and can be installed and
-set as the default compiler with the following recipe:
+Ubuntu 16.04 and later have compatible compilers in the package manager, so
+installing the necessary compiler can be done with `sudo apt-get install gcc`.
+If you're on an older version of Ubuntu, you should be able to install a newer
+GCC version using the following:
 
 ```bash
 $ sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
 $ sudo apt-get -qq -d update
-$ sudo apt-get -qq install g++-4.8
-$ # make g++ 4.8 the default g++ executable
-$ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 90
+$ sudo apt-get -qq install g++-5
+$ # make g++ 5 the default g++ executable
+$ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 90
 ```
+
+For other distributions, you should be able to acquire the compiler through your
+package manager.
 
 #### MacOS
 
-MacOS users can install gcc 4.8 with [Homebrew](http://brew.sh/) via
+MacOS users can install GCC with [Homebrew](http://brew.sh/) via
 `brew install gcc`.
 
 #### Windows
@@ -81,15 +72,13 @@ systems.  If you encounter any problems with the supplied CMake recipe,
 please [report the issue](https://github.com/exercism/cpp/issues) so we can
 improve the CMake support.
 
-[CMake 2.8.11 or later](http://www.cmake.org/) is required to use the provided build recipe.
+[CMake 3.1.3 or later](http://www.cmake.org/) is required to use the provided build recipe.
 
 ### Prerequisite: Boost 1.59+
 
 The unit tests use Boost.Test, the unit testing framework included with
 [Boost](http://www.boost.org/index.html).  You may find other libraries
-in Boost useful to you as you work through the exercises.  In particular,
-gcc 4.8 does not have a proper implementation of the standard regular
-expression library, but you can find a compatible library in Boost.
+in Boost useful to you as you work through the exercises.
 You will need to download and install Boost.  As of this writing Boost
 1.59+ is the required version.  You will need a compiled version of the
 boost libraries Boost.Test, Boost.DateTime and Boost.Regex, or you will

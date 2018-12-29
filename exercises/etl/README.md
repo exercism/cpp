@@ -1,8 +1,9 @@
-# Etl
+# ETL
 
 We are going to do the `Transform` step of an Extract-Transform-Load.
 
 ### ETL
+
 Extract-Transform-Load (ETL) is a fancy way of saying, "We have some crufty, legacy data over in this system, and now we need it in this shiny new system over here, so
 we're going to migrate this."
 
@@ -11,6 +12,7 @@ once." That's then typically followed by much forehead slapping and
 moaning about how stupid we could possibly be.)
 
 ### The goal
+
 We're going to extract some scrabble scores from a legacy system.
 
 The old system stored a list of letters per score:
@@ -46,8 +48,9 @@ game while being scored at 4 in the Hawaiian-language version.
 
 ## Getting Started
 
-Make sure you have read [the C++ page](http://exercism.io/languages/cpp) on
-exercism.io.  This covers the basic information on setting up the development
+Make sure you have read the [Installing](https://exercism.io/tracks/cpp/installing) and 
+[Running the Tests](https://exercism.io/tracks/cpp/tests) pages for C++ on exercism.io. 
+This covers the basic information on setting up the development
 environment expected by the exercises.
 
 ## Passing the Tests

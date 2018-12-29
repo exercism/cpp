@@ -6,7 +6,7 @@ Given a word, compute the scrabble score for that word.
 
 You'll need these:
 
-```plain
+```text
 Letter                           Value
 A, E, I, O, U, L, N, R, S, T       1
 D, G                               2
@@ -18,6 +18,7 @@ Q, Z                               10
 ```
 
 ## Examples
+
 "cabbage" should be scored as worth 14 points:
 
 - 3 points for C
@@ -34,13 +35,15 @@ And to total:
 - = 14
 
 ## Extensions
+
 - You can play a double or a triple letter.
 - You can play a double or a triple word.
 
 ## Getting Started
 
-Make sure you have read [the C++ page](http://exercism.io/languages/cpp) on
-exercism.io.  This covers the basic information on setting up the development
+Make sure you have read the [Installing](https://exercism.io/tracks/cpp/installing) and 
+[Running the Tests](https://exercism.io/tracks/cpp/tests) pages for C++ on exercism.io. 
+This covers the basic information on setting up the development
 environment expected by the exercises.
 
 ## Passing the Tests

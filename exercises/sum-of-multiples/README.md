@@ -1,20 +1,18 @@
 # Sum Of Multiples
 
-Given a number, find the sum of all the multiples of particular numbers up to
+Given a number, find the sum of all the unique multiples of particular numbers up to
 but not including that number.
 
-If we list all the natural numbers up to but not including 20 that are
-multiples of either 3 or 5, we get 3, 5, 6 and 9, 10, 12, 15, and 18.
+If we list all the natural numbers below 20 that are multiples of 3 or 5,
+we get 3, 5, 6, 9, 10, 12, 15, and 18.
 
 The sum of these multiples is 78.
 
-Given a number, find the sum of the multiples of a given set of numbers,
-up to but not including that number.
-
 ## Getting Started
 
-Make sure you have read [the C++ page](http://exercism.io/languages/cpp) on
-exercism.io.  This covers the basic information on setting up the development
+Make sure you have read the [Installing](https://exercism.io/tracks/cpp/installing) and 
+[Running the Tests](https://exercism.io/tracks/cpp/tests) pages for C++ on exercism.io. 
+This covers the basic information on setting up the development
 environment expected by the exercises.
 
 ## Passing the Tests
