@@ -456,6 +456,19 @@
         "control_flow_loops",
         "strings"
       ]
+    },
+    {
+      "slug": "all-your-base",
+      "uuid": "0a3220c6-07a9-ed80-4d2d-1fc65de969b771a46d5",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 4,
+      "topics": [
+        "algorithms",
+        "integers",
+        "loops",
+        "mathematics"
+      ]
     }
   ]
 }
