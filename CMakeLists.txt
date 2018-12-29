@@ -54,6 +54,7 @@ foreach(exercise
     atbash-cipher
     bracket-push
     pangram
+    reverse-string
     acronym
 )
     travis_fixup(${exercise})
