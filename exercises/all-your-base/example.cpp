@@ -4,7 +4,7 @@
 namespace all_your_base {
 
 std::vector<unsigned int> convert(unsigned int input_base,
-                                  std::vector<unsigned int> const &input_digits,
+                                  const std::vector<unsigned int>& input_digits,
                                   unsigned int output_base) {
     std::vector<unsigned int> b;
     unsigned int value = 0;
@@ -26,4 +26,5 @@ std::vector<unsigned int> convert(unsigned int input_base,
     }
     return b;
 }
+
 }

@@ -3,7 +3,6 @@
 #include <boost/test/unit_test.hpp>
 
 using namespace std;
-namespace utf = boost::unit_test;
 
 BOOST_AUTO_TEST_CASE(test1) {
     vector<unsigned int> in_digits{0};
@@ -12,8 +11,8 @@ BOOST_AUTO_TEST_CASE(test1) {
     BOOST_REQUIRE_EQUAL_COLLECTIONS(expected.begin(), expected.end(),
                                     out_digits.begin(), out_digits.end());
 }
-#if defined(EXERCISM_RUN_ALL_TESTS)
 
+#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(single_bit_one_to_decimal) {
     vector<unsigned int> in_digits{1};
     vector<unsigned int> expected{1};
