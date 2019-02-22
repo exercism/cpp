@@ -47,8 +47,7 @@ BOOST_AUTO_TEST_CASE(data_is_retained)
 
 BOOST_AUTO_TEST_CASE(insert_data_at_proper_node)
 {
-    auto tested = make_tree({4});
-    tested->insert(2);
+    auto tested = make_tree({4, 2});
 
     test_leaf(tested, 4, true, false);
     test_leaf(tested->left(), 2, false, false);
@@ -56,12 +55,16 @@ BOOST_AUTO_TEST_CASE(insert_data_at_proper_node)
 
 BOOST_AUTO_TEST_CASE(same_number_at_left_node)
 {
-    auto tested = make_tree({4});
-    tested->insert(4);
+    auto tested = make_tree({4, 4});
 
     test_leaf(tested, 4, true, false);
     test_leaf(tested->left(), 4, false, false);
 }
+
+// BOOST_AUTO_TEST_CASE(greater_number_at_right_node)
+// {
+//     auto 
+// }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
 #endif
