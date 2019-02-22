@@ -6,13 +6,13 @@
 
 namespace binary_tree
 {
-    class binary_tree
+    class binary_tree final
     {
     public:
         using tree_data_t = uint32_t;
         using binary_tree_ptr = std::unique_ptr<binary_tree>;
 
-        binary_tree(tree_data_t data);
+        explicit binary_tree(tree_data_t data);
         ~binary_tree() = default;
 
         binary_tree(binary_tree &) = delete;
