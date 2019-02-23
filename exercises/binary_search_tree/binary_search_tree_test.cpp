@@ -45,7 +45,7 @@ BOOST_AUTO_TEST_CASE(data_is_retained)
 }
 
 
-BOOST_AUTO_TEST_CASE(insert_data_at_proper_node)
+BOOST_AUTO_TEST_CASE(smaller_number_at_left_node)
 {
     auto tested = make_tree({4, 2});
 
