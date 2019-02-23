@@ -29,6 +29,16 @@
       ]
     },
     {
+      "slug": "reverse-string",
+      "uuid": "c6946af0-3c2f-4f76-8b30-a1643cd5be63",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "strings"
+      ]
+    },
+    {
       "slug": "gigasecond",
       "uuid": "4dbe1bb3-0419-4749-8c2a-ec91539a8640",
       "core": true,
@@ -304,6 +314,17 @@
       ]
     },
     {
+      "slug": "acronym",
+      "uuid": "9d6f19f3-416e-4aeb-b426-7499853b21de",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "regular_expressions",
+        "strings"
+      ]
+    },
+    {
       "slug": "say",
       "uuid": "090b2615-cd05-442b-be74-9f11bd5a83a5",
       "core": false,
@@ -444,6 +465,19 @@
       "difficulty": 7,
       "topics":[
         "algorithms"
+      ]
+    },
+    {
+      "slug": "all-your-base",
+      "uuid": "0a3220c6-07a9-ed80-4d2d-1fc65de969b771a46d5",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 4,
+      "topics": [
+        "algorithms",
+        "integers",
+        "loops",
+        "mathematics"
       ]
     }
   ]

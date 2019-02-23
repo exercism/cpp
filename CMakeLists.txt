@@ -53,8 +53,11 @@ foreach(exercise
     allergies
     atbash-cipher
     bracket-push
+    all-your-base
     pangram
     binary-search-tree
+    reverse-string
+    acronym
 )
     travis_fixup(${exercise})
     add_subdirectory(exercises/${exercise})
