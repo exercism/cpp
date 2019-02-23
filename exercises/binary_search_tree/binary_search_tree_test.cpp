@@ -38,6 +38,11 @@ static tree_ptr make_tree(const std::vector<int> &data)
     return std::move(tree);
 }
 
+static void test_sort(const tree_ptr &tree, const std::vector<int> &expected)
+{
+    BOOST_REQUIRE_EQUAL_COLLECTIONS(tree->begin(), tree->end(), expected.begin(), expected.end());
+}
+
 BOOST_AUTO_TEST_CASE(data_is_retained)
 {
     auto tested = make_tree({4});
@@ -84,5 +89,29 @@ BOOST_AUTO_TEST_CASE(can_create_complex_tree)
     test_leaf(tested->right()->right(), 7, false, false);
 }
 
+BOOST_AUTO_TEST_CASE(can_sort_single_number)
+{
+    test_sort(make_tree({2}), {2});
+}
+
+BOOST_AUTO_TEST_CASE(can_sort_if_second_number_is_smaller_than_first)
+{
+    test_sort(make_tree({2, 1}), {1, 2});
+}
+
+BOOST_AUTO_TEST_CASE(can_sort_if_second_number_is_same_as_first)
+{
+    test_sort(make_tree({2, 2}), {2, 2});
+}
+
+BOOST_AUTO_TEST_CASE(can_sort_if_second_number_is_greater_than_first)
+{
+    test_sort(make_tree({2, 3}), {2, 3});
+}
+
+BOOST_AUTO_TEST_CASE(can_sort_complex_tree)
+{
+    test_sort(make_tree({2, 1, 3, 6, 7, 5}), {1, 2, 3, 5, 6, 7});
+}
 #if defined(EXERCISM_RUN_ALL_TESTS)
 #endif
