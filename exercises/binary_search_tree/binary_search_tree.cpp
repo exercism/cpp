@@ -40,23 +40,33 @@ namespace binary_tree
         insert(data, insert_location);
     }
 
+    binary_tree::binary_tree_iter binary_tree::begin() const
+    {
+        return binary_tree_iter(*this);
+    }
+
+    binary_tree::binary_tree_iter binary_tree::end() const
+    {
+        return binary_tree_iter::build_end_iterator(*this);
+    }
+
     // iterator
 
-    binary_tree::binary_tree_iter::binary_tree_iter(const binary_tree_ptr &tree)
+    binary_tree::binary_tree_iter::binary_tree_iter(const binary_tree &tree)
     : _tree(tree),
       _side_iter(build_first_side_iter(tree))
     {
-        _state = _tree->left() ? state::Left : state::Middle;
+        _state = _tree.left() ? state::Left : state::Middle;
     }
 
-    binary_tree::binary_tree_iter::binary_tree_iter_ptr binary_tree::binary_tree_iter::build_first_side_iter(const binary_tree_ptr &tree)
+    binary_tree::binary_tree_iter::binary_tree_iter_ptr binary_tree::binary_tree_iter::build_first_side_iter(const binary_tree &tree)
     {
-        if (!tree->left())
+        if (!tree.left())
             return nullptr;
-        return binary_tree_iter_ptr(new binary_tree_iter(tree->left()));
+        return binary_tree_iter_ptr(new binary_tree_iter(*tree.left()));
     }
 
-    binary_tree::binary_tree_iter binary_tree::binary_tree_iter::build_end_iterator(const binary_tree_ptr &tree)
+    binary_tree::binary_tree_iter binary_tree::binary_tree_iter::build_end_iterator(const binary_tree &tree)
     {
         binary_tree_iter iter(tree);
         iter._side_iter.reset(nullptr);
@@ -81,7 +91,7 @@ namespace binary_tree
 
     bool binary_tree::binary_tree_iter::operator==(const binary_tree::binary_tree_iter &other) const
     {
-        if (_tree != other._tree)
+        if (&_tree != &other._tree)
             return false;
         if (_state != other._state)
             return false;
@@ -100,7 +110,7 @@ namespace binary_tree
         case state::Done:
             throw std::out_of_range("Access of iterator after end");
         case state::Middle:
-            return _tree->data();
+            return _tree.data();
         case state::Left:
         case state::Right:
             return _side_iter->operator*();
@@ -121,13 +131,13 @@ namespace binary_tree
         case state::Done:
             throw std::out_of_range("Cannot advance iterator after end");
         case state::Middle:
-            if (!_tree->right())
+            if (!_tree.right())
             {
                 _state = state::Done;
                 break;
             }
             _state = state::Right;
-            _side_iter = binary_tree_iter_ptr(new binary_tree_iter(_tree->right()));
+            _side_iter = binary_tree_iter_ptr(new binary_tree_iter(*_tree.right()));
             break;
         case state::Left:
             advance_side_iter(state::Middle);
