@@ -4,7 +4,7 @@
 namespace triangle
 {
 
-enum class flavor
+enum flavor
 {
     equilateral,
     isosceles,

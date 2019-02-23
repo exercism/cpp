@@ -25,12 +25,12 @@ flavor kind(double a, double b, double c)
         throw std::domain_error("Invalid triangle");
     }
     if (a == b && b == c) {
-        return flavor::equilateral;
+        return equilateral;
     }
     if (a == b || b == c || a == c) {
-        return flavor::isosceles;
+        return isosceles;
     }
-    return flavor::scalene;
+    return scalene;
 }
 
 }
