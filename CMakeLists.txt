@@ -54,6 +54,7 @@ foreach(exercise
     atbash-cipher
     bracket-push
     pangram
+    binary-search-tree
 )
     travis_fixup(${exercise})
     add_subdirectory(exercises/${exercise})

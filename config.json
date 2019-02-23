@@ -435,6 +435,16 @@
         "control_flow_loops",
         "strings"
       ]
+    },
+    {
+      "slug": "binary-search-tree",
+      "uuid": "3463598a-c622-4138-97d3-0c71cbe718c6",
+      "core": false,
+      "unlocked_by": "gigasecond",
+      "difficulty": 7,
+      "topics":[
+        "algorithms"
+      ]
     }
   ]
 }
