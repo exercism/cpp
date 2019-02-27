@@ -32,8 +32,8 @@ So: `101 => 1*2^2 + 0*2^1 + 1*2^0 => 1*4 + 0*2 + 1*1 => 4 + 1 => 5 base 10`.
 
 ## Getting Started
 
-Make sure you have read the [Installing](https://exercism.io/tracks/cpp/installing) and 
-[Running the Tests](https://exercism.io/tracks/cpp/tests) pages for C++ on exercism.io. 
+Make sure you have read the [Installing](https://exercism.io/tracks/cpp/installation) and
+[Running the Tests](https://exercism.io/tracks/cpp/tests) pages for C++ on exercism.io.
 This covers the basic information on setting up the development
 environment expected by the exercises.
 
