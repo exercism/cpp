@@ -1,22 +1,17 @@
-#include <ctype.h>
-#include <set>
-#include <utility>
+#include <unordered_set>
 #include "isogram.h"
-
-using std::string;
 
 namespace isogram {
  
-bool is_isogram(string const input_str)
+bool is_isogram(std::string const& input_str)
 {
-    std::set<char> chars;
-    std::pair<std::set<char>::iterator, bool> ret;
+    std::unordered_set<char> chars;
     
     for (char const ch : input_str)
     {
         if (isalnum(ch))
         {
-            ret = chars.insert(tolower(ch));
+            auto ret = chars.insert(tolower(ch));
             if (ret.second == false)
             {
                 return false;
@@ -27,4 +22,4 @@ bool is_isogram(string const input_str)
     return true;
 }
     
-}
+} // namespace isogram
