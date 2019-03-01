@@ -2,7 +2,7 @@
 
 Determine if a sentence is a pangram. A pangram (Greek: παν γράμμα, pan gramma,
 "every letter") is a sentence using every letter of the alphabet at least once.
-The best known English pangram is: 
+The best known English pangram is:
 > The quick brown fox jumps over the lazy dog.
 
 The alphabet used consists of ASCII letters `a` to `z`, inclusive, and is case
@@ -10,8 +10,9 @@ insensitive. Input will not contain non-ASCII symbols.
 
 ## Getting Started
 
-Make sure you have read [the C++ page](http://exercism.io/languages/cpp) on
-exercism.io.  This covers the basic information on setting up the development
+Make sure you have read the [Installing](https://exercism.io/tracks/cpp/installation) and
+[Running the Tests](https://exercism.io/tracks/cpp/tests) pages for C++ on exercism.io.
+This covers the basic information on setting up the development
 environment expected by the exercises.
 
 ## Passing the Tests

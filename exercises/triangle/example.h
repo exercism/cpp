@@ -4,7 +4,7 @@
 namespace triangle
 {
 
-enum flavor
+enum class flavor
 {
     equilateral,
     isosceles,
@@ -13,6 +13,6 @@ enum flavor
 
 flavor kind(double a, double b, double c);
 
-};
+}
 
 #endif

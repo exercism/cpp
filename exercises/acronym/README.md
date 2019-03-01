@@ -1,7 +1,17 @@
+# Acronym
+
+Convert a phrase to its acronym.
+
+Techies love their TLA (Three Letter Acronyms)!
+
+Help generate some jargon by writing a program that converts a long name
+like Portable Network Graphics to its acronym (PNG).
+
 ## Getting Started
 
-Make sure you have read [the C++ page](http://exercism.io/languages/cpp) on
-exercism.io.  This covers the basic information on setting up the development
+Make sure you have read the [Installing](https://exercism.io/tracks/cpp/installation) and
+[Running the Tests](https://exercism.io/tracks/cpp/tests) pages for C++ on exercism.io.
+This covers the basic information on setting up the development
 environment expected by the exercises.
 
 ## Passing the Tests
@@ -28,3 +38,10 @@ low-level algorithms or facilities by hand.  [CppReference](http://en.cppreferen
 is a wiki reference to the C++ language and standard library.  If you
 are new to C++, but have programmed in C, beware of
 [C traps and pitfalls](http://www.slideshare.net/LegalizeAdulthood/c-traps-and-pitfalls-for-c-programmers).
+
+## Source
+
+Julien Vanier [https://github.com/monkbroc](https://github.com/monkbroc)
+
+## Submitting Incomplete Solutions
+It's possible to submit an incomplete solution so you can see how others have completed the exercise.
