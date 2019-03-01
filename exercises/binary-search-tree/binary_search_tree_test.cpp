@@ -34,7 +34,7 @@ static tree_ptr make_tree(const std::vector<int> &data)
         tree->insert(*data_iter);
     }
 
-    return std::move(tree);
+    return tree;
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
