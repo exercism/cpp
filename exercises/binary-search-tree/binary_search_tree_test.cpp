@@ -9,10 +9,7 @@ using tree_ptr = std::unique_ptr<binary_tree::binary_tree>;
 
 static void test_branch(const tree_ptr &br, bool has)
 {
-    if (has)
-        BOOST_REQUIRE_NE(nullptr, br.get());
-    else
-        BOOST_REQUIRE_EQUAL(nullptr, br.get());
+    BOOST_REQUIRE_EQUAL((bool) br, has);
 }
 
 static void test_leaf(const tree_ptr &tree, 
