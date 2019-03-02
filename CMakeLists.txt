@@ -55,6 +55,7 @@ foreach(exercise
     bracket-push
     all-your-base
     pangram
+    isogram
     reverse-string
     acronym
 )
