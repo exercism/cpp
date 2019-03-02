@@ -2,11 +2,11 @@
 
 namespace binary_search {
 
-int find(std::vector<int> const& data, int value)
+size_t find(std::vector<int> const& data, int value)
 {
-    int lpos = 0;
-    int rpos = data.size() - 1;
-    int mid = 0;
+    size_t lpos = 0;
+    size_t rpos = data.size() - 1;
+    size_t mid = 0;
 
     while (lpos <= rpos)
     {

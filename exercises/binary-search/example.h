@@ -5,7 +5,7 @@
 
 namespace binary_search {
 
-int find(std::vector<int> const&, int);
+size_t find(std::vector<int> const&, int);
     
 }
 
