@@ -1,4 +1,4 @@
-#ifndef ISOGRAM_H
+#if !defined(ISOGRAM_H)
 #define ISOGRAM_H
 
 #include <string>
