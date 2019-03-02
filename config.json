@@ -19,7 +19,7 @@
     },
     {
       "core": false,
-      "difficulty": 1,
+      "difficulty": 3,
       "slug": "isogram",
       "topics": [
         "control_flow_if_else_statements",
@@ -485,8 +485,4 @@
       ]
     }
   ],
-  "foregone": [
-    "point-mutations"
-  ],
-  "language": "C++"
 }
