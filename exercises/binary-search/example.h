@@ -2,11 +2,12 @@
 #define BINARY_SEARCH_H
 
 #include <vector>
+#include <cstddef>
 
 namespace binary_search {
 
-size_t find(std::vector<int> const&, int);
+std::size_t find(std::vector<int> const&, int const);
     
 }
 
-#endif
+#endif // BINARY_SEARCH_H
