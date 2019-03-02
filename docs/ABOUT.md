@@ -12,6 +12,6 @@ Key Benefits:
 - **Direct map to hardware:** of instructions and fundamental data types
 - **Zero-overhead abstraction:** Classes with constructors and destructors, inheritance, generic programming, functional programming techniques
 
-The standard for C++ is maintained by the International Organization for Standardization (ISO), and the current version of C++ as of December 2014 is C++14 (named not as the 14th version of C++, but rather signifying that the standard was ratified in 2014).
+The standard for C++ is maintained by the International Organization for Standardization (ISO), and the current version of C++ as of June 2018 is C++17 (named not as the 17th version of C++, but rather signifying that the standard was ratified in 2017).
 
 The best thing about C++ is that it runs on everything from embedded processors with very limited resources to the largest mainframe supercomputer and every personal computer in between.

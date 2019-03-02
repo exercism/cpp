@@ -1,5 +1,6 @@
 #include "meetup.h"
 #define BOOST_TEST_MAIN
+#include <boost/date_time/gregorian/gregorian.hpp>
 #include <boost/test/unit_test.hpp>
 
 // See <http://www.boost.org/doc/libs/1_59_0/doc/html/date_time.html>
