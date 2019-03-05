@@ -5,7 +5,7 @@
 
 // test data version: 1.0.0
 
-using tree_ptr = std::unique_ptr<binary_tree::binary_tree>;
+using tree_ptr = std::unique_ptr<binary_tree::binary_tree<uint32_t>>;
 
 static void test_branch(const tree_ptr &br, bool has)
 {
@@ -26,7 +26,7 @@ static tree_ptr make_tree(const std::vector<int> &data)
         return tree_ptr(nullptr);
     
     auto data_iter = data.begin();
-    auto tree = tree_ptr(new binary_tree::binary_tree(*data_iter));
+    auto tree = tree_ptr(new binary_tree::binary_tree<uint32_t>(*data_iter));
     ++data_iter;
 
     for (; data_iter != data.end(); ++data_iter)
