@@ -18,6 +18,18 @@
       ]
     },
     {
+      "slug": "isogram",
+      "uuid": "fcd69b30-63e4-485d-a3b5-71f5039a9180",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "control_flow_if_else_statements",
+        "control_flow_loops",
+        "strings"
+      ]
+    },
+    {
       "slug": "leap",
       "uuid": "76a840c7-24f1-455d-b62e-da42b13f8dd5",
       "core": true,

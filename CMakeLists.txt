@@ -56,6 +56,7 @@ foreach(exercise
     all-your-base
     pangram
     binary-search-tree
+    isogram
     reverse-string
     acronym
 )
