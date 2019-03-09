@@ -10,7 +10,7 @@ struct school_fixture
     grade_school::school school_;
 };
 
-BOOST_FIXTURE_TEST_SUITE(school_suite, school_fixture);
+BOOST_FIXTURE_TEST_SUITE(school_suite, school_fixture)
 
 BOOST_AUTO_TEST_CASE(a_new_school_has_an_empty_roster)
 {
@@ -95,4 +95,4 @@ BOOST_AUTO_TEST_CASE(checking_a_grade_should_not_change_the_roster)
 
 #endif
 
-BOOST_AUTO_TEST_SUITE_END();
+BOOST_AUTO_TEST_SUITE_END()

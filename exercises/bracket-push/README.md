@@ -1,12 +1,14 @@
 # Bracket Push
 
-Given a string containing brackets `[]`, braces `{}` and parentheses `()`,
-verify that all the pairs are matched and nested correctly.
+Given a string containing brackets `[]`, braces `{}`, parentheses `()`,
+or any combination thereof, verify that any and all pairs are matched
+and nested correctly.
 
 ## Getting Started
 
-Make sure you have read [the C++ page](http://exercism.io/languages/cpp) on
-exercism.io.  This covers the basic information on setting up the development
+Make sure you have read the [Installing](https://exercism.io/tracks/cpp/installation) and
+[Running the Tests](https://exercism.io/tracks/cpp/tests) pages for C++ on exercism.io.
+This covers the basic information on setting up the development
 environment expected by the exercises.
 
 ## Passing the Tests

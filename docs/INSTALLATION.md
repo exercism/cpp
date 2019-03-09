@@ -15,7 +15,7 @@ as separate command-line tools.
 ### Prerequisite: A Modern C++11 Compiler
 
 This language track requires a compiler with [C++11](http://en.wikipedia.org/wiki/C%2B%2B11)
-support, which was release in 2011. All major compilers released in the last few years should
+support, which was released in 2011. All major compilers released in the last few years should
 be compatible, so as long as you are on a fairly recent version you should be fine.
 Specifically, GCC version 5.1 or later, Clang version 3.8 or later, or Visual
 Studio 2015 or later.
@@ -72,7 +72,7 @@ systems.  If you encounter any problems with the supplied CMake recipe,
 please [report the issue](https://github.com/exercism/cpp/issues) so we can
 improve the CMake support.
 
-[CMake 2.8.11 or later](http://www.cmake.org/) is required to use the provided build recipe.
+[CMake 3.1.3 or later](http://www.cmake.org/) is required to use the provided build recipe.
 
 ### Prerequisite: Boost 1.59+
 

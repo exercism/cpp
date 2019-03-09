@@ -35,7 +35,7 @@ BOOST_AUTO_TEST_CASE(age_in_venus_years)
 {
     const space_age::space_age age(189839836);
 
-    BOOST_REQUIRE_LT(std::abs(6.02- age.on_earth()), accuracy);
+    BOOST_REQUIRE_LT(std::abs(6.02 - age.on_earth()), accuracy);
     BOOST_REQUIRE_LT(std::abs(9.78 - age.on_venus()), accuracy);
 }
 

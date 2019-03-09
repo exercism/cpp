@@ -2,8 +2,8 @@
 
 Given a single stranded DNA string, compute how many times each nucleotide occurs in the string.
 
-The genetic language of every living thing on the planet is DNA. 
-DNA is a large molecule that is built from an extremely long sequence of individual elements called nucleotides. 
+The genetic language of every living thing on the planet is DNA.
+DNA is a large molecule that is built from an extremely long sequence of individual elements called nucleotides.
 4 types exist in DNA and these differ only slightly and can be represented as the following symbols: 'A' for adenine, 'C' for cytosine, 'G' for guanine, and 'T' thymine.
 
 Here is an analogy:
@@ -12,12 +12,11 @@ Here is an analogy:
 - legos are to lego houses as
 - words are to sentences as...
 
-In RNA the thymine is substituted with 'U' for uracil, while the remainder stay the same; A, U, C, G.
-
 ## Getting Started
 
-Make sure you have read [the C++ page](http://exercism.io/languages/cpp) on
-exercism.io.  This covers the basic information on setting up the development
+Make sure you have read the [Installing](https://exercism.io/tracks/cpp/installation) and
+[Running the Tests](https://exercism.io/tracks/cpp/tests) pages for C++ on exercism.io.
+This covers the basic information on setting up the development
 environment expected by the exercises.
 
 ## Passing the Tests
