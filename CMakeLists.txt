@@ -1,14 +1,20 @@
 cmake_minimum_required(VERSION 3.1.3)
 project(exercism CXX)
 
+set(alt_exercise_tree ${CMAKE_CURRENT_SOURCE_DIR}/build_exercises)
+
 function(travis_fixup dir)
     string(REPLACE "-" "_" file ${dir})
-    set(subdir ${CMAKE_CURRENT_SOURCE_DIR}/exercises/${dir})
-    if(EXISTS ${subdir}/example.h)
-        file(RENAME ${subdir}/example.h ${subdir}/${file}.h)
-    endif()
-    if(EXISTS ${subdir}/example.cpp)
-        file(RENAME ${subdir}/example.cpp ${subdir}/${file}.cpp)
+    set(source ${CMAKE_CURRENT_SOURCE_DIR}/exercises/${dir})
+    if(EXISTS ${source})
+        set(exercise_dir ${alt_exercise_tree}/${dir})
+        file(COPY ${source} DESTINATION ${alt_exercise_tree})
+        if(EXISTS ${exercise_dir}/example.h)
+            file(RENAME ${exercise_dir}/example.h ${exercise_dir}/${file}.h)
+        endif()
+        if(EXISTS ${exercise_dir}/example.cpp)
+            file(RENAME ${exercise_dir}/example.cpp ${exercise_dir}/${file}.cpp)
+        endif()
     endif()
 endfunction()
 
@@ -59,5 +65,5 @@ foreach(exercise
     acronym
 )
     travis_fixup(${exercise})
-    add_subdirectory(exercises/${exercise})
+    add_subdirectory(${alt_exercise_tree}/${exercise})
 endforeach()
