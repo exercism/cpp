@@ -3,12 +3,12 @@ project(exercism CXX)
 
 set(alt_exercise_tree ${CMAKE_CURRENT_SOURCE_DIR}/build_exercises)
 
-function(travis_fixup exercise_dir)
+function(travis_fixup exercise_dir alt_exercise_root)
     string(REPLACE "-" "_" file ${exercise_dir})
     set(source ${CMAKE_CURRENT_SOURCE_DIR}/exercises/${exercise_dir})
     if(EXISTS ${source})
-        set(alt_exercise_dir ${alt_exercise_tree}/${exercise_dir})
-        file(COPY ${source} DESTINATION ${alt_exercise_tree})
+        set(alt_exercise_dir ${alt_exercise_root}/${exercise_dir})
+        file(COPY ${source} DESTINATION ${alt_exercise_root})
         if(EXISTS ${alt_exercise_dir}/example.h)
             file(RENAME ${alt_exercise_dir}/example.h ${alt_exercise_dir}/${file}.h)
         endif()
@@ -64,6 +64,6 @@ foreach(exercise
     reverse-string
     acronym
 )
-    travis_fixup(${exercise})
+    travis_fixup(${exercise} ${alt_exercise_tree})
     add_subdirectory(${alt_exercise_tree}/${exercise})
 endforeach()
