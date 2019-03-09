@@ -1,11 +1,12 @@
 #include <stdexcept>
 #include "binary_search.h"
 
-namespace binary_search {
+namespace binary_search 
+{
 
 size_t find(std::vector<int> const& data, int const value)
 {
-    if(data.empty() || value < data.front() || data.back() < value)    
+    if(data.empty() || !is_value_in_range(data, value))    
     {
         throw std::domain_error("Value not in input vector!");
     }
@@ -16,25 +17,31 @@ size_t find(std::vector<int> const& data, int const value)
 
     while (lpos <= rpos)
     {
-        mid = (lpos + rpos) >> 1;
+        mid = lpos + ((rpos - lpos) / 2);
 
         if (data.at(mid) == value) 
         { 
             return mid; 
         }
-        else
+            
+        if (value < data.at(mid)) 
         {
-            if (value < data.at(mid)) 
-            {
-                rpos = mid - 1;
-            } 
-            else if (value > data[mid]) 
-            {
+            rpos = mid - 1;
+        } 
+        
+        if (value > data.at(mid)) 
+        {
                 lpos = mid + 1;
-            }
         }
     }
+
     throw std::domain_error("Value not in input vector!");
 }
 
+bool is_value_in_range(std::vector<int> const& data, int const value)
+{
+    return ((data.front() <= value) && (value <= data.back()));
 }
+
+} // namespace binary_search
+

@@ -4,10 +4,14 @@
 #include <vector>
 #include <cstddef>
 
-namespace binary_search {
+namespace binary_search 
+{
 
-std::size_t find(std::vector<int> const&, int const);
-    
-}
+using std::size_t;
+
+size_t find(std::vector<int> const&, int const);
+bool is_value_in_range(std::vector<int> const&, int const);    
+
+} // namespace binary_search
 
 #endif // BINARY_SEARCH_H
