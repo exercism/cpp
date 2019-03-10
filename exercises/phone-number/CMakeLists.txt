@@ -27,7 +27,7 @@ endif()
 add_executable(${exercise} ${file}_test.cpp ${exercise_cpp} ${file}.h)
 
 set_target_properties(${exercise} PROPERTIES
-    CXX_STANDARD 11
+    CXX_STANDARD 17
     CXX_STANDARD_REQUIRED OFF
     CXX_EXTENSIONS OFF
 )
