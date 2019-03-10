@@ -1,68 +1,67 @@
+/*
+ * Copyright (c) 2019 ViralTaco_
+ * SPDX-License-Identifier: MIT
+ * <http://www.opensource.org/licenses/MIT>
+ */
+
 #include "phone_number.h"
+
 #include <algorithm>
-#include <cctype>
-#include <iterator>
+#include <exception>
 #include <sstream>
+#include <cctype>
 
-using namespace std;
-
-namespace
+void phone_number::invalid(std::string reason = "")
 {
-
-const int area_code_length = 3;
-const int exchange_length = 3;
-const int extension_length = 4;
-const int valid_number_length = area_code_length + exchange_length + extension_length;
-const string cleaned_invalid_number(valid_number_length, '0');
-
-string clean_number(const string& text)
-{
-    string result;
-    copy_if(text.begin(), text.end(), back_inserter(result),
-        [](char c) { return isdigit(c) != 0; });
-    if (result.length() == valid_number_length + 1) {
-        if (result[0] == '1') {
-            result.erase(result.begin());
-        } else {
-            result = cleaned_invalid_number;
-        }
-    } else if (result.length() < valid_number_length) {
-        result = cleaned_invalid_number;
-    }
-    return result;
+  std::string error{ "error: " + reason };
+  throw std::domain_error(error);
 }
 
+
+std::string phone_number::parse(const std::string& number) const
+{
+  std::string parsed_number{};
+  for (const auto c: number) {
+    if (c >= '0' and c <= '9')
+      parsed_number += c;
+  }
+  return parsed_number;
 }
 
-phone_number::phone_number(const string& text)
-    : digits_(clean_number(text))
+phone_number::phone_number(const std::string& unparsed_num)
 {
+  std::string num{ phone_number::parse(unparsed_num) };
+  
+  const std::size_t num_len{ num.length() };
+  
+  const std::size_t first{
+    static_cast<std::size_t>(num_len == kNumLen_ + 1)
+  };
+  
+  if (((num_len == kNumLen_) or (first == 1 and num[0] == '1'))
+  and num[first + 3] >= '2' and num[first] >= '2') {
+    this->number_ = std::string(num.begin() + first, num.end());
+  } else {
+    phone_number::invalid("reasons");
+  }
 }
 
-string phone_number::area_code() const
-{
-    return digits_.substr(0, area_code_length);
-}
+std::string phone_number::number() const noexcept
+{ return this->number_; }
 
-string phone_number::exchange() const
-{
-    return digits_.substr(area_code_length, exchange_length);
-}
+std::string phone_number::area_code() const
+{ return this->number_.substr(0, 3); }
 
-string phone_number::extension() const
+std::string phone_number::to_string() const
 {
-    return digits_.substr(area_code_length + exchange_length);
-}
-
-string phone_number::number() const
-{
-    return digits_;
+  std::stringstream num;
+  
+  num << "(" << this->number_.substr(0, 3) << ") "
+      << number_.substr(3, 3) << "-" << number_.substr(6)
+  ;
+  
+  return num.str();
 }
 
 phone_number::operator std::string() const
-{
-    ostringstream buff;
-    buff << '(' << area_code() << ") " << exchange() << '-' << extension();
-    return buff.str();
-}
-
+{ return phone_number::to_string(); }
