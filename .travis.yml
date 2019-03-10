@@ -20,10 +20,10 @@ matrix:
         apt:
           sources:
             - ubuntu-toolchain-r-test
-            - llvm-toolchain-precise-3.8
+            - llvm-toolchain-precise-4.0
           packages:
-            - clang-3.8
-      env: MATRIX_EVAL="CC=clang-3.8 && CXX=clang++-3.8"
+            - clang-4.0
+      env: MATRIX_EVAL="CC=clang-4.0 && CXX=clang++-4.0"
 
 before_install:
   - sudo add-apt-repository -y ppa:samuel-bachmann/boost
