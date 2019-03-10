@@ -7,7 +7,7 @@
 #include "phone_number.h"
 
 #include <algorithm>
-#include <exception>
+#include <stdexcept>
 #include <sstream>
 #include <cctype>
 
