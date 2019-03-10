@@ -20,7 +20,7 @@ public:
   phone_number(const std::string& unparsed_num);
 
 private:
-  [[noreturn]] void invalid(std::string reason);
+  void invalid(std::string reason);
   std::string parse(const std::string& number) const;
 
 public:
