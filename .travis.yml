@@ -36,3 +36,4 @@ script:
   - bin/configlet lint .
   - cmake -G "Unix Makefiles"
   - make
+  
