@@ -1,9 +1,3 @@
-/*
- * Copyright (c) 2019 ViralTaco_
- * SPDX-License-Identifier: MIT
- * <http://www.opensource.org/licenses/MIT>
- */
-
 #ifndef VT_PHONE_NUMBER_H
 #define VT_PHONE_NUMBER_H
 
@@ -24,14 +18,13 @@ private:
   std::string parse(const std::string& number) const;
 
 public:
-  std::string number() const noexcept;
+  std::string number() const;
   std::string area_code() const;
   
   std::string to_string() const;
   
-public: // operator overloads
+public: // operator ovetload
   operator std::string() const;
-
 };
 
 #endif

@@ -1,9 +1,3 @@
-/*
- * Copyright (c) 2019 ViralTaco_
- * SPDX-License-Identifier: MIT
- * <http://www.opensource.org/licenses/MIT>
- */
-
 #include "phone_number.h"
 
 #include <algorithm>
@@ -16,7 +10,6 @@ void phone_number::invalid(std::string reason = "")
   std::string error{ "error: " + reason };
   throw std::domain_error(error);
 }
-
 
 std::string phone_number::parse(const std::string& number) const
 {
@@ -46,7 +39,7 @@ phone_number::phone_number(const std::string& unparsed_num)
   }
 }
 
-std::string phone_number::number() const noexcept
+std::string phone_number::number() const
 { return this->number_; }
 
 std::string phone_number::area_code() const
@@ -64,4 +57,4 @@ std::string phone_number::to_string() const
 }
 
 phone_number::operator std::string() const
-{ return phone_number::to_string(); }
+{ return this->to_string(); }
