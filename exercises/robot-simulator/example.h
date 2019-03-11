@@ -3,7 +3,8 @@
 #include <string>
 #include <utility>
 
-namespace robot_simulator {
+namespace robot_simulator 
+{
 
 enum class Bearing {NORTH, WEST, SOUTH, EAST};
 
@@ -12,6 +13,11 @@ class Robot
 public:
     Robot();
     Robot(std::pair<int, int>, Bearing);
+    Robot(Robot const&) = delete;
+    Robot& operator=(Robot const&) = delete;
+    Robot(Robot const&&) = delete;
+    Robot& operator=(Robot const&&) = delete;
+    ~Robot() = default;
     void turn_left(); 
     void turn_right();
     void advance();
@@ -23,5 +29,7 @@ private:
     Bearing robot_bearing;
 };
 
-}
-#endif
+} // namespace robot_simulator
+
+#endif // ROBOT_SIMULATOR
+
