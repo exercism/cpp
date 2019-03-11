@@ -4,6 +4,11 @@
 namespace binary_search 
 {
 
+bool is_value_in_range(std::vector<int> const& data, int const value)
+{
+    return ((data.front() <= value) && (value <= data.back()));
+}
+
 size_t find(std::vector<int> const& data, int const value)
 {
     if(data.empty() || !is_value_in_range(data, value))    
@@ -36,11 +41,6 @@ size_t find(std::vector<int> const& data, int const value)
     }
 
     throw std::domain_error("Value not in input vector!");
-}
-
-bool is_value_in_range(std::vector<int> const& data, int const value)
-{
-    return ((data.front() <= value) && (value <= data.back()));
 }
 
 } // namespace binary_search

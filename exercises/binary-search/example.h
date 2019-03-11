@@ -10,7 +10,6 @@ namespace binary_search
 using std::size_t;
 
 size_t find(std::vector<int> const&, int const);
-bool is_value_in_range(std::vector<int> const&, int const);    
 
 } // namespace binary_search
 
