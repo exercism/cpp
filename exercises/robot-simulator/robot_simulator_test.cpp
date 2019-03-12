@@ -2,11 +2,14 @@
 #include <boost/test/unit_test.hpp>
 #include "robot_simulator.h"
 
+using robot_simulator::Robot;
+using robot_simulator::Bearing;
+
 // Robot-Simulator exercise test case data version 3.1.0
 
 BOOST_AUTO_TEST_CASE(A_robots_is_created_with_a_position_and_a_direction)
 {
-    const robot_simulator::Robot r;
+    const Robot r;
 
     const std::pair<int, int> expected_robot_position {0, 0};
     
@@ -14,9 +17,9 @@ BOOST_AUTO_TEST_CASE(A_robots_is_created_with_a_position_and_a_direction)
     
     BOOST_CHECK(expected_robot_position == actual_robot_position);
     
-    const robot_simulator::Bearing expected_robot_bearing {robot_simulator::Bearing::NORTH};
+    const Bearing expected_robot_bearing {Bearing::NORTH};
     
-    const robot_simulator::Bearing actual_robot_bearing = r.get_bearing();
+    const Bearing actual_robot_bearing = r.get_bearing();
     
     BOOST_CHECK(expected_robot_bearing == actual_robot_bearing);
 }
@@ -26,9 +29,9 @@ BOOST_AUTO_TEST_CASE(Negative_positions_are_allowed)
 {
     const std::pair<int, int> robot_position {-1, -1};
     
-    const robot_simulator::Bearing robot_bearing {robot_simulator::Bearing::SOUTH};
+    const Bearing robot_bearing {Bearing::SOUTH};
     
-    const robot_simulator::Robot r {robot_position, robot_bearing};
+    const Robot r {robot_position, robot_bearing};
 
     const std::pair<int, int> expected_robot_position = robot_position;
     
@@ -36,9 +39,9 @@ BOOST_AUTO_TEST_CASE(Negative_positions_are_allowed)
     
     BOOST_CHECK(expected_robot_position == actual_robot_position);
     
-    const robot_simulator::Bearing expected_robot_bearing = robot_simulator::Bearing::SOUTH;
+    const Bearing expected_robot_bearing = Bearing::SOUTH;
     
-    const robot_simulator::Bearing actual_robot_bearing = r.get_bearing();
+    const Bearing actual_robot_bearing = r.get_bearing();
     
     BOOST_CHECK(expected_robot_bearing == actual_robot_bearing);
 }
@@ -47,9 +50,9 @@ BOOST_AUTO_TEST_CASE(Changes_the_direction_from_north_to_east)
 {
     const std::pair<int, int> robot_position {0, 0};
     
-    const robot_simulator::Bearing robot_bearing {robot_simulator::Bearing::NORTH};
+    const Bearing robot_bearing {Bearing::NORTH};
     
-    robot_simulator::Robot r {robot_position, robot_bearing};
+    Robot r {robot_position, robot_bearing};
     
     r.turn_right();
     
@@ -59,9 +62,9 @@ BOOST_AUTO_TEST_CASE(Changes_the_direction_from_north_to_east)
 
     BOOST_CHECK(expected_robot_position == actual_robot_position);
     
-    const robot_simulator::Bearing expected_robot_bearing = robot_simulator::Bearing::EAST;
+    const Bearing expected_robot_bearing = Bearing::EAST;
     
-    const robot_simulator::Bearing actual_robot_bearing = r.get_bearing();
+    const Bearing actual_robot_bearing = r.get_bearing();
     
     BOOST_CHECK(expected_robot_bearing == actual_robot_bearing);
 }
@@ -70,9 +73,9 @@ BOOST_AUTO_TEST_CASE(Changes_the_direction_from_east_to_south)
 {
     const std::pair<int, int> robot_position {0, 0};
     
-    const robot_simulator::Bearing robot_bearing {robot_simulator::Bearing::EAST};
+    const Bearing robot_bearing {Bearing::EAST};
     
-    robot_simulator::Robot r {robot_position, robot_bearing};
+    Robot r {robot_position, robot_bearing};
     
     r.turn_right();
     
@@ -82,9 +85,9 @@ BOOST_AUTO_TEST_CASE(Changes_the_direction_from_east_to_south)
 
     BOOST_CHECK(expected_robot_position== actual_robot_position);
     
-    const robot_simulator::Bearing expected_robot_bearing = robot_simulator::Bearing::SOUTH;
+    const Bearing expected_robot_bearing = Bearing::SOUTH;
     
-    const robot_simulator::Bearing actual_robot_bearing = r.get_bearing();
+    const Bearing actual_robot_bearing = r.get_bearing();
     
     BOOST_CHECK(expected_robot_bearing == actual_robot_bearing);
 }
@@ -93,9 +96,9 @@ BOOST_AUTO_TEST_CASE(Changes_the_direction_from_south_to_west)
 {
     const std::pair<int, int> robot_position {0, 0};
     
-    const robot_simulator::Bearing robot_bearing {robot_simulator::Bearing::SOUTH};
+    const Bearing robot_bearing {Bearing::SOUTH};
     
-    robot_simulator::Robot r {robot_position, robot_bearing};
+    Robot r {robot_position, robot_bearing};
     
     r.turn_right();
     
@@ -105,9 +108,9 @@ BOOST_AUTO_TEST_CASE(Changes_the_direction_from_south_to_west)
 
     BOOST_CHECK(expected_robot_position == actual_robot_position);
     
-    const robot_simulator::Bearing expected_robot_bearing = robot_simulator::Bearing::WEST;
+    const Bearing expected_robot_bearing = Bearing::WEST;
     
-    const robot_simulator::Bearing actual_robot_bearing = r.get_bearing();
+    const Bearing actual_robot_bearing = r.get_bearing();
     
     BOOST_CHECK(expected_robot_bearing == actual_robot_bearing);
 }
@@ -116,9 +119,9 @@ BOOST_AUTO_TEST_CASE(Changes_the_direction_from_west_to_north)
 {
     const std::pair<int, int> robot_position {0, 0};
     
-    const robot_simulator::Bearing robot_bearing {robot_simulator::Bearing::WEST};
+    const Bearing robot_bearing {Bearing::WEST};
     
-    robot_simulator::Robot r {robot_position, robot_bearing};
+    Robot r {robot_position, robot_bearing};
     
     r.turn_right();
 
@@ -128,9 +131,9 @@ BOOST_AUTO_TEST_CASE(Changes_the_direction_from_west_to_north)
     
     BOOST_CHECK(expected_robot_position == actual_robot_position);
     
-    const robot_simulator::Bearing expected_robot_bearing = robot_simulator::Bearing::NORTH;
+    const Bearing expected_robot_bearing = Bearing::NORTH;
     
-    const robot_simulator::Bearing actual_robot_bearing = r.get_bearing();
+    const Bearing actual_robot_bearing = r.get_bearing();
     
     BOOST_CHECK(expected_robot_bearing == actual_robot_bearing);
 }
@@ -139,9 +142,9 @@ BOOST_AUTO_TEST_CASE(Changes_the_direction_from_north_to_west)
 {
     const std::pair<int, int> robot_position {0, 0};
     
-    const robot_simulator::Bearing robot_bearing {robot_simulator::Bearing::NORTH};
+    const Bearing robot_bearing {Bearing::NORTH};
     
-    robot_simulator::Robot r {robot_position, robot_bearing};
+    Robot r {robot_position, robot_bearing};
     
     r.turn_left();
     
@@ -151,9 +154,9 @@ BOOST_AUTO_TEST_CASE(Changes_the_direction_from_north_to_west)
 
     BOOST_CHECK(expected_robot_position == actual_robot_position);
     
-    const robot_simulator::Bearing expected_robot_bearing = robot_simulator::Bearing::WEST;
+    const Bearing expected_robot_bearing = Bearing::WEST;
     
-    const robot_simulator::Bearing actual_robot_bearing = r.get_bearing();
+    const Bearing actual_robot_bearing = r.get_bearing();
     
     BOOST_CHECK(expected_robot_bearing == actual_robot_bearing);
 }
@@ -162,9 +165,9 @@ BOOST_AUTO_TEST_CASE(Changes_the_direction_from_west_to_south)
 {
     const std::pair<int, int> robot_position {0, 0};
     
-    const robot_simulator::Bearing robot_bearing {robot_simulator::Bearing::WEST};
+    const Bearing robot_bearing {Bearing::WEST};
     
-    robot_simulator::Robot r {robot_position, robot_bearing};
+    Robot r {robot_position, robot_bearing};
     
     r.turn_left();
     
@@ -174,9 +177,9 @@ BOOST_AUTO_TEST_CASE(Changes_the_direction_from_west_to_south)
 
     BOOST_CHECK(expected_robot_position == actual_robot_position);
     
-    const robot_simulator::Bearing expected_robot_bearing = robot_simulator::Bearing::SOUTH;
+    const Bearing expected_robot_bearing = Bearing::SOUTH;
     
-    const robot_simulator::Bearing actual_robot_bearing = r.get_bearing();
+    const Bearing actual_robot_bearing = r.get_bearing();
     
     BOOST_CHECK(expected_robot_bearing == actual_robot_bearing);
 }
@@ -185,9 +188,9 @@ BOOST_AUTO_TEST_CASE(Changes_the_direction_from_south_to_east)
 {
     const std::pair<int, int> robot_position {0, 0};
     
-    const robot_simulator::Bearing robot_bearing {robot_simulator::Bearing::SOUTH};
+    const Bearing robot_bearing {Bearing::SOUTH};
     
-    robot_simulator::Robot r {robot_position, robot_bearing};
+    Robot r {robot_position, robot_bearing};
     
     r.turn_left();
 
@@ -197,9 +200,9 @@ BOOST_AUTO_TEST_CASE(Changes_the_direction_from_south_to_east)
     
     BOOST_CHECK(expected_robot_position == actual_robot_position);
     
-    const robot_simulator::Bearing expected_robot_bearing = robot_simulator::Bearing::EAST;
+    const Bearing expected_robot_bearing = Bearing::EAST;
     
-    const robot_simulator::Bearing actual_robot_bearing = r.get_bearing();
+    const Bearing actual_robot_bearing = r.get_bearing();
     
     BOOST_CHECK(expected_robot_bearing == actual_robot_bearing);
 }
@@ -208,9 +211,9 @@ BOOST_AUTO_TEST_CASE(Changes_the_direction_from_east_to_north)
 {
     const std::pair<int, int> robot_position {0, 0};
     
-    const robot_simulator::Bearing robot_bearing {robot_simulator::Bearing::EAST};
+    const Bearing robot_bearing {Bearing::EAST};
     
-    robot_simulator::Robot r {robot_position, robot_bearing};
+    Robot r {robot_position, robot_bearing};
     
     r.turn_left();
     
@@ -220,9 +223,9 @@ BOOST_AUTO_TEST_CASE(Changes_the_direction_from_east_to_north)
 
     BOOST_CHECK(expected_robot_position == actual_robot_position);
     
-    const robot_simulator::Bearing expected_robot_bearing = robot_simulator::Bearing::NORTH;
+    const Bearing expected_robot_bearing = Bearing::NORTH;
     
-    const robot_simulator::Bearing actual_robot_bearing = r.get_bearing();
+    const Bearing actual_robot_bearing = r.get_bearing();
     
     BOOST_CHECK(expected_robot_bearing == actual_robot_bearing);
 }
@@ -231,9 +234,9 @@ BOOST_AUTO_TEST_CASE(Increases_the_y_coordinate_by_one_when_facing_north)
 {
     const std::pair<int, int> robot_position {0, 0};
     
-    const robot_simulator::Bearing robot_bearing {robot_simulator::Bearing::NORTH};
+    const Bearing robot_bearing {Bearing::NORTH};
     
-    robot_simulator::Robot r {robot_position, robot_bearing};
+    Robot r {robot_position, robot_bearing};
     
     r.advance();
     
@@ -248,9 +251,9 @@ BOOST_AUTO_TEST_CASE(Decreases_the_y_coordinate_by_one_when_facing_south)
 {
     const std::pair<int, int> robot_position {0, 0};
     
-    const robot_simulator::Bearing robot_bearing {robot_simulator::Bearing::SOUTH};
+    const Bearing robot_bearing {Bearing::SOUTH};
     
-    robot_simulator::Robot r {robot_position, robot_bearing};
+    Robot r {robot_position, robot_bearing};
     
     r.advance();
     
@@ -265,9 +268,9 @@ BOOST_AUTO_TEST_CASE(Increases_the_x_coordinate_by_one_when_facing_east)
 {
     const std::pair<int, int> robot_position {0, 0};
     
-    const robot_simulator::Bearing robot_bearing {robot_simulator::Bearing::EAST};
+    const Bearing robot_bearing {Bearing::EAST};
     
-    robot_simulator::Robot r {robot_position, robot_bearing};
+    Robot r {robot_position, robot_bearing};
     
     r.advance();
     
@@ -282,9 +285,9 @@ BOOST_AUTO_TEST_CASE(Decreases_the_x_coordinate_by_one_when_facing_west)
 {
     const std::pair<int, int> robot_position {0, 0};
     
-    const robot_simulator::Bearing robot_bearing {robot_simulator::Bearing::WEST};
+    const Bearing robot_bearing {Bearing::WEST};
     
-    robot_simulator::Robot r {robot_position, robot_bearing};
+    Robot r {robot_position, robot_bearing};
     
     r.advance();
 
@@ -299,9 +302,9 @@ BOOST_AUTO_TEST_CASE(Instructions_to_move_east_and_north_from_readme)
 {
     const std::pair<int, int> robot_position {7, 3};
     
-    const robot_simulator::Bearing robot_bearing {robot_simulator::Bearing::NORTH};
+    const Bearing robot_bearing {Bearing::NORTH};
     
-    robot_simulator::Robot r {robot_position, robot_bearing};
+    Robot r {robot_position, robot_bearing};
     
     r.execute_sequence("RAALAL");
 
@@ -311,9 +314,9 @@ BOOST_AUTO_TEST_CASE(Instructions_to_move_east_and_north_from_readme)
     
     BOOST_CHECK(expected_robot_position == actual_robot_position);
     
-    const robot_simulator::Bearing expected_robot_bearing = robot_simulator::Bearing::WEST;
+    const Bearing expected_robot_bearing = Bearing::WEST;
     
-    const robot_simulator::Bearing actual_robot_bearing = r.get_bearing();
+    const Bearing actual_robot_bearing = r.get_bearing();
     
     BOOST_CHECK(expected_robot_bearing == actual_robot_bearing);
 }
@@ -322,9 +325,9 @@ BOOST_AUTO_TEST_CASE(Instructions_to_move_west_and_north)
 {
     const std::pair<int, int> robot_position {0, 0};
     
-    const robot_simulator::Bearing robot_bearing {robot_simulator::Bearing::NORTH};
+    const Bearing robot_bearing {Bearing::NORTH};
     
-    robot_simulator::Robot r {robot_position, robot_bearing};
+    Robot r {robot_position, robot_bearing};
     
     r.execute_sequence("LAAARALA");
 
@@ -334,9 +337,9 @@ BOOST_AUTO_TEST_CASE(Instructions_to_move_west_and_north)
     
     BOOST_CHECK(expected_robot_position == actual_robot_position);
     
-    const robot_simulator::Bearing expected_robot_bearing = robot_simulator::Bearing::WEST;
+    const Bearing expected_robot_bearing = Bearing::WEST;
     
-    const robot_simulator::Bearing actual_robot_bearing = r.get_bearing();
+    const Bearing actual_robot_bearing = r.get_bearing();
     
     BOOST_CHECK(expected_robot_bearing == actual_robot_bearing);
 }
@@ -345,9 +348,9 @@ BOOST_AUTO_TEST_CASE(Instructions_to_move_west_and_south)
 {
     const std::pair<int, int> robot_position {2, -7};
     
-    const robot_simulator::Bearing robot_bearing {robot_simulator::Bearing::EAST};
+    const Bearing robot_bearing {Bearing::EAST};
     
-    robot_simulator::Robot r {robot_position, robot_bearing};
+    Robot r {robot_position, robot_bearing};
     
     r.execute_sequence("RRAAAAALA");
 
@@ -357,9 +360,9 @@ BOOST_AUTO_TEST_CASE(Instructions_to_move_west_and_south)
     
     BOOST_CHECK(expected_robot_position == actual_robot_position);
     
-    const robot_simulator::Bearing expected_robot_bearing = robot_simulator::Bearing::SOUTH;
+    const Bearing expected_robot_bearing = Bearing::SOUTH;
     
-    const robot_simulator::Bearing actual_robot_bearing = r.get_bearing();
+    const Bearing actual_robot_bearing = r.get_bearing();
     
     BOOST_CHECK(expected_robot_bearing == actual_robot_bearing);
 }
@@ -368,9 +371,9 @@ BOOST_AUTO_TEST_CASE(Instructions_to_move_east_and_north)
 {
     const std::pair<int, int> robot_position {8, 4};
     
-    const robot_simulator::Bearing robot_bearing {robot_simulator::Bearing::SOUTH};
+    const Bearing robot_bearing {Bearing::SOUTH};
     
-    robot_simulator::Robot r {robot_position, robot_bearing};
+    Robot r {robot_position, robot_bearing};
     
     r.execute_sequence("LAAARRRALLLL");
 
@@ -380,9 +383,9 @@ BOOST_AUTO_TEST_CASE(Instructions_to_move_east_and_north)
     
     BOOST_CHECK(expected_robot_position == actual_robot_position);
     
-    const robot_simulator::Bearing expected_robot_bearing = robot_simulator::Bearing::NORTH;
+    const Bearing expected_robot_bearing = Bearing::NORTH;
     
-    const robot_simulator::Bearing actual_robot_bearing = r.get_bearing();
+    const Bearing actual_robot_bearing = r.get_bearing();
     
     BOOST_CHECK(expected_robot_bearing == actual_robot_bearing);
 }
