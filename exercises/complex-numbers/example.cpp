@@ -30,7 +30,7 @@ Complex Complex::operator/(const Complex& other) const
     return quot;
 }
 
-const bool Complex::operator==(const Complex& other) const
+bool Complex::operator==(const Complex& other) const
 {
     return re==other.re && im==other.im;
 }
