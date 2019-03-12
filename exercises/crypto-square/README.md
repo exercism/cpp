@@ -12,11 +12,15 @@ regarded as forming a rectangle when printed with intervening newlines.
 
 For example, the sentence
 
-> If man was meant to stay on the ground, god would have given us roots.
+```text
+"If man was meant to stay on the ground, god would have given us roots."
+```
 
 is normalized to:
 
-> ifmanwasmeanttostayonthegroundgodwouldhavegivenusroots
+```text
+"ifmanwasmeanttostayonthegroundgodwouldhavegivenusroots"
+```
 
 The plaintext should be organized in to a rectangle.  The size of the
 rectangle (`r x c`) should be decided by the length of the message,
@@ -26,14 +30,14 @@ and `r` is the number of rows.
 Our normalized text is 54 characters long, dictating a rectangle with
 `c = 8` and `r = 7`:
 
-```plain
-ifmanwas
-meanttos
-tayonthe
-groundgo
-dwouldha
-vegivenu
-sroots
+```text
+"ifmanwas"
+"meanttos"
+"tayonthe"
+"groundgo"
+"dwouldha"
+"vegivenu"
+"sroots  "
 ```
 
 The coded message is obtained by reading down the columns going left to
@@ -41,36 +45,38 @@ right.
 
 The message above is coded as:
 
-```plain
-imtgdvsfearwermayoogoanouuiontnnlvtwttddesaohghnsseoau
+```text
+"imtgdvsfearwermayoogoanouuiontnnlvtwttddesaohghnsseoau"
 ```
 
-Output the encoded text in chunks.  Phrases that fill perfect squares
-`(r X r)` should be output in `r`-length chunks separated by spaces.
-Imperfect squares will have `n` empty spaces.  Those spaces should be distributed evenly across the last `n` rows.
+Output the encoded text in chunks that fill perfect rectangles `(r X c)`,
+with `c` chunks of `r` length, separated by spaces. For phrases that are
+`n` characters short of the perfect rectangle, pad each of the last `n`
+chunks with a single trailing space.
 
-```plain
-imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn sseoau
+```text
+"imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau "
 ```
 
 Notice that were we to stack these, we could visually decode the
-cyphertext back in to the original message:
+ciphertext back in to the original message:
 
-```plain
-imtgdvs
-fearwer
-mayoogo
-anouuio
-ntnnlvt
-wttddes
-aohghn
-sseoau
+```text
+"imtgdvs"
+"fearwer"
+"mayoogo"
+"anouuio"
+"ntnnlvt"
+"wttddes"
+"aohghn "
+"sseoau "
 ```
 
 ## Getting Started
 
-Make sure you have read [the C++ page](http://exercism.io/languages/cpp) on
-exercism.io.  This covers the basic information on setting up the development
+Make sure you have read the [Installing](https://exercism.io/tracks/cpp/installation) and
+[Running the Tests](https://exercism.io/tracks/cpp/tests) pages for C++ on exercism.io.
+This covers the basic information on setting up the development
 environment expected by the exercises.
 
 ## Passing the Tests

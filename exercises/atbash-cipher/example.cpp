@@ -19,7 +19,7 @@ std::string encode(std::string const& plaintext)
     int chunkCounter = 0;
     std::ostringstream os;
 
-    for(int i = 0; i < plaintext.length(); i++) {
+    for(std::size_t i = 0; i < plaintext.length(); i++) {
         char currentChar = plaintext.at(i);
 
         if (std::isalnum(currentChar)) {
@@ -39,7 +39,7 @@ std::string decode(std::string const& ciphertext)
 {
     std::ostringstream os;
 
-    for(int i = 0; i < ciphertext.length(); i++) {
+    for(std::size_t i = 0; i < ciphertext.length(); i++) {
         char currentChar = ciphertext.at(i);
 
         if (std::isalnum(currentChar)) {

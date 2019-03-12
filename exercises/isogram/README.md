@@ -1,7 +1,23 @@
+# Isogram
+
+Determine if a word or phrase is an isogram.
+
+An isogram (also known as a "nonpattern word") is a word or phrase without a repeating letter, however spaces and hyphens are allowed to appear multiple times.
+
+Examples of isograms:
+
+- lumberjacks
+- background
+- downstream
+- six-year-old
+
+The word *isograms*, however, is not an isogram, because the s repeats.
+
 ## Getting Started
 
-Make sure you have read [the C++ page](http://exercism.io/languages/cpp) on
-exercism.io.  This covers the basic information on setting up the development
+Make sure you have read the [Installing](https://exercism.io/tracks/cpp/installation) and
+[Running the Tests](https://exercism.io/tracks/cpp/tests) pages for C++ on exercism.io.
+This covers the basic information on setting up the development
 environment expected by the exercises.
 
 ## Passing the Tests
@@ -28,3 +44,10 @@ low-level algorithms or facilities by hand.  [CppReference](http://en.cppreferen
 is a wiki reference to the C++ language and standard library.  If you
 are new to C++, but have programmed in C, beware of
 [C traps and pitfalls](http://www.slideshare.net/LegalizeAdulthood/c-traps-and-pitfalls-for-c-programmers).
+
+## Source
+
+Wikipedia [https://en.wikipedia.org/wiki/Isogram](https://en.wikipedia.org/wiki/Isogram)
+
+## Submitting Incomplete Solutions
+It's possible to submit an incomplete solution so you can see how others have completed the exercise.

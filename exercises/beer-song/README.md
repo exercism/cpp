@@ -1,10 +1,10 @@
 # Beer Song
 
-Produce the lyrics to that beloved classic, that field-trip favorite: 99 Bottles of Beer on the Wall.
+Recite the lyrics to that beloved classic, that field-trip favorite: 99 Bottles of Beer on the Wall.
 
 Note that not all verses are identical.
 
-```plain
+```text
 99 bottles of beer on the wall, 99 bottles of beer.
 Take one down and pass it around, 98 bottles of beer on the wall.
 
@@ -322,8 +322,9 @@ experiment make the code better? Worse? Did you learn anything from it?
 
 ## Getting Started
 
-Make sure you have read [the C++ page](http://exercism.io/languages/cpp) on
-exercism.io.  This covers the basic information on setting up the development
+Make sure you have read the [Installing](https://exercism.io/tracks/cpp/installation) and
+[Running the Tests](https://exercism.io/tracks/cpp/tests) pages for C++ on exercism.io.
+This covers the basic information on setting up the development
 environment expected by the exercises.
 
 ## Passing the Tests

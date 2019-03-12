@@ -8,8 +8,9 @@ Two clocks that represent the same time should be equal to each other.
 
 ## Getting Started
 
-Make sure you have read [the C++ page](http://exercism.io/languages/cpp) on
-exercism.io.  This covers the basic information on setting up the development
+Make sure you have read the [Installing](https://exercism.io/tracks/cpp/installation) and
+[Running the Tests](https://exercism.io/tracks/cpp/tests) pages for C++ on exercism.io.
+This covers the basic information on setting up the development
 environment expected by the exercises.
 
 ## Passing the Tests
