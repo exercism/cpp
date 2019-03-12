@@ -79,7 +79,7 @@ void Robot::advance()
     } 
 }
 
-void Robot::execute_sequence(std::string sequence)
+void Robot::execute_sequence(std::string const& sequence)
 {
     for(char c : sequence)
     {

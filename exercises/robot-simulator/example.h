@@ -3,8 +3,7 @@
 #include <string>
 #include <utility>
 
-namespace robot_simulator 
-{
+namespace robot_simulator {
 
 enum class Bearing {NORTH, WEST, SOUTH, EAST};
 
@@ -21,7 +20,7 @@ public:
     void turn_left(); 
     void turn_right();
     void advance();
-    void execute_sequence(std::string);
+    void execute_sequence(std::string const&);
     std::pair<int, int> get_position() const;
     Bearing get_bearing() const;
 private:
