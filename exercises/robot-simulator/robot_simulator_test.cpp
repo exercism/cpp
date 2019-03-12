@@ -2,9 +2,9 @@
 #include <boost/test/unit_test.hpp>
 #include "robot_simulator.h"
 
-// Robot-Simulator exercise test case data version 2.0.0
+// Robot-Simulator exercise test case data version 3.1.0
 
-BOOST_AUTO_TEST_CASE(Robots_are_created_with_a_position_and_direction)
+BOOST_AUTO_TEST_CASE(A_robots_is_created_with_a_position_and_a_direction)
 {
     const robot_simulator::Robot r;
 
@@ -53,7 +53,7 @@ BOOST_AUTO_TEST_CASE(Changes_the_direction_from_north_to_east)
     
     r.turn_right();
     
-    const std::pair<int, int> expected_robot_position = r.get_position();
+    const std::pair<int, int> expected_robot_position = robot_position;
     
     const std::pair<int, int> actual_robot_position = r.get_position();
 
@@ -293,6 +293,29 @@ BOOST_AUTO_TEST_CASE(Decreases_the_x_coordinate_by_one_when_facing_west)
     const std::pair<int, int> actual_robot_position = r.get_position();
     
     BOOST_CHECK(expected_robot_position == actual_robot_position);
+}
+
+BOOST_AUTO_TEST_CASE(Instructions_to_move_east_and_north_from_readme)
+{
+    const std::pair<int, int> robot_position {7, 3};
+    
+    const robot_simulator::Bearing robot_bearing {robot_simulator::Bearing::NORTH};
+    
+    robot_simulator::Robot r {robot_position, robot_bearing};
+    
+    r.execute_sequence("RAALAL");
+
+    const std::pair<int, int> expected_robot_position {9, 4};
+    
+    const std::pair<int, int> actual_robot_position = r.get_position();
+    
+    BOOST_CHECK(expected_robot_position == actual_robot_position);
+    
+    const robot_simulator::Bearing expected_robot_bearing = robot_simulator::Bearing::WEST;
+    
+    const robot_simulator::Bearing actual_robot_bearing = r.get_bearing();
+    
+    BOOST_CHECK(expected_robot_bearing == actual_robot_bearing);
 }
 
 BOOST_AUTO_TEST_CASE(Instructions_to_move_west_and_north)
