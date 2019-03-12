@@ -1,6 +1,7 @@
 #include "phone_number.h"
 #include <algorithm>
 #include <cctype>
+#include <stdexcept>
 #include <iterator>
 #include <sstream>
 
@@ -13,7 +14,6 @@ const int area_code_length = 3;
 const int exchange_length = 3;
 const int extension_length = 4;
 const int valid_number_length = area_code_length + exchange_length + extension_length;
-const string cleaned_invalid_number(valid_number_length, '0');
 
 string clean_number(const string& text)
 {
@@ -24,10 +24,13 @@ string clean_number(const string& text)
         if (result[0] == '1') {
             result.erase(result.begin());
         } else {
-            result = cleaned_invalid_number;
+            throw std::domain_error("Invalid number");
         }
-    } else if (result.length() < valid_number_length) {
-        result = cleaned_invalid_number;
+    } else if (result.length() != valid_number_length) {
+        throw std::domain_error("Invalid number");
+    }
+    if (result[0] < '2' || result[3] < '2') {
+      throw std::domain_error("Invalid number");
     }
     return result;
 }
