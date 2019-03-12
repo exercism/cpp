@@ -56,6 +56,7 @@ foreach(exercise
     all-your-base
     pangram
     robot-simulator
+    binary-search
     isogram
     reverse-string
     acronym
