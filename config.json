@@ -375,12 +375,13 @@
       "slug": "robot-simulator",
       "uuid": "ed2e467d-621d-42de-afdd-f9b49efbc263",
       "core": false,
-      "unlocked_by": "triangle",
+      "unlocked_by": null,
       "difficulty": 4,
       "topics": [
         "control_flow_loops",
         "classes",
         "conditionals",
+        "strings",
         "variables",
         "pairs"
       ]
