@@ -22,3 +22,35 @@ Here is a list of things that need to be done to add an exercise to this track.
 5. Add the test to the config.json file. The [configlet](https://github.com/exercism/configlet) can help generate a unique UUID.
 6. Use the [configlet](https://github.com/exercism/configlet) tool to generate the README for your exercise.
 7. Try to match the formatting used in the other tests as closely as possible.
+
+## Testing an exercise
+
+The Exercism build system has two unusual constraints. First, example solutions
+must be named `example.h` and `example.cpp`; this prevents Exercism from sending
+these files to the student. Second, student solutions must be named `<exercise>.h`
+and `<exercise>.cpp`, for example `anagram.h` and `anagram.cpp`.
+
+The current CMake build system navigates this with an unusual approach: it copies
+all example solutions from the `exercises/` tree to an alternate directory
+(which is ignored by git), renames the solutions as if they were student exercises,
+and runs a complete build in this new directory.
+
+Maintainers can largely ignore the alternate exercise directory if they recopy
+their example solution before running a build. Re-running CMake will recopy
+all exercise files.
+
+For example, a maintainer can copy, configure, compile, and test all exercises with:
+```bash
+cmake . && make
+```
+
+For an individual exercise, in this example `anagram`, the maintainer should edit:
+```bash
+exercises/anagram/example.h
+exercises/anagram/example.cpp
+```
+
+Then copy, configure, compile, and test with:
+```bash
+cmake . && make test_anagram
+```
