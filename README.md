@@ -49,6 +49,7 @@ For an individual exercise, in this example `anagram`, the maintainer should edi
 ```bash
 exercises/anagram/example.h
 exercises/anagram/example.cpp
+exercises/anagram/anagram_test.cpp
 ```
 
 Then copy, configure, compile, and test with:
