@@ -39,7 +39,8 @@ Maintainers can largely ignore the alternate exercise directory if they recopy
 their example solution before running a build. Re-running CMake will recopy
 all exercise files.
 
-For example, a maintainer can copy, configure, compile, and test all exercises with:
+For example, a maintainer can copy, configure, compile, and test all exercises by
+running the following from the root directory:
 ```bash
 cmake . && make
 ```
