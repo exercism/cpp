@@ -8,3 +8,6 @@ CMakeCache.txt
 CMakeFiles/
 Makefile
 cmake_install.cmake
+
+# Ignore alternate directory of exercises that is used for building
+build_exercises/
