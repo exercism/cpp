@@ -11,6 +11,13 @@ project(${exercise} CXX)
 set(Boost_USE_STATIC_LIBS ON)
 set(Boost_USE_MULTITHREADED ON)
 set(Boost_USE_STATIC_RUNTIME OFF)
+set(Boost_ARCHITECTURE "")
+string(TOLOWER ${CMAKE_HOST_SYSTEM_PROCESSOR} CURRENT_PROCESSOR_ARCHITECTURE)
+if(CURRENT_PROCESSOR_ARCHITECTURE STREQUAL amd64 OR CURRENT_PROCESSOR_ARCHITECTURE STREQUAL x86_64)
+    string(APPEND Boost_ARCHITECTURE "-x64")
+else()
+    string(APPEND Boost_ARCHITECTURE "-x32")
+endif()
 find_package(Boost 1.59 REQUIRED COMPONENTS unit_test_framework date_time)
 
 # Get a source filename from the exercise name by replacing -'s with _'s
