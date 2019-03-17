@@ -88,6 +88,9 @@ BOOST_AUTO_TEST_CASE(can_create_complex_tree)
     test_leaf<uint32_t>(tested->right()->right(), 7, false, false);
 }
 
+// The tests below require an implementation of an iterator.
+// You can get more details here: http://www.cplusplus.com/reference/iterator/
+
 template<typename T>
 static void test_sort(const tree_ptr<T> &tree, const std::vector<T> &expected)
 {
