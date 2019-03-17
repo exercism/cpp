@@ -9,7 +9,7 @@ namespace acronym {
 
 string acronym(string const& input_str)
 {
-    vector<string> words
+    vector<string> words;
     boost::split(words, input_str, boost::is_any_of(" :-,"));
     string acronym_str;
     for (auto const& s : words) {
