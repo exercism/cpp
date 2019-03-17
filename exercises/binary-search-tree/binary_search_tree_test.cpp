@@ -11,7 +11,7 @@ using tree_ptr = typename std::unique_ptr<binary_tree::binary_tree<T>>;
 template<typename T>
 static void test_branch(const tree_ptr<T> &br, bool has)
 {
-    BOOST_REQUIRE_EQUAL((bool) br, has);
+    
 }
 
 template<typename T>
@@ -19,8 +19,8 @@ static void test_leaf(const tree_ptr<T> &tree,
                       const T& data, bool has_left, bool has_right)
 {
     BOOST_REQUIRE_EQUAL(data, tree->data());
-    test_branch(tree->left(), has_left);
-    test_branch(tree->right(), has_right);
+    BOOST_REQUIRE_EQUAL((bool) tree->left(), has_left);
+    BOOST_REQUIRE_EQUAL((bool) tree->right(), has_right);
 }
 
 template<typename T>
