@@ -4,7 +4,6 @@
 #include <vector>
 
 // test data version: 1.0.0
-// Bonus - templatize for strings
 
 template<typename T>
 using tree_ptr = typename std::unique_ptr<binary_tree::binary_tree<T>>;
@@ -42,13 +41,13 @@ static tree_ptr<T> make_tree(const std::vector<T> &data)
     return tree;
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(data_is_retained)
 {
     auto tested = make_tree<uint32_t>({4});
     test_leaf<uint32_t>(tested, 4, false, false);
 }
 
+#if defined(EXERCISM_RUN_ALL_TESTS)
 
 BOOST_AUTO_TEST_CASE(smaller_number_at_left_node)
 {
