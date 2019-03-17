@@ -53,10 +53,10 @@ namespace binary_tree
         private:
             enum class state
             {
-                Left,
-                Right,
-                Middle,
-                Done
+                LEFT,
+                RIGHT,
+                MIDDLE,
+                DONE
             };
 
             const binary_tree &_tree;
@@ -119,7 +119,7 @@ namespace binary_tree
     : _tree(tree),
       _side_iter(build_first_side_iter(tree))
     {
-        _state = _tree.left() ? state::Left : state::Middle;
+        _state = _tree.left() ? state::LEFT : state::MIDDLE;
     }
 
     template<typename T>
@@ -136,7 +136,7 @@ namespace binary_tree
     {
         binary_tree_iter iter(tree);
         iter._side_iter.reset(nullptr);
-        iter._state = state::Done;
+        iter._state = state::DONE;
 
         return iter;
     }
@@ -163,12 +163,12 @@ namespace binary_tree
     {
         switch (_state)
         {
-        case state::Done:
+        case state::DONE:
             throw std::out_of_range("Access of iterator after end");
-        case state::Middle:
+        case state::MIDDLE:
             return _tree.data();
-        case state::Left:
-        case state::Right:
+        case state::LEFT:
+        case state::RIGHT:
             return _side_iter->operator*();
         default:
             throw std::logic_error("Missing switch value");
@@ -186,22 +186,22 @@ namespace binary_tree
     {
         switch (_state)
         {
-        case state::Done:
+        case state::DONE:
             throw std::out_of_range("Cannot advance iterator after end");
-        case state::Middle:
+        case state::MIDDLE:
             if (!_tree.right())
             {
-                _state = state::Done;
+                _state = state::DONE;
                 break;
             }
-            _state = state::Right;
+            _state = state::RIGHT;
             _side_iter = binary_tree_iter_ptr(new binary_tree_iter(*_tree.right()));
             break;
-        case state::Left:
-            advance_side_iter(state::Middle);
+        case state::LEFT:
+            advance_side_iter(state::MIDDLE);
             break;
-        case state::Right:
-            advance_side_iter(state::Done);
+        case state::RIGHT:
+            advance_side_iter(state::DONE);
             break;
         default:
             throw std::logic_error("Missing switch value");
@@ -214,7 +214,7 @@ namespace binary_tree
     void binary_tree<T>::binary_tree_iter::advance_side_iter(state next_state)
     {
         _side_iter->operator++();
-        if (_side_iter->_state == state::Done)
+        if (_side_iter->_state == state::DONE)
         {
             _side_iter.reset(nullptr);
             _state = next_state;
