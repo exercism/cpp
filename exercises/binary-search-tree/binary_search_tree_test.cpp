@@ -9,12 +9,6 @@ template<typename T>
 using tree_ptr = typename std::unique_ptr<binary_tree::binary_tree<T>>;
 
 template<typename T>
-static void test_branch(const tree_ptr<T> &br, bool has)
-{
-    
-}
-
-template<typename T>
 static void test_leaf(const tree_ptr<T> &tree, 
                       const T& data, bool has_left, bool has_right)
 {
