@@ -469,6 +469,19 @@
         "strings"
       ]
     },
+    { 
+      "slug": "binary-search",
+      "uuid": "abdd7aa3-25f6-4d27-a4dc-6bd1ea2f718c",
+      "core": false,
+      "unlocked_by": "triangle",
+      "difficulty": 4,
+      "topics": [
+        "arrays",
+        "control_flow_if_else_statements",
+        "control_flow_loops",
+        "searching"
+      ]
+    },
     {
       "slug": "binary-search-tree",
       "uuid": "3463598a-c622-4138-97d3-0c71cbe718c6",
@@ -494,3 +507,4 @@
     }
   ]
 }
+

@@ -7,7 +7,7 @@ cmake_minimum_required(VERSION 3.1.3)
 # Name the project after the exercise
 project(${exercise} CXX)
 
-# Locate Boost libraries: unit_test_framework and date_time
+# Locate Boost libraries: unit_test_framework
 set(Boost_USE_STATIC_LIBS ON)
 set(Boost_USE_MULTITHREADED ON)
 set(Boost_USE_STATIC_RUNTIME OFF)
@@ -58,3 +58,4 @@ endif()
 
 # Run the tests on every build
 add_custom_target(test_${exercise} ALL DEPENDS ${exercise} COMMAND ${exercise})
+
