@@ -79,13 +79,13 @@ namespace binary_tree
             bool operator!=(const binary_tree_iter &) const;
         
         private:
-            void advance_side_iter(state next_state);
-            static binary_tree_iter_ptr build_first_side_iter(const binary_tree &tree);
-            static binary_tree_iter_ptr copy_side_iter(const binary_tree_iter &other);
+            void advance_branch_iter(state next_state);
+            static binary_tree_iter_ptr build_first_branch_iter(const binary_tree &tree);
+            static binary_tree_iter_ptr copy_branch_iter(const binary_tree_iter &other);
 
             const binary_tree &_tree;
             state _state;
-            binary_tree_iter_ptr _side_iter;
+            binary_tree_iter_ptr _branch_iter;
         };
     };
 
@@ -117,13 +117,13 @@ namespace binary_tree
     template<typename T>
     binary_tree<T>::binary_tree_iter::binary_tree_iter(const binary_tree<T> &tree)
     : _tree(tree),
-      _side_iter(build_first_side_iter(tree))
+      _branch_iter(build_first_branch_iter(tree))
     {
         _state = _tree.left() ? state::LEFT : state::MIDDLE;
     }
 
     template<typename T>
-    typename binary_tree<T>::binary_tree_iter::binary_tree_iter_ptr binary_tree<T>::binary_tree_iter::build_first_side_iter(const binary_tree &tree)
+    typename binary_tree<T>::binary_tree_iter::binary_tree_iter_ptr binary_tree<T>::binary_tree_iter::build_first_branch_iter(const binary_tree &tree)
     {
         if (!tree.left())
             return nullptr;
@@ -135,7 +135,7 @@ namespace binary_tree
     typename binary_tree<T>::binary_tree_iter binary_tree<T>::binary_tree_iter::build_end_iterator(const binary_tree<T> &tree)
     {
         binary_tree_iter iter(tree);
-        iter._side_iter.reset(nullptr);
+        iter._branch_iter.reset(nullptr);
         iter._state = state::DONE;
 
         return iter;
@@ -148,7 +148,7 @@ namespace binary_tree
             return false;
         if (_state != other._state)
             return false;
-        return _side_iter == other._side_iter;
+        return _branch_iter == other._branch_iter;
     }
 
 
@@ -169,7 +169,7 @@ namespace binary_tree
             return _tree.data();
         case state::LEFT:
         case state::RIGHT:
-            return _side_iter->operator*();
+            return _branch_iter->operator*();
         default:
             throw std::logic_error("Missing switch value");
         }
@@ -195,13 +195,13 @@ namespace binary_tree
                 break;
             }
             _state = state::RIGHT;
-            _side_iter = binary_tree_iter_ptr(new binary_tree_iter(*_tree.right()));
+            _branch_iter = binary_tree_iter_ptr(new binary_tree_iter(*_tree.right()));
             break;
         case state::LEFT:
-            advance_side_iter(state::MIDDLE);
+            advance_branch_iter(state::MIDDLE);
             break;
         case state::RIGHT:
-            advance_side_iter(state::DONE);
+            advance_branch_iter(state::DONE);
             break;
         default:
             throw std::logic_error("Missing switch value");
@@ -211,12 +211,12 @@ namespace binary_tree
     }
 
     template<typename T>
-    void binary_tree<T>::binary_tree_iter::advance_side_iter(state next_state)
+    void binary_tree<T>::binary_tree_iter::advance_branch_iter(state next_state)
     {
-        _side_iter->operator++();
-        if (_side_iter->_state == state::DONE)
+        _branch_iter->operator++();
+        if (_branch_iter->_state == state::DONE)
         {
-            _side_iter.reset(nullptr);
+            _branch_iter.reset(nullptr);
             _state = next_state;
         }
     }
