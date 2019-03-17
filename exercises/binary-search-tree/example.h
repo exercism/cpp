@@ -59,10 +59,6 @@ namespace binary_tree
                 DONE
             };
 
-            const binary_tree &_tree;
-            state _state;
-            binary_tree_iter_ptr _side_iter;
-
             explicit binary_tree_iter(const binary_tree &tree);
             static binary_tree_iter build_end_iterator(const binary_tree &tree);
 
@@ -86,6 +82,10 @@ namespace binary_tree
             void advance_side_iter(state next_state);
             static binary_tree_iter_ptr build_first_side_iter(const binary_tree &tree);
             static binary_tree_iter_ptr copy_side_iter(const binary_tree_iter &other);
+
+            const binary_tree &_tree;
+            state _state;
+            binary_tree_iter_ptr _side_iter;
         };
     };
 
