@@ -3,11 +3,6 @@
 #include <boost/test/unit_test.hpp>
 #include <cmath>
 
-namespace
-{
-const double accuracy = 0.005;
-}
-
 BOOST_AUTO_TEST_CASE(age_in_seconds)
 {
     const space_age::space_age age(1000000);
@@ -16,6 +11,11 @@ BOOST_AUTO_TEST_CASE(age_in_seconds)
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
+namespace
+{
+const double accuracy = 0.005;
+}
+
 BOOST_AUTO_TEST_CASE(age_in_earth_years)
 {
     const space_age::space_age age(1000000000);
