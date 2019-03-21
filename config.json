@@ -293,6 +293,16 @@
       ]
     },
     {
+      "slug": "pascals-triangle",
+      "uuid": "7ed4434a-3564-4194-b91a-d3baeec9c519",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 5,
+      "topics": [
+        "math"
+       ]
+    },
+    {
       "slug": "crypto-square",
       "uuid": "177ecdf4-f249-4193-b9e1-8f1c6480bfad",
       "core": false,

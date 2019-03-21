@@ -49,6 +49,7 @@ foreach(exercise
     sum-of-multiples
     series
     prime-factors
+    pascals-triangle
     trinary
     crypto-square
     scrabble-score
