@@ -121,22 +121,22 @@ BOOST_AUTO_TEST_CASE(can_sort_complex_tree)
 
 BOOST_AUTO_TEST_CASE(can_create_complex_tree_strings)
 {
-    auto tested = make_tree<std::string>({"4", "2", "6", "1", "3", "5", "7"});
+    auto tested = make_tree<std::string>({"delicious", "ballon", "flag", "apple", "cat", "elispsis", "grains"});
 
-    test_leaf<std::string>(tested, "4", true, true);
-    test_leaf<std::string>(tested->left(), "2", true, true);
-    test_leaf<std::string>(tested->right(), "6", true, true);
+    test_leaf<std::string>(tested, "delicious", true, true);
+    test_leaf<std::string>(tested->left(), "ballon", true, true);
+    test_leaf<std::string>(tested->right(), "flag", true, true);
 
-    test_leaf<std::string>(tested->left()->left(), "1", false, false);
-    test_leaf<std::string>(tested->left()->right(), "3", false, false);
+    test_leaf<std::string>(tested->left()->left(), "apple", false, false);
+    test_leaf<std::string>(tested->left()->right(), "cat", false, false);
 
-    test_leaf<std::string>(tested->right()->left(), "5", false, false);
-    test_leaf<std::string>(tested->right()->right(), "7", false, false);
+    test_leaf<std::string>(tested->right()->left(), "elispsis", false, false);
+    test_leaf<std::string>(tested->right()->right(), "grains", false, false);
 }
 
 BOOST_AUTO_TEST_CASE(can_sort_complex_tree_strings)
 {
-    test_sort(make_tree<std::string>({"2", "1", "3", "6", "7", "5"}), {"1", "2", "3", "5", "6", "7"});
+    test_sort(make_tree<std::string>({"A", "few", "random", "strings", "that", "should", "be", "sorted"}), {"A", "be", "few", "random", "should", "sorted", "strings", "that"});
 }
 
 #endif
