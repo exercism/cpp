@@ -38,7 +38,6 @@ namespace binary_tree
         binary_tree_iter end() const;
         
     private:
-        void insert(const T &data, binary_tree_ptr &location);
         T _data;
         binary_tree_ptr _left;
         binary_tree_ptr _right;
@@ -92,19 +91,13 @@ namespace binary_tree
     // tree
 
     template<typename T>
-    void binary_tree<T>::insert(const T &data, binary_tree<T>::binary_tree_ptr &location)
-    {
-        if (!location)
-            location = binary_tree_ptr(new binary_tree(data));
-        else
-            location->insert(data);   
-    }
-
-    template<typename T>
     void binary_tree<T>::insert(const T &data)
     {
         binary_tree_ptr &insert_location = data > _data ? _right : _left;
-        insert(data, insert_location);
+        if (!insert_location)
+            insert_location = binary_tree_ptr(new binary_tree(data));
+        else
+            insert_location->insert(data);   
     }
 
     template<typename T>
