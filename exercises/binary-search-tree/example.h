@@ -6,6 +6,7 @@
 
 namespace binary_tree
 {
+    using std::move;
     template<typename T>
     class binary_tree final
     {
@@ -14,7 +15,7 @@ namespace binary_tree
         using binary_tree_ptr = std::unique_ptr<binary_tree>;
 
         explicit binary_tree(T data)
-            : _data(std::move(data)),
+            : _data(move(data)),
               _left(nullptr),
               _right(nullptr)
         {}
