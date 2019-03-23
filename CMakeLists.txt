@@ -61,6 +61,7 @@ foreach(exercise
     bracket-push
     all-your-base
     pangram
+    robot-simulator
     binary-search
     isogram
     reverse-string
