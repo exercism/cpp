@@ -297,8 +297,9 @@
       "uuid": "7ed4434a-3564-4194-b91a-d3baeec9c519",
       "core": false,
       "unlocked_by": null,
-      "difficulty": 5,
+      "difficulty": 3,
       "topics": [
+        "arrays",
         "math"
        ]
     },

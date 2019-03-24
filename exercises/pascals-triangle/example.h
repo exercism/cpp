@@ -6,7 +6,7 @@
 namespace pascals_triangle
 {
 
-std::vector<std::vector<int>> gen(int n);
+std::vector<std::vector<int>> generate_rows(size_t n);
 
 }
 

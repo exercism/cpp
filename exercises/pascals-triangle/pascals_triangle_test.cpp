@@ -6,7 +6,7 @@ BOOST_AUTO_TEST_CASE(zero_rows)
 {
     const std::vector<std::vector<int>> expected;
 
-    const std::vector<std::vector<int>> actual{pascals_triangle::gen(0)};
+    const std::vector<std::vector<int>> actual{pascals_triangle::generate_rows(0)};
 
     BOOST_TEST(expected == actual);
 }
@@ -15,36 +15,50 @@ BOOST_AUTO_TEST_CASE(zero_rows)
 
 BOOST_AUTO_TEST_CASE(single_row)
 {
-    const std::vector<std::vector<int>> expected{{1}};
+    const std::vector<std::vector<int>> expected{
+      {1}
+    };
 
-    const std::vector<std::vector<int>> actual{pascals_triangle::gen(1)};
+    const std::vector<std::vector<int>> actual{pascals_triangle::generate_rows(1)};
 
     BOOST_TEST(expected == actual);
 }
 
 BOOST_AUTO_TEST_CASE(two_rows)
 {
-    const std::vector<std::vector<int>> expected{{1}, {1,1}};
+    const std::vector<std::vector<int>> expected{
+      {1}, 
+      {1,1}
+    };
 
-    const std::vector<std::vector<int>> actual{pascals_triangle::gen(2)};
+    const std::vector<std::vector<int>> actual{pascals_triangle::generate_rows(2)};
 
     BOOST_TEST(expected == actual);
 }
 
 BOOST_AUTO_TEST_CASE(three_rows)
 {
-    const std::vector<std::vector<int>> expected{{1}, {1,1}, {1,2,1}};
+    const std::vector<std::vector<int>> expected{
+      {1}, 
+      {1,1}, 
+      {1,2,1}
+    };
 
-    const std::vector<std::vector<int>> actual{pascals_triangle::gen(3)};
+    const std::vector<std::vector<int>> actual{pascals_triangle::generate_rows(3)};
 
     BOOST_TEST(expected == actual);
 }
 
 BOOST_AUTO_TEST_CASE(four_rows)
 {
-    const std::vector<std::vector<int>> expected{{1},{1,1},{1,2,1},{1,3,3,1}};
+    const std::vector<std::vector<int>> expected{
+      {1},
+      {1,1},
+      {1,2,1},
+      {1,3,3,1}
+    };
 
-    const std::vector<std::vector<int>> actual{pascals_triangle::gen(4)};
+    const std::vector<std::vector<int>> actual{pascals_triangle::generate_rows(4)};
 
     BOOST_TEST(expected == actual);
 }
@@ -59,7 +73,7 @@ BOOST_AUTO_TEST_CASE(five_rows)
       {1, 4, 6, 4, 1}
     };
 
-    const std::vector<std::vector<int>> actual{pascals_triangle::gen(5)};
+    const std::vector<std::vector<int>> actual{pascals_triangle::generate_rows(5)};
 
     BOOST_TEST(expected == actual);
 }
@@ -75,7 +89,7 @@ BOOST_AUTO_TEST_CASE(six_rows)
       {1, 5, 10, 10, 5, 1}
     };
 
-    const std::vector<std::vector<int>> actual{pascals_triangle::gen(6)};
+    const std::vector<std::vector<int>> actual{pascals_triangle::generate_rows(6)};
 
     BOOST_TEST(expected == actual);
 }
@@ -95,7 +109,7 @@ BOOST_AUTO_TEST_CASE(ten_rows)
       {1, 9, 36, 84, 126, 126, 84, 36, 9, 1}
     };
 
-    const std::vector<std::vector<int>> actual{pascals_triangle::gen(10)};
+    const std::vector<std::vector<int>> actual{pascals_triangle::generate_rows(10)};
 
     BOOST_TEST(expected == actual);
 }
