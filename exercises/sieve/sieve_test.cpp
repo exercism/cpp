@@ -2,7 +2,26 @@
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
 
-BOOST_AUTO_TEST_CASE(primes_up_to_10)
+BOOST_AUTO_TEST_CASE(no_primes_under_two)
+{
+    const std::vector<int> expected{};
+
+    const std::vector<int> actual = sieve::primes(1);
+
+    BOOST_REQUIRE_EQUAL_COLLECTIONS(expected.begin(), expected.end(), actual.begin(), actual.end());
+}
+
+#if defined(EXERCISM_RUN_ALL_TESTS)
+BOOST_AUTO_TEST_CASE(find_first_prime)
+{
+    const std::vector<int> expected{2};
+
+    const std::vector<int> actual = sieve::primes(2);
+
+    BOOST_REQUIRE_EQUAL_COLLECTIONS(expected.begin(), expected.end(), actual.begin(), actual.end());
+}
+
+BOOST_AUTO_TEST_CASE(find_primes_up_to_10)
 {
     const std::vector<int> expected{2, 3, 5, 7};
 
@@ -11,8 +30,16 @@ BOOST_AUTO_TEST_CASE(primes_up_to_10)
     BOOST_REQUIRE_EQUAL_COLLECTIONS(expected.begin(), expected.end(), actual.begin(), actual.end());
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
-BOOST_AUTO_TEST_CASE(primes_up_to_1000)
+BOOST_AUTO_TEST_CASE(limit_is_prime)
+{
+    const std::vector<int> expected{2, 3, 5, 7, 11, 13};
+
+    const std::vector<int> actual = sieve::primes(13);
+
+    BOOST_REQUIRE_EQUAL_COLLECTIONS(expected.begin(), expected.end(), actual.begin(), actual.end());
+}
+
+BOOST_AUTO_TEST_CASE(find_primes_up_to_1000)
 {
     const std::vector<int> expected{
         2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59,
