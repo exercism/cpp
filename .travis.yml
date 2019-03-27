@@ -1,21 +1,19 @@
 dist: trusty
 sudo: false
 language: cpp
+os: linux
 
 matrix:
   include:
-    # GCC 4.9
-    - os: linux
+    - env: COMPILER=g++-4.9
       addons:
         apt:
           sources:
             - ubuntu-toolchain-r-test
           packages:
             - g++-4.9
-      env: MATRIX_EVAL="CC=gcc-4.9 && CXX=g++-4.9"
 
-    # Clang 3.8
-    - os: linux
+    - env: COMPILER=clang++-3.8
       addons:
         apt:
           sources:
@@ -23,16 +21,33 @@ matrix:
             - llvm-toolchain-precise-3.8
           packages:
             - clang-3.8
-      env: MATRIX_EVAL="CC=clang-3.8 && CXX=clang++-3.8"
+
+    - env: COMPILER=clang++-7
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+            - llvm-toolchain-trusty-7
+          packages:
+            - clang-7
+
+    - env: COMPILER=g++-8
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-8
 
 before_install:
   - sudo add-apt-repository -y ppa:samuel-bachmann/boost
   - sudo apt-get -y -d update
-  - eval "${MATRIX_EVAL}"
 install:
-  - sudo apt-get -y install cmake3 libboost-test1.60-dev libboost-date-time1.60-dev
+  - sudo apt-get -y install cmake3 ninja-build libboost-test1.60-dev libboost-date-time1.60-dev
+  - export CXX=${COMPILER}
+  - ${CXX} --version
 script:
   - bin/fetch-configlet
   - bin/configlet lint .
-  - cmake -G "Unix Makefiles"
-  - make
+  - cmake -G Ninja
+  - ninja
