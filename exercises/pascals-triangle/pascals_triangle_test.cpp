@@ -12,7 +12,6 @@ BOOST_AUTO_TEST_CASE(zero_rows)
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
-
 BOOST_AUTO_TEST_CASE(single_row)
 {
     const std::vector<std::vector<int>> expected{
@@ -28,7 +27,7 @@ BOOST_AUTO_TEST_CASE(two_rows)
 {
     const std::vector<std::vector<int>> expected{
       {1}, 
-      {1,1}
+      {1, 1}
     };
 
     const std::vector<std::vector<int>> actual{pascals_triangle::generate_rows(2)};
@@ -40,8 +39,8 @@ BOOST_AUTO_TEST_CASE(three_rows)
 {
     const std::vector<std::vector<int>> expected{
       {1}, 
-      {1,1}, 
-      {1,2,1}
+      {1, 1}, 
+      {1, 2, 1}
     };
 
     const std::vector<std::vector<int>> actual{pascals_triangle::generate_rows(3)};
@@ -53,9 +52,9 @@ BOOST_AUTO_TEST_CASE(four_rows)
 {
     const std::vector<std::vector<int>> expected{
       {1},
-      {1,1},
-      {1,2,1},
-      {1,3,3,1}
+      {1, 1},
+      {1, 2, 1},
+      {1, 3, 3, 1}
     };
 
     const std::vector<std::vector<int>> actual{pascals_triangle::generate_rows(4)};
@@ -67,9 +66,9 @@ BOOST_AUTO_TEST_CASE(five_rows)
 {
     const std::vector<std::vector<int>> expected{
       {1},
-      {1,1},
-      {1,2,1},
-      {1,3,3,1}, 
+      {1, 1},
+      {1, 2, 1},
+      {1, 3, 3, 1}, 
       {1, 4, 6, 4, 1}
     };
 
@@ -82,9 +81,9 @@ BOOST_AUTO_TEST_CASE(six_rows)
 {
     const std::vector<std::vector<int>> expected{
       {1},
-      {1,1},
-      {1,2,1},
-      {1,3,3,1}, 
+      {1, 1},
+      {1, 2, 1},
+      {1, 3, 3, 1}, 
       {1, 4, 6, 4, 1},
       {1, 5, 10, 10, 5, 1}
     };
@@ -98,9 +97,9 @@ BOOST_AUTO_TEST_CASE(ten_rows)
 {
     const std::vector<std::vector<int>> expected{
       {1},
-      {1,1},
-      {1,2,1},
-      {1,3,3,1},
+      {1, 1},
+      {1, 2, 1},
+      {1, 3, 3, 1},
       {1, 4, 6, 4, 1},
       {1, 5, 10, 10, 5, 1},
       {1, 6, 15, 20, 15, 6, 1}, 
