@@ -14,7 +14,12 @@ namespace binary_tree
         class binary_tree_iter;
         using binary_tree_ptr = std::unique_ptr<binary_tree>;
 
-        template <typename TParam>
+        template <typename TParam,
+                  typename = typename std::enable_if<
+                    std::is_constructible<T,
+                                          typename std::remove_reference<TParam>::type
+                    >::value
+                  >::type>
         explicit binary_tree(TParam &&data)
             : _data(std::forward<TParam>(data)),
               _left(nullptr),
