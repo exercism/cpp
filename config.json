@@ -531,6 +531,16 @@
         "loops",
         "mathematics"
       ]
+    },
+    {
+      "slug": "luhn",
+      "uuid": "885865bc-a197-436f-94bc-b1998d5cc081",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "strings"
+      ]
     }
   ]
 }

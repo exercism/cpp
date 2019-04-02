@@ -68,6 +68,7 @@ foreach(exercise
     isogram
     reverse-string
     acronym
+    luhn
 )
     travis_fixup(${exercise} ${alt_exercise_tree})
     add_subdirectory(${alt_exercise_tree}/${exercise})
