@@ -141,7 +141,7 @@ BOOST_AUTO_TEST_CASE(using_ascii_value_for_non_doubled_non_digit_is_not_allowed)
 
 BOOST_AUTO_TEST_CASE(valid_number_with_an_odd_number_of_spaces)
 {
-    const bool actual = luhn::valid("095 245 88");
+    const bool actual = luhn::valid("095 245  88");
 
     const bool expected {true};
 
