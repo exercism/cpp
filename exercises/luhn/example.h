@@ -3,9 +3,8 @@
 
 #include <string>
 
-namespace luhn{
-
-    bool valid(std::string const&);
-
+namespace luhn {
+bool valid(std::string const&);
 }
-#endif // LUHN_H
+
+#endif  // LUHN_H

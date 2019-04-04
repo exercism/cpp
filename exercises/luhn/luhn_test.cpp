@@ -2,8 +2,6 @@
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
 
-using namespace std;
-
 //Luhn exercise test case data version 1.5.0
 
 BOOST_AUTO_TEST_CASE(single_digit_strings_can_not_be_valid)
@@ -137,6 +135,15 @@ BOOST_AUTO_TEST_CASE(using_ascii_value_for_non_doubled_non_digit_is_not_allowed)
     const bool actual = luhn::valid("055b 444 285");
 
     const bool expected {false};
+
+    BOOST_TEST(expected == actual);
+}
+
+BOOST_AUTO_TEST_CASE(valid_number_with_an_odd_number_of_spaces)
+{
+    const bool actual = luhn::valid("095 245 88");
+
+    const bool expected {true};
 
     BOOST_TEST(expected == actual);
 }

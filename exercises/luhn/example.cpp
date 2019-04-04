@@ -2,43 +2,31 @@
 
 using namespace std;
 
-namespace luhn{
-
-    bool valid(std::string const& input_str)
-    {
-
-        string reversed;
-        reversed.assign(input_str.rbegin(),input_str.rend());
-        reversed.erase(0,reversed.find_first_not_of(" "));
-        reversed.erase(reversed.find_last_not_of(" ") + 1);
-
-        if(reversed.size()<=1){
+namespace luhn {
+bool valid(string const& input_str) {
+    int result = 0;
+    int counter = 0;
+    for (auto c = input_str.rbegin(); c != input_str.rend(); c++) {
+        if (*c == ' ') {
+            continue;
+        } else if (isdigit(*c)) {
+            int digit = (int)*c - '0';
+            if (counter % 2 == 1) {
+                result = (digit * 2 > 9) ? (result + digit * 2 - 9)
+                                         : (result + digit * 2);
+            } else {
+                result = result + digit;
+            }
+            counter++;
+        } else {
             return false;
         }
-
-        int result = 0;
-        int counter=0;
-        for(auto c:reversed)
-        {
-            if(c==' ')
-            {
-                continue;
-            } else if(isdigit(c)) {
-                int digit = (int)c-48;
-
-                if(counter%2==1){
-                    result=digit*2>9?result+digit*2-9:result+digit*2;
-                }else{
-                    result=result+digit;
-                }
-                counter++;
-            } else {
-                return false;
-            }
-        }
-        return result % 10 == 0;
-
     }
 
-
-} // namespace luhn
+    if (counter > 1) {
+        return result % 10 == 0;
+    } else {
+        return false;
+    }
+}
+}  // namespace luhn

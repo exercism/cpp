@@ -301,7 +301,7 @@
       "topics": [
         "arrays",
         "math"
-       ]
+      ]
     },
     {
       "slug": "crypto-square",
@@ -389,12 +389,12 @@
       "unlocked_by": null,
       "difficulty": 4,
       "topics": [
-        "control_flow_loops",
         "classes",
         "conditionals",
+        "control_flow_loops",
+        "pairs",
         "strings",
-        "variables",
-        "pairs"
+        "variables"
       ]
     },
     {
@@ -495,7 +495,7 @@
         "strings"
       ]
     },
-    { 
+    {
       "slug": "binary-search",
       "uuid": "abdd7aa3-25f6-4d27-a4dc-6bd1ea2f718c",
       "core": false,
@@ -514,7 +514,7 @@
       "core": false,
       "unlocked_by": "gigasecond",
       "difficulty": 10,
-      "topics":[
+      "topics": [
         "algorithms",
         "classes"
       ]
@@ -539,9 +539,9 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+        "math",
         "strings"
       ]
     }
   ]
 }
-
