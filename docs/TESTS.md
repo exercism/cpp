@@ -11,10 +11,10 @@ Working through each exercise is a process of:
 
 * Creating the initial build with CMake
 * For each unit test:
- * Satisfy compile errors to make the test fail.
- * Implement just enough to make the test pass.
- * Refactor your implementation to enhance readability, reduce duplication, etc.
- * Uncomment the next test
+  * Satisfy compile errors to make the test fail.
+  * Implement just enough to make the test pass.
+  * Refactor your implementation to enhance readability, reduce duplication, etc.
+  * Uncomment the next test
 
 ### Creating the Initial Build with CMake
 
@@ -73,8 +73,8 @@ $ make
 This example shows creating empty files for the implementation before
 running CMake.
 
-Simply type make in the build directory to compile the tests. This should 
-generate compile time errors. Once the errors are fixed make will build and 
+Simply type `make` in the build directory to compile the tests. This should 
+generate compile time errors. Once the errors are fixed, `make` will build and 
 run the tests.
 
 #### Windows with Visual Studio 2017
@@ -95,7 +95,7 @@ exercise folder:
 This example shows creating empty files for the implementation before
 running CMake.
 
-If you installed boost to the default location, Cmake may be able to
+If you installed boost to the default location, CMake may be able to
 find it for you automatically. If it can't find it, you will need to
 need to supply additional arguments to tell CMake where to find it by
 setting the `BOOST_INCLUDEDIR` variable on the command-line.  Here is an
@@ -125,6 +125,6 @@ running CMake.
 
 ## Boost.Test Documentation
 
-If you need to consult the Boost.Test documentation you can find it here:
+If you need to consult the Boost.Test documentation, you can find it here:
 
 * [Boost.Test 1.59 official documentation](http://www.boost.org/doc/libs/1_59_0/libs/test/doc/html/index.html)
