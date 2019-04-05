@@ -7,6 +7,11 @@
 
 namespace binary_tree
 {
+    template <bool B, class T = void>
+    using enable_if_t = typename std::enable_if<B, T>::type;
+    template <typename T>
+    using remove_reference_t = typename std::remove_reference<T>::type;
+
     template<typename T>
     class binary_tree final
     {
@@ -15,11 +20,7 @@ namespace binary_tree
         using binary_tree_ptr = std::unique_ptr<binary_tree>;
 
         template <typename TParam,
-                  typename = typename std::enable_if<
-                    std::is_constructible<T,
-                                          typename std::remove_reference<TParam>::type
-                    >::value
-                  >::type>
+                  typename = enable_if_t<std::is_constructible<T, remove_reference_t<TParam>>::value>>
         explicit binary_tree(TParam &&data)
             : _data(std::forward<TParam>(data)),
               _left(nullptr),
@@ -35,7 +36,9 @@ namespace binary_tree
         binary_tree&& operator=(binary_tree &&) = delete;
 
     public:
-        void insert(const T &data);
+        template <typename TParam,
+                  typename = enable_if_t<std::is_constructible<T, remove_reference_t<TParam>>::value>>
+        void insert(TParam &&data);
 
         const T &data() const {return _data;};
         const binary_tree_ptr& left() const {return _left;};
@@ -97,14 +100,15 @@ namespace binary_tree
 
     // tree
 
-    template<typename T>
-    void binary_tree<T>::insert(const T &data)
+    template <typename T>
+    template <typename TParam, typename>
+    void binary_tree<T>::insert(TParam &&data)
     {
         binary_tree_ptr &insert_location = data > _data ? _right : _left;
         if (!insert_location)
-            insert_location = binary_tree_ptr(new binary_tree(data));
+            insert_location = binary_tree_ptr(new binary_tree(std::forward<TParam>(data)));
         else
-            insert_location->insert(data);   
+            insert_location->insert(std::forward<TParam>(data));
     }
 
     template<typename T>
