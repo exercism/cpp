@@ -7,12 +7,6 @@ cmake_minimum_required(VERSION 3.1.3)
 # Name the project after the exercise
 project(${exercise} CXX)
 
-# Locate Boost libraries: unit_test_framework
-set(Boost_USE_STATIC_LIBS ON)
-set(Boost_USE_MULTITHREADED ON)
-set(Boost_USE_STATIC_RUNTIME OFF)
-find_package(Boost 1.59 REQUIRED COMPONENTS unit_test_framework)
-
 # Get a source filename from the exercise name by replacing -'s with _'s
 string(REPLACE "-" "_" file ${exercise})
 
@@ -37,12 +31,6 @@ if("${CMAKE_CXX_COMPILER_ID}" MATCHES "(GNU|Clang)")
         COMPILE_FLAGS "-Wall -Wextra -Wpedantic -Werror"
     )
 endif()
-
-# We need boost libraries
-target_link_libraries(${exercise}
-    PRIVATE
-    Boost::unit_test_framework
-)
 
 # Configure to run all the tests?
 if(${EXERCISM_RUN_ALL_TESTS})

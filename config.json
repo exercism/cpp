@@ -512,6 +512,7 @@
       "slug": "binary-search-tree",
       "uuid": "3463598a-c622-4138-97d3-0c71cbe718c6",
       "core": false,
+      "unlocked_by": "pangram",
       "unlocked_by": "reverse-string",
       "difficulty": 10,
       "topics":[
