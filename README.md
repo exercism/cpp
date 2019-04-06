@@ -13,6 +13,14 @@ There are not many active contributors, so anyone reviewing PRs or Issues, even 
 
 ## Adding an exercise
 
+Note: We are in the process of transitioning from using the Boost test suite to
+Catch, see [#233](https://github.com/exercism/cpp/issues/233). As such, we will
+not be taking any new exercises that use the Boost test suite. Please see one
+of the exercises that use Catch for examples on how that is setup.
+
+Additionally, any exercises submitted while that work is ongoing will not be a
+priority, so may take a while to review.
+
 Here is a list of things that need to be done to add an exercise to this track.
 
 1. Add the exercise under the exercises/ directory.

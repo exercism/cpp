@@ -1,5 +1,4 @@
 #include "crypto_square.h"
-#include <boost/algorithm/string/case_conv.hpp>
 #include <algorithm>
 #include <cctype>
 #include <iterator>
@@ -9,12 +8,21 @@ using namespace std;
 namespace
 {
 
+string to_lower_copy(std::string& s)
+{
+    string cpy(s);
+    for (auto& c: cpy) {
+        c = tolower(c);
+    }
+    return cpy;
+}
+
 string normalize(string const &text)
 {
     string result;
     copy_if(text.begin(), text.end(), back_inserter(result),
         [](const char c) { return !isspace(c) && !ispunct(c); });
-    return boost::to_lower_copy(result);
+    return to_lower_copy(result);
 }
 
 }
