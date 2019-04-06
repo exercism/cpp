@@ -43,7 +43,7 @@
     {
       "slug": "reverse-string",
       "uuid": "c6946af0-3c2f-4f76-8b30-a1643cd5be63",
-      "core": false,
+      "core": true,
       "unlocked_by": null,
       "difficulty": 2,
       "topics": [
@@ -53,8 +53,8 @@
     {
       "slug": "gigasecond",
       "uuid": "4dbe1bb3-0419-4749-8c2a-ec91539a8640",
-      "core": true,
-      "unlocked_by": null,
+      "core": false,
+      "unlocked_by": "reverse-string",
       "difficulty": 2,
       "topics": [
         "dates",
@@ -181,7 +181,7 @@
       "slug": "robot-name",
       "uuid": "67c3cb10-b893-428a-82d0-79602aef2775",
       "core": false,
-      "unlocked_by": "gigasecond",
+      "unlocked_by": "reverse-string",
       "difficulty": 5,
       "topics": [
         "randomness",
@@ -192,7 +192,7 @@
       "slug": "sum-of-multiples",
       "uuid": "a190ad11-db1c-4624-a477-e1d0c91d8b4f",
       "core": false,
-      "unlocked_by": "gigasecond",
+      "unlocked_by": "reverse-string",
       "difficulty": 3,
       "topics": [
         "math"
@@ -285,7 +285,7 @@
       "slug": "prime-factors",
       "uuid": "ba755932-b301-41cc-b7f2-5e6d2e130325",
       "core": false,
-      "unlocked_by": "gigasecond",
+      "unlocked_by": "reverse-string",
       "difficulty": 5,
       "topics": [
         "control_flow_loops",
@@ -455,7 +455,7 @@
       "slug": "allergies",
       "uuid": "80ae6a8e-8464-4f3a-afed-14d424757413",
       "core": false,
-      "unlocked_by": "gigasecond",
+      "unlocked_by": "reverse-string",
       "difficulty": 3,
       "topics": [
         "bitwise_operations",
@@ -512,7 +512,7 @@
       "slug": "binary-search-tree",
       "uuid": "3463598a-c622-4138-97d3-0c71cbe718c6",
       "core": false,
-      "unlocked_by": "gigasecond",
+      "unlocked_by": "reverse-string",
       "difficulty": 10,
       "topics":[
         "algorithms",
