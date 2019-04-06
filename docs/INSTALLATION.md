@@ -76,13 +76,17 @@ improve the CMake support.
 
 ### Prerequisite: Boost 1.59+
 
+**We are in the process of transitioning away from using Boost for most
+exercises because it is difficult to install on some platforms. You can
+follow the progress, or help, [on Github](https://github.com/exercism/cpp/issues/233).**
+
 The unit tests use Boost.Test, the unit testing framework included with
 [Boost](http://www.boost.org/index.html).  You may find other libraries
 in Boost useful to you as you work through the exercises.
 You will need to download and install Boost.  As of this writing Boost
 1.59+ is the required version.  You will need a compiled version of the
-boost libraries Boost.Test, Boost.DateTime and Boost.Regex, or you will
-need to download from source and build the library yourself.
+boost libraries Boost.Test and Boost.DateTime, or you will need to
+download from source and build the library yourself.
 
 If you are having difficulties installing Boost for use with exercism,
 [ask for help](https://github.com/exercism/cpp/issues).
@@ -166,4 +170,3 @@ If all else fails you can download the source and build it yourself,
 but you should prefer a prebuilt distribution to make things easier.
 Bootstrap instructions are on the
 [Boost getting started page](http://www.boost.org/doc/libs/release/more/getting_started/index.html).
-
