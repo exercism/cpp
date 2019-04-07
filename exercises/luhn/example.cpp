@@ -10,7 +10,7 @@ bool valid(string const& input_str) {
         if (*c == ' ') {
             continue;
         } else if (isdigit(*c)) {
-            int digit = (int)*c - '0';
+            const int digit = (int)*c - '0';
             if (counter % 2 == 1) {
                 result = (digit * 2 > 9) ? (result + digit * 2 - 9)
                                          : (result + digit * 2);
