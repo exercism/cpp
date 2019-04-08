@@ -7,7 +7,7 @@ using namespace std;
 namespace
 {
 
-string to_lower_copy(std::string const& s)
+string to_lower_copy(string const& s)
 {
     string cpy(s);
     for (auto& c: cpy) {
@@ -16,7 +16,7 @@ string to_lower_copy(std::string const& s)
     return cpy;
 }
 
-string make_key(std::string const& s)
+string make_key(string const& s)
 {
     string key{to_lower_copy(s)};
     sort(key.begin(), key.end());
