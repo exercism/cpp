@@ -1,40 +1,40 @@
 #include "etl.h"
-#define BOOST_TEST_MAIN
+#define CATCH_CONFIG_MAIN
 #include <map>
-#include <boost/test/unit_test.hpp>
+#include "test/catch.hpp"
 
-BOOST_AUTO_TEST_CASE(transforms_one_value)
+TEST_CASE("transforms_one_value")
 {
     const std::map<int, std::vector<char>> old{{1, {'A'}}};
 
     const auto actual = etl::transform(old);
 
     const std::map<char, int> expected{{'a', 1}};
-    BOOST_TEST(expected == actual);
+    REQUIRE(expected == actual);
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
-BOOST_AUTO_TEST_CASE(transforms_more_values)
+TEST_CASE("transforms_more_values")
 {
     const std::map<int, std::vector<char>> old{{1, {'A', 'E', 'I', 'O', 'U'}}};
 
     const auto actual = etl::transform(old);
 
     const std::map<char, int> expected{{'a', 1}, {'e', 1}, {'i', 1}, {'o', 1}, {'u', 1}};
-    BOOST_TEST(expected == actual);
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(transforms_more_keys)
+TEST_CASE("transforms_more_keys")
 {
     const std::map<int, std::vector<char>> old{{1, {'A', 'E'}}, {2, {'D', 'G'}}};
 
     const auto actual = etl::transform(old);
 
     const std::map<char, int> expected{{'a', 1}, {'e', 1}, {'d', 2}, {'g', 2}};
-    BOOST_TEST(expected == actual);
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(transforms_a_full_dataset)
+TEST_CASE("transforms_a_full_dataset")
 {
     const std::map<int, std::vector<char>> old{
         {1, {'A', 'E', 'I', 'O', 'U', 'L', 'N', 'R', 'S', 'T'}},
@@ -56,6 +56,6 @@ BOOST_AUTO_TEST_CASE(transforms_a_full_dataset)
         {'u', 1}, {'v', 4},  {'w', 4}, {'x', 8}, {'y', 4},
         {'z', 10}
     };
-    BOOST_TEST(expected == actual);
+    REQUIRE(expected == actual);
 }
 #endif
