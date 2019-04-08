@@ -7,11 +7,11 @@ cmake_minimum_required(VERSION 3.1.3)
 # Name the project after the exercise
 project(${exercise} CXX)
 
-# Locate Boost libraries: unit_test_framework and date_time
+# Locate Boost date_time library
 set(Boost_USE_STATIC_LIBS ON)
 set(Boost_USE_MULTITHREADED ON)
 set(Boost_USE_STATIC_RUNTIME OFF)
-find_package(Boost 1.59 REQUIRED COMPONENTS unit_test_framework date_time)
+find_package(Boost 1.59 REQUIRED COMPONENTS date_time)
 
 # Get a source filename from the exercise name by replacing -'s with _'s
 string(REPLACE "-" "_" file ${exercise})
@@ -41,7 +41,6 @@ endif()
 # We need boost libraries
 target_link_libraries(${exercise}
     PRIVATE
-    Boost::unit_test_framework
     Boost::date_time
 )
 
