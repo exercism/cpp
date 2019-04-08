@@ -1,6 +1,6 @@
 #include "clock.h"
-#define BOOST_TEST_MAIN
-#include <boost/test/unit_test.hpp>
+#define CATCH_CONFIG_MAIN
+#include "test/catch.hpp"
 
 using namespace std;
 
@@ -173,36 +173,41 @@ string errorMsg(string expected, string actual, string test)
     return ret.str();
 }
 
-BOOST_AUTO_TEST_CASE(time_tests)
+TEST_CASE("time_tests")
 {
     for (timeTest t : timeCases) {
         const auto actual = string(date_independent::clock::at(t.hour, t.minute));
 
-        BOOST_REQUIRE_MESSAGE(t.expected == actual, errorMsg(t.expected, actual, t.msg));
+        INFO(errorMsg(t.expected, actual, t.msg));
+        REQUIRE(t.expected == actual);
     }
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
-BOOST_AUTO_TEST_CASE(add_tests)
+TEST_CASE("add_tests")
 {
     for (addTest a : addCases) {
         const auto actual = string(date_independent::clock::at(a.hour, a.minute).plus(a.add));
 
-        BOOST_REQUIRE_MESSAGE(a.expected == actual, errorMsg(a.expected, actual, a.msg));
+        INFO(errorMsg(a.expected, actual, a.msg));
+        REQUIRE(a.expected == actual);
     }
 }
 
-BOOST_AUTO_TEST_CASE(equal_tests)
+TEST_CASE("equal_tests")
 {
     for (equalTest e : equalCases) {
         const auto clock1 = date_independent::clock::at(e.c1.hour, e.c1.minute);
         const auto clock2 = date_independent::clock::at(e.c2.hour, e.c2.minute);
 
-        if (e.expected)
-            BOOST_REQUIRE_MESSAGE(clock1 == clock2, errorMsg(string(clock1), string(clock2), e.msg));
-        else
-            BOOST_REQUIRE_MESSAGE(clock1 != clock2,
-                    "[" << string(clock1) << " == " << string(clock2) << "] test case: " << e.msg);
+        if (e.expected) {
+            INFO(errorMsg(string(clock1), string(clock2), e.msg));
+            REQUIRE(clock1 == clock2);
+        }
+        else {
+            INFO("[" << string(clock1) << " == " << string(clock2) << "] test case: " << e.msg);
+            REQUIRE(clock1 != clock2);
+        }
     }
 }
 #endif
