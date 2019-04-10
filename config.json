@@ -2,6 +2,7 @@
   "language": "C++",
   "active": true,
   "blurb": "C++ is a general-purpose programming language that supports procedural, object-oriented, generic and functional programming styles. C++ is deployed on billions of devices from the smallest embedded microprocessor to the largest supercomputer.",
+  "test_pattern": ".*_test[.]cpp",
   "foregone": [
     "point-mutations"
   ],
@@ -513,7 +514,6 @@
       "uuid": "3463598a-c622-4138-97d3-0c71cbe718c6",
       "core": false,
       "unlocked_by": "pangram",
-      "unlocked_by": "reverse-string",
       "difficulty": 10,
       "topics": [
         "algorithms",
