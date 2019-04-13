@@ -49,5 +49,4 @@ install:
 script:
   - bin/fetch-configlet
   - bin/configlet lint .
-  - cmake -G Ninja
-  - ninja
+  - bin/check-exercises.sh
