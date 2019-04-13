@@ -10,7 +10,7 @@ BOOST_AUTO_TEST_CASE(basic)
 
     const string expected{"PNG"};
 
-    BOOST_TEST(expected == actual);
+    BOOST_TEST(expected != actual);
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
