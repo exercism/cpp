@@ -4,15 +4,18 @@ The C++ language track requires that you have the following software
 installed on your system:
 * a modern C++11 compiler
 * the CMake cross-platform build system
-* the Boost libraries
 
-Microsoft's Visual Studio IDE and Apple's Xcode IDEs combine the compiler
-and the
-native build system into a single IDE (integrated development environment).
-Linux environments typically expose the compiler and native build system
-as separate command-line tools.
+We use [Catch2](https://github.com/catchorg/Catch2) for testing, which is a
+header-only library that is bundled along with the exercises.
 
-### Prerequisite: A Modern C++11 Compiler
+This set of dependencies is very common for C++ projects, so if you have any
+issues setting it up you will find many helpful resources online.
+
+Many IDE's, including Microsoft's Visual Studio, Apple's Xcode, and Jetbrain's
+Clion bundle a compiler and CMake together, so you should only need to install
+the IDE. 
+
+### A Modern C++11 Compiler
 
 This language track requires a compiler with [C++11](http://en.wikipedia.org/wiki/C%2B%2B11)
 support, which was released in 2011. All major compilers released in the last few years should
@@ -20,37 +23,7 @@ be compatible, so as long as you are on a fairly recent version you should be fi
 Specifically, GCC version 5.1 or later, Clang version 3.8 or later, or Visual
 Studio 2015 or later.
 
-#### Linux
-
-Ubuntu 16.04 and later have compatible compilers in the package manager, so
-installing the necessary compiler can be done with `sudo apt-get install gcc`.
-If you're on an older version of Ubuntu, you should be able to install a newer
-GCC version using the following:
-
-```bash
-$ sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-$ sudo apt-get -qq -d update
-$ sudo apt-get -qq install g++-5
-$ # make g++ 5 the default g++ executable
-$ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 90
-```
-
-For other distributions, you should be able to acquire the compiler through your
-package manager.
-
-#### MacOS
-
-MacOS users can install GCC with [Homebrew](http://brew.sh/) via
-`brew install gcc`.
-
-#### Windows
-
-Windows users can get
-[Visual Studio Community](https://www.visualstudio.com/vs/community/),
-a free download that will give you the Visual Studio IDE and the
-latest version of the Microsoft Visual C++ compiler.
-
-### Prerequisite: CMake
+### CMake
 
 CMake is an open source cross-platform build system that generates build
 scripts for your native build system (`make`, Visual Studio, Xcode, etc.).
@@ -74,99 +47,41 @@ improve the CMake support.
 
 [CMake 3.1.3 or later](http://www.cmake.org/) is required to use the provided build recipe.
 
-### Prerequisite: Boost 1.59+
+## Windows
 
-**We are in the process of transitioning away from using Boost for most
-exercises because it is difficult to install on some platforms. You can
-follow the progress, or help, [on Github](https://github.com/exercism/cpp/issues/233).**
+Windows users can get
+[Visual Studio Community](https://www.visualstudio.com/vs/community/),
+a free download that will give you the Visual Studio IDE and the latest version
+of the Microsoft Visual C++ compiler.
 
-The unit tests use Boost.Test, the unit testing framework included with
-[Boost](http://www.boost.org/index.html).  You may find other libraries
-in Boost useful to you as you work through the exercises.
-You will need to download and install Boost.  As of this writing Boost
-1.59+ is the required version.  You will need a compiled version of the
-boost libraries Boost.Test and Boost.DateTime, or you will need to
-download from source and build the library yourself.
+1. Follow [the instructions here](https://docs.microsoft.com/en-us/cpp/build/cmake-projects-in-visual-studio) to setup CMake.
+1. Download the exercise using the [exercism cli](https://exercism.io/cli-walkthrough) tool.
+1. Open Visual Studio 2017 or higher (With Visual C++ tools for CMake installed as described from the link above).
+1. Open the exercise folder in VS.
+1. Run "Build->Build the solution". The tests will execute with the build, with the output going to the build window. Since the test runs during the build, VS will say it is a build failure if one of the tests fail, and the test failure messages will be in the build output window.
 
-If you are having difficulties installing Boost for use with exercism,
-[ask for help](https://github.com/exercism/cpp/issues).
+You should be able to use other integrated IDE's such as Jetbrain's Clion in a similar manner.
 
-#### Linux
+## Linux
 
-Linux users can usually get Boost from your distribution's package manager.
-If a pre-built package is unavailable for your linux distribution, try
-[installing Boost from source](http://www.boost.org/doc/libs/release/more/getting_started/index.html).
+Ubuntu 16.04 and later have compatible compilers in the package manager, so
+installing the necessary compiler can be done with `sudo apt-get install gcc`.
+If you're on an older version of Ubuntu, you should be able to install a newer
+GCC version using the following:
 
-Alternately, there may be some other way to install Boost for your
-distribution without installing from source. For example, you can install
-Boost 1.60 for Ubuntu 16.04 LTS by using a PPA.
-
-```
-$ sudo add-apt-repository -y ppa:samuel-bachmann/boost
+```bash
+$ sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
 $ sudo apt-get -qq -d update
-$ sudo apt-get install boost1.60
+$ sudo apt-get -qq install g++-5
+$ # make g++ 5 the default g++ executable
+$ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 90
 ```
 
-#### Windows
+For other distributions, you should be able to acquire the compiler through your
+package manager.
 
-Windows users can download compiled binaries from [sourceforge](https://sourceforge.net/projects/boost/files/boost-binaries/).
-You must download the version appropriate for your compiler. Note that
-the version number is different from your Visual Studio version; the
-compiler version in Visual Studio 2015 is MSVC 14.0.
+## MacOS
 
-In the descriptions, 32-bit refers to the kind of code generated by your
-compiler and not the operating system.  Code compiled for 32-bit will run
-on both 32-bit and 64-bit versions of Windows.  Code compiled for 64-bit
-will only run on 64-bit versions of Windows.  The CMake recipes used in
-exercism create 32-bit projects for Visual Studio, so download the
-appropriate 32-bit version of Boost.
+MacOS users can install GCC with [Homebrew](http://brew.sh/) via
+`brew install gcc`.
 
-Once you download the compiled binaries, install them into a suitable
-location.  The installed location will contain a libraries directory
-named similarly to the install executable, such as `lib32-msvc-12.0`.
-Rename this directory to `lib` so that CMake can find the precompiled
-libraries.  If you don't rename the directory you will see an error
-like this when you run CMake:
-
-```
-> cmake -DBOOST_INCLUDEDIR:PATH=D:/tmp/boost_1_59_0 ..
--- Building for: Visual Studio 12
--- The CXX compiler identification is MSVC 18.0.30723.0
--- Check for working CXX compiler using: Visual Studio 12
--- Check for working CXX compiler using: Visual Studio 12 -- works
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
-CMake Error at C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/FindBoost.cmake:1106 (message):
-  Unable to find the requested Boost libraries.
-
-  Boost version: 1.59.0
-
-  Boost include path: D:/tmp/boost_1_59_0
-
-  The following Boost libraries could not be found:
-
-          boost_unit_test_framework
-          boost_date_time
-          boost_regex
-
-  No Boost libraries were found.  You may need to set BOOST_LIBRARYDIR to the
-  directory containing Boost libraries or BOOST_ROOT to the location of
-  Boost.
-Call Stack (most recent call first):
-  CMakeLists.txt:12 (find_package)
-
-
--- Configuring incomplete, errors occurred!
-```
-
-#### MacOS
-
-MacOS users can install boost with [Homebrew](http://brew.sh/) via
-`brew install boost`.
-
-#### Building from Source
-
-If all else fails you can download the source and build it yourself,
-but you should prefer a prebuilt distribution to make things easier.
-Bootstrap instructions are on the
-[Boost getting started page](http://www.boost.org/doc/libs/release/more/getting_started/index.html).

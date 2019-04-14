@@ -5,7 +5,9 @@ console executable that runs the tests.  Running the test executable
 prints messages for each failing test and reports a non-zero exit status
 when tests fail.
 
-*Note:* Your code is being tested against the test suite every time you build your project. If your code does not pass the one or more tests but is valid C++ code, it will still be compiled.
+*Note:* Your code is being tested against the test suite every time you build
+your project. If your code does not pass the one or more tests but is valid C++
+code, it will still be compiled.
 
 Working through each exercise is a process of:
 
@@ -44,10 +46,6 @@ your exercise source code, it is common to create a directory called `build`
 to hold these generated build files, as well as the compiled code.  This
 will keep your exercise folder uncluttered and tidy.
 
-Since you will be running CMake to create the build instructions for each
-assignment, you might want to create a bash script (Linux/MacOS) or
-batch file (Windows) for this command.
-
 Once the build environment has been created by CMake, you can build your
 code using the appropriate command for your environment:
 
@@ -77,36 +75,12 @@ Simply type `make` in the build directory to compile the tests. This should
 generate compile time errors. Once the errors are fixed, `make` will build and 
 run the tests.
 
-#### Windows with Visual Studio 2017
+#### Windows with Visual Studio
 
-The generator name for CMake is `Visual Studio 15`.  The same generator
-supports all IDE editions of Visual Studio 2017: Community, Professional,
-and Enterprise. Assuming the current exercise is `bob` and we're in the
-exercise folder:
-
-```
-> copy nul: bob.h
-> copy nul: bob.cpp
-> mkdir build
-> cd build
-> cmake -G "Visual Studio 15" ..
-```
-
-This example shows creating empty files for the implementation before
-running CMake.
-
-If you installed boost to the default location, CMake may be able to
-find it for you automatically. If it can't find it, you will need to
-need to supply additional arguments to tell CMake where to find it by
-setting the `BOOST_INCLUDEDIR` variable on the command-line.  Here is an
-example using the Visual Studio 2017 generator:
-
-```
-> cmake -G "Visual Studio 15" -DBOOST_INCLUDEDIR:PATH=D:/Code/boost/boost_1_59_0 ..
-```
-
-**Note:** Path locations passed to CMake always use slash (`/`) as the
-directory separator, even on Windows.
+Visual Studio has native support for CMake projects, so you should not need to
+install CMake separately or run it outside of Visual Studio. Follow
+[this guide](https://docs.microsoft.com/en-us/cpp/build/cmake-projects-in-visual-studio)
+to setup the CMake project in Visual Studio.
 
 #### MacOS with Xcode
 
@@ -122,9 +96,3 @@ $ cmake -G Xcode ..
 
 This example shows creating empty files for the implementation before
 running CMake.
-
-## Boost.Test Documentation
-
-If you need to consult the Boost.Test documentation, you can find it here:
-
-* [Boost.Test 1.59 official documentation](http://www.boost.org/doc/libs/1_59_0/libs/test/doc/html/index.html)
