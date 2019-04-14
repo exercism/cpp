@@ -4,8 +4,10 @@
 #include "test/catch.hpp"
 
 // This problem requires you to install and use the boost date_time library.
-// See <http://www.boost.org/doc/libs/1_59_0/doc/html/date_time.html>
-// for documentation on boost::gregorian::date
+// CMake will try to find and configure it for you if it is installed on your
+// system.
+// See <http://www.boost.org/doc/libs/1_59_0/doc/html/date_time.html> for
+// documentation on boost::gregorian::date
 
 TEST_CASE("monteenth_of_May_2013")
 {
