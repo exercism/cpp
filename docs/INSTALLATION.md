@@ -11,8 +11,8 @@ header-only library that is bundled along with the exercises.
 This set of dependencies is very common for C++ projects, so if you have any
 issues setting it up you will find many helpful resources online.
 
-Many IDE's, including Microsoft's Visual Studio, Apple's Xcode, and Jetbrain's
-Clion bundle a compiler and CMake together, so you should only need to install
+Many IDE's, including Microsoft's Visual Studio, Apple's Xcode, and JetBrains'
+CLion bundle a compiler and CMake together, so you should only need to install
 the IDE. 
 
 ### A Modern C++11 Compiler
@@ -60,14 +60,25 @@ of the Microsoft Visual C++ compiler.
 1. Open the exercise folder in VS.
 1. Run "Build->Build the solution". The tests will execute with the build, with the output going to the build window. Since the test runs during the build, VS will say it is a build failure if one of the tests fail, and the test failure messages will be in the build output window.
 
-You should be able to use other integrated IDE's such as Jetbrain's Clion in a similar manner.
+You should be able to use other integrated IDE's such as JetBrains' CLion in a similar manner.
 
 ## Linux
 
-Ubuntu 16.04 and later have compatible compilers in the package manager, so
-installing the necessary compiler can be done with `sudo apt-get install gcc`.
-If you're on an older version of Ubuntu, you should be able to install a newer
-GCC version using the following:
+All recent Linux distribution releases have compatible C++11 compilers, you
+should be able to install it using your package manager.
+
+For example, on Ubuntu you would use the following command to install gcc.
+
+```bash
+$ sudo apt-get install gcc
+$ gcc --version
+```
+
+If you are on an older distribution, you might not have a compiler that
+supports C++11. In that case you will need to install it through an alternate
+method. For example, Ubuntu 15.10 or earlier don't provide compatible compilers
+in the package manager, so if you are using that version you will need to use
+the following:
 
 ```bash
 $ sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
@@ -76,9 +87,6 @@ $ sudo apt-get -qq install g++-5
 $ # make g++ 5 the default g++ executable
 $ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 90
 ```
-
-For other distributions, you should be able to acquire the compiler through your
-package manager.
 
 ## MacOS
 
