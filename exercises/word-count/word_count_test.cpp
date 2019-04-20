@@ -1,5 +1,4 @@
 #include "word_count.h"
-#define CATCH_CONFIG_MAIN
 #include "test/catch.hpp"
 #include <map>
 

@@ -1,5 +1,4 @@
 #include "roman_numerals.h"
-#define CATCH_CONFIG_MAIN
 #include "test/catch.hpp"
 
 TEST_CASE("one_yields_I")

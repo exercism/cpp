@@ -1,5 +1,4 @@
 #include "binary.h"
-#define CATCH_CONFIG_MAIN
 #include "test/catch.hpp"
 
 TEST_CASE("b1_is_decimal_1")

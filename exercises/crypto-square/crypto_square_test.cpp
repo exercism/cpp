@@ -1,5 +1,4 @@
 #include "crypto_square.h"
-#define CATCH_CONFIG_MAIN
 #include "test/catch.hpp"
 
 TEST_CASE("normalize_capitals")

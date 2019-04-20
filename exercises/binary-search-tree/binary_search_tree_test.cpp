@@ -1,5 +1,4 @@
 #include "binary_search_tree.h"
-#define CATCH_CONFIG_MAIN
 #include "test/catch.hpp"
 #include <vector>
 

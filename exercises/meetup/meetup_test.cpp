@@ -1,5 +1,4 @@
 #include "meetup.h"
-#define CATCH_CONFIG_MAIN
 #include <boost/date_time/gregorian/gregorian.hpp>
 #include "test/catch.hpp"
 

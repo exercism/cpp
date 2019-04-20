@@ -1,5 +1,4 @@
 #include "beer_song.h"
-#define CATCH_CONFIG_MAIN
 #include "test/catch.hpp"
 
 using namespace std;

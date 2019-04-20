@@ -18,7 +18,7 @@ else()
 endif()
 
 # Build executable from sources and headers
-add_executable(${exercise} ${file}_test.cpp ${exercise_cpp} ${file}.h)
+add_executable(${exercise} ${file}_test.cpp ${exercise_cpp} ${file}.h test/tests-main.cpp)
 
 set_target_properties(${exercise} PROPERTIES
     CXX_STANDARD 11

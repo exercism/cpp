@@ -1,5 +1,4 @@
 #include "all_your_base.h"
-#define CATCH_CONFIG_MAIN
 #include "test/catch.hpp"
 
 using namespace std;

@@ -1,5 +1,4 @@
 #include "rna_transcription.h"
-#define CATCH_CONFIG_MAIN
 #include "test/catch.hpp"
 
 TEST_CASE("transcribes_cytidine_to_guanosine")
