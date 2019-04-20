@@ -13,21 +13,13 @@ There are not many active contributors, so anyone reviewing PRs or Issues, even 
 
 ## Adding an exercise
 
-Note: We are in the process of transitioning from using the Boost test suite to
-Catch, see [#233](https://github.com/exercism/cpp/issues/233). As such, we will
-not be taking any new exercises that use the Boost test suite. Please see one
-of the exercises that use Catch for examples on how that is setup.
-
-Additionally, any exercises submitted while that work is ongoing will not be a
-priority, so may take a while to review.
-
 Here is a list of things that need to be done to add an exercise to this track.
 
-1. Add the exercise under the exercises/ directory.
-2. Create your test suite based on the canonical tests in the [problem specifications](https://github.com/exercism/problem-specifications) repo.
-3. Create an example solution and name the files 'example.cpp' and 'example.h'.
+1. Add the exercise under the `exercises/` directory.
+2. Create your test suite based on the canonical tests in the [problem specifications](https://github.com/exercism/problem-specifications) repo, and add a comment at the top of the test suite noting the version of the test suite it implements.
+3. Create an example solution and name the files `example.cpp` and `example.h`. `example.cpp` is optional but encouraged.
 4. Add the test to the list in the root CMakeLists.txt file.
-5. Add the test to the config.json file. The [configlet](https://github.com/exercism/configlet) can help generate a unique UUID.
+5. Add the test to the config.json file. The [configlet](https://github.com/exercism/configlet) can help generate a unique UUID. You can download configlet using the script in `bin/fetch-configlet`.
 6. Use the [configlet](https://github.com/exercism/configlet) tool to generate the README for your exercise.
 7. Try to match the formatting used in the other tests as closely as possible.
 
