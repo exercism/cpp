@@ -1,86 +1,83 @@
 #include "crypto_square.h"
-#define BOOST_TEST_MAIN
-#include <boost/test/unit_test.hpp>
+#define CATCH_CONFIG_MAIN
+#include "test/catch.hpp"
 
-BOOST_AUTO_TEST_CASE(normalize_capitals)
+TEST_CASE("normalize_capitals")
 {
-    BOOST_REQUIRE_EQUAL("hello", crypto_square::cipher("Hello").normalize_plain_text());
+    REQUIRE("hello" == crypto_square::cipher("Hello").normalize_plain_text());
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
-BOOST_AUTO_TEST_CASE(normalize_spaces)
+TEST_CASE("normalize_spaces")
 {
-    BOOST_REQUIRE_EQUAL("hithere", crypto_square::cipher("Hi there").normalize_plain_text());
+    REQUIRE("hithere" == crypto_square::cipher("Hi there").normalize_plain_text());
 }
 
-BOOST_AUTO_TEST_CASE(normalize_numbers)
+TEST_CASE("normalize_numbers")
 {
-    BOOST_REQUIRE_EQUAL("123go", crypto_square::cipher("1, 2, 3 GO!").normalize_plain_text());
+    REQUIRE("123go" == crypto_square::cipher("1, 2, 3 GO!").normalize_plain_text());
 }
 
-BOOST_AUTO_TEST_CASE(plain_text_empty)
+TEST_CASE("plain_text_empty")
 {
     const std::vector<std::string> expected{};
 
     const auto actual = crypto_square::cipher("").plain_text_segments();
 
-    BOOST_REQUIRE_EQUAL_COLLECTIONS(expected.begin(), expected.end(), actual.begin(), actual.end());
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(plain_text_4_characters)
+TEST_CASE("plain_text_4_characters")
 {
     const std::vector<std::string> expected{"ab", "cd"};
 
     const auto actual = crypto_square::cipher("Ab Cd").plain_text_segments();
 
-    BOOST_REQUIRE_EQUAL_COLLECTIONS(expected.begin(), expected.end(), actual.begin(), actual.end());
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(plain_text_9_characters)
+TEST_CASE("plain_text_9_characters")
 {
     const std::vector<std::string> expected{"thi", "sis", "fun"};
 
     const auto actual = crypto_square::cipher("This is fun!").plain_text_segments();
 
-    BOOST_REQUIRE_EQUAL_COLLECTIONS(expected.begin(), expected.end(), actual.begin(), actual.end());
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(plain_text_segments_from_phrase)
+TEST_CASE("plain_text_segments_from_phrase")
 {
     const std::vector<std::string> expected{"ifmanwas", "meanttos", "tayonthe", "groundgo", "dwouldha", "vegivenu", "sroots"};
 
     const auto actual = crypto_square::cipher("If man was meant to stay on the ground, god would have given us roots.").plain_text_segments();
 
-    BOOST_REQUIRE_EQUAL_COLLECTIONS(expected.begin(), expected.end(), actual.begin(), actual.end());
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(cipher_text_empty_phrase)
+TEST_CASE("cipher_text_empty_phrase")
 {
-    BOOST_REQUIRE_EQUAL("",
-        crypto_square::cipher("").cipher_text());
+    REQUIRE("" == crypto_square::cipher("").cipher_text());
 }
 
-BOOST_AUTO_TEST_CASE(cipher_text_long_phrase)
+TEST_CASE("cipher_text_long_phrase")
 {
-    BOOST_REQUIRE_EQUAL("imtgdvsfearwermayoogoanouuiontnnlvtwttddesaohghnsseoau",
+    REQUIRE("imtgdvsfearwermayoogoanouuiontnnlvtwttddesaohghnsseoau" ==
         crypto_square::cipher("If man was meant to stay on the ground, god would have given us roots.").cipher_text());
 }
 
-BOOST_AUTO_TEST_CASE(normalized_cipher_text_empty)
+TEST_CASE("normalized_cipher_text_empty")
 {
-    BOOST_REQUIRE_EQUAL("",
-        crypto_square::cipher("").normalized_cipher_text());
+    REQUIRE("" == crypto_square::cipher("").normalized_cipher_text());
 }
 
-BOOST_AUTO_TEST_CASE(normalized_cipher_text_fun)
+TEST_CASE("normalized_cipher_text_fun")
 {
-    BOOST_REQUIRE_EQUAL("tsf hiu isn",
-        crypto_square::cipher("This is fun!").normalized_cipher_text());
+    REQUIRE("tsf hiu isn" == crypto_square::cipher("This is fun!").normalized_cipher_text());
 }
 
-BOOST_AUTO_TEST_CASE(normalized_cipher_text_long_phrase)
+TEST_CASE("normalized_cipher_text_long_phrase")
 {
-    BOOST_REQUIRE_EQUAL("imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau ",
+    REQUIRE("imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau " ==
         crypto_square::cipher("If man was meant to stay on the ground, god would have given us roots.").normalized_cipher_text());
 }
 #endif

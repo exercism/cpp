@@ -8,7 +8,7 @@ using namespace std;
 namespace
 {
 
-string to_lower_copy(std::string& s)
+string to_lower_copy(string const& s)
 {
     string cpy(s);
     for (auto& c: cpy) {
@@ -17,7 +17,7 @@ string to_lower_copy(std::string& s)
     return cpy;
 }
 
-string normalize(string const &text)
+string normalize(string const& text)
 {
     string result;
     copy_if(text.begin(), text.end(), back_inserter(result),
