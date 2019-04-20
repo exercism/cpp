@@ -20,56 +20,10 @@ endfunction()
 
 option(EXERCISM_RUN_ALL_TESTS "Run all Exercism tests" On)
 
-foreach(exercise
-    hello-world
-    bob
-    word-count
-    hamming
-    anagram
-    food-chain
-    beer-song
-    nucleotide-count
-    rna-transcription
-    phone-number
-    grade-school
-    robot-name
-    leap
-    etl
-    space-age
-    grains
-    gigasecond
-    triangle
-    clock
-    raindrops
-    difference-of-squares
-    roman-numerals
-    nth-prime
-    sieve
-    binary
-    sum-of-multiples
-    series
-    prime-factors
-    pascals-triangle
-    trinary
-    crypto-square
-    scrabble-score
-    hexadecimal
-    say
-    meetup
-    queen-attack
-    allergies
-    atbash-cipher
-    bracket-push
-    all-your-base
-    pangram
-    binary-search-tree
-    robot-simulator
-    binary-search
-    isogram
-    reverse-string
-    acronym
-    luhn
-)
+file(GLOB exercise_list ${CMAKE_CURRENT_SOURCE_DIR}/exercises/*)
+
+foreach(exercise_dir ${exercise_list})
+    get_filename_component(exercise ${exercise_dir} NAME)
     travis_fixup(${exercise} ${alt_exercise_tree})
     add_subdirectory(${alt_exercise_tree}/${exercise})
 endforeach()
