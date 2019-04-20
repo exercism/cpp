@@ -49,5 +49,6 @@ install:
 script:
   - bin/fetch-configlet
   - bin/configlet lint .
+  - bin/check-configlet-fmt.sh
   - cmake -G Ninja
   - ninja
