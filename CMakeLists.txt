@@ -19,6 +19,16 @@ function(travis_fixup exercise_dir alt_exercise_root)
 endfunction()
 
 option(EXERCISM_RUN_ALL_TESTS "Run all Exercism tests" On)
+option(EXERCISM_COMMON_CATCH "Link against a common Catch2 main lib." On)
+
+if(${EXERCISM_COMMON_CATCH})
+    add_library(catchlib OBJECT test/tests-main.cpp)
+    set_target_properties(catchlib PROPERTIES
+        CXX_STANDARD 11
+        CXX_STANDARD_REQUIRED OFF
+        CXX_EXTENSIONS OFF
+    )
+endif()
 
 file(GLOB exercise_list ${CMAKE_CURRENT_SOURCE_DIR}/exercises/*)
 
