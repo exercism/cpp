@@ -1,5 +1,4 @@
 #include "luhn.h"
-#define CATCH_CONFIG_MAIN
 #include "test/catch.hpp"
 
 //Luhn exercise test case data version 1.5.0

@@ -1,5 +1,4 @@
 #include "queen_attack.h"
-#define CATCH_CONFIG_MAIN
 #include "test/catch.hpp"
 
 TEST_CASE("queens_in_default_positions")

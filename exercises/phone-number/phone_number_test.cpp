@@ -1,6 +1,5 @@
 #include "phone_number.h"
 
-#define CATCH_CONFIG_MAIN
 #include "test/catch.hpp"
 #include <exception>
 

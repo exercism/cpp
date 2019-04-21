@@ -1,5 +1,4 @@
 #include "robot_name.h"
-#define CATCH_CONFIG_MAIN
 #include "test/catch.hpp"
 #include <cctype>
 #include <string>

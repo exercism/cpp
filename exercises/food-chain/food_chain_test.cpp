@@ -1,5 +1,4 @@
 #include "food_chain.h"
-#define CATCH_CONFIG_MAIN
 #include "test/catch.hpp"
 
 using namespace std;

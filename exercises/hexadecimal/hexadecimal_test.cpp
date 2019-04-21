@@ -1,5 +1,4 @@
 #include "hexadecimal.h"
-#define CATCH_CONFIG_MAIN
 #include "test/catch.hpp"
 
 TEST_CASE("hex_1_is_decimal_1")

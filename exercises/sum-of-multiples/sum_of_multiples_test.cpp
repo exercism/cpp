@@ -1,5 +1,4 @@
 #include "sum_of_multiples.h"
-#define CATCH_CONFIG_MAIN
 #include "test/catch.hpp"
 
 TEST_CASE("sum_to_1_yields_0")

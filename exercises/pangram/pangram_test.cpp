@@ -1,5 +1,4 @@
 #include "pangram.h"
-#define CATCH_CONFIG_MAIN
 #include "test/catch.hpp"
 
 TEST_CASE("sentence_empty")

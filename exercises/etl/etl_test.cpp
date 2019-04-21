@@ -1,5 +1,4 @@
 #include "etl.h"
-#define CATCH_CONFIG_MAIN
 #include <map>
 #include "test/catch.hpp"
 

@@ -1,5 +1,4 @@
 #include "bracket_push.h"
-#define CATCH_CONFIG_MAIN
 #include "test/catch.hpp"
 
 TEST_CASE("paired_square_brackets")

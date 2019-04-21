@@ -1,5 +1,4 @@
 #include "binary_search.h"
-#define CATCH_CONFIG_MAIN
 #include "test/catch.hpp"
 #include <stdexcept>
 #include <vector>
