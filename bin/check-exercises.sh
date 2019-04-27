@@ -18,12 +18,6 @@ else
 fi
 echo ""
 
-# Compiling just hello world directly from its directory. This matches the
-# flow of students directly.
-hello_world_dir="$repo"/build_exercises/hello-world
-cmake -G Ninja "$hello_world_dir"
-cmake --build "$hello_world_dir"
-
 if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     echo "This is not a Pull Request, running all tests."
     cmake --build "$repo"
