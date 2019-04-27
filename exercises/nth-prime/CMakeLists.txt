@@ -18,12 +18,12 @@ else()
 endif()
 
 # Use the common Catch library?
-# For Exercism track development only
-if(NOT ${EXERCISM_COMMON_CATCH})
+if(EXERCISM_COMMON_CATCH)
+    # For Exercism track development only
+    add_executable(${exercise} ${file}_test.cpp ${exercise_cpp} ${file}.h $<TARGET_OBJECTS:catchlib>)
+else()
     # Build executable from sources and headers
     add_executable(${exercise} ${file}_test.cpp ${exercise_cpp} ${file}.h test/tests-main.cpp)
-else()
-    add_executable(${exercise} ${file}_test.cpp ${exercise_cpp} ${file}.h $<TARGET_OBJECTS:catchlib>)
 endif()
 
 set_target_properties(${exercise} PROPERTIES
