@@ -50,4 +50,5 @@ script:
   - bin/fetch-configlet
   - bin/configlet lint .
   - bin/check-configlet-fmt.sh
+  - bin/check-hello-world.sh
   - bin/check-exercises.sh
