@@ -6,11 +6,11 @@ using namespace std;
 
 namespace hello_world {
 
-// Define the function itself. This could have also been written as 'std::string
-// hello_world::hello()'.
+// Define the function itself. This could have also been written as:
+// std::string hello_world::hello()
 string hello() {
     // Return the string we need.
-    return "Hello!";
+    return "Fix me!";
 }
 
 }  // namespace hello_world
