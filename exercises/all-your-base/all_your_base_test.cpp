@@ -102,50 +102,43 @@ TEST_CASE("multiple_zeros") {
 
 TEST_CASE("leading_zeros") {
     vector<unsigned int> in_digits{0, 6, 0};
-    vector<unsigned int> expected{};
+    vector<unsigned int> expected{4, 2};
     vector<unsigned int> out_digits = all_your_base::convert(7, in_digits, 10);
 
     REQUIRE(expected == out_digits);
 }
 
-TEST_CASE("first_base_is_one") {
-    vector<unsigned int> in_digits{};
-    vector<unsigned int> expected{};
-    vector<unsigned int> out_digits = all_your_base::convert(1, in_digits, 10);
+TEST_CASE("decimal_to_unary") {
+	std::vector<unsigned int> in_digits{1, 0};
+	std::vector<unsigned int> out_digits = all_your_base::convert(10, in_digits, 1);
+
+	REQUIRE(out_digits.size() == 10);
+}
+
+TEST_CASE("unary_to_decimal") {
+    std::vector<unsigned int> in_digits{1,1,1,1,1};
+    std::vector<unsigned int> out_digits = all_your_base::convert(1, in_digits, 10);
+    std::vector<unsigned int> expected{5};
 
     REQUIRE(expected == out_digits);
 }
 
 TEST_CASE("first_base_is_zero") {
     vector<unsigned int> in_digits{};
-    vector<unsigned int> expected{};
-    vector<unsigned int> out_digits = all_your_base::convert(0, in_digits, 10);
 
-    REQUIRE(expected == out_digits);
+    REQUIRE_THROWS_AS(all_your_base::convert(0, in_digits, 10), std::invalid_argument);
 }
 
 TEST_CASE("invalid_positive_digit") {
     vector<unsigned int> in_digits{1, 2, 1, 0, 1, 0};
-    vector<unsigned int> expected{};
-    vector<unsigned int> out_digits = all_your_base::convert(2, in_digits, 10);
 
-    REQUIRE(expected == out_digits);
-}
-
-TEST_CASE("second_base_is_one") {
-    vector<unsigned int> in_digits{1, 0, 1, 0, 1, 0};
-    vector<unsigned int> expected{};
-    vector<unsigned int> out_digits = all_your_base::convert(2, in_digits, 1);
-
-    REQUIRE(expected == out_digits);
+    REQUIRE_THROWS_AS(all_your_base::convert(2, in_digits, 10), std::invalid_argument);
 }
 
 TEST_CASE("second_base_is_zero") {
     vector<unsigned int> in_digits{7};
-    vector<unsigned int> expected{};
-    vector<unsigned int> out_digits = all_your_base::convert(10, in_digits, 0);
 
-    REQUIRE(expected == out_digits);
+    REQUIRE_THROWS_AS(all_your_base::convert(10, in_digits, 0), std::invalid_argument);
 }
 
 #endif
