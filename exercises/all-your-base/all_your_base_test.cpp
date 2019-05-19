@@ -3,15 +3,8 @@
 
 using namespace std;
 
-TEST_CASE("test1") {
-    vector<unsigned int> in_digits{0};
-    vector<unsigned int> out_digits = all_your_base::convert(10, in_digits, 2);
-    vector<unsigned int> expected{};
+//all-your-base exercise test case data version 2.3.0
 
-    REQUIRE(expected == out_digits);
-}
-
-#if defined(EXERCISM_RUN_ALL_TESTS)
 TEST_CASE("single_bit_one_to_decimal") {
     vector<unsigned int> in_digits{1};
     vector<unsigned int> expected{1};
@@ -20,6 +13,7 @@ TEST_CASE("single_bit_one_to_decimal") {
     REQUIRE(expected == out_digits);
 }
 
+#if defined(EXERCISM_RUN_ALL_TESTS)
 TEST_CASE("binary_to_single_decimal") {
     vector<unsigned int> in_digits{1, 0, 1};
     vector<unsigned int> expected{5};
@@ -110,26 +104,31 @@ TEST_CASE("leading_zeros") {
 
 TEST_CASE("first_base_is_one") {
     vector<unsigned int> in_digits{};
+
     REQUIRE_THROWS_AS(all_your_base::convert(1, in_digits, 10), std::invalid_argument);
 }
 
 TEST_CASE("first_base_is_zero") {
     vector<unsigned int> in_digits{};
+
     REQUIRE_THROWS_AS(all_your_base::convert(0, in_digits, 10), std::invalid_argument);
 }
 
 TEST_CASE("invalid_positive_digit") {
     vector<unsigned int> in_digits{1, 2, 1, 0, 1, 0};
+
     REQUIRE_THROWS_AS(all_your_base::convert(2, in_digits, 10), std::invalid_argument);
 }
 
 TEST_CASE("second_base_is_one") {
     vector<unsigned int> in_digits{1, 0, 1, 0, 1, 0};
+
     REQUIRE_THROWS_AS(all_your_base::convert(2, in_digits, 1), std::invalid_argument);
 }
 
 TEST_CASE("second_base_is_zero") {
     vector<unsigned int> in_digits{7};
+
     REQUIRE_THROWS_AS(all_your_base::convert(10, in_digits, 0), std::invalid_argument);
 }
 
