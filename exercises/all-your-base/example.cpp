@@ -1,5 +1,6 @@
 #include "all_your_base.h"
 #include <vector>
+#include <stdexcept>
 
 namespace all_your_base {
 
@@ -8,15 +9,13 @@ std::vector<unsigned int> convert(unsigned int input_base,
                                   unsigned int output_base) {
     std::vector<unsigned int> b;
     unsigned int value = 0;
+    if (input_base <= 1 || output_base <= 1)
+        throw std::invalid_argument("Invalid base");
     if (input_digits.empty())
-        return {};
-    if (!input_digits.empty() && input_digits.front() == 0)
-        return {};
-    if (input_base == 0 || output_base <= 1)
         return {};
     for (unsigned int d : input_digits) {
         if (d >= input_base)
-            return {};
+            throw std::invalid_argument("Invalid number");
         value = value * input_base + d;
     }
     while (value != 0) {
