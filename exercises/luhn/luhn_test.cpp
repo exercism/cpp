@@ -93,6 +93,7 @@ TEST_CASE("valid_strings_with_a_non_digit_added_at_the_end_become_invalid")
 
     REQUIRE(expected == actual);
 }
+
 TEST_CASE("valid_strings_with_punctuation_included_become_invalid")
 {
     const bool actual = luhn::valid("055-444-285");
