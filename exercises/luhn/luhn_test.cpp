@@ -76,6 +76,15 @@ TEST_CASE("valid_number_with_an_even_number_of_digits")
     REQUIRE(expected == actual);
 }
 
+TEST_CASE("valid_number_with_an_odd_number_of_spaces")
+{
+    const bool actual = luhn::valid("234 567 891 234");
+
+    const bool expected {true};
+
+    REQUIRE(expected == actual);
+}
+
 TEST_CASE("valid_strings_with_a_non_digit_added_at_the_end_become_invalid")
 {
     const bool actual = luhn::valid("059a");
