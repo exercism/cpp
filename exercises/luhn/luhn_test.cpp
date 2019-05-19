@@ -1,7 +1,7 @@
 #include "luhn.h"
 #include "test/catch.hpp"
 
-//Luhn exercise test case data version 1.5.0
+//Luhn exercise test case data version 1.6.0
 
 TEST_CASE("single_digit_strings_can_not_be_valid")
 {
