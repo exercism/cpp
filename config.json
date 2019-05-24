@@ -543,6 +543,18 @@
         "math",
         "strings"
       ]
+    },
+    {
+      "slug": "armstrong-numbers",
+      "uuid": "1035aa3f-030a-425b-84f1-1967f344d155",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "algorithm",
+        "loops",
+        "math"
+      ]
     }
   ]
 }
