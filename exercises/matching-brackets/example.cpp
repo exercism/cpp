@@ -1,9 +1,9 @@
-#include "bracket_push.h"
+#include "matching_brackets.h"
 #include <stack>
 
 using namespace std;
 
-namespace bracket_push {
+namespace matching_brackets {
 
 bool check(string const& expression)
 {
