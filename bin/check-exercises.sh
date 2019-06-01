@@ -27,7 +27,7 @@ elif git diff --name-only master | grep "^CMakeLists.txt"; then
     cmake --build "$repo" -- test_hello-world
     cmake --build "$repo"
 else
-    tests="$(git diff --name-only master | grep "^exercises/" | cut -d '/' -f2 | sed 's/.*/test_&/' | uniq | tr '\n' ' ')"
+    tests="$(git diff --diff-filter=d --name-only master | grep "^exercises/" | cut -d '/' -f2 | sed 's/.*/test_&/' | uniq | tr '\n' ' ')"
     if [ ${#tests} -ne 0 ]; then
         echo "Running only tests that have changed."
         cmake --build "$repo" -- $tests
