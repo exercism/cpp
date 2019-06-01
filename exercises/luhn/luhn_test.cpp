@@ -1,7 +1,7 @@
 #include "luhn.h"
 #include "test/catch.hpp"
 
-//Luhn exercise test case data version 1.5.0
+//Luhn exercise test case data version 1.6.0
 
 TEST_CASE("single_digit_strings_can_not_be_valid")
 {
@@ -76,6 +76,15 @@ TEST_CASE("valid_number_with_an_even_number_of_digits")
     REQUIRE(expected == actual);
 }
 
+TEST_CASE("valid_number_with_an_odd_number_of_spaces")
+{
+    const bool actual = luhn::valid("234 567 891 234");
+
+    const bool expected {true};
+
+    REQUIRE(expected == actual);
+}
+
 TEST_CASE("valid_strings_with_a_non_digit_added_at_the_end_become_invalid")
 {
     const bool actual = luhn::valid("059a");
@@ -84,6 +93,7 @@ TEST_CASE("valid_strings_with_a_non_digit_added_at_the_end_become_invalid")
 
     REQUIRE(expected == actual);
 }
+
 TEST_CASE("valid_strings_with_punctuation_included_become_invalid")
 {
     const bool actual = luhn::valid("055-444-285");
