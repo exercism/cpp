@@ -9,7 +9,13 @@ set -e
 repo=$(cd "$(dirname "$0")/.." && pwd)
 
 # Configure all the tests.
-cmake -G Ninja "$repo"
+if [ "$EXERCISM_COMMON_CATCH" == "false" ]; then
+    echo "Using bundled Catch main libraries."
+    cmake -G Ninja -DEXERCISM_COMMON_CATCH=OFF "$repo"
+else
+    echo "Using a common Catch main library."
+    cmake -G Ninja "$repo"
+fi
 echo ""
 
 if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
