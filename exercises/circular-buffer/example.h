@@ -40,7 +40,7 @@ void circular_buffer<ValueType>::write(ValueType item) {
 
 template <typename ValueType>
 void circular_buffer<ValueType>::overwrite(ValueType item) {
-    if (is_full()) head_ = ++head_ % buffer_.size();
+    if (is_full()) head_ = (head_ + 1) % buffer_.size();
     insert(item);
 }
 
