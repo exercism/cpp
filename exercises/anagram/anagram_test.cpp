@@ -3,6 +3,8 @@
 
 using namespace std;
 
+// Anagram exercise test case data version 1.4.0
+
 TEST_CASE("no_matches")
 {
     // 'anagram::anagram' defines a class
@@ -14,25 +16,7 @@ TEST_CASE("no_matches")
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
-TEST_CASE("detects_simple_anagram")
-{
-    auto subject = anagram::anagram("ant");
-    auto matches = subject.matches({"tan", "stand", "at"});
-    vector<string> expected{"tan"};
-
-    REQUIRE(expected == matches);
-}
-
-TEST_CASE("does_not_detect_false_positives")
-{
-    auto subject = anagram::anagram("galea");
-    auto matches = subject.matches({"eagle"});
-    vector<string> expected;
-
-    REQUIRE(expected == matches);
-}
-
-TEST_CASE("detects_multiple_anagrams")
+TEST_CASE("detects_two_anagrams")
 {
     auto subject = anagram::anagram("master");
     auto matches = subject.matches({"stream", "pigeon", "maters"});
@@ -59,11 +43,27 @@ TEST_CASE("detects_anagram")
     REQUIRE(expected == matches);
 }
 
-TEST_CASE("detects_multiple_anagrams2")
+TEST_CASE("detects_three_anagrams")
 {
     auto subject = anagram::anagram("allergy");
-    auto matches = subject.matches({"gallery", "ballerina", "regally", "clergy", "largely", "leading"});
+    auto matches = subject.matches({
+        "gallery",
+        "ballerina",
+        "regally",
+        "clergy",
+        "largely",
+        "leading"
+    });
     vector<string> expected{"gallery", "regally", "largely"};
+
+    REQUIRE(expected == matches);
+}
+
+TEST_CASE("does_not_detect_non_anagrams_with_identical_checksum")
+{
+    auto subject = anagram::anagram("mass");
+    auto matches = subject.matches({"last"});
+    vector<string> expected;
 
     REQUIRE(expected == matches);
 }
@@ -77,20 +77,47 @@ TEST_CASE("detects_anagrams_case_insensitively")
     REQUIRE(expected == matches);
 }
 
-TEST_CASE("does_not_detect_a_word_as_its_own_anagram")
+TEST_CASE("detects_anagrams_using_case_insensitive_subject")
 {
-    auto subject = anagram::anagram("banana");
-    auto matches = subject.matches({"Banana"});
+    auto subject = anagram::anagram("Orchestra");
+    auto matches = subject.matches({"cashregister", "carthorse", "radishes"});
+    vector<string> expected{"carthorse"};
+
+    REQUIRE(expected == matches);
+}
+
+TEST_CASE("detects_anagrams_using_case_insensitive_possible_matches")
+{
+    auto subject = anagram::anagram("orchestra");
+    auto matches = subject.matches({"cashregister", "Carthorse", "radishes"});
+    vector<string> expected{"Carthorse"};
+
+    REQUIRE(expected == matches);
+}
+
+TEST_CASE("does_not_detect_a_anagram_if_the_original_word_is_repeated")
+{
+    auto subject = anagram::anagram("go");
+    auto matches = subject.matches({"go Go GO"});
     vector<string> expected;
 
     REQUIRE(expected == matches);
 }
 
-TEST_CASE("matches_accepts_string_arguments")
+TEST_CASE("anagrams_must_use_all_letters_exactly_once")
 {
-    auto subject = anagram::anagram("ant");
-    auto matches = subject.matches({"stand", "tan", "at"});
-    vector<string> expected{"tan"};
+    auto subject = anagram::anagram("tapper");
+    auto matches = subject.matches({"patter"});
+    vector<string> expected;
+
+    REQUIRE(expected == matches);
+}
+
+TEST_CASE("words_are_not_anagrams_of_themselves_case_insensitive")
+{
+    auto subject = anagram::anagram("BANANA");
+    auto matches = subject.matches({"BANANA", "Banana", "banana"});
+    vector<string> expected;
 
     REQUIRE(expected == matches);
 }
