@@ -14,10 +14,10 @@ string trim_copy(string const& s)
 {
     string cpy(s);
     // Trim front
-    while (!cpy.empty() && cpy.front() == ' ')
+    while (!cpy.empty() && std::isspace(static_cast<unsigned char>(cpy.front())))
         cpy.erase(cpy.begin());
     // Trim back
-    while (!cpy.empty() && cpy.back() == ' ')
+    while (!cpy.empty() && std::isspace(static_cast<unsigned char>(cpy.back())))
         cpy.pop_back();
     return cpy;
 }
@@ -52,7 +52,7 @@ bool is_silence(string const& text)
     return trim_copy(text).length() == 0;
 }
 
-}
+} // anonymous namespace
 
 string hey(string const& text)
 {
@@ -60,6 +60,8 @@ string hey(string const& text)
         return "Fine. Be that way!";
     }
     if (is_shouting(text)) {
+        if (is_question(text))
+            return "Calm down, I know what I'm doing!";
         return "Whoa, chill out!";
     }
     if (is_question(text)) {
@@ -68,4 +70,4 @@ string hey(string const& text)
     return "Whatever.";
 }
 
-}
+} // namespace bob
