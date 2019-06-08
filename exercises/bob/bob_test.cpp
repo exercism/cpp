@@ -79,7 +79,7 @@ TEST_CASE("statement_containing_question_mark")
     REQUIRE("Whatever." == bob::hey("Ending with ? means a question."));
 }
 
-TEST_CASE("non_letters_with_uestion")
+TEST_CASE("non_letters_with_question")
 {
     REQUIRE("Sure." == bob::hey(":) ?"));
 }
