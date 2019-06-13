@@ -3,7 +3,6 @@
 
 #include <vector>
 #include <stdexcept>
-#include <iostream>
 
 namespace circular_buffer {
 
