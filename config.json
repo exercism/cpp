@@ -555,6 +555,18 @@
         "loops",
         "math"
       ]
+    },
+    {
+      "slug": "circular-buffer",
+      "uuid": "92788dbc-feb2-43a6-99c0-af21ce318b01",
+      "core": false,
+      "unlocked_by": "raindrops",
+      "difficulty": 6,
+      "topics": [
+        "algorithm",
+        "classes",
+        "data_structure"
+      ]
     }
   ]
 }
