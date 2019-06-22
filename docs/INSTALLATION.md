@@ -13,14 +13,14 @@ issues setting it up you will find many helpful resources online.
 
 Many IDE's, including Microsoft's Visual Studio, Apple's Xcode, and JetBrains'
 CLion bundle a compiler and CMake together, so you should only need to install
-the IDE. 
+the IDE.
 
 ### A Modern C++14 Compiler
 
 This language track requires a compiler with [C++14](http://en.wikipedia.org/wiki/C%2B%2B14)
 support, which was released in 2014. All major compilers released in the last few years should
 be compatible, so as long as you are on a fairly recent version you should be fine.
-Specifically, GCC version 7 or later, Clang version 6 or later, or Visual
+Specifically, GCC version 5 or later, Clang version 3.8 or later, or Visual
 Studio 2017 or later.
 
 ### CMake
@@ -45,7 +45,7 @@ systems.  If you encounter any problems with the supplied CMake recipe,
 please [report the issue](https://github.com/exercism/cpp/issues) so we can
 improve the CMake support.
 
-[CMake 3.1.3 or later](http://www.cmake.org/) is required to use the provided build recipe.
+[CMake 3.5.1 or later](http://www.cmake.org/) is required to use the provided build recipe.
 
 ## Windows
 
@@ -65,7 +65,8 @@ You should be able to use other integrated IDE's such as JetBrains' CLion in a s
 ## Linux
 
 All recent Linux distribution releases have compatible C++14 compilers, you
-should be able to install it using your package manager.
+should be able to install it using your package manager. The versions we support
+are the default installed versions in Ubuntu LTS 16.04.
 
 For example, on Ubuntu you would use the following command to install gcc.
 
