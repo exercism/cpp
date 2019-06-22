@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.1.3)
+cmake_minimum_required(VERSION 3.5.1)
 project(exercism CXX)
 
 set(alt_exercise_tree ${CMAKE_CURRENT_SOURCE_DIR}/build_exercises)
