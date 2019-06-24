@@ -15,6 +15,7 @@ find_package(Boost 1.59 REQUIRED COMPONENTS date_time)
 
 if("${CMAKE_CXX_COMPILER_ID}" MATCHES "(GNU|Clang)")
     option(ENABLE_ASAN "Enable compiler's built-in address sanitizer" OFF)
+    option(ENABLE_UBSAN "Enable compiler's built-in undefined behavior sanitizer" OFF)
 endif()
 
 # Get a source filename from the exercise name by replacing -'s with _'s
@@ -46,6 +47,11 @@ if(ENABLE_ASAN)
     set_property(CACHE CMAKE_BUILD_TYPE PROPERTY VALUE "Debug")
     target_compile_options(${exercise} PRIVATE "-fsanitize=address" "-fno-omit-frame-pointer" "-O1")
     target_link_libraries(${exercise} PRIVATE "-fsanitize=address")
+endif()
+
+if(ENABLE_UBSAN)
+    target_compile_options(${exercise} PRIVATE "-fsanitize=undefined")
+    target_link_libraries(${exercise} PRIVATE "-fsanitize=undefined")
 endif()
 
 if("${CMAKE_CXX_COMPILER_ID}" MATCHES "(GNU|Clang)")
