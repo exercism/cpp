@@ -572,7 +572,7 @@
       "slug": "collatz-conjecture",
       "uuid": "c74f60b3-48fe-46c5-ae52-5e4b0787ba84",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "leap",
       "difficulty": 2,
       "topics": [
         "functions",
