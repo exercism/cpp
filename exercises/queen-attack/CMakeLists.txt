@@ -2,7 +2,7 @@
 get_filename_component(exercise ${CMAKE_CURRENT_SOURCE_DIR} NAME)
 
 # Basic CMake project
-cmake_minimum_required(VERSION 3.1.3)
+cmake_minimum_required(VERSION 3.5.1)
 
 # Name the project after the exercise
 project(${exercise} CXX)
@@ -27,7 +27,7 @@ else()
 endif()
 
 set_target_properties(${exercise} PROPERTIES
-    CXX_STANDARD 11
+    CXX_STANDARD 14
     CXX_STANDARD_REQUIRED OFF
     CXX_EXTENSIONS OFF
 )

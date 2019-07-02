@@ -82,7 +82,7 @@ TEST_CASE("allergic_to_eggs_and_other_stuff")
 TEST_CASE("allergic_to_nothing")
 {
     allergies::allergy_test score(0);
-    const std::unordered_set<std::string> no_allergies;
+    const std::unordered_set<std::string> no_allergies{};
 
     REQUIRE(no_allergies == score.get_allergies());
 }

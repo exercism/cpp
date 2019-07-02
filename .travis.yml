@@ -5,13 +5,13 @@ os: linux
 
 matrix:
   include:
-    - env: COMPILER=g++-4.9
+    - env: COMPILER=g++-5
       addons:
         apt:
           sources:
             - ubuntu-toolchain-r-test
           packages:
-            - g++-4.9
+            - g++-5
 
     - env: COMPILER=clang++-3.8
       addons:
@@ -21,6 +21,7 @@ matrix:
             - llvm-toolchain-precise-3.8
           packages:
             - clang-3.8
+            - g++-5
 
     - env:
       - COMPILER=clang++-7
