@@ -3,7 +3,7 @@
 
 using namespace std;
 
-// Anagram exercise test case data version 1.4.0
+// Anagram exercise test case data version 1.5.0
 
 TEST_CASE("no_matches")
 {
@@ -55,6 +55,15 @@ TEST_CASE("detects_three_anagrams")
         "leading"
     });
     vector<string> expected{"gallery", "regally", "largely"};
+
+    REQUIRE(expected == matches);
+}
+
+TEST_CASE("detects_multiple_anagrams_with_different_case")
+{
+    auto subject = anagram::anagram("nose");
+    auto matches = subject.matches({"Eons", "ONES"});
+    vector<string> expected{"Eons", "ONES"};
 
     REQUIRE(expected == matches);
 }
@@ -118,6 +127,15 @@ TEST_CASE("words_are_not_anagrams_of_themselves_case_insensitive")
     auto subject = anagram::anagram("BANANA");
     auto matches = subject.matches({"BANANA", "Banana", "banana"});
     vector<string> expected;
+
+    REQUIRE(expected == matches);
+}
+
+TEST_CASE("words_other_than_themselves_can_be_anagrams")
+{
+    auto subject = anagram::anagram("LISTEN");
+    auto matches = subject.matches({"Listen", "Silent", "LISTEN"});
+    vector<string> expected{"Silent"};
 
     REQUIRE(expected == matches);
 }
