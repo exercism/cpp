@@ -116,4 +116,29 @@ TEST_CASE("with_apostrophes_as_quotes")
 
     REQUIRE(expected == actual);
 }
+
+TEST_CASE("substrings_from_the_beginning")
+{
+    const map<string, int> expected{{ "joe", 1 }, { "can't", 1 }, { "tell", 1 }, { "between", 1 }, { "app", 1 }, { "apple", 1 }, { "and", 1 }, { "a", 1 }};
+    const auto actual = word_count::words("Joe can't tell between app, apple and a.");
+
+    REQUIRE(expected == actual);
+}
+
+TEST_CASE("multiple_spaces_not_detected_as_a_word")
+{
+    const map<string, int> expected{{ "multiple", 1 }, { "whitespaces", 1 }};
+    const auto actual = word_count::words(" multiple   whitespaces");
+
+    REQUIRE(expected == actual);
+}
+
+TEST_CASE("alternating_word_separators_not_detected_as_a_word")
+{
+    const map<string, int> expected{{ "one", 1 }, { "two", 1 }, { "three", 1 }};
+    const auto actual = word_count::words(",\n,one,\n ,two \n 'three'");
+
+    REQUIRE(expected == actual);
+}
+
 #endif
