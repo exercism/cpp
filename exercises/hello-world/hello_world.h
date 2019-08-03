@@ -1,6 +1,6 @@
-// This is called an include guard, which ensures that the header is only
-// included once. You could alternatively use '#pragma once'. See
-// https://en.wikipedia.org/wiki/Include_guard
+// This is an include guard.
+// You could alternatively use '#pragma once'
+// See https://en.wikipedia.org/wiki/Include_guard
 #if !defined(HELLO_WORLD_H)
 #define HELLO_WORLD_H
 
