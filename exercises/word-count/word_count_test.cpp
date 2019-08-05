@@ -4,6 +4,8 @@
 
 using namespace std;
 
+// Word-count exercise test case data version 1.4.0
+
 TEST_CASE("counts_one_word")
 {
     const map<string, int> expected{{"word", 1}};
@@ -32,11 +34,29 @@ TEST_CASE("counts_multiple_occurrences")
     REQUIRE(expected == actual);
 }
 
+TEST_CASE("handles_cramped_list")
+{
+    const map<string, int> expected{{"one", 1}, {"two", 1}, {"three", 1}};
+
+    const auto actual = word_count::words("one,two,three");
+
+    REQUIRE(expected == actual);
+}
+
+TEST_CASE("handles_expanded_list")
+{
+    const map<string, int> expected{{"one", 1}, {"two", 1}, {"three", 1}};
+
+    const auto actual = word_count::words("one,\ntwo,\nthree");
+
+    REQUIRE(expected == actual);
+}
+
 TEST_CASE("ignores_punctuation")
 {
     const map<string, int> expected{{"car", 1}, {"carpet", 1}, {"as", 1}, {"java", 1}, {"javascript", 1}};
 
-    const auto actual = word_count::words("car : carpet as java : javascript!!&@$%^&");
+    const auto actual = word_count::words("car: carpet as java: javascript!!&@$%^&");
 
     REQUIRE(expected == actual);
 }
@@ -52,43 +72,9 @@ TEST_CASE("includes_numbers")
 
 TEST_CASE("normalizes_case")
 {
-    const map<string, int> expected{{"go", 3}};
+    const map<string, int> expected{{"go", 3}, {"stop", 2}};
 
-    const auto actual = word_count::words("go Go GO");
-
-    REQUIRE(expected == actual);
-}
-
-TEST_CASE("counts_constructor")
-{
-    const map<string, int> expected{{"constructor", 2}};
-
-    const auto actual = word_count::words("constructor Constructor");
-
-    REQUIRE(expected == actual);
-}
-
-TEST_CASE("counts_multiline")
-{
-    const map<string, int> expected{{"hello", 1}, {"world", 1}};
-
-    const auto actual = word_count::words("hello\nworld");
-
-    REQUIRE(expected == actual);
-}
-
-TEST_CASE("count_everything_just_once")
-{
-    const map<string, int> expected{{"all", 2}, {"the", 2}, {"kings", 2}, {"horses", 1}, {"and", 1}, {"men", 1}};
-    const auto actual = word_count::words("all the kings horses and all the kings men");
-
-    REQUIRE(expected == actual);
-}
-
-TEST_CASE("handles_cramped_list")
-{
-    const map<string, int> expected{{"one", 1}, {"two", 1}, {"three", 1}};
-    const auto actual = word_count::words("one,two,three");
+    const auto actual = word_count::words("go Go GO Stop stop");
 
     REQUIRE(expected == actual);
 }
@@ -96,24 +82,46 @@ TEST_CASE("handles_cramped_list")
 TEST_CASE("with_apostrophes")
 {
     const map<string, int> expected{{"first", 1}, {"don't", 2}, {"laugh", 1}, {"then", 1}, {"cry", 1}};
+
     const auto actual = word_count::words("First: don't laugh. Then: don't cry.");
 
     REQUIRE(expected == actual);
 }
 
-TEST_CASE("with_free_standing_apostrophes")
+TEST_CASE("with_quotations")
 {
-    const map<string, int> expected{{ "go", 3 }};
-    const auto actual = word_count::words("go ' Go '' GO");
+    const map<string, int> expected{{"joe", 1}, {"can't", 1}, {"tell", 1}, {"between", 1}, {"large", 2}, {"and", 1}};
+
+    const auto actual = word_count::words("Joe can't tell between 'large' and large.");
 
     REQUIRE(expected == actual);
 }
 
-TEST_CASE("with_apostrophes_as_quotes")
+TEST_CASE("substrings_from_the_beginning")
 {
-    const map<string, int> expected{{"she", 1}, {"said", 1}, {"let's", 1}, {"meet", 1}, {"at", 1}, {"twelve", 1}, {"o'clock", 1}};
-    const auto actual = word_count::words("She said, 'let's meet at twelve o'clock'");
+    const map<string, int> expected{{ "joe", 1 }, { "can't", 1 }, { "tell", 1 }, { "between", 1 }, { "app", 1 }, { "apple", 1 }, { "and", 1 }, { "a", 1 }};
+
+    const auto actual = word_count::words("Joe can't tell between app, apple and a.");
 
     REQUIRE(expected == actual);
 }
+
+TEST_CASE("multiple_spaces_not_detected_as_a_word")
+{
+    const map<string, int> expected{{ "multiple", 1 }, { "whitespaces", 1 }};
+
+    const auto actual = word_count::words(" multiple   whitespaces");
+
+    REQUIRE(expected == actual);
+}
+
+TEST_CASE("alternating_word_separators_not_detected_as_a_word")
+{
+    const map<string, int> expected{{ "one", 1 }, { "two", 1 }, { "three", 1 }};
+
+    const auto actual = word_count::words(",\n,one,\n ,two \n 'three'");
+
+    REQUIRE(expected == actual);
+}
+
 #endif
