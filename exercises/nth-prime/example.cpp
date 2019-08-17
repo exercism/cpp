@@ -15,7 +15,7 @@ bool is_prime(int n)
 }
 }
 
-int prime::nth(int n)
+int nth_prime::nth(int n)
 {
     if (n < 1) {
         throw std::domain_error("Out of range");
