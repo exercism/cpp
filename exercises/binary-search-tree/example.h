@@ -5,7 +5,7 @@
 #include <cstdint>
 #include <utility>
 
-namespace binary_tree
+namespace binary_search_tree
 {
     template <bool B, class T = void>
     using enable_if_t = typename std::enable_if<B, T>::type;
@@ -55,8 +55,8 @@ namespace binary_tree
     public:
         class binary_tree_iter final
         {
-            friend binary_tree_iter binary_tree::begin() const;
-            friend binary_tree_iter binary_tree::end() const;
+            friend binary_tree_iter binary_search_tree::begin() const;
+            friend binary_tree_iter binary_search_tree::end() const;
         public:
             using binary_tree_iter_ptr = std::unique_ptr<binary_tree_iter>;
         private:
