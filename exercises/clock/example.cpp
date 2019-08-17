@@ -12,7 +12,7 @@ const int hours_per_day = 24;
 
 }
 
-namespace clock
+namespace date_independent
 {
 
 clock& clock::plus(int minutes)

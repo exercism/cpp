@@ -1,5 +1,5 @@
 #include "clock.h"
 
-namespace clock {
+namespace date_independent {
 
-}  // namespace clock
+}  // namespace date_independent

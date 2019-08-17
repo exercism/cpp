@@ -176,7 +176,7 @@ string errorMsg(string expected, string actual, string test)
 TEST_CASE("time_tests")
 {
     for (timeTest t : timeCases) {
-        const auto actual = string(clock::clock::at(t.hour, t.minute));
+        const auto actual = string(date_independent::clock::at(t.hour, t.minute));
 
         INFO(errorMsg(t.expected, actual, t.msg));
         REQUIRE(t.expected == actual);
@@ -187,7 +187,7 @@ TEST_CASE("time_tests")
 TEST_CASE("add_tests")
 {
     for (addTest a : addCases) {
-        const auto actual = string(clock::clock::at(a.hour, a.minute).plus(a.add));
+        const auto actual = string(date_independent::clock::at(a.hour, a.minute).plus(a.add));
 
         INFO(errorMsg(a.expected, actual, a.msg));
         REQUIRE(a.expected == actual);
@@ -197,8 +197,8 @@ TEST_CASE("add_tests")
 TEST_CASE("equal_tests")
 {
     for (equalTest e : equalCases) {
-        const auto clock1 = clock::clock::at(e.c1.hour, e.c1.minute);
-        const auto clock2 = clock::clock::at(e.c2.hour, e.c2.minute);
+        const auto clock1 = date_independent::clock::at(e.c1.hour, e.c1.minute);
+        const auto clock2 = date_independent::clock::at(e.c2.hour, e.c2.minute);
 
         if (e.expected) {
             INFO(errorMsg(string(clock1), string(clock2), e.msg));

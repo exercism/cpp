@@ -1,8 +1,8 @@
 #if !defined(CLOCK_H)
 #define CLOCK_H
 
-namespace clock {
+namespace date_independent {
 
-}  // namespace clock
+}  // namespace date_independent
 
 #endif // CLOCK_H
