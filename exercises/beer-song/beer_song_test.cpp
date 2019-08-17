@@ -8,7 +8,7 @@ TEST_CASE("prints_an_arbitrary_verse")
     string expected = "8 bottles of beer on the wall, 8 bottles of beer.\n"
         "Take one down and pass it around, 7 bottles of beer on the wall.\n";
 
-    REQUIRE(expected == beer::verse(8));
+    REQUIRE(expected == beer_song::verse(8));
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
@@ -17,7 +17,7 @@ TEST_CASE("handles_1_bottle")
     string expected = "1 bottle of beer on the wall, 1 bottle of beer.\n"
         "Take it down and pass it around, no more bottles of beer on the wall.\n";
 
-    REQUIRE(expected == beer::verse(1));
+    REQUIRE(expected == beer_song::verse(1));
 }
 
 TEST_CASE("handles_0_bottles")
@@ -25,7 +25,7 @@ TEST_CASE("handles_0_bottles")
     string expected = "No more bottles of beer on the wall, no more bottles of beer.\n"
         "Go to the store and buy some more, 99 bottles of beer on the wall.\n";
 
-    REQUIRE(expected == beer::verse(0));
+    REQUIRE(expected == beer_song::verse(0));
 }
 
 TEST_CASE("sings_several_verses")
@@ -39,7 +39,7 @@ TEST_CASE("sings_several_verses")
         "6 bottles of beer on the wall, 6 bottles of beer.\n"
         "Take one down and pass it around, 5 bottles of beer on the wall.\n";
 
-    REQUIRE(expected == beer::sing(8, 6));
+    REQUIRE(expected == beer_song::sing(8, 6));
 }
 
 TEST_CASE("sings_the_rest_of_the_verses")
@@ -56,6 +56,6 @@ TEST_CASE("sings_the_rest_of_the_verses")
         "No more bottles of beer on the wall, no more bottles of beer.\n"
         "Go to the store and buy some more, 99 bottles of beer on the wall.\n";
 
-    REQUIRE(expected == beer::sing(3));
+    REQUIRE(expected == beer_song::sing(3));
 }
 #endif
