@@ -3,7 +3,7 @@
 
 #include <string>
 
-namespace date_independent
+namespace clock
 {
 
 class clock
