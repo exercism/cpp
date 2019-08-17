@@ -55,8 +55,8 @@ namespace binary_search_tree
     public:
         class binary_tree_iter final
         {
-            friend binary_tree_iter binary_search_tree::begin() const;
-            friend binary_tree_iter binary_search_tree::end() const;
+            friend binary_tree_iter binary_tree::begin() const;
+            friend binary_tree_iter binary_tree::end() const;
         public:
             using binary_tree_iter_ptr = std::unique_ptr<binary_tree_iter>;
         private:
