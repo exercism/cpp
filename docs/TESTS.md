@@ -30,7 +30,7 @@ For instance, the exercise `bob` expects an implementation in `bob.h`
 and `bob.cpp`.  For exercises with dashes in their name, the source
 files are assumed to use underscores, so `word-count` expects
 `word_count.h` and `word_count.cpp`.  You may decide that your
-impementation is sufficiently simple that it can live entirely in the
+implementation is sufficiently simple that it can live entirely in the
 header, in which case you can omit the `cpp` file.
 
 **Create your initial implementation files before running CMake.**  If
