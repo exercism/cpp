@@ -1,0 +1,98 @@
+name: CI
+
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  configuration-test:
+    name: Check Configuration
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Configlet
+      run: |
+        bin/fetch-configlet
+        bin/configlet lint .
+        bin/check-configlet-fmt.sh
+
+  linux-min:
+    name: Linux Min Config
+    runs-on: ubuntu-16.04
+    strategy:
+      matrix:
+        compiler: [clang++-3.8, g++-5]
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install Dependencies
+      # Boost must be installed only because the CMake version (3.12) can't
+      # detect the installed Boost version (1.69)
+      run: sudo apt-get -y install ninja-build libboost-date-time-dev clang-3.8 g++-5
+    - name: Run tests with common Catch
+      run: |
+        cmake -G Ninja .
+        cmake --build . -- test_hello-world
+        cmake --build .
+      env:
+        CXX: ${{ matrix.compiler }}
+
+  linux-latest:
+    name: Linux Latest Config
+    needs: [linux-min, configuration-test]
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        compiler: [clang++, g++]
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install Dependencies
+      # Boost must be installed only because the CMake version (3.12) can't
+      # detect the installed Boost version (1.69)
+      run: sudo apt-get -y install ninja-build libboost-date-time-dev
+    - name: Run tests with common Catch
+      if: matrix.compiler == 'g++'
+      run: |
+        cmake -G Ninja .
+        cmake --build . -- test_hello-world
+        cmake --build .
+      env:
+        CXX: ${{ matrix.compiler }}
+    - name: Run tests without common Catch
+      if: matrix.compiler == 'clang++'
+      run: |
+        cmake -G Ninja -DEXERCISM_COMMON_CATCH=OFF .
+        cmake --build . -- test_hello-world
+        cmake --build .
+      env:
+        CXX: ${{ matrix.compiler }}
+
+  windows:
+    name: Windows
+    needs: [linux-min, configuration-test]
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run Tests
+      run: |
+        cmake .
+        cmake --build . -- test_hello-world
+        cmake --build .
+
+  mac:
+    name: MacOS
+    needs: [linux-min, configuration-test]
+    runs-on: macOS-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install Boost
+      run: brew install boost
+    - name: Run Tests
+      run: |
+        cmake .
+        cmake --build . -- test_hello-world
+        cmake --build .
+

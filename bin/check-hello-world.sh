@@ -15,7 +15,7 @@ mkdir -p "$hello_world_tmp_dir"
 cd "$hello_world_tmp_dir"
 
 # Configuring should work.
-cmake -G Ninja "$hello_world_dir"
+cmake "$hello_world_dir"
 
 echo "Building hello-world, which should fail."
 
