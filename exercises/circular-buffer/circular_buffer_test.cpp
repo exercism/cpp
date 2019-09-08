@@ -2,7 +2,7 @@
 #include "circular_buffer.h"
 #include <stdexcept>
 
-// Circular-buffer exercise test case data version 1.1.0
+// Circular-buffer exercise test case data version 1.2.0
 
 TEST_CASE("reading_empty_buffer_should_fail") 
 {
@@ -218,5 +218,26 @@ TEST_CASE("check_correctness_with_string_type")
 
     expected = "banana";
     REQUIRE(expected == buffer.read());
+}
+
+TEST_CASE("initial_clear_does_not_affect_wrapping_around")
+{
+    circular_buffer::circular_buffer<int> buffer(2);
+
+    buffer.clear();
+
+    REQUIRE_NOTHROW(buffer.write(1));
+    REQUIRE_NOTHROW(buffer.write(2));
+
+    buffer.overwrite(3);
+    buffer.overwrite(4);
+
+    int expected = 3;
+    REQUIRE(expected == buffer.read());
+
+    expected = 4;
+    REQUIRE(expected == buffer.read());
+
+    REQUIRE_THROWS_AS(buffer.read(), std::domain_error);
 }
 #endif  // !EXERCISM_RUN_ALL_TESTS
