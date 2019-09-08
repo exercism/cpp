@@ -4,7 +4,7 @@
 #include <map>
 #include <string>
 
-namespace dna
+namespace nucleotide_count
 {
 
 class counter

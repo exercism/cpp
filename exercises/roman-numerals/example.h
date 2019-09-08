@@ -3,7 +3,7 @@
 
 #include <string>
 
-namespace roman
+namespace roman_numerals
 {
 
 std::string convert(int n);

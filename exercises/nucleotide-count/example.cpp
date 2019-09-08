@@ -1,7 +1,7 @@
 #include "nucleotide_count.h"
 #include <stdexcept>
 
-namespace dna
+namespace nucleotide_count
 {
 
 counter::counter(std::string const& sequence)

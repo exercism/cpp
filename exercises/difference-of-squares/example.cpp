@@ -3,7 +3,7 @@
 
 using namespace std;
 
-namespace squares
+namespace difference_of_squares
 {
 
 int square_of_sum(int n)

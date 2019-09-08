@@ -3,7 +3,7 @@
 
 using namespace std;
 
-namespace beer
+namespace beer_song
 {
 
 namespace

@@ -5,7 +5,7 @@
 #include <cstdint>
 #include <utility>
 
-namespace binary_tree
+namespace binary_search_tree
 {
     template <bool B, class T = void>
     using enable_if_t = typename std::enable_if<B, T>::type;

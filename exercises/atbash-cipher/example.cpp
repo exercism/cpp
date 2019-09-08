@@ -3,7 +3,7 @@
 
 #include "atbash_cipher.h"
 
-namespace atbash {
+namespace atbash_cipher {
 
 const char ALPHA_START = 'a';
 const char ALPHA_END = 'z';

@@ -3,7 +3,7 @@
 
 #include <string>
 
-namespace beer
+namespace beer_song
 {
 
 std::string verse(unsigned bottles);

@@ -5,7 +5,7 @@
 // test data version: 1.0.0
 
 template<typename T>
-using tree_ptr = typename std::unique_ptr<binary_tree::binary_tree<T>>;
+using tree_ptr = typename std::unique_ptr<binary_search_tree::binary_tree<T>>;
 
 template<typename T>
 static void test_leaf(const tree_ptr<T> &tree, 
@@ -23,7 +23,7 @@ static tree_ptr<T> make_tree(const std::vector<T> &data)
         return tree_ptr<T>(nullptr);
     
     auto data_iter = data.begin();
-    auto tree = tree_ptr<T>(new binary_tree::binary_tree<T>(*data_iter));
+    auto tree = tree_ptr<T>(new binary_search_tree::binary_tree<T>(*data_iter));
     ++data_iter;
 
     for (; data_iter != data.end(); ++data_iter)

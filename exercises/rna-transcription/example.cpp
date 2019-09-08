@@ -4,7 +4,7 @@
 
 using namespace std;
 
-namespace transcription
+namespace rna_transcription
 {
 
 char to_rna(const char nucleotide)

@@ -1,7 +1,7 @@
 #if !defined(NTH_PRIME_H)
 #define NTH_PRIME_H
 
-namespace prime
+namespace nth_prime
 {
 int nth(int n);
 }

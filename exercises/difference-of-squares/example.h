@@ -1,7 +1,7 @@
 #if !defined(DIFFERENCE_OF_SQUARES_H)
 #define DIFFERENCE_OF_SQUARES_H
 
-namespace squares
+namespace difference_of_squares
 {
 
 int square_of_sum(int n);

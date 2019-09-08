@@ -101,7 +101,7 @@ void converter::place_numeral_penultimate(int place, int penultimate_place)
 
 }
 
-std::string roman::convert(int n)
+std::string roman_numerals::convert(int n)
 {
     return converter(n).convert();
 }
