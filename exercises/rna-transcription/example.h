@@ -3,7 +3,7 @@
 
 #include <string>
 
-namespace transcription
+namespace rna_transcription
 {
 
 char to_rna(char nucleotide);

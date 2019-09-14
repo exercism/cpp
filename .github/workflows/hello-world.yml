@@ -1,0 +1,28 @@
+name: Hello World
+
+# TODO: Run on all platforms
+
+on:
+  push:
+    branches:
+    - master
+    paths:
+    - 'exercises/hello-world/*'
+    - 'bin/check-hello-world.sh'
+  pull_request:
+    branches:
+    - master
+    paths:
+    - 'exercises/hello-world/*'
+    - 'bin/check-hello-world.sh'
+
+jobs:
+  hello-world-fails:
+    name: Hello World Fails
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Check Hello World Fails
+      run: bin/check-hello-world.sh
+      env:
+        CXX: ${{ matrix.compiler }}

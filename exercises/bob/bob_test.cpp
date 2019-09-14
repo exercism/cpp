@@ -1,90 +1,131 @@
 #include "bob.h"
-#define BOOST_TEST_MAIN
-#include <boost/test/unit_test.hpp>
+#include "test/catch.hpp"
 
-BOOST_AUTO_TEST_CASE(stating_something)
+// Bob exercise test case data version 1.4.0
+
+TEST_CASE("stating_something")
 {
-    BOOST_REQUIRE_EQUAL("Whatever.", bob::hey("Tom-ay-to, tom-aaaah-to."));
+    REQUIRE("Whatever." == bob::hey("Tom-ay-to, tom-aaaah-to."));
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
-BOOST_AUTO_TEST_CASE(shouting)
+TEST_CASE("shouting")
 {
-    BOOST_REQUIRE_EQUAL("Whoa, chill out!", bob::hey("WATCH OUT!"));
+    REQUIRE("Whoa, chill out!" == bob::hey("WATCH OUT!"));
 }
 
-BOOST_AUTO_TEST_CASE(asking_a_question)
+TEST_CASE("shouting_gibberish")
 {
-    BOOST_REQUIRE_EQUAL("Sure.", bob::hey("Does this cryogenic chamber make me look fat?"));
+    REQUIRE("Whoa, chill out!" == bob::hey("FCECDFCAAB"));
 }
 
-BOOST_AUTO_TEST_CASE(talking_forcefully)
+TEST_CASE("asking_a_question")
 {
-    BOOST_REQUIRE_EQUAL("Whatever.", bob::hey("Let's go make out behind the gym!"));
+    REQUIRE("Sure." == bob::hey("Does this cryogenic chamber make me look fat?"));
 }
 
-BOOST_AUTO_TEST_CASE(using_acronyms_in_regular_speech)
+TEST_CASE("asking_a_numeric_question")
 {
-    BOOST_REQUIRE_EQUAL("Whatever.", bob::hey("It's OK if you don't want to go to the DMV."));
+    REQUIRE("Sure." == bob::hey("You are, what, like 15?"));
 }
 
-BOOST_AUTO_TEST_CASE(forceful_questions)
+TEST_CASE("asking_gibberish")
 {
-    BOOST_REQUIRE_EQUAL("Whoa, chill out!", bob::hey("WHAT THE HELL WERE YOU THINKING?"));
+    REQUIRE("Sure." == bob::hey("fffbbcbeab?"));
 }
 
-BOOST_AUTO_TEST_CASE(shouting_numbers)
+TEST_CASE("talking_forcefully")
 {
-    BOOST_REQUIRE_EQUAL("Whoa, chill out!", bob::hey("1, 2, 3 GO!"));
+    REQUIRE("Whatever." == bob::hey("Let's go make out behind the gym!"));
 }
 
-BOOST_AUTO_TEST_CASE(only_numbers)
+TEST_CASE("using_acronyms_in_regular_speech")
 {
-    BOOST_REQUIRE_EQUAL("Whatever.", bob::hey("1, 2, 3"));
+    REQUIRE("Whatever." == bob::hey("It's OK if you don't want to go to the DMV."));
 }
 
-BOOST_AUTO_TEST_CASE(question_with_only_numbers)
+TEST_CASE("forceful_questions")
 {
-    BOOST_REQUIRE_EQUAL("Sure.", bob::hey("4?"));
+    REQUIRE("Calm down, I know what I'm doing!" == bob::hey("WHAT THE HELL WERE YOU THINKING?"));
 }
 
-BOOST_AUTO_TEST_CASE(shouting_with_special_characters)
+TEST_CASE("shouting_numbers")
 {
-    BOOST_REQUIRE_EQUAL("Whoa, chill out!", bob::hey("ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!"));
+    REQUIRE("Whoa, chill out!" == bob::hey("1, 2, 3 GO!"));
 }
 
-BOOST_AUTO_TEST_CASE(shouting_with_no_exclamation_mark)
+TEST_CASE("no_letters")
 {
-    BOOST_REQUIRE_EQUAL("Whoa, chill out!", bob::hey("I HATE YOU"));
+    REQUIRE("Whatever." == bob::hey("1, 2, 3"));
 }
 
-BOOST_AUTO_TEST_CASE(statement_containing_question_mark)
+TEST_CASE("question_with_no_letters")
 {
-    BOOST_REQUIRE_EQUAL("Whatever.", bob::hey("Ending with a ? means a question."));
+    REQUIRE("Sure." == bob::hey("4?"));
 }
 
-BOOST_AUTO_TEST_CASE(prattling_on)
+TEST_CASE("shouting_with_special_characters")
 {
-    BOOST_REQUIRE_EQUAL("Sure.", bob::hey("Wait! Hang on.  Are you going to be OK?"));
+    REQUIRE("Whoa, chill out!" == bob::hey("ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!"));
 }
 
-BOOST_AUTO_TEST_CASE(question_with_trailing_whitespace)
+TEST_CASE("shouting_with_no_exclamation_mark")
 {
-    BOOST_REQUIRE_EQUAL("Sure.", bob::hey("Are you ok? "));
+    REQUIRE("Whoa, chill out!" == bob::hey("I HATE THE DMV"));
 }
 
-BOOST_AUTO_TEST_CASE(silence)
+TEST_CASE("statement_containing_question_mark")
 {
-    BOOST_REQUIRE_EQUAL("Fine. Be that way!", bob::hey(""));
+    REQUIRE("Whatever." == bob::hey("Ending with ? means a question."));
 }
 
-BOOST_AUTO_TEST_CASE(prolonged_silence)
+TEST_CASE("non_letters_with_question")
 {
-    BOOST_REQUIRE_EQUAL("Fine. Be that way!", bob::hey("   "));
+    REQUIRE("Sure." == bob::hey(":) ?"));
 }
 
-BOOST_AUTO_TEST_CASE(not_all_silence)                                                                         
-{                                                                                                             
-	BOOST_REQUIRE_EQUAL("Whatever.", bob::hey(" A bit of silence can be nice.  "));                           
+TEST_CASE("prattling_on")
+{
+    REQUIRE("Sure." == bob::hey("Wait! Hang on. Are you going to be OK?"));
+}
+
+TEST_CASE("silence")
+{
+    REQUIRE("Fine. Be that way!" == bob::hey(""));
+}
+
+TEST_CASE("prolonged_silence")
+{
+    REQUIRE("Fine. Be that way!" == bob::hey("          "));
+}
+
+TEST_CASE("alternate_silence")
+{
+    REQUIRE("Fine. Be that way!" == bob::hey("\t\t\t\t\t\t\t\t\t\t"));
+}
+
+TEST_CASE("multiple_line_question")
+{
+	REQUIRE("Whatever." == bob::hey("\nDoes this cryogenic chamber make me look fat?\nNo."));
+}
+
+TEST_CASE("starting_with_whitespace")
+{
+	REQUIRE("Whatever." == bob::hey("         hmmmmmmm..."));
+}
+
+TEST_CASE("ending_with_whitespace")
+{
+	REQUIRE("Sure." == bob::hey("Okay if like my  spacebar  quite a bit?   "));
+}
+
+TEST_CASE("other_whitespace")
+{
+	REQUIRE("Fine. Be that way!" == bob::hey("\n\r \t"));
+}
+
+TEST_CASE("non_question_ending_with_whitespace")
+{
+	REQUIRE("Whatever." == bob::hey("This is a statement ending with whitespace      "));
 }
 #endif

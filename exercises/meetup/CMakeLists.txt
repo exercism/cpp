@@ -2,16 +2,16 @@
 get_filename_component(exercise ${CMAKE_CURRENT_SOURCE_DIR} NAME)
 
 # Basic CMake project
-cmake_minimum_required(VERSION 3.1.3)
+cmake_minimum_required(VERSION 3.5.1)
 
 # Name the project after the exercise
 project(${exercise} CXX)
 
-# Locate Boost libraries: unit_test_framework and date_time
+# Locate Boost date_time library
 set(Boost_USE_STATIC_LIBS ON)
 set(Boost_USE_MULTITHREADED ON)
 set(Boost_USE_STATIC_RUNTIME OFF)
-find_package(Boost 1.59 REQUIRED COMPONENTS unit_test_framework date_time)
+find_package(Boost 1.59 REQUIRED COMPONENTS date_time)
 
 # Get a source filename from the exercise name by replacing -'s with _'s
 string(REPLACE "-" "_" file ${exercise})
@@ -23,11 +23,17 @@ else()
     set(exercise_cpp "")
 endif()
 
-# Build executable from sources and headers
-add_executable(${exercise} ${file}_test.cpp ${exercise_cpp} ${file}.h)
+# Use the common Catch library?
+if(EXERCISM_COMMON_CATCH)
+    # For Exercism track development only
+    add_executable(${exercise} ${file}_test.cpp ${exercise_cpp} ${file}.h $<TARGET_OBJECTS:catchlib>)
+else()
+    # Build executable from sources and headers
+    add_executable(${exercise} ${file}_test.cpp ${exercise_cpp} ${file}.h test/tests-main.cpp)
+endif()
 
 set_target_properties(${exercise} PROPERTIES
-    CXX_STANDARD 11
+    CXX_STANDARD 14
     CXX_STANDARD_REQUIRED OFF
     CXX_EXTENSIONS OFF
 )
@@ -41,7 +47,6 @@ endif()
 # We need boost libraries
 target_link_libraries(${exercise}
     PRIVATE
-    Boost::unit_test_framework
     Boost::date_time
 )
 

@@ -1,30 +1,29 @@
 #include "reverse_string.h"
-#define BOOST_TEST_MAIN
-#include <boost/test/unit_test.hpp>
+#include "test/catch.hpp"
 
-BOOST_AUTO_TEST_CASE(an_empty_string)
+TEST_CASE("an_empty_string")
 {
-    BOOST_REQUIRE_EQUAL("", reverse_string::reverse_string(""));
+    REQUIRE("" == reverse_string::reverse_string(""));
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
-BOOST_AUTO_TEST_CASE(a_word)
+TEST_CASE("a_word")
 {
-    BOOST_REQUIRE_EQUAL("tobor", reverse_string::reverse_string("robot"));
+    REQUIRE("tobor" == reverse_string::reverse_string("robot"));
 }
 
-BOOST_AUTO_TEST_CASE(a_capitalized_word)
+TEST_CASE("a_capitalized_word")
 {
-    BOOST_REQUIRE_EQUAL("nemaR", reverse_string::reverse_string("Ramen"));
+    REQUIRE("nemaR" == reverse_string::reverse_string("Ramen"));
 }
 
-BOOST_AUTO_TEST_CASE(a_sentence_with_punctuation)
+TEST_CASE("a_sentence_with_punctuation")
 {
-    BOOST_REQUIRE_EQUAL("!yrgnuh m'I", reverse_string::reverse_string("I'm hungry!"));
+    REQUIRE("!yrgnuh m'I" == reverse_string::reverse_string("I'm hungry!"));
 }
 
-BOOST_AUTO_TEST_CASE(a_palindrome)
+TEST_CASE("a_palindrome")
 {
-   BOOST_REQUIRE_EQUAL("racecar", reverse_string::reverse_string("racecar"));
+   REQUIRE("racecar" == reverse_string::reverse_string("racecar"));
 }
 #endif
