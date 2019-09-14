@@ -1,10 +1,14 @@
 #include "complex_numbers.h"
 
-#define _USE_MATH_DEFINES // For M_PI
 #include <cmath>
 #include <complex>
 
 #include "test/catch.hpp"
+
+// Define M_PI for platforms that don't include it
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
 
 // Complex Numbers exercise test case data version 1.0.0
 
