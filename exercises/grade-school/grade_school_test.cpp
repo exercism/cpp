@@ -6,7 +6,7 @@ using namespace std;
 
 TEST_CASE("a_new_school_has_an_empty_roster")
 {
-    grade_school::school school_;
+    const grade_school::school school_{};
     REQUIRE(school_.roster().empty());
 }
 
@@ -62,7 +62,7 @@ TEST_CASE("grade_returns_the_students_in_that_grade_in_alphabetical_order")
 
 TEST_CASE("grade_returns_an_empty_array_if_there_are_no_students_in_that_grade")
 {
-    grade_school::school school_;
+    const grade_school::school school_{};
     const auto actual = school_.grade(1);
 
     REQUIRE(actual.empty());
@@ -88,7 +88,7 @@ TEST_CASE("the_student_names_in_each_grade_in_the_roster_are_sorted")
 
 TEST_CASE("checking_a_grade_should_not_change_the_roster")
 {
-    grade_school::school school_;
+    const grade_school::school school_{};
     school_.grade(1);
     REQUIRE(school_.roster().empty());
 }
