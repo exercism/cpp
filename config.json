@@ -540,9 +540,9 @@
       "unlocked_by": null,
       "difficulty": 6,
       "topics": [
+        "classes",
         "mathematics",
-        "operator_overloading",
-        "classes"
+        "operator_overloading"
       ]
     },
     {
