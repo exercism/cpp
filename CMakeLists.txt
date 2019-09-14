@@ -3,7 +3,7 @@ project(exercism CXX)
 
 set(alt_exercise_tree ${CMAKE_CURRENT_SOURCE_DIR}/build_exercises)
 
-function(travis_fixup exercise_dir alt_exercise_root)
+function(build_fixup exercise_dir alt_exercise_root)
     string(REPLACE "-" "_" file ${exercise_dir})
     set(source ${CMAKE_CURRENT_SOURCE_DIR}/exercises/${exercise_dir})
     if(EXISTS ${source})
@@ -34,6 +34,6 @@ file(GLOB exercise_list ${CMAKE_CURRENT_SOURCE_DIR}/exercises/*)
 
 foreach(exercise_dir ${exercise_list})
     get_filename_component(exercise ${exercise_dir} NAME)
-    travis_fixup(${exercise} ${alt_exercise_tree})
+    build_fixup(${exercise} ${alt_exercise_tree})
     add_subdirectory(${alt_exercise_tree}/${exercise})
 endforeach()
