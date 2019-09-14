@@ -1,12 +1,11 @@
-#define BOOST_TEST_MAIN
-#include <boost/test/unit_test.hpp>
+#include "complex_numbers.h"
+#include "test/catch.hpp"
 #include <complex>
 #include <cmath>
-#include "complex_numbers.h"
 
 // Complex Numbers exercise test case data version 1.0.0
 
-BOOST_AUTO_TEST_CASE(Add_purely_real_numbers)
+TEST_CASE("add_purely_real_numbers")
 {
     const complex_numbers::Complex c1 {1.0, 0.0};
     
@@ -16,11 +15,11 @@ BOOST_AUTO_TEST_CASE(Add_purely_real_numbers)
 
     const complex_numbers::Complex expected {3.0, 0.0};
 
-    BOOST_CHECK(expected == actual);
+    REQUIRE(expected == actual);
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
-BOOST_AUTO_TEST_CASE(Add_purely_imaginary_numbers)
+TEST_CASE("add_purely_imaginary_numbers")
 {
     const complex_numbers::Complex c1 {0.0, 1.0};
     
@@ -30,10 +29,10 @@ BOOST_AUTO_TEST_CASE(Add_purely_imaginary_numbers)
 
     const complex_numbers::Complex expected {0.0, 3.0};
 
-    BOOST_CHECK(expected == actual);
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(Add_numbers_with_real_and_imaginary_part)
+TEST_CASE("add_numbers_with_real_and_imaginary_part")
 {
     const complex_numbers::Complex c1 {1.0, 2.0};
     
@@ -43,10 +42,10 @@ BOOST_AUTO_TEST_CASE(Add_numbers_with_real_and_imaginary_part)
 
     const complex_numbers::Complex expected {4.0, 6.0};
 
-    BOOST_CHECK(expected == actual);
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(Subtract_purely_real_numbers)
+TEST_CASE("subtract_purely_real_numbers")
 {
     const complex_numbers::Complex c1 {1.0, 0.0};
     
@@ -56,10 +55,10 @@ BOOST_AUTO_TEST_CASE(Subtract_purely_real_numbers)
 
     const complex_numbers::Complex expected {-1.0, 0.0};
 
-    BOOST_CHECK(expected == actual);
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(Subtract_purely_imaginary_numbers)
+TEST_CASE("subtract_purely_imaginary_numbers")
 {
     const complex_numbers::Complex c1 {0.0, 1.0};
     
@@ -69,10 +68,10 @@ BOOST_AUTO_TEST_CASE(Subtract_purely_imaginary_numbers)
 
     const complex_numbers::Complex expected {0.0, -1.0};
 
-    BOOST_CHECK(expected == actual);
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(Subtract_numbers_with_real_and_imaginary_part)
+TEST_CASE("subtract_numbers_with_real_and_imaginary_part")
 {
     const complex_numbers::Complex c1 {1.0, 2.0};
     
@@ -82,10 +81,10 @@ BOOST_AUTO_TEST_CASE(Subtract_numbers_with_real_and_imaginary_part)
 
     const complex_numbers::Complex expected {-2.0, -2.0};
 
-    BOOST_CHECK(expected == actual);
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(Multiply_purely_real_numbers)
+TEST_CASE("multiply_purely_real_numbers")
 {
     const complex_numbers::Complex c1 {1.0, 0.0};
     
@@ -95,10 +94,10 @@ BOOST_AUTO_TEST_CASE(Multiply_purely_real_numbers)
 
     const complex_numbers::Complex expected {2.0, 0.0};
 
-    BOOST_CHECK(expected == actual);
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(Multiply_purely_imaginary_numbers)
+TEST_CASE("multiply_purely_imaginary_numbers")
 {
     const complex_numbers::Complex c1 {0.0, 1.0};
     
@@ -108,10 +107,10 @@ BOOST_AUTO_TEST_CASE(Multiply_purely_imaginary_numbers)
 
     const complex_numbers::Complex expected {-2.0, 0.0};
 
-    BOOST_CHECK(expected == actual);
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(Multiply_numbers_with_real_and_imaginary_part)
+TEST_CASE("multiply_numbers_with_real_and_imaginary_part")
 {
     const complex_numbers::Complex c1 {1.0, 2.0};
     
@@ -121,10 +120,10 @@ BOOST_AUTO_TEST_CASE(Multiply_numbers_with_real_and_imaginary_part)
 
     const complex_numbers::Complex expected {-5.0, 10.0};
 
-    BOOST_CHECK(expected == actual);
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(Imaginary_unit)
+TEST_CASE("imaginary_unit")
 {
     const complex_numbers::Complex c1 {0.0, 1.0};
     
@@ -134,10 +133,10 @@ BOOST_AUTO_TEST_CASE(Imaginary_unit)
 
     const complex_numbers::Complex expected {-1.0, 0.0};
 
-    BOOST_CHECK(expected == actual);
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(Divide_purely_real_numbers)
+TEST_CASE("divide_purely_real_numbers")
 {
     const complex_numbers::Complex c1 {1.0, 0.0};
     
@@ -147,10 +146,10 @@ BOOST_AUTO_TEST_CASE(Divide_purely_real_numbers)
 
     const complex_numbers::Complex expected {0.5, 0.0};
 
-    BOOST_CHECK(expected == actual);
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(Divide_purely_imaginary_numbers)
+TEST_CASE("divide_purely_imaginary_numbers")
 {
     const complex_numbers::Complex c1 {0.0, 1.0};
     
@@ -160,10 +159,10 @@ BOOST_AUTO_TEST_CASE(Divide_purely_imaginary_numbers)
 
     const complex_numbers::Complex expected {0.5, 0.0};
 
-    BOOST_CHECK(expected == actual);
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(Divide_numbers_with_real_and_imaginary_part)
+TEST_CASE("divide_numbers_with_real_and_imaginary_part")
 {
     const complex_numbers::Complex c1 {1.0, 2.0};
     
@@ -173,10 +172,10 @@ BOOST_AUTO_TEST_CASE(Divide_numbers_with_real_and_imaginary_part)
 
     const complex_numbers::Complex expected {0.44, 0.08};
 
-    BOOST_CHECK(expected == actual);
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(Absolute_value_of_a_positive_purely_real_number)
+TEST_CASE("absolute_value_of_a_positive_purely_real_number")
 {
     const complex_numbers::Complex c {5.0, 0.0};
     
@@ -184,10 +183,10 @@ BOOST_AUTO_TEST_CASE(Absolute_value_of_a_positive_purely_real_number)
 
     const double expected {5.0};
 
-    BOOST_CHECK(expected == actual);
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(Absolute_value_of_a_negative_purely_real_number)
+TEST_CASE("absolute_value_of_a_negative_purely_real_number")
 {
     const complex_numbers::Complex c {-5.0, 0.0};
     
@@ -195,10 +194,10 @@ BOOST_AUTO_TEST_CASE(Absolute_value_of_a_negative_purely_real_number)
 
     const double expected {5.0};
 
-    BOOST_CHECK(expected == actual);
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(Absolute_value_of_a_purely_imaginary_number_with_positive_imaginary_part)
+TEST_CASE("absolute_value_of_a_purely_imaginary_number_with_positive_imaginary_part")
 {
     const complex_numbers::Complex c {0.0, 5.0};
     
@@ -206,10 +205,10 @@ BOOST_AUTO_TEST_CASE(Absolute_value_of_a_purely_imaginary_number_with_positive_i
 
     const double expected {5.0};
 
-    BOOST_CHECK(expected == actual);
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(Absolute_value_of_a_purely_imaginary_number_with_negative_imaginary_part)
+TEST_CASE("absolute_value_of_a_purely_imaginary_number_with_negative_imaginary_part")
 {
     const complex_numbers::Complex c {0.0, -5.0};
     
@@ -217,10 +216,10 @@ BOOST_AUTO_TEST_CASE(Absolute_value_of_a_purely_imaginary_number_with_negative_i
 
     const double expected {5.0};
 
-    BOOST_CHECK(expected == actual);
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(Absolute_value_of_a_number_with_real_and_imaginary_part)
+TEST_CASE("absolute_value_of_a_number_with_real_and_imaginary_part")
 {
     const complex_numbers::Complex c {3.0, 4.0};
    
@@ -228,10 +227,10 @@ BOOST_AUTO_TEST_CASE(Absolute_value_of_a_number_with_real_and_imaginary_part)
 
     const double expected {5.0};
 
-    BOOST_CHECK(expected == actual);
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(Conjugate_a_purely_real_number)
+TEST_CASE("conjugate_a_purely_real_number")
 {
     const complex_numbers::Complex c {5.0, 0.0};
    
@@ -239,10 +238,10 @@ BOOST_AUTO_TEST_CASE(Conjugate_a_purely_real_number)
 
     const complex_numbers::Complex expected {5.0, 0.0};
 
-    BOOST_CHECK(expected == actual);
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(Conjugate_a_purely_imaginary_number)
+TEST_CASE("conjugate_a_purely_imaginary_number")
 {
     const complex_numbers::Complex c {0.0, 5.0};
    
@@ -250,10 +249,10 @@ BOOST_AUTO_TEST_CASE(Conjugate_a_purely_imaginary_number)
 
     const complex_numbers::Complex expected {0.0, -5.0};
 
-    BOOST_CHECK(expected == actual);
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(Conjugate_a_number_with_real_and_imaginary_part)
+TEST_CASE("conjugate_a_number_with_real_and_imaginary_part")
 {
     const complex_numbers::Complex c {1.0, 1.0};
    
@@ -261,10 +260,10 @@ BOOST_AUTO_TEST_CASE(Conjugate_a_number_with_real_and_imaginary_part)
 
     const complex_numbers::Complex expected {1.0, -1.0};
 
-    BOOST_CHECK(expected == actual);
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(Real_part_of_a_purely_real_number)
+TEST_CASE("real_part_of_a_purely_real_number")
 {
     const complex_numbers::Complex c {1.0, 0.0};
    
@@ -272,10 +271,10 @@ BOOST_AUTO_TEST_CASE(Real_part_of_a_purely_real_number)
 
     const double expected {1.0};
 
-    BOOST_CHECK(expected == actual);
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(Real_part_of_a_purely_imaginary_number)
+TEST_CASE("real_part_of_a_purely_imaginary_number")
 {
     const complex_numbers::Complex c {0.0, 1.0};
    
@@ -283,10 +282,10 @@ BOOST_AUTO_TEST_CASE(Real_part_of_a_purely_imaginary_number)
 
     const double expected {0.0};
 
-    BOOST_CHECK(expected == actual);
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(Real_part_of_a_number_with_real_and_imaginary_number)
+TEST_CASE("real_part_of_a_number_with_real_and_imaginary_number")
 {
     const complex_numbers::Complex c {1.0, 2.0};
    
@@ -294,10 +293,10 @@ BOOST_AUTO_TEST_CASE(Real_part_of_a_number_with_real_and_imaginary_number)
 
     const double expected {1.0};
 
-    BOOST_CHECK(expected == actual);
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(Imaginary_part_of_a_purely_real_number)
+TEST_CASE("imaginary_part_of_a_purely_real_number")
 {
     const complex_numbers::Complex c {1.0, 0.0};
    
@@ -305,10 +304,10 @@ BOOST_AUTO_TEST_CASE(Imaginary_part_of_a_purely_real_number)
 
     const double expected {0.0};
 
-    BOOST_CHECK(expected == actual);
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(Imaginary_part_of_a_purely_imaginary_number)
+TEST_CASE("imaginary_part_of_a_purely_imaginary_number")
 {
     const complex_numbers::Complex c {0.0, 1.0};
    
@@ -316,10 +315,10 @@ BOOST_AUTO_TEST_CASE(Imaginary_part_of_a_purely_imaginary_number)
 
     const double expected {1.0};
 
-    BOOST_CHECK(expected == actual);
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(Imaginary_part_of_a_number_with_real_and_imaginary_part)
+TEST_CASE("imaginary_part_of_a_number_with_real_and_imaginary_part")
 {
     const complex_numbers::Complex c {1.0, 2.0};
    
@@ -327,10 +326,10 @@ BOOST_AUTO_TEST_CASE(Imaginary_part_of_a_number_with_real_and_imaginary_part)
 
     const double expected {2.0};
 
-    BOOST_CHECK(expected == actual);
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(Eulers_identity)
+TEST_CASE("eulers_identity")
 {
     const complex_numbers::Complex c {0.0, M_PI};
     
@@ -340,10 +339,10 @@ BOOST_AUTO_TEST_CASE(Eulers_identity)
     
     const complex_numbers::Complex expected {exp(cx).real(), exp(cx).imag()};
 
-    BOOST_CHECK(expected == actual);
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(Exponential_of_zero)
+TEST_CASE("exponential_of_zero")
 {
     const complex_numbers::Complex c {0.0, 0.0};
     
@@ -353,10 +352,10 @@ BOOST_AUTO_TEST_CASE(Exponential_of_zero)
     
     const complex_numbers::Complex expected {exp(cx).real(), exp(cx).imag()};
 
-    BOOST_CHECK(expected == actual);
+    REQUIRE(expected == actual);
 }
 
-BOOST_AUTO_TEST_CASE(Exponential_of_a_purely_real_number)
+TEST_CASE("exponential_of_a_purely_real_number")
 {
     const complex_numbers::Complex c {1.0, 0.0};
     
@@ -366,7 +365,7 @@ BOOST_AUTO_TEST_CASE(Exponential_of_a_purely_real_number)
     
     const complex_numbers::Complex expected {exp(cx).real(), exp(cx).imag()};
 
-    BOOST_CHECK(expected == actual);
+    REQUIRE(expected == actual);
 }
 
 #endif
