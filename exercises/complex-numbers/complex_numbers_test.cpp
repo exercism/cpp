@@ -104,13 +104,13 @@ TEST_CASE("divide_numbers_with_real_and_imaginary_part") {
 TEST_CASE("absolute_value_of_a_positive_purely_real_number") {
     const Complex c{5.0, 0.0};
 
-    REQUIRE(5.0 == c.abs());
+    REQUIRE(Approx(5.0) == c.abs());
 }
 
 TEST_CASE("absolute_value_of_a_negative_purely_real_number") {
     const Complex c{-5.0, 0.0};
 
-    REQUIRE(5.0 == c.abs());
+    REQUIRE(Approx(5.0) == c.abs());
 }
 
 TEST_CASE(
@@ -118,7 +118,7 @@ TEST_CASE(
     "part") {
     const Complex c{0.0, 5.0};
 
-    REQUIRE(5.0 == c.abs());
+    REQUIRE(Approx(5.0) == c.abs());
 }
 
 TEST_CASE(
@@ -126,13 +126,13 @@ TEST_CASE(
     "part") {
     const Complex c{0.0, -5.0};
 
-    REQUIRE(5.0 == c.abs());
+    REQUIRE(Approx(5.0) == c.abs());
 }
 
 TEST_CASE("absolute_value_of_a_number_with_real_and_imaginary_part") {
     const Complex c{3.0, 4.0};
 
-    REQUIRE(5.0 == c.abs());
+    REQUIRE(Approx(5.0) == c.abs());
 }
 
 TEST_CASE("conjugate_a_purely_real_number") {
@@ -156,37 +156,37 @@ TEST_CASE("conjugate_a_number_with_real_and_imaginary_part") {
 TEST_CASE("real_part_of_a_purely_real_number") {
     const Complex c{1.0, 0.0};
 
-    REQUIRE(1.0 == c.real());
+    REQUIRE(Approx(1.0) == c.real());
 }
 
 TEST_CASE("real_part_of_a_purely_imaginary_number") {
     const Complex c{0.0, 1.0};
 
-    REQUIRE(0.0 == c.real());
+    REQUIRE(Approx(0.0) == c.real());
 }
 
 TEST_CASE("real_part_of_a_number_with_real_and_imaginary_number") {
     const Complex c{1.0, 2.0};
 
-    REQUIRE(1.0 == c.real());
+    REQUIRE(Approx(1.0) == c.real());
 }
 
 TEST_CASE("imaginary_part_of_a_purely_real_number") {
     const Complex c{1.0, 0.0};
 
-    REQUIRE(0.0 == c.imag());
+    REQUIRE(Approx(0.0) == c.imag());
 }
 
 TEST_CASE("imaginary_part_of_a_purely_imaginary_number") {
     const Complex c{0.0, 1.0};
 
-    REQUIRE(1.0 == c.imag());
+    REQUIRE(Approx(1.0) == c.imag());
 }
 
 TEST_CASE("imaginary_part_of_a_number_with_real_and_imaginary_part") {
     const Complex c{1.0, 2.0};
 
-    REQUIRE(2.0 == c.imag());
+    REQUIRE(Approx(2.0) == c.imag());
 }
 
 TEST_CASE("eulers_identity") {

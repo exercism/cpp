@@ -30,6 +30,8 @@ Complex Complex::operator/(const Complex& other) const {
 }
 
 bool Complex::operator==(const Complex& other) const {
+    // This is not a bulletproof comparison, but we want this to work for the
+    // tests.
     return re == other.re && im == other.im;
 }
 
