@@ -1,11 +1,11 @@
 #if !defined(COMPLEX_NUMBERS_H)
 #define COMPLEX_NUMBERS_H
+#include <iostream>
 
 namespace complex_numbers {
 
 class Complex {
-    
-public:
+   public:
     Complex(double, double);
     Complex operator+(const Complex& other) const;
     Complex operator-(const Complex& other) const;
@@ -17,10 +17,12 @@ public:
     double real() const;
     double imag() const;
     Complex exp() const;
-    
-private:
+
+   private:
     double re, im;
 };
 
-}
+std::ostream& operator<<(std::ostream& os, Complex const& value);
+
+}  // namespace complex_numbers
 #endif
