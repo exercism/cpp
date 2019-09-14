@@ -1,5 +1,6 @@
 #include "complex_numbers.h"
 
+#define _USE_MATH_DEFINES // For M_PI
 #include <cmath>
 #include <complex>
 

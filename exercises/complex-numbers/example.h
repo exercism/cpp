@@ -25,4 +25,5 @@ class Complex {
 std::ostream& operator<<(std::ostream& os, Complex const& value);
 
 }  // namespace complex_numbers
+
 #endif
