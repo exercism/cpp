@@ -1,10 +1,14 @@
 #include <cmath>
+#include <limits>
 
 #include "complex_numbers.h"
 
 namespace complex_numbers {
 
 Complex::Complex(double r, double i) : re(r), im(i) {}
+
+Complex::Complex(std::complex<double> complex)
+    : re(complex.real()), im(complex.imag()) {}
 
 Complex Complex::operator+(const Complex& other) const {
     Complex sum{re + other.re, im + other.im};
@@ -29,12 +33,6 @@ Complex Complex::operator/(const Complex& other) const {
     return quot;
 }
 
-bool Complex::operator==(const Complex& other) const {
-    // This is not a bulletproof comparison, but we want this to work for the
-    // tests.
-    return re == other.re && im == other.im;
-}
-
 double Complex::abs() const { return sqrt(re * re + im * im); }
 
 Complex Complex::conj() const {
@@ -51,8 +49,34 @@ Complex Complex::exp() const {
     return ex;
 }
 
+bool operator==(const Complex& lhs, const Complex& rhs) {
+    // Adapted from
+    // https://en.cppreference.com/w/cpp/types/numeric_limits/epsilon
+    using std::abs;
+    using std::ceil;
+    using std::numeric_limits;
+    auto almost_equal = [](double x, double y, int ulp) {
+        // the machine epsilon has to be scaled to the magnitude of the
+        // values used and multiplied by the desired precision in ULPs
+        // (units in the last place) unless the result is subnormal
+        return abs(x - y) <=
+                   numeric_limits<double>::epsilon() * ceil(abs(x + y)) * ulp ||
+               abs(x - y) < numeric_limits<double>::min();
+    };
+    return almost_equal(lhs.real(), rhs.real(), 2) &&
+           almost_equal(lhs.imag(), rhs.imag(), 2);
+}
+
+bool operator==(const std::complex<double>& lhs, const Complex& rhs) {
+    return Complex(lhs) == rhs;
+}
+
+bool operator==(const Complex& lhs, const std::complex<double>& rhs) {
+    return rhs == lhs;
+}
+
 std::ostream& operator<<(std::ostream& os, Complex const& value) {
-    os << "{" << value.real() << ", " << value.imag() << "}";
+    os << "(" << value.real() << "," << value.imag() << ")";
     return os;
 }
 
