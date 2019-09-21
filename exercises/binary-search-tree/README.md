@@ -55,8 +55,8 @@ And if we then added 1, 5, and 7, it would look like this
 
 ## Getting Started
 
-Make sure you have read the [Installing](https://exercism.io/tracks/cpp/installing) and 
-[Running the Tests](https://exercism.io/tracks/cpp/tests) pages for C++ on exercism.io. 
+Make sure you have read the [Installing](https://exercism.io/tracks/cpp/installation) and
+[Running the Tests](https://exercism.io/tracks/cpp/tests) pages for C++ on exercism.io.
 This covers the basic information on setting up the development
 environment expected by the exercises.
 
