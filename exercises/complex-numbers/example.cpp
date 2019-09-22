@@ -7,9 +7,6 @@ namespace complex_numbers {
 
 Complex::Complex(double r, double i) : re(r), im(i) {}
 
-Complex::Complex(std::complex<double> complex)
-    : re(complex.real()), im(complex.imag()) {}
-
 Complex Complex::operator+(const Complex& other) const {
     Complex sum{re + other.re, im + other.im};
     return sum;
@@ -65,14 +62,6 @@ bool operator==(const Complex& lhs, const Complex& rhs) {
     };
     return almost_equal(lhs.real(), rhs.real(), 2) &&
            almost_equal(lhs.imag(), rhs.imag(), 2);
-}
-
-bool operator==(const std::complex<double>& lhs, const Complex& rhs) {
-    return Complex(lhs) == rhs;
-}
-
-bool operator==(const Complex& lhs, const std::complex<double>& rhs) {
-    return rhs == lhs;
 }
 
 std::ostream& operator<<(std::ostream& os, Complex const& value) {

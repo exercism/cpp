@@ -1,13 +1,15 @@
 #include "complex_numbers.h"
 
 #include <cmath>
-#include <complex>
 
 #include "test/catch.hpp"
 
-// Define M_PI for platforms that don't include it
+// Define constants for platforms that don't include it
 #ifndef M_PI
 #define M_PI 3.14159265358979323846
+#endif
+#ifndef M_E
+#define M_E 2.71828182845904523536
 #endif
 
 // Complex Numbers exercise test case data version 1.3.0
@@ -196,23 +198,20 @@ TEST_CASE("Conjugate a number with real and imaginary part") {
 
 TEST_CASE("Eulers identity") {
     const Complex c{0.0, M_PI};
-    const std::complex<double> cx{0.0, M_PI};
 
-    REQUIRE(exp(cx) == c.exp());
+    REQUIRE(Complex(-1.0, 0.0) == c.exp());
 }
 
 TEST_CASE("Exponential of zero") {
     const Complex c{0.0, 0.0};
-    const std::complex<double> cx{0.0, 0.0};
 
-    REQUIRE(exp(cx) == c.exp());
+    REQUIRE(Complex(1.0, 0.0) == c.exp());
 }
 
 TEST_CASE("Exponential of a purely real number") {
     const Complex c{1.0, 0.0};
-    const std::complex<double> cx{1.0, 0.0};
 
-    REQUIRE(exp(cx) == c.exp());
+    REQUIRE(Complex(M_E, 0.0) == c.exp());
 }
 
 // Extra Credit
