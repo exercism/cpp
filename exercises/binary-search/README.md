@@ -34,6 +34,11 @@ A binary search halves the number of items to check with each iteration,
 so locating an item (or determining its absence) takes logarithmic time.
 A binary search is a dichotomic divide and conquer search algorithm.
 
+## Note
+
+- Try to implement the algorithm yourself.
+  Do not use something else to perform the search for you.
+
 ## Getting Started
 
 Make sure you have read the [Installing](https://exercism.io/tracks/cpp/installation) and
@@ -60,8 +65,7 @@ to get a failing test, then change the code minimally to pass the test,
 refactor your implementation for readability and expressiveness and then
 go on to the next test.
 
-Try to use standard C++11 facilities in preference to writing your own
-low-level algorithms or facilities by hand.  [CppReference](http://en.cppreference.com/)
+[CppReference](http://en.cppreference.com/)
 is a wiki reference to the C++ language and standard library.  If you
 are new to C++, but have programmed in C, beware of
 [C traps and pitfalls](http://www.slideshare.net/LegalizeAdulthood/c-traps-and-pitfalls-for-c-programmers).

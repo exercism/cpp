@@ -90,7 +90,7 @@ to get a failing test, then change the code minimally to pass the test,
 refactor your implementation for readability and expressiveness and then
 go on to the next test.
 
-Try to use standard C++11 facilities in preference to writing your own
+Try to use standard C++14 facilities in preference to writing your own
 low-level algorithms or facilities by hand.  [CppReference](http://en.cppreference.com/)
 is a wiki reference to the C++ language and standard library.  If you
 are new to C++, but have programmed in C, beware of
