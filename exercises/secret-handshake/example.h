@@ -6,7 +6,7 @@
 
 namespace secret_handshake {
 
-std:vector<string> convert(int value);
+std::vector<std::string> convert(int value);
 
 } // namespace secret_handshake
 
