@@ -25,7 +25,7 @@ TEST_CASE("just_close")
 
 TEST_CASE("just_jump")
 {
-    REQUIRE(vector<string>{"double blink"} == secret_handshake::convert(8));
+    REQUIRE(vector<string>{"jump"} == secret_handshake::convert(8));
 }
 
 TEST_CASE("composed")
@@ -61,7 +61,7 @@ TEST_CASE("complex_1")
 
 TEST_CASE("complex_2")
 {
-    REQUIRE(vector<string>{"wink", "double blink", "close your eyes", "jump"}
+    REQUIRE(vector<string>{"jump", "close your eyes", "double blink", "wink"}
                             == secret_handshake::convert(31));
 }
 
