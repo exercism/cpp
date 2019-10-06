@@ -586,8 +586,8 @@
       "unlocked_by": "reverse-string",
       "difficulty": 2,
       "topics": [
-        "bitwise_operations",
-        "arrays"
+        "arrays",
+        "bitwise_operations"
       ]
     }
   ]
