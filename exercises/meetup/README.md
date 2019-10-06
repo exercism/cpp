@@ -33,6 +33,10 @@ Make sure you have read the [Installing](https://exercism.io/tracks/cpp/installa
 This covers the basic information on setting up the development
 environment expected by the exercises.
 
+This problem requires you to install and use the Boost [`date_time`](http://www.boost.org/doc/libs/1_59_0/doc/html/date_time.html) library.
+CMake will try to find and configure it for you if it is installed on your system.
+See for documentation on [`boost::gregorian::date`](https://www.boost.org/doc/libs/1_59_0/doc/html/date_time/gregorian.html#date_time.gregorian.date_class).
+
 ## Passing the Tests
 
 Get the first test compiling, linking and passing by following the [three
