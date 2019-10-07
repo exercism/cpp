@@ -578,6 +578,17 @@
         "functions",
         "math"
       ]
+    },
+    {
+      "slug": "secret-handshake",
+      "uuid": "c8ca89ef-b63d-40e5-9d57-bfa796e704ea",
+      "core": false,
+      "unlocked_by": "reverse-string",
+      "difficulty": 2,
+      "topics": [
+        "arrays",
+        "bitwise_operations"
+      ]
     }
   ]
 }
