@@ -14,7 +14,7 @@ environment expected by the exercises.
 
 This problem requires you to install and use the Boost [`date_time`](http://www.boost.org/doc/libs/1_59_0/doc/html/date_time.html) library.
 CMake will try to find and configure it for you if it is installed on your system.
-See documentation for on [`boost::posix_time`](http://www.boost.org/doc/libs/1_59_0/doc/html/date_time/posix_time.html).
+See the documentation for [`boost::posix_time`](http://www.boost.org/doc/libs/1_59_0/doc/html/date_time/posix_time.html).
 
 ## Passing the Tests
 
