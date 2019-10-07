@@ -6,7 +6,7 @@
 
 namespace protein_translation {
 
-std::vector<std::string> proteins(string rna);
+std::vector<std::string> proteins(std::string rna);
 
 } // namespace protein_translation
 
