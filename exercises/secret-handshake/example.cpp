@@ -5,7 +5,7 @@
 
 using namespace std;
 
-vector<string> secret_handshake::convert(int value) {
+vector<string> secret_handshake::commands(int value) {
     vector<string> answer;
     if (value & (1<<0)) answer.push_back("wink");
     if (value & (1<<1)) answer.push_back("double blink");
