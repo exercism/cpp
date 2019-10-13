@@ -1,8 +1,10 @@
 #if !defined(BINARY_H)
 #define BINARY_H
 
-namespace binary {
+#include <string>
 
+namespace binary {
+	int convert(std::string binaryStr);
 }  // namespace binary
 
 #endif // BINARY_H
