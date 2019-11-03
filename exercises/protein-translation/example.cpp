@@ -8,7 +8,7 @@ using namespace std;
 
 vector<string> protein_translation::proteins(string rna) {
 
-    map<string, string> dic;
+    unordered_map<string, string> dic;
     dic["AUG"] = "Methionine";
     dic["UUU"] = dic["UUC"] = "Phenylalanine";
     dic["UUA"] = dic["UUG"] = "Leucine";
