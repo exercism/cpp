@@ -21,9 +21,11 @@ vector<string> protein_translation::proteins(string rna) {
     vector<string> polypeptide;
     for (int i = 0; i < (int)rna.size()-2; i += 3) {
         string codon = rna.substr(i, 3);
-        string protein = dic[codon];
-        if (protein == "STOP") break;
-        polypeptide.push_back(protein);
+        auto it = dic.find(codon);
+        if (it == dic.end() || it->second == "STOP") {
+            break;
+        }
+        polypeptide.push_back(it->second);
     }
     return polypeptide;
 }
