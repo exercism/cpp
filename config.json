@@ -601,6 +601,18 @@
         "arrays",
         "bitwise_operations"
       ]
+    },
+    {
+      "slug": "protein-translation",
+      "uuid": "fb73e822-4831-4d33-a049-44a514bfa46a",
+      "core": false,
+      "unlocked_by": "reverse-string",
+      "difficulty": 3,
+      "topics": [
+        "filtering",
+        "maps",
+        "sequences"
+      ]
     }
   ]
 }
