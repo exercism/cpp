@@ -45,7 +45,7 @@ matrix:
 before_install:
   - sudo apt-get -y -d update
 install:
-  - sudo apt-get -y install cmake ninja-build libboost-date-time-dev
+  - sudo apt-get -y install ninja-build libboost-date-time-dev
   - export CXX=${COMPILER}
   - ${CXX} --version
 script:
