@@ -613,6 +613,18 @@
         "maps",
         "sequences"
       ]
+    },
+    {
+      "slug": "two-fer",
+      "uuid": "95a162a4-d825-4874-9e2f-014787cbdfb5",
+      "core": false,
+      "unlocked_by": "hello-world",
+      "difficulty": 1,
+      "topics": [
+        "optional_values",
+        "strings",
+        "text_formatting"
+      ]
     }
   ]
 }
