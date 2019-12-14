@@ -1,4 +1,3 @@
-dist: trusty
 sudo: false
 language: cpp
 os: linux
@@ -6,35 +5,26 @@ os: linux
 matrix:
   include:
     - env: COMPILER=g++-5
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-          packages:
-            - g++-5
+      dist: xenial
 
     - env: COMPILER=clang++-3.8
+      dist: xenial
       addons:
         apt:
-          sources:
-            - ubuntu-toolchain-r-test
-            - llvm-toolchain-precise-3.8
           packages:
             - clang-3.8
-            - g++-5
 
     - env:
       - COMPILER=clang++-7
       - EXERCISM_COMMON_CATCH=false
+      dist: bionic
       addons:
         apt:
-          sources:
-            - ubuntu-toolchain-r-test
-            - llvm-toolchain-trusty-7
           packages:
             - clang-7
 
     - env: COMPILER=g++-8
+      dist: bionic
       addons:
         apt:
           sources:
@@ -43,10 +33,9 @@ matrix:
             - g++-8
 
 before_install:
-  - sudo add-apt-repository -y ppa:samuel-bachmann/boost
   - sudo apt-get -y -d update
 install:
-  - sudo apt-get -y install cmake3 ninja-build libboost-date-time1.60-dev
+  - sudo apt-get -y install ninja-build libboost-date-time-dev
   - export CXX=${COMPILER}
   - ${CXX} --version
 script:
