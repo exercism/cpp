@@ -17,13 +17,13 @@ using complex_numbers::Complex;
 #endif
 
 // Define a margin to use for float comparisons. Catch does not compute a good
-// margin for float values near 0.
-static const double m = 0.005;
+// epsilon for float values near 0.
+static const double eps = 0.005;
 
 // Helper function for comparing Complex numbers with approximate float values.
 static void require_approx_equal(const Complex& lhs, const Complex& rhs) {
-    REQUIRE(Approx(lhs.real()).margin(m) == rhs.real());
-    REQUIRE(Approx(lhs.imag()).margin(m) == rhs.imag());
+    REQUIRE(Approx(lhs.real()).margin(eps) == rhs.real());
+    REQUIRE(Approx(lhs.imag()).margin(eps) == rhs.imag());
 }
 
 TEST_CASE("Real part of a purely real number") {
@@ -36,7 +36,7 @@ TEST_CASE("Real part of a purely real number") {
 TEST_CASE("Real part of a purely imaginary number") {
     const Complex c{0.0, 1.0};
 
-    REQUIRE(Approx(0.0).margin(m) == c.real());
+    REQUIRE(Approx(0.0).margin(eps) == c.real());
 }
 
 TEST_CASE("Real part of a number with real and imaginary part") {
@@ -48,7 +48,7 @@ TEST_CASE("Real part of a number with real and imaginary part") {
 TEST_CASE("Imaginary part of a purely real number") {
     const Complex c{1.0, 0.0};
 
-    REQUIRE(Approx(0.0).margin(m) == c.imag());
+    REQUIRE(Approx(0.0).margin(eps) == c.imag());
 }
 
 TEST_CASE("Imaginary part of a purely imaginary number") {
