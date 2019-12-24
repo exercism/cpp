@@ -47,21 +47,7 @@ Complex Complex::exp() const {
 }
 
 bool operator==(const Complex& lhs, const Complex& rhs) {
-    // Adapted from
-    // https://en.cppreference.com/w/cpp/types/numeric_limits/epsilon
-    using std::abs;
-    using std::ceil;
-    using std::numeric_limits;
-    auto almost_equal = [](double x, double y, int ulp) {
-        // the machine epsilon has to be scaled to the magnitude of the
-        // values used and multiplied by the desired precision in ULPs
-        // (units in the last place) unless the result is subnormal
-        return abs(x - y) <=
-                   numeric_limits<double>::epsilon() * ceil(abs(x + y)) * ulp ||
-               abs(x - y) < numeric_limits<double>::min();
-    };
-    return almost_equal(lhs.real(), rhs.real(), 2) &&
-           almost_equal(lhs.imag(), rhs.imag(), 2);
+    return lhs.real() == rhs.real() && lhs.imag() == rhs.imag();
 }
 
 std::ostream& operator<<(std::ostream& os, Complex const& value) {
