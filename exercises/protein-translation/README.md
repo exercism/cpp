@@ -1,9 +1,44 @@
-# Gigasecond
+# Protein Translation
 
-Given a moment, determine the moment that would be after a gigasecond
-has passed.
+Translate RNA sequences into proteins.
 
-A gigasecond is 10^9 (1,000,000,000) seconds.
+RNA can be broken into three nucleotide sequences called codons, and then translated to a polypeptide like so:
+
+RNA: `"AUGUUUUCU"` => translates to
+
+Codons: `"AUG", "UUU", "UCU"` => which become a polypeptide with the following sequence
+
+Protein: `"Methionine", "Phenylalanine", "Serine"`
+
+There are 64 codons which in turn correspond to 20 amino acids; however, all of the codon sequences and resulting amino acids are not important in this exercise.  If it works for one codon, the program should work for all of them.
+However, feel free to expand the list in the test suite to include them all.
+
+There are also three terminating codons (also known as 'STOP' codons); if any of these codons are encountered (by the ribosome), all translation ends and the protein is terminated.
+
+All subsequent codons after are ignored, like this:
+
+RNA: `"AUGUUUUCUUAAAUG"` =>
+
+Codons: `"AUG", "UUU", "UCU", "UAA", "AUG"` =>
+
+Protein: `"Methionine", "Phenylalanine", "Serine"`
+
+Note the stop codon `"UAA"` terminates the translation and the final methionine is not translated into the protein sequence.
+
+Below are the codons and resulting Amino Acids needed for the exercise.
+
+Codon                 | Protein
+:---                  | :---
+AUG                   | Methionine
+UUU, UUC              | Phenylalanine
+UUA, UUG              | Leucine
+UCU, UCC, UCA, UCG    | Serine
+UAU, UAC              | Tyrosine
+UGU, UGC              | Cysteine
+UGG                   | Tryptophan
+UAA, UAG, UGA         | STOP
+
+Learn more about [protein translation on Wikipedia](http://en.wikipedia.org/wiki/Translation_(biology))
 
 ## Getting Started
 
@@ -11,10 +46,6 @@ Make sure you have read the [Installing](https://exercism.io/tracks/cpp/installa
 [Running the Tests](https://exercism.io/tracks/cpp/tests) pages for C++ on exercism.io.
 This covers the basic information on setting up the development
 environment expected by the exercises.
-
-This problem requires you to install and use the Boost [`date_time`](http://www.boost.org/doc/libs/1_58_0/doc/html/date_time.html) library.
-CMake will try to find and configure it for you if it is installed on your system.
-See the documentation for [`boost::posix_time`](http://www.boost.org/doc/libs/1_58_0/doc/html/date_time/posix_time.html).
 
 ## Passing the Tests
 
@@ -43,7 +74,8 @@ are new to C++, but have programmed in C, beware of
 
 ## Source
 
-Chapter 9 in Chris Pine's online Learn to Program tutorial. [http://pine.fm/LearnToProgram/?Chapter=09](http://pine.fm/LearnToProgram/?Chapter=09)
+Tyler Long
 
 ## Submitting Incomplete Solutions
+
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.

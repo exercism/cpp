@@ -534,6 +534,18 @@
       ]
     },
     {
+      "slug": "complex-numbers",
+      "uuid": "ea8d6224-0440-6d80-1569-a04127908a200d2ecf0",
+      "core": false,
+      "unlocked_by": "grains",
+      "difficulty": 6,
+      "topics": [
+        "classes",
+        "mathematics",
+        "operator_overloading"
+      ]
+    },
+    {
       "slug": "luhn",
       "uuid": "885865bc-a197-436f-94bc-b1998d5cc081",
       "core": false,
@@ -588,6 +600,30 @@
       "topics": [
         "arrays",
         "bitwise_operations"
+      ]
+    },
+    {
+      "slug": "protein-translation",
+      "uuid": "fb73e822-4831-4d33-a049-44a514bfa46a",
+      "core": false,
+      "unlocked_by": "reverse-string",
+      "difficulty": 3,
+      "topics": [
+        "filtering",
+        "maps",
+        "sequences"
+      ]
+    },
+    {
+      "slug": "two-fer",
+      "uuid": "95a162a4-d825-4874-9e2f-014787cbdfb5",
+      "core": false,
+      "unlocked_by": "hello-world",
+      "difficulty": 1,
+      "topics": [
+        "optional_values",
+        "strings",
+        "text_formatting"
       ]
     }
   ]
