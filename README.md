@@ -20,8 +20,9 @@ Here is a list of things that need to be done to add an exercise to this track.
 3. Create an example solution and name the files `example.cpp` and `example.h`. `example.cpp` is optional but encouraged.
 4. Add the test to the list in the root CMakeLists.txt file.
 5. Add the test to the config.json file. The [configlet](https://github.com/exercism/configlet) can help generate a unique UUID. You can download configlet using the script in `bin/fetch-configlet`.
-6. Use the [configlet](https://github.com/exercism/configlet) tool to generate the README for your exercise.
-7. Try to match the formatting used in the other tests as closely as possible.
+6. Add at least one topic for the exercise in the config.json file. Check the available topics in [TOPICS.txt](https://github.com/exercism/problem-specifications/blob/master/TOPICS.txt).
+7. Use the [configlet](https://github.com/exercism/configlet) tool to generate the README for your exercise.
+8. Try to match the formatting used in the other tests as closely as possible.
 
 ## Testing an exercise
 
