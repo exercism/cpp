@@ -2,6 +2,16 @@
   "docs_url": "https://github.com/exercism/docs/blob/master/maintaining-a-track/maintainer-configuration.md",
   "maintainers": [
     {
+      "github_username": "HaoZeke",
+      "alumnus": false,
+      "show_on_website": false,
+      "name": "Rohit Goswami",
+      "link_text": "Grimoire",
+      "link_url": "https://grimoire.science",
+      "avatar_url": null,
+      "bio": "Applied High Performance Computing researcher based out of the University of Iceland with ties to IIT Kanpur. FOSS enthusiast for over ten years. C++, Lua, Nix, Fortran, R, and, anything fun."
+    },
+    {
       "github_username": "patricksjackson",
       "alumnus": false,
       "show_on_website": false,
@@ -50,6 +60,16 @@
       "link_url": "https://silvanocerza.com/",
       "avatar_url": null,
       "bio": "I'm a C++ developer working mainly on desktop application, I have quite a bit of experience with Python and like to dabble in several other languages."
+    },
+    {
+      "github_username": "AeroStun",
+      "alumnus": false,
+      "show_on_website": false,
+      "name": null,
+      "link_text": null,
+      "link_url": "https://heavyeyelid.github.io/",
+      "avatar_url": null,
+      "bio": null
     }
   ]
 }
