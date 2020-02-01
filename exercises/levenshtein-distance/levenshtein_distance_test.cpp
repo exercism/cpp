@@ -3,9 +3,9 @@
 
 using namespace std;
 
-TEST_CASE("time_to_mine")
+TEST_CASE("mine_to_times")
 {
-    REQUIRE(2 == levenshtein::distance("time", "mine"));
+    REQUIRE(3 == levenshtein::distance("mine", "times"));
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
