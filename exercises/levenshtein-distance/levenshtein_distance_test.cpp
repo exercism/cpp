@@ -3,35 +3,55 @@
 
 using namespace std;
 
-TEST_CASE("mine_to_times")
+TEST_CASE("empty strings")
 {
-    REQUIRE(3 == levenshtein::distance("mine", "times"));
+    REQUIRE(0 == levenshtein::distance("", ""));
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
-TEST_CASE("_to_abcd")
+TEST_CASE("identical strings")
+{
+	REQUIRE(0 == levenshtein::distance("abcdefghij", "abcdefghij"));
+}
+
+TEST_CASE("only insertions")
 {
 	REQUIRE(4 == levenshtein::distance("", "abcd"));
 }
 
-TEST_CASE("12345_to_")
+TEST_CASE("only deletions")
 {
-	REQUIRE(5 == levenshtein::distance("12345", ""));
+	REQUIRE(4 == levenshtein::distance("abcd", ""));
 }
 
-TEST_CASE("lifo_to_fifo")
+TEST_CASE("only substitution")
 {
 	REQUIRE(1 == levenshtein::distance("lifo", "fifo"));
 }
 
-TEST_CASE("Hello-World!_to_hello-world")
+TEST_CASE("substitution and insertion")
 {
-	REQUIRE(3 == levenshtein::distance("Hello World!", "hello world"));
+	REQUIRE(3 == levenshtein::distance("mine", "times"));
 }
 
-TEST_CASE("oxygenO2_to_carbondioxideCO2")
+TEST_CASE("substitution and deletion")
 {
-	REQUIRE(11 == levenshtein::distance("oxygenO2", "carbondioxideCO2"));
+	REQUIRE(3 == levenshtein::distance("times", "mine"));
+}
+
+TEST_CASE("with numbers")
+{
+	REQUIRE(3 == levenshtein::distance("abc123", "abd2234"));
+}
+
+TEST_CASE("with special characters")
+{
+	REQUIRE(2 == levenshtein::distance("hello world!", "helloworld"));
+}
+
+TEST_CASE("with capital letters")
+{
+	REQUIRE(13 == levenshtein::distance("Oxygen O2", "Carbondioxide CO2"));
 }
 
 #endif
