@@ -3,6 +3,8 @@
 
 using namespace std;
 
+// Levenshtein distance exercise test case data version 1.0.0
+
 TEST_CASE("empty strings")
 {
     REQUIRE(0 == levenshtein::distance("", ""));
