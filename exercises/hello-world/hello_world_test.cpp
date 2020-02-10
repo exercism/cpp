@@ -1,8 +1,12 @@
+// Include the header file with the definitions of the functions you create.
 #include "hello_world.h"
-#define BOOST_TEST_MAIN
-#include <boost/test/unit_test.hpp>
 
-BOOST_AUTO_TEST_CASE(test_hello)
+// Include the test framework.
+#include "test/catch.hpp"
+
+// Declares a single test.
+TEST_CASE("test_hello")
 {
-    BOOST_REQUIRE_EQUAL("Hello, World!", hello_world::hello());
+    // Check if your function returns "Hello, World!".
+    REQUIRE(hello_world::hello() == "Hello, World!");
 }

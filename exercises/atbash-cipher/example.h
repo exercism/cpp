@@ -3,7 +3,7 @@
 
 #include <string>
 
-namespace atbash
+namespace atbash_cipher
 {
 
 std::string encode(std::string const& plaintext);

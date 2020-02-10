@@ -1,63 +1,39 @@
-cmake_minimum_required(VERSION 2.8.11)
+cmake_minimum_required(VERSION 3.5.1)
 project(exercism CXX)
 
-function(travis_fixup dir)
-    string(REPLACE "-" "_" file ${dir})
-    set(subdir ${CMAKE_CURRENT_SOURCE_DIR}/exercises/${dir})
-    if(EXISTS ${subdir}/example.h)
-        file(RENAME ${subdir}/example.h ${subdir}/${file}.h)
-    endif()
-    if(EXISTS ${subdir}/example.cpp)
-        file(RENAME ${subdir}/example.cpp ${subdir}/${file}.cpp)
+set(alt_exercise_tree ${CMAKE_CURRENT_SOURCE_DIR}/build_exercises)
+
+function(build_fixup exercise_dir alt_exercise_root)
+    string(REPLACE "-" "_" file ${exercise_dir})
+    set(source ${CMAKE_CURRENT_SOURCE_DIR}/exercises/${exercise_dir})
+    if(EXISTS ${source})
+        set(alt_exercise_dir ${alt_exercise_root}/${exercise_dir})
+        file(COPY ${source} DESTINATION ${alt_exercise_root})
+        if(EXISTS ${alt_exercise_dir}/example.h)
+            file(RENAME ${alt_exercise_dir}/example.h ${alt_exercise_dir}/${file}.h)
+        endif()
+        if(EXISTS ${alt_exercise_dir}/example.cpp)
+            file(RENAME ${alt_exercise_dir}/example.cpp ${alt_exercise_dir}/${file}.cpp)
+        endif()
     endif()
 endfunction()
 
-foreach(exercise
-    bob
-    word-count
-    hamming
-    anagram
-    food-chain
-    beer-song
-    nucleotide-count
-    rna-transcription
-    phone-number
-    grade-school
-    robot-name
-    leap
-    etl
-    space-age
-    grains
-    gigasecond
-    triangle
-    clock
-    raindrops
-    difference-of-squares
-    roman-numerals
-    nth-prime
-    sieve
-    binary
-    sum-of-multiples
-    series
-    prime-factors
-    trinary
-    crypto-square
-    scrabble-score
-    hexadecimal
-    say
-    meetup
-    queen-attack
-    allergies
-    atbash-cipher
-    bracket-push
-    pangram
-)
-    set(exercise_dir exercises/${exercise})
-    travis_fixup(${exercise})
-    execute_process(
-        COMMAND ${CMAKE_COMMAND} -DEXERCISM_RUN_ALL_TESTS:BOOL=1 -G ${CMAKE_GENERATOR} .
-        WORKING_DIRECTORY ${exercise_dir})
-    add_custom_target(${exercise} ALL
-        COMMAND ${CMAKE_COMMAND} --build .
-        WORKING_DIRECTORY ${exercise_dir})
+option(EXERCISM_RUN_ALL_TESTS "Run all Exercism tests" On)
+option(EXERCISM_COMMON_CATCH "Link against a common Catch2 main lib." On)
+
+if(EXERCISM_COMMON_CATCH)
+    add_library(catchlib OBJECT test/tests-main.cpp)
+    set_target_properties(catchlib PROPERTIES
+        CXX_STANDARD 11
+        CXX_STANDARD_REQUIRED OFF
+        CXX_EXTENSIONS OFF
+    )
+endif()
+
+file(GLOB exercise_list ${CMAKE_CURRENT_SOURCE_DIR}/exercises/*)
+
+foreach(exercise_dir ${exercise_list})
+    get_filename_component(exercise ${exercise_dir} NAME)
+    build_fixup(${exercise} ${alt_exercise_tree})
+    add_subdirectory(${alt_exercise_tree}/${exercise})
 endforeach()

@@ -24,7 +24,7 @@ Some good test cases for this program are:
 ### Extension
 
 If you're on a Mac, shell out to Mac OS X's `say` program to talk out
-loud.
+loud. If you're on Linux or Windows, eSpeakNG may be available with the command `espeak`.
 
 ## Step 2
 
@@ -64,8 +64,9 @@ Use _and_ (correctly) when spelling out the number in English:
 
 ## Getting Started
 
-Make sure you have read [the C++ page](http://exercism.io/languages/cpp) on
-exercism.io.  This covers the basic information on setting up the development
+Make sure you have read the [Installing](https://exercism.io/tracks/cpp/installation) and
+[Running the Tests](https://exercism.io/tracks/cpp/tests) pages for C++ on exercism.io.
+This covers the basic information on setting up the development
 environment expected by the exercises.
 
 ## Passing the Tests
@@ -87,7 +88,7 @@ to get a failing test, then change the code minimally to pass the test,
 refactor your implementation for readability and expressiveness and then
 go on to the next test.
 
-Try to use standard C++11 facilities in preference to writing your own
+Try to use standard C++14 facilities in preference to writing your own
 low-level algorithms or facilities by hand.  [CppReference](http://en.cppreference.com/)
 is a wiki reference to the C++ language and standard library.  If you
 are new to C++, but have programmed in C, beware of

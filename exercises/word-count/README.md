@@ -1,20 +1,40 @@
 # Word Count
 
-Given a phrase, count the occurrences of each word in that phrase.
+Given a phrase, count the occurrences of each _word_ in that phrase.
 
-For example for the input `"olly olly in come free"`
+For the purposes of this exercise you can expect that a _word_ will always be one of:
+
+1. A _number_ composed of one or more ASCII digits (ie "0" or "1234") OR
+2. A _simple word_ composed of one or more ASCII letters (ie "a" or "they") OR
+3. A _contraction_ of two _simple words_ joined by a single apostrophe (ie "it's" or "they're")
+
+When counting words you can assume the following rules:
+
+1. The count is _case insensitive_ (ie "You", "you", and "YOU" are 3 uses of the same word)
+2. The count is _unordered_; the tests will ignore how words and counts are ordered
+3. Other than the apostrophe in a _contraction_ all forms of _punctuation_ are ignored
+4. The words can be separated by _any_ form of whitespace (ie "\t", "\n", " ")
+
+For example, for the phrase `"That's the password: 'PASSWORD 123'!", cried the Special Agent.\nSo I fled.` the count would be:
 
 ```text
-olly: 2
-in: 1
-come: 1
-free: 1
+that's: 1
+the: 2
+password: 2
+123: 1
+cried: 1
+special: 1
+agent: 1
+so: 1
+i: 1
+fled: 1
 ```
 
 ## Getting Started
 
-Make sure you have read [the C++ page](http://exercism.io/languages/cpp) on
-exercism.io.  This covers the basic information on setting up the development
+Make sure you have read the [Installing](https://exercism.io/tracks/cpp/installation) and
+[Running the Tests](https://exercism.io/tracks/cpp/tests) pages for C++ on exercism.io.
+This covers the basic information on setting up the development
 environment expected by the exercises.
 
 ## Passing the Tests
@@ -36,7 +56,7 @@ to get a failing test, then change the code minimally to pass the test,
 refactor your implementation for readability and expressiveness and then
 go on to the next test.
 
-Try to use standard C++11 facilities in preference to writing your own
+Try to use standard C++14 facilities in preference to writing your own
 low-level algorithms or facilities by hand.  [CppReference](http://en.cppreference.com/)
 is a wiki reference to the C++ language and standard library.  If you
 are new to C++, but have programmed in C, beware of

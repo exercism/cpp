@@ -2,6 +2,7 @@
   "language": "C++",
   "active": true,
   "blurb": "C++ is a general-purpose programming language that supports procedural, object-oriented, generic and functional programming styles. C++ is deployed on billions of devices from the smallest embedded microprocessor to the largest supercomputer.",
+  "test_pattern": ".*_test[.]cpp",
   "foregone": [
     "point-mutations"
   ],
@@ -18,21 +19,43 @@
       ]
     },
     {
+      "slug": "isogram",
+      "uuid": "fcd69b30-63e4-485d-a3b5-71f5039a9180",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "conditionals",
+        "loops",
+        "strings"
+      ]
+    },
+    {
       "slug": "leap",
       "uuid": "76a840c7-24f1-455d-b62e-da42b13f8dd5",
       "core": true,
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "control_flow_conditionals",
+        "conditionals",
         "logic"
+      ]
+    },
+    {
+      "slug": "reverse-string",
+      "uuid": "c6946af0-3c2f-4f76-8b30-a1643cd5be63",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "strings"
       ]
     },
     {
       "slug": "gigasecond",
       "uuid": "4dbe1bb3-0419-4749-8c2a-ec91539a8640",
-      "core": true,
-      "unlocked_by": null,
+      "core": false,
+      "unlocked_by": "reverse-string",
       "difficulty": 2,
       "topics": [
         "dates",
@@ -46,7 +69,7 @@
       "unlocked_by": "hello-world",
       "difficulty": 3,
       "topics": [
-        "control_flow_loops",
+        "loops",
         "strings"
       ]
     },
@@ -57,7 +80,7 @@
       "unlocked_by": "raindrops",
       "difficulty": 5,
       "topics": [
-        "control_flow_conditionals",
+        "conditionals",
         "parsing",
         "strings"
       ]
@@ -82,7 +105,7 @@
       "difficulty": 3,
       "topics": [
         "arrays",
-        "control_flow_loops",
+        "loops",
         "maps"
       ]
     },
@@ -106,7 +129,7 @@
       "unlocked_by": "leap",
       "difficulty": 3,
       "topics": [
-        "control_flow_loops",
+        "loops",
         "math"
       ]
     },
@@ -128,7 +151,7 @@
       "unlocked_by": "grains",
       "difficulty": 7,
       "topics": [
-        "control_flow_loops",
+        "loops",
         "pattern_recognition",
         "strings"
       ]
@@ -159,7 +182,7 @@
       "slug": "robot-name",
       "uuid": "67c3cb10-b893-428a-82d0-79602aef2775",
       "core": false,
-      "unlocked_by": "gigasecond",
+      "unlocked_by": "reverse-string",
       "difficulty": 5,
       "topics": [
         "randomness",
@@ -170,7 +193,7 @@
       "slug": "sum-of-multiples",
       "uuid": "a190ad11-db1c-4624-a477-e1d0c91d8b4f",
       "core": false,
-      "unlocked_by": "gigasecond",
+      "unlocked_by": "reverse-string",
       "difficulty": 3,
       "topics": [
         "math"
@@ -215,7 +238,7 @@
       "unlocked_by": null,
       "difficulty": 3,
       "topics": [
-        "control_flow_conditionals"
+        "conditionals"
       ]
     },
     {
@@ -263,10 +286,21 @@
       "slug": "prime-factors",
       "uuid": "ba755932-b301-41cc-b7f2-5e6d2e130325",
       "core": false,
-      "unlocked_by": "gigasecond",
+      "unlocked_by": "reverse-string",
       "difficulty": 5,
       "topics": [
-        "control_flow_loops",
+        "loops",
+        "math"
+      ]
+    },
+    {
+      "slug": "pascals-triangle",
+      "uuid": "7ed4434a-3564-4194-b91a-d3baeec9c519",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "arrays",
         "math"
       ]
     },
@@ -304,6 +338,17 @@
       ]
     },
     {
+      "slug": "acronym",
+      "uuid": "9d6f19f3-416e-4aeb-b426-7499853b21de",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "regular_expressions",
+        "strings"
+      ]
+    },
+    {
       "slug": "say",
       "uuid": "090b2615-cd05-442b-be74-9f11bd5a83a5",
       "core": false,
@@ -322,7 +367,7 @@
       "unlocked_by": "leap",
       "difficulty": 5,
       "topics": [
-        "control_flow_loops",
+        "loops",
         "math"
       ]
     },
@@ -336,6 +381,21 @@
         "arrays",
         "logic",
         "strings"
+      ]
+    },
+    {
+      "slug": "robot-simulator",
+      "uuid": "ed2e467d-621d-42de-afdd-f9b49efbc263",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 4,
+      "topics": [
+        "classes",
+        "conditionals",
+        "loops",
+        "pairs",
+        "strings",
+        "variables"
       ]
     },
     {
@@ -388,15 +448,15 @@
       "unlocked_by": "leap",
       "difficulty": 5,
       "topics": [
-        "control_flow_loops",
-        "logic"
+        "logic",
+        "loops"
       ]
     },
     {
       "slug": "allergies",
       "uuid": "80ae6a8e-8464-4f3a-afed-14d424757413",
       "core": false,
-      "unlocked_by": "gigasecond",
+      "unlocked_by": "reverse-string",
       "difficulty": 3,
       "topics": [
         "bitwise_operations",
@@ -415,7 +475,7 @@
       ]
     },
     {
-      "slug": "bracket-push",
+      "slug": "matching-brackets",
       "uuid": "4a517292-3472-40f2-b4b8-5c8c25219ea5",
       "core": false,
       "unlocked_by": "pangram",
@@ -432,8 +492,138 @@
       "unlocked_by": null,
       "difficulty": 2,
       "topics": [
-        "control_flow_loops",
+        "loops",
         "strings"
+      ]
+    },
+    {
+      "slug": "binary-search",
+      "uuid": "abdd7aa3-25f6-4d27-a4dc-6bd1ea2f718c",
+      "core": false,
+      "unlocked_by": "triangle",
+      "difficulty": 4,
+      "topics": [
+        "arrays",
+        "conditionals",
+        "loops",
+        "searching"
+      ]
+    },
+    {
+      "slug": "binary-search-tree",
+      "uuid": "3463598a-c622-4138-97d3-0c71cbe718c6",
+      "core": false,
+      "unlocked_by": "pangram",
+      "difficulty": 10,
+      "topics": [
+        "algorithms",
+        "classes"
+      ]
+    },
+    {
+      "slug": "all-your-base",
+      "uuid": "0a3220c6-07a9-ed80-4d2d-1fc65de969b771a46d5",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 4,
+      "topics": [
+        "algorithms",
+        "integers",
+        "loops",
+        "math"
+      ]
+    },
+    {
+      "slug": "complex-numbers",
+      "uuid": "ea8d6224-0440-6d80-1569-a04127908a200d2ecf0",
+      "core": false,
+      "unlocked_by": "grains",
+      "difficulty": 6,
+      "topics": [
+        "classes",
+        "math",
+        "operator_overloading"
+      ]
+    },
+    {
+      "slug": "luhn",
+      "uuid": "885865bc-a197-436f-94bc-b1998d5cc081",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "math",
+        "strings"
+      ]
+    },
+    {
+      "slug": "armstrong-numbers",
+      "uuid": "1035aa3f-030a-425b-84f1-1967f344d155",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "algorithms",
+        "loops",
+        "math"
+      ]
+    },
+    {
+      "slug": "circular-buffer",
+      "uuid": "92788dbc-feb2-43a6-99c0-af21ce318b01",
+      "core": false,
+      "unlocked_by": "raindrops",
+      "difficulty": 6,
+      "topics": [
+        "algorithms",
+        "classes",
+        "data_structures"
+      ]
+    },
+    {
+      "slug": "collatz-conjecture",
+      "uuid": "c74f60b3-48fe-46c5-ae52-5e4b0787ba84",
+      "core": false,
+      "unlocked_by": "leap",
+      "difficulty": 2,
+      "topics": [
+        "functions",
+        "math"
+      ]
+    },
+    {
+      "slug": "secret-handshake",
+      "uuid": "c8ca89ef-b63d-40e5-9d57-bfa796e704ea",
+      "core": false,
+      "unlocked_by": "reverse-string",
+      "difficulty": 2,
+      "topics": [
+        "arrays",
+        "bitwise_operations"
+      ]
+    },
+    {
+      "slug": "protein-translation",
+      "uuid": "fb73e822-4831-4d33-a049-44a514bfa46a",
+      "core": false,
+      "unlocked_by": "reverse-string",
+      "difficulty": 3,
+      "topics": [
+        "filtering",
+        "maps",
+        "sequences"
+      ]
+    },
+    {
+      "slug": "two-fer",
+      "uuid": "95a162a4-d825-4874-9e2f-014787cbdfb5",
+      "core": false,
+      "unlocked_by": "hello-world",
+      "difficulty": 1,
+      "topics": [
+        "optional_values",
+        "strings",
+        "text_formatting"
       ]
     }
   ]

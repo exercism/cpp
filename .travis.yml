@@ -1,39 +1,46 @@
-dist: trusty
-sudo: false 
+sudo: false
 language: cpp
+os: linux
 
 matrix:
   include:
-    # GCC 4.9
-    - os: linux
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-          packages:
-            - g++-4.9
-      env: MATRIX_EVAL="CC=gcc-4.9 && CXX=g++-4.9"
+    - env: COMPILER=g++-5
+      dist: xenial
 
-    # Clang 3.8
-    - os: linux
+    - env: COMPILER=clang++-3.8
+      dist: xenial
       addons:
         apt:
-          sources:
-            - ubuntu-toolchain-r-test
-            - llvm-toolchain-precise-3.8
           packages:
             - clang-3.8
-      env: MATRIX_EVAL="CC=clang-3.8 && CXX=clang++-3.8"
+
+    - env:
+      - COMPILER=clang++-7
+      - EXERCISM_COMMON_CATCH=false
+      dist: bionic
+      addons:
+        apt:
+          packages:
+            - clang-7
+
+    - env: COMPILER=g++-8
+      dist: bionic
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-8
 
 before_install:
-  - sudo add-apt-repository -y ppa:samuel-bachmann/boost
   - sudo apt-get -y -d update
-  - eval "${MATRIX_EVAL}"
 install:
-  - sudo apt-get -y install libboost-regex1.60-dev libboost-test1.60-dev libboost-date-time1.60-dev
+  - sudo apt-get -y install ninja-build libboost-date-time-dev
+  - export CXX=${COMPILER}
+  - ${CXX} --version
 script:
   - bin/fetch-configlet
   - bin/configlet lint .
-  - cmake -G "Unix Makefiles"
-  - make
-
+  - bin/check-configlet-fmt.sh
+  - bin/check-hello-world.sh
+  - bin/check-exercises.sh
