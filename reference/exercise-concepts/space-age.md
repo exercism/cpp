@@ -125,7 +125,7 @@ double space_age::on_neptune() const
 
 ## Concepts
 
-- .h file: the tests include `"space-age.hpp"`
+- .h file: the tests include `"space-age.h"`
 - .cpp file: the most common approach is to use a `.cpp` for declaring member functions
 - include guard: protect against multiple inclusion within a single translation unit
 - namespaces: the class/struct is member of a namespace
@@ -137,9 +137,11 @@ double space_age::on_neptune() const
 - return values: the result is returned by the function
 - floating point types: all constants are stored as `double`
 - signed and unsigned integer types: number of seconds is a large integer
+- sizes of integer types: using `std::int64_t` to correctly represent input
 - member declaration qualification: number of seconds does not change after the initialization, member that holds it can be declared `const`
 - member initializer lists: for initialization of member holding number of seconds
 - `noexcept` function specifier: none of the functions in this exercise are throwing
+- type casts: casting from int input to store number of seconds as `double`
 
 ## Alternative approaches
 
@@ -153,13 +155,14 @@ double space_age::on_neptune() const
 - forgetting to enable and/or run all the tests
 - no include guards
 - using `float` instead of `double`
-- explict constructor: with one argument should be marked `explicit`
+- explicit constructor: with one argument should be marked `explicit`
 - passing numeric types by reference
 - bad variable and constants names
 - different types for the local `result` variable and the return type
 - writing to `std::cout` or `std::cerr`
 - not using member initializer lists
 - not marking all members as `constexpr`
+- using C-style casts when `static_cast` is more appropriate
 
 ## Common suggestions to improve a solution
 
