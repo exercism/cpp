@@ -19,6 +19,8 @@ jobs:
         bin/fetch-configlet
         bin/configlet lint .
         bin/check-configlet-fmt.sh
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   linux-min:
     name: Linux Min Config
