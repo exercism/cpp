@@ -17,6 +17,13 @@ else()
     set(exercise_cpp "")
 endif()
 
+# Downloads Catch library used for testing
+set(CATCH_HEADER "${CMAKE_CURRENT_SOURCE_DIR}/test/catch.hpp")
+set(CATCH_DOWNLOAD_URL "https://github.com/catchorg/Catch2/releases/download/v2.11.3/catch.hpp")
+if (NOT EXISTS "${CATCH_HEADER}")
+    file(DOWNLOAD "${CATCH_DOWNLOAD_URL}" "${CATCH_HEADER}")
+endif()
+
 # Use the common Catch library?
 if(EXERCISM_COMMON_CATCH)
     # For Exercism track development only

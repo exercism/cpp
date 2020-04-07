@@ -30,7 +30,6 @@ languages
               ├── &lt;NAME&gt;.h
               ├── &lt;NAME&gt;_test.cpp
               └── test
-                  ├── catch.hpp
                   └── tests_main.cpp
 </pre>
 
@@ -87,7 +86,6 @@ These files are specific to the C++ track:
 - `CMakeLists.txt`: the C++ project file.
 - `<NAME>_test.cpp`: the test suite.
 - `.meta/example.h` and `.meta/example.cpp`: an example implementation that passes all the tests.
-- `test/catch.hpp`: single-header testing library.
 - `test/tests_main.cpp`: generates test main from test library
 
 ## Step 7: updating list of implemented exercises
