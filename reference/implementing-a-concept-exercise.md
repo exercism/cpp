@@ -1,6 +1,14 @@
 # How to implement a C++ concept exercise
 
-This document describes how to implement a concept exercise for the C++ track. As this document is generic, the following placeholders are used:
+This document describes how to implement a concept exercise for the C++ track.
+
+**Please please please read the docs before starting.** Posting PRs without reading these docs will be a lot more frustrating for you during the review cycle, and exhaust Exercism's maintainers' time. So, before diving into the implementation, please read the following documents:
+
+- [The features of v3][docs-features-of-v3].
+- [Rationale for v3][docs-rationale-for-v3].
+- [What are concept exercise and how they are structured?][docs-concept-exercises]
+
+As this document is generic, the following placeholders are used:
 
 - `<SLUG>`: the name of the exercise in kebab-case (e.g. `anonymous-methods`).
 - `<NAME>`: the name of the exercise in snake_case (e.g. `anonymous_methods`).
@@ -112,3 +120,6 @@ If you have any questions regarding implementing the exercise, please post them 
 [implemented-exercises]: https://github.com/exercism/v3/blob/master/languages/cpp/exercises/concept/README.md
 [meta-design]: https://github.com/exercism/v3/blob/master/languages/cpp/exercises/concept/strings/.meta/design.md
 [meta-config-json]: https://github.com/exercism/v3/blob/master/languages/cpp/exercises/concept/strings/.meta/config.json
+[docs-concept-exercises]: ../../../docs/concept-exercises.md
+[docs-rationale-for-v3]: ../../../docs/rationale-for-v3.md
+[docs-features-of-v3]: ../../../docs/features-of-v3.md
