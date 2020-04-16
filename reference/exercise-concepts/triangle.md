@@ -15,6 +15,7 @@ A _scalene_ triangle has all sides of different lengths.
 ## Example
 
 `triangle.h`
+
 ```cpp
 #if !defined(TRIANGLE_H)
 #define TRIANGLE_H

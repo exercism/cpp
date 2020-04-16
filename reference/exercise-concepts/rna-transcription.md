@@ -15,11 +15,10 @@ guanine (**G**) and uracil (**U**).
 Given a DNA strand, its transcribed RNA strand is formed by replacing
 each nucleotide with its complement:
 
-* `G` -> `C`
-* `C` -> `G`
-* `T` -> `A`
-* `A` -> `U`
-
+- `G` -> `C`
+- `C` -> `G`
+- `T` -> `A`
+- `A` -> `U`
 
 ## Example
 
@@ -76,11 +75,10 @@ string to_rna(string const& sequence)
 }
 ```
 
-
 ## Concepts
 
 - .h file: the most common approach is to use a `.h` for the declarations
-- .cpp file:  the most common approach is to use a `.cpp` for the definitions
+- .cpp file: the most common approach is to use a `.cpp` for the definitions
 - include guard: protect against multiple inclusion within a single translation unit
 - .cpp includes .h: a `.cpp` file should include its `.h` file
 - namespaces: the function is member of a namespace
@@ -99,7 +97,6 @@ string to_rna(string const& sequence)
 - range for-loop or for-loop: to iterate over the sequence
 - pass by `const` reference: large string may be expensive to copy
 
-
 ## Alternative approaches
 
 - using `switch-case` to translate from DNA to RNA
@@ -107,7 +104,6 @@ string to_rna(string const& sequence)
 - throwing an exception in case of an invalid input
 - using `std::string_view` for input
 - using `std::string` or `std::array` to store keys (DNA) and values (RNA)
-
 
 ## Common mistakes
 
@@ -121,7 +117,6 @@ string to_rna(string const& sequence)
 - using C-style arrays
 - explicitly using iterators
 - creating references to simple numeric data types
-
 
 ## Common suggestions to improve a solution
 

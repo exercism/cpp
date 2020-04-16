@@ -17,7 +17,6 @@ The rules of `raindrops` are that if a given number:
 - 30 has both 3 and 5 as factors, but not 7, so the result would be "PlingPlang".
 - 34 is not factored by 3, 5, or 7, so the result would be "34".
 
-
 ## Example
 
 `raindrops.h`
@@ -73,11 +72,10 @@ string convert(int drops)
 }
 ```
 
-
 ## Concepts
 
 - .h file: the most common approach is to use a `.h` for the declarations
-- .cpp file:  the most common approach is to use a `.cpp` for the definitions
+- .cpp file: the most common approach is to use a `.cpp` for the definitions
 - include guard: protect against multiple inclusion within a single translation unit
 - .cpp includes .h: a `.cpp` file should include its `.h` file
 - namespaces: the function is member of a namespace
@@ -94,13 +92,11 @@ string convert(int drops)
 - streams in STL: `<<` and `>>` for stream objects
 - conditional statements: `if` to check for factors
 
-
 ## Alternative approaches
 
 - Create `std::map` of factor to string literal.
 - Using `std::string` as a result, without relying on `std::ostringstream`.
 - Get all the prime factors of the input number and add corresponding string literals if any 3, 5 and 7 are among them.
-
 
 ## Common mistakes
 
@@ -111,7 +107,6 @@ string convert(int drops)
 - Writing to `std::cout` or `std::cerr`
 - Not marking all constants known at compile time as `constexpr`
 - Creating a class `raindrops` instead of a namespace of the same name
-
 
 ## Common suggestions to improve a solution
 

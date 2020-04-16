@@ -10,7 +10,6 @@ we get 3, 5, 6, 9, 10, 12, 15, and 18.
 
 The sum of these multiples is 78.
 
-
 ## Example
 
 `sum_of_multiples.h`
@@ -75,14 +74,12 @@ int to(std::initializer_list<int> const& multiples, int num)
 - `noexcept` function specifier: solution should not throw
 - `constexpr`: solution does not depend on any run-time data
 
-
 ## Alternative approaches
 
 - using `std::unordered_set` to keep unique factors
 - using `std::find_if` or `std::any_of` to search for multiples dividable by a number
 - using `std::unordered_map` to keep track of factors
 - using `boost::range`'s adapters to express search for factors
-
 
 ## Common mistakes
 
@@ -93,7 +90,6 @@ int to(std::initializer_list<int> const& multiples, int num)
 - using `std::set`
 - using iterators explicitly
 - creating references to simple numeric data types
-
 
 ## Common suggestions to improve solution
 

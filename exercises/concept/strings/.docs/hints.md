@@ -12,7 +12,6 @@
 
 There are several ways to concatenate strings, the simplest is using the [`+` operator][cpp-reference-string-concatenation] but there are [more advanced ones][cpp-reference-printf].
 
-
 [strings-tutorial]: https://www.learncpp.com/cpp-tutorial/4-4b-an-introduction-to-stdstring/
 [cpp-reference-string]: https://en.cppreference.com/w/cpp/string/basic_string
 [cpp-reference-string-find]: https://en.cppreference.com/w/cpp/string/basic_string/find

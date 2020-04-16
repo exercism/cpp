@@ -36,10 +36,8 @@ And to total:
 - = `5 + 9`
 - = 14
 
+## Example `scrabble_score.h`
 
-## Example
-
-`scrabble_score.h`
 ```cpp
 #if !defined(SCRABBLE_SCORE_H)
 #define SCRABBLE_SCORE_H
@@ -112,7 +110,6 @@ int score(const std::string &word)
 }
 ```
 
-
 ## Concepts
 
 - .h file: the most common approach is to use a `.h` for the declarations
@@ -136,7 +133,6 @@ int score(const std::string &word)
 - template specializations: store score per letter in a hash-map
 - pass by `const` reference: large string may be expensive to copy
 
-
 ## Alternative approaches
 
 - using `tranform_reduce` to get from the letters to letter scores and from the letter scores to the final score
@@ -146,7 +142,6 @@ int score(const std::string &word)
 - using `boost::flat_map` as a container for letters' scores
 - using `std::array` as a container for letters' scores
 
-
 ## Common mistakes
 
 - making copy of the input instead of passing as `const` reference
@@ -155,7 +150,6 @@ int score(const std::string &word)
 - not making letter scores `const` or `constexpr`
 - using C-style arrays
 - explicitly using iterators
-
 
 ## Common suggestions to improve a solution
 

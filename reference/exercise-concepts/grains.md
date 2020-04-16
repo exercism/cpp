@@ -9,13 +9,14 @@ There once was a wise servant who saved the life of a prince. The king promised 
 There are 64 squares on a chessboard (where square 1 has one grain, square 2 has two grains, and so on).
 
 Write code that shows:
-  - how many grains were on a given square, and
-  - the total number of grains on the chessboard
 
+- how many grains were on a given square, and
+- the total number of grains on the chessboard
 
 ## Example
 
 `grains.h`
+
 ```cpp
 #ifndef GRAINS_H
 #define GRAINS_H
@@ -29,22 +30,22 @@ std::uint64_t total();
 
 }
 
-#endif 
+#endif
 ```
 
 `grains.cpp`
+
 ```cpp
 #include "grains.h"
 
-std::uint64_t grains::square(std::uint8_t no) { 
-  return 1ULL << (no - 1); 
+std::uint64_t grains::square(std::uint8_t no) {
+  return 1ULL << (no - 1);
 }
 
-std::uint64_t grains::total() { 
-  return -1; 
+std::uint64_t grains::total() {
+  return -1;
 }
 ```
-
 
 ## Concepts
 
@@ -54,11 +55,10 @@ std::uint64_t grains::total() {
 - .cpp includes .h: a `.cpp` file should include its `.h` file
 - namespaces: the function is member of a namespace
 - functions: used as the main entry point for the exercise
-- function arguments: number of square is passed by argument 
-- bitwise operators: binary left (`<<`) and right (`>>`) shift 
+- function arguments: number of square is passed by argument
+- bitwise operators: binary left (`<<`) and right (`>>`) shift
 - unsigned integer types: `std::uint64_t` with width of exactly 64 bits
 - return values: the result is returned by the function
-
 
 ## Alternative approaches
 
@@ -69,7 +69,6 @@ std::uint64_t grains::total() {
 - compute total number of grains on chessboard using `for` loop.
 - using `std::bitset`
 
-
 ## Common mistakes
 
 - forgetting to place include guards in `.h` file
@@ -79,7 +78,6 @@ std::uint64_t grains::total() {
 - using C-style defined constants from `<climits>`
 - using C-style typedefs from `<cstdint>`
 - using `magic` numbers
-
 
 ## Common suggestions to improve a solution
 
