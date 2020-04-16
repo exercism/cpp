@@ -141,7 +141,7 @@ map<string, int> words(string const& text)
 ## Concepts
 
 - .h file: the most common approach is to use a `.h` for the declarations
-- .cpp file:  the most common approach is to use a `.cpp` for the definitions
+- .cpp file: the most common approach is to use a `.cpp` for the definitions
 - include guard: protect against multiple inclusion within a single translation unit
 - .cpp includes .h: a `.cpp` file should include its `.h` file
 - namespaces: the function is member of a namespace

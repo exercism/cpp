@@ -4,10 +4,10 @@
 
 Calculate the Hamming Distance between two strings.
 
-
 ## Example
 
 `hamming.h`
+
 ```cpp
 #ifndef HAMMING_H
 #define HAMMING_H
@@ -23,6 +23,7 @@ namespace hamming
 ```
 
 `hamming.cpp`
+
 ```cpp
 #include "hamming.h"
 #include <stdexcept>
@@ -39,11 +40,10 @@ std::size_t hamming::compute(const std::string& s1, const std::string& s2)
 }
 ```
 
-
 ## Concepts
 
 - .h file: the tests include `"hamming.h"`
-- .cpp file:  the most common approach is to use a `.cpp` for the definitions
+- .cpp file: the most common approach is to use a `.cpp` for the definitions
 - include guard: protect against multiple inclusion within a single translation unit
 - .cpp includes .h: a `.cpp` file should include its `.h` file
 - namespaces: the function is member of a namespace
@@ -61,7 +61,6 @@ std::size_t hamming::compute(const std::string& s1, const std::string& s2)
 - initialization / assignment: the variable holding the result and the loop variable (if applicable) have to be initialized
 - increment: `++`
 
-
 ## Alternative approaches
 
 - Some students used `std::string_view` from C++17 instead of `std::string`.
@@ -73,7 +72,6 @@ std::size_t hamming::compute(const std::string& s1, const std::string& s2)
 - One student initialized the local `result` variable with the length of the arguments and then decremented that for each match.
 - One student used `std::mismatch()` in the loop.
 - One student used `std::count_if()` with a lambda that increments a index for the other string.
-
 
 ## Common mistakes
 

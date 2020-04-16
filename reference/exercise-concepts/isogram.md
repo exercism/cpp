@@ -15,10 +15,10 @@ Examples of isograms:
 
 The word `isograms`, however, is not an isogram, because the `s` repeats.
 
-
 ## Example
 
 `isogram.h`
+
 ```cpp
 #ifndef ISOGRAM_H
 #define ISOGRAM_H
@@ -35,6 +35,7 @@ bool is_isogram(const std::string& word);
 ```
 
 `isogram.cpp`
+
 ```cpp
 #include <unordered_set>
 #include "isogram.h"
@@ -50,7 +51,6 @@ bool isogram::is_isogram(const std::string& word) {
   return true;
 }
 ```
-
 
 ## Concepts
 
@@ -68,7 +68,6 @@ bool isogram::is_isogram(const std::string& word) {
 - static_cast conversion: explicitly converts between types
 - return values: the result is returned by the function
 
-
 ## Alternative approaches
 
 - using associative containers (`std::map`, `std::unordered_map`, `std::set`, `std::unordered_set`) to store entries of a letter
@@ -77,20 +76,18 @@ bool isogram::is_isogram(const std::string& word) {
 - using regular expressions to determine if the character is letter
 - using regular expressions to replace non-alphabetic characters
 
-
 ## Common mistakes
 
 - forgetting to place include guards in `.h` file
 - forgetting to submit the `.h` file
 - forgetting to submit the `.cpp` file
-- forgetting to remove commented code 
-- placing `using namespace std` to `.h` file 
+- forgetting to remove commented code
+- placing `using namespace std` to `.h` file
 - passing function argument by value
 - using C-style arrays to store entries of a letter
 - creating references to simple data types
 - placing non-inline function definitions to `.h` file
 - calling `std::toupper` or `std::tolower` (and similar functions) without casting `char` argument to `unsigned char`
-
 
 ## Common suggestions to improve a solution
 

@@ -115,4 +115,3 @@ std::vector<int> primes(int n) noexcept
 
 - Use `constexpr` whenever the result of computation does not depend on run-time data
 - Add `noexcept` to mark all functions that are not expected to throw exceptions
-

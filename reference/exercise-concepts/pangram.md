@@ -11,6 +11,7 @@ The alphabet used consists of ASCII letters a to z, inclusive, and is case insen
 ## Example
 
 `pangram.h`
+
 ```cpp
 #ifndef PANGRAM_H
 #define PANGRAM_H
@@ -27,6 +28,7 @@ bool is_pangram(const std::string& s);
 ```
 
 `pangram.cpp`
+
 ```cpp
 #include <bitset>
 #include "pangram.h"
@@ -44,7 +46,6 @@ bool pangram::is_pangram(const std::string& s) {
 }
 ```
 
-
 ## Concepts
 
 - .h file: the most common approach is to use a `.h` for the declarations
@@ -53,7 +54,7 @@ bool pangram::is_pangram(const std::string& s) {
 - .cpp includes .h: a `.cpp` file should include its `.h` file
 - namespaces: the function is member of a namespace
 - functions: used as the main entry point for the exercise
-- function arguments: input string is passed by argument 
+- function arguments: input string is passed by argument
 - reference: input string is passed by reference to prevent unnecesary copy
 - const reference: input string is passed by const reference to forbid to make changes what they refer to
 - unsigned integer types: `std::uint8_t` with width of exactly 8 bits
@@ -61,7 +62,6 @@ bool pangram::is_pangram(const std::string& s) {
 - bitset: using `std::bitset` to represent alphabet occupancy rate
 - work with letter sequences: using specialized functions from `<cctype>` or `<locale>`
 - return values: the result is returned by the function
-
 
 ## Alternative approaches
 
@@ -75,7 +75,6 @@ bool pangram::is_pangram(const std::string& s) {
 - using `std::unique` to find unique letters in the input sequence
 - using `erase-remove idiom` to eliminate elements from input sequence that fulfill certain criterion
 
-
 ## Common mistakes
 
 - forgetting to submit the `.h` file
@@ -86,7 +85,6 @@ bool pangram::is_pangram(const std::string& s) {
 - creating references to simple data types
 - using `std::set` to store entry of a letter
 - argument is not passed by `const` reference
-
 
 ## Common suggestions to improve a solution
 

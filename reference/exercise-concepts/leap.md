@@ -4,10 +4,10 @@
 
 Given a year, report if it is a leap year.
 
-
 ## Example
 
 `leap.h`
+
 ```cpp
 #ifndef LEAP_H
 #define LEAP_H
@@ -21,6 +21,7 @@ namespace leap
 ```
 
 `leap.cpp`
+
 ```cpp
 #include "leap.h"
 
@@ -30,11 +31,10 @@ bool leap::is_leap_year(int year)
 }
 ```
 
-
 ## Concepts
 
 - .h file: the most common approach is to use a `.h` for the declarations
-- .cpp file:  the most common approach is to use a `.cpp` for the definitions
+- .cpp file: the most common approach is to use a `.cpp` for the definitions
 - include guard: protect against multiple inclusion within a single translation unit
 - .cpp includes .h: a `.cpp` file should include its `.h` file
 - namespaces: the function is member of a namespace
@@ -50,7 +50,6 @@ bool leap::is_leap_year(int year)
 - return values: the result is returned by the function
 - booleans: the result is a `bool`
 
-
 ## Alternative approaches
 
 - Many students use two or three `if` statements instead of logical operators.
@@ -58,7 +57,6 @@ bool leap::is_leap_year(int year)
 - Some students `if` statements with a local `result` variable and a single `return` statement.
 - Some students use three local variables that tell if `year` is divisible by `4`, `100`, and `400`.
 - Some implement their solution as an `inline` function in the `.h` file.
-
 
 ## Common mistakes
 
@@ -71,7 +69,6 @@ bool leap::is_leap_year(int year)
 - `!(year % 4 == 0)` instead of `year % 4 != 0
 - `year % 4 == 0 && year % 100 == 0 && year % 400 == 0` instead of `year % 400 == 0`
 - complicated nested `if` statements
-
 
 ## Common suggestions to improve a solution
 

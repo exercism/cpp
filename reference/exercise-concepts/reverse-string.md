@@ -8,7 +8,6 @@ For example:
 input: "cool"
 output: "looc"
 
-
 ## Example
 
 `reverse_string.h`
@@ -30,6 +29,7 @@ std::string reverse_string(const std::string& text);
 ```
 
 `reverse_string.cpp`
+
 ```cpp
 #include "reverse_string.h"
 
@@ -47,7 +47,7 @@ std::string reverse_string(const std::string& text)
 ## Concepts
 
 - .h file: the tests include `"reverse_string.h"`
-- .cpp file:  the most common approach is to use a `.cpp` for the definitions
+- .cpp file: the most common approach is to use a `.cpp` for the definitions
 - namespaces: the function is member of a namespace
 - functions: used as the main entry point for the exercise
 - function arguments: `text` is passed as argument
@@ -59,20 +59,17 @@ std::string reverse_string(const std::string& text)
 - constructor overload: select iterator overload of the constructor
 - iterators: view input as a range
 
-
 ## Alternative approaches
 
 - implement solution as `inline` functions in the `.h` file
 - using `std::string_view` to pass input by argument
 - using `std::reverse()` to reverse copy of the input
 
-
 ## Common mistakes
 
 - argument is not passed by `const` reference
 - explicit iteration over all characters in the string
 - creating temporary variable and returning it
-
 
 ## Common suggestions to improve a solution
 
