@@ -72,4 +72,9 @@ TEST_CASE("larger_triangles_violating_triangle_inequality_are_illegal")
 {
     REQUIRE_THROWS_AS(triangle::kind(7, 3, 2), std::domain_error);
 }
+
+TEST_CASE("double_and_integer_arguments")
+{
+    REQUIRE(triangle::flavor::scalene == triangle::kind(5.5, 4, 2));
+}
 #endif
