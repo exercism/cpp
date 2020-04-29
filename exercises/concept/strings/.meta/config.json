@@ -1,9 +1,9 @@
 {
-    "authors": [
-      {
-        "github_username": "silvanocerza",
-        "exercism_username": "silvanocerza"
-      }
-    ],
-    "forked_from": ["csharp/strings"]
-  }
+  "authors": [
+    {
+      "github_username": "silvanocerza",
+      "exercism_username": "silvanocerza"
+    }
+  ],
+  "forked_from": ["csharp/strings"]
+}
