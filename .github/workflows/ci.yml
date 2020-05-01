@@ -79,11 +79,11 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run Tests
-      shell: bash
+      shell: powershell
       # Delete the exercises that require Boost to avoid issues with Windows setup.
       run: |
-        rm -rf exercises/gigasecond
-        rm -rf exercises/meetup
+        rm exercises/gigasecond -r
+        rm exercises/meetup -r
         cmake .
         cmake --build . -- test_hello-world
         cmake --build .
