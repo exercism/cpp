@@ -1,14 +1,14 @@
-### General
+## General
 
 - [This tutorial][strings-tutorial] offers a nice introduction to C++ strings.
 - The `std::basic_string` class has many useful [built-in methods][cpp-reference-string].
 
-### 1. Get message from a log line
+## 1. Get message from a log line
 
 - The built-in methods offer some ways to [find][cpp-reference-string-find] text in a string.
 - The built-in methods can help us [get a portion][cpp-reference-string-substr] of a string
 
-### 2. Reformat a log line
+## 2. Reformat a log line
 
 There are several ways to concatenate strings, the simplest is using the [`+` operator][cpp-reference-string-concatenation] but there are [more advanced ones][cpp-reference-printf].
 
