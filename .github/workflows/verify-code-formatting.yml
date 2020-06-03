@@ -1,0 +1,38 @@
+name: "Verify C++ code formatting"
+
+on:
+  push:
+    paths:
+      - "**/*.cpp"
+      - "**/*.h"
+      - "**/*.hpp"
+      - ".clang-format"
+      - "!**/catch.hpp"
+  pull_request:
+    paths:
+      - "**/*.cpp"
+      - "**/*.h"
+      - "**/*.hpp"
+      - ".clang-format"
+      - "!**/catch.hpp"
+
+jobs:
+  verify-code-formatting:
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: "Checkout code"
+        uses: actions/checkout@v2
+
+      - name: "Verify formatting of all files"
+        if: github.ref == 'refs/heads/master'
+        run: |
+          find . -type f \( -iname '*.cpp' -o -iname '*.h' -o -iname '*.hpp' \) -a ! -iname "catch.hpp" | \
+          xargs ./check-formatting.sh
+
+      - name: "Verify formatting of the PR's files"
+        if: github.ref != 'refs/heads/master' && github.event.pull_request.url
+        run: |
+          PULL_REQUEST_URL=$(jq -r ".pull_request.url" "$GITHUB_EVENT_PATH")
+          curl --url $"${PULL_REQUEST_URL}/files" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | \
+            jq -c '.[] | select(.status == "added" or .status == "modified") | select(.filename | match("(?<!catch)\\.(cpp|hpp|h)$")) | .filename' | \
+            xargs ./check-formatting.sh
