@@ -1,0 +1,49 @@
+name: "Format C++ code"
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  format:
+    name: "Format C++ code"
+    runs-on: ubuntu-latest
+    if: github.event.issue.pull_request != '' && (contains(github.event.comment.body, '/format') || contains(github.event.comment.body, '/clang-format'))
+    steps:
+      - name: "Checkout code"
+        run: |
+          PR_DATA="/tmp/pr.json"
+
+          jq -r ".issue.pull_request.url" "$GITHUB_EVENT_PATH" | \
+            xargs curl --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' -o "$PR_DATA" --url
+
+          HEAD_REF=$(jq -r ".head.ref" "$PR_DATA")
+          HEAD_REPO=$(jq -r '.head.repo.clone_url | sub("https://"; "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@")' "$PR_DATA")
+
+          git clone $HEAD_REPO .
+          git checkout -b "$HEAD_REF" "origin/$HEAD_REF"
+
+      - name: "Format C++ code"
+        run: |
+          # Use clang-format to format the added or modified C++ files in the PR (if any)
+          jq -r '.issue.pull_request.url | . += "/files"' "$GITHUB_EVENT_PATH" | \
+            xargs curl --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' --url | \
+            jq -r -c '.[] | select(.status == "added" or .status == "modified") | select(.filename | match("(?<!catch)\\.(cpp|hpp|h)$")) | .filename' | \
+            xargs clang-format -i
+
+      - name: "Commit formatted C++ code"
+        run: |
+          # Check if there is nothing to commit (i.e. no formatting changes made)
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "Code is already formatted correctly"
+            exit 0
+          fi
+
+          # Setup the git user (required to commit anything)
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+
+          # Commit the changes made by clang-format
+          git add .
+          git commit -m "[CI] Format C++ code"
+          git push
