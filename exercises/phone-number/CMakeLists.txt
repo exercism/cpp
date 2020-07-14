@@ -34,7 +34,7 @@ set_target_properties(${exercise} PROPERTIES
 
 if("${CMAKE_CXX_COMPILER_ID}" MATCHES "(GNU|Clang)")
     set_target_properties(${exercise} PROPERTIES
-        COMPILE_FLAGS "-Wall -Wextra -Wpedantic -Werror -g"
+        COMPILE_FLAGS "-Wall -Wextra -Wpedantic -Werror"
     )
 endif()
 
