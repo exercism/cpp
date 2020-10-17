@@ -27,7 +27,7 @@ jobs:
         if: github.ref == 'refs/heads/master'
         run: |
           find . -type f \( -iname '*.cpp' -o -iname '*.h' -o -iname '*.hpp' \) -a ! -iname "catch.hpp" | \
-          xargs ./check-formatting.sh
+          xargs bin/check-formatting.sh
 
       - name: "Verify formatting of the PR's files"
         if: github.ref != 'refs/heads/master' && github.event.pull_request.url
@@ -35,4 +35,4 @@ jobs:
           PULL_REQUEST_URL=$(jq -r ".pull_request.url" "$GITHUB_EVENT_PATH")
           curl --url $"${PULL_REQUEST_URL}/files" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | \
             jq -c '.[] | select(.status == "added" or .status == "modified") | select(.filename | match("(?<!catch)\\.(cpp|hpp|h)$")) | .filename' | \
-            xargs ./check-formatting.sh
+            xargs bin/check-formatting.sh
