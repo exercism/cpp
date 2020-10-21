@@ -4,6 +4,7 @@
 #include <memory>
 #include <cstdint>
 #include <utility>
+#include <stdexcept>
 
 namespace binary_search_tree
 {
