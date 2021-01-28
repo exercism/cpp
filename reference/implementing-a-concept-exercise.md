@@ -40,8 +40,8 @@ languages
               ├── .meta
               |   |── config.json
               │   ├── design.md
-              │   ├── example.cpp
-              │   └── example.h
+              │   ├── exemplar.cpp
+              │   └── exemplar.h
               ├── CMakeLists.txt
               ├── &lt;NAME&gt;.cpp
               ├── &lt;NAME&gt;.h
@@ -57,7 +57,7 @@ The code files are track-specific and should be designed to help the student lea
 - `<NAME>.h` and `<NAME>.cpp`. the stub implementation files, which is the starting point for students to work on the exercise.
 - `CMakeLists.txt`: the C++ project file.
 - `<NAME>_test.cpp`: the test suite.
-- `.meta/example.h` and `.meta/example.cpp`: an example implementation that passes all the tests.
+- `.meta/exemplar.h` and `.meta/exemplar.cpp`: an exemplar implementation that passes all the tests.
 - `test/tests_main.cpp`: generates test main from test library
 
 ## Step 2: Add documentation files
