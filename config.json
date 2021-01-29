@@ -15,9 +15,6 @@
     "indent_size": 4
   },
   "test_pattern": ".*_test[.]cpp",
-  "foregone": [
-    "point-mutations"
-  ],
   "exercises": {
     "practice": [
       {
@@ -638,6 +635,9 @@
           "variables"
         ]
       }
+    ],
+    "foregone": [
+      "point-mutations"
     ]
   }
 }
