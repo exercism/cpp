@@ -16,6 +16,18 @@
   },
   "test_pattern": ".*_test[.]cpp",
   "exercises": {
+    "concept": [
+      {
+        "slug": "strings",
+        "uuid": "62f945e7-0791-46b7-8161-855183f736ba",
+        "concepts": [
+          "strings"
+        ],
+        "prerequisites": [
+          ""
+        ]
+      }
+    ],
     "practice": [
       {
         "slug": "hello-world",
