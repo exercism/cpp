@@ -1,5 +1,6 @@
 {
   "language": "C++",
+  "slug": "cpp",
   "active": true,
   "status": {
     "concept_exercises": false,
