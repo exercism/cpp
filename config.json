@@ -1,6 +1,12 @@
 {
   "language": "C++",
   "active": true,
+  "status": {
+    "concept_exercises": false,
+    "test_runner": false,
+    "representer": false,
+    "analyzer": false
+  },
   "blurb": "C++ is a general-purpose programming language that supports procedural, object-oriented, generic and functional programming styles. C++ is deployed on billions of devices from the smallest embedded microprocessor to the largest supercomputer.",
   "version": 3,
   "test_pattern": ".*_test[.]cpp",
