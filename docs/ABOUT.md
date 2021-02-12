@@ -1,3 +1,5 @@
+# About
+
 [C++](https://en.wikipedia.org/wiki/C%2B%2B) (pronounced cee plus plus) is a general purpose programming language developed by [Bjarne Stroustrup](https://en.wikipedia.org/wiki/Bjarne_Stroustrup) starting in 1979 at Bell Labs. It is  immensely  popular,  particularly for  applications  that  require  speed  and/or  access to  some low-level  features.  It is considered to be an intermediate level language, as it encapsulates both high and low level language features.
 
 C++ supports [procedural](https://en.wikipedia.org/wiki/Procedural_programming), [object-oriented](https://en.wikipedia.org/wiki/Object-oriented_programming), [functional](https://en.wikipedia.org/wiki/Functional_programming) and [generic](https://en.wikipedia.org/wiki/Generic_programming) programming. Compilers for C++ are available for essentially every platform, including Windows, Mac OS, and Linux.
