@@ -69,8 +69,8 @@ jobs:
       shell: powershell
       # Delete the exercises that require Boost to avoid issues with Windows setup.
       run: |
-        rm exercises/gigasecond -r
-        rm exercises/meetup -r
+        rm exercises/practice/gigasecond -r
+        rm exercises/practice/meetup -r
         cmake .
         cmake --build . -- test_hello-world
         cmake --build .
