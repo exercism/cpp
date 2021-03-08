@@ -13,7 +13,7 @@ jobs:
     name: Check Configuration
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2.3.4
     - name: Configlet
       run: |
         bin/fetch-configlet
@@ -29,7 +29,7 @@ jobs:
       matrix:
         compiler: [clang++-3.8, g++-5]
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2.3.4
     - name: Install Dependencies
       # Boost must be installed only because the CMake version (3.12) can't
       # detect the installed Boost version (1.69)
@@ -50,7 +50,7 @@ jobs:
       matrix:
         compiler: [clang++, g++]
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2.3.4
     - name: Install Dependencies
       # Boost must be installed only because the CMake version (3.12) can't
       # detect the installed Boost version (1.69)
@@ -77,7 +77,7 @@ jobs:
     needs: [linux-min, configuration-test]
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2.3.4
     - name: Run Tests
       shell: powershell
       # Delete the exercises that require Boost to avoid issues with Windows setup.
@@ -93,7 +93,7 @@ jobs:
     needs: [linux-min, configuration-test]
     runs-on: macOS-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2.3.4
     - name: Install Boost
       run: brew install boost
     - name: Run Tests

@@ -21,7 +21,7 @@ jobs:
     name: Hello World Fails
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2.3.4
     - name: Check Hello World Fails
       run: bin/check-hello-world.sh
       env:
