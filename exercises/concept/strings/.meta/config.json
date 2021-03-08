@@ -7,8 +7,8 @@
   ],
   "forked_from": ["csharp/strings"],
   "files": {
-    "solution": [],
-    "test": [],
+    "solution": ["strings.cpp", "strings.h"],
+    "test": ["strings_test.cpp"],
     "exemplar": [".meta/exemplar.cpp", ".meta/exemplar.h"]
   }
 }
