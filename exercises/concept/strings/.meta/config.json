@@ -1,10 +1,7 @@
 {
   "blurb": "TODO: add blurb for strings exercise",
   "authors": [
-    {
-      "github_username": "silvanocerza",
-      "exercism_username": "silvanocerza"
-    }
+    "silvanocerza"
   ],
   "forked_from": [
     "csharp/strings"
