@@ -717,5 +717,19 @@
     }
   ],
   "key_features": [],
-  "tags": []
+  "tags": [
+    "paradigm/object_oriented",
+    "execution_mode/compiled",
+    "platform/windows",
+    "platform/mac",
+    "platform/linux",
+    "runtime/standalone_executable",
+    "runtime/clr",
+    "used_for/backends",
+    "used_for/cross_platform_development",
+    "used_for/games",
+    "used_for/guis",
+    "typing/static",
+    "typing/strong"
+  ]
 }
