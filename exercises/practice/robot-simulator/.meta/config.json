@@ -2,9 +2,17 @@
   "blurb": "Write a robot simulator.",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "robot_simulator.cpp",
+      "robot_simulator.h"
+    ],
+    "test": [
+      "robot_simulator_test.cpp"
+    ],
+    "example": [
+      "example.cpp",
+      "example.h"
+    ]
   },
   "source": "Inspired by an interview question at a famous company.",
   "source_url": ""
