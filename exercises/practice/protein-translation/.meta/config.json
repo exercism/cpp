@@ -2,9 +2,17 @@
   "blurb": "Translate RNA sequences into proteins.",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "protein_translation.cpp",
+      "protein_translation.h"
+    ],
+    "test": [
+      "protein_translation_test.cpp"
+    ],
+    "example": [
+      "example.cpp",
+      "example.h"
+    ]
   },
   "source": "Tyler Long"
 }

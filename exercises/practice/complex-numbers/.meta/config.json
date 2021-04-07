@@ -2,9 +2,17 @@
   "blurb": "Implement complex numbers.",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "complex_numbers.cpp",
+      "complex_numbers.h"
+    ],
+    "test": [
+      "complex_numbers_test.cpp"
+    ],
+    "example": [
+      "example.cpp",
+      "example.h"
+    ]
   },
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Complex_number"

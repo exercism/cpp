@@ -2,8 +2,16 @@
   "blurb": "Convert a number, represented as a sequence of digits in one base, to any other base.",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "all_your_base.cpp",
+      "all_your_base.h"
+    ],
+    "test": [
+      "all_your_base_test.cpp"
+    ],
+    "example": [
+      "example.cpp",
+      "example.h"
+    ]
   }
 }
