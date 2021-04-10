@@ -1,9 +1,18 @@
 {
+  "blurb": "Given a word, compute the Scrabble score for that word.",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "scrabble_score.cpp",
+      "scrabble_score.h"
+    ],
+    "test": [
+      "scrabble_score_test.cpp"
+    ],
+    "example": [
+      "example.cpp",
+      "example.h"
+    ]
   },
   "source": "Inspired by the Extreme Startup game",
   "source_url": "https://github.com/rchatley/extreme_startup"

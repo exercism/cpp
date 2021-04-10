@@ -1,9 +1,18 @@
 {
+  "blurb": "Given a number n, determine what the nth prime is.",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "nth_prime.cpp",
+      "nth_prime.h"
+    ],
+    "test": [
+      "nth_prime_test.cpp"
+    ],
+    "example": [
+      "example.cpp",
+      "example.h"
+    ]
   },
   "source": "A variation on Problem 7 at Project Euler",
   "source_url": "http://projecteuler.net/problem=7"

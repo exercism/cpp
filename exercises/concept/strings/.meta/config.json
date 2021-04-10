@@ -1,14 +1,22 @@
 {
+  "blurb": "TODO: add blurb for strings exercise",
   "authors": [
-    {
-      "github_username": "silvanocerza",
-      "exercism_username": "silvanocerza"
-    }
+    "silvanocerza"
   ],
-  "forked_from": ["csharp/strings"],
+  "forked_from": [
+    "csharp/strings"
+  ],
   "files": {
-    "solution": ["strings.cpp", "strings.h"],
-    "test": ["strings_test.cpp"],
-    "exemplar": [".meta/exemplar.cpp", ".meta/exemplar.h"]
+    "solution": [
+      "strings.cpp",
+      "strings.h"
+    ],
+    "test": [
+      "strings_test.cpp"
+    ],
+    "exemplar": [
+      ".meta/exemplar.cpp",
+      ".meta/exemplar.h"
+    ]
   }
 }

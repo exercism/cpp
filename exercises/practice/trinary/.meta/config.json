@@ -1,9 +1,18 @@
 {
+  "blurb": "Convert a trinary number, represented as a string (e.g. '102012'), to its decimal equivalent using first principles.",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "trinary.cpp",
+      "trinary.h"
+    ],
+    "test": [
+      "trinary_test.cpp"
+    ],
+    "example": [
+      "example.cpp",
+      "example.h"
+    ]
   },
   "source": "All of Computer Science",
   "source_url": "http://www.wolframalpha.com/input/?i=binary&a=*C.binary-_*MathWorld-"
