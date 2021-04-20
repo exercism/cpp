@@ -1,3 +1,5 @@
+# After
+
 The key thing to remember about C++ strings is that they are mutable objects representing text as a sequence of Unicode characters (letters, digits, punctuation, etc.).
 
 Manipulating a string can be be done by calling one of its [methods][methods]. C++ strings are not immutable and their value can be changed after definition.
