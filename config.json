@@ -455,7 +455,7 @@
       {
         "slug": "complex-numbers",
         "name": "Complex Numbers",
-        "uuid": "ea8d6224-0440-6d80-1569-a04127908a200d2ecf0",
+        "uuid": "ab52f0fa-b884-4af2-9271-19349bed4b2e",
         "practices": [],
         "prerequisites": [],
         "difficulty": 6,
@@ -693,7 +693,7 @@
       {
         "slug": "all-your-base",
         "name": "All Your Base",
-        "uuid": "0a3220c6-07a9-ed80-4d2d-1fc65de969b771a46d5",
+        "uuid": "5a839eb7-cc4b-48eb-bd04-57ba6e77eae8",
         "practices": [],
         "prerequisites": [],
         "difficulty": 4,
