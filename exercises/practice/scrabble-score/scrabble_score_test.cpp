@@ -1,5 +1,9 @@
 #include "scrabble_score.h"
+#ifdef EXERCISM_TEST_SUITE
+#include <catch2/catch.hpp>
+#else
 #include "test/catch.hpp"
+#endif
 
 TEST_CASE("scores_an_empty_word_as_zero")
 {

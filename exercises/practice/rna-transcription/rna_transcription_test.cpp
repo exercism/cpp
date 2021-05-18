@@ -1,5 +1,9 @@
 #include "rna_transcription.h"
+#ifdef EXERCISM_TEST_SUITE
+#include <catch2/catch.hpp>
+#else
 #include "test/catch.hpp"
+#endif
 
 TEST_CASE("transcribes_cytidine_to_guanosine")
 {

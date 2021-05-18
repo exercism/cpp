@@ -1,5 +1,9 @@
 #include "allergies.h"
+#ifdef EXERCISM_TEST_SUITE
+#include <catch2/catch.hpp>
+#else
 #include "test/catch.hpp"
+#endif
 
 #include <string>
 #include <unordered_set>

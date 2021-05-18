@@ -1,6 +1,10 @@
 #include "phone_number.h"
 
+#ifdef EXERCISM_TEST_SUITE
+#include <catch2/catch.hpp>
+#else
 #include "test/catch.hpp"
+#endif
 #include <exception>
 
 TEST_CASE("cleans_the_number") {
