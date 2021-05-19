@@ -1,5 +1,9 @@
 #include "binary_search.h"
+#ifdef EXERCISM_TEST_SUITE
+#include <catch2/catch.hpp>
+#else
 #include "test/catch.hpp"
+#endif
 #include <stdexcept>
 #include <vector>
 #include <cstddef>

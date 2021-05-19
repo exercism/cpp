@@ -1,5 +1,9 @@
 #include "bob.h"
+#ifdef EXERCISM_TEST_SUITE
+#include <catch2/catch.hpp>
+#else
 #include "test/catch.hpp"
+#endif
 
 // Bob exercise test case data version 1.4.0
 

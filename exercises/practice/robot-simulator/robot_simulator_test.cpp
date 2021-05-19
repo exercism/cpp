@@ -1,4 +1,8 @@
+#ifdef EXERCISM_TEST_SUITE
+#include <catch2/catch.hpp>
+#else
 #include "test/catch.hpp"
+#endif
 #include "robot_simulator.h"
 
 using robot_simulator::Robot;

@@ -1,5 +1,9 @@
 #include "sieve.h"
+#ifdef EXERCISM_TEST_SUITE
+#include <catch2/catch.hpp>
+#else
 #include "test/catch.hpp"
+#endif
 
 TEST_CASE("no_primes_under_two")
 {

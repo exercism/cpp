@@ -1,5 +1,9 @@
 #include "prime_factors.h"
+#ifdef EXERCISM_TEST_SUITE
+#include <catch2/catch.hpp>
+#else
 #include "test/catch.hpp"
+#endif
 
 TEST_CASE("_1_yields_empty")
 {
