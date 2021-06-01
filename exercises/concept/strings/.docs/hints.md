@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - [This tutorial][strings-tutorial] offers a nice introduction to C++ strings.

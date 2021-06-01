@@ -1,5 +1,9 @@
 #include "luhn.h"
+#ifdef EXERCISM_TEST_SUITE
+#include <catch2/catch.hpp>
+#else
 #include "test/catch.hpp"
+#endif
 
 //Luhn exercise test case data version 1.6.0
 

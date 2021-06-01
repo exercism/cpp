@@ -1,6 +1,10 @@
 #include "grade_school.h"
 #include <map>
+#ifdef EXERCISM_TEST_SUITE
+#include <catch2/catch.hpp>
+#else
 #include "test/catch.hpp"
+#endif
 
 using namespace std;
 

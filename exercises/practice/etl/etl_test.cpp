@@ -1,6 +1,10 @@
 #include "etl.h"
 #include <map>
+#ifdef EXERCISM_TEST_SUITE
+#include <catch2/catch.hpp>
+#else
 #include "test/catch.hpp"
+#endif
 
 TEST_CASE("transforms_one_value")
 {

@@ -1,6 +1,10 @@
 #include "meetup.h"
 #include <boost/date_time/gregorian/gregorian.hpp>
+#ifdef EXERCISM_TEST_SUITE
+#include <catch2/catch.hpp>
+#else
 #include "test/catch.hpp"
+#endif
 
 // This problem requires you to install and use the boost date_time library.
 // CMake will try to find and configure it for you if it is installed on your
