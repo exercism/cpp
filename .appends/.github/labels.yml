@@ -1,3 +1,8 @@
+# ----------------------------------------------------------------------------------------- #
+# These are the repository-specific labels that augment the Exercise-wide labels defined in #
+# https://github.com/exercism/org-wide-files/blob/main/global-files/.github/labels.yml.     #
+# ----------------------------------------------------------------------------------------- #
+
 - name: "boost"
   description: ""
   color: "eab2ff"
@@ -42,11 +47,6 @@
   description: ""
   color: "cc317c"
 
-- name: "v3-migration 🤖"
-  description: "Preparing for Exercism v3"
-  color: "E99695"
-
 - name: "wontfix"
   description: ""
   color: "ffffff"
-
