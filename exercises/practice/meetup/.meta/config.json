@@ -10,7 +10,6 @@
       "meetup_test.cpp"
     ],
     "example": [
-      "example.cpp",
       "example.h"
     ]
   },
