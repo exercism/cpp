@@ -11,7 +11,7 @@
     ],
     "example": [
       "example.cpp",
-      "example.h"
+      "hello_world.h"
     ]
   },
   "source": "This is an exercise to introduce users to using Exercism",

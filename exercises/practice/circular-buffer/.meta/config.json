@@ -10,7 +10,6 @@
       "circular_buffer_test.cpp"
     ],
     "example": [
-      "example.cpp",
       "example.h"
     ]
   },
