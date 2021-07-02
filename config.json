@@ -4,7 +4,7 @@
   "active": true,
   "status": {
     "concept_exercises": false,
-    "test_runner": false,
+    "test_runner": true,
     "representer": false,
     "analyzer": false
   },
@@ -14,6 +14,9 @@
     "indent_style": "space",
     "indent_size": 4,
     "highlightjs_language": "cpp"
+  },
+  "test_runner": {
+    "average_run_time": 2.0
   },
   "test_pattern": ".*_test[.]cpp",
   "files": {
