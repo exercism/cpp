@@ -1,4 +1,8 @@
+#ifdef EXERCISM_TEST_SUITE
+#include <catch2/catch.hpp>
+#else
 #include "test/catch.hpp"
+#endif
 #include "armstrong_numbers.h"
 
 // Armstrong-numbers exercise test case data version 1.1.0

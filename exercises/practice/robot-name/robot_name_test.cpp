@@ -1,5 +1,9 @@
 #include "robot_name.h"
+#ifdef EXERCISM_TEST_SUITE
+#include <catch2/catch.hpp>
+#else
 #include "test/catch.hpp"
+#endif
 #include <cctype>
 #include <string>
 #include <unordered_set>

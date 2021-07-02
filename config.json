@@ -12,20 +12,37 @@
   "version": 3,
   "online_editor": {
     "indent_style": "space",
-    "indent_size": 4
+    "indent_size": 4,
+    "highlightjs_language": "cpp"
   },
   "test_pattern": ".*_test[.]cpp",
+  "files": {
+    "solution": [
+      "%{snake_slug}.cpp",
+      "%{snake_slug}.h"
+    ],
+    "test": [
+      "%{snake_slug}_test.cpp"
+    ],
+    "example": [
+      "example.cpp",
+      "example.h"
+    ],
+    "exemplar": [
+      ".meta/exemplar.cpp",
+      ".meta/exemplar.h"
+    ]
+  },
   "exercises": {
     "concept": [
       {
         "slug": "strings",
+        "name": "Strings",
         "uuid": "62f945e7-0791-46b7-8161-855183f736ba",
         "concepts": [
           "strings"
         ],
-        "prerequisites": [
-          ""
-        ],
+        "prerequisites": [],
         "status": "wip"
       }
     ],
@@ -438,7 +455,7 @@
       {
         "slug": "complex-numbers",
         "name": "Complex Numbers",
-        "uuid": "ea8d6224-0440-6d80-1569-a04127908a200d2ecf0",
+        "uuid": "ab52f0fa-b884-4af2-9271-19349bed4b2e",
         "practices": [],
         "prerequisites": [],
         "difficulty": 6,
@@ -676,7 +693,7 @@
       {
         "slug": "all-your-base",
         "name": "All Your Base",
-        "uuid": "0a3220c6-07a9-ed80-4d2d-1fc65de969b771a46d5",
+        "uuid": "5a839eb7-cc4b-48eb-bd04-57ba6e77eae8",
         "practices": [],
         "prerequisites": [],
         "difficulty": 4,
@@ -716,5 +733,25 @@
     }
   ],
   "key_features": [],
-  "tags": []
+  "tags": [
+    "paradigm/object_oriented",
+    "typing/static",
+    "typing/strong",
+    "execution_mode/compiled",
+    "platform/android",
+    "platform/ios",
+    "platform/linux",
+    "platform/mac",
+    "platform/windows",
+    "runtime/standalone_executable",
+    "used_for/backends",
+    "used_for/cross_platform_development",
+    "used_for/embedded_systems",
+    "used_for/financial_systems",
+    "used_for/games",
+    "used_for/guis",
+    "used_for/mobile",
+    "used_for/robotics",
+    "used_for/scientific_calculations"
+  ]
 }

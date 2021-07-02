@@ -21,13 +21,22 @@ endif()
 if(EXERCISM_COMMON_CATCH)
     # For Exercism track development only
     add_executable(${exercise} ${file}_test.cpp ${exercise_cpp} ${file}.h $<TARGET_OBJECTS:catchlib>)
+elseif(EXERCISM_TEST_SUITE)
+    # The Exercism test suite is being run, the Docker image already
+    # includes a pre-built version of Catch.
+    find_package(Catch2 REQUIRED)
+    add_executable(${exercise} ${file}_test.cpp ${exercise_cpp} ${file}.h)
+    target_link_libraries(${exercise} PRIVATE Catch2::Catch2WithMain)
+    # When Catch is installed system wide we need to include a different
+    # header, we need this define to use the correct one.
+    target_compile_definitions(${exercise} PRIVATE EXERCISM_TEST_SUITE)
 else()
     # Build executable from sources and headers
     add_executable(${exercise} ${file}_test.cpp ${exercise_cpp} ${file}.h test/tests-main.cpp)
 endif()
 
 set_target_properties(${exercise} PROPERTIES
-    CXX_STANDARD 14
+    CXX_STANDARD 17
     CXX_STANDARD_REQUIRED OFF
     CXX_EXTENSIONS OFF
 )

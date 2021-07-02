@@ -2,7 +2,11 @@
 #include "hello_world.h"
 
 // Include the test framework.
+#ifdef EXERCISM_TEST_SUITE
+#include <catch2/catch.hpp>
+#else
 #include "test/catch.hpp"
+#endif
 
 // Declares a single test.
 TEST_CASE("test_hello")

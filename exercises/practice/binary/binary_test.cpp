@@ -1,5 +1,9 @@
 #include "binary.h"
+#ifdef EXERCISM_TEST_SUITE
+#include <catch2/catch.hpp>
+#else
 #include "test/catch.hpp"
+#endif
 
 TEST_CASE("b1_is_decimal_1")
 {

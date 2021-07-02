@@ -1,5 +1,9 @@
 #include "crypto_square.h"
+#ifdef EXERCISM_TEST_SUITE
+#include <catch2/catch.hpp>
+#else
 #include "test/catch.hpp"
+#endif
 
 TEST_CASE("normalize_capitals")
 {
