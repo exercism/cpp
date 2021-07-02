@@ -1,6 +1,19 @@
 {
   "blurb": "Determine if a triangle is equilateral, isosceles, or scalene.",
-  "authors": [],
+  "authors": [
+    "LegalizeAdulthood"
+  ],
+  "contributors": [
+    "AlexLeSang",
+    "cyborgsphinx",
+    "elyashiv",
+    "jackhughesweb",
+    "KevinWMatthews",
+    "kytrinyx",
+    "masters3d",
+    "NobbZ",
+    "patricksjackson"
+  ],
   "files": {
     "solution": [
       "triangle.cpp",

@@ -1,6 +1,13 @@
 {
   "blurb": "Reverse a string",
-  "authors": [],
+  "authors": [
+    "nidhi98gupta"
+  ],
+  "contributors": [
+    "elyashiv",
+    "KevinWMatthews",
+    "patricksjackson"
+  ],
   "files": {
     "solution": [
       "reverse_string.cpp",

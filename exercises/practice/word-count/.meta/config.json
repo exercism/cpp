@@ -1,6 +1,18 @@
 {
   "blurb": "Given a phrase, count the occurrences of each word in that phrase.",
-  "authors": [],
+  "authors": [
+    "LegalizeAdulthood"
+  ],
+  "contributors": [
+    "cyborgsphinx",
+    "elyashiv",
+    "jackhughesweb",
+    "KevinWMatthews",
+    "kytrinyx",
+    "marko213",
+    "patricksjackson",
+    "rprouse"
+  ],
   "files": {
     "solution": [
       "word_count.cpp",

@@ -1,6 +1,16 @@
 {
   "blurb": "Given a number from 0 to 999,999,999,999, spell out that number in English.",
-  "authors": [],
+  "authors": [
+    "LegalizeAdulthood"
+  ],
+  "contributors": [
+    "cyborgsphinx",
+    "elyashiv",
+    "jackhughesweb",
+    "KevinWMatthews",
+    "kytrinyx",
+    "patricksjackson"
+  ],
   "files": {
     "solution": [
       "say.cpp",

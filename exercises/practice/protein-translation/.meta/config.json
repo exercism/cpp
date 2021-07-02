@@ -1,6 +1,11 @@
 {
   "blurb": "Translate RNA sequences into proteins.",
-  "authors": [],
+  "authors": [
+    "fcnoronha"
+  ],
+  "contributors": [
+    "elyashiv"
+  ],
   "files": {
     "solution": [
       "protein_translation.cpp",

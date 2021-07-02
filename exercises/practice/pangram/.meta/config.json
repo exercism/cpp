@@ -1,6 +1,15 @@
 {
   "blurb": "Determine if a sentence is a pangram.",
-  "authors": [],
+  "authors": [
+    "Is0metry"
+  ],
+  "contributors": [
+    "elyashiv",
+    "jackhughesweb",
+    "KevinWMatthews",
+    "LegalizeAdulthood",
+    "patricksjackson"
+  ],
   "files": {
     "solution": [
       "pangram.cpp",

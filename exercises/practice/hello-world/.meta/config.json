@@ -1,6 +1,15 @@
 {
   "blurb": "The classical introductory exercise. Just say \"Hello, World!\"",
-  "authors": [],
+  "authors": [
+    "samsondstl"
+  ],
+  "contributors": [
+    "elyashiv",
+    "jackhughesweb",
+    "KevinWMatthews",
+    "patricksjackson",
+    "sturzl"
+  ],
   "files": {
     "solution": [
       "hello_world.cpp",

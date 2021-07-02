@@ -1,6 +1,18 @@
 {
   "blurb": "Given a DNA string, compute how many times each nucleotide occurs in the string.",
-  "authors": [],
+  "authors": [
+    "LegalizeAdulthood"
+  ],
+  "contributors": [
+    "cyborgsphinx",
+    "elyashiv",
+    "jackhughesweb",
+    "KevinWMatthews",
+    "kytrinyx",
+    "objarni",
+    "patricksjackson",
+    "sjakobi"
+  ],
   "files": {
     "solution": [
       "nucleotide_count.cpp",

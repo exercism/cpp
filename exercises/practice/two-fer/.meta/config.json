@@ -1,6 +1,11 @@
 {
   "blurb": "Create a sentence of the form \"One for X, one for me.\"",
-  "authors": [],
+  "authors": [
+    "siebenschlaefer"
+  ],
+  "contributors": [
+    "elyashiv"
+  ],
   "files": {
     "solution": [
       "two_fer.cpp",

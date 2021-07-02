@@ -1,6 +1,12 @@
 {
   "blurb": "Implement complex numbers.",
-  "authors": [],
+  "authors": [
+    "chgraef"
+  ],
+  "contributors": [
+    "elyashiv",
+    "patricksjackson"
+  ],
   "files": {
     "solution": [
       "complex_numbers.cpp",

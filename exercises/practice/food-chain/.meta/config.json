@@ -1,6 +1,16 @@
 {
   "blurb": "Generate the lyrics of the song 'I Know an Old Lady Who Swallowed a Fly'",
-  "authors": [],
+  "authors": [
+    "LegalizeAdulthood"
+  ],
+  "contributors": [
+    "cyborgsphinx",
+    "elyashiv",
+    "jackhughesweb",
+    "KevinWMatthews",
+    "kytrinyx",
+    "patricksjackson"
+  ],
   "files": {
     "solution": [
       "food_chain.cpp",

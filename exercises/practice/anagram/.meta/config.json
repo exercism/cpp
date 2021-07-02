@@ -1,6 +1,18 @@
 {
   "blurb": "Given a word and a list of possible anagrams, select the correct sublist.",
-  "authors": [],
+  "authors": [
+    "LegalizeAdulthood"
+  ],
+  "contributors": [
+    "cyborgsphinx",
+    "elyashiv",
+    "jackhughesweb",
+    "KevinWMatthews",
+    "kytrinyx",
+    "marko213",
+    "marvelou-s",
+    "patricksjackson"
+  ],
   "files": {
     "solution": [
       "anagram.cpp",

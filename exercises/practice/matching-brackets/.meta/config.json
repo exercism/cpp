@@ -1,6 +1,14 @@
 {
   "blurb": "Make sure the brackets and braces all match.",
-  "authors": [],
+  "authors": [
+    "patricksjackson"
+  ],
+  "contributors": [
+    "elyashiv",
+    "jackhughesweb",
+    "KevinWMatthews",
+    "marvelou-s"
+  ],
   "files": {
     "solution": [
       "matching_brackets.cpp",
