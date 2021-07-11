@@ -22,8 +22,8 @@
       "queen_attack_test.cpp"
     ],
     "example": [
-      "example.cpp",
-      "example.h"
+      ".meta/example.cpp",
+      ".meta/example.h"
     ]
   },
   "source": "J Dalbey's Programming Practice problems",

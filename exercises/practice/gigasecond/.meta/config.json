@@ -21,8 +21,8 @@
       "gigasecond_test.cpp"
     ],
     "example": [
-      "example.cpp",
-      "example.h"
+      ".meta/example.cpp",
+      ".meta/example.h"
     ]
   },
   "source": "Chapter 9 in Chris Pine's online Learn to Program tutorial.",

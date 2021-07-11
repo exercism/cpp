@@ -20,8 +20,8 @@
       "grains_test.cpp"
     ],
     "example": [
-      "example.cpp",
-      "example.h"
+      ".meta/example.cpp",
+      ".meta/example.h"
     ]
   },
   "source": "JavaRanch Cattle Drive, exercise 6",

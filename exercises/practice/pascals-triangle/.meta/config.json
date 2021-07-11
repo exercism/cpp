@@ -17,8 +17,8 @@
       "pascals_triangle_test.cpp"
     ],
     "example": [
-      "example.cpp",
-      "example.h"
+      ".meta/example.cpp",
+      ".meta/example.h"
     ]
   },
   "source": "Pascal's Triangle at Wolfram Math World",
