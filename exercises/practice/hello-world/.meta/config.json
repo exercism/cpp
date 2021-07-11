@@ -19,7 +19,7 @@
       "hello_world_test.cpp"
     ],
     "example": [
-      "example.cpp",
+      ".meta/example.cpp",
       "hello_world.h"
     ]
   },

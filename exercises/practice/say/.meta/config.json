@@ -20,8 +20,8 @@
       "say_test.cpp"
     ],
     "example": [
-      "example.cpp",
-      "example.h"
+      ".meta/example.cpp",
+      ".meta/example.h"
     ]
   },
   "source": "A variation on JavaRanch CattleDrive, exercise 4a",

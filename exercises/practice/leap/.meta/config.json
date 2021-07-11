@@ -22,7 +22,7 @@
       "leap_test.cpp"
     ],
     "example": [
-      "example.h"
+      ".meta/example.h"
     ]
   },
   "source": "JavaRanch Cattle Drive, exercise 3",

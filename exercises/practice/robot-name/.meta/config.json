@@ -20,8 +20,8 @@
       "robot_name_test.cpp"
     ],
     "example": [
-      "example.cpp",
-      "example.h"
+      ".meta/example.cpp",
+      ".meta/example.h"
     ]
   },
   "source": "A debugging session with Paul Blackwell at gSchool."

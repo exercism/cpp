@@ -21,8 +21,8 @@
       "sum_of_multiples_test.cpp"
     ],
     "example": [
-      "example.cpp",
-      "example.h"
+      ".meta/example.cpp",
+      ".meta/example.h"
     ]
   },
   "source": "A variation on Problem 1 at Project Euler",

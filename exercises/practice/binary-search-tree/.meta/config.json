@@ -16,7 +16,7 @@
       "binary_search_tree_test.cpp"
     ],
     "example": [
-      "example.h"
+      ".meta/example.h"
     ]
   },
   "source": "Josh Cheek",

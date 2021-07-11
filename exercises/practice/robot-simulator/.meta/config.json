@@ -17,8 +17,8 @@
       "robot_simulator_test.cpp"
     ],
     "example": [
-      "example.cpp",
-      "example.h"
+      ".meta/example.cpp",
+      ".meta/example.h"
     ]
   },
   "source": "Inspired by an interview question at a famous company.",

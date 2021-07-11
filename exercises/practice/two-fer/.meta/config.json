@@ -15,7 +15,7 @@
       "two_fer_test.cpp"
     ],
     "example": [
-      "example.h"
+      ".meta/example.h"
     ]
   },
   "source_url": "https://github.com/exercism/problem-specifications/issues/757"

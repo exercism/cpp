@@ -20,8 +20,8 @@
       "prime_factors_test.cpp"
     ],
     "example": [
-      "example.cpp",
-      "example.h"
+      ".meta/example.cpp",
+      ".meta/example.h"
     ]
   },
   "source": "The Prime Factors Kata by Uncle Bob",

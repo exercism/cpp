@@ -18,7 +18,7 @@
       "circular_buffer_test.cpp"
     ],
     "example": [
-      "example.h"
+      ".meta/example.h"
     ]
   },
   "source": "Wikipedia",

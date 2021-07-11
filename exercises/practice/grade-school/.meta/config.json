@@ -24,8 +24,8 @@
       "grade_school_test.cpp"
     ],
     "example": [
-      "example.cpp",
-      "example.h"
+      ".meta/example.cpp",
+      ".meta/example.h"
     ]
   },
   "source": "A pairing session with Phil Battos at gSchool",
