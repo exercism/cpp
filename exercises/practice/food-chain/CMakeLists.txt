@@ -47,6 +47,10 @@ if("${CMAKE_CXX_COMPILER_ID}" MATCHES "(GNU|Clang)")
     set_target_properties(${exercise} PROPERTIES
         COMPILE_FLAGS "-Wall -Wextra -Wpedantic -Werror"
     )
+elseif("${CMAKE_CXX_COMPILER_ID}" MATCHES "MSVC") 
+    set_target_properties(${exercise} PROPERTIES
+        COMPILE_FLAGS "/W4 /WX"
+    )
 endif()
 
 # Configure to run all the tests?

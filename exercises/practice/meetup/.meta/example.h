@@ -192,19 +192,19 @@ public:
 private:
     boost::gregorian::date teenth_day(boost::date_time::weekdays day) const
     {
-        return boost::gregorian::first_day_of_the_week_after(day).get_date({year_, month_, 12});
+        return boost::gregorian::first_day_of_the_week_after(static_cast<unsigned short>(day)).get_date({year_, month_, 12});
     }
 
     boost::gregorian::date first_weekday(boost::date_time::weekdays day) const
     {
-        return boost::gregorian::first_day_of_the_week_in_month(day, month_).get_date(year_);
+        return boost::gregorian::first_day_of_the_week_in_month(static_cast<unsigned short>(day), month_).get_date(year_);
     }
 
     boost::gregorian::date nth_weekday(
         boost::gregorian::nth_day_of_the_week_in_month::week_num n,
         boost::date_time::weekdays day) const
     {
-        return boost::gregorian::nth_day_of_the_week_in_month(n, day, month_).get_date(year_);
+        return boost::gregorian::nth_day_of_the_week_in_month(n, static_cast<unsigned short>(day), month_).get_date(year_);
     }
 
     boost::gregorian::date second_weekday(boost::date_time::weekdays day) const
@@ -224,7 +224,7 @@ private:
 
     boost::gregorian::date last_weekday(boost::date_time::weekdays day) const
     {
-        return boost::gregorian::last_day_of_the_week_in_month(day, month_).get_date(year_);
+        return boost::gregorian::last_day_of_the_week_in_month(static_cast<unsigned short>(day), month_).get_date(year_);
     }
 
     const boost::gregorian::date::year_type year_;

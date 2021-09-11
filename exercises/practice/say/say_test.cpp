@@ -86,7 +86,7 @@ TEST_CASE("a_really_big_number")
 
 TEST_CASE("raises_an_error_below_zero")
 {
-    REQUIRE_THROWS_AS(say::in_english(-1), std::domain_error);
+    REQUIRE_THROWS_AS(say::in_english(static_cast<unsigned long long>(-1)), std::domain_error);
 }
 
 TEST_CASE("raises_an_error_for_one_trillion")

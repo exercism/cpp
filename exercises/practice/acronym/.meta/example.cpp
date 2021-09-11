@@ -15,7 +15,7 @@ string acronym(string const &input_str) {
             delimiter_state = FOUND;
         } else if (delimiter_state == FOUND) {
             delimiter_state = NOT_FOUND;
-            acronym_str.push_back(std::toupper(c));
+            acronym_str.push_back(static_cast<char>(std::toupper(c)));
         }
     }
     return acronym_str;

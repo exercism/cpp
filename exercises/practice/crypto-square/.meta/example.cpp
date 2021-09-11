@@ -12,7 +12,7 @@ string to_lower_copy(string const& s)
 {
     string cpy(s);
     for (auto& c: cpy) {
-        c = tolower(c);
+        c = static_cast<char>(tolower(c));
     }
     return cpy;
 }

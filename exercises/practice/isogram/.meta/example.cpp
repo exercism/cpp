@@ -11,7 +11,7 @@ bool is_isogram(std::string const& input_str)
     {
         if (isalnum(ch))
         {
-            auto ret = chars.insert(tolower(ch));
+            auto ret = chars.insert(static_cast<char>(tolower(ch)));
             if (ret.second == false)
             {
                 return false;

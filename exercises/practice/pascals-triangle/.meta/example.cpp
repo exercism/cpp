@@ -16,7 +16,7 @@ std::vector<std::vector<int>> generate_rows(size_t n)
         for (size_t k = 0; k <= i; k++)
         {
             rowNum.push_back(val);
-            val = val * (i - k) / (k + 1);
+            val = static_cast<int>(val * (i - k) / (k + 1));
         }
 
         res.push_back(rowNum);

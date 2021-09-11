@@ -43,7 +43,7 @@ string normalize_text(string const& text)
 {
     string normalized;
     transform(text.begin(), text.end(), back_inserter(normalized),
-        [](const char c) { return (isalnum(c) || c == '\'') ? tolower(c) : ' '; });
+        [](const char c) { return (static_cast<char>(isalnum(c)) || c == '\'') ? static_cast<char>(tolower(c)) : ' '; });
     return normalized;
 }
 

@@ -11,7 +11,7 @@ map<char, int> transform(map<int, vector<char>> const& old)
     map<char, int> result;
     for (auto const& item : old) {
         for (char c : item.second) {
-            result[tolower(c)] = item.first;
+            result[static_cast<char>(tolower(c))] = item.first;
         }
     }
     return result;

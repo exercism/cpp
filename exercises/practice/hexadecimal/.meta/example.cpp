@@ -12,7 +12,7 @@ int convert(const std::string &text)
         if (c >= '0' && c <= '9') {
             result += c - '0';
         } else {
-            c = std::tolower(c);
+            c = static_cast<char>(std::tolower(c));
             if (c >= 'a' && c <= 'f') {
                 result += 10 + c - 'a';
             } else {
