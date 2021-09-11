@@ -36,18 +36,7 @@
     ]
   },
   "exercises": {
-    "concept": [
-      {
-        "slug": "strings",
-        "name": "Strings",
-        "uuid": "62f945e7-0791-46b7-8161-855183f736ba",
-        "concepts": [
-          "strings"
-        ],
-        "prerequisites": [],
-        "status": "wip"
-      }
-    ],
+    "concept": [],
     "practice": [
       {
         "slug": "hello-world",
@@ -727,13 +716,7 @@
       "point-mutations"
     ]
   },
-  "concepts": [
-    {
-      "uuid": "8d51e52a-95d3-45da-adb0-65bdfe96b875",
-      "slug": "strings",
-      "name": "Strings"
-    }
-  ],
+  "concepts": [],
   "key_features": [],
   "tags": [
     "paradigm/object_oriented",
