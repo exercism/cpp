@@ -10,7 +10,7 @@ const char ALPHA_END = 'z';
 
 char atbash_transform(char c)
 {
-    return static_cast<char>(std::isalpha(c)) ? ALPHA_END - static_cast<char>(std::tolower(c)) + ALPHA_START : c;
+    return static_cast<char>(std::isalpha(c) ? ALPHA_END - std::tolower(c) + ALPHA_START : c);
 }
 
 std::string encode(std::string const& plaintext)
