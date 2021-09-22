@@ -11,7 +11,7 @@ on:
 jobs:
   linux-min:
     name: Linux Min Config
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-18.04
     strategy:
       matrix:
         compiler: [clang++-3.8, g++-5]

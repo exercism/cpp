@@ -68,7 +68,7 @@ You should be able to use other integrated IDE's such as JetBrains' CLion in a s
 
 All recent Linux distribution releases have compatible C++14 compilers, you
 should be able to install it using your package manager. The versions we support
-are the default installed versions in Ubuntu LTS 16.04.
+are the default installed versions in Ubuntu LTS 18.04.
 
 For example, on Ubuntu you would use the following command to install gcc.
 
