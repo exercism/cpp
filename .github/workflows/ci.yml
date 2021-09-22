@@ -14,13 +14,13 @@ jobs:
     runs-on: ubuntu-18.04
     strategy:
       matrix:
-        compiler: [clang++-3.8, g++-5]
+        compiler: [clang++-6.0, g++-7]
     steps:
     - uses: actions/checkout@v2.3.4
     - name: Install Dependencies
       # Boost must be installed only because the CMake version (3.12) can't
       # detect the installed Boost version (1.69)
-      run: sudo apt-get update && sudo apt-get -y install ninja-build libboost-date-time-dev clang-3.8 g++-5 g++-multilib
+      run: sudo apt-get update && sudo apt-get -y install ninja-build libboost-date-time-dev clang-6.0 g++-7 g++-multilib
     - name: Run tests with common Catch
       run: |
         cmake -G Ninja .

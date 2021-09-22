@@ -22,7 +22,7 @@ the IDE.
 This language track requires a compiler with [C++14](http://en.wikipedia.org/wiki/C%2B%2B14)
 support, which was released in 2014. All major compilers released in the last few years should
 be compatible, so as long as you are on a fairly recent version you should be fine.
-Specifically, GCC version 5 or later, Clang version 3.8 or later, or Visual
+Specifically, GCC version 7 or later, Clang version 6 or later, or Visual
 Studio 2017 or later.
 
 ### CMake
