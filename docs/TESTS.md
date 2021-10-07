@@ -57,12 +57,12 @@ code using the appropriate command for your environment:
 
 Examples of running CMake for different environments are shown below.
 
-### Linux\MacOS with Make
+### Linux with Make
 
 The generator name for CMake is `Unix Makefiles`.
 Assuming the current exercise is `bob` and we're in the exercise folder:
 
-```
+```sh
 $ touch bob.{h,cpp}
 $ mkdir build
 $ cd build
@@ -89,12 +89,13 @@ to setup the CMake project in Visual Studio.
 The generator name for CMake is `Xcode`.
 Assuming the current exercise is `bob` and we're in the exercise folder:
 
-```
+```sh
 $ touch bob.{h,cpp}
 $ mkdir build
 $ cd build
 $ cmake -G Xcode ..
 ```
 
-This example shows creating empty files for the implementation before
-running CMake.
+This example generates the XCode files so that you can open the project in XCode.
+With the project opened in XCode you may need to add another target. 
+For a new target go to File -> New -> Target from the menu, _OS X \ Application \ Command Line Tool_ -> Next _C++_ as the language and provide a target name. Run the code using the target.
