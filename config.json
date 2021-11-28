@@ -734,7 +734,38 @@
       "name": "Strings"
     }
   ],
-  "key_features": [],
+  "key_features": [
+    {
+      "icon": "fast",
+      "title": "Fast execution speed",
+      "content": "With execution speed in mind, C++ is used in a wide range of computation-intensive domains."
+    },
+    {
+      "icon": "multi-paradigm",
+      "title": "Multi-paradigm",
+      "content": "C++ supports a variety of programming paradigms like OOP, functional and procedural programming."
+    },
+    {
+      "icon": "powerful",
+      "title": "High-level programming",
+      "content": "C++ standardizes a comprehensive library, enabling the developer to concentrate on the problem."
+    },
+    {
+      "icon": "homoiconic",
+      "title": "Low-level programming",
+      "content": "C++ masters the strength of its predecessor C and gives the developer access to the bits and bytes."
+    },
+    {
+      "icon": "widely-used",
+      "title": "Popular",
+      "content": "Thanks to the flexibility and portability, you can find applications written in C++ in every scale."
+    },
+    {
+      "icon": "evolving",
+      "title": "Ever-evolving",
+      "content": "Although mature, C++ is still evolving and developed by a committee to fit the developers needs."
+    }
+  ],
   "tags": [
     "paradigm/object_oriented",
     "typing/static",
