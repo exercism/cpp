@@ -22,7 +22,7 @@ the IDE.
 This language track requires a compiler with [C++14](http://en.wikipedia.org/wiki/C%2B%2B14)
 support, which was released in 2014. All major compilers released in the last few years should
 be compatible, so as long as you are on a fairly recent version you should be fine.
-Specifically, GCC version 5 or later, Clang version 3.8 or later, or Visual
+Specifically, GCC version 7 or later, Clang version 6 or later, or Visual
 Studio 2017 or later.
 
 ### CMake
@@ -68,7 +68,7 @@ You should be able to use other integrated IDE's such as JetBrains' CLion in a s
 
 All recent Linux distribution releases have compatible C++14 compilers, you
 should be able to install it using your package manager. The versions we support
-are the default installed versions in Ubuntu LTS 16.04.
+are the default installed versions in Ubuntu LTS 18.04.
 
 For example, on Ubuntu you would use the following command to install gcc.
 
