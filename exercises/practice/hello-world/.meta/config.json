@@ -12,7 +12,8 @@
   ],
   "files": {
     "solution": [
-      "hello_world.cpp"
+      "hello_world.cpp",
+      "hello_world.h"
     ],
     "test": [
       "hello_world_test.cpp"
