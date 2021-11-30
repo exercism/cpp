@@ -20,7 +20,7 @@
     ],
     "example": [
       ".meta/example.cpp",
-      "hello_world.h"
+      ".meta/example.h"
     ]
   },
   "source": "This is an exercise to introduce users to using Exercism",
