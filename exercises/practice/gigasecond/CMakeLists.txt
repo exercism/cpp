@@ -8,7 +8,6 @@ cmake_minimum_required(VERSION 3.5.1)
 project(${exercise} CXX)
 
 # Locate Boost date_time library
-set(Boost_USE_STATIC_LIBS ON)
 set(Boost_USE_MULTITHREADED ON)
 set(Boost_USE_STATIC_RUNTIME OFF)
 find_package(Boost 1.58 REQUIRED COMPONENTS date_time)
