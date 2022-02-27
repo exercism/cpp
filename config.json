@@ -721,6 +721,28 @@
           "strings",
           "variables"
         ]
+      },
+      {
+        "slug": "isbn-verifier",
+        "name": "Isbn Verifier",
+        "uuid": "5fcc6fd8-1dc7-4493-970a-731c7602b229",
+        "practices": [],
+        "prerequisites":[
+            "basics",
+            "bools",
+            "conditionals",
+            "lists",
+            "loops",
+            "numbers",
+            "strings",
+            "string-methods"
+        ],
+        "difficulty": 1,
+        "topics": [
+            "conditionals",
+            "loops",
+            "strings"
+        ]
       }
     ],
     "foregone": [
