@@ -54,7 +54,7 @@
         "name": "Hello World",
         "uuid": "3eeadff6-82b6-43be-8834-d9ef258e454d",
         "practices": ["string","input and output"],
-        "prerequisites": ["baics"],
+        "prerequisites": ["basic"],
         "difficulty": 1
       },
       {
