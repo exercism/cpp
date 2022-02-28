@@ -1,5 +1,9 @@
-#include "isbn_verifier.h"
+#ifdef EXERCISM_TEST_SUITE
+#include <catch2/catch.hpp>
+#else
 #include "test/catch.hpp"
+#endif
+#include "isbn_verifier.h"
 
 TEST_CASE("valid_isbn") { 
     REQUIRE(isbn_verifier::is_valid("3-598-21508-8")); 
@@ -62,7 +66,7 @@ TEST_CASE("input_is_9_characters") {
     REQUIRE_FALSE(isbn_verifier::is_valid("134456729"));
 }
 
-TEST_CASE("invalid characters are not ignored after checking length") {
+TEST_CASE("invalid_characters_are_not_ignored_after_checking_length") {
     REQUIRE_FALSE(isbn_verifier::is_valid("3132P34035"));
 }
 

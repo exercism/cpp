@@ -1,5 +1,5 @@
-#if !defined(EXAMPLE_H)
-#define EXAMPLE_H
+#if !defined(ISBN_VERIFIER_H)
+#define ISBN_VERIFIER_H
 
 #include <string>
 
@@ -7,4 +7,4 @@ namespace isbn_verifier {
     bool is_valid(const std::string& isbn);
 } // namespace isbn_verifier
 
-#endif // EXAMPLE_H
+#endif // ISBN_VERIFIER_H
