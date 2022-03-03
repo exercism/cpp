@@ -1,5 +1,7 @@
 {
-  "authors": [],
+  "authors": [
+    "KevDi"
+  ],
   "files": {
     "solution": [
       "largest_series_product.cpp",
