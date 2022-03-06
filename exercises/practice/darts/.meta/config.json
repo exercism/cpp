@@ -1,0 +1,20 @@
+{
+    "authors": [
+        "KevDi"
+    ],
+  "files": {
+    "solution": [
+      "darts.cpp",
+      "darts.h"
+    ],
+    "test": [
+      "darts_test.cpp"
+    ],
+    "example": [
+      "example.cpp",
+      "example.h"
+    ]
+  },
+  "blurb": "Write a function that returns the earned points in a single toss of a Darts game.",
+  "source": "Inspired by an exercise created by a professor Della Paolera in Argentina"
+}
