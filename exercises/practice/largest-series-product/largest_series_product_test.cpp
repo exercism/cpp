@@ -43,6 +43,10 @@ TEST_CASE("reports_zero_if_all_spans_include_zero") {
     REQUIRE(largest_series_product::largest_product("99099", 3) == 0);
 }
 
+TEST_CASE("rejects_span_longer_than_string_length") {
+    REQUIRE_THROWS_AS(largest_series_product::largest_product("123", 4), std::domain_error);
+}
+
 TEST_CASE("reports_1_for_empty_string_and_empty_product_(0_span)") {
     REQUIRE(largest_series_product::largest_product("",0) == 1);
 }
