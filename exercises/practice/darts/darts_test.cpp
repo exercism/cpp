@@ -8,6 +8,7 @@
 TEST_CASE("Missed_target") {
     REQUIRE(darts::score(-9,9) == 0);
 }
+
 #if defined(EXERCISM_RUN_ALL_TESTS)
 TEST_CASE("On_the_outer_circle") {
     REQUIRE(darts::score(0,10) == 1);
