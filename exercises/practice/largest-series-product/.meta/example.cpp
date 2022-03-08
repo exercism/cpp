@@ -18,7 +18,7 @@ namespace largest_series_product {
             throw std::domain_error("span must be smaller than string length");
         }
 
-        if (!std::regex_match(series, std::regex("^\\d*$"))) {
+        if (!std::regex_match(series, std::regex("\\d*"))) {
             throw std::domain_error("digits input must only contain digits");
         }
 
