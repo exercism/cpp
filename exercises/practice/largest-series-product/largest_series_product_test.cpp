@@ -31,7 +31,7 @@ TEST_CASE("can_find_the_largest_product_of_5_with_numbers_in_order") {
     REQUIRE(largest_series_product::largest_product("0123456789", 5) == 15120);
 }
 
-TEST_CASE("can_find_the_largest_product_of_a_big_number") {
+TEST_CASE("can_get_the_largest_product_of_a_big_number") {
     REQUIRE(largest_series_product::largest_product("73167176531330624919225119674426574742355349194934", 6) == 23520);
 }
 
