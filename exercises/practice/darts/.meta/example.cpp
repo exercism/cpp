@@ -4,13 +4,13 @@
 namespace darts {
 
     int score(float x, float y) {
-        auto dart_location = sqrt(x*x + y*y);
+        auto distance = std::hypot(x,y);
 
-        if (dart_location <= 1.0) {
+        if (distance <= 1.0) {
             return 10;
-        } else if (dart_location <= 5.0) {
+        } else if (distance <= 5.0) {
             return 5;
-        } else if (dart_location <= 10.0) {
+        } else if (distance <= 10.0) {
             return 1;
         } else {
             return 0;
