@@ -1,11 +1,10 @@
- #include "largest_series_product.h"
- #ifdef EXERCISM_TEST_SUITE
- #include <catch2/catch.hpp>
- #else
- #include "test/catch.hpp"
- #endif
+#include "largest_series_product.h"
+#ifdef EXERCISM_TEST_SUITE
+#include <catch2/catch.hpp>
+#else
+#include "test/catch.hpp"
+#endif
 
-// largest-series-product test case data version 1.2.0
 
 TEST_CASE("finds_the_largest_product_if_span_equals_length") {
     REQUIRE(largest_series_product::largest_product("29", 2) == 18);
