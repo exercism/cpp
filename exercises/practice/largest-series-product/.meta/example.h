@@ -5,8 +5,8 @@
 
 namespace largest_series_product {
 
-    int largest_product(const std::string& series, int size);
+    int largest_product(const std::string& digits, int span);
 
-} // largest_series_product
+} // namespace largest_series_product
 
 #endif // LARGEST_SERIES_PRODUCT_H
