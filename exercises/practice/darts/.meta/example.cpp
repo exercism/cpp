@@ -17,4 +17,4 @@ namespace darts {
         }
     }
 
-} //darts
+} // namespace darts
