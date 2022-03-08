@@ -1,4 +1,4 @@
-#include "largest_series_product.h"
+#include "largest_series_test.h"
 #ifdef EXERCISM_TEST_SUITE
 #include <catch2/catch.hpp>
 #else
@@ -48,11 +48,11 @@ TEST_CASE("rejects_span_longer_than_string_length") {
 }
 
 TEST_CASE("reports_1_for_empty_string_and_empty_product_(0_span)") {
-    REQUIRE(largest_series_product::largest_product("",0) == 1);
+    REQUIRE(largest_series_product::largest_product("", 0) == 1);
 }
 
 TEST_CASE("reports_1_for_nonempty_string_and_empty_product_(0_span)") {
-    REQUIRE(largest_series_product::largest_product("123",0) == 1);
+    REQUIRE(largest_series_product::largest_product("123", 0) == 1);
 }
 
 TEST_CASE("rejects_empty_string_and_nonzero_span") {
