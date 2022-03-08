@@ -11,8 +11,8 @@
       "largest_series_product_test.cpp"
     ],
     "example": [
-      "example.cpp",
-      "example.h"
+      ".meta/example.cpp",
+      ".meta/example.h"
     ]
   },
   "blurb": "Given a string of digits, calculate the largest product for a contiguous substring of digits of length n.",
