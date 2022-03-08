@@ -11,8 +11,8 @@
       "darts_test.cpp"
     ],
     "example": [
-      "example.cpp",
-      "example.h"
+      ".meta/example.cpp",
+      ".meta/example.h"
     ]
   },
   "blurb": "Write a function that returns the earned points in a single toss of a Darts game.",
