@@ -11,8 +11,8 @@
       "isbn_verifier_test.cpp"
     ],
     "example": [
-      "example.cpp",
-      "example.h"
+      ".meta/example.cpp",
+      ".meta/example.h"
     ]
   },
   "blurb": "Check if a given string is a valid ISBN-10 number.",
