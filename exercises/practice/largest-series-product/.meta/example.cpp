@@ -14,7 +14,7 @@ namespace largest_series_product {
             throw std::domain_error("span must not be negative");
         }
 
-        if ((int)series.size() < size) {
+        if (series.size() < static_cast<std::size_t>(size)) {
             throw std::domain_error("span must be smaller than string length");
         }
 
