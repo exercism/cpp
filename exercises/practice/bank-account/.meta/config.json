@@ -1,5 +1,7 @@
 {
-  "authors": [],
+    "authors": [
+        "KevDi"
+    ],
   "files": {
     "solution": [
       "bank_account.cpp",
@@ -9,8 +11,8 @@
       "bank_account_test.cpp"
     ],
     "example": [
-      "example.cpp",
-      "example.h"
+      ".meta/example.cpp",
+      ".meta/example.h"
     ]
   },
   "blurb": "Simulate a bank account supporting opening/closing, withdraws, and deposits of money. Watch out for concurrent transactions!"
