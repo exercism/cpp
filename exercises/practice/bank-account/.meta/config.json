@@ -1,0 +1,17 @@
+{
+  "authors": [],
+  "files": {
+    "solution": [
+      "bank_account.cpp",
+      "bank_account.h"
+    ],
+    "test": [
+      "bank_account_test.cpp"
+    ],
+    "example": [
+      "example.cpp",
+      "example.h"
+    ]
+  },
+  "blurb": "Simulate a bank account supporting opening/closing, withdraws, and deposits of money. Watch out for concurrent transactions!"
+}
