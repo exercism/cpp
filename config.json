@@ -721,6 +721,21 @@
           "strings",
           "variables"
         ]
+      },
+      {
+          "slug": "bank-account",
+          "name": "Bank Account",
+          "uuid": "56cbac7e-8bd8-4cd5-bfc5-0bc512e95de0",
+          "practices": [],
+          "prerequisites": [],
+          "difficulty": 8,
+          "topics": [
+              "basics",
+              "classes",
+              "conditionals",
+              "numbers",
+              "threads"
+          ]
       }
     ],
     "foregone": [
