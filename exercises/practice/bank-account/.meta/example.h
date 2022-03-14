@@ -2,16 +2,23 @@
 #define BANK_ACCOUNT_H
 
 #include <cstddef>
+#include <mutex>
 
 class Bankaccount {
    public:
-    void open() const;
-    void deposit(size_t amount);
-    void withdraw(size_t amount);
-    size_t balance() const;
+    void open();
+    void deposit(int amount);
+    void withdraw(int amount);
+    void close();
+    int balance();
 
    private:
-    size_t balance_{0};
+    void check_account_open() const;
+    void check_amount_greater_zero(int amount) const;
+
+    int balance_{0};
+    bool open_{false};
+    std::mutex mutex_{};
 };
 
 #endif  // BANK_ACCOUNT_H
