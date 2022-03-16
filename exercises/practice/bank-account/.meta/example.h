@@ -1,9 +1,9 @@
 #if !defined(BANK_ACCOUNT_H)
 #define BANK_ACCOUNT_H
 
-#include <cstddef>
 #include <mutex>
 
+namespace Bankaccount {
 class Bankaccount {
    public:
     void open();
@@ -20,5 +20,5 @@ class Bankaccount {
     bool open_{false};
     std::mutex mutex_{};
 };
-
+}  // namespace Bankaccount
 #endif  // BANK_ACCOUNT_H
