@@ -62,4 +62,13 @@ TEST_CASE("hyphenated")
     REQUIRE(expected == actual);
 }
 
+TEST_CASE("all_lowercase")
+{
+    const string actual = acronym::acronym("you only live once");
+
+    const string expected{"YOLO"};
+
+    REQUIRE(expected == actual);
+}
+
 #endif
