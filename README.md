@@ -1,4 +1,4 @@
-# C++
+# Exercism C++ Track
 
 Exercism Exercises in C++
 
