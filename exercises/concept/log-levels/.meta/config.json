@@ -8,11 +8,11 @@
   ],
   "files": {
     "solution": [
-      "wine_cellar.cpp",
-      "wine_cellar.h"
+      "log_levels.cpp",
+      "log_levels.h"
     ],
     "test": [
-      "wine_cellar_test.cpp"
+      "log_levels_test.cpp"
     ],
     "exemplar": [
       ".meta/exemplar.cpp",

@@ -38,8 +38,8 @@
   "exercises": {
     "concept": [
       {
-        "slug": "strings",
-        "name": "Strings",
+        "slug": "log-levels",
+        "name": "Log Levels",
         "uuid": "62f945e7-0791-46b7-8161-855183f736ba",
         "concepts": [
           "strings"

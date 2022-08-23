@@ -1,5 +1,5 @@
-#if !defined(WINE_CELLAR_H_)
-#define WINE_CELLAR_H_
+#if !defined(LOG_LEVELS_H_)
+#define LOG_LEVELS_H_
 
 #include <string>
 
