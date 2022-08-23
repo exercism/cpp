@@ -8,11 +8,11 @@
   ],
   "files": {
     "solution": [
-      "strings.cpp",
-      "strings.h"
+      "wine_cellar.cpp",
+      "wine_cellar.h"
     ],
     "test": [
-      "strings_test.cpp"
+      "wine_cellar_test.cpp"
     ],
     "exemplar": [
       ".meta/exemplar.cpp",

@@ -1,5 +1,5 @@
-#if !defined(STRINGS_H_)
-#define STRINGS_H_
+#if !defined(WINE_CELLAR_H_)
+#define WINE_CELLAR_H_
 
 #include <string>
 
