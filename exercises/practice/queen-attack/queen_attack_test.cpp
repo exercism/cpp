@@ -34,6 +34,20 @@ TEST_CASE("queen_positions_must_be_distinct")
     REQUIRE_THROWS_AS((queen_attack::chess_board{pos, pos}), std::domain_error);
 }
 
+TEST_CASE("queen_positions_must_have_valid_row")
+{
+    const auto white = std::make_pair(-3, 7);
+    const auto black = std::make_pair(6, 1);
+    REQUIRE_THROWS_AS((queen_attack::chess_board{white, black}), std::domain_error);
+}
+
+TEST_CASE("queen_positions_must_have_valid_column")
+{
+    const auto white = std::make_pair(3, 7);
+    const auto black = std::make_pair(6, 8);
+    REQUIRE_THROWS_AS((queen_attack::chess_board{white, black}), std::domain_error);
+}
+
 TEST_CASE("string_representation")
 {
     const queen_attack::chess_board board{std::make_pair(2, 4), std::make_pair(6, 6)};
