@@ -83,9 +83,9 @@ TEST_CASE("can_slice_by_3_with_duplicate_digits")
 
 TEST_CASE("can_slice_by_4")
 {
-    const vector<vector<int>> expected{{3, 1, 0}, {1, 0, 0}, {0, 0, 1}};
+    const vector<vector<int>> expected{{3, 1, 0, 0}, {1, 0, 0, 1}};
 
-    const vector<vector<int>> actual{series::slice("31001", 3)};
+    const vector<vector<int>> actual{series::slice("31001", 4)};
 
     REQUIRE(expected == actual);
 }
