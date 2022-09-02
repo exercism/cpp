@@ -8,7 +8,7 @@ row, column, or diagonal.
 
 A chessboard can be represented by an 8 by 8 array.
 
-So if you're told the white queen is at (2, 3) and the black queen at
+So if you're told the black queen is at (2, 3) and the white queen at
 (5, 6), then you'd know you've got a set-up like so:
 
 ```text
