@@ -18,21 +18,21 @@ TEST_CASE("has_no_nucleotides")
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
-TEST_CASE("has_no_adenosine")
+TEST_CASE("has_no_adenine")
 {
     const nucleotide_count::counter dna("");
 
     REQUIRE(0 == dna.count('A'));
 }
 
-TEST_CASE("repetitive_cytidine_gets_counts")
+TEST_CASE("repetitive_cytosine_gets_counts")
 {
     const nucleotide_count::counter dna("CCCCC");
 
     REQUIRE(5 == dna.count('C'));
 }
 
-TEST_CASE("repetitive_sequence_has_only_guanosine")
+TEST_CASE("repetitive_sequence_has_only_guanine")
 {
     const nucleotide_count::counter dna("GGGGGGGG");
     const std::map<char, int> expected{ {'A', 0}, {'T', 0}, {'C', 0}, {'G', 8} };
@@ -42,7 +42,7 @@ TEST_CASE("repetitive_sequence_has_only_guanosine")
     REQUIRE(expected == actual);
 }
 
-TEST_CASE("counts_only_thymidine")
+TEST_CASE("counts_only_thymine")
 {
     const nucleotide_count::counter dna("GGGGTAACCCGG");
 
