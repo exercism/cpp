@@ -4,7 +4,7 @@ Each of us inherits from our biological parents a set of chemical instructions k
 
 > Note: You do not need to understand anything about nucleotides or DNA to complete this exercise.
 
-DNA is a long chain of other chemicals and the most important are the four nucleotides, adenine, cytosine, guanine and thymine. A single DNA chain can contain billions of these four nucleotides and the order in which they occur is important!
+DNA is a long chain of other chemicals and the most important are the four nucleotides: adenine, cytosine, guanine and thymine. A single DNA chain can contain billions of these four nucleotides and the order in which they occur is important!
 We call the order of these nucleotides in a bit of DNA a "DNA sequence".
 
 We represent a DNA sequence as an ordered collection of these four nucleotides and a common way to do that is with a string of characters such as "ATTACG" for a DNA sequence of 6 nucleotides.
