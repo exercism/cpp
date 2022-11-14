@@ -1,12 +1,12 @@
 {
-  "blurb": "Convert a long phrase to its acronym",
   "authors": [
     "chgraef"
   ],
   "contributors": [
     "elyashiv",
     "KevinWMatthews",
-    "patricksjackson"
+    "patricksjackson",
+    "kytrinyx"
   ],
   "files": {
     "solution": [
@@ -21,6 +21,7 @@
       ".meta/example.h"
     ]
   },
+  "blurb": "Convert a long phrase to its acronym.",
   "source": "Julien Vanier",
   "source_url": "https://github.com/monkbroc"
 }
