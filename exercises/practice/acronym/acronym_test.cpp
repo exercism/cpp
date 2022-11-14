@@ -35,15 +35,6 @@ TEST_CASE("punctuation")
     REQUIRE(expected == actual);
 }
 
-TEST_CASE("all_caps_words")
-{
-    const string actual = acronym::acronym("PHP: Hypertext Preprocessor");
-
-    const string expected{"PHP"};
-
-    REQUIRE(expected == actual);
-}
-
 TEST_CASE("non_acronym_all_caps_word")
 {
     const string actual = acronym::acronym("GNU Image Manipulation Program");
