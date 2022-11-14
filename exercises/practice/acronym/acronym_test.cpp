@@ -35,7 +35,7 @@ TEST_CASE("punctuation")
     REQUIRE(expected == actual);
 }
 
-TEST_CASE("non_acronym_all_caps_word")
+TEST_CASE("all_caps_word")
 {
     const string actual = acronym::acronym("GNU Image Manipulation Program");
 
@@ -44,7 +44,7 @@ TEST_CASE("non_acronym_all_caps_word")
     REQUIRE(expected == actual);
 }
 
-TEST_CASE("hyphenated")
+TEST_CASE("punctuation_without_whitespace")
 {
     const string actual = acronym::acronym("Complementary metal-oxide semiconductor");
 
@@ -52,5 +52,4 @@ TEST_CASE("hyphenated")
 
     REQUIRE(expected == actual);
 }
-
 #endif
