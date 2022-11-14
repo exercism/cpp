@@ -5,93 +5,76 @@
 #include "test/catch.hpp"
 #endif
 
-TEST_CASE("one_yields_I")
+TEST_CASE("1_is_i")
 {
     REQUIRE("I" == roman_numerals::convert(1));
 }
-
 #if defined(EXERCISM_RUN_ALL_TESTS)
-TEST_CASE("two_yields_II")
+TEST_CASE("2_is_ii")
 {
     REQUIRE("II" == roman_numerals::convert(2));
 }
-
-TEST_CASE("three_yields_III")
+TEST_CASE("3_is_iii")
 {
     REQUIRE("III" == roman_numerals::convert(3));
 }
-
-TEST_CASE("four_yields_IV")
+TEST_CASE("4_is_iv")
 {
     REQUIRE("IV" == roman_numerals::convert(4));
 }
-
-TEST_CASE("five_yields_V")
+TEST_CASE("5_is_v")
 {
     REQUIRE("V" == roman_numerals::convert(5));
 }
-
-TEST_CASE("six_yields_VI")
+TEST_CASE("6_is_vi")
 {
     REQUIRE("VI" == roman_numerals::convert(6));
 }
-
-TEST_CASE("nine_yields_IX")
+TEST_CASE("9_is_ix")
 {
     REQUIRE("IX" == roman_numerals::convert(9));
 }
-
-TEST_CASE("twenty_seven_yields_XXVII")
+TEST_CASE("27_is_xxvii")
 {
     REQUIRE("XXVII" == roman_numerals::convert(27));
 }
-
-TEST_CASE("forty_eight_yields_XLVIII")
+TEST_CASE("48_is_xlviii")
 {
     REQUIRE("XLVIII" == roman_numerals::convert(48));
 }
-
-TEST_CASE("fifty_nine_yields_LIX")
+TEST_CASE("59_is_lix")
 {
     REQUIRE("LIX" == roman_numerals::convert(59));
 }
-
-TEST_CASE("ninety_three_yields_XCIII")
+TEST_CASE("93_is_xciii")
 {
     REQUIRE("XCIII" == roman_numerals::convert(93));
 }
-
-TEST_CASE("one_hundred_forty_one_yields_CXLI")
+TEST_CASE("141_is_cxli")
 {
     REQUIRE("CXLI" == roman_numerals::convert(141));
 }
-
-TEST_CASE("one_hundred_sixty_three_yields_CLXIII")
+TEST_CASE("163_is_clxiii")
 {
     REQUIRE("CLXIII" == roman_numerals::convert(163));
 }
-
-TEST_CASE("four_hundred_two_yields_CDII")
+TEST_CASE("402_is_cdii")
 {
     REQUIRE("CDII" == roman_numerals::convert(402));
 }
-
-TEST_CASE("five_hundred_seventy_five_yields_DLXXV")
+TEST_CASE("575_is_dlxxv")
 {
     REQUIRE("DLXXV" == roman_numerals::convert(575));
 }
-
-TEST_CASE("nine_hundred_eleven_yields_CMXI")
+TEST_CASE("911_is_cmxi")
 {
     REQUIRE("CMXI" == roman_numerals::convert(911));
 }
-
-TEST_CASE("one_thousand_twenty_four_yields_MXXIV")
+TEST_CASE("1024_is_mxxiv")
 {
     REQUIRE("MXXIV" == roman_numerals::convert(1024));
 }
-
-TEST_CASE("three_thousand_yields_MMM")
+TEST_CASE("3000_is_mmm")
 {
     REQUIRE("MMM" == roman_numerals::convert(3000));
 }
