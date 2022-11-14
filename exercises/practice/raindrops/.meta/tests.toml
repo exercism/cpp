@@ -1,6 +1,13 @@
-# This is an auto-generated file. Regular comments will be removed when this
-# file is regenerated. Regenerating will not touch any manually added keys,
-# so comments can be added in a "comment" key.
+# This is an auto-generated file.
+#
+# Regenerating this file via `configlet sync` will:
+# - Recreate every `description` key/value pair
+# - Recreate every `reimplements` key/value pair, where they exist in problem-specifications
+# - Remove any `include = true` key/value pair (an omitted `include` key implies inclusion)
+# - Preserve any other key/value pair
+#
+# As user-added comments (using the # character) will be removed when this file
+# is regenerated, comments can be added via a `comment` key.
 
 [1575d549-e502-46d4-a8e1-6b7bec6123d8]
 description = "the sound for 1 is 1"
@@ -16,6 +23,9 @@ description = "the sound for 7 is Plong"
 
 [6bb4947b-a724-430c-923f-f0dc3d62e56a]
 description = "the sound for 6 is Pling as it has a factor 3"
+
+[ce51e0e8-d9d4-446d-9949-96eac4458c2d]
+description = "2 to the power 3 does not make a raindrop sound as 3 is the exponent not the base"
 
 [0dd66175-e3e2-47fc-8750-d01739856671]
 description = "the sound for 9 is Pling as it has a factor 3"
@@ -35,6 +45,9 @@ description = "the sound for 21 is PlingPlong as it has factors 3 and 7"
 [d2e75317-b72e-40ab-8a64-6734a21dece1]
 description = "the sound for 25 is Plang as it has a factor 5"
 
+[a09c4c58-c662-4e32-97fe-f1501ef7125c]
+description = "the sound for 27 is Pling as it has a factor 3"
+
 [bdf061de-8564-4899-a843-14b48b722789]
 description = "the sound for 35 is PlangPlong as it has factors 5 and 7"
 
@@ -46,3 +59,6 @@ description = "the sound for 52 is 52"
 
 [e46677ed-ff1a-419f-a740-5c713d2830e4]
 description = "the sound for 105 is PlingPlangPlong as it has factors 3, 5 and 7"
+
+[13c6837a-0fcd-4b86-a0eb-20572f7deb0b]
+description = "the sound for 3125 is Plang as it has a factor 5"
