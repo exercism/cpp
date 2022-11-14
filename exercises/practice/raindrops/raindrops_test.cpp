@@ -80,9 +80,4 @@ TEST_CASE("one_hundred_five_yields_plingplangplong")
 {
     REQUIRE("PlingPlangPlong" == raindrops::convert(105));
 }
-
-TEST_CASE("big_prime_yields_itself")
-{
-    REQUIRE("12121" == raindrops::convert(12121));
-}
 #endif
