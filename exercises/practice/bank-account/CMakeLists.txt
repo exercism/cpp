@@ -41,6 +41,10 @@ set_target_properties(${exercise} PROPERTIES
     CXX_EXTENSIONS OFF
 )
 
+find_package(Threads REQUIRED)
+
+target_link_libraries(${exercise} PRIVATE Threads::Threads)
+
 set(CMAKE_BUILD_TYPE Debug)
 
 if("${CMAKE_CXX_COMPILER_ID}" MATCHES "(GNU|Clang)")
