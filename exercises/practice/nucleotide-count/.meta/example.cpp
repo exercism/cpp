@@ -16,13 +16,4 @@ counter::counter(std::string const& sequence)
     }
 }
 
-int counter::count(char nucleotide) const
-{
-    const auto it = counts_.find(nucleotide);
-    if (it == counts_.end()) {
-        throw std::invalid_argument("Unknown nucleotide");
-    }
-    return it->second;
-}
-
 }
