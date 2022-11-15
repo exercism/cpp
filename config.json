@@ -723,6 +723,22 @@
         ]
       },
       {
+        "slug": "largest-series-product",
+        "name": "Largest Series Product",
+        "uuid": "bf25f471-20d9-4f41-abf7-5d0dc5ad2d87",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": [
+            "bools",
+            "conditionals",
+            "lists",
+            "loops",
+            "numbers",
+            "strings"
+        ]
+      },
+      {
         "slug": "isbn-verifier",
         "name": "Isbn Verifier",
         "uuid": "5fcc6fd8-1dc7-4493-970a-731c7602b229",
