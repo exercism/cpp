@@ -19,6 +19,16 @@ TEST_CASE("empty_strand")
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
 
+TEST_CASE("can_count_one_nucleotide_in_single_character_input")
+{
+    const nucleotide_count::counter dna("G");
+    const std::map<char, int> expected{ {'A', 0}, {'C', 0}, {'G', 1}, {'T', 0} };
+
+    const auto actual = dna.nucleotide_counts();
+
+    REQUIRE(expected == actual);
+}
+
 TEST_CASE("strand_with_repeated_nucleotide")
 {
     const nucleotide_count::counter dna("GGGGGGG");
