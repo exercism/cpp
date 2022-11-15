@@ -1,7 +1,7 @@
 {
-    "authors": [
-        "KevDi"
-    ],
+  "authors": [
+    "KevDi"
+  ],
   "files": {
     "solution": [
       "bank_account.cpp",
