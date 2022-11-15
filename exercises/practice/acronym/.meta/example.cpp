@@ -7,7 +7,7 @@ namespace acronym {
 
 string acronym(string const &input_str) {
     string acronym_str;
-    string delimiters = " :-,";
+    string delimiters = " :-,_";
     enum DelimiterState { NOT_FOUND, FOUND };
     DelimiterState delimiter_state = FOUND;
     for (char c : input_str) {

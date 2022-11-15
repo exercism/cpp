@@ -35,16 +35,7 @@ TEST_CASE("punctuation")
     REQUIRE(expected == actual);
 }
 
-TEST_CASE("all_caps_words")
-{
-    const string actual = acronym::acronym("PHP: Hypertext Preprocessor");
-
-    const string expected{"PHP"};
-
-    REQUIRE(expected == actual);
-}
-
-TEST_CASE("non_acronym_all_caps_word")
+TEST_CASE("all_caps_word")
 {
     const string actual = acronym::acronym("GNU Image Manipulation Program");
 
@@ -53,7 +44,7 @@ TEST_CASE("non_acronym_all_caps_word")
     REQUIRE(expected == actual);
 }
 
-TEST_CASE("hyphenated")
+TEST_CASE("punctuation_without_whitespace")
 {
     const string actual = acronym::acronym("Complementary metal-oxide semiconductor");
 
@@ -62,4 +53,39 @@ TEST_CASE("hyphenated")
     REQUIRE(expected == actual);
 }
 
+TEST_CASE("very_long_abbreviation")
+{
+    const string actual = acronym::acronym("Rolling On The Floor Laughing So Hard That My Dogs Came Over And Licked Me");
+
+    const string expected{"ROTFLSHTMDCOALM"};
+
+    REQUIRE(expected == actual);
+}
+
+TEST_CASE("consecutive_delimiters")
+{
+    const string actual = acronym::acronym("Something - I made up from thin air");
+
+    const string expected{"SIMUFTA"};
+
+    REQUIRE(expected == actual);
+}
+
+TEST_CASE("apostrophes")
+{
+    const string actual = acronym::acronym("Halley's Comet");
+
+    const string expected{"HC"};
+
+    REQUIRE(expected == actual);
+}
+
+TEST_CASE("underscore_emphasis")
+{
+    const string actual = acronym::acronym("The Road _Not_ Taken");
+
+    const string expected{"TRNT"};
+
+    REQUIRE(expected == actual);
+}
 #endif
