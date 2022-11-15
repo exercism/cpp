@@ -28,11 +28,6 @@ TEST_CASE("repetitive_sequence_has_only_guanosine")
     REQUIRE(expected == actual);
 }
 
-TEST_CASE("validates_nucleotides_on_construction")
-{
-    REQUIRE_THROWS_AS(nucleotide_count::counter("GGTTGGX"), std::invalid_argument);
-}
-
 TEST_CASE("counts_all_nucleotides")
 {
     const nucleotide_count::counter dna("AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC");
@@ -41,5 +36,10 @@ TEST_CASE("counts_all_nucleotides")
     auto actual = dna.nucleotide_counts();
 
     REQUIRE(expected == actual);
+}
+
+TEST_CASE("validates_nucleotides_on_construction")
+{
+    REQUIRE_THROWS_AS(nucleotide_count::counter("GGTTGGX"), std::invalid_argument);
 }
 #endif
