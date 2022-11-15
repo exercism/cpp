@@ -723,6 +723,20 @@
         ]
       },
       {
+        "slug": "darts",
+        "name": "Darts",
+        "uuid": "e8ad3859-9999-4a36-900d-d82fa6e74b08",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": [
+            "basics",
+            "bools",
+            "conditionals",
+            "numbers"
+        ]
+      },
+      {
         "slug": "largest-series-product",
         "name": "Largest Series Product",
         "uuid": "bf25f471-20d9-4f41-abf7-5d0dc5ad2d87",
