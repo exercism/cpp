@@ -190,7 +190,7 @@
       },
       {
         "slug": "rna-transcription",
-        "name": "Rna Transcription",
+        "name": "RNA Transcription",
         "uuid": "2fbd008c-5007-4403-ae71-f4d1f5ccaf8f",
         "practices": [],
         "prerequisites": [],
@@ -213,7 +213,7 @@
       },
       {
         "slug": "difference-of-squares",
-        "name": "Difference Of Squares",
+        "name": "Difference of Squares",
         "uuid": "46cb230c-8ce9-431d-9dea-a195a3abd117",
         "practices": [],
         "prerequisites": [],
@@ -322,7 +322,7 @@
       },
       {
         "slug": "sum-of-multiples",
-        "name": "Sum Of Multiples",
+        "name": "Sum of Multiples",
         "uuid": "a190ad11-db1c-4624-a477-e1d0c91d8b4f",
         "practices": [],
         "prerequisites": [],
@@ -546,7 +546,7 @@
       },
       {
         "slug": "etl",
-        "name": "Etl",
+        "name": "ETL",
         "uuid": "0dd45f6a-c6cd-4549-a56b-7babe0a71add",
         "practices": [],
         "prerequisites": [],
@@ -670,7 +670,7 @@
       },
       {
         "slug": "pascals-triangle",
-        "name": "Pascals Triangle",
+        "name": "Pascal's Triangle",
         "uuid": "7ed4434a-3564-4194-b91a-d3baeec9c519",
         "practices": [],
         "prerequisites": [],
@@ -723,28 +723,41 @@
         ]
       },
       {
-          "slug": "largest-series-product",
-          "name": "Largest Series Product",
-          "uuid": "bf25f471-20d9-4f41-abf7-5d0dc5ad2d87",
-          "practices": [],
-          "prerequisites": [
-              "basics",
-              "bools",
-              "conditionals",
-              "lists",
-              "loops",
-              "numbers",
-              "strings"
-          ],
-          "difficulty": 4,
-          "topics": [
-              "bools",
-              "conditionals",
-              "lists",
-              "loops",
-              "numbers",
-              "strings"
-          ]
+        "slug": "largest-series-product",
+        "name": "Largest Series Product",
+        "uuid": "bf25f471-20d9-4f41-abf7-5d0dc5ad2d87",
+        "practices": [],
+        "prerequisites": [
+            "basics",
+            "bools",
+            "conditionals",
+            "lists",
+            "loops",
+            "numbers",
+            "strings"
+        ],
+        "difficulty": 4,
+        "topics": [
+            "bools",
+            "conditionals",
+            "lists",
+            "loops",
+            "numbers",
+            "strings"
+        ]
+      },
+      {
+        "slug": "isbn-verifier",
+        "name": "Isbn Verifier",
+        "uuid": "5fcc6fd8-1dc7-4493-970a-731c7602b229",
+        "practices": [],
+        "prerequisites":[],
+        "difficulty": 1,
+        "topics": [
+          "conditionals",
+          "loops",
+          "strings"
+        ]
       }
     ],
     "foregone": [
