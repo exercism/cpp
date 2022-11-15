@@ -1,4 +1,4 @@
-#include "example.h"
+#include "largest_series_product.h"
 #include <numeric>
 #include <algorithm>
 #include <stdexcept>

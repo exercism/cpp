@@ -2,6 +2,9 @@
   "authors": [
     "KevDi"
   ],
+  "contributors": [
+    "kytrinyx"
+  ],
   "files": {
     "solution": [
       "largest_series_product.cpp",
