@@ -11,6 +11,10 @@
   description: ""
   color: "fc2929"
 
+- name: "on-hold"
+  description: ""
+  color: "cccccc"
+
 - name: "dependencies"
   description: "Pull requests that update a dependency file"
   color: "0366d6"
