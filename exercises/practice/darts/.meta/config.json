@@ -1,7 +1,10 @@
 {
-    "authors": [
-        "KevDi"
-    ],
+  "authors": [
+    "KevDi"
+  ],
+  "contributors": [
+    "kytrinyx"
+  ],
   "files": {
     "solution": [
       "darts.cpp",
