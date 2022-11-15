@@ -28,6 +28,11 @@ TEST_CASE("check_digit_is_a_character_other_than_x")
     REQUIRE_FALSE(isbn_verifier::is_valid("3-598-21507-A"));
 }
 
+TEST_CASE("invalid_check_digit_in_isbn_is_not_treated_as_zero")
+{
+    REQUIRE_FALSE(isbn_verifier::is_valid("4-598-21507-B"));
+}
+
 TEST_CASE("invalid_character_in_isbn_is_not_treated_as_zero")
 {
     REQUIRE_FALSE(isbn_verifier::is_valid("3-598-P1581-X"));
