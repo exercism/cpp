@@ -7,10 +7,10 @@
 #include <map>
 #include <stdexcept>
 
-TEST_CASE("has_no_nucleotides")
+TEST_CASE("empty_strand")
 {
     const nucleotide_count::counter dna("");
-    const std::map<char, int> expected{ {'A', 0}, {'T', 0}, {'C', 0}, {'G', 0} };
+    const std::map<char, int> expected{ {'A', 0}, {'C', 0}, {'G', 0}, {'T', 0} };
 
     const auto actual = dna.nucleotide_counts();
 
@@ -18,28 +18,29 @@ TEST_CASE("has_no_nucleotides")
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
-TEST_CASE("repetitive_sequence_has_only_guanosine")
+
+TEST_CASE("strand_with_repeated_nucleotide")
 {
-    const nucleotide_count::counter dna("GGGGGGGG");
-    const std::map<char, int> expected{ {'A', 0}, {'T', 0}, {'C', 0}, {'G', 8} };
+    const nucleotide_count::counter dna("GGGGGGG");
+    const std::map<char, int> expected{ {'A', 0}, {'C', 0}, {'G', 7}, {'T', 0} };
 
     const auto actual = dna.nucleotide_counts();
 
     REQUIRE(expected == actual);
 }
 
-TEST_CASE("counts_all_nucleotides")
+TEST_CASE("strand_with_multiple_nucleotides")
 {
     const nucleotide_count::counter dna("AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC");
-    std::map<char, int> expected{ {'A', 20}, {'T', 21}, {'G', 17}, {'C', 12} };
+    const std::map<char, int> expected{ {'A', 20}, {'C', 12}, {'G', 17}, {'T', 21} };
 
-    auto actual = dna.nucleotide_counts();
+    const auto actual = dna.nucleotide_counts();
 
     REQUIRE(expected == actual);
 }
 
-TEST_CASE("validates_nucleotides_on_construction")
+TEST_CASE("strand_with_invalid_nucleotides")
 {
-    REQUIRE_THROWS_AS(nucleotide_count::counter("GGTTGGX"), std::invalid_argument);
+    REQUIRE_THROWS_AS(nucleotide_count::counter("AGXXACT"), std::invalid_argument);
 }
 #endif
