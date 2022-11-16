@@ -8,11 +8,11 @@
   ],
   "files": {
     "solution": [
-      "strings.cpp",
-      "strings.h"
+      "log_levels.cpp",
+      "log_levels.h"
     ],
     "test": [
-      "strings_test.cpp"
+      "log_levels_test.cpp"
     ],
     "exemplar": [
       ".meta/exemplar.cpp",

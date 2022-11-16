@@ -1,5 +1,5 @@
-#if !defined(STRINGS_H_)
-#define STRINGS_H_
+#if !defined(LOG_LEVELS_H_)
+#define LOG_LEVELS_H_
 
 #include <string>
 
