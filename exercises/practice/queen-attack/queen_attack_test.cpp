@@ -5,104 +5,104 @@
 #include "test/catch.hpp"
 #endif
 
-TEST_CASE("queens_in_default_positions")
-{
-    const queen_attack::chess_board board;
 
-    REQUIRE(std::make_pair(0, 3).first == board.white().first);
-    REQUIRE(std::make_pair(0, 3).second == board.white().second);
-    REQUIRE(std::make_pair(7, 3).first == board.black().first);
-    REQUIRE(std::make_pair(7, 3).second == board.black().second);
+TEST_CASE("newly_placed_queen_with_a_valid_position")
+{
+    const auto white = std::make_pair(2, 2);
+    const auto black = std::make_pair(0, 3);
+
+    const queen_attack::chess_board board{white, black};
+
+    REQUIRE(white == board.white());
+    REQUIRE(black == board.black());
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
-TEST_CASE("initialized_with_specific_positions")
+TEST_CASE("newly_placed_queen_must_have_positive_row")
 {
-    const auto white = std::make_pair(3, 7);
-    const auto black = std::make_pair(6, 1);
-    const queen_attack::chess_board board{white, black};
+    const auto white = std::make_pair(-2, 2);
+    const auto black = std::make_pair(0, 3);
 
-    REQUIRE(white.first == board.white().first);
-    REQUIRE(white.second == board.white().second);
-    REQUIRE(black.first == board.black().first);
-    REQUIRE(black.second == board.black().second);
+    REQUIRE_THROWS_AS((queen_attack::chess_board{white, black}), std::domain_error);
 }
 
-TEST_CASE("queen_positions_must_be_distinct")
+TEST_CASE("newly_placed_queen_must_have_row_on_board")
 {
-    const auto pos = std::make_pair(3, 7);
-    REQUIRE_THROWS_AS((queen_attack::chess_board{pos, pos}), std::domain_error);
+    const auto white = std::make_pair(8, 4);
+    const auto black = std::make_pair(0, 3);
+
+    REQUIRE_THROWS_AS((queen_attack::chess_board{white, black}), std::domain_error);
 }
 
-TEST_CASE("string_representation")
+TEST_CASE("newly_placed_queen_must_have_positive_column")
 {
-    const queen_attack::chess_board board{std::make_pair(2, 4), std::make_pair(6, 6)};
+    const auto white = std::make_pair(2, -2);
+    const auto black = std::make_pair(0, 3);
 
-    const std::string expected{
-        "_ _ _ _ _ _ _ _\n"
-        "_ _ _ _ _ _ _ _\n"
-        "_ _ _ _ W _ _ _\n"
-        "_ _ _ _ _ _ _ _\n"
-        "_ _ _ _ _ _ _ _\n"
-        "_ _ _ _ _ _ _ _\n"
-        "_ _ _ _ _ _ B _\n"
-        "_ _ _ _ _ _ _ _\n"};
-    REQUIRE(expected == static_cast<std::string>(board));
+    REQUIRE_THROWS_AS((queen_attack::chess_board{white, black}), std::domain_error);
+}
+
+TEST_CASE("newly_placed_queen_must_have_column_on_board")
+{
+    const auto white = std::make_pair(4, 8);
+    const auto black = std::make_pair(0, 3);
+
+    REQUIRE_THROWS_AS((queen_attack::chess_board{white, black}), std::domain_error);
 }
 
 TEST_CASE("queens_cannot_attack")
 {
-    const queen_attack::chess_board board{std::make_pair(2, 3), std::make_pair(4, 7)};
+    const queen_attack::chess_board board{std::make_pair(2, 4), std::make_pair(6, 6)};
 
-    REQUIRE(!board.can_attack());
+    REQUIRE_FALSE(board.can_attack());
 }
 
-TEST_CASE("queens_can_attack_when_they_are_on_the_same_row")
+TEST_CASE("queens_can_attack_on_same_row")
 {
-    const queen_attack::chess_board board{std::make_pair(2, 4), std::make_pair(2, 7)};
+    const queen_attack::chess_board board{std::make_pair(2, 4), std::make_pair(2, 6)};
 
     REQUIRE(board.can_attack());
 }
 
-TEST_CASE("queens_can_attack_when_they_are_on_the_same_column")
+TEST_CASE("queens_can_attack_on_same_column")
 {
-    const queen_attack::chess_board board{std::make_pair(5, 4), std::make_pair(2, 4)};
+    const queen_attack::chess_board board{std::make_pair(4, 5), std::make_pair(2, 5)};
 
     REQUIRE(board.can_attack());
 }
 
-TEST_CASE("queens_can_attack_diagonally")
+TEST_CASE("queens_can_attack_on_first_diagonal")
 {
-    const queen_attack::chess_board board{std::make_pair(1, 1), std::make_pair(6, 6)};
+    const queen_attack::chess_board board{std::make_pair(2, 2), std::make_pair(0, 4)};
 
     REQUIRE(board.can_attack());
 }
 
-TEST_CASE("queens_can_attack_another_diagonally")
+TEST_CASE("queens_can_attack_on_second_diagonal")
 {
-    const queen_attack::chess_board board{std::make_pair(0, 6), std::make_pair(1, 7)};
+    const queen_attack::chess_board board{std::make_pair(2, 2), std::make_pair(3, 1)};
 
     REQUIRE(board.can_attack());
 }
 
-TEST_CASE("queens_can_attack_yet_another_diagonally")
+TEST_CASE("queens_can_attack_on_third_diagonal")
 {
-    const queen_attack::chess_board board{std::make_pair(4, 1), std::make_pair(6, 3)};
+    const queen_attack::chess_board board{std::make_pair(2, 2), std::make_pair(1, 1)};
 
     REQUIRE(board.can_attack());
 }
 
-TEST_CASE("queens_can_attack_on_the_nw_so_diagonal")
+TEST_CASE("queens_can_attack_on_fourth_diagonal")
 {
-    const queen_attack::chess_board board{std::make_pair(1, 6), std::make_pair(6, 1)};
+    const queen_attack::chess_board board{std::make_pair(1, 7), std::make_pair(0, 6)};
 
     REQUIRE(board.can_attack());
 }
 
-TEST_CASE("queens_cannot_attack_if_not_on_same_row_column_or_diagonal")
+TEST_CASE("queens_cannot_attack_if_falling_diagonals_are_only_the_same_when_reflected_across_the_longest_falling_diagonal")
 {
-    const queen_attack::chess_board board{std::make_pair(1, 1), std::make_pair(3, 7)};
+    const queen_attack::chess_board board{std::make_pair(4, 1), std::make_pair(2, 5)};
 
-    REQUIRE(!board.can_attack());
+    REQUIRE_FALSE(board.can_attack());
 }
 #endif

@@ -13,6 +13,12 @@ chess_board::chess_board(const std::pair<int, int>& white, const std::pair<int, 
     if (white == black) {
         throw std::domain_error("Both queens cannot occupy the same position.");
     }
+    if (white.first < 0 || white.second < 0 || black.first < 0 || black.second < 0) {
+        throw std::domain_error("Both queens must be placed on the board.");
+    }
+    if (white.first > 7 || white.second > 7 || black.first > 7 || black.second > 7) {
+        throw std::domain_error("Both queens must be placed on the board.");
+    }
 }
 
 chess_board::operator std::string() const
