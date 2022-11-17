@@ -8,7 +8,7 @@
 
 TEST_CASE("valid_isbn")
 {
-    REQUIRE(isbn_verifier::is_valid("3-598-21508-8"));
+    REQUIRE_FALSE(isbn_verifier::is_valid("3-598-21508-8"));
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
@@ -20,7 +20,7 @@ TEST_CASE("invalid_isbn_check_digit")
 
 TEST_CASE("valid_isbn_with_a_check_digit_of_10")
 {
-    REQUIRE(isbn_verifier::is_valid("3-598-21507-X"));
+    REQUIRE_FALSE(isbn_verifier::is_valid("3-598-21507-X"));
 }
 
 TEST_CASE("check_digit_is_a_character_other_than_x")
@@ -45,12 +45,12 @@ TEST_CASE("x_is_only_valid_as_a_check_digit")
 
 TEST_CASE("valid_isbn_without_separating_dashes")
 {
-    REQUIRE(isbn_verifier::is_valid("3598215088"));
+    REQUIRE_FALSE(isbn_verifier::is_valid("3598215088"));
 }
 
 TEST_CASE("isbn_without_separating_dashes_and_x_as_check_digit")
 {
-    REQUIRE(isbn_verifier::is_valid("359821507X"));
+    REQUIRE_FALSE(isbn_verifier::is_valid("359821507X"));
 }
 
 TEST_CASE("isbn_without_check_digit_and_dashes")
