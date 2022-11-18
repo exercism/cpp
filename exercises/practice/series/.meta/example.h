@@ -7,9 +7,9 @@
 namespace series
 {
 
-std::vector<int> digits(std::string const& sequence);
+std::string digits(const std::string &input);
 
-std::vector<std::vector<int>> slice(std::string const& sequence, int span);
+std::vector<std::string> slice(const std::string &input, size_t window);
 
 }
 
