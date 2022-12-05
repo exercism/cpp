@@ -7,7 +7,7 @@ namespace hello_world
 
 string hello()
 {
-    return "Goodbye, Mars!";
+    return "Hello, World!";
 }
 
 }
