@@ -2,7 +2,7 @@
 
 namespace lasagna_master {
     // ovenTime returns the amount in minutes that the lasagna should stay in the oven.
-    int lasagna::ovenTime() {
+    int Lasagna::ovenTime() {
         // TODO: Return the correct time.
         return 0;
     }
@@ -10,20 +10,20 @@ namespace lasagna_master {
     /* PreparationTim estimates the preparation time based on the number
         of layers and an average time per layer and returns it.
     */
-    int lasagna::preparationTime(int numberOfLayers) {
+    int Lasagna::preparationTime(int numberOfLayers) {
         // TODO: Calculate and return the preparation time with the `numberOfLayers`.
         return 0; }
 
     /* RemainingOvenTime returns the remaining
     minutes based on the actual minutes already in the oven.
     */
-    int lasagna::remainingOvenTime(int actualMinutesInOven) {
-        // TODO: Calculate and return the remaining in the oven based on the time `actualMinutesInOven` the lasagna has already spend there.
+    int Lasagna::remainingOvenTime(int actualMinutesInOven) {
+        // TODO: Calculate and return the remaining in the oven based on the time `actualMinutesInOven` the Lasagna has already spend there.
         return 0;
         }
 
     // ElapsedTime calculates the total time spend to create and bake the lasagna so far.
-    int lasagna::elapsedTime(int numberOfLayers, int actualMinutesInOven) {
+    int Lasagna::elapsedTime(int numberOfLayers, int actualMinutesInOven) {
         // TODO: Calculate and return the time total time so far.
         return 0;
         }

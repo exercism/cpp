@@ -8,7 +8,7 @@
 
 
 namespace lasagna_master {
-    class lasagna {
+    class Lasagna {
         public:
             static int ovenTime();
             static int preparationTime(int numberOfLayers);
