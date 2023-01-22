@@ -1,0 +1,22 @@
+{
+  "blurb": "TODO: add blurb for lasagna exercise",
+  "authors": [
+    "vaeng"
+  ],
+  "forked_from": [
+    "go/lasagna"
+  ],
+  "files": {
+    "solution": [
+      "lasagna_master.cpp",
+      "lasagna_master.h"
+    ],
+    "test": [
+      "lasagna_master_test.cpp"
+    ],
+    "exemplar": [
+      ".meta/exemplar.cpp",
+      ".meta/exemplar.h"
+    ]
+  }
+}
