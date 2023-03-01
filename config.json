@@ -779,6 +779,20 @@
           "loops",
           "strings"
         ]
+      },
+      {
+        "slug": "linked-list",
+        "name": "Linked List ",
+        "uuid": "6f6c55dd-db6b-40ca-96f2-d9b7232dcbb0",
+        "practices": [],
+        "prerequisites":[],
+        "difficulty": 1,
+        "status": "wip",
+        "topics": [ 
+          "conditionals",
+          "loops",
+          "pointers"
+        ]
       }
     ],
     "foregone": [
