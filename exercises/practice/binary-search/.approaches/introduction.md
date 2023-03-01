@@ -10,6 +10,7 @@ One approach can use a `while` loop with `if` statements.
 #include <stdexcept>
 
 namespace binary_search {
+
     std::size_t find (const std::vector<int> data, int value) {
         size_t left = 0, right = data.size(), mid = 0;
         
