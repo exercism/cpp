@@ -23,7 +23,7 @@ namespace binary_search {
 ```
 
 The `find` function starts by defining the variables that control iterating to the answer.
-The `left` is initialized to `0` and the `right` is initialized to the [size][size] of the [vector][vector] of `int`s passed in.
+The `left` is initialized to `0` and the `right` is initialized to the [size][size] of the [`vector`][vector] of `int`s passed in.
 The middle value is initialized to `0`.
 
 The [`while` loop][while] iterates while `left` is less than `right`.
@@ -32,7 +32,7 @@ Inside the loop, the middle value is set by `left` plus `right` divided by `2`.
 For example, if `left` is `0` and `right` is `10`, then the middle is calculated to `5`.
 if `left` is `6` and `right` is `10`, then the middle is calculated to `8`.
 
-An [`if` statement][if] is used to check the value of the element whose index in the vector of `int`s is the middle value.
+An [`if` statement][if] is used to check the value of the element whose index in the `vector` of `int`s is the middle value.
 If the element at the index of the middle value matches the value being searched for, then the middle value is returned.
 
 If the first `if` statement does not return, then another `if` statement is used to check the element.
@@ -50,7 +50,7 @@ Otherwise, the value being searched for must be less than the element at the ind
 so that the next iteration will look at lower numbers.
 
 If `left` and `right` are changed during the iterations so that `left` is no longer less than `right`,
-then the value being searched for is not in the vector of `int`s.
+then the value being searched for is not in the `vector` of `int`s.
 The loop exits and a [std::domain_error][domain-error] is returned from the function.
 
 [size]: https://en.cppreference.com/w/cpp/container/vector/size
