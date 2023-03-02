@@ -25,7 +25,7 @@ namespace sieve {
 		for (int number = 2; number <= limit; number++) {
 			if (!composite[number]) {
 				primes.emplace_back(number);
-				for(int idx = number + number; idx <= limit; idx +=number)
+				for(int idx = number * number; idx <= limit; idx +=number)
 					composite[idx] = true;
 			}
 		}
@@ -42,7 +42,7 @@ Since values less than `2` are not prime, the iteration of the outer [`for` loop
 If the number being iterated is not a composite number, then the [`emplace_back`][emplace-back] method is used to append the number being iterated
 to the output `vector`.
 
-Since any number evenly divisible by that prime is not prime, the inner `for` loop iterates from the prime plus itself, setting each of the
+Since any number evenly divisible by that prime is not prime, the inner `for` loop iterates from the prime times itself, setting each of the
 elements at that index to `true` for being a composite number.
 
 After the outer loop is done, the `vector` of primes is returned.
