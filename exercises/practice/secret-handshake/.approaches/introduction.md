@@ -1,7 +1,7 @@
 # Introduction
 
 There are many ways to solve Secret Handshake.
-One general approach is to use a series of `if` statements and then use [`reverse()`][reverse] if needed.
+One general approach is to go through a series of `if` statements and then use [`reverse()`][reverse] if needed.
 Another general approach is to iterate once even if the actions are meant to be reversed.
 
 ## Approach: `if` statements with `reverse()`
