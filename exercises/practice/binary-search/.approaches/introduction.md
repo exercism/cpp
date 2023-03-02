@@ -24,9 +24,9 @@ namespace binary_search {
 
 namespace binary_search {
     std::size_t find (const std::vector<int>& data, int value) {
-        size_t left = 0, right = data.size();
+        std::size_t left = 0, right = data.size();
         while (left < right) {
-            size_t mid = left + ((right - left) / 2);
+            std::size_t mid = left + ((right - left) / 2);
             int look = data[mid];
             if (look == value) return mid;
             if (look < value) left = mid + 1;
