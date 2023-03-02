@@ -1,0 +1,70 @@
+# Iterate once
+
+**secret_handshake.h**
+```cpp
+#if !defined(SECRET_HANDSHAKE_H)
+#define SECRET_HANDSHAKE_H
+#include <vector>
+#include <string>
+
+namespace secret_handshake {
+    std::vector<std::string> commands (unsigned int signal);
+}  // namespace secret_handshake
+
+#endif // SECRET_HANDSHAKE_H
+```
+
+**secret_handshake.cpp**
+```cpp
+#include "secret_handshake.h"
+
+namespace {
+    const std::vector<std::string> actions = {
+        "wink",
+        "double blink",
+        "close your eyes",
+        "jump",
+    };
+    const unsigned int REVERSE = 16;
+}
+
+namespace secret_handshake {
+    std::vector<std::string> commands (unsigned int signal) {
+        std::vector<std::string> output;
+        int action = 0, action_incr = 1, end = actions.size();
+        if (signal & REVERSE) {action = actions.size() - 1; action_incr = -1; end = -1;}        
+            
+        for (; action != end; action+=action_incr)
+            if (signal & (1 << action))
+                output.emplace_back(actions[action]);
+        return output;
+    }
+}  // namespace secret_handshake
+```
+
+This approach starts by defining a [`const`][const] `vector` tohold the action values in their normal order.
+The value of `16` is defined as a `const` with a meaningful name so it won't be used as a [magic number][magic-number].
+
+Variables are defined that control iterating through the actions `vector`, setting their values to iterate in the normal order.
+
+The [bitwise AND operator][bitwise-operators] is used to check if the input signal contains the action for reversing the order of the other actions.
+
+For example, if the number passed in is `19`, which is `10011` in binary, then it is ANDed with `16`, which is `10000` in binary.
+The `1` in `10000` is also at the same position in `10011`, so the two values ANDed will not be `0`.
+- `10011` AND
+- `10000` =
+- `10000`
+
+If the number passed in is `3`, which is `00011` in binary, then it is ANDed with `16`, which is `10000` in binary.
+The `1` in `10000` is not at the same position in `00011`, so the two values ANDed will be `0`.
+- `00011` AND
+- `10000` =
+- `00000`
+
+If the signal passed in contains the action for reverse, then the iteration variables are set to iterate backwards through the `vector` of actions.
+
+TODO
+
+[const]: https://en.cppreference.com/w/cpp/language/cv
+[magic-number]: https://en.wikipedia.org/wiki/Magic_number_(programming)
+[bitwise-operators-: https://www.geeksforgeeks.org/bitwise-operators-in-c-cpp/
