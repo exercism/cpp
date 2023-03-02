@@ -12,7 +12,7 @@ One approach can use a `while` loop with `if` statements.
 #include <vector>
 #include <cstddef>
 namespace binary_search {
-    std::size_t find (const std::vector<int> data, int value);
+    std::size_t find (const std::vector<int>& data, int value);
 }  // namespace binary_search
 #endif // BINARY_SEARCH_H
 ```
@@ -23,18 +23,16 @@ namespace binary_search {
 #include <stdexcept>
 
 namespace binary_search {
-
-    std::size_t find (const std::vector<int> data, int value) {
-        size_t left = 0, right = data.size();
-        
+    std::size_t find (const std::vector<int>& data, int value) {
+        size_t left = 0, right = data.size(), mid = 0;
         while (left < right) {
-            int mid = (left + right) / 2;
+            mid = left + (right - left) / 2;
             int look = data[mid];
             if (look == value) return mid;
             if (look < value) left = mid + 1;
             else right = mid;
         }    
-        throw std::domain_error("Value not found.");
+        throw std::domain_error("Value not found. No soup for you!");
     } 
 }  // namespace binary_search
 ```
