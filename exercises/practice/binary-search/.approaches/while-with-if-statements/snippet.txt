@@ -1,5 +1,5 @@
 while (left < right) {
-    size_t mid = left + ((right - left) / 2);
+    std::size_t mid = left + ((right - left) / 2);
     int look = data[mid];
     if (look == value) return mid;
     if (look < value) left = mid + 1;
