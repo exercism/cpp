@@ -2,7 +2,7 @@
 
 There are many ways to solve Secret Handshake.
 One general approach is to use a series of `if` statements and then use [`reverse()`][reverse] if needed.
-Another general approach is to iterate once even if the signals are meant to be reversed.
+Another general approach is to iterate once even if the actions are meant to be reversed.
 
 ## Approach: `if` statements with `reverse()`
 
@@ -63,24 +63,24 @@ namespace secret_handshake {
 #include "secret_handshake.h"
 
 namespace {
-    const std::vector<std::string> signals = {
+    const std::vector<std::string> actions = {
         "wink",
         "double blink",
         "close your eyes",
         "jump",
     };
+    const unsigned int REVERSE = 16;
 }
 
 namespace secret_handshake {
     std::vector<std::string> commands (unsigned int signal) {
         std::vector<std::string> output;
-
-        int action = 0, action_incr = 1, end = signals.size();
-        if (signal & 16) {action = 3; action_incr = -1; end = -1;}        
+        int action = 0, action_incr = 1, end = actions.size();
+        if (signal & REVERSE) {action = actions.size() - 1; action_incr = -1; end = -1;}        
             
         for (; action != end; action+=action_incr)
             if (signal & (1 << action))
-                output.emplace_back(signals[action]);
+                output.emplace_back(actions[action]);
         return output;
     }
 }  // namespace secret_handshake
