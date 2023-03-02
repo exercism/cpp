@@ -8,7 +8,7 @@
 #include <vector>
 #include <cstddef>
 namespace binary_search {
-    std::size_t find (const std::vector<int> data, int value);
+    std::size_t find (const std::vector<int>& data, int value);
 }  // namespace binary_search
 #endif // BINARY_SEARCH_H
 ```
@@ -19,18 +19,16 @@ namespace binary_search {
 #include <stdexcept>
 
 namespace binary_search {
-
-    std::size_t find (const std::vector<int> data, int value) {
+    std::size_t find (const std::vector<int>& data, int value) {
         size_t left = 0, right = data.size();
-        
         while (left < right) {
-            int mid = (left + right) / 2;
+            size_t mid = left + ((right - left) / 2);
             int look = data[mid];
             if (look == value) return mid;
             if (look < value) left = mid + 1;
             else right = mid;
         }    
-        throw std::domain_error("Value not found.");
+        throw std::domain_error("Value not found. No soup for you!");
     } 
 }  // namespace binary_search
 ```
@@ -41,7 +39,8 @@ The middle value is initialized to `0`.
 
 The [`while` loop][while] iterates while `left` is less than `right`.
 
-Inside the loop, the middle value is set by `left` plus `right` divided by `2`.
+Inside the loop, the middle value is set by `left` plus ((`right` - `left`) divided by `2`).
+The reason for not doing (`left` + `right`) divided by `2` is to prevent overflow for very large sizes of the input `vector`, as explained [here][mid-bug].
 For example, if `left` is `0` and `right` is `10`, then the middle is calculated to `5`.
 if `left` is `6` and `right` is `10`, then the middle is calculated to `8`.
 
@@ -71,4 +70,5 @@ The loop exits and a [std::domain_error][domain-error] is returned from the func
 [while]: https://en.cppreference.com/w/cpp/language/while
 [if]: https://en.cppreference.com/w/cpp/language/if
 [domain-error]: https://en.cppreference.com/w/cpp/error/domain_error
+[mid-bug]: https://ai.googleblog.com/2006/06/extra-extra-read-all-about-it-nearly.html
 
