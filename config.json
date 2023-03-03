@@ -784,10 +784,14 @@
         "slug": "simple-linked-list",
         "name": "Simple linked list",
         "uuid": "ffccabe9-9779-4914-9cff-c6f5696c8afe",
-        "practices": [],
+        "practices": ["pointers"],
         "prerequisites":[],
-        "difficulty": 1,
+        "difficulty": 4,
+        "status": "wip",
         "topics": [
+          "classes",
+          "conditionals",
+          "loops",
           "pointers"
         ]
       }
