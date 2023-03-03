@@ -37,7 +37,7 @@ std::vector<std::string> commands(unsigned int signal)
 The `commands` function starts by defining the `vector` to hold the returned actions.
 
 It then has a series of `if` statements, each of which uses the [bitwise AND operator][bitwise-operators] to check if the input signal contains a particular action.
-Each action is represented with a binary literal, but could just as well be represented by its decimal value
+Each action is represented by a binary literal, but could just as well be represented by its decimal value
 
 ```cpp
     if (signal & 1)  result.emplace_back("wink");
@@ -59,7 +59,7 @@ or its hexadecimal value
 
 The [`emplace_back()`][emplace-back] function is used to add the action to the result `vector` if the action's value is contained in the input signal.
 
-If the reverse value is contained in the input signal, then the [`reverse()`][reverse] function is used to  reverse the elements in the result vector.
+If the reverse value is contained in the input signal, then the [`reverse()`][reverse] function is used to  reverse the elements in the result `vector`.
 
 The [`begin()`][begin] and [`end()`][end] member functions could be called as free functions like so
 
