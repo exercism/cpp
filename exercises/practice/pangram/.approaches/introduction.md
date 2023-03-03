@@ -32,8 +32,8 @@ namespace pangram {
     bool is_pangram(std::string_view phrase) {
         std::bitset<26> letters;
         for(const auto c : phrase)
-            if(isalpha(c))
-                letters.set(tolower(c) - 'a');
+            if(std::isalpha(c))
+                letters.set(std::tolower(c) - 'a');
         return letters.all();
     }
 }  // namespace pangram
@@ -70,9 +70,9 @@ namespace {
 namespace pangram {
     bool is_pangram(std::string_view phrase){
         std::string lphrase(phrase.length(), ' ');
-        transform(phrase.begin(), phrase.end(), lphrase.begin(), tolower);
-        return all_of(abc.cbegin(), abc.cend(), [lphrase](char c){return lphrase.find(c) != std::string::npos;});
-    }
+        std::transform(phrase.begin(), phrase.end(), lphrase.begin(), tolower);
+        return std::all_of(abc.cbegin(), abc.cend(), [lphrase](char c){return lphrase.find(c) != std::string::npos;});
+  }
 }  // namespace pangram
 ```
 
