@@ -14,7 +14,7 @@ Another approach can use the [`algorithm.all_of()`][all_of] function.
 #include <string_view>
 
 namespace pangram {
-  bool is_pangram(std::string_view phrase);
+    bool is_pangram(std::string_view phrase);
 }  // namespace pangram
 
 #endif // PANGRAM_H
@@ -30,11 +30,11 @@ namespace pangram {
 namespace pangram {
 
     bool is_pangram(std::string_view phrase) {
-      std::bitset<26> letters;
-      for(const auto letter : phrase)
-          if(isalpha(letter))
-              letters.set(tolower(letter) - 'a');
-      return letters.all();
+        std::bitset<26> letters;
+        for(const auto letter : phrase)
+            if(isalpha(letter))
+                letters.set(tolower(letter) - 'a');
+        return letters.all();
     }
 }  // namespace pangram
 ```
@@ -50,7 +50,7 @@ For more information, check the [`bitset.all()` approach][approach-bitset-all].
 #include <string_view>
 
 namespace pangram {
-  bool is_pangram(std::string_view phrase);
+    bool is_pangram(std::string_view phrase);
 }  // namespace pangram
 
 #endif // PANGRAM_H
@@ -72,7 +72,7 @@ namespace pangram {
         std::string lphrase(phrase.length(), ' ');
         transform(phrase.begin(), phrase.end(), lphrase.begin(), tolower);
         return all_of(abc.cbegin(), abc.cend(), [lphrase](char c){return lphrase.find(c) != std::string::npos;});
-  }
+    }
 }  // namespace pangram
 ```
 
