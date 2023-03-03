@@ -1,7 +1,7 @@
 bool is_pangram(std::string_view phrase) {
     std::bitset<26> letters;
-    for(const auto ch : phrase)
-        if(isalpha(ch))
-            letters.set(tolower(ch) - 'a');
+    for(const auto c : phrase)
+        if(isalpha(c))
+            letters.set(tolower(c) - 'a');
     return letters.all();
 }
