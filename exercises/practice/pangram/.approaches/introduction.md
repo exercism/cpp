@@ -71,7 +71,7 @@ namespace pangram {
     bool is_pangram(std::string_view phrase){
         std::string lphrase(phrase.length(), ' ');
         std::transform(phrase.begin(), phrase.end(), lphrase.begin(), tolower);
-        return std::all_of(abc.cbegin(), abc.cend(), [lphrase](char c){return lphrase.find(c) != std::string::npos;});
+        return std::all_of(abc.cbegin(), abc.cend(), [lphrase](char c){ return lphrase.find(c) != std::string::npos; });
   }
 }  // namespace pangram
 ```
