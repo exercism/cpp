@@ -40,6 +40,7 @@ Each character is tested by the [`isalpha()`][isalpha] function to see if it is 
 If the currently installed locale is not suitable for the English alphabet, then [`std::locale::classic()`][locale-classic] can be passed to the [`isalpha()`][isalpha-locale] function defined in [&lt;locale&gt;][locale], like so: 
 
 ```cpp
+#include <bitset>
 #include <locale>
 
 // code snipped
@@ -52,6 +53,7 @@ The [ASCII][ascii] value of `a` is subtracted from the character [`tolower()`][t
 If the currently installed locale is not suitable for lowercasing English characters, then `std::locale::classic()` can be passed to the [`tolower()`][tolower-locale] function defined in `<locale>`, like so:
 
 ```cpp
+#include <bitset>
 #include <locale>
 
 // code snipped
