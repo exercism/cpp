@@ -31,9 +31,9 @@ namespace pangram {
 
     bool is_pangram(std::string_view phrase) {
         std::bitset<26> letters;
-        for(const auto c : phrase)
-            if(std::isalpha(c))
-                letters.set(std::tolower(c) - 'a');
+        for (const auto c : phrase)
+            if (std::isalpha(c))
+                letters.set (std::tolower(c) - 'a');
         return letters.all();
     }
 }  // namespace pangram
