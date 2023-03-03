@@ -787,7 +787,7 @@
         "practices": ["pointers"],
         "prerequisites":[],
         "difficulty": 4,
-        "status": "wip",
+        "status": "beta",
         "topics": [
           "classes",
           "conditionals",
