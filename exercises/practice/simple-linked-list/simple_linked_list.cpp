@@ -4,10 +4,6 @@
 
 namespace simple_linked_list {
 
-List::~List() {
-    // TODO: Ensure that all resources are freed on destruction
-}
-
 size_t List::size() {
     // TODO: Return the correct size of the list.
     return 0;
@@ -28,4 +24,9 @@ void List::reverse() {
     // TODO: Implement a function to reverse the order of the elements in the
     // list.
 }
+
+List::~List() {
+    // TODO: Ensure that all resources are freed on destruction
+}
+
 }  // namespace simple_linked_list
