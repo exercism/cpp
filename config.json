@@ -779,6 +779,21 @@
           "loops",
           "strings"
         ]
+      },
+      {
+        "slug": "simple-linked-list",
+        "name": "Simple linked list",
+        "uuid": "ffccabe9-9779-4914-9cff-c6f5696c8afe",
+        "practices": ["pointers"],
+        "prerequisites":[],
+        "difficulty": 4,
+        "status": "beta",
+        "topics": [
+          "classes",
+          "conditionals",
+          "loops",
+          "pointers"
+        ]
       }
     ],
     "foregone": [
