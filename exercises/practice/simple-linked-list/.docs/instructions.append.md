@@ -1,9 +1,9 @@
-# Implementation Hints
+## Implementation Hints
 
 We have provided the general structure of a `List` class for you.
 It has the private variables `head` of type `Element*` and `current_size` of type `size_t` that you can use.
 
-The `Element` class was given as well, it has two public variables: `data` of type `int` and `next` of type `Element*`.
+The `Element` struct was given as well, it has two variables: `data` of type `int` and `next` of type `Element*`.
 
 You can see the details in `simple_linked_list.h`. You do not have to change that file, but you can if it fits your needs.
 

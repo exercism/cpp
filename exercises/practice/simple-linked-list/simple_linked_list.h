@@ -5,13 +5,6 @@
 
 namespace simple_linked_list {
 
-class Element {
-   public:
-    Element(int data) : data{data} {};
-    int data{};
-    Element* next{nullptr};
-};
-
 class List {
    public:
     List() = default;
@@ -22,15 +15,21 @@ class List {
     // free / move / copy the allocated resources.
     List(const List&) = delete;
     List& operator=(const List&) = delete;
-    List(const List&&) = delete;
-    List& operator=(const List&&) = delete;
+    List(List&&) = delete;
+    List& operator=(List&&) = delete;
 
-    size_t size();
-    void push(int enty);
+    size_t size() const;
+    void push(int entry);
     int pop();
     void reverse();
 
    private:
+    struct Element {
+        Element(int data) : data{data} {};
+        int data{};
+        Element* next{nullptr};
+    };
+
     Element* head{nullptr};
     size_t current_size{0};
 };

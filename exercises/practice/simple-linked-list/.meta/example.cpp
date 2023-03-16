@@ -11,7 +11,7 @@ List::~List() {
     }
 }
 
-size_t List::size() { return current_size; }
+size_t List::size() const { return current_size; }
 
 void List::push(int entry) {
     auto element = new Element{entry};
