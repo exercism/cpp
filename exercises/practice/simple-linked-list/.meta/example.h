@@ -18,7 +18,7 @@ class List {
     List(List&&) = delete;
     List& operator=(List&&) = delete;
 
-    size_t size() const;
+    std::ize_t size() const;
     void push(int entry);
     int pop();
     void reverse();
@@ -31,7 +31,7 @@ class List {
     };
 
     Element* head{nullptr};
-    size_t current_size{0};
+    std::size_t current_size{0};
 };
 
 }  // namespace simple_linked_list
