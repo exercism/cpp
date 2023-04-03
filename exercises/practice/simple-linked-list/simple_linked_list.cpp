@@ -4,7 +4,7 @@
 
 namespace simple_linked_list {
 
-size_t List::size() const {
+std::size_t List::size() const {
     // TODO: Return the correct size of the list.
     return 0;
 }
