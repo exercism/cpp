@@ -18,7 +18,7 @@ class List {
     List(List&&) = delete;
     List& operator=(List&&) = delete;
 
-    std::ize_t size() const;
+    std::size_t size() const;
     void push(int entry);
     int pop();
     void reverse();
