@@ -14,13 +14,13 @@ jobs:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
-        compiler: [clang++-6.0, g++-7]
+        compiler: [clang++-6.0, g++-10]
     steps:
     - uses: actions/checkout@v3
     - name: Install Dependencies
       # Boost must be installed only because the CMake version (3.12) can't
       # detect the installed Boost version (1.69)
-      run: sudo apt-get update && sudo apt-get -y install ninja-build libboost-date-time-dev clang-6.0 g++-7 g++-multilib
+      run: sudo apt-get update && sudo apt-get -y install ninja-build libboost-date-time-dev clang-6.0 g++-10 g++-multilib
     - name: Run tests with common Catch
       run: |
         cmake -G Ninja .
