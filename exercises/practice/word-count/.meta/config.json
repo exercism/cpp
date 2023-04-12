@@ -1,5 +1,4 @@
 {
-  "blurb": "Given a phrase, count the occurrences of each word in that phrase.",
   "authors": [
     "LegalizeAdulthood"
   ],
@@ -26,5 +25,6 @@
       ".meta/example.h"
     ]
   },
+  "blurb": "Given a phrase, count the occurrences of each word in that phrase.",
   "source": "This is a classic toy problem, but we were reminded of it by seeing it in the Go Tour."
 }
