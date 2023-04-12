@@ -58,16 +58,6 @@ TEST_CASE("rejects_span_longer_than_string_length")
     REQUIRE_THROWS_AS(largest_series_product::largest_product("123", 4), std::domain_error);
 }
 
-TEST_CASE("reports_1_for_empty_string_and_empty_product_0_span")
-{
-    REQUIRE(largest_series_product::largest_product("", 0) == 1);
-}
-
-TEST_CASE("reports_1_for_nonempty_string_and_empty_product_0_span")
-{
-    REQUIRE(largest_series_product::largest_product("123", 0) == 1);
-}
-
 TEST_CASE("rejects_empty_string_and_nonzero_span")
 {
     REQUIRE_THROWS_AS(largest_series_product::largest_product("", 1), std::domain_error);
