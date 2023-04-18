@@ -10,6 +10,6 @@ Each element in the list contains data and a "next" field pointing to the next e
 
 This variant of linked lists is often used to represent sequences or push-down stacks (also called a LIFO stack; Last In, First Out).
 
-As a first take, lets create a singly linked list to contain integers, and provide functions to reverse a linked list.
+As a first take, lets create a singly linked list to contain the range (1..10), and provide functions to reverse a linked list and convert to and from arrays.
 
 When implementing this in a language with built-in linked lists, implement your own abstract data type.
