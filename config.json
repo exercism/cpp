@@ -815,6 +815,11 @@
       "uuid": "8d51e52a-95d3-45da-adb0-65bdfe96b875",
       "slug": "strings",
       "name": "Strings"
+    },
+    {
+      "uuid": "e52453a5-4997-4eba-b754-5bda7b97c701",
+      "slug": "basics",
+      "name": "Basics"
     }
   ],
   "key_features": [
