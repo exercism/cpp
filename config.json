@@ -46,6 +46,16 @@
         ],
         "prerequisites": [],
         "status": "wip"
+      },
+      {
+        "slug": "lasagna",
+        "name": "Lasagna",
+        "uuid": "00ab71eb-4ebb-4360-8621-a394040c894a",
+        "concepts": [
+          "basics"
+        ],
+        "prerequisites": [],
+        "status": "wip"
       }
     ],
     "practice": [
