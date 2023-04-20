@@ -1,8 +1,8 @@
-# Get the exercise name from the current directory
-get_filename_component(exercise ${CMAKE_CURRENT_SOURCE_DIR} NAME)
-
 # Basic CMake project
 cmake_minimum_required(VERSION 3.5.1)
+
+# Get the exercise name from the current directory
+get_filename_component(exercise ${CMAKE_CURRENT_SOURCE_DIR} NAME)
 
 # Name the project after the exercise
 project(${exercise} CXX)

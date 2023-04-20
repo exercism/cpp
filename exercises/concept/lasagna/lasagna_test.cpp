@@ -17,7 +17,7 @@ TEST_CASE("Preparation time correct") {
 #if defined(EXERCISM_RUN_ALL_TESTS)
 TEST_CASE("Correct for six layers") {
     const int timePerLayer = 2;
-    const int layers = 36;
+    const int layers = 6;
     const int actual = preparationTime(layers);
     const int expected{timePerLayer * layers};
 
