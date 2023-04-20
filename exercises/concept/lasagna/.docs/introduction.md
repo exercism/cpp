@@ -7,15 +7,16 @@ To set off the C++ journey we are starting with variables, function calls, and c
 ### Comments
 
 Comments come in two flavors: single- and multi-line.
-Everything that comes after `//` in a line is ignored by the compiler.
+Everything that comes after `//` on the same line is ignored by the compiler.
 Multi-line comments are also known as C-style comments. 
 They are surrounded by `/*` and `*/`.
+Anything that comes between these will be ignored as well.
 
 ### Variables
 
 C++ is a typed language.
-The type of a variable has to be stated upon the declaration of a variable.
-Its type cannot change.
+All types need to be known at compile time, and so you generally need to state them explicitly.
+A variable's type cannot change.
 An integer variable with the name `years` can be declared like this:
 
 ```cpp
@@ -89,3 +90,19 @@ int total_fee(int vips, int adults, int kids) {
 
 Functions in C++ do not return the value of the last statement like in some other languages.
 The `return` keyword is required for the code to compile.
+
+#### Whitespace
+
+Whitespace is used for formatting source code and includes spaces, tabs, or newlines.
+As the compiler ignores unnecessary whitespace, you can use it to structure your code.
+Smart use of whitespace can thus the readability of your code.
+There are different formatting standards, but it is not enforced by the compiler.
+
+```cpp
+// Formatting makes it easier to find bugs
+
+int eggs_yolks =  3;
+int      yeast = 15;
+
+int flour=500;int sugar=200;// compact, but difficult to read
+```
