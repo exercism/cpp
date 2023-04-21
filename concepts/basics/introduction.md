@@ -22,13 +22,18 @@ int years;
 ```
 
 It is good practice to initialize variables upon declaration.
-This ensures that the content of the variable is well-defined and not filled with random data.
 C++ offers different mechanisms to do so.
 The version with the curly braces is more in line with modern C++, but the equal-sign version is also very common.
 
 ```cpp
 int tomatoes{80};
 int potatoes = 40;
+```
+
+```exercism/caution
+C++ does allow using uninitialized variables.
+Until the variable is deliberately set, it is undefined and might contain anything.
+To avoid used-before-set errors and undefined behaviour it is adviseable to **always initialize**.
 ```
 
 ## Arithmetic Operations
@@ -93,8 +98,8 @@ The `return` keyword is required for the code to compile.
 
 Whitespace is used for formatting source code and includes spaces, tabs, or newlines.
 As the compiler ignores unnecessary whitespace, you can use it to structure your code.
-Smart use of whitespace can thus the readability of your code.
-There are different formatting standards, but it is not enforced by the compiler.
+Smart use of whitespace can improve the readability of your code.
+There are different formatting standards, but these are all conventional and not enforced by the compiler.
 
 ```cpp
 // Formatting makes it easier to find bugs
