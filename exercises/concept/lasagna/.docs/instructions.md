@@ -8,7 +8,8 @@ You have four tasks, all related to the time spent cooking the lasagna.
 
 ## 1. Define the expected oven time in minutes
 
-Define the `ovenTime()` function that does not take any arguments and returns how many minutes the lasagna should be in the oven. According to the cookbook, the expected oven time is 40 minutes:
+Define the `ovenTime()` function that does not take any arguments and returns how many minutes the lasagna should be in the oven.
+According to the cookbook, the expected oven time is 40 minutes:
 
 ```cpp
 ovenTime();

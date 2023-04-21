@@ -15,7 +15,7 @@ Anything that comes between these will be ignored as well.
 ### Variables
 
 C++ is a typed language.
-All types need to be known at compile time, and so you generally need to state them explicitly.
+All types need to be known at compile time, and you generally need to state them explicitly.
 A variable's type cannot change.
 An integer variable with the name `years` can be declared like this:
 
@@ -24,13 +24,20 @@ int years;
 ```
 
 It is good practice to initialize variables upon declaration.
-This ensures that the content of the variable is well-defined and not filled with random data.
 C++ offers different mechanisms to do so.
 The version with the curly braces is more in line with modern C++, but the equal-sign version is also very common.
 
 ```cpp
 int tomatoes{80};
 int potatoes = 40;
+```
+
+```exercism/caution
+C++ does allow using uninitialized variables.
+Until the variable is deliberately set, it is undefined and might contain anything.
+To avoid used-before-set errors and undefined behavior it is adviseable to **always initialize**.
+Undefined behavior can crash your program at the worst possible moment, while it was running fine previously.
+It cannot be stressed enough: avoid undefined behavior at all cost.
 ```
 
 ### Arithmetic Operations
@@ -48,7 +55,7 @@ potatoes = (32 * 2) + 11; // potatoes is now 75 as well
 
 ### Functions
 
-Functions have a name, a return type and (possibly empty) parameter list.
+Functions have a name, a return type and a (possibly empty) parameter list.
 An example of a function named `always_fortyseven` that would always return 47 would look like this:
 
 ```cpp
@@ -95,8 +102,8 @@ The `return` keyword is required for the code to compile.
 
 Whitespace is used for formatting source code and includes spaces, tabs, or newlines.
 As the compiler ignores unnecessary whitespace, you can use it to structure your code.
-Smart use of whitespace can thus the readability of your code.
-There are different formatting standards, but it is not enforced by the compiler.
+Smart use of whitespace can improve the readability of your code.
+There are different formatting standards, but these are all conventional and not enforced by the compiler.
 
 ```cpp
 // Formatting makes it easier to find bugs

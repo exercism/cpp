@@ -13,7 +13,7 @@ Anything that comes between these will be ignored as well.
 ## Variables
 
 C++ is a typed language.
-All types need to be known at compile time, and so you generally need to state them explicitly.
+All types need to be known at compile time, and you generally need to state them explicitly.
 A variable's type cannot change.
 An integer variable with the name `years` can be declared like this:
 
@@ -33,7 +33,9 @@ int potatoes = 40;
 ```exercism/caution
 C++ does allow using uninitialized variables.
 Until the variable is deliberately set, it is undefined and might contain anything.
-To avoid used-before-set errors and undefined behaviour it is adviseable to **always initialize**.
+To avoid used-before-set errors and undefined behavior it is adviseable to **always initialize**.
+Undefined behavior can crash your program at the worst possible moment, while it was running fine previously.
+It cannot be stressed enough: avoid undefined behavior at all cost.
 ```
 
 ## Arithmetic Operations
@@ -51,7 +53,7 @@ potatoes = (32 * 2) + 11; // potatoes is now 75 as well
 
 ## Functions
 
-Functions have a name, a return type and (possibly empty) parameter list.
+Functions have a name, a return type and a (possibly empty) parameter list.
 An example of a function named `always_fortyseven` that would always return 47 would look like this:
 
 ```cpp

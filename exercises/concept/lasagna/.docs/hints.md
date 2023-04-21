@@ -17,7 +17,7 @@
 
 ## 3. Calculate the time left in the oven
 
-- You can call other functions and use them like variables: `return 22 * myOtherCalculation();`
+- You can call other functions and use the returned value like variables: `return 22 * myOtherCalculation();`
 
 ## 4. Calculate the total time spent on the lasagna
 
