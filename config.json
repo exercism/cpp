@@ -805,6 +805,11 @@
       "uuid": "8d51e52a-95d3-45da-adb0-65bdfe96b875",
       "slug": "strings",
       "name": "Strings"
+    },
+    {
+      "uuid": "6451064e-cc82-4526-a403-19ee2f48e4e5",
+      "slug": "code-organization",
+      "name": "Code Organization"
     }
   ],
   "key_features": [

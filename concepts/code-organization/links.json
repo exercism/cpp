@@ -1,0 +1,14 @@
+[
+    {
+        "url": "https://en.cppreference.com/book/intro/namespaces",
+        "description": "More information on namespaces"
+    },
+    {
+        "url": "https://en.cppreference.com/w/cpp/preprocessor/include",
+        "description": "More information on source file inclusion"
+    },
+    {
+        "url": "https://learn.microsoft.com/en-us/cpp/cpp/header-files-cpp?view=msvc-170",
+        "description": "Examples and information on header files and include guards"
+    }
+]
