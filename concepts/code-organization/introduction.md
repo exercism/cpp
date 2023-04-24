@@ -48,7 +48,7 @@ int myOtherFunction(int m) {
 }
 ```
 
-Attention: the `;` is needed after the declaration, but not necessarily after the definition.
+Attention: the `;` is needed after the declaration, but not after the definition.
 
 ## Header Files
 
@@ -94,6 +94,7 @@ The syntax can be seen below with `MY_HEADER_FILE_H` as a variable.
 ```
 A modern form, that will achieve the same result is the #pragma directive `#pragma once`.
 The problem is, that pragmas are not an official part of the C++ language and the implementation differs from compiler to compiler.
+Many big projects have switched to the simpler pragma method, but a few are still cautious.
 
 ## Namespaces
 
@@ -125,6 +126,7 @@ int myresult{my_ns::foo() + my_other_ns::foo() * my_ns::my_inner_ns::baz()};
 
 Deeply nested namespaces might be too verbose.
 It is possible to remove the verbosity with a namespace import via `using`.
+This moves all names into the global namespace.
 To keep some differentiation aliases might be useful.
 
 ```cpp
