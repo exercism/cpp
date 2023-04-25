@@ -9,8 +9,6 @@
 
 using namespace std;
 
-// Secret-handshake exercise test case data version 1.2.1
-
 TEST_CASE("Methionine_RNA_sequence")
 {
     REQUIRE(vector<string>{"Methionine"} == protein_translation::proteins("AUG"));
