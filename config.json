@@ -830,6 +830,11 @@
       "uuid": "7b9bcf07-b447-4c18-b838-a7f4167ff521",
       "slug": "namespaces",
       "name": "Namespaces"
+    },
+    {
+      "uuid": "de675a2c-6fd2-427d-93c1-4190eeffcd95",
+      "slug": "numbers",
+      "name": "Numbers"
     }
   ],
   "key_features": [
