@@ -42,7 +42,7 @@ It is possible to let the compiler figure out the correct type of a variable at 
 The practice can help during refactoring and shines with very long type names, that will come in later concepts.
 
 ```cpp
-auto feist{1234};             // feist is of type int, as 27 is an integer literal
+auto feist{1234};             // feist is of type int, as 1234 is an integer literal
 auto red_cross{0xED1B2E};     // also an int
 auto pythargoras{1.41421356}; // pythargoras is of type double
 
