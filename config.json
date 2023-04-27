@@ -46,6 +46,13 @@
         ],
         "prerequisites": [],
         "status": "wip"
+      },
+      {
+        "uuid": "88baa5ab-dacb-4fab-8f16-4f3ed726b27b",
+        "slug": "freelancer-rates",
+        "name": "Freelancer Rates",
+        "concepts": ["numbers"],
+        "prerequisites": ["basics", "code-organization"]
       }
     ],
     "practice": [
