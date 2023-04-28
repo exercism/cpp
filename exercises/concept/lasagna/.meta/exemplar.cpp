@@ -3,7 +3,7 @@
 int ovenTime() { return 40; }
 
 /* RemainingOvenTime returns the remaining
-minutes based on the actual minutes already in the oven.
+   minutes based on the actual minutes already in the oven.
 */
 int remainingOvenTime(int actualMinutesInOven) {
     return ovenTime() - actualMinutesInOven;

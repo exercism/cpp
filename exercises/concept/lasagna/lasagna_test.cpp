@@ -8,7 +8,7 @@
 using namespace std;
 
 TEST_CASE("Preparation time correct") {
-    const int actual = 40;
+    int actual = 40;
     int expected = ovenTime();
 
     REQUIRE(expected == actual);
@@ -16,57 +16,57 @@ TEST_CASE("Preparation time correct") {
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
 TEST_CASE("Correct for six layers") {
-    const int timePerLayer = 2;
-    const int layers = 6;
-    const int actual = preparationTime(layers);
-    const int expected{timePerLayer * layers};
+    int timePerLayer = 2;
+    int layers = 6;
+    int actual = preparationTime(layers);
+    int expected{timePerLayer * layers};
 
     REQUIRE(expected == actual);
 }
 
 TEST_CASE("Correct for 11 layers") {
-    const int timePerLayer = 2;
-    const int layers = 11;
-    const int actual = preparationTime(layers);
-    const int expected{timePerLayer * layers};
+    int timePerLayer = 2;
+    int layers = 11;
+    int actual = preparationTime(layers);
+    int expected{timePerLayer * layers};
 
     REQUIRE(expected == actual);
 }
 
 TEST_CASE("Fresh in the oven") {
-    const int timeSpendInOven = 0;
-    const int neededBakeTime = 40;
-    const int actual = remainingOvenTime(timeSpendInOven);
-    const int expected{neededBakeTime - timeSpendInOven};
+    int timeSpendInOven = 0;
+    int neededBakeTime = 40;
+    int actual = remainingOvenTime(timeSpendInOven);
+    int expected{neededBakeTime - timeSpendInOven};
 
     REQUIRE(expected == actual);
 }
 
 TEST_CASE("Halfway done") {
-    const int timeSpendInOven = 20;
-    const int neededBakeTime = 40;
-    const int actual = remainingOvenTime(timeSpendInOven);
-    const int expected{neededBakeTime - timeSpendInOven};
+    int timeSpendInOven = 20;
+    int neededBakeTime = 40;
+    int actual = remainingOvenTime(timeSpendInOven);
+    int expected{neededBakeTime - timeSpendInOven};
 
     REQUIRE(expected == actual);
 }
 
 TEST_CASE("Fresh in the oven, 12 layers!") {
-    const int timeSpendInOven = 0;
-    const int timePerLayer = 2;
-    const int layers = 11;
-    const int actual = elapsedTime(layers, timeSpendInOven);
-    const int expected{timePerLayer * layers + timeSpendInOven};
+    int timeSpendInOven = 0;
+    int timePerLayer = 2;
+    int layers = 11;
+    int actual = elapsedTime(layers, timeSpendInOven);
+    int expected{timePerLayer * layers + timeSpendInOven};
 
     REQUIRE(expected == actual);
 }
 
 TEST_CASE("One minute left, 5 layers!") {
-    const int timeSpendInOven = 39;
-    const int timePerLayer = 2;
-    const int layers = 5;
-    const int actual = elapsedTime(layers, timeSpendInOven);
-    const int expected{timePerLayer * layers + timeSpendInOven};
+    int timeSpendInOven = 39;
+    int timePerLayer = 2;
+    int layers = 5;
+    int actual = elapsedTime(layers, timeSpendInOven);
+    int expected{timePerLayer * layers + timeSpendInOven};
 
     REQUIRE(expected == actual);
 }
