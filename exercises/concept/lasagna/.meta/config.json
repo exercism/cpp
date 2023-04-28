@@ -1,0 +1,18 @@
+{
+  "authors": [
+    "vaeng"
+  ],
+  "files": {
+    "solution": [
+      "lasagna.cpp"
+    ],
+    "test": [
+      "lasagna_test.cpp"
+    ],
+    "exemplar": [
+      ".meta/exemplar.cpp"
+    ]
+  },
+  "icon": "lasagna",
+  "blurb": "Learn the basics of C++ by cooking lasagna"
+}
