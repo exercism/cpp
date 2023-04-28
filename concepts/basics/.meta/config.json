@@ -1,0 +1,11 @@
+{
+  "blurb": "C++ is a statically-typed language, which means that everything has a type at compile-time. C++ allows one to use Object-Oriented, Functional and Procedural coding styles.",
+  "authors": [
+    "vaeng"
+  ],
+  "contributors": [
+    "MatthijsBlom",
+    "siebenschlaefer",
+    "b8horpet"
+  ]
+}
