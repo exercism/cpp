@@ -820,6 +820,11 @@
       "uuid": "e52453a5-4997-4eba-b754-5bda7b97c701",
       "slug": "basics",
       "name": "Basics"
+    },
+    {
+      "uuid": "257598c7-c09f-47be-90db-514f93758420",
+      "slug": "includes",
+      "name": "Includes"
     }
   ],
   "key_features": [
