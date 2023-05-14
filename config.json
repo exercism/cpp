@@ -820,7 +820,13 @@
       "uuid": "e52453a5-4997-4eba-b754-5bda7b97c701",
       "slug": "basics",
       "name": "Basics"
+    },
+    {
+      "uuid": "7b9bcf07-b447-4c18-b838-a7f4167ff521",
+      "slug": "namespaces",
+      "name": "Namespaces"
     }
+
   ],
   "key_features": [
     {
