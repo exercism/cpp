@@ -1,0 +1,18 @@
+{
+  "authors": [
+    "vaeng"
+  ],
+  "files": {
+    "solution": [
+      "last_will.cpp"
+    ],
+    "test": [
+      "last_will_test.cpp"
+    ],
+    "exemplar": [
+      ".meta/exemplar.cpp"
+    ]
+  },
+  "icon": "lasagna",
+  "blurb": "Learn about namespaces by executing an estate."
+}
