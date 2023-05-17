@@ -829,6 +829,11 @@
       "name": "Basics"
     },
     {
+      "uuid": "257598c7-c09f-47be-90db-514f93758420",
+      "slug": "includes",
+      "name": "Includes"
+    },
+    {
       "uuid": "7b9bcf07-b447-4c18-b838-a7f4167ff521",
       "slug": "namespaces",
       "name": "Namespaces"
