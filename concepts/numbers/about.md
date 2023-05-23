@@ -13,9 +13,9 @@ It is good practice to make these casts to another type T explicit via `static_c
 The old C-style cast via `(T)` is discouraged in modern C++, but should be known nonetheless.
 ```cpp
 double pi{3.14};
-int about_2_times_pi_cpp ={static_cast<int>(pi) * 2};
+int about_2_times_pi_cpp{static_cast<int>(pi) * 2};
 // Old C-style cast:
-int about_2_times_pi_c = {(int)pi * 2};
+int about_2_times_pi_c{(int)pi * 2};
 ```
 
 ## Precision & Representation
