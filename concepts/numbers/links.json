@@ -1,0 +1,14 @@
+[
+    {
+      "url": "https://en.cppreference.com/w/cpp/language/operator_arithmetic",
+      "description": "Reference for Arithmetic operators"
+    },
+    {
+      "url": "https://en.cppreference.com/w/cpp/language/auto",
+      "description": "Reference for the auto placeholder type specifier"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Double-precision_floating-point_format",
+      "description": "Explanation on the floating point format"
+    }
+  ]
