@@ -1,7 +1,7 @@
 # Introduction
 The built-in number types in C++ can be divided into integers and floating points.
 Integers are whole numbers like `0`, `691`, or `-2`.
-Examples of floating point numbers are `6.02214076`, `0.1`, or `-1.616`.
+Floating point numbers are numbers with a decimal point like `6.02214076`, `0.1`, or `-1.616`.
 
 ## Integers
 The following example shows the declaration and initialization of four different variables 
@@ -39,22 +39,6 @@ The result from the operation between two integers is also an integer.
 `5 / 2` will return `2`.
 When one of the involved types is a floating-point type, the result will also be of a floating-point.
 `5.0 / 2` and `5 / 2.0` will return `2.5`.
-`%` is the modulus operator and will return the remainder of an integer division: `5%3` is `2`.
-
-
-## The auto keyword
-
-It is possible to let the compiler figure out the correct type of a variable at the point of declaration with the `auto` keyword.
-The practice can help during refactoring and shines with very long type names, that will come in later concepts.
-
-```cpp
-auto feist{1234};             // feist is of type int, as 1234 is an integer literal
-auto red_cross{0xED1B2E};     // also an int
-auto pythargoras{1.41421356}; // pythargoras is of type double
-
-auto two_times(int number) {
-    return number * 2;        // the return type of two_times will be int because the 
-}                             // multiplication of two int types returns an int type
-```
+`%` is the remainder operator and will return the remainder of an integer division: `5%3` is `2`.
 
 [cpp_numerical_bases]: https://cplusplus.com/doc/hex/
