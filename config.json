@@ -835,6 +835,11 @@
       "uuid": "7b9bcf07-b447-4c18-b838-a7f4167ff521",
       "slug": "namespaces",
       "name": "Namespaces"
+    },
+    {
+      "uuid": "1414040c-4f4f-45ab-b46b-03bc560e2511",
+      "slug": "booleans",
+      "name": "Booleans"
     }
   ],
   "key_features": [
