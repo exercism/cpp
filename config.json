@@ -52,7 +52,7 @@
         "slug": "freelancer-rates",
         "name": "Freelancer Rates",
         "concepts": ["numbers"],
-        "prerequisites": ["basics", "code-organization"]
+        "prerequisites": ["basics"]
       }
     ],
     "practice": [

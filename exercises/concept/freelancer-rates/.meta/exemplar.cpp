@@ -3,8 +3,8 @@
 
 // daily_rate calculates the daily rate given an hourly rate
 double daily_rate(double hourly_rate) {
-    auto per_hour{8.0};
-    return per_hour * hourly_rate;
+    auto hours_per_day{8.0};
+    return hours_per_day * hourly_rate;
 }
 
 // apply_discount calculates the price after a discount
