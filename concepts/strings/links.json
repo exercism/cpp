@@ -1,1 +1,6 @@
-[]
+[
+    {
+        "url": "https://en.cppreference.com/w/cpp/string/basic_string",
+        "description": "C++ reference on strings"
+    }
+]

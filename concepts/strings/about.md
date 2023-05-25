@@ -1,3 +1,3 @@
 # About
 
-TODO: add information on strings concept
+TODO: add content from introduction.md, when finished.
