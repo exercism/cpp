@@ -873,6 +873,11 @@
       "uuid": "bb5ee09c-db6b-41ef-ae17-f3c894c3b09a",
       "slug": "headers",
       "name": "Headers"
+    },
+    {
+      "uuid": "6891847f-4fe2-48a1-9d27-bc079b0d975c",
+      "slug": "comparisons",
+      "name": "Comparisons"
     }
   ],
   "key_features": [
