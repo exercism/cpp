@@ -62,7 +62,8 @@
         "slug": "freelancer-rates",
         "name": "Freelancer Rates",
         "concepts": ["numbers"],
-        "prerequisites": ["basics"]
+        "prerequisites": ["basics"],
+        "status": "wip"
       },
       {
         "slug": "last-will",
