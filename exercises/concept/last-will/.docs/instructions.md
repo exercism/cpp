@@ -9,7 +9,7 @@ To prevent any family from opening the vault alone, it can only be opened by com
 
 You have three tasks, all related to helping the families to open the vault.
 
-## 1. Define a Namespace for the executor of estate functions
+## 1. Take your seat in front of the families and lay out your papers
 
 Define a namespace called `estate_executor`.
 The code from the next tasks should be defined in the body of the `estate_executor` namespace.
@@ -21,13 +21,17 @@ namespace some_name {
 }
 ```
 
-## 2. Define a function that assembles the secret account number
+## 2. Find the secret account number
+
+This is your big moment.
+Only you have the secret modifier key to reveal the secret account number.
 
 Define the `assemble_account_number(int secret_modifier)` function that takes the secret modifier as an argument and returns the assembled account number as an `int`.
 
 To get the correct number, you have to sum up the `bank_number_part` from each of the three families.
 
-## 3. Define a function that assembles the secret code
+## 3. Last step: Enter the secret code
+
 Define the `assemble_code()` function that returns the resulting code by combining the fragments from the three families.
 The instructions in the testament ask you to add all the blue and then all the red fragments.
 The resulting code is obtained by multiplying both sums.
