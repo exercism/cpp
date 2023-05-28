@@ -6,7 +6,7 @@ A `bool` is either `true` or `false`.
 ## Logical Operators
 
 C++ supports three boolean operators: `!` (NOT), `&&` (AND), and `||` (OR).
-You can also you the alternative versions `not`, `and`, and `or`.
+You can also use the alternative versions `not`, `and`, and `or`.
 
 ```cpp
 true || false // => true
@@ -25,7 +25,7 @@ If you want to force a different ordering, you can enclose a boolean expression 
 !true && false   // => false
 !(true and false) // => true
 ```
-
+~~~~exercism/advanced
 ## Conversion
 
 If you use `true` or `false` in a place where a number is expected, they will be converted to  `1` and `0` respectively.
@@ -35,3 +35,4 @@ If you use a number in a Boolean operation, everything except `0` is treated as 
 !true && 0.0   // => false
 true + true + false // => 2
 ```
+~~~~
