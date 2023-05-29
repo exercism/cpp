@@ -68,6 +68,18 @@
           "basics"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "annalyns-infiltration",
+        "name": "Annalyn's Infiltration",
+        "uuid": "8da713a2-6d34-49f7-893b-23a4bb45d3a1",
+        "concepts": [
+          "booleans"
+        ],
+        "prerequisites": [
+          "basics"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
