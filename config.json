@@ -58,6 +58,17 @@
         "status": "wip"
       },
       {
+        "uuid": "88baa5ab-dacb-4fab-8f16-4f3ed726b27b",
+        "slug": "freelancer-rates",
+        "name": "Freelancer Rates",
+        "concepts": ["numbers"],
+        "prerequisites": [
+          "basics",
+          "includes"
+        ],
+        "status": "wip"
+      },
+      {
         "slug": "last-will",
         "name": "Last Will",
         "uuid": "d3946a64-a2a3-4dfc-8ab7-3ac1b6721b39",
