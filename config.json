@@ -68,6 +68,22 @@
           "basics"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "vehicle-purchase",
+        "name": "Vehicle Purchase",
+        "uuid": "e12f3678-202a-4d71-89d8-243ecc90b33a",
+        "concepts": [
+          "comparisons",
+          "if-statements"
+        ],
+        "prerequisites": [
+          "strings",
+          "headers",
+          "booleans",
+          "numbers"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
