@@ -13,9 +13,9 @@
       ".meta/exemplar.cpp"
     ]
   },
-  "icon": "freelancer-rates",
   "forked_from": [
     "elixir/freelancer-rates"
   ],
+  "icon": "freelancer-rates",
   "blurb": "Learn about integers and floating point numbers by helping a freelancer communicate with a project manager about billing."
 }

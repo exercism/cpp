@@ -3,7 +3,7 @@
 
 // daily_rate calculates the daily rate given an hourly rate
 double daily_rate(double hourly_rate) {
-    auto hours_per_day{8.0};
+    double hours_per_day{8.0};
     return hours_per_day * hourly_rate;
 }
 
@@ -15,11 +15,11 @@ double apply_discount(double before_discount, double discount) {
 // monthly_rate calculates the monthly rate, given an hourly rate and a discount
 // The returned monthly rate is rounded up to the nearest integer.
 int monthly_rate(double hourly_rate, double discount) {
-    auto per_day{daily_rate(hourly_rate)};
-    auto workdays_per_month{22};
-    auto per_month{per_day * workdays_per_month};
-    auto after_discount{apply_discount(per_month, discount)};
-    auto rounded_up{std::ceil(after_discount)};
+    double per_day{daily_rate(hourly_rate)};
+    int workdays_per_month{22};
+    double per_month{per_day * workdays_per_month};
+    double after_discount{apply_discount(per_month, discount)};
+    int rounded_up{std::ceil(after_discount)};
 
     return rounded_up;
 }
@@ -28,8 +28,8 @@ int monthly_rate(double hourly_rate, double discount) {
 // and discount The returned number of days is rounded down (take the floor) to
 // the next integer.
 int days_in_budget(int budget, double hourly_rate, double discount) {
-    auto discounted_per_hour{apply_discount(hourly_rate, discount)};
-    auto discounted_daily{daily_rate(discounted_per_hour)};
+    double discounted_per_hour{apply_discount(hourly_rate, discount)};
+    double discounted_daily{daily_rate(discounted_per_hour)};
 
     return static_cast<int>(budget / discounted_daily);
 }

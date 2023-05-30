@@ -19,8 +19,8 @@
 
 ## Prerequisites
 
-- `code organization`
 - `basics`
+- `includes`
 
 ## Analyzer
 

@@ -62,7 +62,10 @@
         "slug": "freelancer-rates",
         "name": "Freelancer Rates",
         "concepts": ["numbers"],
-        "prerequisites": ["basics"],
+        "prerequisites": [
+          "basics",
+          "includes"
+        ],
         "status": "wip"
       },
       {
