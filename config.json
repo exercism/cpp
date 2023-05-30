@@ -56,6 +56,29 @@
         ],
         "prerequisites": [],
         "status": "wip"
+      },
+      {
+        "uuid": "88baa5ab-dacb-4fab-8f16-4f3ed726b27b",
+        "slug": "freelancer-rates",
+        "name": "Freelancer Rates",
+        "concepts": ["numbers"],
+        "prerequisites": [
+          "basics",
+          "includes"
+        ],
+        "status": "wip"
+      },
+      {
+        "slug": "last-will",
+        "name": "Last Will",
+        "uuid": "d3946a64-a2a3-4dfc-8ab7-3ac1b6721b39",
+        "concepts": [
+          "namespaces"
+        ],
+        "prerequisites": [
+          "basics"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
@@ -733,19 +756,19 @@
         ]
       },
       {
-          "slug": "bank-account",
-          "name": "Bank Account",
-          "uuid": "56cbac7e-8bd8-4cd5-bfc5-0bc512e95de0",
-          "practices": [],
-          "prerequisites": [],
-          "difficulty": 8,
-          "topics": [
-              "basics",
-              "classes",
-              "conditionals",
-              "numbers",
-              "threads"
-          ]
+        "slug": "bank-account",
+        "name": "Bank Account",
+        "uuid": "56cbac7e-8bd8-4cd5-bfc5-0bc512e95de0",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 8,
+        "topics": [
+          "basics",
+          "classes",
+          "conditionals",
+          "numbers",
+          "threads"
+        ]
       },
       {
         "slug": "darts",
@@ -755,10 +778,10 @@
         "prerequisites": [],
         "difficulty": 2,
         "topics": [
-            "basics",
-            "bools",
-            "conditionals",
-            "numbers"
+          "basics",
+          "bools",
+          "conditionals",
+          "numbers"
         ]
       },
       {
@@ -769,12 +792,12 @@
         "prerequisites": [],
         "difficulty": 4,
         "topics": [
-            "bools",
-            "conditionals",
-            "lists",
-            "loops",
-            "numbers",
-            "strings"
+          "bools",
+          "conditionals",
+          "lists",
+          "loops",
+          "numbers",
+          "strings"
         ]
       },
       {
@@ -782,7 +805,7 @@
         "name": "Isbn Verifier",
         "uuid": "5fcc6fd8-1dc7-4493-970a-731c7602b229",
         "practices": [],
-        "prerequisites":[],
+        "prerequisites": [],
         "difficulty": 1,
         "topics": [
           "conditionals",
@@ -794,8 +817,10 @@
         "slug": "simple-linked-list",
         "name": "Simple linked list",
         "uuid": "ffccabe9-9779-4914-9cff-c6f5696c8afe",
-        "practices": ["pointers"],
-        "prerequisites":[],
+        "practices": [
+          "pointers"
+        ],
+        "prerequisites": [],
         "difficulty": 4,
         "status": "beta",
         "topics": [
@@ -840,6 +865,11 @@
       "uuid": "1414040c-4f4f-45ab-b46b-03bc560e2511",
       "slug": "booleans",
       "name": "Booleans"
+    },
+    {
+      "uuid": "bb5ee09c-db6b-41ef-ae17-f3c894c3b09a",
+      "slug": "headers",
+      "name": "Headers"
     }
   ],
   "key_features": [
