@@ -862,6 +862,11 @@
       "name": "Namespaces"
     },
     {
+      "uuid": "1414040c-4f4f-45ab-b46b-03bc560e2511",
+      "slug": "booleans",
+      "name": "Booleans"
+    },
+    {
       "uuid": "bb5ee09c-db6b-41ef-ae17-f3c894c3b09a",
       "slug": "headers",
       "name": "Headers"
