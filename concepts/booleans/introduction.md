@@ -5,20 +5,21 @@ A `bool` is either `true` or `false`.
 
 ## Logical Operators
 
-C++ supports three boolean operators: `!` (NOT), `&&` (AND), and `||` (OR).
-You can also use the alternative versions `not`, `and`, and `or`.
+C++ supports four boolean operators: `!` (NOT), `&&` (AND), `||` (OR), and `^` (XOR).
+You can also use the alternative versions `not`, `and`, `or`, and `xor`.
 
 ```cpp
 true || false // => true
 true && false // => false
 !true // => false
+true ^ false // => true
 not false // => true
 ```
 
 ## Precedence
 
-The three boolean operators each have different _operator precedence_.
-As a consequence, they are evaluated in this order: `!` first, `&&` second, and finally `||`.
+The four boolean operators each have different _operator precedence_.
+As a consequence, they are evaluated in this order: `!` first, `&&` second, `^` third, and finally `||`.
 If you want to force a different ordering, you can enclose a boolean expression in parentheses (ie. `()`), as the parentheses have even higher operator precedence.
 
 ```cpp
