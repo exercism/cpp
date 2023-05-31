@@ -44,7 +44,10 @@
         "concepts": [
           "strings"
         ],
-        "prerequisites": [],
+        "prerequisites": [
+          "basics",
+          "includes"
+        ],
         "status": "wip"
       },
       {
