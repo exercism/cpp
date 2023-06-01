@@ -1,0 +1,8 @@
+{
+  "blurb": "In C++, the array and vector types provide flexible ways to store and access multiple elements of the same data type, with arrays offering fixed-size containers while vectors offer dynamic resizing capabilities, making them suitable for various data storage and manipulation tasks.",
+  "authors": [
+    "vaeng"
+  ],
+  "contributors": [
+  ]
+}

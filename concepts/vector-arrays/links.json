@@ -1,0 +1,10 @@
+[
+    {
+        "url": "https://en.cppreference.com/w/cpp/container/array",
+        "description": "C++ reference on arrays"
+    },
+    {
+        "url": "https://en.cppreference.com/w/cpp/container/vector",
+        "description": "C++ reference on vectors"
+    }
+]

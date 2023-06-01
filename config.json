@@ -878,6 +878,11 @@
       "uuid": "6891847f-4fe2-48a1-9d27-bc079b0d975c",
       "slug": "comparisons",
       "name": "Comparisons"
+    },
+    {
+      "uuid": "1f377a50-ebb2-4203-b4f5-ca90ccf5ad25",
+      "slug": "vector-arrays",
+      "name": "Arrays and Vectors"
     }
   ],
   "key_features": [
