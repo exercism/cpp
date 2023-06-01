@@ -93,6 +93,7 @@
         ],
         "prerequisites": [
           "basics"
+          ]
       },
       {
         "slug": "vehicle-purchase",
