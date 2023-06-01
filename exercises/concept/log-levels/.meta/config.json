@@ -1,22 +1,21 @@
 {
   "authors": [
-    "silvanocerza"
+    "silvanocerza",
+    "vaeng"
   ],
   "files": {
     "solution": [
-      "log_levels.cpp",
-      "log_levels.h"
+      "log_levels.cpp"
     ],
     "test": [
       "log_levels_test.cpp"
     ],
     "exemplar": [
-      ".meta/exemplar.cpp",
-      ".meta/exemplar.h"
+      ".meta/exemplar.cpp"
     ]
   },
   "forked_from": [
     "csharp/log-levels"
   ],
-  "blurb": "TODO: add blurb for strings exercise"
+  "blurb": "Learn about strings by parsing logs."
 }

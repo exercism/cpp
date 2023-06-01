@@ -15,6 +15,7 @@ The goal of this exercise is to teach the student the basics of the Concept of S
 
 - Using standard or custom format strings.
 - Memory and performance characteristics.
+- `string_view`
 
 ## Concepts
 
@@ -24,6 +25,7 @@ The Concepts this exercise unlocks are:
 
 ## Prerequisites
 
-There are no prerequisites.
+- `includes`
+- `basics`
 
 [docs.string]: https://en.cppreference.com/w/cpp/string/basic_string

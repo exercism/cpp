@@ -1,7 +1,6 @@
 # Instructions
 
-In this exercise you'll be processing log-lines.
-
+In this exercise, you'll be processing lines from a logged report.
 Each log line is a string formatted as follows: `"[<LEVEL>]: <MESSAGE>"`.
 
 There are three different log levels:
@@ -12,7 +11,7 @@ There are three different log levels:
 
 You have three tasks, each of which will take a log line and ask you to do something with it.
 
-## 1. Get message from a log line
+## 1. Get the message from a log line
 
 Implement the `log_line::message` method to return a log line's message:
 
@@ -21,9 +20,9 @@ log_line::message("[ERROR]: Invalid operation")
 // => "Invalid operation"
 ```
 
-## 2. Get log level from a log line
+## 2. Get the log level from a log line
 
-Implement the `log_line::log_level` method to return a log line's log level, which should be returned in lowercase:
+Implement the `log_line::log_level` method to return a log line's log level, which should be returned in uppercase:
 
 ```cpp
 log_line::log_level("[ERROR]: Invalid operation")
