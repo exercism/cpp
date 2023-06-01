@@ -93,7 +93,8 @@
         ],
         "prerequisites": [
           "basics"
-          ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "vehicle-purchase",
