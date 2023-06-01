@@ -1,10 +1,11 @@
-# About
+# Introduction
 
+## Numbers
 The built-in number types in C++ can be divided into integers and floating points.
 Integers are whole numbers like `0`, `691`, or `-2`.
 Floating point numbers are numbers with a decimal point like `6.02214076`, `0.1`, or `-1.616`.
 
-## Integers
+### Integers
 The following example shows the declaration and initialization of four different variables 
 
 ```cpp
@@ -27,13 +28,13 @@ For more details on the different representation systems, take a look at [a smal
 You can use an apostrophe to separate digits for easier readability.
 `9'241` is the same as `0b0100'100'0001'1001` or `92'4'1`.
 
-## Floating-Point Numbers
+### Floating-Point Numbers
 
 The floating-point literals come in two flavors. 
 In addition to the intuitive `0.0024` it is possible to use its scientific notation `2.4e-3`.
 The most common floating-point type is `double`.
 
-## Arithmetic
+### Arithmetic
 
 C++ supports `+`, `-`, `*`, `/`, `(` and `)` and `%` to form expressions.
 The result from the operation between two integers is also an integer.
@@ -41,30 +42,5 @@ The result from the operation between two integers is also an integer.
 When one of the involved types is a floating-point type, the result will also be of a floating-point.
 `5.0 / 2` and `5 / 2.0` will return `2.5`.
 `%` is the remainder operator and will return the remainder of an integer division: `5%3` is `2`.
-
-~~~~exercism/advanced
-## Casting
-Casting is the conversion from one type to another.
-If a `double` is needed, an `int` can be used in its place.
-The `5.0 / 2` example from above is handled by an implicit cast of `2` to `2.0`.
-A `double`, that is cast into an `int` might lose information.
-It is good practice to make these casts to another type T explicit via `static_cast<T>`.
-The old C-style cast via `(T)` is discouraged in modern C++, but should be known nonetheless.
-```cpp
-double pi{3.14};
-int about_2_times_pi_cpp{static_cast<int>(pi) * 2};
-// Old C-style cast:
-int about_2_times_pi_c{(int)pi * 2};
-```
-
-## Precision & Representation
-
-Numbers in C++ cannot be abitrarily big.
-`int` for example is represented by 32 bits.
-That is enough for a set of `2^32` numbers - roughly 4 billion.
-Including `0`, this sets the biggest and smallest `int` numbers as `-2^31` and `2^31 - 1`.
-
-Floating point numbers are usually implemented using 15 decimal places of precision, but will vary in representation based on the host system.
-~~~~
 
 [cpp_numerical_bases]: https://cplusplus.com/doc/hex/

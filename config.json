@@ -42,9 +42,13 @@
         "name": "Log Levels",
         "uuid": "62f945e7-0791-46b7-8161-855183f736ba",
         "concepts": [
-          "strings"
+          "strings",
+          "includes"
         ],
-        "prerequisites": [],
+        "prerequisites": [
+          "basics",
+          "namespaces"
+        ],
         "status": "wip"
       },
       {
@@ -55,6 +59,17 @@
           "basics"
         ],
         "prerequisites": [],
+        "status": "wip"
+      },
+      {
+        "uuid": "88baa5ab-dacb-4fab-8f16-4f3ed726b27b",
+        "slug": "freelancer-rates",
+        "name": "Freelancer Rates",
+        "concepts": ["numbers"],
+        "prerequisites": [
+          "basics",
+          "includes"
+        ],
         "status": "wip"
       },
       {
@@ -78,6 +93,20 @@
         ],
         "prerequisites": [
           "basics"
+      },
+      {
+        "slug": "vehicle-purchase",
+        "name": "Vehicle Purchase",
+        "uuid": "e12f3678-202a-4d71-89d8-243ecc90b33a",
+        "concepts": [
+          "comparisons",
+          "if-statements"
+        ],
+        "prerequisites": [
+          "strings",
+          "headers",
+          "booleans",
+          "numbers"
         ],
         "status": "wip"
       }
@@ -861,6 +890,26 @@
       "uuid": "7b9bcf07-b447-4c18-b838-a7f4167ff521",
       "slug": "namespaces",
       "name": "Namespaces"
+    },
+    {
+      "uuid": "d1edc955-7226-4f7d-9ce7-784e3f28a7c3",
+      "slug": "if-statements",
+      "name": "If Statements"
+    },
+    {
+      "uuid": "1414040c-4f4f-45ab-b46b-03bc560e2511",
+      "slug": "booleans",
+      "name": "Booleans"
+    },
+    {
+      "uuid": "bb5ee09c-db6b-41ef-ae17-f3c894c3b09a",
+      "slug": "headers",
+      "name": "Headers"
+    },
+    {
+      "uuid": "6891847f-4fe2-48a1-9d27-bc079b0d975c",
+      "slug": "comparisons",
+      "name": "Comparisons"
     }
   ],
   "key_features": [
