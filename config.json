@@ -111,6 +111,18 @@
           "numbers"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "magician-in-training",
+        "name": "Magician-in-Training",
+        "uuid": "9b125985-9430-472c-9e66-742e75bc3078",
+        "concepts": [
+          "vector-arrays"
+        ],
+        "prerequisites": [
+          "includes"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [

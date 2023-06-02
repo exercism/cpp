@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "vaeng"
+  ],
+  "files": {
+    "solution": [
+      "magician_in_training.cpp"
+    ],
+    "test": [
+      "magician_in_training_test.cpp"
+    ],
+    "exemplar": [
+      ".meta/exemplar.cpp"
+    ]
+  },
+  "forked_from": [
+    "swift/magician-in-training"
+  ],
+  "blurb": "Help Elyse with her Enchantments and learn about arrays and vectors in the process."
+}
