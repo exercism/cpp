@@ -917,6 +917,11 @@
       "uuid": "1f377a50-ebb2-4203-b4f5-ca90ccf5ad25",
       "slug": "vector-arrays",
       "name": "Arrays and Vectors"
+    },
+    {
+      "uuid": "e356069a-09d4-417a-8688-8ab8ccb80a55",
+      "slug": "loops",
+      "name": "Loops"
     }
   ],
   "key_features": [
