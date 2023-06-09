@@ -917,6 +917,11 @@
       "uuid": "1f377a50-ebb2-4203-b4f5-ca90ccf5ad25",
       "slug": "vector-arrays",
       "name": "Arrays and Vectors"
+    },
+    {
+      "uuid": "7a24381f-a7d3-4d3a-93e9-eb7cd19858b4",
+      "slug": "switch",
+      "name": "Switch Statements"
     }
   ],
   "key_features": [
