@@ -26,7 +26,7 @@ switch (int group_size{adults + kids}) {
 
 ## Fall-through
 
-One important thing about the switch construct is that the code will continue to be executed until it stops at a `break` statement.
+One important thing about the switch construct is that the code will continue to execute until it is stopped by a `break` statement.
 This can lead to unexpected behavior.
 
 ```cpp
@@ -43,7 +43,9 @@ switch (int group_size{adults + kids}) {
 // price will be 30!
 ```
 
-The main use case for this feature is a statement, that has several labels:
+The main use case for this feature is a statement, that has several labels.
+The same piece of code is executed for certain switch results.
+This way - in a booking app the called function for the group sizes 2 and 3 can be the same.
 ```cpp
 switch (group_size) {
 case 1:
@@ -51,10 +53,18 @@ case 1:
     break;
 case 2:
 case 3:
-    book_appartment();
+    book_apartment(group_size);
     break;
 default:
     book_house(group_size);
 }
-// book_appartment happens wheng roup_size is 2 or 3
+// book_apartment happens wheng roup_size is 2 or 3
 ```
+
+~~~~exercism/note
+As you have seen C++ the switch statement is very limited when it is compared to other languages.
+Many languages can do switches based on boolean expression or even regular expressions.
+You can think of the C++ version is an extended goto/switch construct.
+Only the switch statement can jump to a label.
+Afterwards all other labels are ignored and you have to use the `break` statement to break out of the code block.
+~~~~
