@@ -746,6 +746,20 @@
         ]
       },
       {
+        "slug": "perfect-numbers",
+        "name": "Perfect Numbers",
+        "uuid": "b5ab8c58-607e-4850-98b4-ac45f4ba3466",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "enums",
+          "conditionals",
+          "loops",
+          "math",
+        ]
+      },
+      {
         "slug": "scrabble-score",
         "name": "Scrabble Score",
         "uuid": "54a0753e-c161-4dfd-a7b0-02dc7a923d82",
