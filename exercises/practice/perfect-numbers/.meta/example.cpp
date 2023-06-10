@@ -1,10 +1,8 @@
-#include "perfect_numbers.h"
-
 #include <cmath>
 #include <numeric>
 #include <stdexcept>
-#include <string>
-#include <vector>
+
+#include "perfect_numbers.h"
 
 using namespace std;
 
