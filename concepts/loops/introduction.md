@@ -1,27 +1,17 @@
 # Introduction
 
-The two most common loop types are the while and the for loop.
-They are used to repeatedly execute some logic.
+Loops are used to repeatedly execute some logic.
+The two most common types are the `while loop` (indefinite looping) and the `for loop` (definite, or counted looping).
+There is also the `for each` loop, that will come up in a later concept.
+
 
 ## General Syntax
 
-The while loop executes its body as long as its condition check is true.
-
-Another variant is the for loop.
-It consists of a header and a code block that contains the body of the loop wrapped in curly brackets.
+The `for loop` consists of a header and a code block that contains the body of the loop wrapped in curly brackets.
 The header consists of 3 components separated by semicolons `;`:  init-statement, condition, and another expression.
 Each of these may be empty.
 
-The code example shows how one loop can be exchanged for the other.
 ```cpp
-
-```cpp
-init-statement;
-while(condition) {
-    some_statement;
-    expression;
-}
-
 for (init-statement; condition; expression) {
   some_statement;
 }
@@ -32,6 +22,18 @@ for (init-statement; condition; expression) {
 The code inside the loop will run as long as this condition evaluates to true.
 As soon as this expression evaluates to false, no more iterations of the loop will run.
 - The **expression** component is some code that will run at the end of each iteration.
+
+
+The `while loop` executes its body as long as its condition check is true.
+The code snippet below shows how to transform a for into a while loop.
+
+```cpp
+init-statement;
+while(condition) {
+    some_statement;
+    expression;
+}
+```
 
 ## Interlude: Increments and Decrements
 
@@ -89,4 +91,4 @@ for (int i{1}; i < 7; ++i) {
 }
 // equal_sum is now 12
 ```
-> Note: it is usually easier to understand the logic of the loop, when the use of break and continue is minimized or entirely avoided.
+> Note: it is usually easier to understand the logic of the loop, when the use of `break` and `continue` is minimized or entirely avoided.
