@@ -1,7 +1,8 @@
 {
   "introduction": {
-    "authors": ["bobahop"],
-    "contributors": []
+    "authors": [
+      "bobahop"
+    ]
   },
   "approaches": [
     {
@@ -9,7 +10,9 @@
       "slug": "vector-of-bools",
       "title": "Vector of bools",
       "blurb": "Use a vector of bools to keep track of composite numbers.",
-      "authors": ["bobahop"]
+      "authors": [
+        "bobahop"
+      ]
     }
   ]
 }
