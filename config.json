@@ -746,6 +746,20 @@
         ]
       },
       {
+        "slug": "perfect-numbers",
+        "name": "Perfect Numbers",
+        "uuid": "b5ab8c58-607e-4850-98b4-ac45f4ba3466",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "enums",
+          "conditionals",
+          "loops",
+          "math"
+        ]
+      },
+      {
         "slug": "scrabble-score",
         "name": "Scrabble Score",
         "uuid": "54a0753e-c161-4dfd-a7b0-02dc7a923d82",
@@ -919,9 +933,9 @@
       "name": "Arrays and Vectors"
     },
     {
-      "uuid": "e356069a-09d4-417a-8688-8ab8ccb80a55",
-      "slug": "loops",
-      "name": "Loops"
+      "uuid": "7a24381f-a7d3-4d3a-93e9-eb7cd19858b4",
+      "slug": "switch",
+      "name": "Switch Statements"
     }
   ],
   "key_features": [
