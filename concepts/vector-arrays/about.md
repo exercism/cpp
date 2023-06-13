@@ -5,7 +5,7 @@ There is `std::array` for containers of a fixed size and `std::vector`, which co
 
 ## Construction
 
-When you declare an array or a vector you need to specify the type of elements, that container will hold.
+When you declare an array or a vector you need to specify the type of elements that container will hold.
 Arrays also need a size.
 Look at these examples to see it in action:
 
@@ -53,13 +53,13 @@ indie_rock.back() = "yeahs";
 
 ## Vector modifiers
 
-As the vector is not fixed in size, it is possible to add or remove elements. Two common functions for that purpose are `emblace_back` and `pop_back`.
+As the vector is not fixed in size, it is possible to add or remove elements. Two common functions for that purpose are `emplace_back` and `pop_back`.
 
 ```cpp
 std::array<std::string, 3> witches {"Holly", "Alyssa", "Shannen"};
 witches.pop_back(); 
 // Shannen is no longer with the witches
-witches.emblace_back("Rose");
+witches.emplace_back("Rose");
 // Rose has joined the team
 ```
 

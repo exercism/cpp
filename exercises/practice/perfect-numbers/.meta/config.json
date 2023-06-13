@@ -1,0 +1,24 @@
+{
+  "authors": [
+    "sbromberger"
+  ],
+  "contributors": [
+    "ferhatelmas"
+  ],
+  "files": {
+    "solution": [
+      "perfect_numbers.cpp",
+      "perfect_numbers.h"
+    ],
+    "test": [
+      "perfect_numbers_test.cpp"
+    ],
+    "example": [
+      ".meta/example.cpp",
+      ".meta/example.h"
+    ]
+  },
+  "blurb": "Determine if a number is perfect, abundant, or deficient based on Nicomachus' (60 - 120 CE) classification scheme for positive integers.",
+  "source": "Taken from Chapter 2 of Functional Thinking by Neal Ford.",
+  "source_url": "https://www.oreilly.com/library/view/functional-thinking/9781449365509/"
+}
