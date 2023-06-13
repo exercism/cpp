@@ -1,5 +1,4 @@
 #include <cmath>
-#include <numeric>
 #include <stdexcept>
 
 #include "perfect_numbers.h"
