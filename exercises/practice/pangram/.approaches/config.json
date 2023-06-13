@@ -1,7 +1,8 @@
 {
   "introduction": {
-    "authors": ["bobahop"],
-    "contributors": []
+    "authors": [
+      "bobahop"
+    ]
   },
   "approaches": [
     {
@@ -9,14 +10,18 @@
       "slug": "bitset-all",
       "title": "bitset.all()",
       "blurb": "Use bitset.all() to return the answer.",
-      "authors": ["bobahop"]
+      "authors": [
+        "bobahop"
+      ]
     },
     {
       "uuid": "c5d71daf-a930-43de-90f5-3c1e3bf750cb",
       "slug": "algorithm-allof",
       "title": "algorithm.all_of()",
       "blurb": "Use algorithm.all_of() to return the answer.",
-      "authors": ["bobahop"]
+      "authors": [
+        "bobahop"
+      ]
     }
   ]
 }
