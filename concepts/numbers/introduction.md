@@ -66,7 +66,7 @@ operation on it.
 x += 5;     // x = x + 5;
 x /= y;     // x = x / y;
 ```
-In the first line, integer value `5` is added to variable `x` and is assigned back to `x`.
+In the first line, integer value `5` is added to existing value of variable `x` and is assigned back to `x`.
 similarly, value of `x` is divided by the value of `y` and is assigned back to `x`.
 
 There are other compound assignment operators which are related to bitwise operations.
