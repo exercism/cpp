@@ -41,4 +41,35 @@ When one of the involved types is a floating-point type, the result will also be
 `5.0 / 2` and `5 / 2.0` will return `2.5`.
 `%` is the remainder operator and will return the remainder of an integer division: `5%3` is `2`.
 
+## Assignment operator
+
+The assignment operator assigns a variable with a literal.
+Always takes place from right to left, and never the other way around.
+
+```cpp
+int x, y;
+x = 5;
+y = 2;
+x = y;
+```
+Here integer value `5` is assigned to the variable `x`, then integer value `2` is assigned to variable `y`.
+Finally value of `y` is copied to `x` and the earlier value `5` will be lost. Consider also that we are only 
+assigning the value of `y` to `x` at the moment of the assignment operation. Therefore, if `y` changes at a
+later moment, it will not affect the value taken by `x`.
+
+Assignment operator can be combined with the other operators(arithmetic & bitwise) known as `compound assignment` 
+operators `+=`, `-=`, `*=`, `/=`, `%=`. These operators modifies the current value of a variable by performing an 
+operation on it.
+
+```cpp
+            // Equivalent 
+x += 5;     // x = x + 5;
+x /= y;     // x = x / y;
+```
+In the first line, integer value `5` is added to variable `x` and is assigned back to `x`.
+similarly, value of `x` is divided by the value of `y` and is assigned back to `x`.
+
+There are other compound assignment operators which are related to bitwise operations.
+`>>=`, `<<=`, `&=`, `^=`, `|=`
+
 [cpp_numerical_bases]: https://cplusplus.com/doc/hex/
