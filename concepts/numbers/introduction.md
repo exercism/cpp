@@ -47,29 +47,38 @@ The assignment operator assigns a variable with a literal.
 Always takes place from right to left, and never the other way around.
 
 ```cpp
-int x, y;
-x = 5;
-y = 2;
-x = y;
+int length = 5;
+int width = 2;
+length = width;
 ```
-Here integer value `5` is assigned to the variable `x`, then integer value `2` is assigned to variable `y`.
-Finally value of `y` is copied to `x` and the earlier value `5` will be lost. Consider also that we are only 
-assigning the value of `y` to `x` at the moment of the assignment operation. Therefore, if `y` changes at a
-later moment, it will not affect the value taken by `x`.
+Here integer value `5` is assigned to the variable `length`.
+Then integer value `2` is assigned to variable `width`.
+Finally value of `width` is copied to the variable `length` and the earlier value `5` will be lost.
+Consider also that we are only assigning the value of `width` to `length` at the moment of the assignment operation.
+Therefore, if the value of `width` changes at a later moment, it will not affect the value taken by `length`.
 
-Assignment operator can be combined with the other operators(arithmetic & bitwise) known as `compound assignment` 
-operators `+=`, `-=`, `*=`, `/=`, `%=`. These operators modifies the current value of a variable by performing an 
-operation on it.
+Assignment operator can be combined with the other operators(arithmetic & bitwise) known as `compound assignment` operators `+=`, `-=`, `*=`, `/=`, `%=`.
+These operators modifies the current value of a variable by performing an operation on it.
 
 ```cpp
-            // Equivalent 
-x += 5;     // x = x + 5;
-x /= y;     // x = x / y;
+// we start with 0 people
+int people{};
+// we need 0 eggs
+int eggs{}; 
+// two people joined:
+people += 2; 
+// people is now 2
+// let's add 3 eggs per person
+eggs += 3 * people;
+// eggs is now 6
 ```
-In the first line, integer value `5` is added to existing value of variable `x` and is assigned back to `x`.
-similarly, value of `x` is divided by the value of `y` and is assigned back to `x`.
+Vairables `people` & `eggs` are initialized to `0`.
+Then, we add integer value `2` over the existing value `0` of the variable `people` and assigne it back to `people`.
+`people` becomes `2` now.
+Later, we add `3` eggs for each person, which turns out to be `6` eggs in total.
+Now add this `6` to existing value `0` of the variable `eggs` and assigne it back to `eggs`.
+`eggs` will be `6` now.
+The equivalent expression would be `people = people + 2` and `eggs = eggs + (3 * people)` 
 
-There are other compound assignment operators which are related to bitwise operations.
-`>>=`, `<<=`, `&=`, `^=`, `|=`
 
 [cpp_numerical_bases]: https://cplusplus.com/doc/hex/
