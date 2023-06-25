@@ -111,6 +111,22 @@
           "numbers"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "making-the-grade",
+        "name": "Making the Grade",
+        "uuid": "b9d0b273-1c48-492a-8c61-44f432c8beff",
+        "concepts": [
+          "loops",
+          "vector-arrays"
+        ],
+        "prerequisites": [
+          "strings",
+          "if-statements",
+          "booleans",
+          "numbers"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
