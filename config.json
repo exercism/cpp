@@ -875,6 +875,19 @@
           "loops",
           "pointers"
         ]
+      },
+      {
+        "slug": "high-scores",
+        "name": "High Scores",
+        "uuid": "10448fb8-60eb-4c67-93e8-488ecbde8676",
+        "practices": [
+          "vector-arrays"
+        ],
+        "prerequisites": [],
+        "difficulty": 4,
+        "status": "beta",
+        "topics": [
+        ]
       }
     ],
     "foregone": [
