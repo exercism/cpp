@@ -6,7 +6,6 @@ Loops are used to repeatedly execute some logic.
 The two most common types are the `while loop` (indefinite looping) and the `for loop` (definite, or counted looping).
 There is also the `for each` loop, that will come up in a later concept.
 
-
 ### General Syntax
 
 The `for loop` consists of a header and a code block that contains the body of the loop wrapped in curly brackets.
@@ -14,23 +13,22 @@ The header consists of 3 components separated by semicolons `;`:  init-statement
 Each of these may be empty.
 
 ```cpp
-for (init-statement; condition; expression) {
+for (init_statement; condition; expression) {
   some_statement;
 }
 ```
 
-- The **init** component is some code that runs only once before the loop starts.
+- The **init_statement** component is some code that runs only once before the loop starts.
 - The **condition** component must be some expression that evaluates to a boolean and controls when the loop should stop.
 The code inside the loop will run as long as this condition evaluates to true.
 As soon as this expression evaluates to false, no more iterations of the loop will run.
 - The **expression** component is some code that will run at the end of each iteration.
 
-
 The `while loop` executes its body as long as its condition check is true.
 The code snippet below shows how to transform a for into a while loop.
 
 ```cpp
-init-statement;
+init_statement;
 while(condition) {
     some_statement;
     expression;
@@ -93,4 +91,6 @@ for (int i{1}; i < 7; ++i) {
 }
 // equal_sum is now 12
 ```
-> Note: it is usually easier to understand the logic of the loop, when the use of `break` and `continue` is minimized or entirely avoided.
+~~~~exercism/note
+It is usually easier to understand the logic of the loop, when the use of `break` and `continue` is minimized or entirely avoided.
+~~~~
