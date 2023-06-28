@@ -32,6 +32,7 @@ This concept exercise should also teach how to interrupt or change the normal fl
 - `strings`
 - `comparisons`
 - `vector-arrays`
+- `loops`
 
 ## Resources
 

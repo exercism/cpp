@@ -117,10 +117,10 @@
         "name": "Making the Grade",
         "uuid": "b9d0b273-1c48-492a-8c61-44f432c8beff",
         "concepts": [
-          "loops",
           "vector-arrays"
         ],
         "prerequisites": [
+          "loops",
           "strings",
           "if-statements",
           "booleans",
