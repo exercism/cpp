@@ -18,14 +18,14 @@ for (init_statement; condition; expression) {
 }
 ```
 
-- The **init_statement** component is some code that runs only once before the loop starts.
-- The **condition** component must be some expression that evaluates to a boolean and controls when the loop should stop.
-The code inside the loop will run as long as this condition evaluates to true.
-As soon as this expression evaluates to false, no more iterations of the loop will run.
+- The **init_statement** component is code that runs only once before the loop starts.
+- The **condition** component must be some expression that evaluates to a `boolean` and controls when the loop should stop.
+The code inside the loop will run as long as this condition evaluates to `true`.
+As soon as this expression evaluates to `false`, no more iterations of the loop will run.
 - The **expression** component is some code that will run at the end of each iteration.
 
-The `while loop` executes its body as long as its condition check is true.
-The code snippet below shows how to transform a for into a while loop.
+The `while loop` executes its body as long as its **condition** check is `true`.
+The code snippet below shows how to transform a `for` into a `while loop`.
 
 ```cpp
 init_statement;
@@ -37,10 +37,10 @@ while(condition) {
 
 ### Interlude: Increments and Decrements
 
-When working with loops is often required to add 1 or subtract 1 from a counter variable.
-This is so common, that the operation has special operators: `++` and `--`.
+When working with loops it is often required to add 1 or subtract 1 from a counter variable which keeps track of the iterations.
+This is so common, that the incrementing/decrementing actions have special operators: `++` and `--`.
 
-They come in a prefix and a postfix form.
+They come in a **prefix** and a **postfix** form.
 The prefix changes the variable before use in the statement and the postfix version afterward.
 You probably want the prefix version most of the time.
 
@@ -54,7 +54,7 @@ int c{a++};
 
 ### For Loops - An example
 
-The init component usually sets up a counter variable, the condition checks whether the loop should be continued or stopped and the post component usually increments the counter at the end of each repetition.
+The _init component_ usually sets up a counter variable, the _condition_ checks whether the loop should be continued or stopped and the _post component_ usually increments the counter at the end of each repetition.
 
 ```cpp
 int sum{0}
@@ -93,4 +93,5 @@ for (int i{1}; i < 7; ++i) {
 ```
 ~~~~exercism/note
 It is usually easier to understand the logic of the loop, when the use of `break` and `continue` is minimized or entirely avoided.
+Both keywords skip certain sections of the code and make it often more difficult to follow along.
 ~~~~
