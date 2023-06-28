@@ -1,3 +1,3 @@
 # Introduction
 
-%{concept:loops}
+%{concept:vector-arrays}

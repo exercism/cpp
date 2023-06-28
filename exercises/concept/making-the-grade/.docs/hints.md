@@ -33,7 +33,7 @@ Also being familiar with the following can help with completing the tasks:
 
 ## 5. Matching Names to Scores
 
-- If both lists are the same length and sorted the same way, could you use the `index` from one to retrieve a `value` from the other?
+- If both containers are the same length and sorted the same way, could you use the `index` from one to retrieve a `value` from the other?
 
 ## 6. A "Perfect" Score
 

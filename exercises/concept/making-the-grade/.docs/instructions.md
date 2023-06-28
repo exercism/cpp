@@ -7,9 +7,12 @@ You decide to make things a little more interesting by putting together some fun
 ## 1. Rounding Scores
 
 While you can give "partial credit" on exam questions, overall exam scores have to be `int`s.
-So before you can do anything else with the class scores, you need to go through the grades and turn any `double` scores into `int`s. Lucky for you, C++ can cast one type into another with `static_cast`.
+So before you can do anything else with the class scores, you need to go through the grades and turn any `double` scores into `int`s.
 
 Create the function `round_down_scores()` that takes a `vector` of `student_scores`.
+The schools' requested rounding is a truncation.
+Lucky for you, C++ can cast one type into another with `static_cast`.
+The `static_cast` conversion from `double` to `int` cuts off any digit after the decimal.
 This function should take the input `vector` and `return` a new vector with all the scores converted to `int`s.
 
 ```cpp
@@ -79,12 +82,12 @@ letter_grades(88);
 
 ## 5. Matching Names to Scores
 
-You have a list of exam scores in descending order, and another list of student names also sorted in descending order by their exam scores.
-You would like to match each student name with their exam score and print out an overall class ranking.
+You have exam scores in descending order, and the respective student names (sorted in the order of their exam scores).
+You would like to match each student's name with their exam score and print out an overall class ranking.
 
 Create the function `student_ranking()` with parameters `student_scores` and `student_names`.
 Match each student name on the student_names `vector` with their score from the student_scores `vector`.
-You can assume each argument `vector` is be sorted from highest score(er) to lowest score(er).
+You can assume each argument `vector` is sorted from highest score(er) to lowest score(er).
 The function should return a `vector` of strings with the format `<rank>. <student name>: <student score>`.
 
 ```cpp
