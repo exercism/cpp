@@ -127,6 +127,19 @@
           "numbers"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "interest-is-interesting",
+        "name": "Interest is interesting",
+        "uuid": "6be13d54-4d1e-448e-a65d-c5d3d8abbfe0",
+        "concepts": [
+          "loops"
+        ],
+        "prerequisites": [
+          "comparisons",
+          "if-statements"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
