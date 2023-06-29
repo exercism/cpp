@@ -5,7 +5,6 @@ None of the functions that you are tasked to write should change the scores of t
 
 If you want some extra practice, you can implement a function that adds new scores to the game.
 
-[vector] : https://en.cppreference.com/w/cpp/container/vector
-[algorithm] : https://en.cppreference.com/w/cpp/algorithm
-[immutability] : https://en.wikipedia.org/wiki/Immutable_object
-
+[vector]: https://en.cppreference.com/w/cpp/container/vector
+[algorithm]: https://en.cppreference.com/w/cpp/algorithm
+[immutability]: https://en.wikipedia.org/wiki/Immutable_object
