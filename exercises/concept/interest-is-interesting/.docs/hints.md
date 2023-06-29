@@ -15,8 +15,8 @@
 
 ## 4. Calculate the years before reaching the desired balance
 
-- To calculate the years, one can keep looping until the desired balance is reached using a [`for` loop][for].
+- To calculate the years, one can keep looping until the desired balance is reached using a [`for`][for] loop.
 - There is a special [operator][increment] to increment values by 1.
 
-[for] : https://www.learncpp.com/cpp-tutorial/introduction-to-loops-and-while-statements/
-[increment] : https://www.learncpp.com/cpp-tutorial/increment-decrement-operators-and-side-effects/
+[for]: https://www.learncpp.com/cpp-tutorial/introduction-to-loops-and-while-statements/
+[increment]: https://www.learncpp.com/cpp-tutorial/increment-decrement-operators-and-side-effects/
