@@ -1,0 +1,18 @@
+{
+  "authors": [
+    "vaeng"
+  ],
+  "files": {
+    "solution": [
+      "making_the_grade.cpp"
+    ],
+    "test": [
+      "making_the_grade_test.cpp"
+    ],
+    "exemplar": [
+      ".meta/exemplar.cpp"
+    ]
+  },
+  "icon": "grep",
+  "blurb": "Learn about arrays and vectors by grading and organizing your students exam scores."
+}

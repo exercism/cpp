@@ -113,6 +113,22 @@
         "status": "wip"
       },
       {
+        "slug": "making-the-grade",
+        "name": "Making the Grade",
+        "uuid": "b9d0b273-1c48-492a-8c61-44f432c8beff",
+        "concepts": [
+          "vector-arrays"
+        ],
+        "prerequisites": [
+          "loops",
+          "strings",
+          "if-statements",
+          "booleans",
+          "numbers"
+        ],
+        "status": "wip"
+      },
+      {
         "slug": "interest-is-interesting",
         "name": "Interest is interesting",
         "uuid": "6be13d54-4d1e-448e-a65d-c5d3d8abbfe0",
