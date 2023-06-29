@@ -4,14 +4,14 @@
 
 In C++, you can compare values using the comparison operators.
 
-| Comparison        | Operator  |
-| ------------------| --------- |
-| equal             | `==`      |
-| not equal         | `!=`      |
-| less              | `<`       |
-| less or equal     | `<=`      |
-| greater           | `>`       |
-| greater or equal  | `>=`      |
+| Comparison       | Operator |
+| ---------------- | -------- |
+| equal            | `==`     |
+| not equal        | `!=`     |
+| less             | `<`      |
+| less or equal    | `<=`     |
+| greater          | `>`      |
+| greater or equal | `>=`     |
 
 The result of these comparisons is always a boolean value:
 
@@ -29,7 +29,7 @@ Here are some common examples:
 ```cpp
 bool eq3 == 3; // false, integer comparison
 
-bool eq4 = 2.1 != 2.2; // true, float comparison 
+bool eq4 = 2.1 != 2.2; // true, float comparison
 
 bool eq5 = "hello" == "hello"; // true, string comparison
 ```
@@ -89,4 +89,4 @@ if (int v{2 * num}; v > 10) {
 // => 14
 ```
 
-> Note: any variables created in the initialization cannot be accesed after the end of the if statement.
+> Note: any variables created in the initialization cannot be accessed after the end of the if statement.

@@ -9,7 +9,7 @@ There is also the `for each` loop, that will come up in a later concept.
 ### General Syntax
 
 The `for loop` consists of a header and a code block that contains the body of the loop wrapped in curly brackets.
-The header consists of 3 components separated by semicolons `;`:  init-statement, condition, and another expression.
+The header consists of 3 components separated by semicolons `;`: init-statement, condition, and another expression.
 Each of these may be empty.
 
 ```cpp
@@ -20,8 +20,8 @@ for (init_statement; condition; expression) {
 
 - The **init_statement** component is code that runs only once before the loop starts.
 - The **condition** component must be some expression that evaluates to a `boolean` and controls when the loop should stop.
-The code inside the loop will run as long as this condition evaluates to `true`.
-As soon as this expression evaluates to `false`, no more iterations of the loop will run.
+  The code inside the loop will run as long as this condition evaluates to `true`.
+  As soon as this expression evaluates to `false`, no more iterations of the loop will run.
 - The **expression** component is some code that will run at the end of each iteration.
 
 The `while loop` executes its body as long as its **condition** check is `true`.
@@ -63,7 +63,7 @@ for (int i{1}; i < 10; ++i) {
 }
 ```
 
-This loop will sum the numbers from `1` to `9` (including `9`). 
+This loop will sum the numbers from `1` to `9` (including `9`).
 
 ### Break and Continue
 
@@ -91,7 +91,8 @@ for (int i{1}; i < 7; ++i) {
 }
 // equal_sum is now 12
 ```
-~~~~exercism/note
+
+```exercism/note
 It is usually easier to understand the logic of the loop, when the use of `break` and `continue` is minimized or entirely avoided.
 Both keywords skip certain sections of the code and make it often more difficult to follow along.
-~~~~
+```

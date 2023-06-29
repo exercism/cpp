@@ -1,4 +1,5 @@
 # Instructions
+
 In this exercise, you'll be writing code to help a freelancer communicate with a project manager.
 Your task is to provide a few utilities to quickly calculate daily and monthly rates, optionally with a given discount.
 

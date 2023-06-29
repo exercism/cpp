@@ -26,5 +26,5 @@
 
 - assert that `monthly_rate` calls `apply_discount`
 - assert that `monthly_rate` calls `daily_rate`
-- assert that `days_in_budget` calls `apply_discount` 
+- assert that `days_in_budget` calls `apply_discount`
 - assert that `days_in_budget` calls `daily_rate`

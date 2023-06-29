@@ -18,7 +18,7 @@ Also being familiar with the following can help with completing the tasks:
 
 ## 2. Non-Passing Students
 
-- A results counter does need to be set up and _incremented_ -- you'll want to `return` the count of non-passing students when the loop terminates. 
+- A results counter does need to be set up and _incremented_ -- you'll want to `return` the count of non-passing students when the loop terminates.
 
 ## 3. The "Best"
 
@@ -27,7 +27,7 @@ Also being familiar with the following can help with completing the tasks:
 
 ## 4. Calculating Letter Grades
 
-- These are _lower thresholds_.  The _lower threshold_ for a "D" is a score of **41**, since an "F" is **<= 40**.
+- These are _lower thresholds_. The _lower threshold_ for a "D" is a score of **41**, since an "F" is **<= 40**.
 - `static_cast<int>` without parameters should round off increments nicely.
 - You are expected to return an array, not a vector.
 
