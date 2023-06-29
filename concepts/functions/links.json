@@ -1,0 +1,10 @@
+[
+    {
+        "url": "https://cplusplus.com/doc/tutorial/functions/",
+        "description": "C++ reference for functions"
+    },
+    {
+        "url": "https://cplusplus.com/doc/tutorial/functions2/",
+        "description": "C++ reference for function overloadings and function templates"
+    }
+]
