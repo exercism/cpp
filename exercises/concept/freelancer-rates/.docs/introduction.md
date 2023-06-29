@@ -1,12 +1,14 @@
 # Introduction
 
 ## Numbers
+
 The built-in number types in C++ can be divided into integers and floating points.
 Integers are whole numbers like `0`, `691`, or `-2`.
 Floating point numbers are numbers with a decimal point like `6.02214076`, `0.1`, or `-1.616`.
 
 ### Integers
-The following example shows the declaration and initialization of four different variables 
+
+The following example shows the declaration and initialization of four different variables:
 
 ```cpp
 int m_morales{9241};              // base 10: 0-9
@@ -15,6 +17,7 @@ int m_gargan{0b10010000011001};   // base  2: 0-1
 int b_reilly{022031};             // base  8: 0-7
                                   // Leading with a 0 not the letter o.
 ```
+
 When you assign a value to an `int` variable, you can do so directly with a literal.
 A literal is a hard-coded number like `9241`.
 There are different integer literals for several bases of the representation.
@@ -30,7 +33,7 @@ You can use an apostrophe to separate digits for easier readability.
 
 ### Floating-Point Numbers
 
-The floating-point literals come in two flavors. 
+The floating-point literals come in two flavors.
 In addition to the intuitive `0.0024` it is possible to use its scientific notation `2.4e-3`.
 The most common floating-point type is `double`.
 

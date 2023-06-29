@@ -1,4 +1,5 @@
 # Introduction
+
 ### Includes
 
 In general, you don't want to reinvent the wheel when it comes to programming.
@@ -12,7 +13,7 @@ During compilation, the line with the directive is replaced by the content of th
 Namespaces are kept as they are in the original file after includes.
 
 ### The Standard Library
- 
+
 The standard library offers many common functions, algorithms, and data structures.
 The standard library uses the `std` namespace.
 
@@ -37,13 +38,13 @@ If you want to include local files you would use double quotes: `#include "myfil
 
 ## Strings
 
-A `string` in C++ is a mutable object that represents text as a sequence of characters (letters, digits, punctuation, etc.). 
+A `string` in C++ is a mutable object that represents text as a sequence of characters (letters, digits, punctuation, etc.).
 Strings are manipulated by calling the string's methods.
 
 ### Strings Library
 
 In C++ the string type and the associated functions have to be included from the strings library before usage.
-You can do so by adding  `#include <string>` to the top of your file.
+You can do so by adding `#include <string>` to the top of your file.
 They will then populate the `std` namespace.
 The string literal uses the double quote character: `"`.
 
@@ -69,7 +70,7 @@ Later in the syllabus, you will learn more about member functions and the connec
 ```cpp
 std::string qualification{"awesome"};
 // 1st argument: from the index to the end of the string:
-std::string who_is_awesome = qualification.substr(5); 
+std::string who_is_awesome = qualification.substr(5);
 // => "me"
 
 // 2nd optional argument for the length:
@@ -77,7 +78,6 @@ std::string material{"haunted books"};
 std::string ghost = material.substr(8, 3);
 // => "boo"
 ```
-
 
 The `find` function is also very useful.
 It is called as a member function on the string and takes a string as the argument.

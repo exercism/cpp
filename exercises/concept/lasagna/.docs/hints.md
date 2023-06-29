@@ -3,7 +3,7 @@
 ## General
 
 - Don't forget the `;` after each statement.
-- You can define an integer with `int myInteger = 44;`. 
+- You can define an integer with `int myInteger = 44;`.
 
 ## 1. Get the baking time.
 

@@ -8,7 +8,7 @@
 
 ## Out of scope
 
-- 
+-
 
 ## Concepts
 

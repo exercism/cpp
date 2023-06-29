@@ -24,4 +24,4 @@
 - The function must return a boolean value.
 - You can use the boolean operators [`&&`][logical operators] and [`!`][logical operators] to combine the arguments and results of one of the previously implemented functions.
 
-[logical operators]:  https://en.cppreference.com/w/cpp/language/operator_logical
+[logical operators]: https://en.cppreference.com/w/cpp/language/operator_logical
