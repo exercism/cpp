@@ -29,12 +29,12 @@ int cube_me(int a) {
 }
 ```
 
-```exercism/note
+~~~~exercism/note
 Standard libraries are included with angled braces `<>` instead of double quotes `"`.
 The difference is the location, where the compiler searches for the respective files.
 The search in the current project is skipped for the angled braces version, and it directly starts in the system's include directories.
 If you want to include local files you would use double quotes: `#include "myfile"`
-```
+~~~~
 
 ## Strings
 

@@ -92,7 +92,7 @@ for (int i{1}; i < 7; ++i) {
 // equal_sum is now 12
 ```
 
-```exercism/note
+~~~~exercism/note
 It is usually easier to understand the logic of the loop, when the use of `break` and `continue` is minimized or entirely avoided.
 Both keywords skip certain sections of the code and make it often more difficult to follow along.
-```
+~~~~
