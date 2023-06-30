@@ -15,6 +15,8 @@ This value will then become the default for newly created objects from this clas
 
 Classes offer the option to restrict access to their members.
 The two basic cases are `private` and `public`.
+`private` members are not accessible from outside the class.
+`public` members can be called freely.
 All members are `private` by default and need to be explicitly marked to be usable outside of the class.
 
 ## Basic example
@@ -54,7 +56,8 @@ silverhand.damage = 500;
 
 Constructors offer the possibility to assign values to member variables at object creation.
 They have the same name as the `class` and do not have return type.
-A class can have several constructors:
+A class can have several constructors.
+This is useful if you are not always in need to set all variables.
 
 ```cpp
 class Wizzard {
@@ -79,8 +82,9 @@ Wizzard vecna{"Vecna", 50}; // deals 50 damage
 ```
 
 Constructors are a big topic and have many nuances.
-If you are not explicitly defining a `constructor` for your `class`, the compiler will do the job for you.
+If you are not explicitly defining a `constructor` for your `class`, then - and only then - the compiler will do the job for you.
 This has happened in the first example above.
+The _silverhand_ object is created by calling the default constructor, no arguments were passed.
 All variables are set to the value that was stated in the definition of the class.
 If you had not given any values in that definition, the variables would be uninitialized, which might have unintended consequences.
 
