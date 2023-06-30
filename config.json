@@ -983,6 +983,11 @@
       "uuid": "7a24381f-a7d3-4d3a-93e9-eb7cd19858b4",
       "slug": "switch",
       "name": "Switch Statements"
+    },
+    {
+      "uuid": "fc00966e-dc25-46a6-8883-d6106c7d0774",
+      "slug": "classes",
+      "name": "Classes"
     }
   ],
   "key_features": [
