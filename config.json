@@ -140,6 +140,19 @@
           "if-statements"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "ellens-alien-game",
+        "name": "Ellen's Alien Game",
+        "uuid": "cb6915ba-1539-4c4c-8313-38bfc69c4531",
+        "concepts": [
+          "classes"
+        ],
+        "prerequisites": [
+          "comparisons",
+          "if-statements"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
