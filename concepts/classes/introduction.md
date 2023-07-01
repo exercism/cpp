@@ -1,6 +1,6 @@
 # Introduction
 
-It is time to get to one of the core principles of C++: object-oriented programming (OOP).
+It is time to get to one of the core paradigms of C++: object-oriented programming (OOP).
 OOP is centered around `classes` - user-defined types of data with their own set of related functions.
 We will start with the basics and will cover more advanced topics further down the syllabus tree.
 
@@ -26,13 +26,13 @@ Notice the `;` after the definition.
 
 ```cpp
 class Wizzard {
-  public:
-    int cast_spell() {
+  public:               // from here on all members are accessible publicly
+    inc cast_spell() {  // defines the public member function cast_spell
       return damage;
     }
-    std::string name{};
-  private:
-    int damage{5};
+    std::string name{}; // defines the public member variable `name`
+  private:              // from here on all members are private
+    int damage{5};      // defines the private member variable `damage`
 };
 
 ```
@@ -55,9 +55,9 @@ silverhand.damage = 500;
 ## Constructors
 
 Constructors offer the possibility to assign values to member variables at object creation.
-They have the same name as the `class` and do not have return type.
+They have the same name as the `class` and do not have a return type.
 A class can have several constructors.
-This is useful if you are not always in need to set all variables.
+This is useful if you do not always have a need to set all variables.
 
 ```cpp
 class Wizzard {
@@ -86,14 +86,17 @@ If you are not explicitly defining a `constructor` for your `class`, then - and 
 This has happened in the first example above.
 The _silverhand_ object is created by calling the default constructor, no arguments were passed.
 All variables are set to the value that was stated in the definition of the class.
-If you had not given any values in that definition, the variables would be uninitialized, which might have unintended consequences.
+If you had not given any values in that definition, the variables might be uninitialized, which might have unintended consequences.
 
+~~~~exercism/note
 ## Structs
 
-Structs are a holdover from the C past that developed into C++.
+Structs came from the language's original C roots and are as old as C++ itself.
 They are effectively the same thing as `classes` with one important exception.
 By default, everything in a `class` is `private`.
-Structs, on the other hand are `public` until defined otherwise.
+Structs, on the other hand, are `public` until defined otherwise.
 Conventionally, the `struct` keyword is often used for **data-only structures**.
-The `class` keyword is preferred for objects that have both data **and** function members.
-The class keyword is preferred for objects that have both data and functions.
+The `class` keyword is preferred for objects that need to ensure certain properties.
+Such an invariant could be that the `damage` of your `Wizzard` `class` cannot turn negative.
+The `damage` variable is private and any function that changes the damage would ensure the invariant is preserved.
+~~~~
