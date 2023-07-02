@@ -1,5 +1,4 @@
 # About
-
 The built-in number types in C++ can be divided into integers and floating points.
 Integers are whole numbers like `0`, `691`, or `-2`.
 Floating point numbers are numbers with a decimal point like `6.02214076`, `0.1`, or `-1.616`.
@@ -42,29 +41,44 @@ When one of the involved types is a floating-point type, the result will also be
 `5.0 / 2` and `5 / 2.0` will return `2.5`.
 `%` is the remainder operator and will return the remainder of an integer division: `5%3` is `2`.
 
-~~~~exercism/advanced
-## Casting
-Casting is the conversion from one type to another.
-If a `double` is needed, an `int` can be used in its place.
-The `5.0 / 2` example from above is handled by an implicit cast of `2` to `2.0`.
-A `double`, that is cast into an `int` might lose information.
-It is good practice to make these casts to another type T explicit via `static_cast<T>`.
-The old C-style cast via `(T)` is discouraged in modern C++, but should be known nonetheless.
+## Assignment operator
+
+The assignment operator assigns a variable with a literal.
+Always takes place from right to left, and never the other way around.
+
 ```cpp
-double pi{3.14};
-int about_2_times_pi_cpp{static_cast<int>(pi) * 2};
-// Old C-style cast:
-int about_2_times_pi_c{(int)pi * 2};
+int length = 5;
+int width = 2;
+length = width;
 ```
+Here integer value `5` is assigned to the variable `length`.
+Then integer value `2` is assigned to variable `width`.
+Finally value of `width` is copied to the variable `length` and the earlier value `5` will be lost.
+Consider also that we are only assigning the value of `width` to `length` at the moment of the assignment operation.
+Therefore, if the value of `width` changes at a later moment, it will not affect the value taken by `length`.
 
-## Precision & Representation
+Assignment operator can be combined with the other operators(arithmetic & bitwise) known as `compound assignment` operators `+=`, `-=`, `*=`, `/=`, `%=`.
+These operators modifies the current value of a variable by performing an operation on it.
 
-Numbers in C++ cannot be abitrarily big.
-`int` for example is represented by 32 bits.
-That is enough for a set of `2^32` numbers - roughly 4 billion.
-Including `0`, this sets the biggest and smallest `int` numbers as `-2^31` and `2^31 - 1`.
+```cpp
+// we start with 0 people
+int people{};
+// we need 0 eggs
+int eggs{}; 
+// two people joined:
+people += 2; 
+// people is now 2
+// let's add 3 eggs per person
+eggs += 3 * people;
+// eggs is now 6
+```
+Vairables `people` & `eggs` are initialized to `0`.
+Then, we add integer value `2` over the existing value `0` of the variable `people` and assigne it back to `people`.
+`people` becomes `2` now.
+Later, we add `3` eggs for each person, which turns out to be `6` eggs in total.
+Now add this `6` to existing value `0` of the variable `eggs` and assigne it back to `eggs`.
+`eggs` will be `6` now.
+The equivalent expression would be `people = people + 2` and `eggs = eggs + (3 * people)` 
 
-Floating point numbers are usually implemented using 15 decimal places of precision, but will vary in representation based on the host system.
-~~~~
 
 [cpp_numerical_bases]: https://cplusplus.com/doc/hex/
