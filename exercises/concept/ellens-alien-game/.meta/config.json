@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "vaeng"
+  ],
+  "files": {
+    "solution": [
+      "ellens_alien_game.cpp"
+    ],
+    "test": [
+      "ellens_alien_game_test.cpp"
+    ],
+    "exemplar": [
+      ".meta/exemplar.cpp"
+    ]
+  },
+  "forked_from": [
+    "python/ellens-alien-game"
+  ],
+  "icon": "character-study",
+  "blurb": "Learn about classes by creating an Alien for Ellen's game."
+}
