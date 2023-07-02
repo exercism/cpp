@@ -13,10 +13,9 @@ The goal of this exercise is to introduce the student to the concept of classes.
 - Know how to create a class.
 - Know how to create objects.
 - Understand that initializing a class creates an object.
-- Know about 'constructors' and how they are used to initialize the object upon instantiation.
+- Know about `constructors` and how they are used to initialize the object upon instantiation.
 - Know that `constructors` are called upon initialization/object creation.
 - Know what a member function is and how it differs from a non-member function.
-- Know how to create a member function.
 - Implement member variables.
 
 ## Out of scope
@@ -24,6 +23,7 @@ The goal of this exercise is to introduce the student to the concept of classes.
 - Inheritance
 - Constructors and member initializer lists
 - the protected keyword
+- static members
 
 ## Concepts
 

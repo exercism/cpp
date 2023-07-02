@@ -11,24 +11,25 @@ We will start with the basics and will cover more advanced topics further down t
 Classes can have **member variables** and **member functions**.
 They are accessed by the **member selection** operator `.`.
 Just as variables outside of `classes`, it is advisable to initialize member variables with a value upon declaration.
-This value will then become the default for newly created objects from this class.
+This value will then become the default for newly created objects of this class.
 
 ### Encapsulation and Information Hiding
 
 Classes offer the option to restrict access to their members.
-The two basic cases are `private` and `public`.
+The two basic `access specifiers` are `private` and `public`.
 `private` members are not accessible from outside the class.
-`public` members can be called freely.
-All members are `private` by default and need to be explicitly marked to be usable outside of the class.
+`public` members can be accessed freely.
+All members of a `class` are `private` by default.
+Only members explicitly marked with `public` are freely usable outside of the class.
 
 ### Basic example
 
-The definition of a new `class` can be seen in the following example.
-Notice the `;` after the definition.
+The definition of a `class` can be seen in the following example.
+Notice the `;` after the definition:
 
 ```cpp
 class Wizzard {
-  public:               // from here on all members are accessible publicly
+  public:               // from here on all members are publicly accessible
     inc cast_spell() {  // defines the public member function cast_spell
       return damage;
     }
@@ -39,19 +40,22 @@ class Wizzard {
 
 ```
 
-You can access all variables from within the class.
+You can access all member variables from within the class.
 Take a look at `damage` inside the `cast_spell` function.
-You cannot read or change `private`  members outside of the class:
+You cannot read or change `private` members outside of the class:
 
 ```cpp
 Wizzard silverhand{};
 // calling the `cast_spell` function is okay, it is public:
 iggwilv.cast_spell();
 // => 5
+
 // name is public and can be changed:
 silverhand.name = "Laeral";
-// damage is private -> Compilation error
+
+// damage is private:
 silverhand.damage = 500; 
+ // => Compilation error
 ```
 
 ### Constructors
@@ -60,6 +64,8 @@ Constructors offer the possibility to assign values to member variables at objec
 They have the same name as the `class` and do not have a return type.
 A class can have several constructors.
 This is useful if you do not always have a need to set all variables.
+Sometimes you might want to keep everything at default but change the `name` variable.
+In the case of a significant Wizzard you might want to change the damage as well, so you need two `constructors`.
 
 ```cpp
 class Wizzard {
