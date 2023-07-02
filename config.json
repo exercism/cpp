@@ -183,8 +183,12 @@
         "slug": "reverse-string",
         "name": "Reverse String",
         "uuid": "c6946af0-3c2f-4f76-8b30-a1643cd5be63",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "loops"
+        ],
+        "prerequisites": [
+          "strings"
+        ],
         "difficulty": 2,
         "topics": [
           "strings"
@@ -406,8 +410,12 @@
         "slug": "allergies",
         "name": "Allergies",
         "uuid": "80ae6a8e-8464-4f3a-afed-14d424757413",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "classes"
+        ],
+        "prerequisites": [
+          "strings"
+        ],
         "difficulty": 3,
         "topics": [
           "bitwise_operations",
@@ -602,8 +610,12 @@
         "slug": "bob",
         "name": "Bob",
         "uuid": "d80210b8-45e8-4e5c-8b07-9e87c33c5959",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "loops"
+        ],
+        "prerequisites": [
+          "strings"
+        ],
         "difficulty": 5,
         "topics": [
           "conditionals",
@@ -729,8 +741,12 @@
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "1035aa3f-030a-425b-84f1-1967f344d155",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "loops"
+        ],
+        "prerequisites": [
+          "includes"
+        ],
         "difficulty": 3,
         "topics": [
           "algorithms",
@@ -910,7 +926,6 @@
         ],
         "prerequisites": [],
         "difficulty": 4,
-        "status": "beta",
         "topics": [
           "classes",
           "conditionals",
@@ -925,9 +940,10 @@
         "practices": [
           "vector-arrays"
         ],
-        "prerequisites": [],
+        "prerequisites": [
+          "classes"
+        ],
         "difficulty": 4,
-        "status": "beta",
         "topics": [
         ]
       }
