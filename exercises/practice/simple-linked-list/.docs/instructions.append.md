@@ -11,4 +11,4 @@ The tests use the functions as they are supplied in `simple_linked_list.cpp`, do
 
 ## Can I use smart pointers?
 
-Although the header-file includes raw pointers, you are free to chose a different implementation.
+Although the header-file includes raw pointers, you are free to choose a different implementation.
