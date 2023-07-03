@@ -101,7 +101,6 @@
         ],
         "prerequisites": [
           "strings",
-          "headers",
           "booleans",
           "numbers"
         ]
