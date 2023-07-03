@@ -1,3 +1,7 @@
+# Instructions append
+ 
+## Some Additional Notes for C++ Implementation
+
 This exercise uses the [vector container][vector].
 You might find it useful to use the [algorithm][algorithm] header to solve this exercise.
 
