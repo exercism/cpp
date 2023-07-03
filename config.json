@@ -161,8 +161,12 @@
         "slug": "leap",
         "name": "Leap",
         "uuid": "76a840c7-24f1-455d-b62e-da42b13f8dd5",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "if-statements"
+        ],
+        "prerequisites": [
+          "booleans"
+        ],
         "difficulty": 1,
         "topics": [
           "conditionals",
@@ -221,7 +225,10 @@
         "slug": "raindrops",
         "name": "Raindrops",
         "uuid": "9155f4ea-3566-4a57-a2c5-76535d931ccc",
-        "practices": [],
+        "practices": [
+          "strings",
+          "if-statements"
+        ],
         "prerequisites": [],
         "difficulty": 2,
         "topics": [
@@ -316,8 +323,12 @@
         "slug": "difference-of-squares",
         "name": "Difference of Squares",
         "uuid": "46cb230c-8ce9-431d-9dea-a195a3abd117",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "numbers"
+        ],
+        "prerequisites": [
+          "loops"
+        ],
         "difficulty": 3,
         "topics": [
           "loops",
@@ -351,8 +362,12 @@
         "slug": "sieve",
         "name": "Sieve",
         "uuid": "7ea05dd1-2c3c-499e-8608-dc76d30c5457",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "vector-arrays"
+        ],
+        "prerequisites": [
+          "loops"
+        ],
         "difficulty": 5,
         "topics": [
           "loops",
@@ -416,8 +431,12 @@
         "slug": "protein-translation",
         "name": "Protein Translation",
         "uuid": "fb73e822-4831-4d33-a049-44a514bfa46a",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "string"
+        ],
+        "prerequisites": [
+          "vector-arrays"
+        ],
         "difficulty": 3,
         "topics": [
           "filtering",
@@ -440,8 +459,12 @@
         "slug": "prime-factors",
         "name": "Prime Factors",
         "uuid": "ba755932-b301-41cc-b7f2-5e6d2e130325",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "vector-arrays"
+        ],
+        "prerequisites": [
+          "loops"
+        ],
         "difficulty": 5,
         "topics": [
           "loops",
@@ -500,8 +523,12 @@
         "slug": "atbash-cipher",
         "name": "Atbash Cipher",
         "uuid": "15c741a0-944d-4b06-a096-6af63137347a",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "strings"
+        ],
+        "prerequisites": [
+          "loops"
+        ],
         "difficulty": 3,
         "topics": [
           "algorithms",
@@ -512,8 +539,12 @@
         "slug": "trinary",
         "name": "Trinary",
         "uuid": "c8246de0-29b1-4f92-8b00-b766e395ad66",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "numbers"
+        ],
+        "prerequisites": [
+          "loops"
+        ],
         "difficulty": 3,
         "topics": [
           "math",
@@ -670,8 +701,13 @@
         "slug": "matching-brackets",
         "name": "Matching Brackets",
         "uuid": "4a517292-3472-40f2-b4b8-5c8c25219ea5",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "vector-arrays"
+        ],
+        "prerequisites": [
+          "string",
+          "loops"
+        ],
         "difficulty": 3,
         "topics": [
           "pattern_matching",
@@ -707,8 +743,12 @@
         "slug": "luhn",
         "name": "Luhn",
         "uuid": "885865bc-a197-436f-94bc-b1998d5cc081",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "numbers"
+        ],
+        "prerequisites": [
+          "loops"
+        ],
         "difficulty": 1,
         "topics": [
           "math",
@@ -760,8 +800,12 @@
         "slug": "hexadecimal",
         "name": "Hexadecimal",
         "uuid": "c2e8e3fc-a39c-434b-87dd-9524636aa804",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "numbers"
+        ],
+        "prerequisites": [
+          "loops"
+        ],
         "difficulty": 3,
         "topics": [
           "math",
@@ -868,8 +912,12 @@
         "slug": "darts",
         "name": "Darts",
         "uuid": "e8ad3859-9999-4a36-900d-d82fa6e74b08",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "if-statements"         
+        ],
+        "prerequisites": [
+          "numbers"
+        ],
         "difficulty": 2,
         "topics": [
           "basics",
