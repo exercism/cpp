@@ -3,7 +3,7 @@
   "slug": "cpp",
   "active": true,
   "status": {
-    "concept_exercises": false,
+    "concept_exercises": true,
     "test_runner": true,
     "representer": false,
     "analyzer": false
@@ -48,8 +48,7 @@
         "prerequisites": [
           "basics",
           "namespaces"
-        ],
-        "status": "wip"
+        ]
       },
       {
         "slug": "lasagna",
@@ -58,8 +57,7 @@
         "concepts": [
           "basics"
         ],
-        "prerequisites": [],
-        "status": "wip"
+        "prerequisites": []
       },
       {
         "uuid": "88baa5ab-dacb-4fab-8f16-4f3ed726b27b",
@@ -69,8 +67,7 @@
         "prerequisites": [
           "basics",
           "includes"
-        ],
-        "status": "wip"
+        ]
       },
       {
         "slug": "last-will",
@@ -81,8 +78,7 @@
         ],
         "prerequisites": [
           "basics"
-        ],
-        "status": "wip"
+        ]
       },
       {
         "slug": "pacman-rules",
@@ -93,8 +89,7 @@
         ],
         "prerequisites": [
           "basics"
-        ],
-        "status": "wip"
+        ]
       },
       {
         "slug": "vehicle-purchase",
@@ -106,11 +101,9 @@
         ],
         "prerequisites": [
           "strings",
-          "headers",
           "booleans",
           "numbers"
-        ],
-        "status": "wip"
+        ]
       },
       {
         "slug": "making-the-grade",
@@ -125,8 +118,7 @@
           "if-statements",
           "booleans",
           "numbers"
-        ],
-        "status": "wip"
+        ]
       },
       {
         "slug": "interest-is-interesting",
@@ -138,8 +130,7 @@
         "prerequisites": [
           "comparisons",
           "if-statements"
-        ],
-        "status": "wip"
+        ]
       },
       {
         "slug": "ellens-alien-game",
@@ -151,8 +142,7 @@
         "prerequisites": [
           "comparisons",
           "if-statements"
-        ],
-        "status": "wip"
+        ]
       }
     ],
     "practice": [
