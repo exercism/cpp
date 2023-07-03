@@ -47,7 +47,7 @@ You cannot read or change `private` members outside of the class:
 ```cpp
 Wizzard silverhand{};
 // calling the `cast_spell` function is okay, it is public:
-iggwilv.cast_spell();
+silverhand.cast_spell();
 // => 5
 
 // name is public and can be changed:
