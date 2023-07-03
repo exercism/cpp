@@ -1,0 +1,8 @@
+{
+  "blurb": "In C++, references provide an alias for an existing variable to avoid unnecessary memory usage. References are particularly useful when passing variables to functions, allowing modifications to the original variable.",
+  "authors": [
+    "vaeng"
+  ],
+  "contributors": [
+  ]
+}
