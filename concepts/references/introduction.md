@@ -3,12 +3,12 @@
 ## Copies and References
 
 With our current knowledge, it is a bit cumbersome to update a variable with the help of a function.
-Every argument is handled like a copy and does not change the original.
+Every function argument is handled like a copy and does not change the original value.
 Depending on the size of your type, this can have serious consequences for the performance of your code.
 
 ```cpp
 int adjust_salary(int base, int kids) {
-    return current + kids * 500;
+    return base + kids * 500;
 }
 int now_a_mother_of_twins{2500};
 adjust_salary(now_a_mother_of_twins, 2);
@@ -18,8 +18,8 @@ now_a_mother_of_twins = adjust_salary(now_a_mother_of_twins, 2);
 // now_a_mother_of_twins is now 3500
 ```
 
-`References` can be seen like aliases, changes to them have an effect on the original variable.
-`References` use the **ampersand** in the type declaration: `&`.
+`References` can be seen as aliases - changes to them have an effect on the original variable.
+`References` use an **ampersand** (`&`) in the type declaration.
 
 ```cpp
 int balance{1000};
@@ -29,8 +29,9 @@ budget -= pro_computer_wheels;
 // budget is now 301;
 // balance is also 301;
 ```
-Reseating - changing the binding of a `reference` is not possible.
-You cannot have an unitialized `reference`, you always need a binding.
+Reseating (changing the binding of a `reference`) is not possible.
+You cannot have an unitialized `reference`.
+`References` need to be initialized with an existing variable.
 
 ```cpp
 int main_acc{1'000'000};
@@ -51,7 +52,8 @@ int& future_budget;
 
 ## `void`
 
-With the power of `references` you might not have the need to return a value from a function. This is a scenario to use `void` as a return type.
+With the power of `references` you might not need to return a value from a function at all. 
+`void` is used as a return type in this scenario. 
 
 ```cpp
 void increase_power(int& level) {
