@@ -5,8 +5,8 @@ int ovenTime() {
     return 0;
 }
 
-/* RemainingOvenTime returns the remaining
-    minutes based on the actual minutes already in the oven.
+/* remainingOvenTime returns the remaining
+   minutes based on the actual minutes already in the oven.
 */
 int remainingOvenTime(int actualMinutesInOven) {
     // TODO: Calculate and return the remaining in the oven based on the time

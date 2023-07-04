@@ -99,7 +99,7 @@ int total_fee(int vips, int adults, int kids) {
 Functions in C++ do not return the value of the last statement like in some other languages.
 The `return` keyword is required for the code to compile.
 
-#### Whitespace
+### Whitespace
 
 Whitespace is used for formatting source code and includes spaces, tabs, or newlines.
 As the compiler ignores unnecessary whitespace, you can use it to structure your code.
