@@ -1055,6 +1055,11 @@
       "uuid": "fc00966e-dc25-46a6-8883-d6106c7d0774",
       "slug": "classes",
       "name": "Classes"
+    },
+    {
+      "uuid": "f791086d-7bd1-41fb-9ba9-e7fe67128886",
+      "slug": "references",
+      "name": "References"
     }
   ],
   "key_features": [

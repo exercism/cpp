@@ -1,0 +1,8 @@
+{
+  "blurb": "In C++, references are used when you want to add an alias for an existing variable. That can avoid expensive copy operations and allow you to modify the variable through the reference.",
+  "authors": [
+    "vaeng"
+  ],
+  "contributors": [
+  ]
+}
