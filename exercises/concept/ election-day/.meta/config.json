@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "vaeng"
+  ],
+  "files": {
+    "solution": [
+      "election_day.cpp"
+    ],
+    "test": [
+      "election_day_test.cpp"
+    ],
+    "exemplar": [
+      ".meta/exemplar.cpp"
+    ]
+  },
+  "forked_from": [
+    "go/election-day"
+  ],
+  "blurb": "Learn about references by creating a simple voting system."
+}
