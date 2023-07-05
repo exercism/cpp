@@ -100,6 +100,9 @@ This example generates the XCode files so that you can open the project in XCode
 With the project opened in XCode you may need to add another target. 
 For a new target go to File -> New -> Target from the menu, _OS X \ Application \ Command Line Tool_ -> Next _C++_ as the language and provide a target name. Run the code using the target.
 
-If your terminal throws an `Xcode x.x not supported` error, it is highly likely that Xcode is not installed on your machine or that  your version is out of date.
-Please download and install Xcode via the App Store or via [this link](https://apps.apple.com/us/app/xcode/id497799835?mt=12).
-Errors similar to `The CXX compiler identification is unknown` will likely be resolved by following the [instructions to install GCC](https://exercism.org/docs/tracks/cpp/installation) or by adding another target in Xcode as per the above paragraph.
+If your terminal throws an `Xcode x.x not supported` error, it is highly likely that Xcode is not installed on your machine or that your version is out of date.
+Please download and install Xcode via the App Store or via [this link][web-xcode-download].
+Errors similar to `The CXX compiler identification is unknown` will likely be resolved by following the [instructions to install GCC][cpp-installation-instructions] or by adding another target in Xcode as per the above paragraph.
+
+[web-xcode-download]: https://apps.apple.com/us/app/xcode/id497799835?mt=12
+[cpp-installation-instructions]: https://exercism.org/docs/tracks/cpp/installation
