@@ -143,6 +143,18 @@
           "comparisons",
           "if-statements"
         ]
+      },
+      {
+        "slug": "election-day",
+        "name": "Election Day",
+        "uuid": "431b877a-cb73-41aa-b9e4-034d9179faf0",
+        "concepts": [
+          "references"
+        ],
+        "prerequisites": [
+          "classes",
+          "vector-arrays"
+        ]
       }
     ],
     "practice": [
