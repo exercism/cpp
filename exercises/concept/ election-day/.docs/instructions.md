@@ -30,7 +30,7 @@ ElectionResult hamilton{"Alex", 1804};
 // => the hamilton object was intialized with the name "Alex" and 1804 votes.
 ```
 
-Create a function `vote_count` that will take a reference to an `ElectionResult` as an argument and will return the number of votes in the counter.
+Create a function `vote_count` that will take a reference to an `ElectionResult` as an argument and will return the number of votes in the `ElectionResult`.
 
 ```cpp
 vote_count(hamilton);
@@ -57,17 +57,21 @@ vote_count(burr);
 
 The school handed in their votes and it is now time to check the results for the winner.
 
-Create a function `determine_result` that receives the final count and returns a reference to the `ElectionResult` of the new president.
+Create a function `determine_result` that receives a reference to a final count and returns a reference to the `ElectionResult` of the new president.
 It should also change the name of the winner by prefixing it with "President". 
 The final count is given in the form of a `reference` to `std::vector<ElectionResult>`, a vector with `ElectionResults` of all the participating candidates.
 
 ```cpp
-ElectionResult sanchez{"Pedro", 472};
+ElectionResult sanchez{"Pedro", 471};
 ElectionResult wheatley{"Summer", 340};
 std::vector<ElectionResult> final_count{sanchez, wheatley};
 
-ElectionResult winner = determine_result(final_count);
+ElectionResult& winner = determine_result(final_count);
 
 winner.name;
 // => "President Pedro"
 ```
+
+To keep things simple, you can assume the following:
+- The `vector` has at least one element.
+- There will be no ties for first place.
