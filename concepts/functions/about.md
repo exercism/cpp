@@ -13,7 +13,7 @@ The parameter list is a comma-separated list of parameters. Each parameter consi
 
 ```cpp
 // Function declaration
-int add(int a, int b);
+int add(int first_argument, int second_argument);
 ```
 
 ## Function definition
@@ -23,10 +23,11 @@ The function body is a block of code that is executed when the function is calle
 
 ```cpp
 // Function definition
-int add(int a, int b) {
-    return a + b;
+int add(int first_number, int second_number) {
+    return first_number + second_number;
 }
 ```
+
 
 ## Function call
 
@@ -36,6 +37,7 @@ Each argument is an expression that is passed to the function. The arguments are
 ```cpp
 // Function call
 int sum{add(1, 2)};
+// The function call add(1, 2) and returns 3 which is assigned to the variable sum.
 ```
 
 ## void Functions
@@ -47,10 +49,11 @@ However, it is recommended to use the **return** keyword to return from a void f
 
 ```cpp
 // void Function
-void print(int a) {
-    std::cout << a << std::endl;
+void print_hello_world() {
+    std::cout << "Hello World" << std::endl;
     return;
 }
+// The function call print_hello_world() prints "Hello World" to the console. And does not return any value.
 ``` 
 
 ## Function overloading
@@ -60,17 +63,19 @@ The functions must have different parameter lists.
 
 ```cpp
 // Function overloading
-int add(int a, int b) {
-    return a + b;
+int add(int first_number, int second_number) {
+    return first_number + second_number;
 }
 
-double add(double a, double b) {
-    return a + b;
+double add(double first_number, double second_number) {
+    return first_number + second_number;
 }
 
-int add(int a, int b, int c) {
-    return a + b + c;
-}
+int sum_int{add(1, 2)};
+// sum_int is 3
+
+double sum_double{add(1.5, 2.7)};
+// sum_double is 3.2
 ```
 
 ## Function template
@@ -81,13 +86,19 @@ The template parameter list can be empty.
 
 ```cpp
 // Function template
+// The T is a template parameter.
+// We can replace the T with any type. E.g. int, double, float, char, etc.
+
 template <typename T>
-T add(T a, T b) {
-    return a + b;
+T add(T first_number, T second_number) {
+    return first_number + second_number;
 }
 
-int sum{add<int>(1, 2)};
-double sum{add<double>(1.0, 2.0)};
+int sum_int{add<int>(1, 2)};
+// sum_int is 3
+
+double sum_double{add<double>(1.5, 2.7)};
+// sum_double is 3.2
 ```
 
 ## Default arguments
@@ -99,13 +110,14 @@ It can be overridden by passing an argument to the function.
 
 ```cpp
 // Default arguments
-int add(int a, int b = 1) {
-    return a + b;
+// Can you make the default argument more useful?
+int add(int first_number, int second_number = 1) {
+    return first_number + second_number;
 }
 
-int sum{add(1)};
-// sum is 2
+int sum_with_one_argument{add(1)};
+// sum_with_one_argument is 2
 
-int sum{add(1, 2)};
-// sum is 3
+int sum_with_two_arguments{add(1, 2)};
+// sum_with_two_argument is 3
 ```
