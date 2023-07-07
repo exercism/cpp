@@ -1060,6 +1060,11 @@
       "uuid": "f791086d-7bd1-41fb-9ba9-e7fe67128886",
       "slug": "references",
       "name": "References"
+    },
+    {
+      "uuid": "2e4f454e-4a54-4999-9627-86840c88fc46",
+      "slug": "enums",
+      "name": "Enumerations"
     }
   ],
   "key_features": [
