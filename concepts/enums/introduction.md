@@ -3,16 +3,18 @@
 ## Enumerations
 
 So far we have mostly handled numbers and strings.
-To model the real world, we might want a limited number of options that a variable can take on.
-If you work for a skateboard manufacturer the deck material can be selected from maple, bamboo, or plastic.
+To model the real world, we might want a limited number of values that a variable can take on.
+You might want a dedicated type with a few distinct values with distinct names.
+In a skateboard factory, the deck material can be selected from maple, bamboo, or plastic.
 
 You could use integers to encode those values, but would have to use extra code to check if there is an invalid value coming from the system for the material.
+The meaning of those [_magic numbers_][magic numbers] is difficult to trace over the source code and they are prone to mix-ups.
 This is a case for `enumerations`.
 
 ## Example usage
 
 The specific term for this kind of enumeration is `scoped enumeration`.
-The deck material can be written like this.
+The snippet below shows how to write a `DeckMaterial` `enumeration`.
 Note the `enum class` keyword and the `;` at the end of the definition:
 
 ```cpp
@@ -43,12 +45,9 @@ enum class WheelMaterial {
     clay,
     plastic
 };
-
-bool comparison{DeckMaterial::plastic == WheelMaterial::plastic};
-// => false
 ```
 Although the wheels and the deck can both be made of _plastic_, the two cannot be confused.
-Each `enumeration` will have its `enumerators` in its own scope - its own namespace.
+Each `enumeration` will have its `enumerators` in its own scope - its own `namespace`.
 This is the reason they are called `scoped enumerations`.
 
 ~~~~exercism/advanced
@@ -68,13 +67,21 @@ enum CitrusFruits {
 };
 
 enum IceCream {
-    walnut, // 0
-    apples,      // 1
+    walnut,  // 0
+    apples,  // 1
 };
 
 bool comparison{apples == oranges};
 // => true
+
+// Example from above:
+bool comparison{DeckMaterial::plastic == WheelMaterial::plastic};
+// => Does not compile!
 ```
 
-If you want to convert `scoped enumerations` into integers you can use `static_cast<int>`.
+If you want to convert `scoped enumerations` to integers you can use `static_cast<int>`.
 ~~~~
+
+
+
+[magic numbers]: https://en.wikipedia.org/wiki/Magic_number_(programming)
