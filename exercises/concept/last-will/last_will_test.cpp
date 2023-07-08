@@ -1,3 +1,9 @@
+// Trick to let the code compile, even if the function has not been implemented:
+namespace estate_executor {
+    int assemble_account_number(int) __attribute__((weak));
+    int assemble_code() __attribute__((weak));
+}
+
 #include "last_will.cpp"
 #ifdef EXERCISM_TEST_SUITE
 #include <catch2/catch.hpp>
@@ -24,12 +30,6 @@ TEST_CASE("Family secrets have not been altered") {
     REQUIRE(garcia::blue::code_fragment() == 923);
 }
 
-
-// Trick to let the code compile, even if the function has not been implemented:
-namespace estate_executor {
-    int assemble_account_number(int) __attribute__((weak));
-    int assemble_code() __attribute__((weak));
-}
 TEST_CASE("Account number assembly function exists in correct namespace") {
     REQUIRE_NOTHROW(estate_executor::assemble_account_number(0));
 }
