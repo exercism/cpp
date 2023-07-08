@@ -32,6 +32,8 @@ To get the correct number, you have to sum up the `bank_number_part` from each o
 
 ## 3. Last step: Enter the secret code
 
-Define the `assemble_code()` function that returns the resulting code by combining the fragments from the three families.
 The instructions in the testament ask you to add all the blue and then all the red fragments.
 The resulting code is obtained by multiplying both sums.
+
+Define the `assemble_code()` function that returns the resulting code by combining the fragments from the three families to a single `integer`.
+The function does not have any arguments and relies solely on the information in the relevant namespaces from the families.
