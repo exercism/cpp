@@ -54,7 +54,7 @@ This is the reason they are called `scoped enumerations`.
 ~~~~exercism/advanced
 ## Unscoped Enumerations
 You might be thinking that with the name `scoped`, there would also be be `unscoped` enumerations -- and you would be correct.
-`Unscoped enumerations` are becoming less popular, because they all share the same global namespace.
+`Unscoped enumerations` are becoming less popular because they all share the same global namespace.
 Because of the sharing, you could not have two `unscoped enumerations` with the same `enumerators` like _plastic_ in the example above.
 
 Also, `unscoped enumerations` implicitly convert to integers. 
