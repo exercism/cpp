@@ -5,11 +5,11 @@
 So far we have mostly handled numbers and strings.
 To model the real world, we might want a limited number of values that a variable can take on.
 You might want a dedicated type with a few distinct values with distinct names.
-In a skateboard factory, the deck material can be selected from maple, bamboo, or plastic.
+For example, in a skateboard factory, having the deck material be a choice of only maple, bamboo, or plastic.
 
-You could use integers to encode those values, but would have to use extra code to check if there is an invalid value coming from the system for the material.
+You could use integers to encode those values, but you would have to use extra code to check if there is an invalid value coming from the system for the material.
 The meaning of those [_magic numbers_][magic numbers] is difficult to trace over the source code and they are prone to mix-ups.
-This is a case for `enumerations`.
+`enumerations` can be used to encourage expressive code and to restrict unintentional comparison mistakes.
 
 ## Example usage
 
@@ -24,7 +24,7 @@ enum class DeckMaterial {
     plastic
 };
 ```
-Now, look at a pricing function in the skate shop and take note of the scope resolution operator (`::`) to specify an `enumerator` from the `enumeration`:
+Now, look at a pricing function in the skate shop and take note of the scope resolution operator (`::`) specifying an `enumerator` from the `enumeration`:
 
 ```cpp
 double deck_price(double base_price, DeckMaterial material) {
@@ -37,7 +37,7 @@ double deck_price(double base_price, DeckMaterial material) {
 
 ## Scoping
 
-Imagine you have a second `enumeration` for the material of the wheels:
+Imagine you have a second `enumeration` for wheel material:
 
 ```cpp
 enum class WheelMaterial {
@@ -46,19 +46,19 @@ enum class WheelMaterial {
     plastic
 };
 ```
-Although the wheels and the deck can both be made of _plastic_, the two cannot be confused.
+Although the wheels and the deck can both be made of _plastic_, the two cannot be confused. 
+They are different _types_:  `DeckMaterial` plastic and `WheelMaterial` plastic.
 Each `enumeration` will have its `enumerators` in its own scope - its own `namespace`.
 This is the reason they are called `scoped enumerations`.
 
 ~~~~exercism/advanced
 ## Unscoped Enumerations
-
-You might think that there should be `unscoped` enumerations as well and you are correct.
-`Unscoped enumerations` lost favor to the version above, because they populate the global namespace.
-For this reason you could not have two `unscoped enumerations` with the same `enumerators` like _plastic_ in the example above.
+You might be thinking that with the name `scoped`, there would also be be `unscoped` enumerations -- and you would be correct.
+`Unscoped enumerations` are becoming less popular, because they all share the same global namespace.
+Because of the sharing, you could not have two `unscoped enumerations` with the same `enumerators` like _plastic_ in the example above.
 
 Also, `unscoped enumerations` implicitly convert to integers. 
-Look at the example to see a surprising result:
+Look at the example below for a surprising result:
 
 ```cpp
 enum CitrusFruits {
