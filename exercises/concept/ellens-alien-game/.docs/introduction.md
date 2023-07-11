@@ -28,7 +28,7 @@ The definition of a `class` can be seen in the following example.
 Notice the `;` after the definition:
 
 ```cpp
-class Wizzard {
+class Wizard {
   public:               // from here on all members are publicly accessible
     inc cast_spell() {  // defines the public member function cast_spell
       return damage;
@@ -45,7 +45,7 @@ Take a look at `damage` inside the `cast_spell` function.
 You cannot read or change `private` members outside of the class:
 
 ```cpp
-Wizzard silverhand{};
+Wizard silverhand{};
 // calling the `cast_spell` function is okay, it is public:
 silverhand.cast_spell();
 // => 5
@@ -65,15 +65,15 @@ They have the same name as the `class` and do not have a return type.
 A class can have several constructors.
 This is useful if you do not always have a need to set all variables.
 Sometimes you might want to keep everything at default but change the `name` variable.
-In the case of a significant Wizzard you might want to change the damage as well, so you need two `constructors`.
+In the case of a significant Wizard you might want to change the damage as well, so you need two `constructors`.
 
 ```cpp
-class Wizzard {
+class Wizard {
   public:
-    Wizzard(std::string new_name) {
+    Wizard(std::string new_name) {
       name = new_name;
     }
-    Wizzard(std::string new_name, int new_damage) {
+    Wizard(std::string new_name, int new_damage) {
       name = new_name;
       damage = new_damage;
     }
@@ -85,8 +85,8 @@ class Wizzard {
     int damage{5};
 };
 
-Wizzard el{"Eleven"};       // deals  5 damage
-Wizzard vecna{"Vecna", 50}; // deals 50 damage
+Wizard el{"Eleven"};       // deals  5 damage
+Wizard vecna{"Vecna", 50}; // deals 50 damage
 ```
 
 Constructors are a big topic and have many nuances.
@@ -105,6 +105,6 @@ By default, everything in a `class` is `private`.
 Structs, on the other hand, are `public` until defined otherwise.
 Conventionally, the `struct` keyword is often used for **data-only structures**.
 The `class` keyword is preferred for objects that need to ensure certain properties.
-Such an invariant could be that the `damage` of your `Wizzard` `class` cannot turn negative.
+Such an invariant could be that the `damage` of your `Wizard` `class` cannot turn negative.
 The `damage` variable is private and any function that changes the damage would ensure the invariant is preserved.
 ~~~~
