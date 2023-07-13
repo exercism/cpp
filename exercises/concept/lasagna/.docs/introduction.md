@@ -112,5 +112,5 @@ There are different formatting standards, but these are all conventional and not
 int eggs_yolks =  3;
 int      yeast = 15;
 
-int flour=500;int sugar=200;// compact, but difficult to read
+int flour=500;int sugar=200; // compact, but difficult to read
 ```
