@@ -2,7 +2,7 @@
 
 ## Basics
 
-To set off the C++ journey we are starting with variables, function calls, and comments.
+To set off the C++ journey, we are starting with variables, function calls, and comments.
 
 ### Comments
 
