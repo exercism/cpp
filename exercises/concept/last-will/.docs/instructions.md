@@ -17,7 +17,7 @@ The code from the next tasks should be defined in the body of the `estate_execut
 ```cpp
 namespace some_name {
     // The space between the curly brackets
-    // is called body of the  namespace.
+    // is called body of the namespace.
 }
 ```
 
