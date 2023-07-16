@@ -9,15 +9,13 @@
   ],
   "files": {
     "solution": [
-      "reverse_string.cpp",
-      "reverse_string.h"
+      "reverse_string.cpp"
     ],
     "test": [
       "reverse_string_test.cpp"
     ],
     "example": [
-      ".meta/example.cpp",
-      ".meta/example.h"
+      ".meta/example.cpp"
     ]
   },
   "blurb": "Reverse a string",
