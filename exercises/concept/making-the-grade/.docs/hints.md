@@ -5,11 +5,12 @@
 - `while` loops are used for _indefinite_ (uncounted) iteration
 - `for` loops are used for _definite_, (counted) iteration.
 - The keywords `break` and `continue` help customize loop behavior.
+- `std::to_string()` from `string` library can be used to convert a integer to string
 
 Also being familiar with the following can help with completing the tasks:
 
 - [`vectors`][vectors]: indexing, size, [`<vector>.emplace_back`][emplace], [`<vector>.pop_back()`][pop].
-- [`string`][string]: using the `+` to concatenate strings.
+- [`string`][string]: using the `+` to concatenate strings, integer to string conversion, [`to_string(int)`][to_string].
 
 ## 1. Rounding Scores
 
@@ -34,6 +35,8 @@ Also being familiar with the following can help with completing the tasks:
 ## 5. Matching Names to Scores
 
 - If both containers are the same length and sorted the same way, could you use the `index` from one to retrieve a `value` from the other?
+- `to_string(int)` can be used to convert a integer to string.
+- Don't forget the follow the format of the example's output.
 
 ## 6. A "Perfect" Score
 
