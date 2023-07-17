@@ -17,4 +17,14 @@ The rules of `raindrops` are that if a given number:
 - 30 has both 3 and 5 as factors, but not 7, so the result would be "PlingPlang".
 - 34 is not factored by 3, 5, or 7, so the result would be "34".
 
+## Things to consider
+- You're expected to define a function named *convert* inside the *raindrops* namespace.
+- Notice that there are two different files in the editor: the *raindrops.cpp* file and the *raindrops.h* file. The former is where you want to actually define your function, while the latter (*raindrops.h*) is where you want to import all the things you need **and** declare the function. A function declaration tells the compiler about a function name and how to call the function. The actual body of the function can be defined separately. This body (which is the actual stuff that's supposed to do the job) is what has to go in the *raindrops.cpp* file.
+
+For more information about the concepts mentioned above, check the following resources:
+
+- [Testing on the C++ track](https://exercism.org/docs/tracks/cpp/tests)
+- [C++ Functions](https://www.tutorialspoint.com/cplusplus/cpp_functions.htm)
+- [What is the difference between a .cpp file and a .h file?](https://stackoverflow.com/questions/875479/what-is-the-difference-between-a-cpp-file-and-a-h-file)
+
 [modulo]: https://en.wikipedia.org/wiki/Modulo_operation
