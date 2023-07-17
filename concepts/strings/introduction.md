@@ -8,6 +8,7 @@ Strings are manipulated by calling the string's methods.
 In C++ the string type and the associated functions have to be included from the strings library before usage.
 You can do so by adding  `#include <string>` to the top of your file.
 They will then populate the `std` namespace.
+The fully qualified name of the string type is `std::string`.
 The string literal uses the double quote character: `"`.
 
 ```cpp
