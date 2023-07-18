@@ -54,3 +54,12 @@ new_release.find("app");
 new_release.find("e");
 // => 4
 ```
+
+There is also the `std::to_string` function, which can be used to convert integers and float/double values to string.
+
+```cpp
+int num{92};
+double exponent{0.92e2};
+std::string msg{ std::to_string(num) + " can also be written as " + std::to_string(exponent)};
+// => 92 can also be written as 92.0000000
+```
