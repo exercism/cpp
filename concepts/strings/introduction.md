@@ -54,8 +54,7 @@ new_release.find("!");
 // => 24
 ```
 
-There is also the `to_string` function, which can be used to convert integers and float/double values to string.
-`to_string` returns a string.
+There is also the `std::to_string` function, which can be used to convert integers and float/double values to string.
 
 ```cpp
 int num{92};
