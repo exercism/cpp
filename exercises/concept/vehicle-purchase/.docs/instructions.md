@@ -36,6 +36,8 @@ choose_vehicle("Volkswagen Beetle", "Volkswagen Golf")
 // => "Volkswagen Beetle is clearly the better choice."
 ```
 
+The returned string should follow the pattern of "<CHOSEN_VEHICLE> is clearly the better choice.", where `<CHOSEN_VEHICLE>` is the option of choice from the passed arguments.
+
 ## 3. Calculate an estimation for the price of a used vehicle
 
 Now that you made a decision, you want to make sure you get a fair price at the dealership.

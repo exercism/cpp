@@ -8,6 +8,7 @@ Strings are manipulated by calling the string's methods.
 In C++ the string type and the associated functions have to be included from the strings library before usage.
 You can do so by adding  `#include <string>` to the top of your file.
 They will then populate the `std` namespace.
+The fully qualified name of the string type is `std::string`.
 The string literal uses the double quote character: `"`.
 
 ```cpp
@@ -44,14 +45,14 @@ std::string ghost = material.substr(8, 3);
 
 The `find` function is also very useful.
 It is called as a member function on the string and takes a string as the argument.
-`find` returns the zero-indexed position of the first occurrence in the string.
+`find` returns the zero-indexed position of the _first_ occurrence in the string.
 
 ```cpp
 std::string new_release{"apple released a new app!"};
 new_release.find("app");
 // => 0
-new_release.find("!");
-// => 24
+new_release.find("e");
+// => 4
 ```
 
 There is also the `std::to_string` function, which can be used to convert integers and float/double values to string.
