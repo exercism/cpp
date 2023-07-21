@@ -3,7 +3,7 @@
 Your friend Helma made a small online game that rapidly gained popularity.
 It is called _HellMath_.
 The small community attracted some trolls who make the game and the forums pretty unpleasant.
-Helma has asked you to work on a new permission system to separate "the wheat from the chaff". 
+Helma has asked you to work on a new permission system to separate troublemakers. 
 
 The forum supports three different actions:
 
@@ -19,17 +19,17 @@ There are four types of accounts, each with different default permissions:
 
 Helma has noticed that it is no use to ban troll accounts.
 Her strategy is to give them the illusion that their time is "well invested", but their posts are only shown to other trolls.
-For anything that requires a priority, trolls get the least places.
+For anything that requires priority ordering, trolls are last in any sequence.
 When they enter a game, the pool of available players is also limited to other trolls.
 
 ## 1. Set up user types and permissions.
 
-First, define an `AccountStatus` enumeration to represent the three account types: `troll`, `guest`, `user`, and `mod`.
+First, define an `AccountStatus` enumeration to represent the four account types: `troll`, `guest`, `user`, and `mod`.
 
-Next, define an `Action` enumeration to represent the three permission types: `read`, `write`, `remove`.
+Next, define an `Action` enumeration to represent the three permission types: `read`, `write`, and `remove`.
 
 
-## 2. Promote trolls to other trolls.
+## 2. Promote trolls only to other trolls.
 
 Every post on the forums saves the `AccountStatus` of the poster in its metadata. 
 Make sure that the trolls can only interact with each other.
@@ -58,14 +58,14 @@ hellmath::permission_check(hellmath::Action::write, hellmath::AccountStatus::mod
 // => true
 ```
 
-## 4. Grant game access and pair players
+## 4. Grant game access and pair players.
 
 To keep the actual players in the game accountable for their actions, _Hellmath_ denies access to guest users.
 As mentioned above, Helma wants trolls to troll other trolls.
 Game connections between other users are unrestricted.
 
-Implement the `valid_player_combination` function that checks if the group can play together.
-The function has two arguments of type `AccountStatus` and returns a `bool`
+Implement the `valid_player_combination` function that checks if two players can join the same game.
+The function has two parameters of type `AccountStatus` and returns a `bool`
 
 ```cpp
 hellmath::valid_player_combination(hellmath::AccountStatus::guest, hellmath::AccountStatus::mod);
@@ -74,11 +74,11 @@ hellmath::valid_player_combination(hellmath::AccountStatus::troll, hellmath::Acc
 // => true
 ```
 
-## 5. Build priority queuing
+## 5. Build priority queuing.
 
 With the stark growth of the game, Helma has to distribute computing power and bandwidth among users.
 To handle emergencies, moderators have the highest priority.
-Guest will be queued behind normal users and trolls get the lowest rank.
+Guest will be queued behind normal users and trolls get sorted behind everyone else.
 
 Implement the `priority_comparison` function that takes two `AccountStatus` arguments and returns `true`, if and only if the first account has a strictly higher priority than the second.
 
