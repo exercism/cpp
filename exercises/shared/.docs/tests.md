@@ -17,7 +17,7 @@ Once you've done that, uncomment the next test by moving the following line past
 This may result in compile errors as new constructs may be invoked that you haven't yet declared or defined.
 Again, fix the compile errors minimally to get a failing test, then change the code minimally to pass the test, refactor your implementation for readability and expressiveness and then go on to the next test.
 
-Try to use standard C++11 facilities in preference to writing your own low-level algorithms or facilities by hand.
+Try to use standard C++17 facilities in preference to writing your own low-level algorithms or facilities by hand.
 
 [cpp-tests-instructions]: https://exercism.org/docs/tracks/cpp/tests
 [three-laws-of-tdd]: http://butunclebob.com/ArticleS.UncleBob.TheThreeRulesOfTdd
