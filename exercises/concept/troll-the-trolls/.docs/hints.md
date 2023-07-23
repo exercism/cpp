@@ -2,7 +2,7 @@
 
 ## 1. Set up user types and permissions.
 
-- To handle each `AccountStatus` type, one could use an `if` statement, but the [`switch` statement][switch] is a great alternative.
+- To handle each `AccountStatus` enumerator, you could use an `if` statement, but a [`switch` statement][switch] is a great alternative.
 
 
 ## 2. Promote trolls only to other trolls.
@@ -11,7 +11,7 @@
 
 ## 3. Check permissions for different users.
 
-- If you solve the task with a switch statement, the [fallthrough][fallthrough] might be helpful.
+- If you solve the task with a switch statement, [fallthroughs][fallthrough] might be helpful.
 - You can use [sequential labels][fallthrough] and the [default][switch] label to group permissions.
 
 ## 4. Grant game access and pair players.
