@@ -38,9 +38,10 @@ Helma needs a `display_post` function, that gets two arguments of `AccountStatus
 The first argument is the status of the poster, the second one is the status of the viewer.
 
 ```cpp
-hellmath::display_post(hellmath::AccountStatus::troll, hellmath::AccountStatus::user);
+using namespace hellmath;
+display_post(AccountStatus::troll, AccountStatus::user);
 // => false
-hellmath::display_post(hellmath::AccountStatus::mod, hellmath::AccountStatus::guest);
+display_post(AccountStatus::mod, AccountStatus::guest);
 // => true
 ```
 
@@ -52,9 +53,9 @@ Please implement a `permission_check` function, that takes an `Action` as a firs
 It should return a `bool` according to the listing above.
 
 ```cpp
-hellmath::permission_check(hellmath::Action::remove, hellmath::AccountStatus::guest);
+permission_check(Action::remove, AccountStatus::guest);
 // => false
-hellmath::permission_check(hellmath::Action::write, hellmath::AccountStatus::mod);
+permission_check(Action::write, AccountStatus::mod);
 // => true
 ```
 
@@ -65,12 +66,12 @@ As mentioned above, Helma wants trolls to troll other trolls.
 Game connections between other users are unrestricted.
 
 Implement the `valid_player_combination` function that checks if two players can join the same game.
-The function has two parameters of type `AccountStatus` and returns a `bool`
+The function has two parameters of type `AccountStatus` and returns a `bool`.
 
 ```cpp
-hellmath::valid_player_combination(hellmath::AccountStatus::guest, hellmath::AccountStatus::mod);
+valid_player_combination(AccountStatus::guest, AccountStatus::mod);
 // => false
-hellmath::valid_player_combination(hellmath::AccountStatus::troll, hellmath::AccountStatus::troll);
+valid_player_combination(AccountStatus::troll, AccountStatus::troll);
 // => true
 ```
 
@@ -83,8 +84,8 @@ Guest will be queued behind normal users and trolls get sorted behind everyone e
 Implement the `priority_comparison` function that takes two `AccountStatus` arguments and returns `true`, if and only if the first account has a strictly higher priority than the second.
 
 ```cpp
-hellmath::priority_comparison(hellmath::AccountStatus::guest, hellmath::AccountStatus::mod);
+priority_comparison(AccountStatus::guest, AccountStatus::mod);
 // => false
-hellmath::priority_comparison(hellmath::AccountStatus::user, hellmath::AccountStatus::troll);
+priority_comparison(AccountStatus::user, AccountStatus::troll);
 // => true
 ```
