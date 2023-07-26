@@ -92,7 +92,7 @@ We then declare each one of the conditions with the `case` keyword.
 We can also declare a `default` case, that will run when none of the previous `case` conditions matched.
 Each case should end with a `break` (or a `return`) statement.
 
-We can also declare a `default` case, that will run when none of the previous `case` conditions match.
+```cpp
 int price{0};
 int adults{3};
 int kids{2};
@@ -111,10 +111,10 @@ switch (int group_size{adults + kids}) {
 
 ## Fall-through
 
-One important thing about the switch construct is that the code will continue to execute until it is stopped by a `break` statement.
+One important thing about the switch construct is that the code will continue to execute until it is stopped by a `break` (or a `return`) statement.
 This can lead to unexpected behavior.
 
-One important thing about the switch construct is that the code will continue to execute until it is stopped by a `break` (or a `return`) statement.
+```cpp
 int adults{1};
 int kids{0};
 switch (int group_size{adults + kids}) {
