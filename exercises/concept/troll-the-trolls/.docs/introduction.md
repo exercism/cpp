@@ -53,7 +53,7 @@ This is the reason they are called `scoped enumerations`.
 
 ~~~~exercism/advanced
 ## Unscoped Enumerations
-You might be thinking that with the name `scoped`, there would also be be `unscoped` enumerations -- and you would be correct.
+You might be thinking that with a name like `scoped`, there would also be  _`unscoped`_ enumerations -- and you would be correct.
 `Unscoped enumerations` are becoming less popular because they all share the same global namespace.
 Because of the sharing, you could not have two `unscoped enumerations` with the same `enumerators` like _plastic_ in the example above.
 
@@ -83,9 +83,6 @@ If you want to convert `scoped enumerations` to integers you can use `static_cas
 ~~~~
 
 
-
-[magic numbers]: https://en.wikipedia.org/wiki/Magic_number_(programming)
-
 ## Switch Statements
 
 Like other languages, C++ also provides a `switch` statement.
@@ -95,7 +92,7 @@ We then declare each one of the conditions with the `case` keyword.
 We can also declare a `default` case, that will run when none of the previous `case` conditions matched.
 Each case should end with a `break` (or a `return`) statement.
 
-```cpp
+We can also declare a `default` case, that will run when none of the previous `case` conditions match.
 int price{0};
 int adults{3};
 int kids{2};
@@ -117,7 +114,7 @@ switch (int group_size{adults + kids}) {
 One important thing about the switch construct is that the code will continue to execute until it is stopped by a `break` statement.
 This can lead to unexpected behavior.
 
-```cpp
+One important thing about the switch construct is that the code will continue to execute until it is stopped by a `break` (or a `return`) statement.
 int adults{1};
 int kids{0};
 switch (int group_size{adults + kids}) {
@@ -131,9 +128,9 @@ switch (int group_size{adults + kids}) {
 // price will be 30!
 ```
 
-The main use case for this feature is a statement, that has several labels.
-The same piece of code is executed for certain switch results.
-This way - in a booking app the called function for the group sizes 2 and 3 can be the same.
+The main use case for this continued execution feature is a statement that has several labels.
+Multiple switch results can map to the same piece of code to be executed.
+This way - in a booking app, for example - the called function for group sizes 2 and 3 can be the same:
 ```cpp
 switch (group_size) {
 case 1:
@@ -148,3 +145,5 @@ default:
 }
 // book_apartment happens wheng roup_size is 2 or 3
 ```
+
+[magic numbers]: https://en.wikipedia.org/wiki/Magic_number_(programming)

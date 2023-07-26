@@ -233,28 +233,28 @@ TEST_CASE("Trolls have lowest priority", "[task_5]") {
     AccountStatus player1{AccountStatus::troll};
 
     AccountStatus player2{AccountStatus::guest};
-    REQUIRE_FALSE(priority_comparison(player1, player2));
+    REQUIRE_FALSE(has_priority(player1, player2));
 
     player2 = AccountStatus::troll;
-    REQUIRE_FALSE(priority_comparison(player1, player2));
+    REQUIRE_FALSE(has_priority(player1, player2));
 
     player2 = AccountStatus::user;
-    REQUIRE_FALSE(priority_comparison(player1, player2));
+    REQUIRE_FALSE(has_priority(player1, player2));
 
     player2 = AccountStatus::mod;
-    REQUIRE_FALSE(priority_comparison(player1, player2));
+    REQUIRE_FALSE(has_priority(player1, player2));
 
     // Second player is a troll
     player2 = AccountStatus::troll;
 
     player1 = AccountStatus::guest;
-    REQUIRE(priority_comparison(player1, player2));
+    REQUIRE(has_priority(player1, player2));
 
     player1 = AccountStatus::user;
-    REQUIRE(priority_comparison(player1, player2));
+    REQUIRE(has_priority(player1, player2));
 
     player1 = AccountStatus::mod;
-    REQUIRE(priority_comparison(player1, player2));
+    REQUIRE(has_priority(player1, player2));
 }
 
 TEST_CASE("Guests have second lowest priority", "[task_5]") {
@@ -262,28 +262,28 @@ TEST_CASE("Guests have second lowest priority", "[task_5]") {
     AccountStatus player1{AccountStatus::guest};
 
     AccountStatus player2{AccountStatus::guest};
-    REQUIRE_FALSE(priority_comparison(player1, player2));
+    REQUIRE_FALSE(has_priority(player1, player2));
 
     player2 = AccountStatus::troll;
-    REQUIRE(priority_comparison(player1, player2));
+    REQUIRE(has_priority(player1, player2));
 
     player2 = AccountStatus::user;
-    REQUIRE_FALSE(priority_comparison(player1, player2));
+    REQUIRE_FALSE(has_priority(player1, player2));
 
     player2 = AccountStatus::mod;
-    REQUIRE_FALSE(priority_comparison(player1, player2));
+    REQUIRE_FALSE(has_priority(player1, player2));
 
     // Second player is a guest
     player2 = AccountStatus::guest;
 
     player1 = AccountStatus::troll;
-    REQUIRE_FALSE(priority_comparison(player1, player2));
+    REQUIRE_FALSE(has_priority(player1, player2));
 
     player1 = AccountStatus::user;
-    REQUIRE(priority_comparison(player1, player2));
+    REQUIRE(has_priority(player1, player2));
 
     player1 = AccountStatus::mod;
-    REQUIRE(priority_comparison(player1, player2));
+    REQUIRE(has_priority(player1, player2));
 }
 
 TEST_CASE("Users have second highest priority", "[task_5]") {
@@ -291,28 +291,28 @@ TEST_CASE("Users have second highest priority", "[task_5]") {
     AccountStatus player1{AccountStatus::user};
 
     AccountStatus player2{AccountStatus::guest};
-    REQUIRE(priority_comparison(player1, player2));
+    REQUIRE(has_priority(player1, player2));
 
     player2 = AccountStatus::troll;
-    REQUIRE(priority_comparison(player1, player2));
+    REQUIRE(has_priority(player1, player2));
 
     player2 = AccountStatus::user;
-    REQUIRE_FALSE(priority_comparison(player1, player2));
+    REQUIRE_FALSE(has_priority(player1, player2));
 
     player2 = AccountStatus::mod;
-    REQUIRE_FALSE(priority_comparison(player1, player2));
+    REQUIRE_FALSE(has_priority(player1, player2));
 
     // Second player is a guest
     player2 = AccountStatus::user;
 
     player1 = AccountStatus::troll;
-    REQUIRE_FALSE(priority_comparison(player1, player2));
+    REQUIRE_FALSE(has_priority(player1, player2));
 
     player1 = AccountStatus::guest;
-    REQUIRE_FALSE(priority_comparison(player1, player2));
+    REQUIRE_FALSE(has_priority(player1, player2));
 
     player1 = AccountStatus::mod;
-    REQUIRE(priority_comparison(player1, player2));
+    REQUIRE(has_priority(player1, player2));
 }
 
 TEST_CASE("Moderators have highest priority", "[task_5]") {
@@ -320,28 +320,28 @@ TEST_CASE("Moderators have highest priority", "[task_5]") {
     AccountStatus player1{AccountStatus::mod};
 
     AccountStatus player2{AccountStatus::guest};
-    REQUIRE(priority_comparison(player1, player2));
+    REQUIRE(has_priority(player1, player2));
 
     player2 = AccountStatus::troll;
-    REQUIRE(priority_comparison(player1, player2));
+    REQUIRE(has_priority(player1, player2));
 
     player2 = AccountStatus::user;
-    REQUIRE(priority_comparison(player1, player2));
+    REQUIRE(has_priority(player1, player2));
 
     player2 = AccountStatus::mod;
-    REQUIRE_FALSE(priority_comparison(player1, player2));
+    REQUIRE_FALSE(has_priority(player1, player2));
 
     // Second player is a guest
     player2 = AccountStatus::mod;
 
     player1 = AccountStatus::troll;
-    REQUIRE_FALSE(priority_comparison(player1, player2));
+    REQUIRE_FALSE(has_priority(player1, player2));
 
     player1 = AccountStatus::guest;
-    REQUIRE_FALSE(priority_comparison(player1, player2));
+    REQUIRE_FALSE(has_priority(player1, player2));
 
     player1 = AccountStatus::user;
-    REQUIRE_FALSE(priority_comparison(player1, player2));
+    REQUIRE_FALSE(has_priority(player1, player2));
 }
 
 #endif

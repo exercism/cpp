@@ -18,7 +18,7 @@ namespace hellmath {
 // checks if two players can join the same game. The function has two parameters
 // of type `AccountStatus` and returns a `bool`.
 
-// TODO: Task 5 - Implement the `priority_comparison` function that takes two
+// TODO: Task 5 - Implement the `has_priority` function that takes two
 // `AccountStatus` arguments and returns `true`, if and only if the first
 // account has a strictly higher priority than the second.
 

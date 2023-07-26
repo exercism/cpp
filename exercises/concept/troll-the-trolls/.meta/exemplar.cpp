@@ -37,7 +37,7 @@ bool valid_player_combination(AccountStatus player1, AccountStatus player2) {
     return true;
 }
 
-bool priority_comparison(AccountStatus player1, AccountStatus player2) {
+bool has_priority(AccountStatus player1, AccountStatus player2) {
     return static_cast<int>(player1) > static_cast<int>(player2);
 }
 

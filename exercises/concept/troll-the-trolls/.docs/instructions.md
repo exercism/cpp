@@ -50,7 +50,7 @@ display_post(AccountStatus::mod, AccountStatus::guest);
 Helma needs a way to check if a certain action is allowed for a user.
 
 Please implement a `permission_check` function, that takes an `Action` as a first argument and an `AccountStatus` to check against.
-It should return a `bool` according to the listing above.
+It should return a `bool` according to the permissions listed in the introduction.
 
 ```cpp
 permission_check(Action::remove, AccountStatus::guest);
@@ -77,15 +77,15 @@ valid_player_combination(AccountStatus::troll, AccountStatus::troll);
 
 ## 5. Build priority queuing.
 
-With the stark growth of the game, Helma has to distribute computing power and bandwidth among users.
-To handle emergencies, moderators have the highest priority.
-Guest will be queued behind normal users and trolls get sorted behind everyone else.
+With the massive growth of the game and the forums, Helma now has to distribute computing power and bandwidth among users.
+To handle emergencies, moderators are given the highest priority.
+Guests are queued behind normal users, and trolls get sorted behind everyone else.
 
-Implement the `priority_comparison` function that takes two `AccountStatus` arguments and returns `true`, if and only if the first account has a strictly higher priority than the second.
+Implement the `has_priority` function that takes two `AccountStatus` arguments and returns `true`, if and only if the first account has a strictly higher priority than the second.
 
 ```cpp
-priority_comparison(AccountStatus::guest, AccountStatus::mod);
+has_priority(AccountStatus::guest, AccountStatus::mod);
 // => false
-priority_comparison(AccountStatus::user, AccountStatus::troll);
+has_priority(AccountStatus::user, AccountStatus::troll);
 // => true
 ```

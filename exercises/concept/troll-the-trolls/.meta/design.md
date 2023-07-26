@@ -32,4 +32,4 @@ This exercise does not require any specific representation logic to be added to 
 
 This exercise could benefit from having an analyzer that can comment on:
 
-- Suggesting to cast to `int`` to compare easily between priorities.
+- Suggesting to cast to `int` to compare easily between priorities.

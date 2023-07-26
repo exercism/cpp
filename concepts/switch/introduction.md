@@ -4,7 +4,7 @@ Like other languages, C++ also provides a `switch` statement.
 Switch statements are a shorter way to write long `if ... else if` statements.
 To make a switch, we start by using the keyword `switch` followed by an integer.
 We then declare each one of the conditions with the `case` keyword.
-We can also declare a `default` case, that will run when none of the previous `case` conditions matched.
+We can also declare a `default` case, that will run when none of the previous `case` conditions match.
 Each case should end with a `break` (or a `return`) statement.
 
 ```cpp
@@ -26,7 +26,7 @@ switch (int group_size{adults + kids}) {
 
 ## Fall-through
 
-One important thing about the switch construct is that the code will continue to execute until it is stopped by a `break` statement.
+One important thing about the switch construct is that the code will continue to execute until it is stopped by a `break` (or a `return`) statement.
 This can lead to unexpected behavior.
 
 ```cpp
@@ -43,9 +43,9 @@ switch (int group_size{adults + kids}) {
 // price will be 30!
 ```
 
-The main use case for this feature is a statement, that has several labels.
-The same piece of code is executed for certain switch results.
-This way - in a booking app the called function for the group sizes 2 and 3 can be the same.
+The main use case for this continued execution feature is a statement that has several labels.
+Multiple switch results can map to the same piece of code to be executed.
+This way - in a booking app, for example - the called function for group sizes 2 and 3 can be the same:
 ```cpp
 switch (group_size) {
 case 1:
