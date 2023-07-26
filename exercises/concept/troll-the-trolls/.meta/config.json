@@ -1,0 +1,18 @@
+{
+  "authors": [
+    "vaeng"
+  ],
+  "files": {
+    "solution": [
+      "troll_the_trolls.cpp"
+    ],
+    "test": [
+      "troll_the_trolls_test.cpp"
+    ],
+    "exemplar": [
+      ".meta/exemplar.cpp"
+    ]
+  },
+  "icon": "attack-of-the-trolls",
+  "blurb": "Learn about enumerations and switch statements by checking permissions of user accounts."
+}

@@ -155,6 +155,19 @@
           "classes",
           "vector-arrays"
         ]
+      },
+      {
+        "slug": "troll-the-trolls",
+        "name": "Troll the Trolls",
+        "uuid": "61c007d9-d856-4922-9098-e06a505363ed",
+        "concepts": [
+          "switch",
+          "enums"
+        ],
+        "prerequisites": [
+          "classes",
+          "comparisons"
+        ]
       }
     ],
     "practice": [
