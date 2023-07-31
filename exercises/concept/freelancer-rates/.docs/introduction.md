@@ -73,7 +73,7 @@ eggs += 3 * people;
 // eggs is now 6
 ```
 Vairables `people` & `eggs` are initialized to `0`.
-Then, we add integer value `2` over the existing value `0` of the variable `people` and assigne it back to `people`.
+Then, we add integer value `2` over the existing value `0` of the variable `people` and assign it back to `people`.
 `people` becomes `2` now.
 Later, we add `3` eggs for each person, which turns out to be `6` eggs in total.
 Now add this `6` to existing value `0` of the variable `eggs` and assigne it back to `eggs`.
