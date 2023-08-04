@@ -4,8 +4,8 @@
 
 You have already used and written C++ functions in a couple of concepts.
 It is time to get technical.
-The code snipped below shows the most common terms for easy reference.
-As C++ ignores whitespace, the formatting has been changed to have each element on a single line.
+The code snippet below shows the most common terms for easy reference.
+As C++ ignores whitespace, the formatting has been changed to put each element on a single line.
 
 ```cpp
 // Function declaration:
@@ -19,10 +19,10 @@ admin_detected                                    // Function name
 { return user == "admin" && password == "1234"; } // Function body
 ```
 ~~~~exercism/advanced
-The declaration works like a note to the compiler, that there is a function of that name, return type and paramter list.
-The code will not compile, if the definition is missing.
+The declaration works like a note to the compiler, that there is a function of that name, return type and parameter list.
+The code will not work, if the definition is missing.
 Declarations are optional, they are needed if you use the function before its definiton.
-Declarations can solve problems like cyclic references.
+Declarations can solve problems like cyclic references and they can be used to separate the interface from the implementation.
 ~~~~
 
 ## The const qualifier
@@ -55,8 +55,8 @@ string guess_number(const int& secret, const int& guess) {
 ```
 
 When you pass a `const` reference to the function, you can be sure that it will be left unchanged.
-You will often see `const` references for objects that might be costly to copy, like very long strings.
-A third use-case for the `const` qualifier are member functions, that do not change the instance of a class.
+You will often see `const` references for objects that might be costly to copy, like longer strings.
+A third use-case for the `const` qualifier are member functions that do not change the instance of a class.
 
 ```cpp
 class Stubborn {
@@ -72,14 +72,14 @@ class Stubborn {
 };
 ```
 
-## Function Overloading
+## Function overloading
 
 If you take the function header without the return type, you get a function's __type signature__.
-The type signature is defined by the function's name, the number of parameters, their types, and their qualifiers.
-If you change anything about the signature, the compiler will search for a fitting function.
+The type signature is defined by the function's name, the number of parameters, their types, and their qualifiers (but not their names).
+A change in the signature results in a new function.
 When two functions have the same name but differences in the rest of their type signature, the practice is called function overloading.
 
-The `play_sound` example has six different overloads to accommodate many different scenarios:
+The `play_sound` example has six different overloads to accommodate different scenarios:
 
 ```cpp
 // different argument types:
@@ -96,7 +96,7 @@ void play_sound(const vector<string>& solfege);
 ```
 
 The return type is explicitly not part of the type signature and you will get compilation errors if you have two functions that only differ in their return type.
-The compiler will complain because it is not clear, which of the two should be used.
+The compiler will complain because it is not clear which of the two should be used.
 
 ## Default arguments
 
@@ -104,10 +104,10 @@ Some functions can get very lengthy and many of its calls might use the same val
 The repetition in those calls can be avoided with default arguments.
 
 ```cpp
-void record_new_horse_birth(string name, double weight, string color="brown-ish", string dam="Alruccaba", string sire="Poseidon");
+void record_new_horse_birth(string name, int weight, string color="brown-ish", string dam="Alruccaba", string sire="Poseidon");
 
-record_new_horse_birth("Urban Sea", 130); // color will be brown, dam Alruccabam, sire Poseidon
-record_new_horse_birth("Highclere", 175, "off-white", "Fall Aspen");   // sire will be Poseidon
+record_new_horse_birth("Urban Sea", 130); // color will be brown, dam "Alruccabam", sire "Poseidon"
+record_new_horse_birth("Highclere", 175, "off-white", "Fall Aspen");   // sire will be "Poseidon"
 ```
 
 As the function declaration is often read before the definition, it is the better place to set the default arguments.
