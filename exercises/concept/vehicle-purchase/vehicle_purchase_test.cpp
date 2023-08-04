@@ -37,8 +37,8 @@ TEST_CASE("chooses Bugatti over Ford") {
             "Bugatti Veyron is clearly the better choice.");
 }
 TEST_CASE("chooses Chery over Kia") {
-    std::string choice1{"Chery EQ"};
-    std::string choice2{"Kia Niro Elektro"};
+    std::string choice1{"Kia Niro Elektro"};
+    std::string choice2{"Chery EQ"};
     REQUIRE(vehicle_purchase::choose_vehicle(choice1, choice2) ==
             "Chery EQ is clearly the better choice.");
 }
@@ -49,8 +49,8 @@ TEST_CASE("chooses Ford Focus over Ford Pinto") {
             "Ford Focus is clearly the better choice.");
 }
 TEST_CASE("chooses 2018 over 2020") {
-    std::string choice1{"2018 Bergamont City"};
-    std::string choice2{"2020 Gazelle Medeo"};
+    std::string choice1{"2020 Gazelle Medeo"};
+    std::string choice2{"2018 Bergamont City"};
     REQUIRE(vehicle_purchase::choose_vehicle(choice1, choice2) ==
             "2018 Bergamont City is clearly the better choice.");
 }
