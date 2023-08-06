@@ -74,10 +74,11 @@ class Stubborn {
 
 ## Function overloading
 
-If you take the function header without the return type, you get a function's __type signature__.
-The type signature is defined by the function's name, the number of parameters, their types, and their qualifiers (but not their names).
-A change in the signature results in a new function.
-When two functions have the same name but differences in the rest of their type signature, the practice is called function overloading.
+Multiple functions can have the same name if the parameter list is different.
+That is called function overloading and it is usually done if these functions perform very similar tasks.
+
+The function header without the return type is the function's __type signature__.
+A change in the type signature results in a new function.
 
 The `play_sound` example has six different overloads to accommodate different scenarios:
 
@@ -95,8 +96,11 @@ void play_sound(vector<string>& solfege);
 void play_sound(const vector<string>& solfege);
 ```
 
+~~~~exercism/advanced
+The type signature is defined by the function's name, the number of parameters, their types, and their qualifiers (but not their names).
 The return type is explicitly not part of the type signature and you will get compilation errors if you have two functions that only differ in their return type.
 The compiler will complain because it is not clear which of the two should be used.
+~~~~
 
 ## Default arguments
 
