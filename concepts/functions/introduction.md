@@ -9,7 +9,8 @@ As C++ ignores whitespace, the formatting has been changed to put each element o
 
 ```cpp
 // Function declaration:
-bool admin_detected(string user, string password) // Function header
+bool                                              // Return type
+admin_detected(string user, string password)      // Type signature
 ;                                                 // Don't forget the ';' for the declaration
 
 // Function definition:
@@ -64,13 +65,17 @@ class Stubborn {
     Stubborn(string reply) {
         response = reply;
     }
-    string answer() const {
+    string answer(const string& question) const {
+        if (question.lenghth() == 0) { return "";}
         return response;
     }
     private:
     string response{};
 };
 ```
+
+The `Stubborn` member function `answer` uses a `const string&` reference as a parameter.
+This avoids a copy operation from the original object that was passed to the function.
 
 ## Function overloading
 
