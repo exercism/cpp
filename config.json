@@ -1090,6 +1090,11 @@
       "uuid": "2e4f454e-4a54-4999-9627-86840c88fc46",
       "slug": "enums",
       "name": "Enumerations"
+    },
+    {
+      "uuid": "18b2f529-3be6-4a70-be7d-81aa07393585",
+      "slug": "functions",
+      "name": "Functions"
     }
   ],
   "key_features": [

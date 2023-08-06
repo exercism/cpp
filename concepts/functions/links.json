@@ -1,0 +1,18 @@
+[
+    {
+        "url": "https://en.cppreference.com/w/cpp/language/cv",
+        "description": "C++ reference on const qualifiers"
+    },
+    {
+        "url": "https://en.cppreference.com/book/intro/function_overloading",
+        "description": "C++ reference on function overloading"
+    },
+    {
+        "url": "https://en.cppreference.com/w/cpp/language/overload_resolution",
+        "description": "C++ reference on overload resolution"
+    },
+    {
+        "url": "https://en.cppreference.com/w/cpp/language/default_arguments",
+        "description": "C++ reference on default arguments"
+    }
+]
