@@ -7,7 +7,7 @@
 
 using namespace std;
 
-TEST_CASE("Error message")
+TEST_CASE("Error message", "[task_1]")
 {
     const string actual = log_line::message("[ERROR]: Stack overflow");
 
@@ -17,7 +17,7 @@ TEST_CASE("Error message")
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
-TEST_CASE("Warning message")
+TEST_CASE("Warning message", "[task_1]")
 {
     const string actual = log_line::message("[WARNING]: Disk almost full");
 
@@ -26,7 +26,7 @@ TEST_CASE("Warning message")
     REQUIRE(actual == expected);
 }
 
-TEST_CASE("Info message")
+TEST_CASE("Info message", "[task_1]")
 {
     const string actual = log_line::message("[INFO]: File moved");
 
@@ -35,7 +35,7 @@ TEST_CASE("Info message")
     REQUIRE(actual == expected);
 }
 
-TEST_CASE("Error log level")
+TEST_CASE("Error log level", "[task_2]")
 {
     const string actual = log_line::log_level("[ERROR]: Disk full");
 
@@ -44,7 +44,7 @@ TEST_CASE("Error log level")
     REQUIRE(actual == expected);
 }
 
-TEST_CASE("Warning log level")
+TEST_CASE("Warning log level", "[task_2]")
 {
     const string actual = log_line::log_level("[WARNING]: Unsafe password");
 
@@ -53,7 +53,7 @@ TEST_CASE("Warning log level")
     REQUIRE(actual == expected);
 }
 
-TEST_CASE("Info log level")
+TEST_CASE("Info log level", "[task_2]")
 {
     const string actual = log_line::log_level("[INFO]: Timezone changed");
 
@@ -62,7 +62,7 @@ TEST_CASE("Info log level")
     REQUIRE(actual == expected);
 }
 
-TEST_CASE("Error reformat")
+TEST_CASE("Error reformat", "[task_3]")
 {
     const string actual = log_line::reformat("[ERROR]: Segmentation fault");
 
@@ -71,7 +71,7 @@ TEST_CASE("Error reformat")
     REQUIRE(actual == expected);
 }
 
-TEST_CASE("Warning reformat")
+TEST_CASE("Warning reformat", "[task_3]")
 {
     const string actual = log_line::reformat("[WARNING]: Decreased performance");
 
@@ -80,7 +80,7 @@ TEST_CASE("Warning reformat")
     REQUIRE(actual == expected);
 }
 
-TEST_CASE("Info reformat")
+TEST_CASE("Info reformat", "[task_3]")
 {
     const string actual = log_line::reformat("[INFO]: Disk defragmented");
 
