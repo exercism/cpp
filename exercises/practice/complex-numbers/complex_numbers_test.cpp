@@ -173,16 +173,14 @@ TEST_CASE("Absolute value of a negative purely real number") {
 }
 
 TEST_CASE(
-    "Absolute value of a purely imaginary number with positive imaginary "
-    "part") {
+    "Absolute value of a purely imaginary number with positive imaginary part") {
     const Complex c{0.0, 5.0};
 
     REQUIRE_THAT(c.abs(), Catch::Matchers::WithinAbs(5.0, eps));
 }
 
 TEST_CASE(
-    "Absolute value of a purely imaginary number with negative imaginary "
-    "part") {
+    "Absolute value of a purely imaginary number with negative imaginary part") {
     const Complex c{0.0, -5.0};
 
     REQUIRE_THAT(c.abs(), Catch::Matchers::WithinAbs(5.0, eps));
