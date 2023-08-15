@@ -1,5 +1,10 @@
-#include "test/catch.hpp"
 #include "circular_buffer.h"
+#ifdef EXERCISM_TEST_SUITE
+#include <catch2/catch.hpp>
+#else
+#include "test/catch.hpp"
+#endif
+
 #include <stdexcept>
 
 // Circular-buffer exercise test case data version 1.2.0
