@@ -29,12 +29,13 @@ void increment_vote_count(ElectionResult& result, int votes) {
 // in the form of a `reference` to `std::vector<ElectionResult>`, a vector with
 // `ElectionResults` of all the participating candidates.
 ElectionResult& determine_result(std::vector<ElectionResult>& count) {
-    ElectionResult& winner = count.at(0);
+    int winner_idx = 0;
     for (int i{}; i < count.size(); ++i) {
-        if(count.at(i).votes > winner.votes) {
-            winner = count.at(i);
+        if(count.at(i).votes > count.at(winner_idx).votes) {
+            winner_idx = i;
         }
     }
+    ElectionResult& winner = count.at(winner_idx);
     winner.name = "President " + winner.name;
     return winner;
 }
