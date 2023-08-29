@@ -23,7 +23,7 @@ std::vector<int> above_threshold(std::vector<int> student_scores, int threshold)
 
 // Create a list of grade thresholds based on the provided highest grade.
 std::array<int, 4> letter_grades(int highest_score) {
-    // TODO: Implement above_threshold
+    // TODO: Implement letter_grades
     return {};
 }
 
