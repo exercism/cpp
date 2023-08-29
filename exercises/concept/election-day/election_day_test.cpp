@@ -77,4 +77,21 @@ TEST_CASE("Presidency, several candidates", "[task_3]") {
     REQUIRE(result.name == expected);
 }
 
+TEST_CASE("Presidency, votes and other results do not change", "[task_3]") {
+    ElectionResult option1{"Tammy Metzler", 0};
+    ElectionResult option2{"Tracy Flick", 257};
+    ElectionResult option3{"Paul Metzler", 256};
+    std::vector<ElectionResult> final_count{option1, option2, option3};
+
+    determine_result(final_count);
+
+    REQUIRE(final_count.size() == 3);
+    REQUIRE(final_count[0].name == "Tammy Metzler");
+    REQUIRE(final_count[0].votes == 0);
+    REQUIRE(final_count[1].name == "President Tracy Flick");
+    REQUIRE(final_count[1].votes == 257);
+    REQUIRE(final_count[2].name == "Paul Metzler");
+    REQUIRE(final_count[2].votes == 256);
+}
+
 #endif
