@@ -15,7 +15,8 @@ Also being familiar with the following can help with completing the tasks:
 ## 1. Rounding Scores
 
 - `While` loops will continue to execute until their test condition evaluates to `False`.
-- `<vector>.pop_back()` will remove and return the last item in a `vector`.
+- `<vector>.back()` will return the last item in a `vector`.
+- `<vector>.pop_back()` will remove the last item in a `vector`.
 
 ## 2. Non-Passing Students
 
