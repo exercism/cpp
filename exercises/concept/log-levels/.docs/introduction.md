@@ -60,7 +60,7 @@ You can use the `+` operator to concatenate strings:
 
 ```cpp
 std::string original_title{"The School of Rock"};
-std::sequel_indicator{"Electric Boogaloo"};
+std::string sequel_indicator{"Electric Boogaloo"};
 std::string next_movie_title = original_title + " 2: " + sequel_indicator;
 ```
 
