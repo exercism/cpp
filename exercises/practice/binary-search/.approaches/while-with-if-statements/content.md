@@ -49,11 +49,11 @@ If the element at the index of the middle value matches the value being searched
 
 If the first `if` statement does not return, then another `if` statement is used to check the element.
 
-```exercism/note
+~~~~exercism/note
 Note that if an `if` statement can return, it does not need to be followed by an `else if ` or an `else`.
 If the statement returns, then control flow will leave the function.
 If the statement does not return, control will fall through to the next statement anyway.
-```
+~~~~
 
 If the element at the index of the middle value is less than the value being searched for, then `left` is set to the middle value
 plus one so that the next iteration will look for higher numbers.
