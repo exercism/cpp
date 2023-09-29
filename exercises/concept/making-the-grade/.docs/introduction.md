@@ -27,7 +27,7 @@ You do not need to specify a size:
 #include<vector>
 
 // std::vector variable_name<element_type> {list of elements}
-std::vector countdown<int> {3, 2, 1};
+std::vector<int> countdown {3, 2, 1};
 // my_vector contains the elements 3, 2 and 1
 ```
 
