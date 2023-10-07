@@ -34,7 +34,7 @@ namespace sieve {
 		for (int number = 2; number <= limit; number++) {
 			if (!composite[number]) {
 				primes.emplace_back(number);
-				for(size_t idx = number * number; idx <= limit; idx +=number)
+				for(std::size_t idx = number * number; idx <= limit; idx +=number)
 					composite[idx] = true;
 			}
 		}
