@@ -27,7 +27,7 @@ You do not need to specify a size:
 #include<vector>
 
 // std::vector variable_name<element_type> {list of elements}
-std::vector<int> countdown {3, 2, 1};
+std::vector countdown<int> {3, 2, 1};
 // my_vector contains the elements 3, 2 and 1
 ```
 
@@ -59,7 +59,7 @@ As a `vector` is not fixed in size, it is possible to add or remove elements.
 Two common functions for that purpose are `emplace_back` and `pop_back`.
 
 ```cpp
-std::array<std::string, 3> witches {"Holly", "Alyssa", "Shannen"};
+std::vector<std::string> witches {"Holly", "Alyssa", "Shannen"};
 witches.pop_back();
 // Shannen is no longer with the witches
 witches.emplace_back("Rose");
