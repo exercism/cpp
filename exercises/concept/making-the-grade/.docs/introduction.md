@@ -59,7 +59,7 @@ As a `vector` is not fixed in size, it is possible to add or remove elements.
 Two common functions for that purpose are `emplace_back` and `pop_back`.
 
 ```cpp
-std::array<std::string, 3> witches {"Holly", "Alyssa", "Shannen"};
+std::vector<std::string> witches {"Holly", "Alyssa", "Shannen"};
 witches.pop_back();
 // Shannen is no longer with the witches
 witches.emplace_back("Rose");
