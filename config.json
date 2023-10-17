@@ -1009,6 +1009,21 @@
         "difficulty": 4,
         "topics": [
         ]
+      },
+      {
+        "slug": "pop-count",
+        "name": "Pop Count",
+        "uuid": "cfe01bad-0972-466c-b52a-9b8cf563b2f4",
+        "practices": [
+          "loops"
+        ],
+        "prerequisites": [
+          "if-statements",
+          "comparisons"
+        ],
+        "difficulty": 3,
+        "topics": [
+        ]
       }
     ],
     "foregone": [
