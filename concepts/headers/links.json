@@ -2,5 +2,9 @@
     {
         "url": "https://learn.microsoft.com/en-us/cpp/cpp/header-files-cpp?view=msvc-170",
         "description": "Examples and information on header files and include guards"
+    },
+    {
+        "url": "https://www.learncpp.com/cpp-tutorial/classes-and-header-files/",
+        "description": "More information about classes in header files"
     }
 ]
