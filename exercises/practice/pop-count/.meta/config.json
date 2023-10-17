@@ -1,0 +1,22 @@
+{
+  "authors": [
+    "vaeng"
+  ],
+  "contributors": [],
+  "files": {
+    "solution": [
+      "pop_count.cpp",
+      "pop_count.h"
+    ],
+    "test": [
+      "pop_count_test.cpp"
+    ],
+    "example": [
+      ".meta/example.cpp",
+      ".meta/example.h"
+    ]
+  },
+  "blurb": "Count the 1 bits in a number.",
+  "source": "Christian Willner, Eric Willigers",
+  "source_url": "https://forum.exercism.org/t/new-exercise-suggestion-pop-count/7632/5"
+}
