@@ -51,7 +51,7 @@ The split between those two might seem arbitrary and the following example can g
 
 ```cpp
 // A file named robot_flower.h
-#if !defined(ROBOT_FLOWER_H)
+#ifndef ROBOT_FLOWER_H
 #define ROBOT_FLOWER_H
 #include <string>
 namespace robots {
@@ -87,5 +87,5 @@ The definitions are prefixed with the namespace `robots` and the class type `Flo
 
 You may have noticed the `#pragma once` line in the example header file above.
 This include guard ensures that the content of the file is included only once during the compilation to avoid errors.
-There is another, more complex variation that starts with `#if !defined` and ends with `#endif`.
+There is another, more complex variation that starts with `#ifndef` and ends with `#endif`.
 It serves the same purpose and its usage is shown in the `Flower` class example above.
