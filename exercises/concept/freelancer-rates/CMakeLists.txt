@@ -45,7 +45,9 @@ set(CMAKE_BUILD_TYPE Debug)
 
 if("${CMAKE_CXX_COMPILER_ID}" MATCHES "(GNU|Clang)")
     set_target_properties(${exercise} PROPERTIES
-        COMPILE_FLAGS "-Wall -Wextra -Wpedantic -Werror"
+        # added "-Wno-unused-parameter" to remove compiler warnings
+        # should make it easier for students to run their first real code
+        COMPILE_FLAGS "-Wall -Wextra -Wpedantic -Werror -Wno-unused-parameter"
     )
 endif()
 
