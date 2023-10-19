@@ -13,6 +13,7 @@ int m_gargan{0b10010000011001};   // base  2: 0-1
 int b_reilly{022031};             // base  8: 0-7
                                   // Leading with a 0 not the letter o.
 ```
+
 When you assign a value to an `int` variable, you can do so directly with a literal.
 A literal is a hard-coded number like `9241`.
 There are different integer literals for several bases of the representation.
@@ -51,6 +52,7 @@ int length = 5;
 int width = 2;
 length = width;
 ```
+
 Here integer value `5` is assigned to the variable `length`.
 Then integer value `2` is assigned to variable `width`.
 Finally value of `width` is copied to the variable `length` and the earlier value `5` will be lost.
@@ -72,6 +74,7 @@ people += 2;
 eggs += 3 * people;
 // eggs is now 6
 ```
+
 Variables `people` & `eggs` are initialized to `0`.
 Then, we add integer value `2` over the existing value `0` of the variable `people` and assign it back to `people`.
 `people` becomes `2` now.
@@ -89,6 +92,7 @@ The `5.0 / 2` example from above is handled by an implicit cast of `2` to `2.0`.
 A `double`, that is cast into an `int` might lose information.
 It is good practice to make these casts to another type T explicit via `static_cast<T>`.
 The old C-style cast via `(T)` is discouraged in modern C++, but should be known nonetheless.
+
 ```cpp
 double pi{3.14};
 int about_2_times_pi_cpp{static_cast<int>(pi) * 2};
@@ -98,7 +102,7 @@ int about_2_times_pi_c{(int)pi * 2};
 
 ## Precision & Representation
 
-Numbers in C++ cannot be abitrarily big.
+Numbers in C++ cannot be arbitrarily big.
 `int` for example is represented by 32 bits.
 That is enough for a set of `2^32` numbers - roughly 4 billion.
 Including `0`, this sets the biggest and smallest `int` numbers as `-2^31` and `2^31 - 1`.
