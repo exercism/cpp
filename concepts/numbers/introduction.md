@@ -13,6 +13,7 @@ int m_gargan{0b10010000011001};   // base  2: 0-1
 int b_reilly{022031};             // base  8: 0-7
                                   // Leading with a 0 not the letter o.
 ```
+
 When you assign a value to an `int` variable, you can do so directly with a literal.
 A literal is a hard-coded number like `9241`.
 There are different integer literals for several bases of the representation.
@@ -51,6 +52,7 @@ int length = 5;
 int width = 2;
 length = width;
 ```
+
 Here integer value `5` is assigned to the variable `length`.
 Then integer value `2` is assigned to variable `width`.
 Finally value of `width` is copied to the variable `length` and the earlier value `5` will be lost.
@@ -72,13 +74,14 @@ people += 2;
 eggs += 3 * people;
 // eggs is now 6
 ```
+
 Variables `people` & `eggs` are initialized to `0`.
 Then, we add integer value `2` over the existing value `0` of the variable `people` and assign it back to `people`.
 `people` becomes `2` now.
 Later, we add `3` eggs for each person, which turns out to be `6` eggs in total.
 Now add this `6` to existing value `0` of the variable `eggs` and assign it back to `eggs`.
 `eggs` will be `6` now.
-The equivalent expression would be `people = people + 2` and `eggs = eggs + (3 * people)` 
+The equivalent expression would be `people = people + 2` and `eggs = eggs + (3 * people)`.
 
 
 [cpp_numerical_bases]: https://cplusplus.com/doc/hex/
