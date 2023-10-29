@@ -28,7 +28,7 @@ namespace quick_math {
 #include "quick_math.h"
 #include <cmath>
 double quick_math::super_root(double x, int n) {
-    while(n) { x = sqrt(x), --n;}
+    while(n) { x = std::sqrt(x), --n;}
     return x;
 }
 ```
@@ -44,14 +44,12 @@ You have to check the `*_test.cpp` file to see the names and namespaces of the e
 
 ## Classes and Headers
 
-Classes can become very complex.
-Many developers separate the public interface from the inner workings.
-Often, all declarations are decoupled from the implementation via header and source files, but there are some exceptions.
-The split between those two might seem arbitrary and the following example can give some guidance.
+Classes can become very complex and their relation to the header / source partition might be confusing.
+One possible layout is to keep all the implementation details in the source file and the declarations and member variables in the header:
 
 ```cpp
 // A file named robot_flower.h
-#ifndef ROBOT_FLOWER_H
+#if !defined(ROBOT_FLOWER_H)
 #define ROBOT_FLOWER_H
 #include <string>
 namespace robots {
@@ -62,9 +60,9 @@ namespace robots {
             std::string name{};
         public:
             Flower(std::string name, int size = 0);
-            void give_water() {needs_water = false;}
-            std::string get_name() {return name;}
-            int get_size() {return size;}
+            void give_water();
+            std::string get_name();
+            int get_size();
             void start_next_day();
     };
 }
@@ -76,12 +74,37 @@ namespace robots {
 #include "robot_flower.h"
 robots::Flower::Flower(std::string name, int size) {this->name = "Robotica " + name; this->size = size;}
 void robots::Flower::start_next_day() {if (!needs_water) ++size; needs_water = true;}
+std::string robots::Flower::get_name() {return name;}
+int robots::Flower::get_size() {return size;}
 ```
 
-Member variables are usually kept in the header together with the implementation of trivial member functions.
-The simple `give_water`, `get_name` and `get_size` functions are so small, that one would not move them into the `.cpp` file.
-The constructor and the `start_next_day` functions shall be considered more _complex_ in this example and have thus been moved.
-The definitions are prefixed with the namespace `robots` and the class type `Flower`.
+When the header is used as an API overview, that is where a person would look for information like default values.
+The `size` parameter's default of the constructor is therefore handled in the header and not in the implementation.
+The definitions in the source file are prefixed with the namespace `robots` and the class type `Flower`.
+ 
+Another option is a _header only_ library, that does not have a `.cpp` file at all:
+
+```cpp
+// A file named robot_flower.h
+#pragma once
+#include <string>
+namespace robots {
+    class Flower {
+        private:
+            bool needs_water{};
+            int size{};
+            std::string name{};
+        public:
+            Flower(std::string name, int size = 0) {this->name = "Robotica " + name; this->size = size;}
+            void give_water() {needs_water = false;}
+            std::string get_name() {return name;}
+            int get_size() {return size;}
+            void start_next_day() {if (!needs_water) ++size; needs_water = true;}
+    };
+}
+```
+
+Projects might use combinations of those layouts and there is a lot of discussion what might be the best fit for each use case.
 
 ## Include Guards
 
