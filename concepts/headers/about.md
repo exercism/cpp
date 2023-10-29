@@ -104,7 +104,7 @@ namespace robots {
 }
 ```
 
-Projects might use layouts that are combinations of those layouts and there is a lot of discussion what might be the best fit for each use case.
+Projects might use combinations of those layouts and there is a lot of discussion what might be the best fit for each use case.
 
 ## Include Guards via pragma once
 
