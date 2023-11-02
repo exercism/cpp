@@ -57,7 +57,7 @@ int c{a++};
 The init component usually sets up a counter variable, the condition checks whether the loop should be continued or stopped and the post component usually increments the counter at the end of each repetition.
 
 ```cpp
-int sum{0}
+int sum{0};
 for (int i{1}; i < 10; ++i) {
   sum += i;
 }
