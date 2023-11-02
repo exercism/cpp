@@ -28,7 +28,7 @@ Notice the `;` after the definition.
 ```cpp
 class Wizzard {
   public:               // from here on all members are accessible publicly
-    inc cast_spell() {  // defines the public member function cast_spell
+    int cast_spell() {  // defines the public member function cast_spell
       return damage;
     }
     std::string name{}; // defines the public member variable `name`
