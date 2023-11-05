@@ -168,6 +168,18 @@
           "classes",
           "comparisons"
         ]
+      },
+      {
+        "slug": "doctor-data",
+        "name": "Doctor Data",
+        "uuid": "2d2efdad-4f5d-4a1d-9626-381b37e72e3f",
+        "concepts": [
+          "headers"
+        ],
+        "prerequisites": [
+          "classes",
+          "enums"
+        ]
       }
     ],
     "practice": [
