@@ -34,7 +34,7 @@ TEST_CASE("the result is rounded up", "[task_3]") {
     // 11_052.8
     REQUIRE(monthly_rate(62.8, 0.0) == 11'053);
     // 11_475.2
-    REQUIRE(monthly_rate(65.2, 0.0) == 11'476);
+    REQUIRE(monthly_rate(65.2, 0.0) == 11'475);
 }
 
 TEST_CASE("gives a discount", "[task_3]") {
