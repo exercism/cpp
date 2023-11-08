@@ -1,17 +1,17 @@
 # Instructions
 
-You start your first day at an Australian company called "Doctor Data" which recovers lost information.
-You have aced your job interview through your knowledge of C++ and [von Neumann probes][van-neumann-probes].
-As you have seen a lot of test files, your new boss wants you to recreate the respective source and header files from some test code the company has recovered.
+You start your first day at an Australian company called "Doctor Data", which specializes in information recovery.
+You aced your job interview through your knowledge of C++ and [von Neumann probes][van-neumann-probes].
+As you have seen a lot of test files, your new boss wants you to recreate the respective source and header files from some test code the company has recently recovered.
 
 In this exercise, you are going to recreate lost files.
 
 ~~~~exercism/note
 The workflow of this concept exercise is very similar to the structure of Exercism's practice exercises.
-The exercise's introduction text is only one part of the specification.
-The test file is your definite guide to solve a problem.
-Due to the way C++ compilation works, the test results might not show up in the web interface until you have implemented a minimal version of every class, function and enumeration that is required in the tests.
-If you get any compilation errors, they might disappear when you have addressed all tasks and tests.
+The exercise introduction text is only one part of the specification.
+The test file is your definitive guide to solving a given problem.
+Due to the way C++ compilation works, the test results might not show up in the web interface until you have implemented a minimal version of every class, function and enumeration that is required by the tests.
+If you receive compilation errors, they might disappear once you have addressed all tasks and tests.
 ~~~~
 
 You have four tasks, all related to recovering the lost code in the header and source files.
@@ -32,7 +32,7 @@ The first argument seems to be of type `string`, the second one is a number.
 It is possible to initialize the `Vessel` class with a third argument.
 The third argument comes from a `star_map` namespace.
 It is an enumerator of type `System`.
-You even got one of the enumerations: `EpsilonEridani`.
+You even got one of the enumerations: `BetaHydri`.
 
 Prepare the source and header files with your discovered information.
 You need two namespaces: `heaven` and `star_map`.
@@ -77,7 +77,7 @@ REQUIRE_FALSE(success);
 ```
 
 Apparently, the `Vessel` class has a member variable `busters`, that can be changed with the two class member functions `make_buster` and `shoot_buster`.
-Until other information surfaces, you guess, that the `make_buster` function returns `void`.
+Until other information surfaces, you take a guess that the `make_buster` function returns `void`.
 As there is a test for the return value of `shoot_buster`, you assume that the function returns a `bool`.
 
 Add the two functions and the member variable to the `Vessel` class.
@@ -88,14 +88,14 @@ Keep looking for other `System` enumerators.
 During your scan of the test files you find only two uncovered sections of the code:
 
 ```cpp
-    heaven::Vessel bob1{"Bob", 1, star_map::System::AlphaCentauri};
-    heaven::Vessel marv{"Marvin", 2, star_map::System::DeltaEridani};
-    heaven::Vessel milo{"Milo", 3, star_map::System::DeltaEridani};
-    heaven::Vessel howie{"Howard", 4, star_map::System::Omicron2Eridani};
+heaven::Vessel bob1{"Bob", 1, star_map::System::AlphaCentauri};
+heaven::Vessel marv{"Marvin", 2, star_map::System::DeltaEridani};
+heaven::Vessel milo{"Milo", 3, star_map::System::DeltaEridani};
+heaven::Vessel howie{"Howard", 4, star_map::System::Omicron2Eridani};
 
-    REQUIRE("Bob" == heaven::get_older_bob(bob1, marv));
-    REQUIRE(heaven::in_the_same_system(marv, milo));
-    REQUIRE_FALSE(heaven::in_the_same_system(marv, howie));
+REQUIRE("Bob" == heaven::get_older_bob(bob1, marv));
+REQUIRE(heaven::in_the_same_system(marv, milo));
+REQUIRE_FALSE(heaven::in_the_same_system(marv, howie));
 ```
 
 You see two functions, that are not members of the `Vessel` class, as they are not called with an instance.
