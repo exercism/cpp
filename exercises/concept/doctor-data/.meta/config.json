@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "vaeng"
+  ],
+  "files": {
+    "solution": [
+      "doctor_data.cpp",
+      "doctor_data.h"
+    ],
+    "test": [
+      "doctor_data_test.cpp"
+    ],
+    "exemplar": [
+      ".meta/exemplar.h",
+      ".meta/exemplar.cpp"
+    ]
+  },
+  "blurb": "Learn about header files by recovering data."
+}
