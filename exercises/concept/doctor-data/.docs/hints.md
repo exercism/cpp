@@ -21,7 +21,4 @@
 
 ## 3. Look into the inner workings
 
-- the `shoot_buster` member function seems to be depenedent on an internal counter.
-
-## 4. Complete the picture
-
+- The `shoot_buster` member function seems to be depenedent on an internal counter.
