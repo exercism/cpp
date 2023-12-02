@@ -31,7 +31,7 @@ The constructor can apparently be called with two or three arguments.
 The first argument seems to be of type `string`, the second one is a number.
 It is possible to initialize the `Vessel` class with a third argument.
 The third argument comes from a `star_map` namespace.
-It is an enumerator of type `System`.
+It is an `enum` of type `System`.
 You even got one of the enumerations: `BetaHydri`.
 
 Prepare the source and header files with your discovered information.
