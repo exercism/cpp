@@ -6,6 +6,12 @@
 #endif
 #include <stdexcept>
 
+// improves error messages with triangle flavor enum text instead of integers:
+CATCH_REGISTER_ENUM(triangle::flavor,
+        triangle::flavor::equilateral,
+        triangle::flavor::isosceles,
+        triangle::flavor::scalene)
+
 TEST_CASE("equilateral_triangles_have_equal_sides")
 {
     REQUIRE(triangle::flavor::equilateral == triangle::kind(2, 2, 2));
