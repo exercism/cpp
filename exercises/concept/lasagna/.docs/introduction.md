@@ -88,7 +88,7 @@ int total_fee(int vips, int adults, int kids) {
     int standard_fee{30};
     int kids_discount{15};
 
-    int kids_total_fee = kids  * (standard_fee - kids_discount);
+    int kids_total_fee = kids * (standard_fee - kids_discount);
     int vips_total_fee = vips * vip_fee(standard_fee);
     int adult_total_fee = adults * standard_fee;
 
