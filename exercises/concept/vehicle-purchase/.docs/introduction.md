@@ -89,4 +89,4 @@ if (int v{2 * num}; v > 10) {
 // => 14
 ```
 
-> Note: any variables created in the initialization cannot be accesed after the end of the if statement.
+> Note: any variables created in the initialization cannot be accessed after the end of the if statement.

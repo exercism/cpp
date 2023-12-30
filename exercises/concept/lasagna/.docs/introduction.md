@@ -35,7 +35,7 @@ int potatoes = 40;
 ~~~~exercism/caution
 C++ does allow using uninitialized variables.
 Until the variable is deliberately set, it is undefined and might contain anything.
-To avoid used-before-set errors and undefined behavior it is adviseable to **always initialize**.
+To avoid used-before-set errors and undefined behavior it is advisable to **always initialize**.
 Undefined behavior can crash your program at the worst possible moment, while it was running fine previously.
 It cannot be stressed enough: avoid undefined behavior at all cost.
 ~~~~

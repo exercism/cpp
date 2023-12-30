@@ -27,7 +27,7 @@ You can use an `initializer list` instead:
 
 ```cpp
 ElectionResult hamilton{"Alex", 1804};
-// => the hamilton object was intialized with the name "Alex" and 1804 votes.
+// => the hamilton object was initialized with the name "Alex" and 1804 votes.
 ```
 
 Create a function `vote_count` that will take a reference to an `ElectionResult` as an argument and will return the number of votes in the `ElectionResult`.
