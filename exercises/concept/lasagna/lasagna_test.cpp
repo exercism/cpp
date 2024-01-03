@@ -55,7 +55,7 @@ TEST_CASE("Correct for 11 layers", "[task_3]") {
 TEST_CASE("Fresh in the oven, 12 layers!", "[task_4]") {
     int timeSpendInOven = 0;
     int timePerLayer = 2;
-    int layers = 11;
+    int layers = 12;
     int actual = elapsedTime(layers, timeSpendInOven);
     int expected{timePerLayer * layers + timeSpendInOven};
 
