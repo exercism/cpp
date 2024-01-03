@@ -32,7 +32,7 @@ budget -= pro_computer_wheels;
 // balance is also 301;
 ```
 Reseating (changing the binding of a `reference`) is not possible.
-You cannot have an unitialized `reference`.
+You cannot have an uninitialized `reference`.
 `References` need to be initialized with an existing variable.
 
 ```cpp
@@ -46,7 +46,7 @@ savings = side_acc;
 // savings and main_acc are now -20
 // as this uses the **value** of side_acc
 savings += 20;
-// savings and main_acc are now 0, side_acc is stil -20
+// savings and main_acc are now 0, side_acc is still -20
 
 int& future_budget;
 // => compiler error, reference must be bound!
