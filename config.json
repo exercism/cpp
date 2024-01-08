@@ -1036,6 +1036,15 @@
         "difficulty": 3,
         "topics": [
         ]
+      },
+      {
+        "slug": "run-length-encoding",
+        "name": "Run-Length Encoding",
+        "uuid": "916fedd1-a9ed-4200-b115-cc1d1bc44aba",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": []
       }
     ],
     "foregone": [
