@@ -1,0 +1,2 @@
+benchmark/*
+!benchmark/leap_benchmark.cpp
