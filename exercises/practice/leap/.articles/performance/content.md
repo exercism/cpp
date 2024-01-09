@@ -36,7 +36,7 @@ Calling `boost::gregorian::gregorian_calendar::is_leap_year` is almost as slow, 
 
 Here is a box-plot if you want more statistical information:
 
-![Boxplot comparing performance metrics for different algorithms. The plot displays upper and lower whiskers, quartiles, and the median, highlighting variations in data distribution. Notably, Boolean Chain exhibits the best performance with the lowest median values, followed by Chrono, Ternary, Boost, and Inverse Chain, which shows the slowest median performance among the algorithms.](https://assets.exercism.org/images/tracks/cpp/leap/leap_benchmark_boxplot_invertable.svg)
+![Boxplot comparing performance metrics for different algorithms. The plot displays upper and lower whiskers, quartiles, and the median, highlighting variations in data distribution. Notably, Boolean Chain exhibits the best performance with the lowest median values, followed by Chrono, Ternary, Boost, and Inverse Chain, which shows the slowest median performance among the algorithms.](https://assets.exercism.org/images/tracks/cpp/leap/leap_benchmark_boxplot-invertable.svg)
 
 [approaches]: https://exercism.org/tracks/cpp/exercises/leap/approaches
 [approach-boolean-chain]: https://exercism.org/tracks/cpp/exercises/leap/approaches/boolean-chain
