@@ -34,15 +34,15 @@ namespace run_length_encoding {
         std::ostringstream decoded_text;
         int multi = 0;
         for (char c : text) {
-           if( c >= '0' && c <= '9') {
+            if( c >= '0' && c <= '9') {
                 multi = multi * 10 + c - '0';
-           } else {
-            if (multi == 0) multi = 1;
-            for(int i{}; i < multi; ++i) {
-                 decoded_text << c;
+            } else {
+                if (multi == 0) multi = 1;
+                for(int i{}; i < multi; ++i) {
+                    decoded_text << c;
+                }
+                multi = 0;
             }
-            multi = 0;
-           }
         }
         return decoded_text.str();
     }
