@@ -11,8 +11,8 @@
       "diamond_test.cpp"
     ],
     "example": [
-      "example.cpp",
-      "example.h"
+      "/.meta/example.cpp",
+      "/.meta/example.h"
     ]
   },
   "blurb": "Given a letter, print a diamond starting with 'A' with the supplied letter at the widest point.",
