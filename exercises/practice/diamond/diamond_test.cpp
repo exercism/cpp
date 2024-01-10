@@ -5,7 +5,6 @@
 #include "test/catch.hpp"
 #endif
 
-
 /*
  The tests contained within this canonical data file are suitable   
  for value-based testing, in which each test case checks that the   
@@ -25,25 +24,30 @@
 */
 
 TEST_CASE("Degenerate case with a single 'A' row", "[202fb4cc-6a38-4883-9193-a29d5cb92076]") {
-	REQUIRE(diamond::rows("A") == "['A']");
+	std::vector<std::string> expected{"A"};
+	REQUIRE(diamond::rows('A') == expected);
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
 
 TEST_CASE("Degenerate case with no row containing 3 distinct groups of spaces", "[bd6a6d78-9302-42e9-8f60-ac1461e9abae]") {
-	REQUIRE(diamond::rows("B") == "[' A ', 'B B', ' A ']");
+	std::vector<std::string> expected{" A ", "B B", " A "};
+	REQUIRE(diamond::rows('B') == expected);
 }
 
 TEST_CASE("Smallest non-degenerate case with odd diamond side length", "[af8efb49-14ed-447f-8944-4cc59ce3fd76]") {
-	REQUIRE(diamond::rows("C") == "['  A  ', ' B B ', 'C   C', ' B B ', '  A  ']");
+	std::vector<std::string> expected{"  A  ", " B B ", "C   C", " B B ", "  A  "};
+	REQUIRE(diamond::rows('C') == expected);
 }
 
 TEST_CASE("Smallest non-degenerate case with even diamond side length", "[e0c19a95-9888-4d05-86a0-fa81b9e70d1d]") {
-	REQUIRE(diamond::rows("D") == "['   A   ', '  B B  ', ' C   C ', 'D     D', ' C   C ', '  B B  ', '   A   ']");
+	std::vector<std::string> expected{"   A   ", "  B B  ", " C   C ", "D     D", " C   C ", "  B B  ", "   A   "};
+	REQUIRE(diamond::rows('D') == expected);
 }
 
 TEST_CASE("Largest possible diamond", "[82ea9aa9-4c0e-442a-b07e-40204e925944]") {
-	REQUIRE(diamond::rows("Z") == "['                         A                         ', '                        B B                        ', '                       C   C                       ', '                      D     D                      ', '                     E       E                     ', '                    F         F                    ', '                   G           G                   ', '                  H             H                  ', '                 I               I                 ', '                J                 J                ', '               K                   K               ', '              L                     L              ', '             M                       M             ', '            N                         N            ', '           O                           O           ', '          P                             P          ', '         Q                               Q         ', '        R                                 R        ', '       S                                   S       ', '      T                                     T      ', '     U                                       U     ', '    V                                         V    ', '   W                                           W   ', '  X                                             X  ', ' Y                                               Y ', 'Z                                                 Z', ' Y                                               Y ', '  X                                             X  ', '   W                                           W   ', '    V                                         V    ', '     U                                       U     ', '      T                                     T      ', '       S                                   S       ', '        R                                 R        ', '         Q                               Q         ', '          P                             P          ', '           O                           O           ', '            N                         N            ', '             M                       M             ', '              L                     L              ', '               K                   K               ', '                J                 J                ', '                 I               I                 ', '                  H             H                  ', '                   G           G                   ', '                    F         F                    ', '                     E       E                     ', '                      D     D                      ', '                       C   C                       ', '                        B B                        ', '                         A                         ']");
+	std::vector<std::string> expected{"                         A                         ", "                        B B                        ", "                       C   C                       ", "                      D     D                      ", "                     E       E                     ", "                    F         F                    ", "                   G           G                   ", "                  H             H                  ", "                 I               I                 ", "                J                 J                ", "               K                   K               ", "              L                     L              ", "             M                       M             ", "            N                         N            ", "           O                           O           ", "          P                             P          ", "         Q                               Q         ", "        R                                 R        ", "       S                                   S       ", "      T                                     T      ", "     U                                       U     ", "    V                                         V    ", "   W                                           W   ", "  X                                             X  ", " Y                                               Y ", "Z                                                 Z", " Y                                               Y ", "  X                                             X  ", "   W                                           W   ", "    V                                         V    ", "     U                                       U     ", "      T                                     T      ", "       S                                   S       ", "        R                                 R        ", "         Q                               Q         ", "          P                             P          ", "           O                           O           ", "            N                         N            ", "             M                       M             ", "              L                     L              ", "               K                   K               ", "                J                 J                ", "                 I               I                 ", "                  H             H                  ", "                   G           G                   ", "                    F         F                    ", "                     E       E                     ", "                      D     D                      ", "                       C   C                       ", "                        B B                        ", "                         A                         "};
+	REQUIRE(diamond::rows('Z') == expected);
 }
 
 #endif
