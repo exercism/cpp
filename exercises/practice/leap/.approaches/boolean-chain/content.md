@@ -2,7 +2,7 @@
 
 ```cpp
 bool is_leap_year(int year) {
-    return (year % 4 == 0) && (year % 100 != 0 || year % 400 == 0);
+    return year % 4 == 0 && (year % 100 != 0 || year % 400 == 0);
 }
 ```
 
@@ -23,10 +23,11 @@ The first boolean expression uses the [remainder operator][remainder-operator] t
 | 1900 | true          | false           | false           | false        |
 
 The chain of boolean expressions is efficient, as it proceeds from testing the most likely to least likely conditions.
+[Howard Hinnant][hinnant] wrote a short paragraph about the order of operations on his web page about date-related algorithms.
 
 ## Shortening
 
-By using the [implicit conversion][implicit-conversion] from `integer` to `bool` the code can be shortened using the [logical NOT operator][logical-not].
+By using the [implicit conversion][implicit-conversion] from `int` to `bool` the code can be shortened using the [logical NOT operator][logical-not].
 Only `0` is converted to `false` and _every non-zero_ value is converted to `true`.
 
 ```cpp
@@ -35,25 +36,25 @@ bool is_leap_year(int year) {
 }
 ```
 
-It can be thought of as the expression _not_ having a remainder.
-
 ## Precedence
 
-You may have noticed the braces around the boolean expressions above.
+You may have noticed the parentheses around the boolean expressions above.
 Consider the following code:
 
 ```cpp
-bool many_braces    = ((year % 100) != 0) || ((year % 400) == 0);
-bool some_braces    = (year % 100 != 0) || (year % 400 == 0);
-bool no_braces      =  year % 100 != 0 || year % 400 == 0;
+bool many_parens    = ((year % 100) != 0) || ((year % 400) == 0);
+bool some_parens    = (year % 100 != 0) || (year % 400 == 0);
+bool no_parens      =  year % 100 != 0 || year % 400 == 0;
 ```
 
-All lines produce the same result, but differ a lot in readability.
-The reason for their equal results, is the order of operator evaluation (`%`, `!=`, `||`, etc) or [precedence][operator-precedence].
+All lines produce the same result but differ a lot in readability.
+The reason for their equal results is the order of operator evaluation (`%`, `!=`, `||`, etc) or [precedence][operator-precedence].
 In this example the first operator to get the attention of the compiler is the remainder, followed by the equality operators.
 Only then will the compiler go for `&&` and then check `||`.
+Mixing `&&` and `||` at the same level of an expression is error-prone.
 Some people might overlook that `and` is evaluated before `or` and thus introduce bugs.
-This is a potential reason to keep some braces, although they are not necessarily needed in the code.
+This is a potential reason to keep some parenthesis, although they are not necessarily needed by the compiler.
+You might be able to follow the code like the compiler, but [other developers might struggle][mixing-and-and-or].
 
 ```cpp
 true || false && true;
@@ -64,7 +65,7 @@ true || false && true;
 
 ## Short-circuit evaluation
 
-If a boolean expression's value is not going to change with further evaluations, C++ code will [short-circuit][hort-circuit-evaluation] and skip these "unesssary" evaluations.
+If a boolean expression's value is not going to change with further evaluations, C++ code will [short-circuit][short-circuit-evaluation] and skip these "unesssary" evaluations.
 They might not change the final result of the boolean, but side-effects will not take place.
 
 ```cpp
@@ -89,6 +90,8 @@ One strategy might be to evaluate expensive operations late or very likely and u
 [logical-not]: https://en.cppreference.com/w/cpp/keyword/not
 [logical-and]: https://en.cppreference.com/w/cpp/keyword/and
 [logical-or]: https://en.cppreference.com/w/cpp/keyword/or
+[hinnant]: https://howardhinnant.github.io/date_algorithms.html#is_leap
 [implicit-conversion]: https://en.cppreference.com/w/cpp/language/implicit_conversion
 [operator-precedence]: https://en.cppreference.com/w/cpp/language/operator_precedence
-[hort-circuit-evaluation]: https://en.wikipedia.org/wiki/Short-circuit_evaluation
+[mixing-and-and-or]: https://softwareengineering.stackexchange.com/q/201175/126640
+[short-circuit-evaluation]: https://en.wikipedia.org/wiki/Short-circuit_evaluation

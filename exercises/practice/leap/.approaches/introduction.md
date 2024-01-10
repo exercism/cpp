@@ -8,7 +8,7 @@ You might also see functions from the `std::chrono` or `boost::gregorian` librar
 ## General guidance
 
 The key to solving Leap is to know if the year is evenly divisible by `4`, `100` and `400`.
-For determining that, you will use the [remainder operator][remainder-operator].
+For determining that you will use the [remainder operator][remainder-operator].
 
 ## Approach: Chain of Boolean expressions
 
@@ -32,7 +32,7 @@ For more information, check the [Ternary operator approach][approach-ternary-ope
 
 ## Other approaches
 
-Besides the aforementioned, idiomatic approaches, you could also approach the exercise as follows:
+Besides the aforementioned idiomatic approaches, you could also approach the exercise as follows:
 
 ## Approach: `std::chrono`
 
