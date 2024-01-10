@@ -1038,6 +1038,15 @@
         ]
       },
       {
+        "slug": "run-length-encoding",
+        "name": "Run-Length Encoding",
+        "uuid": "916fedd1-a9ed-4200-b115-cc1d1bc44aba",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": []
+      },
+      {
         "slug": "rotational-cipher",
         "name": "Rotational Cipher",
         "uuid": "21d02535-4ab6-455d-88e1-08ec3b578894",
