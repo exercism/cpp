@@ -3,16 +3,16 @@
 #include <sstream>
 
 namespace rotational_cipher {
-    std::string  rotate(const std::string& text, int shiftKey) {
+    std::string rotate(const std::string& text, int shift_key) {
 
         std::ostringstream encoded_text;
 
         for(char c : text) {
             if (c >= 'a' && c <= 'z') {
-                c = (c + shiftKey - 'a') % 26 + 'a';
+                c = (c + shift_key - 'a') % 26 + 'a';
             }
             else if (c >= 'A' && c <= 'Z') {
-                c = (c + shiftKey - 'A') % 26 + 'A';
+                c = (c + shift_key - 'A') % 26 + 'A';
             }
             encoded_text << c;
         }
