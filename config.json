@@ -1058,6 +1058,15 @@
         ],
         "difficulty": 3,
         "topics": []
+      },
+      {
+        "slug": "resistor-color",
+        "name": "Resistor Color",
+        "uuid": "15a9277e-59e2-484a-9877-64437556825c",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": []
       }
     ],
     "foregone": [
