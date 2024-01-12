@@ -7,14 +7,14 @@ namespace diamond {
         for(char c{'A'}; c <= middle_letter; ++c) {
             int outer_spacing = middle_letter - c;
             std::string row{};
-            row.append(std::string(outer_spacing, ' '));
+            row.append(outer_spacing, ' ');
             row += c;
             int inner_spacing = (c - 'A') * 2 - 1;
             if (inner_spacing > 0) {
-                row.append(std::string(inner_spacing, ' '));
+                row.append(inner_spacing, ' ');
                 row += c;
             }
-            row.append(std::string(outer_spacing, ' '));
+            row.append(outer_spacing, ' ');
             diamond.emplace_back(row);
         }
         for(int i{middle_letter - 'A' - 1}; i >= 0; --i) {
