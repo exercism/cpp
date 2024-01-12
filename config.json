@@ -1072,12 +1072,30 @@
         "topics": []
       },
       {
+        "slug": "resistor-color",
+        "name": "Resistor Color",
+        "uuid": "15a9277e-59e2-484a-9877-64437556825c",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": []
+      },
+      {
         "slug": "resistor-color-duo",
         "name": "Resistor Color Duo",
         "uuid": "83ce95e9-f8af-4dbb-b96b-d94b12421d77",
         "practices": [],
         "prerequisites": [],
         "difficulty": 3,
+        "topics": []
+      },
+      {
+        "slug": "minesweeper",
+        "name": "Minesweeper",
+        "uuid": "3753a72a-78b7-429f-b79a-f68d55a00387",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5,
         "topics": []
       }
     ],
