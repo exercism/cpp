@@ -1070,6 +1070,15 @@
         ],
         "difficulty": 3,
         "topics": []
+      },
+      {
+        "slug": "minesweeper",
+        "name": "Minesweeper",
+        "uuid": "3753a72a-78b7-429f-b79a-f68d55a00387",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5,
+        "topics": []
       }
     ],
     "foregone": [
