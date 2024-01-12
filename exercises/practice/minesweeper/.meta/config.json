@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "vaeng"
+  ],
+  "files": {
+    "solution": [
+      "minesweeper.cpp",
+      "minesweeper.h"
+    ],
+    "test": [
+      "minesweeper_test.cpp"
+    ],
+    "example": [
+      ".meta/example.cpp",
+      ".meta/example.h"
+    ]
+  },
+  "blurb": "Add the numbers to a minesweeper board."
+}
