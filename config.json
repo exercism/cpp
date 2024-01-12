@@ -1038,6 +1038,18 @@
         ]
       },
       {
+        "slug": "diamond",
+        "name": "Diamond",
+        "uuid": "f8298f68-ef4e-41e1-99af-85a1bef71561",
+        "practices": [
+        ],
+        "prerequisites": [
+        ],
+        "difficulty": 3,
+        "topics": [
+        ]
+      },
+      {
         "slug": "run-length-encoding",
         "name": "Run-Length Encoding",
         "uuid": "916fedd1-a9ed-4200-b115-cc1d1bc44aba",
