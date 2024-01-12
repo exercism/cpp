@@ -1070,6 +1070,15 @@
         ],
         "difficulty": 3,
         "topics": []
+      },
+      {
+        "slug": "resistor-color-duo",
+        "name": "Resistor Color Duo",
+        "uuid": "83ce95e9-f8af-4dbb-b96b-d94b12421d77",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": []
       }
     ],
     "foregone": [
