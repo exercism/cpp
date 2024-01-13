@@ -5,7 +5,8 @@
 namespace sublist {
     bool is_sublist(const std::vector<int>& sublist, const std::vector<int>& superlist) {
         for (auto it{superlist.begin()}; it < superlist.end(); ++it) {
-            if (std::equal(sublist.begin(), sublist.end(), it)) return true;
+            // might not work on windows: if (std::equal(sublist.begin(), sublist.end(), it)) return true;
+            if (std::mismatch(sublist.begin(), sublist.end(), it).first == sublist.end()) return true;
         }
         return false;
     }
