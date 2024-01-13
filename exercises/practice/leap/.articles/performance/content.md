@@ -38,6 +38,14 @@ Here is a box-plot if you want more statistical information:
 
 ![Boxplot comparing performance metrics for different algorithms. The plot displays upper and lower whiskers, quartiles, and the median, highlighting variations in data distribution. Notably, Boolean Chain exhibits the best performance with the lowest median values, followed by Chrono, Ternary, Boost, and Inverse Chain, which shows the slowest median performance among the algorithms.](https://assets.exercism.org/images/tracks/cpp/leap/leap_benchmark_boxplot_invertable.svg)
 
+This article discusses very low level differences that might be altered by the compiler or even the processor's own optimizations.
+While it is interesting to compare functions in this detail on a theoretical level, they are seldomly the bottleneck at runtime.
+
+~~~~exercism/note
+Please notice that benchmarks can be very dependent on the architecture of the benchmarking system, the compiler and its arguments.
+The data above was run on an AMD multi-core system and, compiled with g++ version 14.10.0 without optimizations.
+~~~~
+
 [approaches]: https://exercism.org/tracks/cpp/exercises/leap/approaches
 [approach-boolean-chain]: https://exercism.org/tracks/cpp/exercises/leap/approaches/boolean-chain
 [approach-ternary-operator]: https://exercism.org/tracks/cpp/exercises/leap/approaches/ternary-operator
