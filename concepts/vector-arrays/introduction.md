@@ -12,7 +12,7 @@ Arrays also need a size.
 Look at these examples to see the two container types' initializations:
 
 ```cpp
-#include<array>
+#include <array>
 #include <string>
 
 // std::array variable_name<element_type, size> {list of elements}
@@ -24,11 +24,11 @@ Vectors usually need more space, as they allocate memory for further growth.
 You do not need to specify a size:
 
 ```cpp
-#include<vector>
+#include <vector>
 
-// std::vector variable_name<element_type> {list of elements}
-std::vector countdown<int> {3, 2, 1};
-// my_vector contains the elements 3, 2 and 1
+// std::vector<element_type> variable_name {list of elements}
+std::vector<int> countdown {3, 2, 1};
+// countdown contains the elements 3, 2 and 1
 ```
 
 > Note: You do not need to know the exact mechanics behind the template concept yet, it will have its own concept further down the syllabus tree.
