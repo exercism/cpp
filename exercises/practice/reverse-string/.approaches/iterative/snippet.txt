@@ -1,0 +1,7 @@
+std::string result;
+for (std::size_t i = 0; i < size(original); ++i)
+{
+    std::size_t rindex = size(original) - i - 1;
+    result.append(original[rindex]);
+}
+return result;

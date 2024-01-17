@@ -1,0 +1,8 @@
+void recursive_helper(std::string_view input, std::string& output)
+{
+    if (input.empty())
+        return;
+    output.append(input.back());
+    input.remove_suffix(1);
+    recursive_helper(input, output);
+}

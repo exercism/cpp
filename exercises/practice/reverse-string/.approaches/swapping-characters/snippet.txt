@@ -1,0 +1,8 @@
+std::size_t a = 0;
+std::size_t b = size(str) - 1;
+while (a < b)
+{
+    std::swap(str[a], str[b]);
+    ++a; --b;
+}
+return str;
