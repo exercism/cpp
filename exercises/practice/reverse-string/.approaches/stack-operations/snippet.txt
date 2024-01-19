@@ -1,0 +1,8 @@
+std::string result;
+while (!original.empty())
+{
+    char c = original.back();
+    original.remove_suffix(1);
+    result.push_back(c);
+}
+return result;

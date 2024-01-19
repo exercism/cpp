@@ -1,0 +1,5 @@
+if (size(original) <= 1)
+    return std::string{original};
+auto half_size = size(str) / 2;
+return reverse_string(original.substr(half_size) +
+       reverse_string(original.substr(0, half_size);
