@@ -5,6 +5,7 @@ You aced your job interview through your knowledge of C++ and [von Neumann probe
 As you have seen a lot of test files, your new boss wants you to recreate the respective source and header files from some test code the company has recently recovered.
 
 In this exercise, you are going to recreate lost files.
+Currently the content of the files is unusable garbage data.
 
 ~~~~exercism/note
 The workflow of this concept exercise is very similar to the structure of Exercism's practice exercises.
