@@ -110,7 +110,7 @@ std::string reverse_string(std::string_view original)
 ```
 
 This approach constructs the reversed string directly.
-It combines a constructor a constructor of `std::string` with the "reverse iterators" of the original string.
+It combines a constructor of `std::string` with the "reverse iterators" of the original string.
 That makes the code concise, expressive, easy to read, idiomatic, and very efficient.
 
 For more information check out the [Direct Construction][approach-direct-construction] approach.
