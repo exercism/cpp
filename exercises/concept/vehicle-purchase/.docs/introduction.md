@@ -27,7 +27,7 @@ The operators `==` and `!=` check whether a value is equal to another or not, re
 Here are some common examples:
 
 ```cpp
-bool eq3 == 3; // false, integer comparison
+bool eq3 = 2 == 3; // false, integer comparison
 
 bool eq4 = 2.1 != 2.2; // true, float comparison 
 
