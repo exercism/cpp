@@ -147,7 +147,7 @@ TEST_CASE("words_are_not_anagrams_of_themselves_even_if_letter_case_is_partially
 TEST_CASE("words_are_not_anagrams_of_themselves_even_if_letter_case_is_completely_different", "[findAnagrams][ba53e423-7e02-41ee-9ae2-71f91e6d18e6]")
 {
     auto subject = anagram::anagram("BANANA");
-    auto matches = subject.matches({"Banana"});
+    auto matches = subject.matches({"banana"});
     vector<string> expected;
 
     REQUIRE(expected == matches);
