@@ -29,6 +29,15 @@ TEST_CASE("detects_two_anagrams", "[findAnagrams][03eb9bbe-8906-4ea0-84fa-ffe711
     REQUIRE(expected == matches);
 }
 
+TEST_CASE("detects_two_anagrams", "[findAnagrams][b3cca662-f50a-489e-ae10-ab8290a09bdc]")
+{
+    auto subject = anagram::anagram("master");
+    auto matches = subject.matches({"stream", "pigeon", "maters"});
+    vector<string> expected{"stream", "maters"};
+
+    REQUIRE(expected == matches);
+}
+
 TEST_CASE("does_not_detect_anagram_subsets", "[findAnagrams][a27558ee-9ba0-4552-96b1-ecf665b06556]")
 {
     auto subject = anagram::anagram("good");
@@ -108,6 +117,15 @@ TEST_CASE("detects_anagrams_using_case_insensitive_possible_matches", "[findAnag
     REQUIRE(expected == matches);
 }
 
+TEST_CASE("does_not_detect_an_anagram_if_the_original_word_is_repeated", "[findAnagrams][7cc195ad-e3c7-44ee-9fd2-d3c344806a2c]")
+{
+    auto subject = anagram::anagram("go");
+    auto matches = subject.matches({"go Go GO"});
+    vector<string> expected;
+
+    REQUIRE(expected == matches);
+}
+
 TEST_CASE("does_not_detect_an_anagram_if_the_original_word_is_repeated", "[findAnagrams][630abb71-a94e-4715-8395-179ec1df9f91]")
 {
     auto subject = anagram::anagram("go");
@@ -121,6 +139,15 @@ TEST_CASE("anagrams_must_use_all_letters_exactly_once", "[findAnagrams][9878a1c9
 {
     auto subject = anagram::anagram("tapper");
     auto matches = subject.matches({"patter"});
+    vector<string> expected;
+
+    REQUIRE(expected == matches);
+}
+
+TEST_CASE("words_are_not_anagrams_of_themselves", "[findAnagrams][85757361-4535-45fd-ac0e-3810d40debc1]")
+{
+    auto subject = anagram::anagram("BANANA");
+    auto matches = subject.matches({"BANANA", "Banana", "banana"});
     vector<string> expected;
 
     REQUIRE(expected == matches);
@@ -149,6 +176,15 @@ TEST_CASE("words_are_not_anagrams_of_themselves_even_if_letter_case_is_completel
     auto subject = anagram::anagram("BANANA");
     auto matches = subject.matches({"banana"});
     vector<string> expected;
+
+    REQUIRE(expected == matches);
+}
+
+TEST_CASE("words_other_than_themselves_can_be_anagrams", "[findAnagrams][a0705568-628c-4b55-9798-82e4acde51ca]")
+{
+    auto subject = anagram::anagram("LISTEN");
+    auto matches = subject.matches({"Listen", "Silent", "LISTEN"});
+    vector<string> expected{"Silent"};
 
     REQUIRE(expected == matches);
 }
