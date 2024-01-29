@@ -2,7 +2,7 @@
 #ifdef EXERCISM_TEST_SUITE
 #include <catch2/catch.hpp>
 #else
-#include "test/catch.hpp"
+#include "test/catch_amalgamated.hpp"
 #endif
 
 using namespace std;
