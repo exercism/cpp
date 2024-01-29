@@ -32,7 +32,7 @@ elseif(EXERCISM_TEST_SUITE)
     target_compile_definitions(${exercise} PRIVATE EXERCISM_TEST_SUITE)
 else()
     # Build executable from sources and headers
-    add_executable(${exercise} ${file}_test.cpp ${exercise_cpp} ${file}.h test/tests-main.cpp)
+    add_executable(${exercise} ${file}_test.cpp ${exercise_cpp} ${file}.h test/catch_amalgamated.cpp)
 endif()
 
 set_target_properties(${exercise} PROPERTIES
