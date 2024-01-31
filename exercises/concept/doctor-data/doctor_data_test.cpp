@@ -12,7 +12,7 @@ TEST_CASE("Create different probes", "[task_1]") {
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
 
-TEST_CASE("Create drone from replication", "[task_1]") {
+TEST_CASE("Create drone from replication", "[task_2]") {
     heaven::Vessel bob{"Robert Johansson", 1};
     heaven::Vessel bob5 = bob.replicate("Mario");
     REQUIRE(bob5.current_system == star_map::System::Sol);
