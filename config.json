@@ -1108,6 +1108,15 @@
         "topics": []
       },
       {
+        "slug": "knapsack",
+        "name": "Knapsack",
+        "uuid": "35705d66-fe72-4dee-8eb0-54823240f2d7",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6,
+        "topics": []
+      },
+      {
         "slug": "two-bucket",
         "name": "Two Bucket",
         "uuid": "83c92b7f-fb0e-43d8-ab7d-d514408b8575",
