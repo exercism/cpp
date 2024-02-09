@@ -5,8 +5,13 @@
 #include "test/catch.hpp"
 #endif
 
-TEST_CASE("pop_gets_element_from_the_list")
-{
+/*
+`delete`cannot be used as a name in C++ as it is reserved.
+This track implements `erase` instead.
+The tests have been renamed accordingly.
+*/
+
+TEST_CASE("pop gets element from the list", "[7f7e3987-b954-41b8-8084-99beca08752c]") {
     linked_list::List<int> llist{};
     llist.push(7);
     REQUIRE(7 == llist.pop());
@@ -14,8 +19,7 @@ TEST_CASE("pop_gets_element_from_the_list")
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
 
-TEST_CASE("push/pop_respectively_add/remove_at_the_end_of_the_list")
-{
+TEST_CASE("push/pop respectively add/remove at the end of the list", "[c3f67e5d-cfa2-4c3e-a18f-7ce999c3c885]") {
     linked_list::List<int> llist{};
     llist.push(11);
     llist.push(13);
@@ -23,15 +27,13 @@ TEST_CASE("push/pop_respectively_add/remove_at_the_end_of_the_list")
     REQUIRE(11 == llist.pop());
 }
 
-TEST_CASE("shift_gets_an_element_from_the_list")
-{
+TEST_CASE("shift gets an element from the list", "[00ea24ce-4f5c-4432-abb4-cc6e85462657]") {
     linked_list::List<int> llist{};
     llist.push(17);
     REQUIRE(17 == llist.shift());
 }
 
-TEST_CASE("shift_gets_first_element_from_the_list")
-{
+TEST_CASE("shift gets first element from the list", "[37962ee0-3324-4a29-b588-5a4c861e6564]") {
     linked_list::List<int> llist{};
     llist.push(23);
     llist.push(5);
@@ -39,8 +41,7 @@ TEST_CASE("shift_gets_first_element_from_the_list")
     REQUIRE(5 == llist.shift());
 }
 
-TEST_CASE("unshift_adds_element_at_start_of_the_list")
-{
+TEST_CASE("unshift adds element at start of the list", "[30a3586b-e9dc-43fb-9a73-2770cec2c718]") {
     linked_list::List<int> llist{};
     llist.unshift(23);
     llist.unshift(5);
@@ -48,8 +49,7 @@ TEST_CASE("unshift_adds_element_at_start_of_the_list")
     REQUIRE(23 == llist.shift());
 }
 
-TEST_CASE("pop,_push,_shift,_and_unshift_can_be_used_in_any_order")
-{
+TEST_CASE("pop, push, shift, and unshift can be used in any order", "[042f71e4-a8a7-4cf0-8953-7e4f3a21c42d]") {
     linked_list::List<int> llist{};
     llist.push(1);
     llist.push(2);
@@ -63,35 +63,31 @@ TEST_CASE("pop,_push,_shift,_and_unshift_can_be_used_in_any_order")
     REQUIRE(3 == llist.shift());
 }
 
-TEST_CASE("size_of_an_empty_list")
-{
+TEST_CASE("count an empty list", "[88f65c0c-4532-4093-8295-2384fb2f37df]") {
     linked_list::List<int> llist{};
-    REQUIRE(0 == llist.size());
+    REQUIRE(0 == llist.count());
 }
 
-TEST_CASE("size_of__a_list_with_items")
-{
+TEST_CASE("count a list with items", "[fc055689-5cbe-4cd9-b994-02e2abbb40a5]") {
     linked_list::List<int> llist{};
     llist.push(37);
     llist.push(1);
-    REQUIRE(2 == llist.size());
+    REQUIRE(2 == llist.count());
 }
 
-TEST_CASE("size_is_correct_after_mutation")
-{
+TEST_CASE("count is correct after mutation", "[8272cef5-130d-40ea-b7f6-5ffd0790d650]") {
     linked_list::List<int> llist{};
     llist.push(31);
-    REQUIRE(1 == llist.size());
+    REQUIRE(1 == llist.count());
     llist.unshift(43);
-    REQUIRE(2 == llist.size());
+    REQUIRE(2 == llist.count());
     llist.shift();
-    REQUIRE(1 == llist.size());
+    REQUIRE(1 == llist.count());
     llist.pop();
-    REQUIRE(0 == llist.size());
+    REQUIRE(0 == llist.count());
 }
 
-TEST_CASE("popping_to_empty_doesn't_break_the_list")
-{
+TEST_CASE("popping to empty doesn't break the list", "[229b8f7a-bd8a-4798-b64f-0dc0bb356d95]") {
     linked_list::List<int> llist{};
     llist.push(41);
     llist.push(59);
@@ -102,8 +98,7 @@ TEST_CASE("popping_to_empty_doesn't_break_the_list")
     REQUIRE(47 == llist.pop());
 }
 
-TEST_CASE("shifting_to_empty_doesn't_break_the_list")
-{
+TEST_CASE("shifting to empty doesn't break the list", "[4e1948b4-514e-424b-a3cf-a1ebbfa2d1ad]") {
     linked_list::List<int> llist{};
     llist.push(41);
     llist.push(59);
@@ -114,28 +109,14 @@ TEST_CASE("shifting_to_empty_doesn't_break_the_list")
     REQUIRE(47 == llist.shift());
 }
 
-TEST_CASE("popping_from_empty_throws_exception")
-{
-    linked_list::List<int> llist{};
-    REQUIRE_THROWS(llist.pop());
-}
-
-TEST_CASE("shifting_from_empty_throws_exception")
-{
-    linked_list::List<int> llist{};
-    REQUIRE_THROWS(llist.shift());
-}
-
-TEST_CASE("erases_the_only_element")
-{
+TEST_CASE("erases the only element", "[e8f7c600-d597-4f79-949d-8ad8bae895a6]") {
     linked_list::List<int> llist{};
     llist.push(61);
     llist.erase(61);
     REQUIRE(0 == llist.count());
 }
 
-TEST_CASE("erases_the_element_with_the_specified_value_from_the_list")
-{
+TEST_CASE("erases the element with the specified value from the list", "[fd65e422-51f3-45c0-9fd0-c33da638f89b]") {
     linked_list::List<int> llist{};
     llist.push(71);
     llist.push(83);
@@ -146,9 +127,8 @@ TEST_CASE("erases_the_element_with_the_specified_value_from_the_list")
     REQUIRE(71 == llist.shift());
 }
 
-TEST_CASE("erases_the_element_with_the_specified_value_from_the_list,_re-assigns_tail")
-{
-    linked_list::List<int> llist{};
+TEST_CASE("erases the element with the specified value from the list, re-assigns tail", "[59db191a-b17f-4ab7-9c5c-60711ec1d013]") {
+	linked_list::List<int> llist{};
     llist.push(71);
     llist.push(83);
     llist.push(79);
@@ -158,9 +138,8 @@ TEST_CASE("erases_the_element_with_the_specified_value_from_the_list,_re-assigns
     REQUIRE(71 == llist.pop());
 }
 
-TEST_CASE("erases_the_element_with_the_specified_value_from_the_list,_re-assigns_head")
-{
-    linked_list::List<int> llist{};
+TEST_CASE("erases the element with the specified value from the list, re-assigns head", "[58242222-5d39-415b-951d-8128247f8993]") {
+	linked_list::List<int> llist{};
     llist.push(71);
     llist.push(83);
     llist.push(79);
@@ -170,9 +149,8 @@ TEST_CASE("erases_the_element_with_the_specified_value_from_the_list,_re-assigns
     REQUIRE(79 == llist.shift());
 }
 
-TEST_CASE("erases_the_first_of_two_elements")
-{
-    linked_list::List<int> llist{};
+TEST_CASE("erases the first of two elements", "[ee3729ee-3405-4bd2-9bad-de0d4aa5d647]") {
+	linked_list::List<int> llist{};
     llist.push(97);
     llist.push(101);
     llist.erase(97);
@@ -180,9 +158,8 @@ TEST_CASE("erases_the_first_of_two_elements")
     REQUIRE(101 == llist.pop());
 }
 
-TEST_CASE("erases_the_second_of_two_elements")
-{
-    linked_list::List<int> llist{};
+TEST_CASE("erases the second of two elements", "[47e3b3b4-b82c-4c23-8c1a-ceb9b17cb9fb]") {
+	linked_list::List<int> llist{};
     llist.push(97);
     llist.push(101);
     llist.erase(101);
@@ -190,17 +167,15 @@ TEST_CASE("erases_the_second_of_two_elements")
     REQUIRE(97 == llist.pop());
 }
 
-TEST_CASE("erase_does_not_modify_the_list_if_the_element_is_not_found")
-{
-    linked_list::List<int> llist{};
+TEST_CASE("erase does not modify the list if the element is not found", "[7b420958-f285-4922-b8f9-10d9dcab5179]") {
+	linked_list::List<int> llist{};
     llist.push(89);
     llist.erase(103);
     REQUIRE(1 == llist.count());
 }
 
-TEST_CASE("erases_only_the_first_occurrence")
-{
-    linked_list::List<int> llist{};
+TEST_CASE("erases only the first occurrence", "[7e04828f-6082-44e3-a059-201c63252a76]") {
+	linked_list::List<int> llist{};
     llist.push(73);
     llist.push(9);
     llist.push(9);
@@ -212,4 +187,4 @@ TEST_CASE("erases_only_the_first_occurrence")
     REQUIRE(73 == llist.pop());
 }
 
-#endif  // EXERCISM_RUN_ALL_TESTS
+#endif

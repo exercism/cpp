@@ -1,5 +1,4 @@
-#if !defined(LINKED_LIST_H)
-#define LINKED_LIST_H
+#pragma once
 
 #include <memory>
 #include <stdexcept>
@@ -16,10 +15,6 @@ namespace linked_list {
     template<typename T>
     class List {
         public:
-            size_t count() {
-                return current_size;
-            }
-
             void push(T entry) {
                 auto new_element = std::make_shared<Node<T>>(); 
                 if (!head) {
@@ -84,6 +79,7 @@ namespace linked_list {
                     ptr = ptr->next;
                 }
                 if(!ptr) return false;
+                current_size--;
                 if (ptr == head) {
                     if (head->next) {
                         head = head->next;
@@ -92,7 +88,7 @@ namespace linked_list {
                         head.reset();
                     }
                 }
-                if (ptr == tail) {
+                else if (ptr == tail) {
                     if (tail->previous) {
                         tail = tail->previous;
                         tail->next.reset();
@@ -100,14 +96,14 @@ namespace linked_list {
                         tail.reset();
                     }
                 }
-                if (ptr != tail && ptr != head) {
+                else {
                     ptr->next->previous = ptr->previous;
                     ptr->previous->next = ptr->next;
                 }
                 return true;
             }
 
-            size_t size() {
+            size_t count() {
                 return current_size;
             }
         private:
@@ -116,7 +112,4 @@ namespace linked_list {
             size_t current_size{};
     };
 
-    
 } // namespace linked_list
-
-#endif // LINKED_LIST_H
