@@ -11,16 +11,16 @@ on:
 jobs:
   linux-min:
     name: Linux Min Config
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     strategy:
       matrix:
-        compiler: [clang++-6.0, g++-7]
+        compiler: [clang++-6.0, g++-10]
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
     - name: Install Dependencies
       # Boost must be installed only because the CMake version (3.12) can't
       # detect the installed Boost version (1.69)
-      run: sudo apt-get update && sudo apt-get -y install ninja-build libboost-date-time-dev clang-6.0 g++-7 g++-multilib
+      run: sudo apt-get update && sudo apt-get -y install ninja-build libboost-date-time-dev clang-6.0 g++-10 g++-multilib
     - name: Run tests with common Catch
       run: |
         cmake -G Ninja .
@@ -32,12 +32,12 @@ jobs:
   linux-latest:
     name: Linux Latest Config
     needs: [linux-min]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     strategy:
       matrix:
         compiler: [clang++, g++]
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
     - name: Install Dependencies
       # Boost must be installed only because the CMake version (3.12) can't
       # detect the installed Boost version (1.69)
@@ -62,9 +62,9 @@ jobs:
   windows:
     name: Windows
     needs: [linux-min]
-    runs-on: windows-latest
+    runs-on: windows-2022
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
     - name: Run Tests
       shell: powershell
       # Delete the exercises that require Boost to avoid issues with Windows setup.
@@ -80,7 +80,7 @@ jobs:
     needs: [linux-min]
     runs-on: macOS-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
     - name: Install Boost
       run: brew install boost
     - name: Run Tests

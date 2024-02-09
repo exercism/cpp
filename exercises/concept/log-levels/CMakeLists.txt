@@ -1,8 +1,8 @@
-# Get the exercise name from the current directory
-get_filename_component(exercise ${CMAKE_CURRENT_SOURCE_DIR} NAME)
-
 # Basic CMake project
 cmake_minimum_required(VERSION 3.5.1)
+
+# Get the exercise name from the current directory
+get_filename_component(exercise ${CMAKE_CURRENT_SOURCE_DIR} NAME)
 
 # Name the project after the exercise
 project(${exercise} CXX)
@@ -17,29 +17,22 @@ else()
     set(exercise_cpp "")
 endif()
 
-# Downloads Catch library used for testing
-set(CATCH_HEADER "${CMAKE_CURRENT_SOURCE_DIR}/test/catch.hpp")
-set(CATCH_DOWNLOAD_URL "https://github.com/catchorg/Catch2/releases/download/v2.11.3/catch.hpp")
-if (NOT EXISTS "${CATCH_HEADER}")
-    file(DOWNLOAD "${CATCH_DOWNLOAD_URL}" "${CATCH_HEADER}")
-endif()
-
 # Use the common Catch library?
 if(EXERCISM_COMMON_CATCH)
     # For Exercism track development only
-    add_executable(${exercise} ${file}_test.cpp ${exercise_cpp} ${file}.h $<TARGET_OBJECTS:catchlib>)
+    add_executable(${exercise} ${file}_test.cpp $<TARGET_OBJECTS:catchlib>)
 elseif(EXERCISM_TEST_SUITE)
     # The Exercism test suite is being run, the Docker image already
     # includes a pre-built version of Catch.
     find_package(Catch2 REQUIRED)
-    add_executable(${exercise} ${file}_test.cpp ${exercise_cpp} ${file}.h)
+    add_executable(${exercise} ${file}_test.cpp)
     target_link_libraries(${exercise} PRIVATE Catch2::Catch2WithMain)
     # When Catch is installed system wide we need to include a different
     # header, we need this define to use the correct one.
     target_compile_definitions(${exercise} PRIVATE EXERCISM_TEST_SUITE)
 else()
     # Build executable from sources and headers
-    add_executable(${exercise} ${file}_test.cpp ${exercise_cpp} ${file}.h test/tests-main.cpp)
+    add_executable(${exercise} ${file}_test.cpp test/tests-main.cpp)
 endif()
 
 set_target_properties(${exercise} PROPERTIES
@@ -48,8 +41,12 @@ set_target_properties(${exercise} PROPERTIES
     CXX_EXTENSIONS OFF
 )
 
+set(CMAKE_BUILD_TYPE Debug)
+
 if("${CMAKE_CXX_COMPILER_ID}" MATCHES "(GNU|Clang)")
     set_target_properties(${exercise} PROPERTIES
+        # added "-Wno-unused-parameter" to remove compiler warnings
+        # should make it easier for students to run their first real code
         COMPILE_FLAGS "-Wall -Wextra -Wpedantic -Werror"
     )
 endif()
@@ -67,4 +64,3 @@ endif()
 
 # Run the tests on every build
 add_custom_target(test_${exercise} ALL DEPENDS ${exercise} COMMAND ${exercise})
-

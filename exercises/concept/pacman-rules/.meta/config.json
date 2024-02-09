@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "vaeng"
+  ],
+  "files": {
+    "solution": [
+      "pacman_rules.cpp"
+    ],
+    "test": [
+      "pacman_rules_test.cpp"
+    ],
+    "exemplar": [
+      ".meta/exemplar.cpp"
+    ]
+  },
+  "forked_from": [
+    "elixir/pacman-rules"
+  ],
+  "blurb": "Learn about booleans by implementing the rules of the Pac-Man game."
+}

@@ -1,5 +1,4 @@
 {
-  "blurb": "Implement a clock that handles times without dates.",
   "authors": [
     "LegalizeAdulthood"
   ],
@@ -24,6 +23,6 @@
       ".meta/example.h"
     ]
   },
-  "source": "Pairing session with Erin Drummond",
-  "source_url": "https://twitter.com/ebdrummond"
+  "blurb": "Implement a clock that handles times without dates.",
+  "source": "Pairing session with Erin Drummond"
 }

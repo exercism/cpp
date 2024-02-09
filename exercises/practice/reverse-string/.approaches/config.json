@@ -1,0 +1,81 @@
+{
+  "introduction": {
+    "authors": [
+      "siebenschlaefer"
+    ]
+  },
+  "approaches": [
+    {
+      "uuid": "0c7de46a-523e-4326-8b76-66b328c27d46",
+      "slug": "iterative",
+      "title": "Iterative",
+      "blurb": "Build the reversed string iteratively.",
+      "authors": [
+        "siebenschlaefer"
+      ]
+    },
+    {
+      "uuid": "748737e9-4842-40ab-a538-e950e95f1294",
+      "slug": "swapping-characters",
+      "title": "Swapping characters",
+      "blurb": "Modify the parameter, swapping characters manually.",
+      "authors": [
+        "siebenschlaefer"
+      ]
+    },
+    {
+      "uuid": "c2955be3-be10-42eb-948d-4db4f2078c49",
+      "slug": "using-the-standard-lib",
+      "title": "Using the standard library",
+      "blurb": "Modify the parameter, using the standard library.",
+      "authors": [
+        "siebenschlaefer"
+      ]
+    },
+    {
+      "uuid": "a64a64e7-edfc-4eef-88a9-56ad3a832104",
+      "slug": "direct-construction",
+      "title": "Direct construction",
+      "blurb": "Construct the reversed string directly.",
+      "authors": [
+        "siebenschlaefer"
+      ]
+    },
+    {
+      "uuid": "3d4e5e8c-abff-4dc8-81b8-84c2f1819c66",
+      "slug": "stack-operations",
+      "title": "Stack operations",
+      "blurb": "Build the reversed string with stack operations.",
+      "authors": [
+        "siebenschlaefer"
+      ]
+    },
+    {
+      "uuid": "4dbe796d-c2f8-4370-95c2-a85b0d6f8a0c",
+      "slug": "linear-recursion",
+      "title": "Linear recursion",
+      "blurb": "Build the reversed string with linear recursion.",
+      "authors": [
+        "siebenschlaefer"
+      ]
+    },
+    {
+      "uuid": "9fc492ee-5625-4042-8e1d-34828457f8eb",
+      "slug": "divide-and-conquer",
+      "title": "Divide and conquer",
+      "blurb": "Build the reversed string recursively, with divide and conquer.",
+      "authors": [
+        "siebenschlaefer"
+      ]
+    },
+    {
+      "uuid": "619b75b6-ac82-48d4-accd-4368c215f3d9",
+      "slug": "over-engineered",
+      "title": "Over-Engineered",
+      "blurb": "Try to achieve peak performance with function overloading.",
+      "authors": [
+        "siebenschlaefer"
+      ]
+    }
+  ]
+}

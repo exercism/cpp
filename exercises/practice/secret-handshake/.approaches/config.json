@@ -1,0 +1,27 @@
+{
+  "introduction": {
+    "authors": [
+      "bobahop"
+    ]
+  },
+  "approaches": [
+    {
+      "uuid": "d0cfe906-5844-4bcc-b30a-08341057deb4",
+      "slug": "if-statements-with-reverse",
+      "title": "if statements with reverse",
+      "blurb": "Use if statements with reverse if needed.",
+      "authors": [
+        "bobahop"
+      ]
+    },
+    {
+      "uuid": "616c4db1-392f-4033-a37d-e0c9af4d995f",
+      "slug": "iterate-once",
+      "title": "Iterate once",
+      "blurb": "Iterate once even if reverse is needed.",
+      "authors": [
+        "bobahop"
+      ]
+    }
+  ]
+}

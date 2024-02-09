@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "vaeng"
+  ],
+  "files": {
+    "solution": [
+      "sublist.cpp",
+      "sublist.h"
+    ],
+    "test": [
+      "sublist_test.cpp"
+    ],
+    "example": [
+      ".meta/example.cpp",
+      ".meta/example.h"
+    ]
+  },
+  "blurb": "Write a function to determine if a list is a sublist of another list."
+}

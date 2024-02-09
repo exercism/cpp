@@ -3,9 +3,9 @@
   "slug": "cpp",
   "active": true,
   "status": {
-    "concept_exercises": false,
+    "concept_exercises": true,
     "test_runner": true,
-    "representer": false,
+    "representer": true,
     "analyzer": false
   },
   "blurb": "C++ is a general-purpose programming language that supports procedural, object-oriented, generic and functional programming styles. C++ is deployed on billions of devices from the smallest embedded microprocessor to the largest supercomputer.",
@@ -16,7 +16,7 @@
     "highlightjs_language": "cpp"
   },
   "test_runner": {
-    "average_run_time": 2.0
+    "average_run_time": 2
   },
   "files": {
     "solution": [
@@ -42,10 +42,144 @@
         "name": "Log Levels",
         "uuid": "62f945e7-0791-46b7-8161-855183f736ba",
         "concepts": [
-          "strings"
+          "strings",
+          "includes"
         ],
-        "prerequisites": [],
-        "status": "wip"
+        "prerequisites": [
+          "basics",
+          "namespaces"
+        ]
+      },
+      {
+        "slug": "lasagna",
+        "name": "Lasagna",
+        "uuid": "00ab71eb-4ebb-4360-8621-a394040c894a",
+        "concepts": [
+          "basics"
+        ],
+        "prerequisites": []
+      },
+      {
+        "uuid": "88baa5ab-dacb-4fab-8f16-4f3ed726b27b",
+        "slug": "freelancer-rates",
+        "name": "Freelancer Rates",
+        "concepts": ["numbers"],
+        "prerequisites": [
+          "basics",
+          "includes"
+        ]
+      },
+      {
+        "slug": "last-will",
+        "name": "Last Will",
+        "uuid": "d3946a64-a2a3-4dfc-8ab7-3ac1b6721b39",
+        "concepts": [
+          "namespaces"
+        ],
+        "prerequisites": [
+          "basics"
+        ]
+      },
+      {
+        "slug": "pacman-rules",
+        "name": "Pacman Rules",
+        "uuid": "8da713a2-6d34-49f7-893b-23a4bb45d3a1",
+        "concepts": [
+          "booleans"
+        ],
+        "prerequisites": [
+          "basics"
+        ]
+      },
+      {
+        "slug": "vehicle-purchase",
+        "name": "Vehicle Purchase",
+        "uuid": "e12f3678-202a-4d71-89d8-243ecc90b33a",
+        "concepts": [
+          "comparisons",
+          "if-statements"
+        ],
+        "prerequisites": [
+          "strings",
+          "booleans",
+          "numbers"
+        ]
+      },
+      {
+        "slug": "making-the-grade",
+        "name": "Making the Grade",
+        "uuid": "b9d0b273-1c48-492a-8c61-44f432c8beff",
+        "concepts": [
+          "vector-arrays"
+        ],
+        "prerequisites": [
+          "loops",
+          "strings",
+          "if-statements",
+          "booleans",
+          "numbers"
+        ]
+      },
+      {
+        "slug": "interest-is-interesting",
+        "name": "Interest is interesting",
+        "uuid": "6be13d54-4d1e-448e-a65d-c5d3d8abbfe0",
+        "concepts": [
+          "loops"
+        ],
+        "prerequisites": [
+          "comparisons",
+          "if-statements"
+        ]
+      },
+      {
+        "slug": "ellens-alien-game",
+        "name": "Ellen's Alien Game",
+        "uuid": "cb6915ba-1539-4c4c-8313-38bfc69c4531",
+        "concepts": [
+          "classes"
+        ],
+        "prerequisites": [
+          "comparisons",
+          "if-statements"
+        ]
+      },
+      {
+        "slug": "election-day",
+        "name": "Election Day",
+        "uuid": "431b877a-cb73-41aa-b9e4-034d9179faf0",
+        "concepts": [
+          "references"
+        ],
+        "prerequisites": [
+          "classes",
+          "vector-arrays"
+        ]
+      },
+      {
+        "slug": "troll-the-trolls",
+        "name": "Troll the Trolls",
+        "uuid": "61c007d9-d856-4922-9098-e06a505363ed",
+        "concepts": [
+          "switch",
+          "enums"
+        ],
+        "prerequisites": [
+          "classes",
+          "comparisons"
+        ]
+      },
+      {
+        "slug": "doctor-data",
+        "name": "Doctor Data",
+        "uuid": "2d2efdad-4f5d-4a1d-9626-381b37e72e3f",
+        "concepts": [
+          "headers"
+        ],
+        "prerequisites": [
+          "classes",
+          "enums"
+        ]
       }
     ],
     "practice": [
@@ -64,8 +198,12 @@
         "slug": "leap",
         "name": "Leap",
         "uuid": "76a840c7-24f1-455d-b62e-da42b13f8dd5",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "if-statements"
+        ],
+        "prerequisites": [
+          "booleans"
+        ],
         "difficulty": 1,
         "topics": [
           "conditionals",
@@ -76,8 +214,12 @@
         "slug": "reverse-string",
         "name": "Reverse String",
         "uuid": "c6946af0-3c2f-4f76-8b30-a1643cd5be63",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "loops"
+        ],
+        "prerequisites": [
+          "strings"
+        ],
         "difficulty": 2,
         "topics": [
           "strings"
@@ -120,7 +262,10 @@
         "slug": "raindrops",
         "name": "Raindrops",
         "uuid": "9155f4ea-3566-4a57-a2c5-76535d931ccc",
-        "practices": [],
+        "practices": [
+          "strings",
+          "if-statements"
+        ],
         "prerequisites": [],
         "difficulty": 2,
         "topics": [
@@ -215,8 +360,12 @@
         "slug": "difference-of-squares",
         "name": "Difference of Squares",
         "uuid": "46cb230c-8ce9-431d-9dea-a195a3abd117",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "numbers"
+        ],
+        "prerequisites": [
+          "loops"
+        ],
         "difficulty": 3,
         "topics": [
           "loops",
@@ -250,8 +399,12 @@
         "slug": "sieve",
         "name": "Sieve",
         "uuid": "7ea05dd1-2c3c-499e-8608-dc76d30c5457",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "vector-arrays"
+        ],
+        "prerequisites": [
+          "loops"
+        ],
         "difficulty": 5,
         "topics": [
           "loops",
@@ -299,8 +452,12 @@
         "slug": "allergies",
         "name": "Allergies",
         "uuid": "80ae6a8e-8464-4f3a-afed-14d424757413",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "classes"
+        ],
+        "prerequisites": [
+          "strings"
+        ],
         "difficulty": 3,
         "topics": [
           "bitwise_operations",
@@ -311,8 +468,12 @@
         "slug": "protein-translation",
         "name": "Protein Translation",
         "uuid": "fb73e822-4831-4d33-a049-44a514bfa46a",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "string"
+        ],
+        "prerequisites": [
+          "vector-arrays"
+        ],
         "difficulty": 3,
         "topics": [
           "filtering",
@@ -335,8 +496,12 @@
         "slug": "prime-factors",
         "name": "Prime Factors",
         "uuid": "ba755932-b301-41cc-b7f2-5e6d2e130325",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "vector-arrays"
+        ],
+        "prerequisites": [
+          "loops"
+        ],
         "difficulty": 5,
         "topics": [
           "loops",
@@ -395,8 +560,12 @@
         "slug": "atbash-cipher",
         "name": "Atbash Cipher",
         "uuid": "15c741a0-944d-4b06-a096-6af63137347a",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "strings"
+        ],
+        "prerequisites": [
+          "loops"
+        ],
         "difficulty": 3,
         "topics": [
           "algorithms",
@@ -407,8 +576,12 @@
         "slug": "trinary",
         "name": "Trinary",
         "uuid": "c8246de0-29b1-4f92-8b00-b766e395ad66",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "numbers"
+        ],
+        "prerequisites": [
+          "loops"
+        ],
         "difficulty": 3,
         "topics": [
           "math",
@@ -495,8 +668,12 @@
         "slug": "bob",
         "name": "Bob",
         "uuid": "d80210b8-45e8-4e5c-8b07-9e87c33c5959",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "loops"
+        ],
+        "prerequisites": [
+          "strings"
+        ],
         "difficulty": 5,
         "topics": [
           "conditionals",
@@ -561,8 +738,13 @@
         "slug": "matching-brackets",
         "name": "Matching Brackets",
         "uuid": "4a517292-3472-40f2-b4b8-5c8c25219ea5",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "vector-arrays"
+        ],
+        "prerequisites": [
+          "string",
+          "loops"
+        ],
         "difficulty": 3,
         "topics": [
           "pattern_matching",
@@ -598,8 +780,12 @@
         "slug": "luhn",
         "name": "Luhn",
         "uuid": "885865bc-a197-436f-94bc-b1998d5cc081",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "numbers"
+        ],
+        "prerequisites": [
+          "loops"
+        ],
         "difficulty": 1,
         "topics": [
           "math",
@@ -622,8 +808,12 @@
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "1035aa3f-030a-425b-84f1-1967f344d155",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "loops"
+        ],
+        "prerequisites": [
+          "includes"
+        ],
         "difficulty": 3,
         "topics": [
           "algorithms",
@@ -647,8 +837,12 @@
         "slug": "hexadecimal",
         "name": "Hexadecimal",
         "uuid": "c2e8e3fc-a39c-434b-87dd-9524636aa804",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "numbers"
+        ],
+        "prerequisites": [
+          "loops"
+        ],
         "difficulty": 3,
         "topics": [
           "math",
@@ -677,6 +871,20 @@
         "difficulty": 3,
         "topics": [
           "arrays",
+          "math"
+        ]
+      },
+      {
+        "slug": "perfect-numbers",
+        "name": "Perfect Numbers",
+        "uuid": "b5ab8c58-607e-4850-98b4-ac45f4ba3466",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "enums",
+          "conditionals",
+          "loops",
           "math"
         ]
       },
@@ -723,32 +931,36 @@
         ]
       },
       {
-          "slug": "bank-account",
-          "name": "Bank Account",
-          "uuid": "56cbac7e-8bd8-4cd5-bfc5-0bc512e95de0",
-          "practices": [],
-          "prerequisites": [],
-          "difficulty": 8,
-          "topics": [
-              "basics",
-              "classes",
-              "conditionals",
-              "numbers",
-              "threads"
-          ]
+        "slug": "bank-account",
+        "name": "Bank Account",
+        "uuid": "56cbac7e-8bd8-4cd5-bfc5-0bc512e95de0",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 8,
+        "topics": [
+          "basics",
+          "classes",
+          "conditionals",
+          "numbers",
+          "threads"
+        ]
       },
       {
         "slug": "darts",
         "name": "Darts",
         "uuid": "e8ad3859-9999-4a36-900d-d82fa6e74b08",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "if-statements"         
+        ],
+        "prerequisites": [
+          "numbers"
+        ],
         "difficulty": 2,
         "topics": [
-            "basics",
-            "bools",
-            "conditionals",
-            "numbers"
+          "basics",
+          "bools",
+          "conditionals",
+          "numbers"
         ]
       },
       {
@@ -759,12 +971,12 @@
         "prerequisites": [],
         "difficulty": 4,
         "topics": [
-            "bools",
-            "conditionals",
-            "lists",
-            "loops",
-            "numbers",
-            "strings"
+          "bools",
+          "conditionals",
+          "lists",
+          "loops",
+          "numbers",
+          "strings"
         ]
       },
       {
@@ -772,7 +984,7 @@
         "name": "Isbn Verifier",
         "uuid": "5fcc6fd8-1dc7-4493-970a-731c7602b229",
         "practices": [],
-        "prerequisites":[],
+        "prerequisites": [],
         "difficulty": 1,
         "topics": [
           "conditionals",
@@ -787,12 +999,145 @@
         "practices": [],
         "prerequisites":[],
         "difficulty": 6,
-        "status": "beta",
         "topics": [ 
+          "classes",
           "conditionals",
           "loops",
           "pointers"
         ]
+      },
+      {
+        "slug": "simple-linked-list",
+        "name": "Simple linked list",
+        "uuid": "ffccabe9-9779-4914-9cff-c6f5696c8afe",
+        "practices": [
+          "pointers"
+        ],
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": [
+          "classes",
+          "conditionals",
+          "loops",
+          "pointers"
+        ]
+      },
+      {
+        "slug": "high-scores",
+        "name": "High Scores",
+        "uuid": "10448fb8-60eb-4c67-93e8-488ecbde8676",
+        "practices": [
+          "vector-arrays"
+        ],
+        "prerequisites": [
+          "classes"
+        ],
+        "difficulty": 4,
+        "topics": [
+        ]
+      },
+      {
+        "slug": "eliuds-eggs",
+        "name": "Eliud's Eggs",
+        "uuid": "cfe01bad-0972-466c-b52a-9b8cf563b2f4",
+        "practices": [
+          "loops"
+        ],
+        "prerequisites": [
+          "if-statements",
+          "comparisons"
+        ],
+        "difficulty": 3,
+        "topics": [
+        ]
+      },
+      {
+        "slug": "diamond",
+        "name": "Diamond",
+        "uuid": "f8298f68-ef4e-41e1-99af-85a1bef71561",
+        "practices": [
+        ],
+        "prerequisites": [
+        ],
+        "difficulty": 3,
+        "topics": [
+        ]
+      },
+      {
+        "slug": "run-length-encoding",
+        "name": "Run-Length Encoding",
+        "uuid": "916fedd1-a9ed-4200-b115-cc1d1bc44aba",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": []
+      },
+      {
+        "slug": "rotational-cipher",
+        "name": "Rotational Cipher",
+        "uuid": "21d02535-4ab6-455d-88e1-08ec3b578894",
+        "practices": [
+          "strings"
+        ],
+        "prerequisites": [
+          "loops"
+        ],
+        "difficulty": 3,
+        "topics": []
+      },
+      {
+        "slug": "resistor-color",
+        "name": "Resistor Color",
+        "uuid": "15a9277e-59e2-484a-9877-64437556825c",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": []
+      },
+      {
+        "slug": "resistor-color-duo",
+        "name": "Resistor Color Duo",
+        "uuid": "83ce95e9-f8af-4dbb-b96b-d94b12421d77",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": []
+      },
+      {
+        "slug": "minesweeper",
+        "name": "Minesweeper",
+        "uuid": "3753a72a-78b7-429f-b79a-f68d55a00387",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5,
+        "topics": []
+      },
+      {
+        "slug": "sublist",
+        "name": "Sublist",
+        "uuid": "801cb315-91d6-48e6-92f4-36423a89d4e1",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5,
+        "topics": []
+      },
+      {
+        "slug": "knapsack",
+        "name": "Knapsack",
+        "uuid": "35705d66-fe72-4dee-8eb0-54823240f2d7",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6,
+        "topics": []
+      },
+      {
+        "slug": "two-bucket",
+        "name": "Two Bucket",
+        "uuid": "83c92b7f-fb0e-43d8-ab7d-d514408b8575",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 7,
+        "topics": []
       }
     ],
     "foregone": [
@@ -804,6 +1149,81 @@
       "uuid": "8d51e52a-95d3-45da-adb0-65bdfe96b875",
       "slug": "strings",
       "name": "Strings"
+    },
+    {
+      "uuid": "de675a2c-6fd2-427d-93c1-4190eeffcd95",
+      "slug": "numbers",
+      "name": "Numbers"
+    },
+    {
+      "uuid": "e52453a5-4997-4eba-b754-5bda7b97c701",
+      "slug": "basics",
+      "name": "Basics"
+    },
+    {
+      "uuid": "257598c7-c09f-47be-90db-514f93758420",
+      "slug": "includes",
+      "name": "Includes"
+    },
+    {
+      "uuid": "7b9bcf07-b447-4c18-b838-a7f4167ff521",
+      "slug": "namespaces",
+      "name": "Namespaces"
+    },
+    {
+      "uuid": "d1edc955-7226-4f7d-9ce7-784e3f28a7c3",
+      "slug": "if-statements",
+      "name": "If Statements"
+    },
+    {
+      "uuid": "1414040c-4f4f-45ab-b46b-03bc560e2511",
+      "slug": "booleans",
+      "name": "Booleans"
+    },
+    {
+      "uuid": "bb5ee09c-db6b-41ef-ae17-f3c894c3b09a",
+      "slug": "headers",
+      "name": "Headers"
+    },
+    {
+      "uuid": "6891847f-4fe2-48a1-9d27-bc079b0d975c",
+      "slug": "comparisons",
+      "name": "Comparisons"
+    },
+    {
+      "uuid": "1f377a50-ebb2-4203-b4f5-ca90ccf5ad25",
+      "slug": "vector-arrays",
+      "name": "Arrays and Vectors"
+    },
+    {
+      "uuid": "e356069a-09d4-417a-8688-8ab8ccb80a55",
+      "slug": "loops",
+      "name": "Loops"
+    },
+    {
+      "uuid": "7a24381f-a7d3-4d3a-93e9-eb7cd19858b4",
+      "slug": "switch",
+      "name": "Switch Statements"
+    },
+    {
+      "uuid": "fc00966e-dc25-46a6-8883-d6106c7d0774",
+      "slug": "classes",
+      "name": "Classes"
+    },
+    {
+      "uuid": "f791086d-7bd1-41fb-9ba9-e7fe67128886",
+      "slug": "references",
+      "name": "References"
+    },
+    {
+      "uuid": "2e4f454e-4a54-4999-9627-86840c88fc46",
+      "slug": "enums",
+      "name": "Enumerations"
+    },
+    {
+      "uuid": "18b2f529-3be6-4a70-be7d-81aa07393585",
+      "slug": "functions",
+      "name": "Functions"
     }
   ],
   "key_features": [

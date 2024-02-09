@@ -1,0 +1,25 @@
+{
+  "authors": [
+    "vaeng"
+  ],
+  "files": {
+    "solution": [
+      "vehicle_purchase.cpp"
+    ],
+    "test": [
+      "vehicle_purchase_test.cpp"
+    ],
+    "exemplar": [
+      ".meta/exemplar.cpp",
+      ".meta/exemplar.h"
+    ],
+    "editor": [
+      "vehicle_purchase.h"
+    ]
+  },
+  "forked_from": [
+    "go/vehicle-purchase"
+  ],
+  "icon": "vehicle-purchase",
+  "blurb": "Learn about comparisons and if-statements while preparing for your next vehicle purchase"
+}

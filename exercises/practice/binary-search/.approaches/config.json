@@ -1,0 +1,18 @@
+{
+  "introduction": {
+    "authors": [
+      "bobahop"
+    ]
+  },
+  "approaches": [
+    {
+      "uuid": "68a494d9-964c-4b2f-a31b-5063dfe0ffe7",
+      "slug": "while-with-if-statements",
+      "title": "While with if statements",
+      "blurb": "Use a while loop with if statements to return the answer.",
+      "authors": [
+        "bobahop"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+[
+    {
+        "url": "https://en.cppreference.com/w/cpp",
+        "description": "C++ reference and overview of the standard library"
+    },
+    {
+        "url": "https://isocpp.org/wiki/faq/how-to-learn-cpp#best-book",
+        "description": "What is the best book to learn C++ from?"
+    },
+    {
+        "url": "https://isocpp.org/faq",
+        "description": "C++ Super-FAQ"
+    }
+]

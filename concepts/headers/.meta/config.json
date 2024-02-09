@@ -1,0 +1,8 @@
+{
+  "blurb": "In C++, header files provide definitions that can be included in other files. They can be seen as an API that decouples the interface from the implementation in the source files.",
+  "authors": [
+    "vaeng"
+  ],
+  "contributors": [
+  ]
+}

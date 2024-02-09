@@ -1,5 +1,4 @@
 {
-  "blurb": "Insert and search for numbers in a binary tree.",
   "authors": [
     "elyashiv"
   ],
@@ -19,6 +18,6 @@
       ".meta/example.h"
     ]
   },
-  "source": "Josh Cheek",
-  "source_url": "https://twitter.com/josh_cheek"
+  "blurb": "Insert and search for numbers in a binary tree.",
+  "source": "Josh Cheek"
 }

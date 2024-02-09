@@ -4,16 +4,17 @@
 namespace nucleotide_count
 {
 
-counter::counter(std::string const& sequence)
-    : counts_({ {'A', 0}, {'C', 0}, {'G', 0}, {'T', 0} })
+std::map<char, int> count(std::string_view dna)
 {
-    for (auto nucleotide : sequence) {
-        auto it = counts_.find(nucleotide);
-        if (it == counts_.end()) {
+    std::map<char, int> counter{{'A', 0}, {'C', 0}, {'G', 0}, {'T', 0}};
+    for (auto nucleotide : dna) {
+        auto it = counter.find(nucleotide);
+        if (it == counter.end()) {
             throw std::invalid_argument("Unknown nucleotide");
         }
         ++(it->second);
     }
+    return counter;
 }
 
 }

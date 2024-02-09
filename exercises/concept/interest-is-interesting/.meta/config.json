@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "vaeng"
+  ],
+  "files": {
+    "solution": [
+      "interest_is_interesting.cpp"
+    ],
+    "test": [
+      "interest_is_interesting_test.cpp"
+    ],
+    "exemplar": [
+      ".meta/exemplar.cpp"
+    ]
+  },
+  "forked_from": [
+    "go/interest-is-interesting"
+  ],
+  "blurb": "Learn about loops by adding interest to savings accounts."
+}

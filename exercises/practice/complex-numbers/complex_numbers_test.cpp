@@ -26,45 +26,47 @@ static const double eps = 0.005;
 
 // Helper function for comparing Complex numbers with approximate float values.
 static void require_approx_equal(const Complex& lhs, const Complex& rhs) {
-    REQUIRE(Approx(lhs.real()).margin(eps) == rhs.real());
-    REQUIRE(Approx(lhs.imag()).margin(eps) == rhs.imag());
+    REQUIRE_THAT(lhs.real(),
+                 Catch::Matchers::WithinAbs(rhs.real(), eps));
+    REQUIRE_THAT(lhs.imag(),
+                 Catch::Matchers::WithinAbs(rhs.imag(), eps));
 }
 
 TEST_CASE("Real part of a purely real number") {
     const Complex c{1.0, 0.0};
 
-    REQUIRE(Approx(1.0) == c.real());
+    REQUIRE_THAT(c.real(), Catch::Matchers::WithinAbs(1.0, eps));
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
 TEST_CASE("Real part of a purely imaginary number") {
     const Complex c{0.0, 1.0};
 
-    REQUIRE(Approx(0.0).margin(eps) == c.real());
+    REQUIRE_THAT(c.real(), Catch::Matchers::WithinAbs(0.0, eps));
 }
 
 TEST_CASE("Real part of a number with real and imaginary part") {
     const Complex c{1.0, 2.0};
 
-    REQUIRE(Approx(1.0) == c.real());
+    REQUIRE_THAT(c.real(), Catch::Matchers::WithinAbs(1.0, eps));
 }
 
 TEST_CASE("Imaginary part of a purely real number") {
     const Complex c{1.0, 0.0};
 
-    REQUIRE(Approx(0.0).margin(eps) == c.imag());
+    REQUIRE_THAT(c.imag(), Catch::Matchers::WithinAbs(0.0, eps));
 }
 
 TEST_CASE("Imaginary part of a purely imaginary number") {
     const Complex c{0.0, 1.0};
 
-    REQUIRE(Approx(1.0) == c.imag());
+    REQUIRE_THAT(c.imag(), Catch::Matchers::WithinAbs(1.0, eps));
 }
 
 TEST_CASE("Imaginary part of a number with real and imaginary part") {
     const Complex c{1.0, 2.0};
 
-    REQUIRE(Approx(2.0) == c.imag());
+    REQUIRE_THAT( c.imag(), Catch::Matchers::WithinAbs(2.0, eps));
 }
 
 TEST_CASE("Imaginary unit") {
@@ -161,35 +163,33 @@ TEST_CASE("Divide numbers with real and imaginary part") {
 TEST_CASE("Absolute value of a positive purely real number") {
     const Complex c{5.0, 0.0};
 
-    REQUIRE(Approx(5.0) == c.abs());
+    REQUIRE_THAT(c.abs(), Catch::Matchers::WithinAbs(5.0, eps));
 }
 
 TEST_CASE("Absolute value of a negative purely real number") {
     const Complex c{-5.0, 0.0};
 
-    REQUIRE(Approx(5.0) == c.abs());
+    REQUIRE_THAT(c.abs(), Catch::Matchers::WithinAbs(5.0, eps));
 }
 
 TEST_CASE(
-    "Absolute value of a purely imaginary number with positive imaginary "
-    "part") {
+    "Absolute value of a purely imaginary number with positive imaginary part") {
     const Complex c{0.0, 5.0};
 
-    REQUIRE(Approx(5.0) == c.abs());
+    REQUIRE_THAT(c.abs(), Catch::Matchers::WithinAbs(5.0, eps));
 }
 
 TEST_CASE(
-    "Absolute value of a purely imaginary number with negative imaginary "
-    "part") {
+    "Absolute value of a purely imaginary number with negative imaginary part") {
     const Complex c{0.0, -5.0};
 
-    REQUIRE(Approx(5.0) == c.abs());
+    REQUIRE_THAT(c.abs(), Catch::Matchers::WithinAbs(5.0, eps));
 }
 
 TEST_CASE("Absolute value of a number with real and imaginary part") {
     const Complex c{3.0, 4.0};
 
-    REQUIRE(Approx(5.0) == c.abs());
+    REQUIRE_THAT(c.abs(), Catch::Matchers::WithinAbs(5.0, eps));
 }
 
 TEST_CASE("Conjugate a purely real number") {

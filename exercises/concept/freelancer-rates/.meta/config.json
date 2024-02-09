@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "vaeng"
+  ],
+  "files": {
+    "solution": [
+      "freelancer_rates.cpp"
+    ],
+    "test": [
+      "freelancer_rates_test.cpp"
+    ],
+    "exemplar": [
+      ".meta/exemplar.cpp"
+    ]
+  },
+  "forked_from": [
+    "elixir/freelancer-rates"
+  ],
+  "icon": "freelancer-rates",
+  "blurb": "Learn about integers and floating point numbers by helping a freelancer communicate with a project manager about billing."
+}
