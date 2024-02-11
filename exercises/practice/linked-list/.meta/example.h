@@ -4,112 +4,66 @@
 #include <stdexcept>
 
 namespace linked_list {
-    template<typename T>
-    class Node {
-        public:
-            T data;
-            std::shared_ptr<Node<T>> next;
-            std::shared_ptr<Node<T>> previous;
-    };
+template <typename T>
+struct Node {
+    Node() {}
+    Node(std::shared_ptr<Node<T>> prev, std::shared_ptr<Node<T>> next, T value)
+        : previous(prev), next(next), data(value) {}
+    std::shared_ptr<Node<T>> previous;
+    std::shared_ptr<Node<T>> next;
+    T data;
+};
 
-    template<typename T>
-    class List {
-        public:
-            void push(T entry) {
-                auto new_element = std::make_shared<Node<T>>(); 
-                if (!head) {
-                    head = new_element;
-                    tail = head;
-                } else {
-                    tail->next = new_element;
-                    new_element->previous = tail;
-                    tail = new_element;
-                }
-                tail->data = entry;
-                current_size++;
-            }
+template <typename T>
+class List {
+   public:
+    List() {
+        sentinel = std::make_shared<Node<T>>();
+        sentinel->next = sentinel;
+        sentinel->previous = sentinel;
+    }
 
-            void unshift(T entry) {
-                auto new_element = std::make_shared<Node<T>>(); 
-                if (!head) {
-                    head = new_element;
-                    tail = head;
-                } else {
-                    new_element->next = head;
-                    head->previous = new_element;
-                    head = new_element;
-                }
-                head->data = entry;
-                current_size++;
-            }
+    void push(T entry) { insert(sentinel->previous, sentinel, entry); }
 
-            T pop() {
-                if (!tail) throw new std::runtime_error("Cannot pop from empty list.");
-                if (tail == head) head.reset();
-                T data = tail->data;
+    void unshift(T entry) { insert(sentinel, sentinel->next, entry); }
 
-                if (tail->previous) {
-                    tail = tail->previous;
-                    tail->next.reset(); 
-                } else {
-                    tail.reset();
-                }
-                current_size--;
-                return data;
-            }
+    T pop() { return remove(sentinel->previous); }
 
-            T shift() {
-                if (!head) throw new std::runtime_error("Cannot shift from empty list.");
-                if (tail == head) tail.reset();
-                T data = head->data;
+    T shift() { return remove(sentinel->next); }
 
-                if (head->next) {
-                    head = head->next;
-                    head->previous.reset(); 
-                } else {
-                    head.reset();
-                }
-                current_size--;
-                return data;
-            }
+    bool erase(T entry) {
+        auto ptr = sentinel->next;
+        while (ptr->data != entry) {
+            if (ptr == sentinel) return false;
+            ptr = ptr->next;
+        }
+        remove(ptr);
+        return true;
+    }
 
-            bool erase(T entry) {
-                auto ptr = head;
-                while(ptr && ptr->data != entry) {
-                    ptr = ptr->next;
-                }
-                if(!ptr) return false;
-                current_size--;
-                if (ptr == head) {
-                    if (head->next) {
-                        head = head->next;
-                        head->previous.reset();
-                    } else {
-                        head.reset();
-                    }
-                }
-                else if (ptr == tail) {
-                    if (tail->previous) {
-                        tail = tail->previous;
-                        tail->next.reset();
-                    } else {
-                        tail.reset();
-                    }
-                }
-                else {
-                    ptr->next->previous = ptr->previous;
-                    ptr->previous->next = ptr->next;
-                }
-                return true;
-            }
+    size_t count() { return current_size; }
 
-            size_t count() {
-                return current_size;
-            }
-        private:
-            std::shared_ptr<Node<T>> head;
-            std::shared_ptr<Node<T>> tail;
-            size_t current_size{};
-    };
+   private:
+    std::shared_ptr<Node<T>> sentinel;
+    size_t current_size{};
 
-} // namespace linked_list
+    T remove(std::shared_ptr<Node<T>> to_be_deleted) {
+        if (current_size < 1)
+            throw std::runtime_error("Cannot remove elements from empty list.");
+        T data = to_be_deleted->data;
+        to_be_deleted->next->previous = to_be_deleted->previous;
+        to_be_deleted->previous->next = to_be_deleted->next;
+        --current_size;
+        return data;
+    }
+
+    void insert(std::shared_ptr<Node<T>> prev, std::shared_ptr<Node<T>> next,
+                T value) {
+        auto new_element = std::make_shared<Node<T>>(prev, next, value);
+        prev->next = new_element;
+        next->previous = new_element;
+        ++current_size;
+    }
+};
+
+}  // namespace linked_list
