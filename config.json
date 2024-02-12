@@ -995,6 +995,20 @@
         ]
       },
       {
+        "slug": "linked-list",
+        "name": "Linked List ",
+        "uuid": "6f6c55dd-db6b-40ca-96f2-d9b7232dcbb0",
+        "practices": [],
+        "prerequisites":[],
+        "difficulty": 6,
+        "topics": [ 
+          "classes",
+          "conditionals",
+          "loops",
+          "pointers"
+        ]
+      },
+      {
         "slug": "simple-linked-list",
         "name": "Simple linked list",
         "uuid": "ffccabe9-9779-4914-9cff-c6f5696c8afe",
