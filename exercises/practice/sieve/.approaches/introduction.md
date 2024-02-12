@@ -31,10 +31,10 @@ namespace sieve {
 		std::vector<int> primes;
 		primes.reserve(limit / 2);
     
-		for (int number = 2; number <= limit; number++) {
+		for (long long number = 2; number <= limit; number++) {
 			if (!composite[number]) {
 				primes.emplace_back(number);
-				for(std::size_t idx = number * number; idx <= limit; idx +=number)
+				for(long long idx = number * number; idx <= limit; idx +=number)
 					composite[idx] = true;
 			}
 		}
