@@ -1023,7 +1023,7 @@
         "difficulty": 4
       },
       {
-        "slug": "pop-count",
+        "slug": "eliuds-eggs",
         "name": "Eliud's Eggs",
         "uuid": "cfe01bad-0972-466c-b52a-9b8cf563b2f4",
         "practices": [
@@ -1101,7 +1101,26 @@
         "uuid": "9498d0bf-c411-4b3b-b0c7-a063aa7f0acc",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 1
+        "difficulty": 5,
+        "topics": []
+      },
+      {
+        "slug": "knapsack",
+        "name": "Knapsack",
+        "uuid": "35705d66-fe72-4dee-8eb0-54823240f2d7",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6,
+        "topics": []
+      },
+      {
+        "slug": "two-bucket",
+        "name": "Two Bucket",
+        "uuid": "83c92b7f-fb0e-43d8-ab7d-d514408b8575",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 7,
+        "topics": []
       }
     ],
     "foregone": [
