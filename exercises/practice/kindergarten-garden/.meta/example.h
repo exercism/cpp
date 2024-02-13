@@ -1,8 +1,12 @@
 #pragma once
 
 #include <array>
-#include <string>
+#include <string_view>
 
 namespace kindergarten_garden {
-    std::array<std::string, 4> plants(std::string diagram, std::string student);
+
+enum class Plants { grass = 'G', clover = 'C', radishes = 'R', violets = 'V' };
+
+std::array<Plants, 4> plants(std::string_view diagram,
+                             std::string_view student);
 }  // namespace kindergarten_garden
