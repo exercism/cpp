@@ -4,16 +4,17 @@
   ],
   "files": {
     "solution": [
-      "minesweeper.cpp",
-      "minesweeper.h"
+      "linked_list.cpp",
+      "linked_list.h"
     ],
     "test": [
-      "minesweeper_test.cpp"
+      "linked_list_test.cpp"
     ],
     "example": [
       ".meta/example.cpp",
       ".meta/example.h"
     ]
   },
-  "blurb": "Add the numbers to a minesweeper board."
+  "blurb": "Implement a doubly linked list.",
+  "source": "Classic computer science topic"
 }
