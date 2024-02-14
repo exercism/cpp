@@ -27,8 +27,8 @@
       "%{snake_slug}_test.cpp"
     ],
     "example": [
-      "example.cpp",
-      "example.h"
+      ".meta/example.cpp",
+      ".meta/example.h"
     ],
     "exemplar": [
       ".meta/exemplar.cpp",
@@ -995,6 +995,20 @@
         ]
       },
       {
+        "slug": "linked-list",
+        "name": "Linked List ",
+        "uuid": "6f6c55dd-db6b-40ca-96f2-d9b7232dcbb0",
+        "practices": [],
+        "prerequisites":[],
+        "difficulty": 6,
+        "topics": [ 
+          "classes",
+          "conditionals",
+          "loops",
+          "pointers"
+        ]
+      },
+      {
         "slug": "simple-linked-list",
         "name": "Simple linked list",
         "uuid": "ffccabe9-9779-4914-9cff-c6f5696c8afe",
@@ -1101,8 +1115,7 @@
         "uuid": "9498d0bf-c411-4b3b-b0c7-a063aa7f0acc",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 5,
-        "topics": []
+        "difficulty": 5
       },
       {
         "slug": "knapsack",
@@ -1110,8 +1123,7 @@
         "uuid": "35705d66-fe72-4dee-8eb0-54823240f2d7",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 6,
-        "topics": []
+        "difficulty": 6
       },
       {
         "slug": "two-bucket",
@@ -1119,8 +1131,7 @@
         "uuid": "83c92b7f-fb0e-43d8-ab7d-d514408b8575",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 7,
-        "topics": []
+        "difficulty": 7
       }
     ],
     "foregone": [
