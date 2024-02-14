@@ -27,8 +27,8 @@
       "%{snake_slug}_test.cpp"
     ],
     "example": [
-      "example.cpp",
-      "example.h"
+      ".meta/example.cpp",
+      ".meta/example.h"
     ],
     "exemplar": [
       ".meta/exemplar.cpp",
@@ -60,10 +60,12 @@
         "prerequisites": []
       },
       {
-        "uuid": "88baa5ab-dacb-4fab-8f16-4f3ed726b27b",
         "slug": "freelancer-rates",
         "name": "Freelancer Rates",
-        "concepts": ["numbers"],
+        "uuid": "88baa5ab-dacb-4fab-8f16-4f3ed726b27b",
+        "concepts": [
+          "numbers"
+        ],
         "prerequisites": [
           "basics",
           "includes"
@@ -950,7 +952,7 @@
         "name": "Darts",
         "uuid": "e8ad3859-9999-4a36-900d-d82fa6e74b08",
         "practices": [
-          "if-statements"         
+          "if-statements"
         ],
         "prerequisites": [
           "numbers"
@@ -993,6 +995,20 @@
         ]
       },
       {
+        "slug": "linked-list",
+        "name": "Linked List ",
+        "uuid": "6f6c55dd-db6b-40ca-96f2-d9b7232dcbb0",
+        "practices": [],
+        "prerequisites":[],
+        "difficulty": 6,
+        "topics": [ 
+          "classes",
+          "conditionals",
+          "loops",
+          "pointers"
+        ]
+      },
+      {
         "slug": "simple-linked-list",
         "name": "Simple linked list",
         "uuid": "ffccabe9-9779-4914-9cff-c6f5696c8afe",
@@ -1018,9 +1034,7 @@
         "prerequisites": [
           "classes"
         ],
-        "difficulty": 4,
-        "topics": [
-        ]
+        "difficulty": 4
       },
       {
         "slug": "eliuds-eggs",
@@ -1033,21 +1047,15 @@
           "if-statements",
           "comparisons"
         ],
-        "difficulty": 3,
-        "topics": [
-        ]
+        "difficulty": 3
       },
       {
         "slug": "diamond",
         "name": "Diamond",
         "uuid": "f8298f68-ef4e-41e1-99af-85a1bef71561",
-        "practices": [
-        ],
-        "prerequisites": [
-        ],
-        "difficulty": 3,
-        "topics": [
-        ]
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
       },
       {
         "slug": "run-length-encoding",
@@ -1055,8 +1063,7 @@
         "uuid": "916fedd1-a9ed-4200-b115-cc1d1bc44aba",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 3,
-        "topics": []
+        "difficulty": 3
       },
       {
         "slug": "rotational-cipher",
@@ -1068,8 +1075,7 @@
         "prerequisites": [
           "loops"
         ],
-        "difficulty": 3,
-        "topics": []
+        "difficulty": 3
       },
       {
         "slug": "resistor-color",
@@ -1077,8 +1083,7 @@
         "uuid": "15a9277e-59e2-484a-9877-64437556825c",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 2,
-        "topics": []
+        "difficulty": 2
       },
       {
         "slug": "resistor-color-duo",
@@ -1086,8 +1091,7 @@
         "uuid": "83ce95e9-f8af-4dbb-b96b-d94b12421d77",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 3,
-        "topics": []
+        "difficulty": 3
       },
       {
         "slug": "minesweeper",
@@ -1095,8 +1099,7 @@
         "uuid": "3753a72a-78b7-429f-b79a-f68d55a00387",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 5,
-        "topics": []
+        "difficulty": 5
       },
       {
         "slug": "sublist",
@@ -1104,8 +1107,7 @@
         "uuid": "801cb315-91d6-48e6-92f4-36423a89d4e1",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 5,
-        "topics": []
+        "difficulty": 5
       },
       {
         "slug": "knapsack",
@@ -1113,8 +1115,7 @@
         "uuid": "35705d66-fe72-4dee-8eb0-54823240f2d7",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 6,
-        "topics": []
+        "difficulty": 6
       },
       {
         "slug": "two-bucket",
@@ -1122,8 +1123,7 @@
         "uuid": "83c92b7f-fb0e-43d8-ab7d-d514408b8575",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 7,
-        "topics": []
+        "difficulty": 7
       },
       {
         "slug": "dnd-character",
@@ -1222,47 +1222,47 @@
   ],
   "key_features": [
     {
-      "icon": "fast",
       "title": "Fast execution speed",
-      "content": "With execution speed in mind, C++ is used in a wide range of computation-intensive domains."
+      "content": "With execution speed in mind, C++ is used in a wide range of computation-intensive domains.",
+      "icon": "fast"
     },
     {
-      "icon": "multi-paradigm",
       "title": "Multi-paradigm",
-      "content": "C++ supports a variety of programming paradigms like OOP, functional and procedural programming."
+      "content": "C++ supports a variety of programming paradigms like OOP, functional and procedural programming.",
+      "icon": "multi-paradigm"
     },
     {
-      "icon": "powerful",
       "title": "High-level programming",
-      "content": "C++ standardizes a comprehensive library, enabling the developer to concentrate on the problem."
+      "content": "C++ standardizes a comprehensive library, enabling the developer to concentrate on the problem.",
+      "icon": "powerful"
     },
     {
-      "icon": "homoiconic",
       "title": "Low-level programming",
-      "content": "C++ masters the strength of its predecessor C and gives the developer access to the bits and bytes."
+      "content": "C++ masters the strength of its predecessor C and gives the developer access to the bits and bytes.",
+      "icon": "homoiconic"
     },
     {
-      "icon": "widely-used",
       "title": "Popular",
-      "content": "Thanks to the flexibility and portability, you can find applications written in C++ in every scale."
+      "content": "Thanks to the flexibility and portability, you can find applications written in C++ in every scale.",
+      "icon": "widely-used"
     },
     {
-      "icon": "evolving",
       "title": "Ever-evolving",
-      "content": "Although mature, C++ is still evolving and developed by a committee to fit the developers needs."
+      "content": "Although mature, C++ is still evolving and developed by a committee to fit the developers needs.",
+      "icon": "evolving"
     }
   ],
   "tags": [
-    "paradigm/object_oriented",
-    "typing/static",
-    "typing/strong",
     "execution_mode/compiled",
+    "paradigm/object_oriented",
     "platform/android",
     "platform/ios",
     "platform/linux",
     "platform/mac",
     "platform/windows",
     "runtime/standalone_executable",
+    "typing/static",
+    "typing/strong",
     "used_for/backends",
     "used_for/cross_platform_development",
     "used_for/embedded_systems",
