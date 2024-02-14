@@ -1110,6 +1110,14 @@
         "difficulty": 5
       },
       {
+        "slug": "list-ops",
+        "name": "List Ops",
+        "uuid": "9498d0bf-c411-4b3b-b0c7-a063aa7f0acc",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "knapsack",
         "name": "Knapsack",
         "uuid": "35705d66-fe72-4dee-8eb0-54823240f2d7",
