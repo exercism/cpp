@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "vaeng"
+  ],
+  "files": {
+    "solution": [
+      "list_ops.cpp",
+      "list_ops.h"
+    ],
+    "test": [
+      "list_ops_test.cpp"
+    ],
+    "example": [
+      ".meta/example.cpp",
+      ".meta/example.h"
+    ]
+  },
+  "blurb": "Implement basic list operations."
+}
