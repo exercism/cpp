@@ -1126,14 +1126,6 @@
         "difficulty": 7
       },
       {
-        "slug": "dnd-character",
-        "name": "D&D Character",
-        "uuid": "83e20a67-990e-4db7-b16a-48b4f516f893",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 3
-      },
-      {
         "slug": "yacht",
         "name": "Yacht",
         "uuid": "3abaa99e-14e5-434e-ae50-e9d549c5ae6e",
