@@ -999,9 +999,9 @@
         "name": "Linked List ",
         "uuid": "6f6c55dd-db6b-40ca-96f2-d9b7232dcbb0",
         "practices": [],
-        "prerequisites":[],
+        "prerequisites": [],
         "difficulty": 6,
-        "topics": [ 
+        "topics": [
           "classes",
           "conditionals",
           "loops",
@@ -1160,6 +1160,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
+      },
+      {
+        "slug": "spiral-matrix",
+        "name": "Spiral Matrix",
+        "uuid": "d5569902-5815-4b05-ab13-13826fef7826",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
       }
     ],
     "foregone": [
