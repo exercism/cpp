@@ -1,7 +1,9 @@
 #include "dnd_character.h"
 
+#include <algorithm>
 #include <cmath>
 #include <cstdlib>
+#include <numeric>
 
 namespace dnd_character {
 int modifier(int score) {
@@ -10,8 +12,10 @@ int modifier(int score) {
 
 int dice_roll() { return 1 + std::rand() / ((RAND_MAX + 1u) / 6); }
 
-// Throwing three dice is not the same as selecting a random number between 3
-// and 18.
-int ability() { return dice_roll() + dice_roll() + dice_roll(); }
+int ability() {
+    auto rolls = {dice_roll(), dice_roll(), dice_roll(), dice_roll()};
+    auto discard = std::min(rolls);
 
+    return std::accumulate(rolls.begin(), rolls.end(), 0) - discard;
+}
 }  // namespace dnd_character
