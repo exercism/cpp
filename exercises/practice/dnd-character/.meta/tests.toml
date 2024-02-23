@@ -70,3 +70,5 @@ include = false
 [dca2b2ec-f729-4551-84b9-078876bb4808]
 description = "each ability is only calculated once"
 reimplements = "2ca77b9b-c099-46c3-a02c-0d0f68ffa0fe"
+include = false
+comment = "changes for member variable test not suitable for C++"

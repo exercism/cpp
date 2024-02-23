@@ -5,6 +5,25 @@
 #include "test/catch.hpp"
 #endif
 
+#include <sstream>
+
+template <typename T>
+class IsBetweenMatcher : public Catch::MatcherBase<T> {
+    T m_begin, m_end;
+public:
+    IsBetweenMatcher(T begin, T end) :
+        m_begin(begin), m_end(end) {
+    }
+    bool match(T const& in) const override {
+        return in >= m_begin && in <= m_end;
+    }
+    std::string describe() const override {
+        std::ostringstream ss;
+        ss << "should be between " << m_begin << " and " << m_end;
+        return ss.str();
+    }
+};
+
 TEST_CASE("ability modifier for score 3 is -4", "[1e9ae1dc-35bd-43ba-aa08-e4b94c20fa37]") {
 	REQUIRE(-4 == dnd_character::modifier(3));
 }
@@ -73,29 +92,18 @@ TEST_CASE("ability modifier for score 18 is +4", "[bafd997a-e852-4e56-9f65-14b60
 
 TEST_CASE("random ability is within range", "[4f28f19c-2e47-4453-a46a-c0d365259c14]") {
 	int result{dnd_character::ability()};
-	//REQUIRE("score >= 3 && score <= 18" == dnd_character::ability());
-	REQUIRE((result >= 3 && result <= 18));
+	CHECK_THAT(result, IsBetweenMatcher(3, 18));
 }
 
 TEST_CASE("random character is valid", "[385d7e72-864f-4e88-8279-81a7d75b04ad]") {
 	dnd_character::Character character;
-	REQUIRE((character.strength >= 3 && character.strength <= 18));
-	REQUIRE((character.dexterity >= 3 && character.dexterity <= 18));
-	REQUIRE((character.constitution >= 3 && character.constitution <= 18));
-	REQUIRE((character.intelligence >= 3 && character.intelligence <= 18));
-	REQUIRE((character.wisdom >= 3 && character.wisdom <= 18));
-	REQUIRE((character.charisma >= 3 && character.charisma <= 18));
+	CHECK_THAT(character.strength, IsBetweenMatcher(3, 18));
+	CHECK_THAT(character.dexterity, IsBetweenMatcher(3, 18));
+	CHECK_THAT(character.constitution, IsBetweenMatcher(3, 18));
+	CHECK_THAT(character.intelligence, IsBetweenMatcher(3, 18));
+	CHECK_THAT(character.wisdom, IsBetweenMatcher(3, 18));
+	CHECK_THAT(character.charisma, IsBetweenMatcher(3, 18));
 	REQUIRE(character.hitpoints == 10 + dnd_character::modifier(character.constitution));
-}
-
-TEST_CASE("each ability is only calculated once", "[dca2b2ec-f729-4551-84b9-078876bb4808]") {
-	dnd_character::Character character;
-	REQUIRE(character.strength == character.strength);
-	REQUIRE(character.dexterity == character.dexterity);
-	REQUIRE(character.constitution == character.constitution);
-	REQUIRE(character.intelligence == character.intelligence);
-	REQUIRE(character.wisdom == character.wisdom);
-	REQUIRE(character.charisma == character.charisma);
 }
 
 #endif
