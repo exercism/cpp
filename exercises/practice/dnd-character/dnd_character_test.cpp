@@ -7,8 +7,11 @@
 
 #include <sstream>
 
+using namespace Catch;
+using namespace Catch::Matchers;
+
 template <typename T>
-class IsBetweenMatcher : public Catch::MatcherBase<T> {
+class IsBetweenMatcher : public MatcherBase<T> {
     T m_begin, m_end;
 public:
     IsBetweenMatcher(T begin, T end) :
