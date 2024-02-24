@@ -11,7 +11,7 @@
       "parallel_letter_frequency_test.cpp"
     ],
     "example": [
-      "example.cpp",
+      ".meta/example.cpp",
       "example.h"
     ]
   },
