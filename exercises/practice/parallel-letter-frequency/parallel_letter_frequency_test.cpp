@@ -1,6 +1,9 @@
 #include "parallel_letter_frequency.h"
 
+#include <algorithm>
 #include <array>
+#include <random>
+#include <string>
 #include <string_view>
 
 #ifdef EXERCISM_TEST_SUITE
@@ -15,6 +18,7 @@ TEST_CASE("no texts",
     auto freqs = parallel_letter_frequency::frequency(texts);
 }
 
+#ifdef EXERCISM_RUN_ALL_TESTS
 TEST_CASE("one text with one letter",
           "[calculateFrequencies][818031be-49dc-4675-b2f9-c4047f638a2a]") {
     std::vector<std::string_view> const texts = {
@@ -426,12 +430,6 @@ TEST_CASE("large texts",
     CHECK(freqs['w'] == 223);
     CHECK(freqs['x'] == 7);
     CHECK(freqs['y'] == 251);
-
-#ifdef EXERCISM_INCLUDE_BENCHMARK
-    BENCHMARK("4 large texts") {
-        return parallel_letter_frequency::frequency(texts);
-    };
-#endif
 }
 
 TEST_CASE("many small texts",
@@ -451,4 +449,24 @@ TEST_CASE("many small texts",
     CHECK(freqs['b'] == 100);
     CHECK(freqs['c'] == 150);
 }
+#endif
 
+#ifdef EXERCISM_INCLUDE_BENCHMARK
+TEST_CASE("benchmark") {
+    std::vector<std::string> texts;
+    std::vector<std::string_view> views;
+    std::mt19937 rng;
+    std::uniform_int_distribution<> distrib(32, 126);
+    for (auto i = 0; i < 10; ++i) {
+        texts.emplace_back(1024 * 1024, 'x');
+        std::generate_n(
+            texts.back().begin(), texts.back().length(),
+            [&rng, &distrib]() { return static_cast<char>(distrib(rng)); });
+        views.emplace_back(texts.back());
+    }
+
+    BENCHMARK("10 random texts with 1 MiB each") {
+        return parallel_letter_frequency::frequency(views);
+    };
+}
+#endif

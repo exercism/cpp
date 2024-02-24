@@ -17,8 +17,6 @@ else()
     set(exercise_cpp "")
 endif()
 
-add_definitions("-DCATCH_CONFIG_ENABLE_BENCHMARKING")
-
 # Use the common Catch library?
 if(EXERCISM_COMMON_CATCH)
     # For Exercism track development only
@@ -43,14 +41,20 @@ set_target_properties(${exercise} PROPERTIES
     CXX_EXTENSIONS OFF
 )
 
-find_package(TBB REQUIRED)
-
 set(CMAKE_BUILD_TYPE Release)
 
 if("${CMAKE_CXX_COMPILER_ID}" MATCHES "(GNU|Clang)")
+    find_package(TBB)
+    if (${TBB_FOUND})
+        target_link_libraries(${exercise} PRIVATE TBB::tbb)
+    endif()
     set_target_properties(${exercise} PROPERTIES
         COMPILE_FLAGS "-Wall -Wextra -Wpedantic -Werror"
     )
+endif()
+
+if(${EXERCISM_INCLUDE_BENCHMARK})
+    target_compile_definitions(${exercise} PRIVATE EXERCISM_INCLUDE_BENCHMARK CATCH_CONFIG_ENABLE_BENCHMARKING)
 endif()
 
 # Configure to run all the tests?
@@ -66,5 +70,3 @@ endif()
 
 # Run the tests on every build
 add_custom_target(test_${exercise} ALL DEPENDS ${exercise} COMMAND ${exercise})
-
-target_link_libraries(${exercise} PRIVATE TBB::tbb)
