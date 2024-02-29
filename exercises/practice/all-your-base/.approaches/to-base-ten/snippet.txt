@@ -1,0 +1,4 @@
+unsigned int intermediate = 0;
+for (unsigned int d : input_digits) {
+    intermediate = intermediate * input_base + d;
+}

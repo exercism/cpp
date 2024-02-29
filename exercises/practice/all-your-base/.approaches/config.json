@@ -1,0 +1,27 @@
+{
+  "introduction": {
+    "authors": [
+      "vaeng"
+    ]
+  },
+  "approaches": [
+    {
+      "uuid": "0ec8d60b-1bce-4cf3-a6b9-c367d70fc7c9",
+      "slug": "from-base-ten",
+      "title": "From Base 10",
+      "blurb": "Convert to base 10 as an intermediate.",
+      "authors": [
+        "vaeng"
+      ]
+    },
+    {
+      "uuid": "7af79d27-4cdc-4403-b45c-0fdec06fe733",
+      "slug": "to-base-ten",
+      "title": "To Base 10",
+      "blurb": "Convert from a base 10 intermediate.",
+      "authors": [
+        "vaeng"
+      ]
+    }
+  ]
+}

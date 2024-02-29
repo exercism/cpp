@@ -1,0 +1,5 @@
+std::vector <unsigned int> output_digits{};
+while (intermediate > 0) {
+    output_digits.emplace_back(intermediate % output_base);
+    intermediate /= output_base;
+}
