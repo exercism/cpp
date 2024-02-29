@@ -3,7 +3,7 @@
 There are different strategies to convert the input digits to base 10.
 Here is a selection of a few approaches and thoughts on their performance.
 Keep in mind, that the number of digits you need to process is the most important factor for your algorithms performance.
-A simple for loop can be a lot faster for a few digits than a parallel algorithm that has more overhead to be set up.
+A simple for-loop can be a lot faster for a few digits than a parallel algorithm that has more overhead to be set up.
 
 ## For-loop with `pow`
 
@@ -16,8 +16,9 @@ for (std::vector<unsigned>::size_type i = 0; i < input_digits.size(); ++i) {
 }
 ```
 
-Every digit is multiplied by the base which is raised to the power of it's position from the right and added to `intermediate`.
-The advantage of this approach is the independent calculation for every digit, that can be a start to write [parallelizable code][parallel-computing].
+Every digit is multiplied by the base which is raised to the power of its position from the right and added to `intermediate`.
+The advantage of this approach is the independent calculation for every digit.
+That can be a start to write [parallelizable code][parallel-computing].
 A downside is the cost of the [`pow`][pow-function] function, opposed to a simple multiplication as seen in the next approach.
 
 ## For-loop with `*` and `+`
@@ -46,7 +47,8 @@ unsigned int intermediate = std::accumulate(input_digits.begin(),
             return sum * input_base + d;
         });
 ```
- `accumulate` is guaranteed to run in order and thus strictly serial as well.
+
+ `accumulate` is guaranteed to run in order and thus is strictly serial as well.
 
 ## Algorithm's `transform_reduce` in parallel
 
@@ -70,12 +72,12 @@ unsigned int intermediate = std::transform_reduce(
     });
 ```
 
-`transform_reduce` can work on two containers at the same time.
+[`transform_reduce`][transform-reduce] can work on two containers at the same time.
 In this case we use the `input_digits` and the positions from the back as exponents for the [`pow`][pow-function] function in the transformation function.
-The reduce function is combining each result from the transformation with a simple addition for us ([`std::plus{}`][std-plus]).
+The reduce function is combining each result from the transformation with a simple addition ([`std::plus{}`][std-plus]).
 
 The most important part is the [execution policy][execution-policies].
-The example uses `std::execution::par_unseq` to indicate that the `transform_reduce` function might be run in parallel and vectorized.
+The example uses `std::execution::par_unseq` to indicate that the `transform_reduce` function can be run in parallel and vectorized.
 With this statement you promise, that the execution does not violate any data dependencies.
 The function calls are only reading, we do not need to set any locks.
 
