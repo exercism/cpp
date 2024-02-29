@@ -12,7 +12,7 @@
     ],
     "example": [
       ".meta/example.cpp",
-      "example.h"
+      ".meta/example.h"
     ]
   },
   "blurb": "Count the frequency of letters in texts using parallel computation."
