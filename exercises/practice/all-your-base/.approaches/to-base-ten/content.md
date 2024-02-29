@@ -85,8 +85,6 @@ There is a lot of ifs and whens that lead to the final code.
 One of the more direct ways to parallel processing is the use of [Intel's thread building blocks][tbb].
 ~~~~
 
-# snippets all in the same way
-
 [parallel-computing]: https://en.wikipedia.org/wiki/Parallel_computing
 [pow-function]: https://en.cppreference.com/w/cpp/numeric/math/pow
 [acuumulate-function]: https://en.cppreference.com/w/cpp/algorithm/accumulate
