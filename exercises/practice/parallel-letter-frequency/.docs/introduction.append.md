@@ -1,1 +1,0 @@
-TODO: We would definitely need a [.docs/introduction.append.md file ]/https://exercism.org/docs/building/tracks/practice-exercises#h-documentation-files) to explain the routine for the benchmark and also on how to install tbb for ubuntu, mac and windows and maybe how to deactivate that part of the testing locally if that is somehow not possible.
