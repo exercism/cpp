@@ -1262,6 +1262,11 @@
       "uuid": "18b2f529-3be6-4a70-be7d-81aa07393585",
       "slug": "functions",
       "name": "Functions"
+    },
+    {
+      "uuid": "c071a5e8-796c-4538-945a-3bdd2006fc2b",
+      "slug": "pointers",
+      "name": "Pointers"
     }
   ],
   "key_features": [
