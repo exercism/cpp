@@ -20,8 +20,8 @@ cmake -DEXERCISM_RUN_ALL_TESTS=1 -DEXERCISM_INCLUDE_BENCHMARK=1 .
 
 ### Compiler support for parallel algorithms
 
-Note that GCC's and LLVM's implementations of the C++17 parallel algorithms rely on [TBB][tbb].
-If TBB is not available, they will fall back to sequential versions, even when parallel execution is requested.
+GCC's implementation of the C++ standard library (`libstdc++`) relies on [TBB][tbb].
+If TBB is not available, a fall back to a sequential version will be used, even when parallel execution is requested.
 
 On Ubuntu, you need to install the `libtbb-dev` package:
 ```
@@ -33,7 +33,12 @@ On macOS, you can use [Homebrew][homebrew] to install TBB:
 brew install tbb
 ```
 
+Clang `libc++` as of version 17 has experimental, partial support for parallel algorithms.
+To switch it on, the `-fexperimental-library` compiler flags needs to be given.
+
 Apple Clang 15 and earlier _do not_ support parallel algorithms.
+
+On Linux and macOS we recommend using GCC (along with the default `libstdc++`) for this exercise.
 
 Microsoft's MSVC supports parallel algorithms at least since VS 2017 15.7 without having to install any additional library.
 
