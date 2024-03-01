@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "vaeng"
+  ],
+  "files": {
+    "solution": [
+      "speedywagon.cpp",
+      "speedywagon.h"
+    ],
+    "test": [
+      "speedywagon_test.cpp"
+    ],
+    "exemplar": [
+      ".meta/exemplar.cpp",
+      ".meta/exemplar.h"
+    ]
+  },
+  "forked_from": [],
+  "blurb": "Learn about pointers by writing wrappers for an old library."
+}

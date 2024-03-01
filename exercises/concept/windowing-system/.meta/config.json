@@ -1,0 +1,22 @@
+{
+  "authors": [
+    "vaeng"
+  ],
+  "files": {
+    "solution": [
+      "windowing_system.cpp",
+      "windowing_system.h"
+    ],
+    "test": [
+      "windowing_system_test.cpp"
+    ],
+    "exemplar": [
+      ".meta/exemplar.cpp",
+      ".meta/exemplar.h"
+    ]
+  },
+  "forked_from": [
+    "javascript/windowing-system"
+  ],
+  "blurb": "Learn about pointers by developing a windowing system."
+}

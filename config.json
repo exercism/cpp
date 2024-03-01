@@ -196,6 +196,17 @@
           "references",
           "headers"
         ]
+      },
+      {
+        "slug": "speedywagon",
+        "name": "Speedywagon Foundation",
+        "uuid": "ed2148a5-674c-4660-a050-b11ab240b876",
+        "concepts": [],
+        "prerequisites": [
+          "classes",
+          "pointers",
+          "references"
+        ]
       }
     ],
     "practice": [
