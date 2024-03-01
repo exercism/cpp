@@ -1,0 +1,14 @@
+[
+    {
+        "url": "https://en.cppreference.com/w/cpp/memory/unique_ptr",
+        "description": "C++ reference on std::unique_ptr"
+    },
+    {
+        "url": "https://en.cppreference.com/w/cpp/memory/shared_ptr",
+        "description": "C++ reference on std::shared_ptr"
+    },
+    {
+        "url": "https://en.cppreference.com/w/cpp/memory/weak_ptr",
+        "description": "C++ reference on std::weak_ptr"
+    }
+]
