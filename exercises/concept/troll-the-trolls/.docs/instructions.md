@@ -31,8 +31,8 @@ Next, define an `Action` enumeration to represent the three permission types: `r
 
 ## 2. Promote trolls only to other trolls.
 
-Every post on the forums saves the `AccountStatus` of the poster in its metadata. 
-Make sure that the trolls can only interact with each other.
+Every post on the forums saves the `AccountStatus` of the poster in its metadata.
+Make sure that posts by trolls are only displayed to other trolls.
 
 Helma needs a `display_post` function, that gets two arguments of `AccountStatus` and returns a `bool`.
 The first argument is the status of the poster, the second one is the status of the viewer.

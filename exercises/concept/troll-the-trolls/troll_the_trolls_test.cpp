@@ -17,8 +17,31 @@ TEST_CASE("Troll posts are visible to trolls", "[task_2]") {
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
 
+TEST_CASE("Troll posts are not visible to non-trolls", "[task_2]") {
+    AccountStatus poster{AccountStatus::troll};
+
+    AccountStatus viewer{AccountStatus::guest};
+    REQUIRE_FALSE(display_post(poster, viewer));
+
+    viewer = AccountStatus::user;
+    REQUIRE_FALSE(display_post(poster, viewer));
+
+    viewer = AccountStatus::mod;
+    REQUIRE_FALSE(display_post(poster, viewer));
+}
+
 TEST_CASE("Non-troll posts are visible to guests", "[task_2]") {
     AccountStatus viewer{AccountStatus::guest};
+
+    AccountStatus poster{AccountStatus::user};
+    REQUIRE(display_post(poster, viewer));
+
+    poster = AccountStatus::mod;
+    REQUIRE(display_post(poster, viewer));
+}
+
+TEST_CASE("Non-troll posts are visible to trolls", "[task_2]") {
+    AccountStatus viewer{AccountStatus::troll};
 
     AccountStatus poster{AccountStatus::user};
     REQUIRE(display_post(poster, viewer));
@@ -45,19 +68,6 @@ TEST_CASE("Non-troll posts are visible to mods", "[task_2]") {
 
     poster = AccountStatus::mod;
     REQUIRE(display_post(poster, viewer));
-}
-
-TEST_CASE("Troll posts are visible to non-trolls", "[task_2]") {
-    AccountStatus poster{AccountStatus::troll};
-
-    AccountStatus viewer{AccountStatus::guest};
-    REQUIRE_FALSE(display_post(poster, viewer));
-
-    viewer = AccountStatus::user;
-    REQUIRE_FALSE(display_post(poster, viewer));
-
-    viewer = AccountStatus::mod;
-    REQUIRE_FALSE(display_post(poster, viewer));
 }
 
 TEST_CASE("Guests have correct permissions", "[task_3]") {
