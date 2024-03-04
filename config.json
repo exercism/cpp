@@ -182,6 +182,13 @@
           "classes",
           "enums"
         ]
+      },
+      {
+        "slug": "windowing-system",
+        "name": "windowing-system",
+        "uuid": "ed2148a5-674c-4660-a050-b11ab240b876",
+        "concepts": [],
+        "prerequisites": []
       }
     ],
     "practice": [
