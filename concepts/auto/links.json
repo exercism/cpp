@@ -4,7 +4,7 @@
         "description": "C++ reference documentation for the auto keyword"
     },
     {
-        "url": "https://www.learncpp.com/cpp-tutorial/4-12-the-auto-keyword/",
-        "description": "Tutorial explaining the auto keyword and its usage"
+        "url": "https://www.learncpp.com/cpp-tutorial/type-deduction-for-objects-using-the-auto-keyword/",
+        "description": "Learn C++ overview on the auto keyword and its usage"
     }
 ]
