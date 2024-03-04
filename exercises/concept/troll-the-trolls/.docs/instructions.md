@@ -22,6 +22,8 @@ Her strategy is to give them the illusion that their time is "well invested", bu
 For anything that requires priority ordering, trolls are last in any sequence.
 When they enter a game, the pool of available players is also limited to other trolls.
 
+This practice is called [shadow-banning][shadow-ban].
+
 ## 1. Set up user types and permissions.
 
 First, define an `AccountStatus` enumeration to represent the four account types: `troll`, `guest`, `user`, and `mod`.
@@ -31,8 +33,8 @@ Next, define an `Action` enumeration to represent the three permission types: `r
 
 ## 2. Promote trolls only to other trolls.
 
-Every post on the forums saves the `AccountStatus` of the poster in its metadata. 
-Make sure that the trolls can only interact with each other.
+Every post on the forums saves the `AccountStatus` of the poster in its metadata.
+Make sure that posts by trolls are only displayed to other trolls.
 
 Helma needs a `display_post` function, that gets two arguments of `AccountStatus` and returns a `bool`.
 The first argument is the status of the poster, the second one is the status of the viewer.
@@ -89,3 +91,5 @@ has_priority(AccountStatus::guest, AccountStatus::mod);
 has_priority(AccountStatus::user, AccountStatus::troll);
 // => true
 ```
+
+[shadow-ban]: https://en.wikipedia.org/wiki/Shadow_banning
