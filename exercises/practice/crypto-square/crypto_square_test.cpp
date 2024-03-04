@@ -36,8 +36,9 @@ TEST_CASE("9 character plaintext results in 3 chunks of 3 characters",
 }
 
 TEST_CASE(
-    "8 character plaintext results in 3 chunks, the last one with a trailing "
-    "space",
+    // clang-format off
+    "8 character plaintext results in 3 chunks, the last one with a trailing space",
+    // clang-format on
     "[a65d3fa1-9e09-43f9-bcec-7a672aec3eae]") {
     REQUIRE("clu hlt io " ==
             crypto_square::cipher("Chill out.").normalized_cipher_text());
