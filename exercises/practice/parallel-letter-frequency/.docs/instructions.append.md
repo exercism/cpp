@@ -5,7 +5,7 @@
 There are several ways how to achieve parallelism in C++.
 Exercism's online runner supports C++17, so you can use execution policies from the [algorithms library][algorithm].
 Another option is manually managing [threads][thread].
-However, note that spawning a thread is quite expensive (using a thread [pool][pool] would help).
+However, note that spawning a thread is quite expensive (using a [thread pool][pool] would help).
 
 When working locally, you can of course use whatever you want.
 However, a solution using non-standard libraries will most probably not work with the Exercism online runner.

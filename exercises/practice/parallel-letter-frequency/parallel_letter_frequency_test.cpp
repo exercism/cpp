@@ -80,6 +80,7 @@ TEST_CASE("ignore whitespace",
         "\n",
     };
     auto freqs = parallel_letter_frequency::frequency(texts);
+    CHECK(freqs.empty());
 }
 
 TEST_CASE("ignore punctuation",
@@ -88,6 +89,7 @@ TEST_CASE("ignore punctuation",
         "!", "?", ";", ",", ".",
     };
     auto freqs = parallel_letter_frequency::frequency(texts);
+    CHECK(freqs.empty());
 }
 
 TEST_CASE("ignore numbers",
@@ -96,6 +98,7 @@ TEST_CASE("ignore numbers",
         "1", "2", "3", "4", "5", "6", "7", "8", "9",
     };
     auto freqs = parallel_letter_frequency::frequency(texts);
+    CHECK(freqs.empty());
 }
 
 TEST_CASE(
