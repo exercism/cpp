@@ -1,0 +1,8 @@
+std::vector <unsigned int> positions(input_digits.size());
+std::iota(positions.begin(), positions.end(), 0);
+unsigned int intermediate = std::transform_reduce(std::execution::par_unseq,
+    input_digits.cbegin(), input_digits.cend(),
+    positions.crbegin(), 0U, std::plus {},
+    [ & input_base](unsigned int d, unsigned int pos) {
+        return d * std::pow(input_base, pos);
+    });

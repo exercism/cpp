@@ -1,0 +1,8 @@
+unsigned int intermediate = 0;
+for (unsigned int d : input_digits)
+    intermediate = intermediate * input_base + d;
+std::vector <unsigned int> output_digits{};
+while (intermediate > 0) {
+    output_digits.emplace_back(intermediate % output_base);
+    intermediate /= output_base;
+}
