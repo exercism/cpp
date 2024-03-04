@@ -63,11 +63,11 @@ It combines memory allocation for the control block and the managed object into 
 Additionally, automatic deduction of template arguments simplifies code and enhances readability.
 Using `std::make_shared()` promotes cleaner, safer, and more efficient code when working with `std::shared_ptr` objects in C++.
 
-
-~~~~exercism/advanced
 ## Weak Pointers
 
 `std::weak_ptr` is a companion class to `std::shared_ptr` that provides a non-owning "weak" reference to an object managed by a shared pointer.
+It allows access to the resource without affecting its lifetime.
+Weak pointers are useful in scenarios where cyclic references need to be broken to prevent memory leaks.
 
 ```cpp
 // Creating a shared pointer
@@ -81,12 +81,95 @@ auto your_flatmates_boyfriends_account = your_flatmates_account;
 // your_flatmates_boyfriends_account will be a null pointer and cannot use the associated object any longer.
 ```
 
-Weak pointers are useful in scenarios where cyclic references need to be broken to prevent memory leaks.
+## `std::weak_ptr` and Cyclic Ownership
+
 `std::weak_ptr` was designed to address the issue of cyclic ownership, also known as circular references, that can occur when using `std::shared_ptr`. 
+
 In a cyclic ownership scenario, two or more `std::shared_ptr` objects are referencing each other, creating a cycle where none of the objects can be deleted because they have strong references to each other, leading to memory leaks.
+
 `std::weak_ptr` provides a solution to this problem by allowing weak references to shared objects without contributing to their reference count.
 This means that it can observe and access the shared object but doesn't prevent it from being deleted.
-~~~~
+If all strong references to the shared object are released, the object is destroyed, and weak pointers observing it are automatically reset to `nullptr`.
+
+Here's a short example demonstrating the use of `std::weak_ptr` to break cyclic ownership:
+
+```cpp
+struct Node {
+    Node() { std::cout << "Node constructed\n"; }
+    ~Node() { std::cout << "Node destructed\n"; }
+
+    std::weak_ptr<Node> next;
+};
+
+// Creating two nodes
+auto node1 = std::make_shared<Node>();
+auto node2 = std::make_shared<Node>();
+
+// Creating a cycle by making each node point to the other
+node1->next = node2;
+node2->next = node1;
+
+// Release strong references to nodes
+node1.reset();
+node2.reset();
+
+// Nodes are automatically destructed due to weak references
+```
+
+"Node constructed" is printed twice, followed by two lines of "Node destructed".
+
+When `next` is not a weak pointer but a `std::shared_ptr`, it creates a cyclic ownership situation, leading to memory leaks because both nodes will hold strong references to each other, preventing their destruction.
+
+```cpp
+struct Node {
+    Node() { std::cout << "Node constructed\n"; }
+    ~Node() { std::cout << "Node destructed\n"; }
+
+    std::shared_ptr<Node> next; // Change to shared_ptr
+};
+```
+
+In this scenario, both `node1` and `node2` hold strong references to each other through `std::shared_ptr`, forming a cycle.
+When the program exits and attempts to release the strong references with `reset()`, the reference counts of both nodes remain non-zero because each node holds a strong reference to the other.
+Therefore, the nodes are not destructed, leading to memory leaks.
+"Node constructed" is printed twice, but it is not followed by any line of "Node destructed".
+
+## Dangling pointers and `std::weak_ptr`
+
+Dangling pointers occur when a pointer references an object that has been deleted, leading to undefined behavior when the pointer is dereferenced.
+`std::weak_ptr` helps avoid dangling pointers by providing a non-owning, weak reference to an object managed by `std::shared_ptr`.
+Here's how to avoid dangling pointers with `std::weak_ptr`:
+
+1. **Create a `std::weak_ptr`**: Instead of directly holding a `std::shared_ptr`, create a `std::weak_ptr` to the shared object.
+
+2. **Check for Validity**: Before using the `std::weak_ptr`, check its validity using the `expired()` function.
+  This function returns `true` if the associated shared object has been deleted.
+
+3. **Lock the `std::weak_ptr`**: To access the shared object safely, use the `lock()` function, which returns a `std::shared_ptr` pointing to the same object if it is still valid.
+  If the object has been deleted, `lock()` returns an empty `std::shared_ptr`.
+
+Here's a code example demonstrating the use of `std::weak_ptr` to avoid dangling pointers:
+
+```cpp
+auto node1 = std::make_shared<Node>();
+auto node2 = std::make_shared<Node>();
+
+// Create weak pointers
+node1->next = node2;
+node2->next = node1;
+
+// Check validity and lock
+if (auto lockedNode2 = node1->next.lock()) {
+    // Use lockedNode2 safely
+} else {
+    // Handle case where node2 has been deleted
+}
+```
+
+In this example, `node1->next` and `node2->next` are `std::weak_ptr` objects.
+Before accessing the shared object, validity is checked using the `expired()` function.
+Then, `lock()` is used to safely access the shared object.
+This approach ensures that dangling pointers are avoided when working with `std::weak_ptr`.
 
 ## Usage advice
 

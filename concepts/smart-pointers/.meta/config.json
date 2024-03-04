@@ -1,11 +1,6 @@
 {
-  "blurb": "C++ is a statically-typed language, which means that everything has a type at compile-time. C++ allows one to use Object-Oriented, Functional and Procedural coding styles.",
+  "blurb": "Smart pointers in C++ provide automatic memory management, reducing memory leaks and dangling pointers by ensuring proper allocation and deallocation.",
   "authors": [
     "vaeng"
-  ],
-  "contributors": [
-    "MatthijsBlom",
-    "siebenschlaefer",
-    "b8horpet"
   ]
 }
