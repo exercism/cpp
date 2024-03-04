@@ -1,0 +1,14 @@
+[
+    {
+        "url": "https://en.cppreference.com/w/c/language/pointer",
+        "description": "C++ reference on pointers"
+    },
+    {
+        "url": "https://en.cppreference.com/w/cpp/memory/new",
+        "description": "C++ reference on dynamic memory allocation with new"
+    },
+    {
+        "url": "https://en.cppreference.com/w/cpp/language/delete",
+        "description": "C++ reference on dynamic memory deallocation with delete"
+    }
+]
