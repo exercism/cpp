@@ -68,7 +68,7 @@ std::for_each(
 
 For more information, check the  [converting in-parallel approach][in-parallel].
 
-## Indirect approaches
+## A direct approach
 
 To do the conversion directly, we can take inspiration from functions that are usually found in _arbitrary-precision integer_ a.k.a. [_BigInteger_][big-int-example] implementations:
 
