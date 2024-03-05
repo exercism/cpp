@@ -4,12 +4,8 @@
 #include <string>
 
 namespace zebra_puzzle {
-    class zebra_puzzle {
-    public:
-        std::string drinks_water() const;
-        std::string who_owns_zebra() const;
-    };
+        std::string drinks_water();
+        std::string owns_zebra();
 }
-
 
 #endif
