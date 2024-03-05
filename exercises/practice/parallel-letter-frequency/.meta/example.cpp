@@ -18,7 +18,11 @@ namespace {
 [[nodiscard]] std::unordered_map<char, size_t> frequency(
     std::string_view const text) {
     std::unordered_map<char, size_t> freq;
-    for (unsigned char c : text) freq[std::tolower(c)] += 1;
+    for (unsigned char c : text) {
+        if (std::isalpha(c)) {
+            freq[std::tolower(c)] += 1;
+        }
+    }
     return freq;
 }
 
