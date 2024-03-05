@@ -37,7 +37,14 @@ TEST_CASE("isosceles_triangles_have_first_two_sides_equal")
 {
     REQUIRE(triangle::flavor::isosceles == triangle::kind(4, 4, 3));
 }
-
+TEST_CASE("first_and_third_sizes_are_equal")
+{
+    REQUIRE(triangle::flavor::scalene == triangle::kind(3,4,4));
+}
+TEST_CASE("second_and_third_sizes_are_equal")
+{
+    REQUIRE(triangle::flavor:scalene == triangle::kind(4,3,3));
+}
 TEST_CASE("isosceles_triangles_have_in_fact_exactly_two_sides_equal")
 {
     REQUIRE(triangle::flavor::isosceles == triangle::kind(10, 10, 2));
@@ -86,5 +93,14 @@ TEST_CASE("larger_triangles_violating_triangle_inequality_are_illegal")
 TEST_CASE("double_and_integer_arguments")
 {
     REQUIRE(triangle::flavor::scalene == triangle::kind(5.5, 4, 2));
+}
+TEST_CASE("first_and_third_sides_are_equal")
+{
+    REQUIRE(triangle::flavor::isosceles == triangle::kind(3, 4, 3));
+}
+
+TEST_CASE("second_and_third_sides_are_equal")
+{
+    REQUIRE(triangle::flavor::isosceles == triangle::kind(4, 3, 3));
 }
 #endif
