@@ -2,14 +2,13 @@
   "authors": [
     "vaeng"
   ],
-  "contributors": [],
   "files": {
     "solution": [
-      "pop_count.cpp",
-      "pop_count.h"
+      "eliuds_eggs.cpp",
+      "eliuds_eggs.h"
     ],
     "test": [
-      "pop_count_test.cpp"
+      "eliuds_eggs_test.cpp"
     ],
     "example": [
       ".meta/example.cpp",
