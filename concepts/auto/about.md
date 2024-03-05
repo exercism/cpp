@@ -1,4 +1,4 @@
-# Introduction
+# About
 
 ## The `auto` Keyword in C++
 
@@ -40,3 +40,9 @@ auto* ptr{&x};                     // pointer to x with the same type as x, but 
 ```
 
 In later concept we will often see the `auto` keyword with lambda expressions, range-based for-loops, and iterators.
+
+## Use Cases
+
+- **Generic Programming**: `auto` is particularly useful in generic programming scenarios where types may be complex or template-related.
+- **Complex Data Types**: When dealing with complex data types or long type names, `auto` can reduce clutter and improve code maintainability.
+- **Iterator-Based Algorithms**: It simplifies the use of iterators in algorithms, enhancing code readability.
