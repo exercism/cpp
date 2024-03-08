@@ -5,6 +5,8 @@
 #include "test/catch.hpp"
 #endif
 
+#include <cmath>
+
 using namespace lasagna_master;
 
 // As long as we have catch2 v2 and v3 in parallel, we can't use either
@@ -12,7 +14,7 @@ using namespace lasagna_master;
 #define REQUIRE_VECTOR_APROX_EQUAL(vec1, vec2, margin)  \
     REQUIRE(vec1.size() == vec2.size());                \
     for (size_t i = 0; i < vec1.size(); i++) {          \
-        REQUIRE( vec1.at(i) - vec2.at(i) < margin);     \
+        REQUIRE( std::abs(vec1.at(i) - vec2.at(i)) < margin);     \
     } 
 
 TEST_CASE("preparationTime: Preparation time for many layers with custom average time", "[task_1]") {
