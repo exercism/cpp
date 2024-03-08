@@ -11,6 +11,6 @@ int preparationTime(const std::vector<std::string>& layers, int prepTime = 2);
 amount quantities(const std::vector<std::string>& layers);
 void addSecretIngredient(std::vector<std::string>& myList, const std::vector<std::string>& friendsList);
 void addSecretIngredient(std::vector<std::string>& myList, const std::string& secretIngredient);
-std::vector<double> scaledQuantities(const std::vector<double>& quantities, int portions);
+std::vector<double> scaleRecipe(const std::vector<double>& quantities, int portions);
 
 }  // namespace lasagna_master
