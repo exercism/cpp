@@ -37,7 +37,7 @@ The result should be returned as an `amount` _struct_, which is already  defined
 ```cpp
 struct amount { int noodles; double sauce; };
 
-needed = quantities({"sauce", "noodles", "sauce", "meat", "mozzarella", "noodles"});
+amount needed{quantities({"sauce", "noodles", "sauce", "meat", "mozzarella", "noodles"})};
 // needed.noodles => 100
 // needed.sauce => 0.4
 ```
@@ -81,7 +81,7 @@ This means the `quantities` argument should not be modified in this function.
 
 ```cpp
 std::vector<double> quantities{1.2, 3.6, 10.5};
-scaledQuantities := scaleRecipe(quantities, 4);
+scaleRecipe(quantities, 4);
 // => { 2.4, 7.2, 21 }
 ```
 

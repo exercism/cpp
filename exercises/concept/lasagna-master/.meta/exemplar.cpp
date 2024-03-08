@@ -28,7 +28,7 @@ void addSecretIngredient(std::vector<std::string>& myList,
     myList.back() = secretIngredient;
 }
 
-std::vector<double> scaledQuantities(const std::vector<double>& quantities,
+std::vector<double> scaleRecipe(const std::vector<double>& quantities,
                                      int portions) {
     std::vector<double> result(quantities);
     for (auto& quantity : result) {
