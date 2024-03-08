@@ -122,35 +122,35 @@ TEST_CASE("Adds secret vector ingredient", "[task_3]") {
     REQUIRE(myList == expected);
 }
 
-TEST_CASE("scaledQuantities: scales up correctly", "[task_4]") {
+TEST_CASE("scaleRecipe: scales up correctly", "[task_4]") {
     const std::vector<double> input{0.5, 250, 150, 3, 0.5};
     int portions{6};
     std::vector<double> expected{1.5, 750, 450, 9, 1.5};
-    std::vector<double> scaled{scaledQuantities(input, portions)};
+    std::vector<double> scaled{scaleRecipe(input, portions)};
     REQUIRE_VECTOR_APROX_EQUAL(expected, scaled, 0.0001)
 }
 
-TEST_CASE("scaledQuantities: scales up correctly (2)", "[task_4]") {
+TEST_CASE("scaleRecipe: scales up correctly (2)", "[task_4]") {
     const std::vector<double> input{0.6, 300, 1, 0.5, 50, 0.1, 100};
     int portions{3};
     std::vector<double> expected{0.9, 450, 1.5, 0.75, 75, 0.15, 150};
-    std::vector<double> scaled{scaledQuantities(input, portions)};
+    std::vector<double> scaled{scaleRecipe(input, portions)};
     REQUIRE_VECTOR_APROX_EQUAL(expected, scaled, 0.0001)
 }
 
-TEST_CASE("scaledQuantities: scales down correctly", "[task_4]") {
+TEST_CASE("scaleRecipe: scales down correctly", "[task_4]") {
     const std::vector<double> input{0.5, 250, 150, 3, 0.5};
     int portions{1};
     std::vector<double> expected{0.25, 125, 75, 1.5, 0.25};
-    std::vector<double> scaled{scaledQuantities(input, portions)};
+    std::vector<double> scaled{scaleRecipe(input, portions)};
     REQUIRE_VECTOR_APROX_EQUAL(expected, scaled, 0.0001)
 }
 
-TEST_CASE("scaledQuantities: empty recipe", "[task_4]") {
+TEST_CASE("scaleRecipe: empty recipe", "[task_4]") {
     const std::vector<double> input{};  
     int portions{100};
     std::vector<double> expected{};
-    std::vector<double> scaled{scaledQuantities(input, portions)};
+    std::vector<double> scaled{scaleRecipe(input, portions)};
     REQUIRE_VECTOR_APROX_EQUAL(expected, scaled, 0.0001)
 }
 
