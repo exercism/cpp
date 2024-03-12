@@ -1,0 +1,6 @@
+{
+  "blurb": "The `auto` keyword in C++ allows automatic type deduction, simplfying code by letting the compiler infer variable types from their initializers.",
+  "authors": [
+    "vaeng"
+  ]
+}

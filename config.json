@@ -1284,6 +1284,11 @@
       "uuid": "18b2f529-3be6-4a70-be7d-81aa07393585",
       "slug": "functions",
       "name": "Functions"
+    },
+    {
+      "uuid": "da0a69e5-33ec-4458-8c70-80457715ada6",
+      "slug": "auto",
+      "name": "Auto"
     }
   ],
   "key_features": [

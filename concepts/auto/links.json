@@ -1,0 +1,10 @@
+[
+    {
+        "url": "https://en.cppreference.com/w/cpp/language/auto",
+        "description": "C++ reference documentation for the auto keyword"
+    },
+    {
+        "url": "https://www.learncpp.com/cpp-tutorial/type-deduction-for-objects-using-the-auto-keyword/",
+        "description": "Learn C++ overview on the auto keyword and its usage"
+    }
+]
