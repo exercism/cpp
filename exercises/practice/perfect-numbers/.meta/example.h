@@ -2,7 +2,7 @@
 #define PERFECT_NUMBERS_H
 
 namespace perfect_numbers {
-enum classification { deficient, perfect, abundant };
+enum class classification { deficient, perfect, abundant };
 
 classification classify(int n);
 

@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "ahans"
+  ],
+  "files": {
+    "solution": [
+      "parallel_letter_frequency.cpp",
+      "parallel_letter_frequency.h"
+    ],
+    "test": [
+      "parallel_letter_frequency_test.cpp"
+    ],
+    "example": [
+      ".meta/example.cpp",
+      ".meta/example.h"
+    ]
+  },
+  "blurb": "Count the frequency of letters in texts using parallel computation."
+}

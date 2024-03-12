@@ -27,8 +27,8 @@
       "%{snake_slug}_test.cpp"
     ],
     "example": [
-      "example.cpp",
-      "example.h"
+      ".meta/example.cpp",
+      ".meta/example.h"
     ],
     "exemplar": [
       ".meta/exemplar.cpp",
@@ -995,6 +995,20 @@
         ]
       },
       {
+        "slug": "linked-list",
+        "name": "Linked List ",
+        "uuid": "6f6c55dd-db6b-40ca-96f2-d9b7232dcbb0",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6,
+        "topics": [
+          "classes",
+          "conditionals",
+          "loops",
+          "pointers"
+        ]
+      },
+      {
         "slug": "simple-linked-list",
         "name": "Simple linked list",
         "uuid": "ffccabe9-9779-4914-9cff-c6f5696c8afe",
@@ -1023,7 +1037,7 @@
         "difficulty": 4
       },
       {
-        "slug": "pop-count",
+        "slug": "eliuds-eggs",
         "name": "Eliud's Eggs",
         "uuid": "cfe01bad-0972-466c-b52a-9b8cf563b2f4",
         "practices": [
@@ -1104,12 +1118,80 @@
         "difficulty": 5
       },
       {
+        "slug": "list-ops",
+        "name": "List Ops",
+        "uuid": "9498d0bf-c411-4b3b-b0c7-a063aa7f0acc",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "knapsack",
+        "name": "Knapsack",
+        "uuid": "35705d66-fe72-4dee-8eb0-54823240f2d7",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
+      },
+      {
         "slug": "two-bucket",
         "name": "Two Bucket",
         "uuid": "83c92b7f-fb0e-43d8-ab7d-d514408b8575",
         "practices": [],
         "prerequisites": [],
         "difficulty": 7
+      },
+      {
+        "slug": "yacht",
+        "name": "Yacht",
+        "uuid": "3abaa99e-14e5-434e-ae50-e9d549c5ae6e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "kindergarten-garden",
+        "name": "Kindergarten Garden",
+        "uuid": "5bc93b17-5209-4517-985e-f6fb3252afb3",
+        "practices": [
+          "enums"
+        ],
+        "prerequisites": [
+          "vector-arrays"
+        ],
+        "difficulty": 3
+      },
+      {
+        "slug": "dnd-character",
+        "name": "D&D Character",
+        "uuid": "83e20a67-990e-4db7-b16a-48b4f516f893",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "spiral-matrix",
+        "name": "Spiral Matrix",
+        "uuid": "d5569902-5815-4b05-ab13-13826fef7826",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "parallel-letter-frequency",
+        "name": "Parallel Letter Frequency",
+        "uuid": "0a029212-bc55-4559-b3c6-2c26bec0d560",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
+      },
+      {
+        "slug": "pig-latin",
+        "name": "Pig Latin",
+        "uuid": "e4242a6e-3611-4f49-890b-368f1ebbdc94",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
       }
     ],
     "foregone": [
