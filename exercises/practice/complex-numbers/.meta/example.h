@@ -11,6 +11,7 @@ class Complex {
     Complex operator-(const Complex& other) const;
     Complex operator*(const Complex& other) const;
     Complex operator/(const Complex& other) const;
+    
     double abs() const;
     Complex conj() const;
     double real() const;
@@ -23,6 +24,14 @@ class Complex {
 
 bool operator==(const Complex& lhs, const Complex& rhs);
 std::ostream& operator<<(std::ostream& os, Complex const& value);
+Complex operator+(const Complex& complex, double scalar);
+Complex operator+(double scalar, const Complex& complex);
+Complex operator-(const Complex& complex, double scalar);
+Complex operator-(double scalar, const Complex& complex);
+Complex operator*(const Complex& complex, double scalar);
+Complex operator*(double scalar, const Complex& complex);
+Complex operator/(const Complex& complex, double scalar);
+Complex operator/(double scalar, const Complex& complex);
 
 }  // namespace complex_numbers
 
