@@ -3,9 +3,17 @@
 
 #include <string>
 
-namespace zebra_puzzle {
-        std::string drinks_water();
-        std::string owns_zebra();
-}
+namespace zebra_puzzle 
+{
+
+typedef struct 
+{
+    std::string drinksWater;
+    std::string ownsZebra;
+} Solution;
+
+Solution solve();
+
+}  // namespace zebra_puzzle
 
 #endif
