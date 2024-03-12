@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "vaeng"
+  ],
+  "files": {
+    "solution": [
+      "lasagna_master.cpp",
+      "lasagna_master.h"
+    ],
+    "test": [
+      "lasagna_master_test.cpp"
+    ],
+    "exemplar": [
+      ".meta/exemplar.cpp",
+      ".meta/exemplar.h"
+    ]
+  },
+  "blurb": "Dive deeper into C++ functions while preparing to cook the perfect lasagna."
+}
