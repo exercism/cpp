@@ -16,6 +16,7 @@ TEST_CASE("no texts",
           "[calculateFrequencies][c054d642-c1fa-4234-8007-9339f2337886]") {
     std::vector<std::string_view> const texts = {};
     auto freqs = parallel_letter_frequency::frequency(texts);
+    CHECK(freqs.empty());
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
