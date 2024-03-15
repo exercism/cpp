@@ -45,8 +45,9 @@ TEST_CASE(
 }
 
 TEST_CASE(
-    "54 character plaintext results in 7 chunks, the last two with trailing "
-    "spaces",
+    // clang-format off
+    "54 character plaintext results in 7 chunks, the last two with trailing spaces",
+    // clang-format on
     "[fbcb0c6d-4c39-4a31-83f6-c473baa6af80]") {
     REQUIRE("imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau " ==
             crypto_square::cipher("If man was meant to stay on the ground, god "
