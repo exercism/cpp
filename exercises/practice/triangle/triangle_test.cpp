@@ -19,15 +19,13 @@ TEST_CASE("equilateral triangle -> all sides are equal","[8b2c43ac-7257-43f9-b55
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
-TEST_CASE("larger_equilateral_triangles_also_have_equal_sides")[8b2c43ac-7257-43f9-b552-7631a91988af]
-"equilateral triangle -> all sides are equal"
+TEST_CASE("equilateral triangle -> all sides are equal", "[8b2c43ac-7257-43f9-b552-7631a91988af]")
+
 {
     REQUIRE(triangle::flavor::equilateral == triangle::kind(10, 10, 10));
 }
 
 TEST_CASE("isosceles triangle -> last two sides are equal","[cbc612dc-d75a-4c1c-87fc-e2d5edd70b71]")
-description = "isosceles triangle -> last two sides are equal"
-
 {
     REQUIRE(triangle::flavor::isosceles == triangle::kind(3, 4, 4));
 }
