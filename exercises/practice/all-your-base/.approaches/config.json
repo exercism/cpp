@@ -1,0 +1,27 @@
+{
+  "introduction": {
+    "authors": [
+      "vaeng"
+    ]
+  },
+  "approaches": [
+    {
+      "uuid": "0ec8d60b-1bce-4cf3-a6b9-c367d70fc7c9",
+      "slug": "in-parallel",
+      "title": "Parallel operations",
+      "blurb": "Convert to another base in a parallel fashion.",
+      "authors": [
+        "vaeng"
+      ]
+    },
+    {
+      "uuid": "7af79d27-4cdc-4403-b45c-0fdec06fe733",
+      "slug": "in-sequence",
+      "title": "In sequence operations",
+      "blurb": "Convert to another base in a serial fashion.",
+      "authors": [
+        "vaeng"
+      ]
+    }
+  ]
+}
