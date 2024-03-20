@@ -1286,6 +1286,11 @@
       "name": "Functions"
     },
     {
+      "uuid": "0316eb64-d1e9-44cc-b7d4-ea4b88f85ac3",
+      "slug": "smart-pointers",
+      "name": "Smart Pointers"
+    },
+    {
       "uuid": "da0a69e5-33ec-4458-8c70-80457715ada6",
       "slug": "auto",
       "name": "Auto"
