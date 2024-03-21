@@ -196,6 +196,18 @@
           "references",
           "headers"
         ]
+      },
+      {
+        "slug": "power-of-troy",
+        "name": "Power of Troy",
+        "uuid": "9f5e64e5-2838-4237-9cc6-fef500aacd7b",
+        "concepts": [
+          "auto",
+          "smart-pointers"
+        ],
+        "prerequisites": [
+          "pointers"
+        ]
       }
     ],
     "practice": [
