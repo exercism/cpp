@@ -46,8 +46,8 @@ TEST_CASE("pangram_with_mixed_case_and_punctuation")
     REQUIRE(pangram::is_pangram("\"Five quacking Zephyrs jolt my wax bed.\""));
 }
 
-TEST_CASE("upper_and_lower_should_not_be_counted_separately")
+TEST_CASE("a_to_m_and_A_to_M_are_26_different_characters_but_not_a_pangram")
 {
-    REQUIRE(!pangram::is_pangram("the quick brown fox jumps over with lazy FX"));
+    REQUIRE(!pangram::is_pangram("abcdefghijklm ABCDEFGHIJKLM"));
 }
 #endif
