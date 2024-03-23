@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 
 print_help() {
     echo "This script verifies if one or more files are formatted using the provided"
@@ -12,8 +13,6 @@ print_help() {
     echo "     path_to_file must be one or more paths to existing regular files,"
     echo "     warnings are returned for each invalid path."
 }
-
-cd "$(dirname "$0")"
 
 # Get files list
 FILES=()
@@ -31,39 +30,23 @@ do
     shift
 done
 
-# Verifies a single file is formatted following .clang-format style
-run_check() {
-    local FILE="$1"
-    CHECK_RESULT=0
-    # Get diff between current content and formatted content
-    local OUTPUT=$(diff -u <(cat "$FILE") <(clang-format --style=file "$FILE"))
-    # Shows diff output only if files are different
-    if [[ $OUTPUT != "" ]]; then
-        echo "$OUTPUT"
-        CHECK_RESULT=1
-    fi
-}
-
-# Result of this script, incremented by one for each unformatted file
+# Result of this script
 RESULT=0
-# List of warnings
-WARNINGS=()
 
 # Iterate files to run format check
 for INDEX in "${!FILES[@]}"; do
     FILE="${FILES[$INDEX]}"
     if [[ -f "$FILE" ]]; then
-        run_check $FILE
-        RESULT=$(( RESULT + CHECK_RESULT ))
+        if ! clang-format --dry-run --Werror "$FILE"; then
+            RESULT=1
+        fi
     elif [[ -d "$FILE" ]]; then
-        WARNINGS+=("Path is a directory: $FILE")
+        echo "Path is a directory: $FILE"
+        RESULT=1
     else
-        WARNINGS+=("File not found: $FILE")
+        echo "File not found: $FILE"
+        RESULT=1
     fi
-done
-
-for INDEX in "${!WARNINGS[@]}"; do
-    echo "${WARNINGS[$INDEX]}"
 done
 
 echo "Done"
