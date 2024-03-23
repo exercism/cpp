@@ -127,4 +127,13 @@ TEST_CASE("same_first_and_last_characters")
     REQUIRE(expected == actual);
 }
 
+TEST_CASE("word_with_duplicated_character_and_with_two_hyphens")
+{
+    const bool actual = isogram::is_isogram("up-to-date");
+
+    const bool expected {false};
+
+    REQUIRE(expected == actual);
+}
+
 #endif
