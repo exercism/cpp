@@ -1,8 +1,6 @@
 #if !defined(ISOGRAM_H)
 #define ISOGRAM_H
 
-namespace isogram {
+namespace isogram {}  // namespace isogram
 
-}  // namespace isogram
-
-#endif // ISOGRAM_H
+#endif  // ISOGRAM_H

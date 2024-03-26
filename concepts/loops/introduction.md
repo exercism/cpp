@@ -63,7 +63,7 @@ for (int i{1}; i < 10; ++i) {
 }
 ```
 
-This loop will sum the numbers from `1` to `9` (including `9`). 
+This loop will sum the numbers from `1` to `9` (including `9`).
 
 ## Break and Continue
 

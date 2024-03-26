@@ -66,7 +66,8 @@ TEST_CASE("Personal top when there is only one", "[personalTopThree]") {
     REQUIRE(hs.top_three() == expected);
 }
 
-TEST_CASE("Latest score after personal top scores", "[immutable, latestAfterTopThree]") {
+TEST_CASE("Latest score after personal top scores",
+          "[immutable, latestAfterTopThree]") {
     // Test if latest_score is still valid after calling top_three
     std::vector<int> scores{70, 50, 20, 30};
     int expected{30};
@@ -75,7 +76,8 @@ TEST_CASE("Latest score after personal top scores", "[immutable, latestAfterTopT
     REQUIRE(hs.latest_score() == expected);
 }
 
-TEST_CASE("Scores after personal top scores", "[immutable, scoresAfterTopThree]") {
+TEST_CASE("Scores after personal top scores",
+          "[immutable, scoresAfterTopThree]") {
     // Test if list_scores is unchanged after calling top_three
     std::vector<int> scores{30, 50, 20, 70};
     arcade::HighScores hs{scores};

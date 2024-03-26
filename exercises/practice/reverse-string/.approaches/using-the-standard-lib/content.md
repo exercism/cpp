@@ -46,7 +46,7 @@ After including this header we can call the function `std::reverse` later in the
 
 The function takes its argument "by value" (`std::string`).
 That means the parameter `str` gets constructed from the argument tht the caller passes to the function, and it gets destructed at the end of the function.
-Any modifications of the parameter will not be visible outside of the function and will not affect the argument of the caller.  
+Any modifications of the parameter will not be visible outside of the function and will not affect the argument of the caller.
 We do that because the function needs a "working copy" of the string, it will reverse and return that parameter without creating an additional instance of `std::string`.
 
 ## Calling `std::reverse()`.
@@ -62,4 +62,3 @@ This is a great approach, it is concise, easy to read, idiomatic, and very effic
 
 [cppref-algorithm]: https://en.cppreference.com/w/cpp/header/algorithm
 [cppref-reverse]: https://en.cppreference.com/w/cpp/algorithm/reverse
-

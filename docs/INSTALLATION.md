@@ -85,4 +85,3 @@ to figure out how to install the minimum compiler version.
 
 MacOS users can install GCC with [Homebrew](http://brew.sh/) via
 `brew install gcc`.
-

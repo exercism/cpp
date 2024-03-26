@@ -1,5 +1,3 @@
 #pragma once
 
-namespace minesweeper {
-
-}  // namespace minesweeper
+namespace minesweeper {}  // namespace minesweeper

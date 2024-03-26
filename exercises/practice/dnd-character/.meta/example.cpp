@@ -1,9 +1,9 @@
-#include "dnd_character.h"
-
 #include <algorithm>
 #include <cmath>
 #include <cstdlib>
 #include <numeric>
+
+#include "dnd_character.h"
 
 namespace dnd_character {
 int modifier(int score) {

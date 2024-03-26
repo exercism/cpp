@@ -1,5 +1,3 @@
 #include "bob.h"
 
-namespace bob {
-
-}  // namespace bob
+namespace bob {}  // namespace bob

@@ -27,7 +27,7 @@ Here are some common examples:
 ```cpp
 bool eq3 = 2 == 3; // false, integer comparison
 
-bool eq4 = 2.1 != 2.2; // true, float comparison 
+bool eq4 = 2.1 != 2.2; // true, float comparison
 
 bool eq5 = "hello" == "hello"; // true, string comparison
 ```

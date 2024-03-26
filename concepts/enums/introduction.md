@@ -46,7 +46,7 @@ enum class WheelMaterial {
     plastic
 };
 ```
-Although the wheels and the deck can both be made of _plastic_, the two cannot be confused. 
+Although the wheels and the deck can both be made of _plastic_, the two cannot be confused.
 They are different _types_:  `DeckMaterial` plastic and `WheelMaterial` plastic.
 Each `enumeration` will have its `enumerators` in its own scope - its own `namespace`.
 This is the reason they are called `scoped enumerations`.
@@ -57,7 +57,7 @@ You might be thinking that with the name `scoped`, there would also be be `unsco
 `Unscoped enumerations` are becoming less popular because they all share the same global namespace.
 Because of the sharing, you could not have two `unscoped enumerations` with the same `enumerators` like _plastic_ in the example above.
 
-Also, `unscoped enumerations` implicitly convert to integers. 
+Also, `unscoped enumerations` implicitly convert to integers.
 Look at the example below for a surprising result:
 
 ```cpp
