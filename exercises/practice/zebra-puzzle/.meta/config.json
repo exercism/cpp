@@ -1,0 +1,19 @@
+{
+  "authors": ["rajatnai49", "siebenschlaefer"],
+  "files": {
+    "solution": [
+      "zebra_puzzle.cpp",
+      "zebra_puzzle.h"
+    ],
+    "test": [
+      "zebra_puzzle_test.cpp"
+    ],
+    "example": [
+      ".meta/example.cpp",
+      ".meta/example.h"
+    ]
+  },
+  "blurb": "Solve the zebra puzzle.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Zebra_Puzzle"
+}

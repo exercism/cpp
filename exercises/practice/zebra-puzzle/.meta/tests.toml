@@ -1,0 +1,14 @@
+# This is an auto-generated file.
+#
+# Regenerating this file via `configlet sync` will:
+# - Recreate every `description` key/value pair
+# - Recreate every `reimplements` key/value pair, where they exist in problem-specifications
+# - Remove any `include = true` key/value pair (an omitted `include` key implies inclusion)
+# - Preserve any other key/value pair
+#
+# As user-added comments (using the # character) will be removed when this file
+# is regenerated, comments can be added via a `comment` key.
+
+[16efb4e4-8ad7-4d5e-ba96-e5537b66fd42]
+description = "solve the zebra puzzle and answer who drinks water and who owns zebra"
+
