@@ -3,8 +3,7 @@
 
 #include <string>
 
-namespace hexadecimal
-{
+namespace hexadecimal {
 
 int convert(const std::string &text);
 

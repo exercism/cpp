@@ -1,10 +1,8 @@
 #include "sum_of_multiples.h"
 
-namespace sum_of_multiples
-{
+namespace sum_of_multiples {
 
-int to(std::initializer_list<int> const& multiples, int num)
-{
+int to(std::initializer_list<int> const& multiples, int num) {
     int sum = 0;
     for (int i = 0; i < num; ++i) {
         for (const int multiple : multiples) {
@@ -17,4 +15,4 @@ int to(std::initializer_list<int> const& multiples, int num)
     return sum;
 }
 
-}
+}  // namespace sum_of_multiples

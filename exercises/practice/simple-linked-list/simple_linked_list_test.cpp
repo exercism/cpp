@@ -9,23 +9,20 @@
 #endif
 
 // Declares a single test.
-TEST_CASE("EmptyListHasSizeZero")
-{
+TEST_CASE("EmptyListHasSizeZero") {
     simple_linked_list::List empty{};
     REQUIRE(empty.size() == 0);
 }
 
 #ifdef EXERCISM_RUN_ALL_TESTS
 
-TEST_CASE("SingletonListHasSizeOne")
-{
+TEST_CASE("SingletonListHasSizeOne") {
     simple_linked_list::List list{};
     list.push(44);
     REQUIRE(list.size() == 1);
 }
 
-TEST_CASE("NonEmptyListHasCorrectSize")
-{
+TEST_CASE("NonEmptyListHasCorrectSize") {
     simple_linked_list::List list{};
     list.push(44);
     list.push(42);
@@ -34,8 +31,7 @@ TEST_CASE("NonEmptyListHasCorrectSize")
     REQUIRE(list.size() == 4);
 }
 
-TEST_CASE("ListHasCorrectSizeAfterPop")
-{
+TEST_CASE("ListHasCorrectSizeAfterPop") {
     simple_linked_list::List list{};
     list.push(24);
     list.push(2);
@@ -44,8 +40,7 @@ TEST_CASE("ListHasCorrectSizeAfterPop")
     REQUIRE(list.size() == 2);
 }
 
-TEST_CASE("ListHasCorrectSizeAfterPopAndPush")
-{
+TEST_CASE("ListHasCorrectSizeAfterPopAndPush") {
     simple_linked_list::List list{};
     list.push(242);
     list.push(21);
@@ -53,11 +48,9 @@ TEST_CASE("ListHasCorrectSizeAfterPopAndPush")
     list.pop();
     list.push(34);
     REQUIRE(list.size() == 3);
-
 }
 
-TEST_CASE("PopFromSize1")
-{
+TEST_CASE("PopFromSize1") {
     simple_linked_list::List list{};
     auto desired = 142;
     list.push(desired);
@@ -65,8 +58,7 @@ TEST_CASE("PopFromSize1")
     REQUIRE(actual == desired);
 }
 
-TEST_CASE("PopFromSizeTwo")
-{
+TEST_CASE("PopFromSizeTwo") {
     simple_linked_list::List list{};
     auto desired_top = 112;
     auto desired_bottom = 221;
@@ -78,8 +70,7 @@ TEST_CASE("PopFromSizeTwo")
     REQUIRE(actual_bottom == desired_bottom);
 }
 
-TEST_CASE("PopAndPushList")
-{
+TEST_CASE("PopAndPushList") {
     simple_linked_list::List list{};
 
     list.push(1);
@@ -102,25 +93,21 @@ TEST_CASE("PopAndPushList")
     REQUIRE(sixth == 6);
 }
 
-
-TEST_CASE("ReverseEmptyList")
-{
+TEST_CASE("ReverseEmptyList") {
     simple_linked_list::List empty{};
     empty.reverse();
     REQUIRE(empty.size() == 0);
-
 }
 
-TEST_CASE("ReverseNonEmptyList")
-{
+TEST_CASE("ReverseNonEmptyList") {
     simple_linked_list::List list{};
-    for(int i = 0; i < 5; i++) {
+    for (int i = 0; i < 5; i++) {
         list.push(i);
     }
 
     list.reverse();
 
-    for(int i = 0; i < 5; i++) {
+    for (int i = 0; i < 5; i++) {
         REQUIRE(list.pop() == i);
     }
 }

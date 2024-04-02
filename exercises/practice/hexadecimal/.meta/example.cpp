@@ -1,11 +1,10 @@
-#include "hexadecimal.h"
 #include <cctype>
 
-namespace hexadecimal
-{
+#include "hexadecimal.h"
 
-int convert(const std::string &text)
-{
+namespace hexadecimal {
+
+int convert(const std::string &text) {
     int result = 0;
     for (char c : text) {
         result *= 16;
@@ -23,4 +22,4 @@ int convert(const std::string &text)
     return result;
 }
 
-}
+}  // namespace hexadecimal

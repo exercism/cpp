@@ -31,7 +31,7 @@ void increment_vote_count(ElectionResult& result, int votes) {
 ElectionResult& determine_result(std::vector<ElectionResult>& count) {
     int winner_idx = 0;
     for (int i{}; i < count.size(); ++i) {
-        if(count.at(i).votes > count.at(winner_idx).votes) {
+        if (count.at(i).votes > count.at(winner_idx).votes) {
             winner_idx = i;
         }
     }

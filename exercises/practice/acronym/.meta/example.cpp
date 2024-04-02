@@ -1,4 +1,5 @@
 #include <cctype>
+
 #include "acronym.h"
 
 using std::string;

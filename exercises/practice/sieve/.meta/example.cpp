@@ -1,15 +1,14 @@
-#include "sieve.h"
 #include <algorithm>
 #include <list>
 #include <numeric>
 
-namespace sieve
-{
+#include "sieve.h"
 
-std::vector<int> primes(int n)
-{
+namespace sieve {
+
+std::vector<int> primes(int n) {
     std::vector<int> result;
-    std::list<int> candidates(n-1);
+    std::list<int> candidates(n - 1);
     std::iota(candidates.begin(), candidates.end(), 2);
     while (!candidates.empty()) {
         const int next = candidates.front();
@@ -20,4 +19,4 @@ std::vector<int> primes(int n)
     return result;
 }
 
-}
+}  // namespace sieve

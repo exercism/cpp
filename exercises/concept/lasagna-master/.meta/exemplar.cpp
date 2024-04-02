@@ -29,7 +29,7 @@ void addSecretIngredient(std::vector<std::string>& myList,
 }
 
 std::vector<double> scaleRecipe(const std::vector<double>& quantities,
-                                     int portions) {
+                                int portions) {
     std::vector<double> result(quantities);
     for (auto& quantity : result) {
         quantity *= portions / 2.0;

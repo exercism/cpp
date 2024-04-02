@@ -1,5 +1,3 @@
 #include "darts.h"
 
-namespace darts {
-
-} // namespace darts
+namespace darts {}  // namespace darts

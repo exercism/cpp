@@ -1,5 +1,3 @@
 #include "series.h"
 
-namespace series {
-
-}  // namespace series
+namespace series {}  // namespace series

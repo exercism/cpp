@@ -1,5 +1,3 @@
 #include "binary.h"
 
-namespace binary {
-
-}  // namespace binary
+namespace binary {}  // namespace binary
