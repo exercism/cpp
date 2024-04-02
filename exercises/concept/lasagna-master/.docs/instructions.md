@@ -49,7 +49,8 @@ It was amazing and had something special to it.
 The friend sent you the list of ingredients and told you the last item on the list is the "secret ingredient" that made the meal so special.
 Now you want to add that secret ingredient to your recipe as well.
 
-Write a function `addSecretIngredient` that accepts a reference to a `string` of vectors representing the ingredient list of your own recipe and a `string` of vectors that is the list your friend sent you.
+Write a function `addSecretIngredient` that accepts two `vector of strings` as parameters.
+The first one is a reference to the ingredient list of your own recipe, while the second one is the `vector of strings` of the ingredient list your friend sent you.
 The last element in your ingredient list is always `"?"`.
 The function should replace it with the last item from your friends list.
 **Note:** `addSecretIngredient` does not return anything - you should modify the list of your ingredients directly.
