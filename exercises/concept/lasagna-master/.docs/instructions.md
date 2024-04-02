@@ -54,7 +54,7 @@ The first parameter is a _reference_ to the ingredients of your own recipe, and 
 The last element in your ingredient list is always `"?"`.
 The function should replace it with the last item from your friends list.
 **Note:** `addSecretIngredient` does not return anything - you should modify the list of your ingredients directly.
-The list with your friend's ingredients should **not** be modified.
+The list with your friend's ingredients can also be a reference (for improving the performance), but it should **not** be modified.
 Make sure the list will not be modified with a `const` reference.
 
 ```cpp
