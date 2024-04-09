@@ -1,5 +1,3 @@
 #include "meetup.h"
 
-namespace meetup {
-
-}  // namespace meetup
+namespace meetup {}  // namespace meetup

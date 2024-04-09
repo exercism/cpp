@@ -1,23 +1,18 @@
-#include "triangle.h"
 #include <stdexcept>
 
-namespace triangle
-{
+#include "triangle.h"
 
-namespace
-{
+namespace triangle {
 
-bool triangle_equality(double a, double b, double c)
-{
-    return a < (b + c)
-        && b < (a + c)
-        && c < (a + b);
+namespace {
+
+bool triangle_equality(double a, double b, double c) {
+    return a < (b + c) && b < (a + c) && c < (a + b);
 }
 
-}
+}  // namespace
 
-flavor kind(double a, double b, double c)
-{
+flavor kind(double a, double b, double c) {
     if (a == 0 || b == 0 || c == 0) {
         throw std::domain_error("Zero triangle");
     }
@@ -33,4 +28,4 @@ flavor kind(double a, double b, double c)
     return flavor::scalene;
 }
 
-}
+}  // namespace triangle

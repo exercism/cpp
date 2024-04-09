@@ -3,8 +3,7 @@
 
 #include <string>
 
-namespace say
-{
+namespace say {
 
 std::string in_english(unsigned long long number);
 

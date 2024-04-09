@@ -1,5 +1,3 @@
 #pragma once
 
-namespace diamond {
-
-}  // namespace diamond
+namespace diamond {}  // namespace diamond

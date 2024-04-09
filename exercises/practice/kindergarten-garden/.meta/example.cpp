@@ -1,6 +1,6 @@
-#include "kindergarten_garden.h"
-
 #include <algorithm>
+
+#include "kindergarten_garden.h"
 
 namespace kindergarten_garden {
 

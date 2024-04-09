@@ -1,5 +1,3 @@
 #include "triangle.h"
 
-namespace triangle {
-
-}  // namespace triangle
+namespace triangle {}  // namespace triangle

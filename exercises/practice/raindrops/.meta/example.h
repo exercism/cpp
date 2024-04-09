@@ -3,8 +3,7 @@
 
 #include <string>
 
-namespace raindrops
-{
+namespace raindrops {
 
 std::string convert(int drops);
 

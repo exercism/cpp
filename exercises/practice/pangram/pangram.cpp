@@ -1,5 +1,3 @@
 #include "pangram.h"
 
-namespace pangram {
-
-}  // namespace pangram
+namespace pangram {}  // namespace pangram

@@ -63,7 +63,6 @@ TEST_CASE("Presidency, two candidates", "[task_3]") {
     REQUIRE(result.name == expected);
 }
 
-
 TEST_CASE("Presidency, several candidates", "[task_3]") {
     ElectionResult option1{"David", 11};
     ElectionResult option2{"Shaw", 12};

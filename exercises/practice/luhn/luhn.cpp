@@ -1,5 +1,3 @@
 #include "luhn.h"
 
-namespace luhn {
-
-}  // namespace luhn
+namespace luhn {}  // namespace luhn

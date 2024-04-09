@@ -3,8 +3,7 @@
 
 #include <string>
 
-namespace hamming
-{
+namespace hamming {
 
 int compute(std::string const& lhs, std::string const& rhs);
 

@@ -4,21 +4,19 @@
 #include <string>
 #include <vector>
 
-namespace anagram
-{
+namespace anagram {
 
-class anagram
-{
-public:
+class anagram {
+   public:
     anagram(std::string const& subject);
 
     std::vector<std::string> matches(std::vector<std::string> const& matches);
 
-private:
+   private:
     std::string const subject_;
     std::string const key_;
 };
 
-}
+}  // namespace anagram
 
 #endif

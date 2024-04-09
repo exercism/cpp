@@ -1,6 +1,6 @@
-#include "simple_linked_list.h"
-
 #include <stdexcept>
+
+#include "simple_linked_list.h"
 
 namespace simple_linked_list {
 List::~List() {
