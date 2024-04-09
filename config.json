@@ -1294,6 +1294,11 @@
       "uuid": "da0a69e5-33ec-4458-8c70-80457715ada6",
       "slug": "auto",
       "name": "Auto"
+    },
+    {
+      "uuid": "5de475cc-5321-476f-bd19-a82b60284f5a",
+      "slug": "literals",
+      "name": "Literals"
     }
   ],
   "key_features": [
