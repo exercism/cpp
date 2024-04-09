@@ -36,7 +36,7 @@ This is a good default case and use-cases with the narrower `float` type are les
 ```cpp
 auto light_year_in_m{9.46073e+15f}; // well in the range of float
 auto earth_to_edge_comoving_distance_in_nm{4.32355e+32}; // needs double type for magnitude
-auto eulers_number{2.718281828459045d}; // needs double type for precision
+auto eulers_number{2.718281828459045}; // needs double type for precision
 ```
 
 ~~~~exercism/advanced
