@@ -68,8 +68,9 @@ auto il_nam{"보는 것이 하는 것보다 더 재미있을 수가 없지"sv};
 
 A _string_view_ can be seen as a reference to a const string.
 
+[ascii-code]: https://www.ascii-code.com/
+
 ~~~~
 
 [numbers-concept]: https://exercism.org/tracks/cpp/concepts/numbers
 [in-depth-integers]: https://www.learncpp.com/cpp-tutorial/fixed-width-integers-and-size-t/
-[ascii-code]: https://www.ascii-code.com/
