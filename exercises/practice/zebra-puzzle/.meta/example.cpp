@@ -1,3 +1,4 @@
+#include "zebra_puzzle.h"
 #include <algorithm>
 #include <iostream>
 #include <map>
@@ -8,12 +9,6 @@ using namespace std;
 
 namespace zebra_puzzle 
 {
-
-typedef struct 
-{
-    string drinksWater;
-    string ownsZebra;
-} Solution;
 
 enum Color { Red, Green, Ivory, Yellow, Blue };
 enum Nationality { Englishman, Spaniard, Ukrainian, Norwegian, Japanese };

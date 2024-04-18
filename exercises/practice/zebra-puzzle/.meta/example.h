@@ -6,12 +6,12 @@
 namespace zebra_puzzle 
 {
 
-typedef struct 
+struct  Solution
 {
     std::string drinksWater;
     std::string ownsZebra;
-} Solution;
-
+};
+    
 Solution solve();
 
 }  // namespace zebra_puzzle
