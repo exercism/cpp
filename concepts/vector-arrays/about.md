@@ -37,7 +37,7 @@ std::vector countdown<int> {3, 2, 1};
 
 Vectors and arrays share the same functions to access their elements.
 You can use the member functions `front` and `back` to get the first and last elements of the container.
-There is also `at` and the `[]` operator to access speficic elements.
+There is also `at` and the `[]` operator to access specific elements.
 
 ```cpp
 countdown[0];
