@@ -3,15 +3,13 @@
 
 #include <string>
 
-namespace zebra_puzzle 
-{
+namespace zebra_puzzle {
 
-struct  Solution
-{
+struct Solution {
     std::string drinksWater;
     std::string ownsZebra;
 };
-    
+
 Solution solve();
 
 }  // namespace zebra_puzzle
