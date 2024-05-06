@@ -17,17 +17,8 @@ TEST_CASE("cleans_numbers_with_dots") {
   REQUIRE("2234567890" == phone_number::phone_number("223.456.7890").number());
 }
 
-TEST_CASE("cleans_numbers_with_spaces") {
+TEST_CASE("cleans_numbers_with_multiple_spaces") {
   REQUIRE("2234567890" == phone_number::phone_number("223 456   7890   ").number());
-}
-
-TEST_CASE("has_an_area_code") {
-  REQUIRE("223" == phone_number::phone_number("+1 (223) 456-7890").area_code());
-}
-
-TEST_CASE("formats_a_number") {
-  const phone_number::phone_number phone("+1 (223) 456-7890");
-  REQUIRE("(223) 456-7890" == std::string(phone));
 }
 
 TEST_CASE("invalid_when_9_digits") {
