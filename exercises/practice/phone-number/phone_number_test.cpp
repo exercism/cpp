@@ -1,14 +1,12 @@
 #include "phone_number.h"
-
 #ifdef EXERCISM_TEST_SUITE
 #include <catch2/catch.hpp>
 #else
 #include "test/catch.hpp"
 #endif
-#include <exception>
 
 TEST_CASE("cleans_the_number", "[79666dce-e0f1-46de-95a1-563802913c35]") {
-  REQUIRE("2234567890" == phone_number::phone_number("(223) 456-7890").number());
+	REQUIRE("2234567890" == phone_number::phone_number("(223) 456-7890").number());
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
