@@ -83,7 +83,7 @@ std::reverse(output_digits.begin(), output_digits.end());
 return output_digits;
 ```
 
-The idea is based on two two functions:
+The idea is based on two functions:
 - `multiply`, which takes the `output_digits` vector and the two bases.
 - `add`, which takes an `output_digits` vector and a single digit from the `input_digits` and the `output_base`.
 
