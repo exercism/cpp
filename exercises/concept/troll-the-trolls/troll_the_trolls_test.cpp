@@ -297,7 +297,7 @@ TEST_CASE("Guests have second lowest priority", "[task_5]") {
 }
 
 TEST_CASE("Users have second highest priority", "[task_5]") {
-    // First player is a guest
+    // First player is a user
     AccountStatus player1{AccountStatus::user};
 
     AccountStatus player2{AccountStatus::guest};
@@ -312,7 +312,7 @@ TEST_CASE("Users have second highest priority", "[task_5]") {
     player2 = AccountStatus::mod;
     REQUIRE_FALSE(has_priority(player1, player2));
 
-    // Second player is a guest
+    // Second player is a user
     player2 = AccountStatus::user;
 
     player1 = AccountStatus::troll;
@@ -326,7 +326,7 @@ TEST_CASE("Users have second highest priority", "[task_5]") {
 }
 
 TEST_CASE("Moderators have highest priority", "[task_5]") {
-    // First player is a guest
+    // First player is a mod
     AccountStatus player1{AccountStatus::mod};
 
     AccountStatus player2{AccountStatus::guest};
@@ -341,7 +341,7 @@ TEST_CASE("Moderators have highest priority", "[task_5]") {
     player2 = AccountStatus::mod;
     REQUIRE_FALSE(has_priority(player1, player2));
 
-    // Second player is a guest
+    // Second player is a mod
     player2 = AccountStatus::mod;
 
     player1 = AccountStatus::troll;
