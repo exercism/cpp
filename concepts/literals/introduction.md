@@ -36,7 +36,7 @@ This is a good default case and use-cases with the narrower `float` type are les
 ```cpp
 auto light_year_in_m{9.46073e+15f}; // well in the range of float
 auto earth_to_edge_comoving_distance_in_nm{4.32355e+32}; // needs double type for magnitude
-auto eulers_number{2.718281828459045d}; // needs double type for precision
+auto eulers_number{2.718281828459045}; // needs double type for precision
 ```
 
 ~~~~exercism/advanced
@@ -68,8 +68,9 @@ auto il_nam{"보는 것이 하는 것보다 더 재미있을 수가 없지"sv};
 
 A _string_view_ can be seen as a reference to a const string.
 
+[ascii-code]: https://www.ascii-code.com/
+
 ~~~~
 
 [numbers-concept]: https://exercism.org/tracks/cpp/concepts/numbers
 [in-depth-integers]: https://www.learncpp.com/cpp-tutorial/fixed-width-integers-and-size-t/
-[ascii-code]: https://www.ascii-code.com/
