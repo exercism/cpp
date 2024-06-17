@@ -22,3 +22,6 @@ description = "Grade returns the students in that grade in alphabetical order"
 
 [5e67aa3c-a3c6-4407-a183-d8fe59cd1630]
 description = "Grade returns an empty list if there are no students in that grade"
+
+[5cb2d402-bc57-4823-afb0-4bf42bf6cf06]
+description = "Adding students with the same name is not allowed"
