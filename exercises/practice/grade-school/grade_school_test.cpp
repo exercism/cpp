@@ -97,4 +97,18 @@ TEST_CASE("checking_a_grade_should_not_change_the_roster")
     REQUIRE(school_.roster().empty());
 }
 
+TEST_CASE("adding_students_with_the_same_name_is_not_allowed") 
+{
+    const grade_school::school school_{};
+    school_.add("Karina", 5);
+    school_.add("Karina", 3);
+    school_.add("Karina", 3);
+    school_.add("Thomas", 4);
+
+    const auto actual = school_.roster();
+    const map<int, vector<string>> expected{{5, {"Karina"}}, {4, {"Thomas"}}};
+
+    REQUIRE(expected == actual);
+}
+
 #endif
