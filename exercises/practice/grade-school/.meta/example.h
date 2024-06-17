@@ -19,6 +19,8 @@ public:
 
     std::vector<std::string> grade(int grade) const;
 
+    bool school::studentNameAlreadyExist(const std::string& name) const;
+
 private:
     std::map<int, std::vector<std::string>> roster_;
 };
