@@ -58,5 +58,5 @@ case 3:
 default:
     book_house(group_size);
 }
-// book_apartment happens wheng roup_size is 2 or 3
+// book_apartment happens wheng group_size is 2 or 3
 ```
