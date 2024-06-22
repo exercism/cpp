@@ -84,7 +84,7 @@ In contrast, the keyword `continue` only stops the execution of the current iter
 ```cpp
 int equal_sum{0};
 for (int i{1}; i < 7; ++i) {
-  if  (n%2 == 1) {
+  if  (i%2 == 1) {
     continue;
   }
   equal_sum += i;
