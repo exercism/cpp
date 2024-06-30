@@ -1206,6 +1206,22 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 4
+      },
+      {
+        "slug": "rail-fence-cipher",
+        "name": "Rail Fence Cipher",
+        "uuid": "8a7f6f8c-ff36-4afd-9ab3-6dbd355d0263",
+        "practices": [],
+        "prerequisites": [
+            "basics",
+            "namespaces",
+            "conditionals",
+            "lists",
+            "loops",
+            "numbers",
+            "strings"
+        ],
+        "difficulty": 4
       }
     ],
     "foregone": [
