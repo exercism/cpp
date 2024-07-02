@@ -11,7 +11,8 @@
       "rail_fence_cipher_test.cpp"
     ],
     "example": [
-      ".meta/example.cpp"
+      ".meta/example.cpp",
+      ".meta/example.h"
     ]
   },
   "blurb": "Implement encoding and decoding for the rail fence cipher.",
