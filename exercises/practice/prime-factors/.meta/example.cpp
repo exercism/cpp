@@ -1,14 +1,13 @@
-#include "prime_factors.h"
 #include <cmath>
 
-namespace prime_factors
-{
+#include "prime_factors.h"
 
-std::vector<int> of(int n)
-{
-    std::vector<int> factors;
-    const int end{static_cast<int>(std::sqrt(n))};
-    for (int candidate{2}; candidate <= end; ++candidate) {
+namespace prime_factors {
+
+std::vector<long long> of(long long n) {
+    std::vector<long long> factors;
+    const long long end{static_cast<long long>(std::sqrt(n))};
+    for (long long candidate{2}; candidate <= end; ++candidate) {
         while (n % candidate == 0) {
             factors.push_back(candidate);
             n /= candidate;
@@ -21,4 +20,4 @@ std::vector<int> of(int n)
     return factors;
 }
 
-}
+}  // namespace prime_factors
