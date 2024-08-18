@@ -19,6 +19,7 @@ vector<timeTest> timeCases = {
     {8, 0, "08:00",        "on the hour"},
     {11, 9, "11:09",       "past the hour"},
     {24, 0, "00:00",       "midnight is zero hours"},
+    {-24, 0, "00:00",      "negative midnight is zero hours"},
     {25, 0, "01:00",       "hour rolls over"},
     {100, 0, "04:00",      "hour rolls over continuously"},
     {1, 60, "02:00",       "sixty minutes is next hour"},
