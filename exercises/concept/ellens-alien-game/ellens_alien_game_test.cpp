@@ -43,6 +43,7 @@ TEST_CASE("Alien is alive while health is greater than 0 and stays dead afterwar
     REQUIRE(!alien.is_alive());
     alien.hit();
     REQUIRE(!alien.is_alive());
+    REQUIRE(alien.get_health() == 0);
 }
 
 TEST_CASE("Alien Teleports reports succesful", "[task_4]") {
