@@ -32,7 +32,9 @@ TEST_CASE("Alien is always hit", "[task_2]") {
     REQUIRE(alien.hit());
 }
 
-TEST_CASE("Alien is alive while health is greater than 0 and stays dead afterwards", "[task_3]") {
+TEST_CASE(
+    "Alien is alive while health is greater than 0 and stays dead afterwards",
+    "[task_3]") {
     Alien alien{2, 54};
     REQUIRE(alien.is_alive());
     alien.hit();
@@ -43,6 +45,7 @@ TEST_CASE("Alien is alive while health is greater than 0 and stays dead afterwar
     REQUIRE(!alien.is_alive());
     alien.hit();
     REQUIRE(!alien.is_alive());
+    REQUIRE(alien.get_health() == 0);
 }
 
 TEST_CASE("Alien Teleports reports succesful", "[task_4]") {
