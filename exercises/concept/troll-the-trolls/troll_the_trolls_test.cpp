@@ -17,8 +17,31 @@ TEST_CASE("Troll posts are visible to trolls", "[task_2]") {
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
 
+TEST_CASE("Troll posts are not visible to non-trolls", "[task_2]") {
+    AccountStatus poster{AccountStatus::troll};
+
+    AccountStatus viewer{AccountStatus::guest};
+    REQUIRE_FALSE(display_post(poster, viewer));
+
+    viewer = AccountStatus::user;
+    REQUIRE_FALSE(display_post(poster, viewer));
+
+    viewer = AccountStatus::mod;
+    REQUIRE_FALSE(display_post(poster, viewer));
+}
+
 TEST_CASE("Non-troll posts are visible to guests", "[task_2]") {
     AccountStatus viewer{AccountStatus::guest};
+
+    AccountStatus poster{AccountStatus::user};
+    REQUIRE(display_post(poster, viewer));
+
+    poster = AccountStatus::mod;
+    REQUIRE(display_post(poster, viewer));
+}
+
+TEST_CASE("Non-troll posts are visible to trolls", "[task_2]") {
+    AccountStatus viewer{AccountStatus::troll};
 
     AccountStatus poster{AccountStatus::user};
     REQUIRE(display_post(poster, viewer));
@@ -45,19 +68,6 @@ TEST_CASE("Non-troll posts are visible to mods", "[task_2]") {
 
     poster = AccountStatus::mod;
     REQUIRE(display_post(poster, viewer));
-}
-
-TEST_CASE("Troll posts are visible to non-trolls", "[task_2]") {
-    AccountStatus poster{AccountStatus::troll};
-
-    AccountStatus viewer{AccountStatus::guest};
-    REQUIRE_FALSE(display_post(poster, viewer));
-
-    viewer = AccountStatus::user;
-    REQUIRE_FALSE(display_post(poster, viewer));
-
-    viewer = AccountStatus::mod;
-    REQUIRE_FALSE(display_post(poster, viewer));
 }
 
 TEST_CASE("Guests have correct permissions", "[task_3]") {
@@ -287,7 +297,7 @@ TEST_CASE("Guests have second lowest priority", "[task_5]") {
 }
 
 TEST_CASE("Users have second highest priority", "[task_5]") {
-    // First player is a guest
+    // First player is a user
     AccountStatus player1{AccountStatus::user};
 
     AccountStatus player2{AccountStatus::guest};
@@ -302,7 +312,7 @@ TEST_CASE("Users have second highest priority", "[task_5]") {
     player2 = AccountStatus::mod;
     REQUIRE_FALSE(has_priority(player1, player2));
 
-    // Second player is a guest
+    // Second player is a user
     player2 = AccountStatus::user;
 
     player1 = AccountStatus::troll;
@@ -316,7 +326,7 @@ TEST_CASE("Users have second highest priority", "[task_5]") {
 }
 
 TEST_CASE("Moderators have highest priority", "[task_5]") {
-    // First player is a guest
+    // First player is a mod
     AccountStatus player1{AccountStatus::mod};
 
     AccountStatus player2{AccountStatus::guest};
@@ -331,7 +341,7 @@ TEST_CASE("Moderators have highest priority", "[task_5]") {
     player2 = AccountStatus::mod;
     REQUIRE_FALSE(has_priority(player1, player2));
 
-    // Second player is a guest
+    // Second player is a mod
     player2 = AccountStatus::mod;
 
     player1 = AccountStatus::troll;

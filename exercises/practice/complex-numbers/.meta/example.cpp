@@ -55,4 +55,44 @@ std::ostream& operator<<(std::ostream& os, Complex const& value) {
     return os;
 }
 
+Complex operator+(const Complex& complex, double scalar) {
+    Complex sum{complex.real() + scalar, complex.imag()};
+    return sum;
+}
+
+Complex operator+(double scalar, const Complex& complex) {
+    Complex sum{complex.real() + scalar, complex.imag()};
+    return sum;
+}
+
+Complex operator-(const Complex& complex, double scalar) {
+    Complex diff{complex.real() - scalar, complex.imag()};
+    return diff;
+}
+
+Complex operator-(double scalar, const Complex& complex) {
+    Complex diff{scalar - complex.real(), 0 - complex.imag()};
+    return diff;
+}
+
+Complex operator*(const Complex& complex, double scalar) {
+    Complex prod{complex.real() * scalar, complex.imag() * scalar};
+    return prod;
+}
+
+Complex operator*(double scalar, const Complex& complex) {
+    Complex prod{complex.real() * scalar, complex.imag() * scalar};
+    return prod;
+}
+
+Complex operator/(const Complex& complex, double scalar) {
+    Complex other{scalar, 0};
+    return complex / other;
+}
+
+Complex operator/(double scalar, const Complex& complex) {
+    Complex other{scalar, 0};
+    return other / complex;
+}
+
 }  // namespace complex_numbers

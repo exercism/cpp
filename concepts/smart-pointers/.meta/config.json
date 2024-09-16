@@ -1,0 +1,6 @@
+{
+  "blurb": "Smart pointers in C++ provide automatic memory management, reducing memory leaks and dangling pointers by ensuring proper allocation and deallocation.",
+  "authors": [
+    "vaeng"
+  ]
+}
