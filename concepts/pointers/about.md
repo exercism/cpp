@@ -96,4 +96,37 @@ However, this flexibility introduces risks, such as dereferencing null pointers 
 References, on the other hand, cannot be null and are bound to valid objects upon creation, avoiding these risks.
 Given their safer nature, references should be preferred over pointers unless the additional functionalities provided by pointers are necessary.
 
+~~~~exercism/advanced
+## Dynamic Memory Allocation and Null Pointers
+
+In C++, `new` is used to dynamically allocate memory for objects on the heap during runtime.
+It returns a pointer to the allocated memory address, allowing objects to have lifetimes not tied to a specific scope.
+However, it's important to always pair `new` with `delete` to properly deallocate memory.
+Dynamic memory allocation should be used cautiously to prevent common issues like memory leaks and accessing deallocated memory.
+
+Pointers can also be set to a special value called a _null pointer_, which indicates that they do not point to a valid address.
+Null pointers are commonly used to initialize pointers before assigning them to valid values.
+
+```cpp
+// There is a dark mark bearer, but who is it?
+std::string* darkMarkBearer{nullptr};
+// It is Bellatrix!
+darkMarkBearer = new std::string{"Bellatrix Lestrange"};
+// She has been defeated
+delete darkMarkBearer;
+// Reset pointer to null, symbolizing there is no more darkMarkBearer at the moment
+darkMarkBearer = nullptr; 
+```
+
+A pointer should either hold the address of a valid object, or be set to `nullptr`.
+That way you only need to test pointers for null, and can assume any non-null pointer is valid.
+When an object is destroyed, any pointers to the destroyed object will be left _dangling_ (they will not be automatically set to `nullptr`).
+It is your responsibility to detect these cases and ensure those pointers are subsequently set to `nullptr`.
+
+
+In older code, you might encounter two alternatives to `nullptr`.
+Firstly, the literal `0` is specifically interpreted as a null value for pointers, though it's the only scenario where an integral literal can be assigned to a pointer.
+Secondly, the `preprocessor macro` `NULL`, inherited from C and defined in the `<cstddef>` header, is another representation of a null pointer, though its usage is less common in modern C++ code.
+~~~~
+
 [ariane-flight-v88]: https://en.wikipedia.org/wiki/Ariane_flight_V88
