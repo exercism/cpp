@@ -1215,8 +1215,6 @@
         "prerequisites": [
             "basics",
             "namespaces",
-            "conditionals",
-            "lists",
             "loops",
             "numbers",
             "strings"
@@ -1308,6 +1306,11 @@
       "uuid": "18b2f529-3be6-4a70-be7d-81aa07393585",
       "slug": "functions",
       "name": "Functions"
+    },
+    {
+      "uuid": "c071a5e8-796c-4538-945a-3bdd2006fc2b",
+      "slug": "pointers",
+      "name": "Pointers"
     },
     {
       "uuid": "0316eb64-d1e9-44cc-b7d4-ea4b88f85ac3",
