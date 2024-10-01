@@ -23,12 +23,14 @@ TEST_CASE("activity_counter: sum for three nullptr", "[task_2]") {
 }
 
 TEST_CASE("activity_counter: sum for two with real data", "[task_2]") {
-    speedywagon::pillar_men_sensor rome[2]{{4900, "kars", {}}, {4102, "wham", {}}};
+    speedywagon::pillar_men_sensor rome[2]{{4900, "kars", {}},
+                                           {4102, "wham", {}}};
     REQUIRE(speedywagon::activity_counter(&rome[0], 2) == 9002);
 }
 
 TEST_CASE("activity_counter: sum for a nullptr", "[task_2]") {
-    speedywagon::pillar_men_sensor rome[2]{{4900, "kars", {}}, {4102, "wham", {}}};
+    speedywagon::pillar_men_sensor rome[2]{{4900, "kars", {}},
+                                           {4102, "wham", {}}};
     REQUIRE(speedywagon::activity_counter(nullptr, 0) == 0);
 }
 

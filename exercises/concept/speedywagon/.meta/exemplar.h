@@ -5,17 +5,16 @@
 
 namespace speedywagon {
 
-    struct pillar_men_sensor {
-        int activity{};
-        std::string location{};
-        std::vector<int> data{};
-    };
+struct pillar_men_sensor {
+    int activity{};
+    std::string location{};
+    std::vector<int> data{};
+};
 
-    bool connection_check(pillar_men_sensor* sensor);
+bool connection_check(pillar_men_sensor* sensor);
 
-    int activity_counter(pillar_men_sensor* sensor_array, int capacity);
+int activity_counter(pillar_men_sensor* sensor_array, int capacity);
 
-    bool alarm_control(pillar_men_sensor* sensor);
+bool alarm_control(pillar_men_sensor* sensor);
 
 }  // namespace speedywagon
-
