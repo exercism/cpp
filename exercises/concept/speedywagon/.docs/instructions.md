@@ -1,159 +1,91 @@
 # Instructions
 
-In this exercise, you will be simulating a windowing based computer system.
-You will create some windows that can be moved and resized.
-The following image is representative of the values you will be working with below.
+Welcome, Engineer!
+You are one of the last veterans of the Speedywagon Foundation, a secret organization that, for decades, has been battling ancient threats like the Pillar Men.
+In the course of this effort, you've spent years maintaining the Foundation's technological systems, built using a mix of cutting-edge tech and aging libraries.
 
-```
-                  <--------------------- screenSize.width --------------------->
+However, in recent times, the sensors that track Pillar Men activities are malfunctioning.
+The Foundation's systems are old, and the code interacts with a legacy C++ library that cannot be updated.
+Your task is to implement three core functions that monitor Pillar Men sensor activity using an old-fashioned pointer-based library.
 
-       ^          ╔════════════════════════════════════════════════════════════╗
-       |          ║                                                            ║
-       |          ║          position.x,_                                      ║
-       |          ║          position.y  \                                     ║
-       |          ║                       \<----- size.width ----->            ║
-       |          ║                 ^      *──────────────────────┐            ║
-       |          ║                 |      │        title         │            ║
-       |          ║                 |      ├──────────────────────┤            ║
-screenSize.height ║                 |      │                      │            ║
-       |          ║            size.height │                      │            ║
-       |          ║                 |      │       contents       │            ║
-       |          ║                 |      │                      │            ║
-       |          ║                 |      │                      │            ║
-       |          ║                 v      └──────────────────────┘            ║
-       |          ║                                                            ║
-       |          ║                                                            ║
-       v          ╚════════════════════════════════════════════════════════════╝
-```
+The Foundation's operations rely on you.
 
-## 1. Define a `size` struct for storing the dimensions of the window
+## 0. The Sensor Environment (`pillar_men_sensor`)
 
-Define a `struct` named `size`.
-It should have two member variables `width` and `height` that store the window's current dimensions.
-The constructor function should accept initial values for these fields.
-The width is provided as the first parameter, the height as the second one.
-The default width and height should be `80` and `60`, respectively.
-
-Additionally, define a member function `void resize(int newWidth, int newHeight)` that takes a new width and height as parameters and changes the fields to reflect the new size.
+As sensor readings can be huge, we supply a mockup _struct_ that is used in the actual library.
+The code has already been implemented in the header file for you.
 
 ```cpp
-size aSize{1080, 764};
-aSize.width;
-// => 1080
-aSize.height;
-// => 764
-
-aSize.resize(1920, 1080);
-aSize.width;
-// => 1920
-aSize.height;
-// => 1080
+struct pillar_men_sensor {
+    int activity{};
+    std::string location{};
+    std::vector<int> data{};
+};
 ```
 
-## 2. Define a `position` struct to store a window position
+## 1. Check Sensor Connection (`connection_check`)
 
-Define a struct (or class) named `position` with two member variables, `x` and `y` that store the current horizontal and vertical position, respectively, of the window's upper left corner.
-The constructor function should accept initial values for these fields.
-The value for `x` is provided as the first parameter, the value for `y` as the second one.
-The default value should be `0` for both variables.
+Your first task is to ensure that the Pillar Men sensor is connected properly.
+We can't have false alarms triggered by disconnected sensors.
+You will write a function `connection_check`, which tests if the sensor's pointer is valid by checking for `nullptr`.
 
-The position (0, 0) is the upper left corner of the screen with `x` values getting larger as you move right and `y` values getting larger as you move down.
+### Task
 
-Also define a method `void move(int newX, int newY)` that takes new x and y parameters and changes the properties to reflect the new position.
+- Define a function that accepts a pointer a a `pillar_men_sensor` _struct_.
+- The function should return `true` if the sensor pointer is not null, and `false` otherwise.
+
+### Example
 
 ```cpp
-position point{};
-point.x;
-// => 0
-point.y;
-// => 0
-
-point.move(100, 200);
-point.x;
-// => 100
-point.y;
-// => 200
+pillar_men_sensor* sensor{nullptr};
+bool isConnected = connection_check(sensor);
+// isConnected => false
 ```
 
-## 3. Define a `programWindow` class
+## 2. Count Activity of Sensors (`activity_counter`)
 
-Define a `programWindow` class or struct with __pointers__ to the following member variables:
+Pillar Men are lurking in the shadows, and we need to know if sensors have detected any activity.
+You will write the `activity_counter` function, which takes in an array of sensors and a capacity indicating the number of sensors in the array.
 
-- `screenSize`: holds a pointer of type `size` with `width` 800 and `height` 600
-- `windowSize` : holds a pointer of type `size`, the initial value is the default value of the `size` instance
-- `windowPosition` : holds a pointer of type `position`, the initial value is the default value of the `position` instance
+### Task
 
-When the window is opened (initialized), it always has the default `windowSize` and `windowPosition` in the beginning.
-Its constructor should not take any input parameters.
+- Define a function that accepts a pointer to the first element of an array and the arrays capacity.
+- Use pointer arithmetic to loop through the sensor array and accumulate the activity readings.
+- Return the accumulated activity.
+
+### Example
 
 ```cpp
-programWindow aProgramWindow{};
-programWindow.screenSize->width;
-// => 800
-
-// Similar for the other fields.
+pillar_men_sensor sensor_array[3] = {{0}, {101}, {22}};
+int totalActivity = activity_counter(sensor_array, 3);
+// totalActivity => 123
 ```
 
-## 4. Add a method to resize the window
+## 3. Alarm Control (`alarm_control`)
 
-The `programWindow` class should include a function `resize`.
-It should accept a __pointer__ of type `size` as input and attempts to resize the window to the specified size.
+Not every sensor should trigger an alarm unless there’s real danger.
+The `alarm_control` function ensures that a sensor only triggers an alarm if its activity level is greater than 0.
+This function should also check for null sensors to prevent system crashes.
 
-However, the new size cannot exceed certain bounds.
+### Task
 
-- The minimum allowed height or width is 1.
-  Requested heights or widths less than 1 will be clipped to 1.
-- The maximum height and width depend on the current position of the window, the edges of the window cannot move past the edges of the screen.
-  Values larger than these bounds will be clipped to the largest size they can take.
-  E.g. if the window's position is at `x` = 400, `y` = 300 and a resize to `height` = 400, `width` = 300 is requested, then the window would be resized to `height` = 300, `width` = 300 as the screen is not large enough in the `y` direction to fully accommodate the request.
+- Define a function that accepts the pointer to a `pillar_men_sensor`.
+- The function should first check for a `nullptr` sensor. If the sensor is `nullptr`, return `false`.
+- If the sensor is valid and its activity is greater than 0, return `true`; otherwise, return `false`.
+
+### Example
 
 ```cpp
-programWindow aProgramWindow{};
-
-size newSize{600, 400};
-aProgramWindow.resize(&newSize);
-aProgramWindow.size->width;
-// => 600
-aProgramWindow.size->height;
-// => 400
+pillar_men_sensor db{9008, "songokunoie", {7, 7, 7}};
+bool alarm = alarm_control(&db);
+// alarm => true
 ```
 
-## 5. Add a method to move the window
+## Wrapping Up
 
-Besides the resize functionality, the `programWindow` class should also include a function `move`.
-It should accept a parameter as a __pointer__ of type `position` as input.
-The `move` function is similar to `resize` however, this function adjusts the _position_ of the window to the requested value, rather than the size.
+You’ve been entrusted with an essential task for the Speedywagon Foundation.
+By testing for valid sensor connections, counting activity, and implementing alarm controls, you’ve ensured that the Foundation's battle against the Pillar Men can continue uninterrupted.
 
-As with `resize` the new position cannot exceed certain limits.
+As a modern C++ engineer, you’d prefer using smart pointers, but alas, legacy code demands respect for the old ways.
+The fate of humanity may rest on these pointers, so proceed carefully, and may the Hamon energy guide you.
 
-- The smallest position is 0 for both `x` and `y`.
-- The maximum position in either direction depends on the current size of the window.
-  The edges cannot move past the edges of the screen.
-  Values larger than these bounds will be clipped to the largest size they can take.
-  E.g. if the window's size is at `x` = 250, `y` = 100 and a move to `x` = 600, `y` = 200 is requested, then the window would be moved to `x` = 550, `y` = 200 as the screen is not large enough in the `x` direction to fully accommodate the request.
-
-```cpp
-programWindow aProgramWindow{};
-
-position newPosition{50, 100};
-aProgramWindow.move(&newPosition);
-aProgramWindow.position->x;
-// => 50
-aProgramWindow.position->y;
-// => 100
-```
-
-## 6. Change a program window
-
-Implement a `changeWindow` function that accepts a __pointer__ to a `programWindow` object as input and changes the window to the specified size and position.
-
-The window should get a width of 400, a height of 300 and be positioned at x = 100, y = 150.
-
-```cpp
-programWindow aProgramWindow{};
-changeWindow(&programWindow);
-aProgramWindow.size->width;
-// => 400
-
-// Similar for the other fields.
-```

@@ -1,30 +1,21 @@
 #pragma once
 
+#include <string>
+#include <vector>
+
 namespace speedywagon {
 
-struct size {
-    int width{80};
-    int height{60};
-    void resize(int newWidth, int newHeight);
-};
+    struct pillar_men_sensor {
+        int activity{};
+        std::string location{};
+        std::vector<int> data{};
+    };
 
-struct position {
-    int x;
-    int y;
-    void move(int newX, int newY);
-};
+    bool connection_check(pillar_men_sensor* sensor);
 
-struct programWindow {
-    programWindow();
-    ~programWindow();
-    size* screenSize{nullptr};
-    size* windowSize{nullptr};
-    position* windowPosition;
-    void resize(size* newSize);
-    void move(position* newPosition);
-};
+    int activity_counter(pillar_men_sensor* sensor_array, int capacity);
 
-void changeWindow(programWindow* window);
+    bool alarm_control(pillar_men_sensor* sensor);
 
 }  // namespace speedywagon
 
