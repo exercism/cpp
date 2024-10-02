@@ -46,4 +46,16 @@ TEST_CASE("alarm_control: works correctly for nullptr", "[task_3]") {
     REQUIRE(speedywagon::alarm_control(&santana));
 }
 
+TEST_CASE("uv_alarm: works correctly for nullptr", "[task_4]") {
+    speedywagon::pillar_men_sensor* wham{nullptr};
+    REQUIRE_FALSE(speedywagon::uv_alarm(wham));
+}
+
+TEST_CASE("uv_alarm: works correctly with mock data", "[task_4]") {
+    speedywagon::pillar_men_sensor wham{0, "Rome", {1, 605, 313, 4000}};
+    REQUIRE(speedywagon::uv_alarm(&wham));
+    wham.activity = 9001;
+    REQUIRE_FALSE(speedywagon::uv_alarm(&wham));
+}
+
 #endif

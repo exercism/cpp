@@ -38,3 +38,9 @@ int sum = (sensor_array + i)->activity; // Access activity using pointer arithme
 - Use the `->` operator to access the `activity` member of the `pillar_men_sensor` struct.
 - Think carefully about what should happen if the sensor's activity level is `0`.
   Should the alarm trigger?
+
+## 4. Checking the data for anomalies with the `uv_alarm` function
+
+- Use the `&` operator to pass a pointer to the sensor's data array into the `uv_light_heuristic` function.
+- Ensure you correctly check for a null pointer before accessing the sensor's data.
+- Compare the result of `uv_light_heuristic` with the sensor's `activity` value to determine if the alarm should trigger.

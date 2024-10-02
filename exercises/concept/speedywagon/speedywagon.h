@@ -11,4 +11,6 @@ struct pillar_men_sensor {
     std::vector<int> data{};
 };
 
+int uv_light_heuristic(std::vector<int>* data_array);
+
 }  // namespace speedywagon
