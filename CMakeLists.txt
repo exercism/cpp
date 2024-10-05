@@ -1,8 +1,6 @@
 cmake_minimum_required(VERSION 3.5.1)
 project(exercism CXX)
 
-set(alt_exercise_tree ${CMAKE_CURRENT_SOURCE_DIR}/build_exercises/practice)
-
 function(build_fixup exercise_dir alt_exercise_root)
     string(REPLACE "-" "_" file ${exercise_dir})
     set(source ${CMAKE_CURRENT_SOURCE_DIR}/exercises/practice/${exercise_dir})
@@ -31,7 +29,7 @@ if(EXERCISM_COMMON_CATCH)
 endif()
 
 file(GLOB exercise_list ${CMAKE_CURRENT_SOURCE_DIR}/exercises/practice/*)
-
+set(alt_exercise_tree ${CMAKE_CURRENT_SOURCE_DIR}/build_exercises/practice)
 foreach(exercise_dir ${exercise_list})
     get_filename_component(exercise ${exercise_dir} NAME)
     build_fixup(${exercise} ${alt_exercise_tree})
