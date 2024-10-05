@@ -38,4 +38,5 @@ if(EXERCISM_COMMON_CATCH)
     )
 endif()
 
+iterate_exercises("concept" "exemplar")
 iterate_exercises("practice" "example")
