@@ -35,6 +35,8 @@ description = "isosceles triangle -> first and last sides are equal"
 
 [8d71e185-2bd7-4841-b7e1-71689a5491d8]
 description = "isosceles triangle -> equilateral triangles are also isosceles"
+include = false
+comment = "the chosen implementation does not allow for this equivalence"
 
 [840ed5f8-366f-43c5-ac69-8f05e6f10bbb]
 description = "isosceles triangle -> no sides are equal"
@@ -56,15 +58,23 @@ description = "scalene triangle -> no sides are equal"
 
 [2510001f-b44d-4d18-9872-2303e7977dc1]
 description = "scalene triangle -> all sides are equal"
+include = false
+comment = "the chosen implementation does not allow for this equivalence"
 
 [c6e15a92-90d9-4fb3-90a2-eef64f8d3e1e]
 description = "scalene triangle -> first and second sides are equal"
+include = false
+comment = "the chosen implementation does not allow for this equivalence"
 
 [3da23a91-a166-419a-9abf-baf4868fd985]
 description = "scalene triangle -> first and third sides are equal"
+include = false
+comment = "the chosen implementation does not allow for this equivalence"
 
 [b6a75d98-1fef-4c42-8e9a-9db854ba0a4d]
 description = "scalene triangle -> second and third sides are equal"
+include = false
+comment = "the chosen implementation does not allow for this equivalence"
 
 [70ad5154-0033-48b7-af2c-b8d739cd9fdc]
 description = "scalene triangle -> may not violate triangle inequality"
