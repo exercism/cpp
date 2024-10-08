@@ -5,11 +5,6 @@
 #include "test/catch.hpp"
 #endif
 
-/*
-An 'error' object is used as expected value to indicate that the
-input value is out of the range described in the exercise.
-*/
-
 TEST_CASE("zero", "[5d22a120-ba0c-428c-bd25-8682235d83e8]") {
     REQUIRE("zero" == say::in_english(0));
 }
