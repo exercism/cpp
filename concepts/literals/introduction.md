@@ -33,6 +33,15 @@ auto net_worth_carlisle_cullen{46'000'000'000LL}; // int and uint are not enough
 Floating-point numbers usually resolve to `double` during compilation.
 This is a good default case and use-cases with the narrower `float` type are less frequent than the unsigned example above.
 
+~~~~exercism/advanced
+The [C++23 standard][cpp23-literals] introduces more fine grained control with literals like `f128` or `F16`.
+Some compilers allow their own literals.
+GCC permits the usage of `d` as a literal, but this is not forseen in the standard and can hinder cross-platform compatibility.
+
+[cpp23-literals]: https://en.cppreference.com/w/cpp/language/floating_literal
+
+~~~~
+
 ```cpp
 auto light_year_in_m{9.46073e+15f}; // well in the range of float
 auto earth_to_edge_comoving_distance_in_nm{4.32355e+32}; // needs double type for magnitude
