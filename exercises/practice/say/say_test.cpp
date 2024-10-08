@@ -90,13 +90,12 @@ TEST_CASE("a big number", "[9a43fed1-c875-4710-8286-5065d73b8a9e]") {
 
 TEST_CASE("numbers below zero are out of range",
           "[49a6a17b-084e-423e-994d-a87c0ecc05ef]") {
-    REQUIRE("{'error': 'input out of range'}" == say::in_english(-1));
+    REQUIRE_THROWS_AS(say::in_english(-1), std::domain_error);
 }
 
 TEST_CASE("numbers above 999,999,999,999 are out of range",
           "[4d6492eb-5853-4d16-9d34-b0f61b261fd9]") {
-    REQUIRE("{'error': 'input out of range'}" ==
-            say::in_english(1000000000000));
+    REQUIRE_THROWS_AS(say::in_english(1000000000000), std::domain_error);
 }
 
 #endif
