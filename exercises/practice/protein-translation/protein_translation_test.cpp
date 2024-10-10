@@ -9,14 +9,16 @@
 
 using namespace std;
 
-// Secret-handshake exercise test case data version 1.2.1
-
-TEST_CASE("Methionine_RNA_sequence")
-{
-    REQUIRE(vector<string>{"Methionine"} == protein_translation::proteins("AUG"));
+TEST_CASE("Empty RNA sequence results in no proteins", "[2c44f7bf-ba20-43f7-a3bf-f2219c0c3f98]") {
+    REQUIRE(vector<string>{} == protein_translation::proteins(""));
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
+
+TEST_CASE("Methionine RNA sequence", "[96d3d44f-34a2-4db4-84cd-fff523e069be]")
+{
+    REQUIRE(vector<string>{"Methionine"} == protein_translation::proteins("AUG"));
+}
 
 TEST_CASE("Phenylalanine_RNA_sequence_1")
 {
