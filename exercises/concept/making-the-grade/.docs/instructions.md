@@ -21,6 +21,13 @@ round_down_scores(student_scores)
 // => {90, 40, 55, 70, 30, 25, 80, 95, 38, 40}
 ```
 
+There are other methods which achieve the same result, but a _cast_ is a common sight.
+
+```cpp
+int new_PI{static_cast<int>(3.14) + static_cast<int>(0.001592653589)};
+// new_PI is 3.
+```
+
 ## 2. Non-Passing Students
 
 As you were grading the exam, you noticed some students weren't performing as well as you'd hoped.
