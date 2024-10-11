@@ -60,7 +60,7 @@ Consider also that we are only assigning the value of `width` to `length` at the
 Therefore, if the value of `width` changes at a later moment, it will not affect the value taken by `length`.
 
 Assignment operator can be combined with the other operators(arithmetic & bitwise) known as `compound assignment` operators `+=`, `-=`, `*=`, `/=`, `%=`.
-These operators modify the current value of a variable by performing an operation on it.
+These operators modifies the current value of a variable by performing an operation on it.
 
 ```cpp
 // we start with 0 people
