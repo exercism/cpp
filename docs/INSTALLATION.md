@@ -66,11 +66,11 @@ You should be able to use other integrated IDE's such as JetBrains' CLion in a s
 
 ### Installing Boost on Windows
 
-The `meetup` and `gigasecond` exercises depend on the [Boost](https://www.boost.org/) library. The following steps
-describe how to set it up. If after following these steps, you still encounter issues, please
-[reach out](https://github.com/exercism/cpp/issues) so that we are aware and can help you.
+The `meetup` and `gigasecond` exercises depend on the [Boost](https://www.boost.org/) libraries. The following steps
+describe how to set it up. If after following these steps you still encounter issues, please
+[reach out](https://github.com/exercism/cpp/issues), so that we are aware and can help you.
 
-The steps assume you install Boost under `C:\Program Files\Boost` writing here requires Administrator privileges. You
+The steps assume you install Boost under `C:\Program Files\Boost`, writing here requires Administrator privileges. You
 can install in a different location if you prefer. The steps are for Boost 1.86, but any recent version should work. The
 minimum version required by the exercises is 1.58. If you use a different installation location or version than the ones
 used here, make sure to update the paths accordingly. The steps here are based on the
