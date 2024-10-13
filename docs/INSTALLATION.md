@@ -66,32 +66,17 @@ You should be able to use other integrated IDE's such as JetBrains' CLion in a s
 
 ### Installing Boost on Windows
 
-The `meetup` and `gigasecond` exercises depend on the [Boost](https://www.boost.org/) libraries. The following steps
-describe how to set it up.
+The `meetup` and `gigasecond` exercises depend on the [Boost][boost-website] libraries.
+The following steps describe how to set that up.
 
-The steps assume you install Boost under `C:\Program Files\Boost`, writing here requires Administrator privileges. You
-can install in a different location if you prefer. The steps are for Boost 1.86, but any recent version should work. The
-minimum version required by the exercises is 1.58. If you use a different installation location or version than the ones
-used here, make sure to update the paths accordingly. The steps here are based on the
-[installation guide](https://www.boost.org/doc/libs/1_85_0/more/getting_started/windows.html) at
-[Boost.org](https://www.boost.org/). The steps further assume you have C++ development using Visual Studio configured.
-
-1. [Download Boost](https://www.boost.org/users/download/), downloading the [7-Zip](https://www.7-zip.org/) (.7z)
-archive is [recommended](https://www.boost.org/doc/libs/1_86_0/more/getting_started/windows.html#zip).
-1. Start 7-Zip as Administrator and extract the archive to `C:\Program Files\Boost`.
-1. You should now have a folder `C:\Program Files\Boost\boost_1_86_0` that contains several files and folders.
-1. Add `C:\Program Files\Boost\boost_1_86_0` to the `INCLUDE` environment variable.
-1. Compile Boost:
-   1. Open a `Developer Command Prompt` as Administrator.
-   1. Navigate to the boost installation: `cd "C:\Program Files\Boost\boost_1_86_0"`.
-   1. Configure the build process: `.\bootstrap.bat`.
-   1. Get a coffee (or two) while executing the build: `.\b2`.
-   1. The output might indicate it `failed` or `skipped # targets`. Ignore that.
-1. If you had Visual Studio open while doing all of this, close it to make sure the
-change to `INCLUDE` gets picked up.
+1. Download the [prebuilt windows libraries][sourceforge-boost-binaries] for Boost.
+   - The exercises require a minimum Boost version of 1.58.
+   - You can find the version of MSVC by clicking "Modify" in the Visual Studio Installer.
+1. Extract the libraries to a local folder.
+1. Set the `BOOST_ROOT` environment variable to the folder where you installed the Boost libraries.
+1. If you had Visual Studio open while doing this, close it to make sure the value of `BOOST_ROOT` gets picked up.
 1. Start Visual Studio and open the folder containing the `gigasecond` or `meetup` exercise.
-1. The "Startup Item" should be `gigasecond.exe` or `meetup.exe` and you should get build errors in either
-`gigasecond_test.cpp` or `meetup_test.cpp` telling you to implement missing items, similar to the other exercises.
+1. The "Startup Item" should be `gigasecond.exe` or `meetup.exe` and you should get build errors in either `gigasecond_test.cpp` or `meetup_test.cpp` telling you to implement missing items, similar to the other exercises.
 
 ## Linux
 
@@ -115,3 +100,7 @@ to figure out how to install the minimum compiler version.
 MacOS users can install GCC with [Homebrew](http://brew.sh/) via
 `brew install gcc`.
 
+
+
+[boost-website]: https://www.boost.org/
+[sourceforge-boost-binaries]: https://sourceforge.net/projects/boost/files/boost-binaries/
