@@ -19,9 +19,8 @@ int monthly_rate(double hourly_rate, double discount) {
     int workdays_per_month{22};
     double per_month{per_day * workdays_per_month};
     double after_discount{apply_discount(per_month, discount)};
-    int rounded_up{std::ceil(after_discount)};
 
-    return rounded_up;
+    return std::ceil(after_discount);
 }
 
 // days_in_budget calculates the number of workdays given a budget, hourly rate,
