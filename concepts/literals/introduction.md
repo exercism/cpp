@@ -36,7 +36,7 @@ This is a good default case and use-cases with the narrower `float` type are les
 ~~~~exercism/advanced
 The [C++23 standard][cpp23-literals] introduces more fine grained control with literals like `f128` or `F16`.
 Some compilers allow their own literals.
-GCC permits the usage of `d` as a literal, but this is not forseen in the standard and can hinder cross-platform compatibility.
+GCC permits the usage of `d` as a literal, but this is not foreseen in the standard and can hinder cross-platform compatibility.
 
 [cpp23-literals]: https://en.cppreference.com/w/cpp/language/floating_literal
 
