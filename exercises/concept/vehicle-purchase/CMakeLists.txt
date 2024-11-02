@@ -62,7 +62,8 @@ endif()
 # Tell MSVC not to warn us about unchecked iterators in debug builds
 if(${MSVC})
     set_target_properties(${exercise} PROPERTIES
-        COMPILE_DEFINITIONS_DEBUG _SCL_SECURE_NO_WARNINGS)
+        COMPILE_DEFINITIONS_DEBUG _SCL_SECURE_NO_WARNINGS
+        COMPILE_FLAGS "/WX")
 endif()
 
 # Run the tests on every build
