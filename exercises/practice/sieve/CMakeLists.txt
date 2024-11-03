@@ -61,6 +61,7 @@ if(${MSVC})
     set_target_properties(${exercise} PROPERTIES
         COMPILE_DEFINITIONS_DEBUG _SCL_SECURE_NO_WARNINGS
         COMPILE_FLAGS "/WX /W44244 /W44267")
+endif()
 
 # Run the tests on every build
 add_custom_target(test_${exercise} ALL DEPENDS ${exercise} COMMAND ${exercise})
