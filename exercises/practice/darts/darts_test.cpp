@@ -34,41 +34,41 @@ TEST_CASE("exactly_on_centre")
 
 TEST_CASE("near_the_centre")
 {
-    REQUIRE(darts::score(-0.1,-0.1) == 10);
+    REQUIRE(darts::score(-0.1f,-0.1f) == 10);
 }
 
 TEST_CASE("just_within_the_inner_circle")
 {
-    REQUIRE(darts::score(0.7,0.7) == 10);
+    REQUIRE(darts::score(0.7f,0.7f) == 10);
 }
 
 TEST_CASE("just_outside_the_inner_circle")
 {
-    REQUIRE(darts::score(0.8,-0.8) == 5);
+    REQUIRE(darts::score(0.8f,-0.8f) == 5);
 }
 
 TEST_CASE("just_within_the_middle_circle")
 {
-    REQUIRE(darts::score(-3.5,3.5) == 5);
+    REQUIRE(darts::score(-3.5f,3.5f) == 5);
 }
 
 TEST_CASE("just_outside_the_middle_circle")
 {
-    REQUIRE(darts::score(-3.6,-3.6) == 1);
+    REQUIRE(darts::score(-3.6f,-3.6f) == 1);
 }
 
 TEST_CASE("just_within_the_outer_circle")
 {
-    REQUIRE(darts::score(-7.0,7.0) == 1);
+    REQUIRE(darts::score(-7.0f,7.0f) == 1);
 }
 
 TEST_CASE("just_outside_the_outer_circle")
 {
-    REQUIRE(darts::score(7.1,-7.1) == 0);
+    REQUIRE(darts::score(7.1f,-7.1f) == 0);
 }
 
 TEST_CASE("asymmetric_position_between_the_inner_and_middle_circles")
 {
-    REQUIRE(darts::score(0.5,-4) == 5);
+    REQUIRE(darts::score(0.5f,-4) == 5);
 }
 #endif
