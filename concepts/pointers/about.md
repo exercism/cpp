@@ -13,9 +13,10 @@ With modern C++ there are also _smart pointers_, the basic type is not smart at 
 
 Before digging into the details, it's worth understanding the use of _pointers_.
 _Pointers_ are a way to share an object's address with other parts of our program, which is useful for two major reasons:
+
 1. Like _references_, pointers avoid copies and help to reduce the resource-footprint of your program.
-2. Unlike _references_, pointers can be reassigned to different objects.
-3. Pointers can also point to a null value, to indicate, that they currently do not point to any object.
+1. Unlike _references_, pointers can be reassigned to different objects.
+1. Pointers can also point to a null value, to indicate, that they currently do not point to any object.
 
 ## General Syntax
 
@@ -48,10 +49,10 @@ _Pointer arithmetic_ allows you to perform arithmetic operations on pointers, wh
 Adding an integer to a pointer makes it point to a different element.
 
 ```cpp
-// Stargate addresses
-int gateAddresses[] = {462, 753, 218, 611, 977};
-// 'ptr' points to the first element of 'gateAddresses'
-int* ptr{gateAddresses}; 
+// Stargate Coordinate Code
+int gateCode[] = {462, 753, 218, 611, 977};
+// 'ptr' points to the first element of 'gateCode'
+int* ptr{&gateCode[0]};
 // Accesses the third Stargate address through pointer arithmetic
 int dialedAddress{*(ptr + 2)}; 
 // Chevron encoded! Dialing Stargate address:
@@ -80,10 +81,13 @@ struct Superhero {
     std::string superpower;
 };
 
-Superhero* dianaPrince = new Superhero;
+Superhero wonder_woman{};
+Superhero* dianaPrince = &wonder_woman;
 dianaPrince->superpower = "Lasso of Truth";
+
 // Using the -> operator to access member variable superpower:
 std::cout << "Wonder Woman, possesses the mighty " << dianaPrince->superpower;
+
 // Memory cleanup:
 delete dianaPrince; 
 ```
@@ -127,6 +131,5 @@ It is your responsibility to detect these cases and ensure those pointers are su
 In older code, you might encounter two alternatives to `nullptr`.
 Firstly, the literal `0` is specifically interpreted as a null value for pointers, though it's the only scenario where an integral literal can be assigned to a pointer.
 Secondly, the `preprocessor macro` `NULL`, inherited from C and defined in the `<cstddef>` header, is another representation of a null pointer, though its usage is less common in modern C++ code.
-~~~~
-
 [ariane-flight-v88]: https://en.wikipedia.org/wiki/Ariane_flight_V88
+~~~~
