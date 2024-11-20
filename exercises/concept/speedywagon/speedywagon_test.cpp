@@ -34,7 +34,7 @@ TEST_CASE("activity_counter: sum for a nullptr", "[task_2]") {
     REQUIRE(speedywagon::activity_counter(nullptr, 0) == 0);
 }
 
-TEST_CASE("alarm_control: works correctly for pointer", "[task_3") {
+TEST_CASE("alarm_control: works correctly for pointer", "[task_3]") {
     speedywagon::pillar_men_sensor* kars_in_space{nullptr};
     REQUIRE_FALSE(speedywagon::alarm_control(kars_in_space));
 }
