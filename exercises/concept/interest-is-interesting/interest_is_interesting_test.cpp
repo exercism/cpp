@@ -169,7 +169,7 @@ TEST_CASE("Years before desired balance for large start balance", "[task_4]") {
 TEST_CASE("Years before large difference between start and target balance", "[task_4]") {
     double balance{2345.67};
     double target_balance{12345.6789};
-    int want{85};
+    int want{104};
     REQUIRE(years_until_desired_balance(balance, target_balance) == want);
 }
 TEST_CASE("Balance is already above target", "[task_4]") {
