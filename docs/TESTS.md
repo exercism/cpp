@@ -108,10 +108,10 @@ Errors similar to `The CXX compiler identification is unknown` will likely be re
 [web-xcode-download]: https://apps.apple.com/us/app/xcode/id497799835?mt=12
 [cpp-installation-instructions]: https://exercism.org/docs/tracks/cpp/installation
 
-### Mac OS with Make _when using the exercise CLI_
-#### This example will specifically assist those who want to use the Exercism CLI app for configuring, testing and submitting their CPP examples.
+### MacOS with Make _when using the Exercism CLI_
+#### This example specifically assists those who want to use the Exercism CLI app for configuring, testing, and submitting their C++ exercises.
 
-The generator name for CMake is `Unix Makefiles`.
+The generator name for CMake is `Unix Makefiles`.  
 Assuming the current exercise is `bob` and we're in the exercise folder:
 
 ```sh
@@ -120,11 +120,10 @@ $ cmake -G "Unix Makefiles" .
 $ exercism test
 ```
 
-In this example we do not create empty files for the implementation before
-running CMake. This is because the Exercism CLI uses the `.exercism/metadata.json` file in the root directory to parse the test
+In this example, we do create empty files for the implementation before running CMake, but we do **not** create an empty build directory.
+This is because the Exercism CLI uses the `.exercism/metadata.json` file in the root directory to parse the test cases.
 
-Simply type `exercism test` in the root directory to compile the tests. This should 
-generate compile time errors. Once the errors are fixed, `exercism test` will build and 
-run the tests using the exercism CLI.
+Simply type `exercism test` in the root directory to compile the tests. This should generate compile-time errors.
+Once the errors are fixed, running `exercism test` again will build and execute the tests using the Exercism CLI.
 
 [cpp-installation-instructions]: https://exercism.org/docs/tracks/cpp/installation
