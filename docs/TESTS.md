@@ -54,6 +54,7 @@ code using the appropriate command for your environment:
 * Linux with make: `make`
 * Windows with Visual Studio: Select Build / Build Solution from the menu.
 * MacOS with Xcode: Select Build from the toolbar
+* MacOS with "Unix Makefile": `make` _If using the exercism CLI app_
 
 Examples of running CMake for different environments are shown below.
 
@@ -105,4 +106,25 @@ Please download and install Xcode via the App Store or via [this link][web-xcode
 Errors similar to `The CXX compiler identification is unknown` will likely be resolved by following the [instructions to install GCC][cpp-installation-instructions] or by adding another target in Xcode as per the above paragraph.
 
 [web-xcode-download]: https://apps.apple.com/us/app/xcode/id497799835?mt=12
+[cpp-installation-instructions]: https://exercism.org/docs/tracks/cpp/installation
+
+### Mac OS with Make _when using the exercise CLI_
+#### This example will specifically assist those who want to use the Exercism CLI app for configuring, testing and submitting their CPP examples.
+
+The generator name for CMake is `Unix Makefiles`.
+Assuming the current exercise is `bob` and we're in the exercise folder:
+
+```sh
+$ touch bob.{h,cpp}
+$ cmake -G "Unix Makefiles" .
+$ exercism test
+```
+
+In this example we do not create empty files for the implementation before
+running CMake. This is because the Exercism CLI uses the `.exercism/metadata.json` file in the root directory to parse the test
+
+Simply type `exercism test` in the root directory to compile the tests. This should 
+generate compile time errors. Once the errors are fixed, `exercism test` will build and 
+run the tests using the exercism CLI.
+
 [cpp-installation-instructions]: https://exercism.org/docs/tracks/cpp/installation
