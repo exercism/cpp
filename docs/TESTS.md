@@ -111,7 +111,7 @@ Errors similar to `The CXX compiler identification is unknown` will likely be re
 ### MacOS with Make _when using the Exercism CLI_
 #### This example specifically assists those who want to use the Exercism CLI app for configuring, testing, and submitting their C++ exercises.
 
-The generator name for CMake is `Unix Makefiles`.  
+The generator name for CMake is `Unix Makefiles`.
 Assuming the current exercise is `bob` and we're in the exercise folder:
 
 ```sh
