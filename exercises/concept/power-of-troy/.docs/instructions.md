@@ -60,6 +60,9 @@ The world of Troy is all about interaction.
 You want people to make trades by exchanging their possessions.
 
 Write a function `exchange_artifacts` that returns nothing but takes two artifact smart-pointers to exchange the items.
+Remember, that you cannot copy a `unique_ptr`.
+This includes the usage in function parameters.
+Use a reference to the `unique_ptr` instead.
 
 ```cpp
 human uchiha{};
