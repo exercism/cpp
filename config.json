@@ -198,6 +198,18 @@
         ]
       },
       {
+        "slug": "power-of-troy",
+        "name": "Power of Troy",
+        "uuid": "9f5e64e5-2838-4237-9cc6-fef500aacd7b",
+        "concepts": [
+          "auto",
+          "smart-pointers"
+        ],
+        "prerequisites": [
+          "pointers"
+        ]
+      },
+      {
         "slug": "speedywagon",
         "name": "Speedywagon Foundation",
         "uuid": "ed2148a5-674c-4660-a050-b11ab240b876",
