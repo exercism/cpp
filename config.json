@@ -208,6 +208,18 @@
         "prerequisites": [
           "pointers"
         ]
+      },
+      {
+        "slug": "speedywagon",
+        "name": "Speedywagon Foundation",
+        "uuid": "ed2148a5-674c-4660-a050-b11ab240b876",
+        "concepts": [
+          "pointers"
+        ],
+        "prerequisites": [
+          "classes",
+          "references"
+        ]
       }
     ],
     "practice": [
@@ -1136,6 +1148,14 @@
         "difficulty": 5
       },
       {
+        "slug": "zebra-puzzle",
+        "name": "Zebra Puzzle",
+        "uuid": "2badf89b-efc4-46f1-af8d-b7d2440e61c0",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 7
+      },
+      {
         "slug": "list-ops",
         "name": "List Ops",
         "uuid": "9498d0bf-c411-4b3b-b0c7-a063aa7f0acc",
@@ -1209,6 +1229,20 @@
         "uuid": "e4242a6e-3611-4f49-890b-368f1ebbdc94",
         "practices": [],
         "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "rail-fence-cipher",
+        "name": "Rail Fence Cipher",
+        "uuid": "8a7f6f8c-ff36-4afd-9ab3-6dbd355d0263",
+        "practices": [],
+        "prerequisites": [
+            "basics",
+            "namespaces",
+            "loops",
+            "numbers",
+            "strings"
+        ],
         "difficulty": 4
       }
     ],
@@ -1298,6 +1332,11 @@
       "name": "Functions"
     },
     {
+      "uuid": "c071a5e8-796c-4538-945a-3bdd2006fc2b",
+      "slug": "pointers",
+      "name": "Pointers"
+    },
+    {
       "uuid": "0316eb64-d1e9-44cc-b7d4-ea4b88f85ac3",
       "slug": "smart-pointers",
       "name": "Smart Pointers"
@@ -1306,6 +1345,11 @@
       "uuid": "da0a69e5-33ec-4458-8c70-80457715ada6",
       "slug": "auto",
       "name": "Auto"
+    },
+    {
+      "uuid": "5de475cc-5321-476f-bd19-a82b60284f5a",
+      "slug": "literals",
+      "name": "Literals"
     }
   ],
   "key_features": [

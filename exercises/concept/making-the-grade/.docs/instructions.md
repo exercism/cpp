@@ -21,6 +21,13 @@ round_down_scores(student_scores)
 // => {90, 40, 55, 70, 30, 25, 80, 95, 38, 40}
 ```
 
+There are other methods which achieve the same result, but a _cast_ is a common sight.
+
+```cpp
+int new_PI{static_cast<int>(3.14) + static_cast<int>(0.001592653589)};
+// new_PI is 3.
+```
+
 ## 2. Non-Passing Students
 
 As you were grading the exam, you noticed some students weren't performing as well as you'd hoped.
@@ -79,6 +86,15 @@ letter_grades(100);
 letter_grades(88);
 // => {41, 53, 65, 77}
 ```
+
+### How to calculate the intervals
+
+The score needed to avoid failing is always 41.
+The remaining score range, from 41 to the highest score, should be divided into four equal intervals, one for each letter grade.
+
+- Subtract 40 from the highest score to get the total range of scores that qualify for letter grades (A to D).
+- Divide this total range by 4 to get the size of each grade interval.
+- Add this interval size to 40 repeatedly to calculate the lower bounds for each letter grade.
 
 ## 5. Matching Names to Scores
 

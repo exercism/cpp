@@ -26,7 +26,7 @@ The returned daily rate should be of type `double`.
 
 ## 2. Calculate a discounted price
 
-Implement a function `apply_discount` to calculates the price after a discount.
+Implement a function `apply_discount` to calculate the price after a discount.
 It should accept two parameters: the original price and the discount rate in percent.
 
 ```cpp

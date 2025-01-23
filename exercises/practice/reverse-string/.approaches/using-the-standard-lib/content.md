@@ -45,7 +45,7 @@ After including this header we can call the function `std::reverse` later in the
 ## The type of the parameter
 
 The function takes its argument "by value" (`std::string`).
-That means the parameter `str` gets constructed from the argument tht the caller passes to the function, and it gets destructed at the end of the function.
+That means the parameter `str` gets constructed from the argument that the caller passes to the function, and it gets destructed at the end of the function.
 Any modifications of the parameter will not be visible outside of the function and will not affect the argument of the caller.  
 We do that because the function needs a "working copy" of the string, it will reverse and return that parameter without creating an additional instance of `std::string`.
 
@@ -57,7 +57,7 @@ These two iterators define a half-open interval `[begin, end)`.
 
 ## Conclusion
 
-This is a great approach, it is concise, easy to read, idiomatic, and very efficient.
+This is a great approach; it is concise, easy to read, idiomatic, and very efficient.
 
 
 [cppref-algorithm]: https://en.cppreference.com/w/cpp/header/algorithm

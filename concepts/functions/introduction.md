@@ -66,7 +66,7 @@ class Stubborn {
         response = reply;
     }
     string answer(const string& question) const {
-        if (question.lenghth() == 0) { return "";}
+        if (question.length() == 0) { return ""; }
         return response;
     }
     private:
