@@ -1,4 +1,4 @@
-# Introduction
+# After
 
 Smart pointers are a modern C++ feature designed to provide automatic memory management, helping to prevent memory leaks and dangling pointers commonly associated with raw pointers.
 They act as wrappers around raw pointers, adding additional functionality such as automatic memory deallocation when the pointer is no longer needed.
@@ -27,6 +27,7 @@ auto mordred = rightful_king_of_england; // Error: Cannot copy a unique_ptr
 
 When creating a `std::unique_ptr`, it's preferable to use `std::make_unique()` instead of directly using `new` to allocate memory.
 `std::make_unique()` provides several advantages:
+
 1. **Exception Safety**: `std::make_unique()` guarantees exception safety.
   If an exception is thrown during the construction of the object, memory will be automatically deallocated, preventing memory leaks.
 2. **Clarity**: Using `std::make_unique()` makes code clearer and more concise.
@@ -63,9 +64,34 @@ It combines memory allocation for the control block and the managed object into 
 Additionally, automatic deduction of template arguments simplifies code and enhances readability.
 Using `std::make_shared()` promotes cleaner, safer, and more efficient code when working with `std::shared_ptr` objects in C++.
 
+~~~~exercism/advanced
+## Weak Pointers
+
+`std::weak_ptr` is a companion class to `std::shared_ptr` that provides a non-owning "weak" reference to an object managed by a shared pointer.
+
+```cpp
+// Creating a shared pointer
+auto your_account = std::make_shared<std::string>("secret_subscription_password");
+// Creating a shared pointer that shares ownership
+auto your_flatmates_account = your_account;
+
+// Creating a weak pointer from the shared pointer
+auto your_flatmates_boyfriends_account = your_flatmates_account;
+// if your_account and your_flatmates_account are deleted, there is no more reference to the shared pointer.
+// your_flatmates_boyfriends_account will be a null pointer and cannot use the associated object any longer.
+```
+
+Weak pointers are useful in scenarios where cyclic references need to be broken to prevent memory leaks.
+`std::weak_ptr` was designed to address the issue of cyclic ownership, also known as circular references, that can occur when using `std::shared_ptr`. 
+In a cyclic ownership scenario, two or more `std::shared_ptr` objects are referencing each other, creating a cycle where none of the objects can be deleted because they have strong references to each other, leading to memory leaks.
+`std::weak_ptr` provides a solution to this problem by allowing weak references to shared objects without contributing to their reference count.
+This means that it can observe and access the shared object but doesn't prevent it from being deleted.
+~~~~
+
 ## Usage advice
 
 Use smart pointers by default: `std::unique_ptr` for exclusive ownership and `std::shared_ptr` for shared ownership.
 Reserve raw pointers for non-owning references or when interfacing with legacy code.
 In most cases, `std::unique_ptr` is sufficient for exclusive ownership, as it offers lightweight memory management without the overhead of reference counting.
 `std::shared_ptr` should be used sparingly, as it introduces overhead and complexity unless true shared ownership is needed.
+`std::weak_ptr` is specialized for breaking cyclic dependencies or observing shared objects, but it's not commonly used.
