@@ -12,6 +12,4 @@ struct power {
     std::string effect;
 };
 
-
-
 }  // namespace troy

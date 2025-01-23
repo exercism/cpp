@@ -7,7 +7,8 @@ void give_new_artifact(human& receiver, std::string item_name) {
         std::make_unique<artifact>(artifact{item_name});  // Include hint!
 }
 
-void exchange_artifacts(std::unique_ptr<artifact>& item_a, std::unique_ptr<artifact>& item_b) {
+void exchange_artifacts(std::unique_ptr<artifact>& item_a,
+                        std::unique_ptr<artifact>& item_b) {
     std::swap(item_a, item_b);
 }
 

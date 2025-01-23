@@ -20,7 +20,8 @@ struct human {
 };
 
 void give_new_artifact(human& receiver, std::string item_name);
-void exchange_artifacts(std::unique_ptr<artifact>& item_a, std::unique_ptr<artifact>& item_b);
+void exchange_artifacts(std::unique_ptr<artifact>& item_a,
+                        std::unique_ptr<artifact>& item_b);
 void manifest_power(human& receiver, std::string power_effect);
 void use_power(const human& caster, human& receiver);
 int power_intensity(const human& caster);

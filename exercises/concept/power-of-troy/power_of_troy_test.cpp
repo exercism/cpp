@@ -15,7 +15,6 @@ TEST_CASE("Create a human", "[task_1]") {
     REQUIRE(lanfeust.influenced_by == nullptr);
 }
 
-
 #if defined(EXERCISM_RUN_ALL_TESTS)
 
 TEST_CASE("Give a new artifact to a human", "[task_2]") {
@@ -43,7 +42,7 @@ TEST_CASE("Exchange artifact with another human", "[task_3]") {
 TEST_CASE("Manifest power in a human", "[task_4]") {
     human cian{};
     std::string gift_of_night{"heal"};
-    
+
     manifest_power(cian, gift_of_night);
 
     REQUIRE(cian.own_power != nullptr);
@@ -66,7 +65,6 @@ TEST_CASE("Check power intensity of person without power", "[task_6]") {
 
     REQUIRE(power_intensity(cixi) == 0);
 }
-
 
 TEST_CASE("Check power intensity when not in use", "[task_6]") {
     human nicolede{};
@@ -107,7 +105,8 @@ TEST_CASE("Check power intensity drop after usage", "[task_6]") {
     manifest_power(palpatine, "force torrent");
 
     // let's start a non-canon duel:
-    // (Everything in the scope of the brackets is deleted after the brackets close)
+    // (Everything in the scope of the brackets is deleted after the brackets
+    // close)
     {
         human grievous{};
         use_power(palpatine, grievous);
