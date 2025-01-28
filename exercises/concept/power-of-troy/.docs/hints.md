@@ -2,7 +2,7 @@
 
 ## 1. Bring humans to the world of Troy
 
-- The core of this exercise is the usage of `unique_ptr` and `shared_prt`.
+- The core of this exercise is the usage of `unique_ptr` and `shared_ptr`.
   Which kind of smart pointer should be used for each of the `human` variables?
 - `artifacts` are not shared, but `powers` are needed to track influenced people.
 - the `possession` pointer should be unique, the power pointers should be shared.
