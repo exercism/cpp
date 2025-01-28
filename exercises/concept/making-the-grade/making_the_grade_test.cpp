@@ -82,9 +82,11 @@ TEST_CASE("Rank one student", "[task_4]") {
 
 TEST_CASE("Rank several student", "[task_4]") {
     vector<int> grades{100, 98, 92, 86, 70, 68, 67, 60};
-    vector<string> names{"Rui", "Betty", "Joci", "Yoshi", "Kora", "Bern", "Jan", "Rose"};
-    vector<string> expected{"1. Rui: 100", "2. Betty: 98", "3. Joci: 92", "4. Yoshi: 86",
-                 "5. Kora: 70", "6. Bern: 68", "7. Jan: 67", "8. Rose: 60"};
+    vector<string> names{"Rui",  "Betty", "Joci", "Yoshi",
+                         "Kora", "Bern",  "Jan",  "Rose"};
+    vector<string> expected{"1. Rui: 100",  "2. Betty: 98", "3. Joci: 92",
+                            "4. Yoshi: 86", "5. Kora: 70",  "6. Bern: 68",
+                            "7. Jan: 67",   "8. Rose: 60"};
     vector<string> actual = student_ranking(grades, names);
 
     REQUIRE(expected == actual);
@@ -92,7 +94,8 @@ TEST_CASE("Rank several student", "[task_4]") {
 
 TEST_CASE("No perfect score", "[task_5]") {
     vector<int> grades{11, 34, 92, 23, 70, 76, 67, 60};
-    vector<string> names{"Rui", "Betty", "Joci", "Yoshi", "Kora", "Bern", "Jan", "Rose"};
+    vector<string> names{"Rui",  "Betty", "Joci", "Yoshi",
+                         "Kora", "Bern",  "Jan",  "Rose"};
     string expected{""};
     string actual = perfect_score(grades, names);
 
@@ -101,7 +104,8 @@ TEST_CASE("No perfect score", "[task_5]") {
 
 TEST_CASE("One perfect score", "[task_5]") {
     vector<int> grades{11, 34, 92, 23, 70, 76, 67, 100};
-    vector<string> names{"Rui", "Betty", "Joci", "Yoshi", "Kora", "Bern", "Jan", "Rose"};
+    vector<string> names{"Rui",  "Betty", "Joci", "Yoshi",
+                         "Kora", "Bern",  "Jan",  "Rose"};
     string expected{"Rose"};
     string actual = perfect_score(grades, names);
 
@@ -110,7 +114,8 @@ TEST_CASE("One perfect score", "[task_5]") {
 
 TEST_CASE("Several perfect scores", "[task_5]") {
     vector<int> grades{11, 100, 92, 23, 70, 100, 67, 100};
-    vector<string> names{"Rui", "Betty", "Joci", "Yoshi", "Kora", "Bern", "Jan", "Rose"};
+    vector<string> names{"Rui",  "Betty", "Joci", "Yoshi",
+                         "Kora", "Bern",  "Jan",  "Rose"};
     string expected{"Betty"};
     string actual = perfect_score(grades, names);
 
