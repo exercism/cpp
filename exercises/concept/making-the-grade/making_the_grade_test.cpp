@@ -49,57 +49,21 @@ TEST_CASE("Count failed students (some failed)", "[task_2]") {
     REQUIRE(expected == actual);
 }
 
-TEST_CASE("Test threshold (empty)", "[task_3]") {
-    vector<int> input{};
-    int threshold{98};
-    vector<int> expected{};
-    vector<int> actual = above_threshold(input, threshold);
-
-    REQUIRE(expected == actual);
-}
-
-TEST_CASE("Test threshold (some above threshold)", "[task_3]") {
-    vector<int> input{88, 29, 91, 64, 78, 43, 41, 77, 36, 50};
-    int threshold{80};
-    vector<int> expected{88, 91};
-    vector<int> actual = above_threshold(input, threshold);
-
-    REQUIRE(expected == actual);
-}
-
-TEST_CASE("Test threshold (none above threshold)", "[task_3]") {
-    vector<int> input{88, 29, 91, 64, 78, 43, 41, 77, 36, 50};
-    int threshold{99};
-    vector<int> expected{};
-    vector<int> actual = above_threshold(input, threshold);
-
-    REQUIRE(expected == actual);
-}
-
-TEST_CASE("Test threshold (some on threshold)", "[task_3]") {
-    vector<int> input{88, 29, 91, 64, 78, 43, 41, 77, 80, 80};
-    int threshold{80};
-    vector<int> expected{88, 91, 80, 80};
-    vector<int> actual = above_threshold(input, threshold);
-
-    REQUIRE(expected == actual);
-}
-
-TEST_CASE("Test letter grades: 100", "[task_4]") {
+TEST_CASE("Test letter grades: 100", "[task_3]") {
     int input{100};
     array<int, 4> expected{41, 56, 71, 86};
     array<int, 4> actual = letter_grades(input);
 
     REQUIRE(expected == actual);
 }
-TEST_CASE("Test letter grades: 97", "[task_4]") {
+TEST_CASE("Test letter grades: 97", "[task_3]") {
     int input{97};
     array<int, 4> expected{41, 55, 69, 83};
     array<int, 4> actual = letter_grades(input);
 
     REQUIRE(expected == actual);
 }
-TEST_CASE("Test letter grades: 81", "[task_4]") {
+TEST_CASE("Test letter grades: 81", "[task_3]") {
     int input{81};
     array<int, 4> expected{41, 51, 61, 71};
     array<int, 4> actual = letter_grades(input);
@@ -107,7 +71,7 @@ TEST_CASE("Test letter grades: 81", "[task_4]") {
     REQUIRE(expected == actual);
 }
 
-TEST_CASE("Rank one student", "[task_5]") {
+TEST_CASE("Rank one student", "[task_4]") {
     vector<int> grades{82};
     vector<string> names{"Betty"};
     vector<string> expected{"1. Betty: 82"};
@@ -116,7 +80,7 @@ TEST_CASE("Rank one student", "[task_5]") {
     REQUIRE(expected == actual);
 }
 
-TEST_CASE("Rank several student", "[task_5]") {
+TEST_CASE("Rank several student", "[task_4]") {
     vector<int> grades{100, 98, 92, 86, 70, 68, 67, 60};
     vector<string> names{"Rui", "Betty", "Joci", "Yoshi", "Kora", "Bern", "Jan", "Rose"};
     vector<string> expected{"1. Rui: 100", "2. Betty: 98", "3. Joci: 92", "4. Yoshi: 86",
@@ -126,7 +90,7 @@ TEST_CASE("Rank several student", "[task_5]") {
     REQUIRE(expected == actual);
 }
 
-TEST_CASE("No perfect score", "[task_6]") {
+TEST_CASE("No perfect score", "[task_5]") {
     vector<int> grades{11, 34, 92, 23, 70, 76, 67, 60};
     vector<string> names{"Rui", "Betty", "Joci", "Yoshi", "Kora", "Bern", "Jan", "Rose"};
     string expected{""};
@@ -135,7 +99,7 @@ TEST_CASE("No perfect score", "[task_6]") {
     REQUIRE(expected == actual);
 }
 
-TEST_CASE("One perfect score", "[task_6]") {
+TEST_CASE("One perfect score", "[task_5]") {
     vector<int> grades{11, 34, 92, 23, 70, 76, 67, 100};
     vector<string> names{"Rui", "Betty", "Joci", "Yoshi", "Kora", "Bern", "Jan", "Rose"};
     string expected{"Rose"};
@@ -144,7 +108,7 @@ TEST_CASE("One perfect score", "[task_6]") {
     REQUIRE(expected == actual);
 }
 
-TEST_CASE("Several perfect scores", "[task_6]") {
+TEST_CASE("Several perfect scores", "[task_5]") {
     vector<int> grades{11, 100, 92, 23, 70, 100, 67, 100};
     vector<string> names{"Rui", "Betty", "Joci", "Yoshi", "Kora", "Bern", "Jan", "Rose"};
     string expected{"Betty"};

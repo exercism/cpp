@@ -42,20 +42,7 @@ count_failed_students({90,40,55,70,30,25,80,95,38,40});
 // => 5
 ```
 
-## 3. The "Best"
-
-The teacher you're assisting wants to find the group of students who've performed "the best" on this exam.
-What qualifies as "the best" fluctuates, so you need to find the student scores that are **greater than or equal to** the current threshold.
-
-Create the function `above_threshold()` taking `student_scores` (a `vector` of grades), and `threshold` (an `int`, the "top score" threshold) as parameters.
-This function should return a `vector` of all scores that are `>=` to `threshold`.
-
-```cpp
-above_threshold({90,40,55,70,30,68,70,75,83,96}, 75);
-// => {90,75,83,96}
-```
-
-## 4. Calculating Letter Grades
+## 3. Calculating Letter Grades
 
 The teacher you're assisting likes to assign letter grades as well as numeric scores.
 Since students rarely score 100 on an exam, the "letter grade" lower thresholds are calculated based on the highest score achieved, and increment evenly between the high score and the failing threshold of **<= 40**.
@@ -96,7 +83,7 @@ The remaining score range, from 41 to the highest score, should be divided into 
 - Divide this total range by 4 to get the size of each grade interval.
 - Add this interval size to 40 repeatedly to calculate the lower bounds for each letter grade.
 
-## 5. Matching Names to Scores
+## 4. Matching Names to Scores
 
 You have exam scores in descending order, and the respective student names (sorted in the order of their exam scores).
 You would like to match each student's name with their exam score and print out an overall class ranking.
@@ -114,7 +101,7 @@ student_ranking(student_scores, student_names)
 //  {"1. Joci: 100", "2. Sara: 99", "3. Kora: 90", "4. Jan: 84", "5. Indra: 66", "6. Bern: 53", "7. Fred: 47"}
 ```
 
-## 6. A "Perfect" Score
+## 5. A "Perfect" Score
 
 Although a "perfect" score of 100 is rare on an exam, it is interesting to know if at least one student has achieved it.
 
