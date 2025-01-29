@@ -22,24 +22,19 @@ Also being familiar with the following can help with completing the tasks:
 
 - A results counter does need to be set up and _incremented_ -- you'll want to `return` the count of non-passing students when the loop terminates.
 
-## 3. The "Best"
-
-- - Having an empty `vector` to add the "best" marks to is helpful here.
-- `<vector>.emplace_back()` can help add things to the results `vector`.
-
-## 4. Calculating Letter Grades
+## 3. Calculating Letter Grades
 
 - These are _lower thresholds_. The _lower threshold_ for a "D" is a score of **41**, since an "F" is **<= 40**.
 - `static_cast<int>` without parameters should round off increments nicely.
 - You are expected to return an array, not a vector.
 
-## 5. Matching Names to Scores
+## 4. Matching Names to Scores
 
 - If both containers are the same length and sorted the same way, could you use the `index` from one to retrieve a `value` from the other?
 - `std::to_string(int)` can be used to convert a number to string.
 - Don't forget the follow the format of the example's output.
 
-## 6. A "Perfect" Score
+## 5. A "Perfect" Score
 
 - There may be or may not be a student with a score of 100, and you can't return an empty string without checking **all** scores.
 - The `control flow` statements `continue` and `break` may be useful here to move past unwanted values.
