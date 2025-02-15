@@ -22,7 +22,7 @@ admin_detected                                    // Function name
 ~~~~exercism/advanced
 The declaration works like a note to the compiler, that there is a function of that name, return type and parameter list.
 The code will not work, if the definition is missing.
-Declarations are optional, they are needed if you use the function before its definiton.
+Declarations are optional, they are needed if you use the function before its definition.
 Declarations can solve problems like cyclic references and they can be used to separate the interface from the implementation.
 ~~~~
 
@@ -38,7 +38,7 @@ number_of_dragon_balls--; // compilation error
 
 ~~~~exercism/note
 You will often see constants written in _UPPER_SNAKE_CASE_.
-It is recommened to reserve this casing for macros, if there is no other convention.
+It is recommended to reserve this casing for macros, if there is no other convention.
 ~~~~
 
 If you try to change a constant variable after it has been set, your code will not compile.
