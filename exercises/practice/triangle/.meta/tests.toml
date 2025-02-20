@@ -33,6 +33,9 @@ description = "isosceles triangle -> first two sides are equal"
 [d2080b79-4523-4c3f-9d42-2da6e81ab30f]
 description = "isosceles triangle -> first and last sides are equal"
 
+[eca8ae18-e191-4795-836f-c6457e649d80]
+description = "isosceles triangle -> two smaller sides are equal"
+
 [8d71e185-2bd7-4841-b7e1-71689a5491d8]
 description = "isosceles triangle -> equilateral triangles are also isosceles"
 include = false

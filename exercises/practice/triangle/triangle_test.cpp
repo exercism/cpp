@@ -71,6 +71,11 @@ TEST_CASE("isosceles triangle -> first and last sides are equal",
     REQUIRE(triangle::flavor::isosceles == triangle::kind(4, 3, 4));
 }
 
+TEST_CASE("isosceles triangle -> two smaller sides are equal",
+          "[eca8ae18 - e191 - 4795 - 836f - c6457e649d80]") {
+    REQUIRE(triangle::flavor::isosceles == triangle::kind(3, 4, 3));
+}
+
 TEST_CASE("isosceles triangle -> no sides are equal",
           "[840ed5f8-366f-43c5-ac69-8f05e6f10bbb]") {
     REQUIRE_FALSE(triangle::flavor::isosceles == triangle::kind(2, 3, 4));
