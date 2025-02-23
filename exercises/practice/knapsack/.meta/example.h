@@ -3,17 +3,15 @@
 
 #include <vector>
 
-namespace knapsack
-{
+namespace knapsack {
 
-struct Item
-{
+struct Item {
     int weight;
     int value;
 };
 
 int maximum_value(int maximum_weight, const std::vector<Item>& items);
 
-} // namespace knapsack
+}  // namespace knapsack
 
-#endif // KNAPSACK_H
+#endif  // KNAPSACK_H

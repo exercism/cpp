@@ -3,6 +3,8 @@
 
 namespace armstrong_numbers {
 
+// TODO: add your solution here
+
 }  // namespace armstrong_numbers
 
-#endif // ARMSTRONG_NUMBERS_H
+#endif  // ARMSTRONG_NUMBERS_H

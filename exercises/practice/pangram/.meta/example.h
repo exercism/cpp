@@ -2,9 +2,8 @@
 #define PANGRAM_H
 #include <string>
 
-namespace pangram
-{
-    
+namespace pangram {
+
 bool is_pangram(const std::string &s);
 
 }

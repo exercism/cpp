@@ -3,8 +3,8 @@
 
 namespace darts {
 
-    int score(float x, float y);
+int score(float x, float y);
 
-} // namespace darts
+}  // namespace darts
 
-#endif //DARTS_H
+#endif  // DARTS_H

@@ -1,16 +1,15 @@
-#include "word_count.h"
 #include <algorithm>
 #include <cctype>
 #include <iterator>
 #include <vector>
 
+#include "word_count.h"
+
 using namespace std;
 
-namespace
-{
+namespace {
 
-string trim_copy_if(string const& s, string const& delims)
-{
+string trim_copy_if(string const& s, string const& delims) {
     string cpy(s);
     // Trim front
     while (!cpy.empty() && delims.find(cpy.front()) != string::npos)
@@ -21,8 +20,7 @@ string trim_copy_if(string const& s, string const& delims)
     return cpy;
 }
 
-vector<string> split(string const& s, string const& delims)
-{
+vector<string> split(string const& s, string const& delims) {
     auto start = s.begin();
     vector<string> words;
     for (auto end = s.begin(); end != s.end(); end++) {
@@ -39,42 +37,35 @@ vector<string> split(string const& s, string const& delims)
     return words;
 }
 
-string normalize_text(string const& text)
-{
+string normalize_text(string const& text) {
     string normalized;
     transform(text.begin(), text.end(), back_inserter(normalized),
-        [](const char c) { return (isalnum(c) || c == '\'') ? tolower(c) : ' '; });
+              [](const char c) {
+                  return (isalnum(c) || c == '\'') ? tolower(c) : ' ';
+              });
     return normalized;
 }
 
-string trim_word(string const& word)
-{
-    return trim_copy_if(word, "' ");
-}
+string trim_word(string const& word) { return trim_copy_if(word, "' "); }
 
-vector<string> split_text_into_words(string const& text)
-{
+vector<string> split_text_into_words(string const& text) {
     vector<string> words = split(text, "\t ");
     transform(words.begin(), words.end(), words.begin(), trim_word);
     return words;
 }
 
-}
+}  // namespace
 
-namespace word_count
-{
+namespace word_count {
 
-map<string, int> words(string const& text)
-{
+map<string, int> words(string const& text) {
     map<string, int> count;
-    for (auto const& word : split_text_into_words(normalize_text(text)))
-    {
-        if (!word.empty())
-        {
+    for (auto const& word : split_text_into_words(normalize_text(text))) {
+        if (!word.empty()) {
             ++count[word];
         }
     }
     return count;
 }
 
-}
+}  // namespace word_count

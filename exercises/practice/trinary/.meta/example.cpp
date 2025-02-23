@@ -1,10 +1,8 @@
 #include "trinary.h"
 
-namespace trinary
-{
+namespace trinary {
 
-int to_decimal(std::string const &text)
-{
+int to_decimal(std::string const &text) {
     int result = 0;
     for (const char digit : text) {
         if (digit < '0' || digit > '2') {
@@ -16,4 +14,4 @@ int to_decimal(std::string const &text)
     return result;
 }
 
-}
+}  // namespace trinary

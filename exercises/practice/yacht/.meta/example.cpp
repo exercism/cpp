@@ -1,8 +1,8 @@
-#include "yacht.h"
-
 #include <algorithm>
 #include <numeric>
 #include <stdexcept>
+
+#include "yacht.h"
 
 namespace yacht {
 

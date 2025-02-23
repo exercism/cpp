@@ -3,6 +3,8 @@
 
 namespace atbash_cipher {
 
+// TODO: add your solution here
+
 }  // namespace atbash_cipher
 
-#endif // ATBASH_CIPHER_H
+#endif  // ATBASH_CIPHER_H

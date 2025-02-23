@@ -5,12 +5,10 @@
 #include <string>
 #include <vector>
 
-namespace grade_school
-{
+namespace grade_school {
 
-class school
-{
-public:
+class school {
+   public:
     const std::map<int, std::vector<std::string>>& roster() const {
         return roster_;
     }
@@ -19,10 +17,10 @@ public:
 
     std::vector<std::string> grade(int grade) const;
 
-private:
+   private:
     std::map<int, std::vector<std::string>> roster_;
 };
 
-}
+}  // namespace grade_school
 
 #endif
