@@ -30,7 +30,7 @@ Your first task is to ensure that the Pillar Men sensor is connected properly.
 We can't have false alarms triggered by disconnected sensors.
 You will write a function `connection_check`, which tests if the sensor's pointer is valid by checking for `nullptr`.
 
-- Define a function that accepts a pointer a a `pillar_men_sensor` _struct_.
+- Define a function that accepts a pointer to a `pillar_men_sensor` _struct_.
 - The function should return `true` if the sensor pointer is not null, and `false` otherwise.
 
 ```cpp
