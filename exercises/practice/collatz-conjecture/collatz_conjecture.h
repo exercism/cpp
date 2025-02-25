@@ -3,6 +3,8 @@
 
 namespace collatz_conjecture {
 
+// TODO: add your solution here
+
 }  // namespace collatz_conjecture
 
-#endif // COLLATZ_CONJECTURE_H
+#endif  // COLLATZ_CONJECTURE_H

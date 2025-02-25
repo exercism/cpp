@@ -1,6 +1,6 @@
-#include "bank_account.h"
-
 #include <stdexcept>
+
+#include "bank_account.h"
 
 namespace Bankaccount {
 void Bankaccount::open() {

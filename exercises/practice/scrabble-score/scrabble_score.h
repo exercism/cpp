@@ -3,6 +3,8 @@
 
 namespace scrabble_score {
 
+// TODO: add your solution here
+
 }  // namespace scrabble_score
 
-#endif // SCRABBLE_SCORE_H
+#endif  // SCRABBLE_SCORE_H

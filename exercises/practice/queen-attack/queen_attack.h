@@ -3,6 +3,8 @@
 
 namespace queen_attack {
 
+// TODO: add your solution here
+
 }  // namespace queen_attack
 
-#endif // QUEEN_ATTACK_H
+#endif  // QUEEN_ATTACK_H

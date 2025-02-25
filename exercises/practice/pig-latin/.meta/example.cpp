@@ -5,7 +5,8 @@ std::string translate_word(const std::string& word) {
     for (const std::string start : {"a", "e", "i", "o", "u", "yt", "xr"}) {
         if (word.substr(0, start.size()) == start) return word + "ay";
     }
-    for (const std::string start : {"thr", "sch", "squ", "ch", "qu", "th", "rh"}) {
+    for (const std::string start :
+         {"thr", "sch", "squ", "ch", "qu", "th", "rh"}) {
         if (word.substr(0, start.size()) == start)
             return word.substr(start.size()) + start + "ay";
     }
@@ -17,7 +18,8 @@ std::string translate(const std::string& phrase) {
     std::string translation{};
     for (size_t found = phrase.find(' '); found != std::string::npos;
          found = phrase.find(' ', start)) {
-        translation += translate_word(phrase.substr(start, found - start)) + " ";
+        translation +=
+            translate_word(phrase.substr(start, found - start)) + " ";
         start = found + 1;
     }
     if (start != phrase.size())

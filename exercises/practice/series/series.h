@@ -3,6 +3,8 @@
 
 namespace series {
 
+// TODO: add your solution here
+
 }  // namespace series
 
-#endif // SERIES_H
+#endif  // SERIES_H

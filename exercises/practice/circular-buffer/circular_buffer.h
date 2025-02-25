@@ -3,6 +3,8 @@
 
 namespace circular_buffer {
 
+// TODO: add your solution here
+
 }  // namespace circular_buffer
 
-#endif // CIRCULAR_BUFFER_H
+#endif  // CIRCULAR_BUFFER_H

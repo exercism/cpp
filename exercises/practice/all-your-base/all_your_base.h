@@ -3,6 +3,8 @@
 
 namespace all_your_base {
 
+// TODO: add your solution here
+
 }  // namespace all_your_base
 
-#endif // ALL_YOUR_BASE_H
+#endif  // ALL_YOUR_BASE_H

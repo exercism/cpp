@@ -1,7 +1,7 @@
-#include "sublist.h"
-
 #include <algorithm>
 #include <iterator>
+
+#include "sublist.h"
 
 namespace sublist {
 bool is_sublist(const std::vector<int>& sublist,

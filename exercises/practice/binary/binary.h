@@ -3,6 +3,8 @@
 
 namespace binary {
 
+// TODO: add your solution here
+
 }  // namespace binary
 
-#endif // BINARY_H
+#endif  // BINARY_H

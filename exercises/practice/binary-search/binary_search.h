@@ -3,6 +3,8 @@
 
 namespace binary_search {
 
+// TODO: add your solution here
+
 }  // namespace binary_search
 
-#endif // BINARY_SEARCH_H
+#endif  // BINARY_SEARCH_H

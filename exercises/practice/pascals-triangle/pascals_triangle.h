@@ -3,6 +3,8 @@
 
 namespace pascals_triangle {
 
+// TODO: add your solution here
+
 }  // namespace pascals_triangle
 
-#endif // PASCALS_TRIANGLE_H
+#endif  // PASCALS_TRIANGLE_H

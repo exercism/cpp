@@ -11,7 +11,7 @@ class Complex {
     Complex operator-(const Complex& other) const;
     Complex operator*(const Complex& other) const;
     Complex operator/(const Complex& other) const;
-    
+
     double abs() const;
     Complex conj() const;
     double real() const;

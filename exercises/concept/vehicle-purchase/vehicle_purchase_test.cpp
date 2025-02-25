@@ -100,7 +100,8 @@ TEST_CASE("float price is reduced to 70% for age 8,", "[task_3]") {
     double original_price{39000.000001};
     double age{8};
     double expected{27300.0000007};
-    REQUIRE_THAT(vehicle_purchase::calculate_resell_price(original_price, age), Catch::Matchers::WithinRel(expected, 0.001));
+    REQUIRE_THAT(vehicle_purchase::calculate_resell_price(original_price, age),
+                 Catch::Matchers::WithinRel(expected, 0.001));
 }
 
 #endif

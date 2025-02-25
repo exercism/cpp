@@ -3,6 +3,8 @@
 
 namespace trinary {
 
+// TODO: add your solution here
+
 }  // namespace trinary
 
-#endif // TRINARY_H
+#endif  // TRINARY_H

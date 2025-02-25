@@ -3,8 +3,7 @@
 
 #include <string>
 
-namespace scrabble_score
-{
+namespace scrabble_score {
 
 int score(const std::string &word);
 

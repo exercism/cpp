@@ -3,6 +3,8 @@
 
 namespace bob {
 
+// TODO: add your solution here
+
 }  // namespace bob
 
-#endif // BOB_H
+#endif  // BOB_H

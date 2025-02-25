@@ -3,22 +3,20 @@
 
 #include <string>
 
-namespace robot_name
-{
+namespace robot_name {
 
-class robot
-{
-public:
+class robot {
+   public:
     robot();
 
     std::string const &name() const { return name_; }
 
     void reset();
 
-private:
+   private:
     std::string name_;
 };
 
-}
+}  // namespace robot_name
 
 #endif

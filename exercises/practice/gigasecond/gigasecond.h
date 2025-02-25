@@ -3,6 +3,8 @@
 
 namespace gigasecond {
 
+// TODO: add your solution here
+
 }  // namespace gigasecond
 
-#endif // GIGASECOND_H
+#endif  // GIGASECOND_H
