@@ -1,0 +1,10 @@
+[
+    {
+        "url": "https://en.cppreference.com/w/cpp/language/range-for",
+        "description": "C++ reference on ranged for loops"
+    },
+    {
+        "url": "https://www.learncpp.com/cpp-tutorial/range-based-for-loops-for-each/",
+        "description": "Range-based for loops (for-each) chapter on Learn C++"
+    }
+]
