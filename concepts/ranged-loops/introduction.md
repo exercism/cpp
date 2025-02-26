@@ -50,7 +50,7 @@ for (const std::string part : file_name) {
 // Output: JIF
 ```
 
-This prevents accidental modification of `number` but will still make a copy with every side-effect from above.
+This prevents accidental modification of `part` but will still make a copy with every side-effect from above.
 
 ## Using References to Modify Elements
 
@@ -69,7 +69,13 @@ for (std::string& member : trilobites) {
 // trilobites now contains "Johnny Ramone", "Joey Ramone", "Dee Dee Ramone", "CJ Ramone"};
 ```
 
-If it is not necessary to change the container content it is advisable to use a `const` reference, which can be further optimized by the compiler.
+~~~~exercism/note
+If you don't change your loop variable, it is advisable to use `const` references.
+Copy operations can significantly slow your algorithms for larger data structures.
+The only exception for this rule are [fundamental types][fundamentals] like `int`, `char`, and `long`, as the reference process has more overhead than a simple copy.
+
+[fudnamentals]: https://en.cppreference.com/w/cpp/language/types
+~~~~
 
 ## When to Use Range-Based Loops
 
