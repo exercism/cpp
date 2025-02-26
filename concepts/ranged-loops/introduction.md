@@ -36,7 +36,7 @@ Other languages reference to a similar access style as `for each` loop.
 
 The example above shows access by value.
 Although the `part` variable is changed inside the loop, the original vector remains unchanged.
-This means each element will be a copy and might produce overhead and may thus impact performance.
+This means each element of the container will be a copied and assigned to the part variable - that may in turn impact performance.
 
 ## Using `const` for Read-Only Access
 
