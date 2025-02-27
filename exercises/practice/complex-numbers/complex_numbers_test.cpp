@@ -122,8 +122,9 @@ TEST_CASE("Arithmetic -> Subtraction -> Subtract purely imaginary numbers",
 }
 
 TEST_CASE(
-    "Arithmetic -> Subtraction -> Subtract numbers with real and imaginary "
-    "part",
+    // clang-format off
+    "Arithmetic -> Subtraction -> Subtract numbers with real and imaginary part",
+    // clang-format on
     "[f876feb1-f9d1-4d34-b067-b599a8746400]") {
     const Complex c1{1.0, 2.0};
     const Complex c2{3.0, 4.0};
@@ -148,8 +149,9 @@ TEST_CASE("Arithmetic -> Multiplication -> Multiply purely imaginary numbers",
 }
 
 TEST_CASE(
-    "Arithmetic -> Multiplication -> Multiply numbers with real and imaginary "
-    "part",
+    // clang-format off
+    "Arithmetic -> Multiplication -> Multiply numbers with real and imaginary part",
+    // clang-format on
     "[4d1d10f0-f8d4-48a0-b1d0-f284ada567e6]") {
     const Complex c1{1.0, 2.0};
     const Complex c2{3.0, 4.0};
@@ -197,8 +199,9 @@ TEST_CASE("Absolute value -> Absolute value of a negative purely real number",
 }
 
 TEST_CASE(
-    "Absolute value -> Absolute value of a purely imaginary number with "
-    "positive imaginary part",
+    // clang-format off
+    "Absolute value -> Absolute value of a purely imaginary number with positive imaginary part",
+    // clang-format on
     "[bbe26568-86c1-4bb4-ba7a-da5697e2b994]") {
     const Complex c{0.0, 5.0};
 
@@ -206,8 +209,9 @@ TEST_CASE(
 }
 
 TEST_CASE(
-    "Absolute value -> Absolute value of a purely imaginary number with "
-    "negative imaginary part",
+    // clang-format off
+    "Absolute value -> Absolute value of a purely imaginary number with negative imaginary part",
+    // clang-format on
     "[3b48233d-468e-4276-9f59-70f4ca1f26f3]") {
     const Complex c{0.0, -5.0};
 
@@ -267,8 +271,9 @@ TEST_CASE("Complex exponential function -> Exponential of a purely real number",
 
 // Extra Credit
 TEST_CASE(
-    "Complex exponential function -> Exponential of a number with real and "
-    "imaginary part",
+    // clang-format off
+    "Complex exponential function -> Exponential of a number with real and imaginary part",
+    // clang-format on
     "[08eedacc-5a95-44fc-8789-1547b27a8702]") {
     const Complex c{std::log(2.0), M_PI};
 
@@ -276,8 +281,9 @@ TEST_CASE(
 }
 
 TEST_CASE(
-    "Complex exponential function -> Exponential resulting in a number with "
-    "real and imaginary part",
+    // clang-format off
+    "Complex exponential function -> Exponential resulting in a number with real and imaginary part",
+    // clang-format on
     "[d2de4375-7537-479a-aa0e-d474f4f09859]") {
     const Complex c{std::log(2.0) / 2.0, M_PI / 4.0};
 
@@ -285,8 +291,9 @@ TEST_CASE(
 }
 
 TEST_CASE(
-    "Operations between real numbers and complex numbers -> Add real number to "
-    "complex number",
+    // clang-format off
+    "Operations between real numbers and complex numbers -> Add real number to complex number",
+    // clang-format on
     "[06d793bf-73bd-4b02-b015-3030b2c952ec]") {
     const Complex c{1.0, 2.0};
 
@@ -294,8 +301,9 @@ TEST_CASE(
 }
 
 TEST_CASE(
-    "Operations between real numbers and complex numbers -> Add complex number "
-    "to real number",
+    // clang-format off
+    "Operations between real numbers and complex numbers -> Add complex number to real number",
+    // clang-format on
     "[d77dbbdf-b8df-43f6-a58d-3acb96765328]") {
     const Complex c{1.0, 2.0};
 
@@ -303,8 +311,9 @@ TEST_CASE(
 }
 
 TEST_CASE(
-    "Operations between real numbers and complex numbers -> Subtract real "
-    "number from complex number",
+    // clang-format off
+    "Operations between real numbers and complex numbers -> Subtract real number from complex number",
+    // clang-format on
     "[20432c8e-8960-4c40-ba83-c9d910ff0a0f]") {
     const Complex c{5.0, 7.0};
 
@@ -312,8 +321,9 @@ TEST_CASE(
 }
 
 TEST_CASE(
-    "Operations between real numbers and complex numbers -> Subtract complex "
-    "number from real number",
+    // clang-format off
+    "Operations between real numbers and complex numbers -> Subtract complex number from real number",
+    // clang-format on
     "[b4b38c85-e1bf-437d-b04d-49bba6e55000]") {
     const Complex c{5.0, 7.0};
 
@@ -321,8 +331,9 @@ TEST_CASE(
 }
 
 TEST_CASE(
-    "Operations between real numbers and complex numbers -> Multiply complex "
-    "number by real number",
+    // clang-format off
+    "Operations between real numbers and complex numbers -> Multiply complex number by real number",
+    // clang-format on
     "[dabe1c8c-b8f4-44dd-879d-37d77c4d06bd]") {
     const Complex c{2.0, 5.0};
 
@@ -330,8 +341,9 @@ TEST_CASE(
 }
 
 TEST_CASE(
-    "Operations between real numbers and complex numbers -> Multiply real "
-    "number by complex number",
+    // clang-format off
+    "Operations between real numbers and complex numbers -> Multiply real number by complex number",
+    // clang-format on
     "[6c81b8c8-9851-46f0-9de5-d96d314c3a28]") {
     const Complex c{2.0, 5.0};
 
@@ -339,8 +351,9 @@ TEST_CASE(
 }
 
 TEST_CASE(
-    "Operations between real numbers and complex numbers -> Divide complex "
-    "number by real number",
+    // clang-format off
+    "Operations between real numbers and complex numbers -> Divide complex number by real number",
+    // clang-format on 
     "[8a400f75-710e-4d0c-bcb4-5e5a00c78aa0]") {
     const Complex c{10.0, 100.0};
 
@@ -348,8 +361,9 @@ TEST_CASE(
 }
 
 TEST_CASE(
-    "Operations between real numbers and complex numbers -> Divide real number "
-    "by complex number",
+    // clang-format off
+    "Operations between real numbers and complex numbers -> Divide real number by complex number",
+    // clang-format on
     "[9a867d1b-d736-4c41-a41e-90bd148e9d5e]") {
     const Complex c{1.0, 1.0};
 

@@ -97,15 +97,17 @@ TEST_CASE("testing for strawberries allergy -> allergic only to strawberries",
 }
 
 TEST_CASE(
-    "testing for strawberries allergy -> allergic to strawberries and "
-    "something else",
+    // clang-format off
+    "testing for strawberries allergy -> allergic to strawberries and something else",
+    // clang-format on
     "[50f5f8f3-3bac-47e6-8dba-2d94470a4bc6]") {
     REQUIRE(true == allergies::allergy_test(28).is_allergic_to("strawberries"));
 }
 
 TEST_CASE(
-    "testing for strawberries allergy -> allergic to something, but not "
-    "strawberries",
+    // clang-format off
+    "testing for strawberries allergy -> allergic to something, but not strawberries",
+    // clang-format on
     "[23dd6952-88c9-48d7-a7d5-5d0343deb18d]") {
     REQUIRE(false ==
             allergies::allergy_test(20).is_allergic_to("strawberries"));
