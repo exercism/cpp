@@ -22,5 +22,4 @@ namespace hellmath {
 // `AccountStatus` arguments and returns `true`, if and only if the first
 // account has a strictly higher priority than the second.
 
-
 }  // namespace hellmath

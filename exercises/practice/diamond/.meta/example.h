@@ -4,5 +4,5 @@
 #include <vector>
 
 namespace diamond {
-    std::vector<std::string> rows(char middle_letter);
+std::vector<std::string> rows(char middle_letter);
 }  // namespace diamond

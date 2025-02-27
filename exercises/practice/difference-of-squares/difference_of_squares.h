@@ -3,6 +3,8 @@
 
 namespace difference_of_squares {
 
+// TODO: add your solution here
+
 }  // namespace difference_of_squares
 
-#endif // DIFFERENCE_OF_SQUARES_H
+#endif  // DIFFERENCE_OF_SQUARES_H

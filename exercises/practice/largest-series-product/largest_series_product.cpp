@@ -2,4 +2,6 @@
 
 namespace largest_series_product {
 
-} // largest_series_product
+// TODO: add your solution here
+
+}  // namespace largest_series_product

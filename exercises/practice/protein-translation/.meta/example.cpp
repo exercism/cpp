@@ -1,13 +1,13 @@
-#include "protein_translation.h"
-#include <vector>
-#include <string>
 #include <algorithm>
+#include <string>
 #include <unordered_map>
+#include <vector>
+
+#include "protein_translation.h"
 
 using namespace std;
 
 vector<string> protein_translation::proteins(string rna) {
-
     unordered_map<string, string> dic;
     dic["AUG"] = "Methionine";
     dic["UUU"] = dic["UUC"] = "Phenylalanine";
@@ -19,7 +19,7 @@ vector<string> protein_translation::proteins(string rna) {
     dic["UAA"] = dic["UAG"] = dic["UGA"] = "STOP";
 
     vector<string> polypeptide;
-    for (int i = 0; i < (int)rna.size()-2; i += 3) {
+    for (int i = 0; i < (int)rna.size() - 2; i += 3) {
         string codon = rna.substr(i, 3);
         auto it = dic.find(codon);
         if (it == dic.end() || it->second == "STOP") {

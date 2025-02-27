@@ -3,6 +3,8 @@
 
 namespace crypto_square {
 
+// TODO: add your solution here
+
 }  // namespace crypto_square
 
-#endif // CRYPTO_SQUARE_H
+#endif  // CRYPTO_SQUARE_H

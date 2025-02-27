@@ -3,6 +3,8 @@
 
 namespace robot_name {
 
+// TODO: add your solution here
+
 }  // namespace robot_name
 
-#endif // ROBOT_NAME_H
+#endif  // ROBOT_NAME_H

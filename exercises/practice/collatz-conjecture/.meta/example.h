@@ -5,6 +5,6 @@ namespace collatz_conjecture {
 
 int steps(int value);
 
-} // namespace collatz_conjecture
+}  // namespace collatz_conjecture
 
 #endif  // !COLLATZ_CONJECTURE_H_

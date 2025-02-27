@@ -11,26 +11,20 @@ using namespace lasagna_master;
 
 // As long as we have catch2 v2 and v3 in parallel, we can't use either
 //  of their comparison marcors for floating point comparisons.
-#define REQUIRE_VECTOR_APROX_EQUAL(vec1, vec2, margin)  \
-    REQUIRE(vec1.size() == vec2.size());                \
-    for (size_t i = 0; i < vec1.size(); i++) {          \
-        REQUIRE( std::abs(vec1.at(i) - vec2.at(i)) < margin);     \
-    } 
+#define REQUIRE_VECTOR_APROX_EQUAL(vec1, vec2, margin)       \
+    REQUIRE(vec1.size() == vec2.size());                     \
+    for (size_t i = 0; i < vec1.size(); i++) {               \
+        REQUIRE(std::abs(vec1.at(i) - vec2.at(i)) < margin); \
+    }
 
-TEST_CASE("preparationTime: Preparation time for many layers with custom average time", "[task_1]") {
+TEST_CASE(
+    "preparationTime: Preparation time for many layers with custom average "
+    "time",
+    "[task_1]") {
     std::vector<std::string> layers{
-        "sauce",
-        "noodles",
-        "béchamel",
-        "meat",
-        "mozzarella",
-        "noodles",
-        "ricotta",
-        "eggplant",
-        "béchamel",
-        "noodles",
-        "sauce",
-        "mozzarella",
+        "sauce",      "noodles", "béchamel", "meat",
+        "mozzarella", "noodles", "ricotta",  "eggplant",
+        "béchamel",   "noodles", "sauce",    "mozzarella",
     };
     int time{1};
     int expected{12};
@@ -59,7 +53,7 @@ TEST_CASE("preparationTime: Preparation time for default case", "[task_1]") {
 }
 
 TEST_CASE("quantities: few layers", "[task_2]") {
-    std::vector<std::string> layers {"noodles", "sauce", "noodles"};
+    std::vector<std::string> layers{"noodles", "sauce", "noodles"};
     int expNoodles{100};
     double expSauce{0.2};
     amount amount = quantities(layers);
@@ -68,19 +62,10 @@ TEST_CASE("quantities: few layers", "[task_2]") {
 }
 
 TEST_CASE("quantities: many layers", "[task_2]") {
-    std::vector<std::string> layers{
-        "sauce",
-        "noodles",
-        "béchamel",
-        "meat",
-        "mozzarella",
-        "noodles",
-        "ricotta",
-        "eggplant",
-        "béchamel",
-        "noodles",
-        "sauce",
-        "mozzarella"};
+    std::vector<std::string> layers{"sauce",   "noodles",    "béchamel",
+                                    "meat",    "mozzarella", "noodles",
+                                    "ricotta", "eggplant",   "béchamel",
+                                    "noodles", "sauce",      "mozzarella"};
     int expNoodles{150};
     double expSauce{0.4};
     amount amount = quantities(layers);
@@ -89,12 +74,8 @@ TEST_CASE("quantities: many layers", "[task_2]") {
 }
 
 TEST_CASE("quantities: no noodles", "[task_2]") {
-    std::vector<std::string> layers{
-        "sauce",
-        "meat",
-        "mozzarella",
-        "sauce",
-        "mozzarella"};
+    std::vector<std::string> layers{"sauce", "meat", "mozzarella", "sauce",
+                                    "mozzarella"};
     int expNoodles{0};
     double expSauce{0.4};
     amount amount = quantities(layers);
@@ -103,12 +84,8 @@ TEST_CASE("quantities: no noodles", "[task_2]") {
 }
 
 TEST_CASE("quantities: no sauce", "[task_2]") {
-    std::vector<std::string> layers{
-        "noodles",
-        "meat",
-        "mozzarella",
-        "noodles",
-        "mozzarella"};
+    std::vector<std::string> layers{"noodles", "meat", "mozzarella", "noodles",
+                                    "mozzarella"};
     int expNoodles{100};
     double expSauce{0.0};
     amount amount = quantities(layers);
@@ -117,9 +94,12 @@ TEST_CASE("quantities: no sauce", "[task_2]") {
 }
 
 TEST_CASE("Adds secret vector ingredient", "[task_3]") {
-    const std::vector<std::string> friendsList{"sauce", "noodles", "béchamel", "marjoram"};
-    std::vector<std::string> myList{"sauce", "noodles", "meat", "tomatoes", "?"};
-    std::vector<std::string> expected{"sauce", "noodles", "meat", "tomatoes", "marjoram"};
+    const std::vector<std::string> friendsList{"sauce", "noodles", "béchamel",
+                                               "marjoram"};
+    std::vector<std::string> myList{"sauce", "noodles", "meat", "tomatoes",
+                                    "?"};
+    std::vector<std::string> expected{"sauce", "noodles", "meat", "tomatoes",
+                                      "marjoram"};
     addSecretIngredient(myList, friendsList);
     REQUIRE(myList == expected);
 }
@@ -149,7 +129,7 @@ TEST_CASE("scaleRecipe: scales down correctly", "[task_4]") {
 }
 
 TEST_CASE("scaleRecipe: empty recipe", "[task_4]") {
-    const std::vector<double> input{};  
+    const std::vector<double> input{};
     int portions{100};
     std::vector<double> expected{};
     std::vector<double> scaled{scaleRecipe(input, portions)};
@@ -158,8 +138,10 @@ TEST_CASE("scaleRecipe: empty recipe", "[task_4]") {
 
 TEST_CASE("Adds secret string ingredient", "[task_5]") {
     const std::string auntiesSecret{"mirkwood mushrooms"};
-    std::vector<std::string> myList{"sauce", "noodles", "meat", "tomatoes", "?"};
-    std::vector<std::string> expected{"sauce", "noodles", "meat", "tomatoes", "mirkwood mushrooms"};
+    std::vector<std::string> myList{"sauce", "noodles", "meat", "tomatoes",
+                                    "?"};
+    std::vector<std::string> expected{"sauce", "noodles", "meat", "tomatoes",
+                                      "mirkwood mushrooms"};
     addSecretIngredient(myList, auntiesSecret);
     REQUIRE(myList == expected);
 }

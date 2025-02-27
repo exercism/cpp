@@ -3,6 +3,8 @@
 
 namespace allergies {
 
+// TODO: add your solution here
+
 }  // namespace allergies
 
-#endif // ALLERGIES_H
+#endif  // ALLERGIES_H

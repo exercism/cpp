@@ -3,6 +3,8 @@
 
 namespace hexadecimal {
 
+// TODO: add your solution here
+
 }  // namespace hexadecimal
 
-#endif // HEXADECIMAL_H
+#endif  // HEXADECIMAL_H

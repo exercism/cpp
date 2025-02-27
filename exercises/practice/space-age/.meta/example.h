@@ -1,12 +1,10 @@
 #if !defined(SPACE_AGE_H)
 #define SPACE_AGE_H
 
-namespace space_age
-{
+namespace space_age {
 
-class space_age
-{
-public:
+class space_age {
+   public:
     explicit space_age(unsigned long long secs);
 
     unsigned long long seconds() const;
@@ -19,10 +17,10 @@ public:
     double on_uranus() const;
     double on_neptune() const;
 
-private:
+   private:
     unsigned long long seconds_;
 };
 
-}
+}  // namespace space_age
 
 #endif

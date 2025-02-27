@@ -3,12 +3,10 @@
 
 #include <string>
 
-namespace date_independent
-{
+namespace date_independent {
 
-class clock
-{
-public:
+class clock {
+   public:
     static clock at(int hour, int minute = 0);
 
     clock& plus(int minutes);
@@ -18,18 +16,17 @@ public:
 
     bool operator==(const clock& rhs) const;
 
-private:
+   private:
     clock(int hour, int minute);
     void clean();
     int hour_;
     int minute_;
 };
 
-inline bool operator!=(const clock& lhs, const clock& rhs)
-{
+inline bool operator!=(const clock& lhs, const clock& rhs) {
     return !(lhs == rhs);
 }
 
-}
+}  // namespace date_independent
 
 #endif
