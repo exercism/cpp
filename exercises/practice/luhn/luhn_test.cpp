@@ -110,8 +110,9 @@ TEST_CASE("using ascii value for doubled non-digit isn't allowed",
 }
 
 TEST_CASE(
-    "non-numeric, non-space char in the middle with a sum that's divisible by "
-    "10 isn't allowed",
+    // clang-format off
+    "non-numeric, non-space char in the middle with a sum that's divisible by 10 isn't allowed",
+    // clang-format on
     "[8b72ad26-c8be-49a2-b99c-bcc3bf631b33]") {
     REQUIRE(false == luhn::valid("59%59"));
 }

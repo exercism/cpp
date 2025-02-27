@@ -18,8 +18,9 @@ using namespace lasagna_master;
     }
 
 TEST_CASE(
-    "preparationTime: Preparation time for many layers with custom average "
-    "time",
+    // clang-format off
+    "preparationTime: Preparation time for many layers with custom average time",
+    // clang-format on
     "[task_1]") {
     std::vector<std::string> layers{
         "sauce",      "noodles", "béchamel", "meat",

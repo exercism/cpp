@@ -138,8 +138,9 @@ TEST_CASE("erases the element with the specified value from the list",
 }
 
 TEST_CASE(
-    "erases the element with the specified value from the list, re-assigns "
-    "tail",
+    // clang-format off
+    "erases the element with the specified value from the list, re-assigns tail",
+    // clang-format on
     "[59db191a-b17f-4ab7-9c5c-60711ec1d013]") {
     linked_list::List<int> llist{};
     llist.push(71);
@@ -152,8 +153,9 @@ TEST_CASE(
 }
 
 TEST_CASE(
-    "erases the element with the specified value from the list, re-assigns "
-    "head",
+    // clang-format off
+    "erases the element with the specified value from the list, re-assigns head",
+    // clang-format on
     "[58242222-5d39-415b-951d-8128247f8993]") {
     linked_list::List<int> llist{};
     llist.push(71);

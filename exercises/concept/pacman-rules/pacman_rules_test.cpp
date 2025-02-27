@@ -21,8 +21,9 @@ TEST_CASE("ghost does not get eaten because not touching ghost", "[task_1]") {
 }
 
 TEST_CASE(
-    "ghost does not get eaten because no power pellet is active, even if not "
-    "touching ghost",
+    // clang-format off
+    "ghost does not get eaten because no power pellet is active, even if not touching ghost",
+    // clang-format on
     "[task_1]") {
     REQUIRE_FALSE(can_eat_ghost(false, false));
 }
