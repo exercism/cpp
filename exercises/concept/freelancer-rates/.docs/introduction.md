@@ -19,7 +19,7 @@ A literal is a hard-coded number like `9241`.
 There are different integer literals for several bases of the representation.
 Decimal integer literals are the most common and use the digits `0` to `9`.
 By adding a special prefix, like `0x`, it is possible to use other bases.
-The example above shows the number `9421` in its four representations and prefixes.
+The example above shows the number `9241` in its four representations and prefixes.
 All variables are initialized to the same value.
 
 For more details on the different representation systems, take a look at [a small tutorial][cpp_numerical_bases].
