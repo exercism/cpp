@@ -143,7 +143,7 @@ case 3:
 default:
     book_house(group_size);
 }
-// book_apartment happens wheng roup_size is 2 or 3
+// book_apartment happens when group_size is 2 or 3
 ```
 
 [magic numbers]: https://en.wikipedia.org/wiki/Magic_number_(programming)
