@@ -5,6 +5,6 @@ namespace armstrong_numbers {
 
 bool is_armstrong_number(int number);
 
-} // namespace armstrong_numbers
+}  // namespace armstrong_numbers
 
-#endif // !ARMSTRONG_NUMBERS_H_
+#endif  // !ARMSTRONG_NUMBERS_H_

@@ -3,8 +3,7 @@
 
 #include <string>
 
-namespace trinary
-{
+namespace trinary {
 
 int to_decimal(std::string const &text);
 

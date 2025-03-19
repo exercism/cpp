@@ -1,56 +1,45 @@
-#include "crypto_square.h"
 #include <algorithm>
 #include <cctype>
 #include <iterator>
 
+#include "crypto_square.h"
+
 using namespace std;
 
-namespace
-{
+namespace {
 
-string to_lower_copy(string const& s)
-{
+string to_lower_copy(string const& s) {
     string cpy(s);
-    for (auto& c: cpy) {
+    for (auto& c : cpy) {
         c = tolower(c);
     }
     return cpy;
 }
 
-string normalize(string const& text)
-{
+string normalize(string const& text) {
     string result;
     copy_if(text.begin(), text.end(), back_inserter(result),
-        [](const char c) { return !isspace(c) && !ispunct(c); });
+            [](const char c) { return !isspace(c) && !ispunct(c); });
     return to_lower_copy(result);
 }
 
-}
+}  // namespace
 
-namespace crypto_square
-{
+namespace crypto_square {
 
-cipher::cipher(string const& text)
-    : text_(normalize(text))
-{
-}
+cipher::cipher(string const& text) : text_(normalize(text)) {}
 
-string cipher::normalize_plain_text() const
-{
-    return text_;
-}
+string cipher::normalize_plain_text() const { return text_; }
 
-size_t cipher::size() const
-{
+size_t cipher::size() const {
     size_t length = 0;
-    while (length*length < text_.size()) {
+    while (length * length < text_.size()) {
         ++length;
     }
     return length;
 }
 
-vector<string> cipher::plain_text_segments() const
-{
+vector<string> cipher::plain_text_segments() const {
     vector<string> segments;
     const size_t segment_size{size()};
     for (size_t i = 0; i < text_.length(); i += segment_size) {
@@ -59,8 +48,7 @@ vector<string> cipher::plain_text_segments() const
     return segments;
 }
 
-string cipher::cipher_text() const
-{
+string cipher::cipher_text() const {
     string s{normalized_cipher_text()};
     if (!s.empty()) {
         s.erase(remove(s.begin(), s.end(), ' '), s.end());
@@ -68,8 +56,7 @@ string cipher::cipher_text() const
     return s;
 }
 
-string cipher::normalized_cipher_text() const
-{
+string cipher::normalized_cipher_text() const {
     const auto num_rows = size();
     const auto plain = plain_text_segments();
     string result;
@@ -77,8 +64,7 @@ string cipher::normalized_cipher_text() const
         for (string const& s : plain) {
             if (s.length() > i) {
                 result += s[i];
-            }
-            else {
+            } else {
                 result += ' ';
             }
         }
@@ -90,4 +76,4 @@ string cipher::normalized_cipher_text() const
     return result;
 }
 
-}
+}  // namespace crypto_square

@@ -1,18 +1,16 @@
-#include "robot_name.h"
 #include <iomanip>
 #include <sstream>
 #include <stdexcept>
 
+#include "robot_name.h"
+
 using namespace std;
 
-namespace robot_name
-{
+namespace robot_name {
 
-namespace
-{
+namespace {
 
-string next_prefix(string const &prefix)
-{
+string next_prefix(string const &prefix) {
     string next{prefix};
     const string letters{"ABCDEFGHIJKLMNOPQRSTUVWXYZ"};
     if (prefix[1] == letters.back()) {
@@ -27,8 +25,7 @@ string next_prefix(string const &prefix)
     return next;
 }
 
-string generate_name()
-{
+string generate_name() {
     static string prefix = "AA";
     static int unit_number = 0;
     ostringstream buff;
@@ -40,16 +37,10 @@ string generate_name()
     return buff.str();
 }
 
-}
+}  // namespace
 
-robot::robot()
-    : name_(generate_name())
-{
-}
+robot::robot() : name_(generate_name()) {}
 
-void robot::reset()
-{
-    name_ = generate_name();
-}
+void robot::reset() { name_ = generate_name(); }
 
-}
+}  // namespace robot_name

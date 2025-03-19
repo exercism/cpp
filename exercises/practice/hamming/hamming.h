@@ -3,6 +3,8 @@
 
 namespace hamming {
 
+// TODO: add your solution here
+
 }  // namespace hamming
 
-#endif // HAMMING_H
+#endif  // HAMMING_H

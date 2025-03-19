@@ -3,6 +3,8 @@
 
 namespace raindrops {
 
+// TODO: add your solution here
+
 }  // namespace raindrops
 
-#endif // RAINDROPS_H
+#endif  // RAINDROPS_H

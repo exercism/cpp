@@ -1,7 +1,7 @@
-#include "parallel_letter_frequency.h"
-
 #include <algorithm>
 #include <cctype>
+
+#include "parallel_letter_frequency.h"
 
 // Apple Clang does not support C++17 parallel algorithms.
 #ifdef __apple_build_version__

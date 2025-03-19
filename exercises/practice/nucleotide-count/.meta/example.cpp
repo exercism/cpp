@@ -1,11 +1,10 @@
-#include "nucleotide_count.h"
 #include <stdexcept>
 
-namespace nucleotide_count
-{
+#include "nucleotide_count.h"
 
-std::map<char, int> count(std::string_view dna)
-{
+namespace nucleotide_count {
+
+std::map<char, int> count(std::string_view dna) {
     std::map<char, int> counter{{'A', 0}, {'C', 0}, {'G', 0}, {'T', 0}};
     for (auto nucleotide : dna) {
         auto it = counter.find(nucleotide);
@@ -17,4 +16,4 @@ std::map<char, int> count(std::string_view dna)
     return counter;
 }
 
-}
+}  // namespace nucleotide_count

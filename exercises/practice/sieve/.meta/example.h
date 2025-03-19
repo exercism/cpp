@@ -3,8 +3,7 @@
 
 #include <vector>
 
-namespace sieve
-{
+namespace sieve {
 
 std::vector<int> primes(int n);
 

@@ -3,6 +3,8 @@
 
 namespace triangle {
 
+// TODO: add your solution here
+
 }  // namespace triangle
 
-#endif // TRIANGLE_H
+#endif  // TRIANGLE_H

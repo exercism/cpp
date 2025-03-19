@@ -6,6 +6,6 @@
 namespace isogram {
 
 bool is_isogram(std::string const&);
-    
+
 }
-#endif // ISOGRAM_H
+#endif  // ISOGRAM_H
