@@ -13,16 +13,18 @@ The first one is related to creating a human, the other five are about handling 
 
 ## 1. Bring humans to the world of Troy
 
-For your model of Troy humans are the most important feature.
+For your model of Troy, humans are the most important feature.
 Your model human should be able to possess a _unique artifact_.
 They should also have the ability to manifest a _power_.
 These powers might affect other humans, so you also want to model if a human is influenced by some other power.
 
 You are provided with basic implementations of `artifact` and `power` structs.
-Implement a `human` struct (or class) that has a _smart-pointer_ to an `artifact` as `possession` member variable.
+Implement a `human` struct (or class) that has a _smart-pointer_ to an `artifact` member variable named `possession`.
 Each artifact can only be possessed by a single human at any given time.
 
-The `human` should also have variables for their `own_power` and `influenced_by`, which should be _smart-pointers_ to `powers`.
+A `human` must have two additional member variables.
+One holds their `own_power` and the other is a power they are `influenced_by`.
+Both `own_power` and `influenced_by` are _smart-pointers_ to `powers`.
 Each `power` might be owned by a single human, but also influence other humans at the same time.
 
 By default, humans are born without any artifact and neither own any powers nor are they influenced by them.
@@ -42,7 +44,7 @@ mindy_mccready.influenced_by;
 Your model is boring without the interaction of its parts.
 You want to create unique artifacts and give them to certain humans.
 
-Define the function `give_new_artifact` which returns nothing but takes a `human` and a `string`.
+Define the function `give_new_artifact` which returns nothing but takes a reference to a `human` and a `string`.
 With the `string` it should define a new `artifact` object and set the `possession` pointer of the `human` accordingly.
 The function should not return anything.
 
@@ -80,10 +82,10 @@ uzumaki.possession->name;
 
 ## 4. Give Power to the People
 
-The most exiting feature of Troy are the special powers, that people might wield.
+The most exciting feature of Troy are the special powers that people might wield.
 Some can smelt iron with their thoughts, while others can heal every wound instantly at nighttime.
 
-Define the function `manifest_power` which returns nothing but takes a `human` and a `string`.
+Define the function `manifest_power` which returns nothing but takes a reference to a `human` and a `string`.
 With the `string` it should define a new `power` object and set the `own_power` pointer of the `human` accordingly.
 The function should not return anything.
 
@@ -100,10 +102,12 @@ eleven.own_power->effect;
 What use are the greatest powers, if you cannot use them.
 Your model concentrates on humans, so you want to track the influence of powers.
 
-Write a _void_ function `use_power` that takes two humans, first: a caster and secondly: a target.
+Write a _void_ function `use_power` that takes two references to humans.
+The first human is the caster and the second represents the target.
 The target's `influenced_by` pointer should be pointed to the power of the caster.
 
-For simplicity, humans can only be influenced by a single power and this power stays in place even if the caster does not exist any longer.
+For simplicity, humans can only be influenced by a single power.
+This power stays in place even if the caster does not exist any longer.
 
 ```cpp
 human pamela_isley{};
