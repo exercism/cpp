@@ -12,6 +12,11 @@ Sometimes, the freelancer is offering to apply a discount on their daily rate (f
 
 Discounts are modeled as fractional numbers representing percentages, for example, `25.0` (25%).
 
+For this exercise, you may want to use the functions `floor()` and `ceil()` from the `<cmath>` library. You can include the library like so:
+```cpp
+#import <cmath>
+```
+
 ## 1. Calculate the daily rate given an hourly rate
 
 Implement a function called `daily_rate` to calculate the daily rate given an hourly rate as a parameter.

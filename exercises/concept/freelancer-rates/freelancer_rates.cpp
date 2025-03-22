@@ -15,7 +15,7 @@ double apply_discount(double before_discount, double discount) {
 }
 
 // monthly_rate calculates the monthly rate, given an hourly rate and a discount
-// The returned monthly rate is rounded up to the nearest integer.
+// The returned monthly rate is rounded up (take the ceiling) to the nearest integer.
 int monthly_rate(double hourly_rate, double discount) {
     // TODO: Implement a function to calculate the monthly rate, and apply a
     // discount.
