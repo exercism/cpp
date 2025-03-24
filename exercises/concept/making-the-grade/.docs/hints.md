@@ -24,7 +24,10 @@ Also being familiar with the following can help with completing the tasks:
 
 ## 3. Calculating Letter Grades
 
-- These are _lower thresholds_. The _lower threshold_ for a "D" is a score of **41**, since an "F" is **<= 40**.
+- The score needed to avoid failing is always 41, since an "F" is **<= 40**. The remaining score range, from 41 to the highest score, should be divided into four equal intervals, one for each letter grade.
+- Subtract 40 from the highest score to get the total range of scores that qualify for letter grades (A to D).
+- Divide this total range by 4 to get the size of each grade interval.
+- Add this interval size to 40 repeatedly to calculate the lower bounds for each letter grade.
 - `static_cast<int>` without parameters should round off increments nicely.
 - You are expected to return an array, not a vector.
 
