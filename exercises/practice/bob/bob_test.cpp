@@ -81,8 +81,8 @@ TEST_CASE("alternate_silence") {
 }
 
 TEST_CASE("multiple_line_question") {
-    REQUIRE("Whatever." ==
-            bob::hey("\nDoes this cryogenic chamber make me look fat?\nNo."));
+    REQUIRE("Sure." ==
+            bob::hey("\nDoes this cryogenic chamber make\n me look fat?"));
 }
 
 TEST_CASE("starting_with_whitespace") {
