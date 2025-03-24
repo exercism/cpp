@@ -91,6 +91,20 @@ TEST_CASE("Translate_RNA_strand_into_correct_protein_list") {
             protein_translation::proteins("AUGUUUUGG"));
 }
 
+TEST_CASE("Sequence_of_two_protein_codons_translates_into_proteins") {
+    REQUIRE(vector<string>{"Phenylalanine", "Phenylalanine"} ==
+            protein_translation::proteins("UUUUUU"));
+}
+
+TEST_CASE("Sequence_of_two_different_protein_codons_translates_into_proteins") {
+    REQUIRE(vector<string>{"Leucine", "Leucine"} ==
+            protein_translation::proteins("UUAUUG"));
+}
+
+TEST_CASE("Empty_RNA_sequence_results_in_no_proteins") {
+    REQUIRE(vector<string>{} == protein_translation::proteins(""));
+}
+
 TEST_CASE("Translation_stops_if_STOP_codon_at_beginning_of_sequence") {
     REQUIRE(vector<string>{} == protein_translation::proteins("UAGUGG"));
 }
@@ -113,6 +127,12 @@ TEST_CASE("Translation_stops_if_STOP_codon_in_middle_of_three-codon_sequence") {
 TEST_CASE("Translation_stops_if_STOP_codon_in_middle_of_six-codon_sequence") {
     REQUIRE(vector<string>{"Tryptophan", "Cysteine", "Tyrosine"} ==
             protein_translation::proteins("UGGUGUUAUUAAUGGUUU"));
+}
+
+TEST_CASE(
+    "Sequence_of_two_non-STOP_codons_does_not_translate_to_a_STOP_codon") {
+    REQUIRE(vector<string>{"Methionine", "Methionine"} ==
+            protein_translation::proteins("AUGAUG"));
 }
 
 #endif  // !EXERCISM_RUN_ALL_TESTS
