@@ -42,6 +42,18 @@ TEST_CASE("unpaired_nested_brackets") {
     REQUIRE(!matching_brackets::check("([{])"));
 }
 
+TEST_CASE("paired_and_wrong_nested_brackets_but_innermost_are_correct") {
+    REQUIRE(!matching_brackets::check("[({}])"));
+}
+
+TEST_CASE("early_unexpected_brackets") {
+    REQUIRE(!matching_brackets::check(")()"));
+}
+
+TEST_CASE("early_mismatched_brackets") {
+    REQUIRE(!matching_brackets::check("{)()"));
+}
+
 TEST_CASE("paired_wrong_nested_brackets") {
     REQUIRE(!matching_brackets::check("[({]})"));
 }
