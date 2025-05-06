@@ -85,8 +85,6 @@ Superhero* dianaPrince = &wonder_woman;
 dianaPrince->superpower = "Lasso of Truth";
 // Using the -> operator to access member variable superpower:
 std::cout << "Wonder Woman, possesses the mighty " << dianaPrince->superpower;
-// Memory cleanup:
-delete dianaPrince; 
 ```
 
 ## Pointers vs. references
