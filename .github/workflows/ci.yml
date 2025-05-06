@@ -11,16 +11,16 @@ on:
 jobs:
   linux-min:
     name: Linux Min Config
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     strategy:
       matrix:
-        compiler: [clang++-6.0, g++-10]
+        compiler: [clang++-15, g++-12]
     steps:
     - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
     - name: Install Dependencies
       # Boost must be installed only because the CMake version (3.12) can't
       # detect the installed Boost version (1.69)
-      run: sudo apt-get update && sudo apt-get -y install ninja-build libboost-date-time-dev clang-6.0 g++-10 g++-multilib
+      run: sudo apt-get update && sudo apt-get -y install ninja-build libboost-date-time-dev g++-multilib
     - name: Run tests with common Catch
       run: |
         cmake -G Ninja .
@@ -32,7 +32,7 @@ jobs:
   linux-latest:
     name: Linux Latest Config
     needs: [linux-min]
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     strategy:
       matrix:
         compiler: [clang++, g++]
