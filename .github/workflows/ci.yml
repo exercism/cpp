@@ -14,13 +14,13 @@ jobs:
     runs-on: ubuntu-22.04
     strategy:
       matrix:
-        compiler: [clang++-15.0, g++-12]
+        compiler: [clang++-15, g++-12]
     steps:
     - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
     - name: Install Dependencies
       # Boost must be installed only because the CMake version (3.12) can't
       # detect the installed Boost version (1.69)
-      run: sudo apt-get update && sudo apt-get -y install ninja-build libboost-date-time-dev clang-15.0 g++-12 g++-multilib
+      run: sudo apt-get update && sudo apt-get -y install ninja-build libboost-date-time-dev clang-15 g++-12 g++-multilib
     - name: Run tests with common Catch
       run: |
         cmake -G Ninja .
