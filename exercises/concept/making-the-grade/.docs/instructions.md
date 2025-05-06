@@ -74,15 +74,6 @@ letter_grades(88);
 // => {41, 53, 65, 77}
 ```
 
-### How to calculate the intervals
-
-The score needed to avoid failing is always 41.
-The remaining score range, from 41 to the highest score, should be divided into four equal intervals, one for each letter grade.
-
-- Subtract 40 from the highest score to get the total range of scores that qualify for letter grades (A to D).
-- Divide this total range by 4 to get the size of each grade interval.
-- Add this interval size to 40 repeatedly to calculate the lower bounds for each letter grade.
-
 ## 4. Matching Names to Scores
 
 You have exam scores in descending order, and the respective student names (sorted in the order of their exam scores).
