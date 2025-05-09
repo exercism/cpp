@@ -1244,6 +1244,23 @@
           "strings"
         ],
         "difficulty": 4
+      },
+      {
+        "slug": "book-store",
+        "name": "Book Store",
+        "uuid": "dc699152-b327-4493-a485-810a61af69df",
+        "practices": [
+          "vector-arrays",
+          "maps",
+          "auto"
+        ],
+        "prerequisites": [
+          "loops",
+          "comparisons",
+          "if-statements",
+          "booleans"
+        ],
+        "difficulty": 8
       }
     ],
     "foregone": [
