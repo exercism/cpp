@@ -1249,8 +1249,18 @@
         "slug": "affine-cipher",
         "name": "Affine Cipher",
         "uuid": "61374c16-0a99-4616-9244-a38919eafbe1",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "auto",
+          "literals"
+        ],
+        "prerequisites": [
+          "includes",
+          "namespaces",
+          "if-statements",
+          "booleans",
+          "headers",
+          "comparisons"
+        ],
         "difficulty": 6
       }
     ],
