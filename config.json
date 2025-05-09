@@ -1244,6 +1244,22 @@
           "strings"
         ],
         "difficulty": 4
+      },
+      {
+        "slug": "affine-cipher",
+        "name": "Affine Cipher",
+        "uuid": "61374c16-0a99-4616-9244-a38919eafbe1",
+        "practices": [
+          "math",
+          "exceptions"
+        ],
+        "prerequisites": [
+          "functions",
+          "comparisons",
+          "loops",
+          "booleans"
+        ],
+        "difficulty": 6
       }
     ],
     "foregone": [
