@@ -67,7 +67,10 @@
         "thread": "cpp",
         "cinttypes": "cpp",
         "typeinfo": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "charconv": "cpp",
+        "span": "cpp",
+        "format": "cpp"
     },
     "cSpell.words": [
         "stationprogress"
