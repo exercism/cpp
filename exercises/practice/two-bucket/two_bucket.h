@@ -1,5 +1,4 @@
-#ifndef TWO_BUCKET_H
-#define TWO_BUCKET_H
+#pragma once
 
 namespace two_bucket {
 
@@ -15,5 +14,3 @@ measure_result measure(int bucket1_capacity, int bucket2_capacity,
                        int target_volume, bucket_id start_bucket);
 
 }  // namespace two_bucket
-
-#endif  // TWO_BUCKET_H

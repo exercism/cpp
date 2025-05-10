@@ -1,5 +1,4 @@
-#if !defined(BEER_SONG_H)
-#define BEER_SONG_H
+#pragma once
 
 #include <string>
 
@@ -10,5 +9,3 @@ std::string sing(unsigned begin, unsigned end);
 std::string sing(unsigned bottles);
 
 }  // namespace beer_song
-
-#endif

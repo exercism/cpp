@@ -1,5 +1,4 @@
-#if !defined(ALLERGIES_H)
-#define ALLERGIES_H
+#pragma once
 
 #include <map>
 #include <string>
@@ -23,5 +22,3 @@ class allergy_test {
 };
 
 }  // namespace allergies
-
-#endif

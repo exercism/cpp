@@ -1,5 +1,4 @@
-#if !defined(CLOCK_H)
-#define CLOCK_H
+#pragma once
 
 #include <string>
 
@@ -28,5 +27,3 @@ inline bool operator!=(const clock& lhs, const clock& rhs) {
 }
 
 }  // namespace date_independent
-
-#endif

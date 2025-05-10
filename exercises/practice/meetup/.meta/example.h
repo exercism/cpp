@@ -1,5 +1,4 @@
-#if !defined(MEETUP_H)
-#define MEETUP_H
+#pragma once
 
 #include <boost/date_time/gregorian/gregorian.hpp>
 
@@ -188,5 +187,3 @@ class scheduler {
 };
 
 }  // namespace meetup
-
-#endif

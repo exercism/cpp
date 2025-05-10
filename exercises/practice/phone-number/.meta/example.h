@@ -1,5 +1,4 @@
-#if !defined(PHONE_NUMBER_H)
-#define PHONE_NUMBER_H
+#pragma once
 
 #include <string>
 
@@ -23,5 +22,3 @@ class phone_number {
 };
 
 }  // namespace phone_number
-
-#endif
