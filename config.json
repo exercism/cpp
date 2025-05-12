@@ -1244,6 +1244,14 @@
           "strings"
         ],
         "difficulty": 4
+      },
+      {
+        "slug": "relative-distance",
+        "name": "Relative Distance",
+        "uuid": "58877a11-7dc8-4caf-9d84-c4137a624791",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
       }
     ],
     "foregone": [
