@@ -19,8 +19,7 @@ However, if the name is missing, return the string:
 `two_fer.h`
 
 ```cpp
-#if !defined(TWO_FER_H)
-#define TWO_FER_H
+#pragma once
 
 #include <string>
 
@@ -28,8 +27,6 @@ namespace two_fer
 {
     std::string two_fer(const std::string& name = "you") noexcept;
 }
-
-#endif
 ```
 
 `two_fer.cpp`

@@ -1,10 +1,7 @@
-#if !defined(HAMMING_H)
-#define HAMMING_H
+#pragma once
 
 namespace hamming {
 
 // TODO: add your solution here
 
 }  // namespace hamming
-
-#endif  // HAMMING_H

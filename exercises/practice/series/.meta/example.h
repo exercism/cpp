@@ -1,5 +1,4 @@
-#if !defined(SERIES_H)
-#define SERIES_H
+#pragma once
 
 #include <string>
 #include <vector>
@@ -11,5 +10,3 @@ std::string digits(const std::string &input);
 std::vector<std::string> slice(const std::string &input, size_t window);
 
 }  // namespace series
-
-#endif

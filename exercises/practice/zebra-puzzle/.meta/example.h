@@ -1,5 +1,4 @@
-#if !defined(ZEBRA_PUZZLE_H)
-#define ZEBRA_PUZZLE_H
+#pragma once
 
 #include <string>
 
@@ -13,5 +12,3 @@ struct Solution {
 Solution solve();
 
 }  // namespace zebra_puzzle
-
-#endif

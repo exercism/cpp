@@ -1,5 +1,4 @@
-#if !defined(ANAGRAM_H)
-#define ANAGRAM_H
+#pragma once
 
 #include <string>
 #include <vector>
@@ -18,5 +17,3 @@ class anagram {
 };
 
 }  // namespace anagram
-
-#endif

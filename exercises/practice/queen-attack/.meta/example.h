@@ -1,5 +1,4 @@
-#if !defined(QUEEN_ATTACK_H)
-#define QUEEN_ATTACK_H
+#pragma once
 
 #include <string>
 #include <utility>
@@ -26,5 +25,3 @@ class chess_board {
 };
 
 }  // namespace queen_attack
-
-#endif

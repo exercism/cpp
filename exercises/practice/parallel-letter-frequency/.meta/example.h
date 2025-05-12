@@ -1,5 +1,4 @@
-#if !defined(PARALLEL_LETTER_FREQUENCY_H)
-#define PARALLEL_LETTER_FREQUENCY_H
+#pragma once
 
 #include <string_view>
 #include <unordered_map>
@@ -11,5 +10,3 @@ namespace parallel_letter_frequency {
     std::vector<std::string_view> const& texts);
 
 }
-
-#endif

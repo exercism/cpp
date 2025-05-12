@@ -20,8 +20,7 @@ So if you were told someone were 1,000,000,000 seconds old, you should be able t
 `space-age.h`
 
 ```cpp
-#if !defined(SPACE_AGE_H)
-#define SPACE_AGE_H
+#pragma once
 
 namespace space_age
 {
@@ -46,8 +45,6 @@ private:
 };
 
 }
-
-#endif
 ```
 
 `space_age.cpp`

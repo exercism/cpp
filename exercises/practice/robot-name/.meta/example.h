@@ -1,5 +1,4 @@
-#if !defined(ROBOT_NAME_H)
-#define ROBOT_NAME_H
+#pragma once
 
 #include <string>
 
@@ -18,5 +17,3 @@ class robot {
 };
 
 }  // namespace robot_name
-
-#endif
