@@ -1244,6 +1244,21 @@
           "strings"
         ],
         "difficulty": 4
+      },
+      {
+        "slug": "baffling-birthdays",
+        "name": "Baffling Birthdays",
+        "uuid": "1886bed2-3985-4323-a689-22b1a5c75e38",
+        "practices": [
+          "randomness",
+          "datetimes"
+        ],
+        "prerequisites": [
+          "datetimes",
+          "randomness",
+          "numbers"
+        ],
+        "difficulty": 6
       }
     ],
     "foregone": [
