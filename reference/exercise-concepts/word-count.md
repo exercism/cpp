@@ -37,8 +37,7 @@ fled: 1
 `"word_count.h"`
 
 ```cpp
-#if !defined(WORD_COUNT_H)
-#define WORD_COUNT_H
+#pragma once
 
 #include <map>
 #include <string>
@@ -49,8 +48,6 @@ namespace word_count
 std::map<std::string, int> words(std::string const& text);
 
 }
-
-#endif
 ```
 
 `word_count.cpp`

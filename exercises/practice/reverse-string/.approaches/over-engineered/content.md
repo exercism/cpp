@@ -2,8 +2,7 @@
 
 **reverse_string.h**
 ```cpp
-#ifndef REVERSE_STRING_H
-#define REVERSE_STRING_H
+#pragma once
 
 #include <string>
 
@@ -15,8 +14,6 @@ namespace reverse_string
     [[nodiscard]] std::string reverse_string(std::string_view str);
     [[nodiscard]] std::string reverse_string(const char* str);
 }
-
-#endif // REVERSE_STRING_H
 ```
 
 **reverse_string.cpp**

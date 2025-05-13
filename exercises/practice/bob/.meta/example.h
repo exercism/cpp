@@ -1,5 +1,4 @@
-#if !defined(BOB_H)
-#define BOB_H
+#pragma once
 
 #include <string>
 
@@ -8,5 +7,3 @@ namespace bob {
 std::string hey(std::string const& text);
 
 }
-
-#endif

@@ -1,10 +1,7 @@
-#if !defined(ANAGRAM_H)
-#define ANAGRAM_H
+#pragma once
 
 namespace anagram {
 
 // TODO: add your solution here
 
 }  // namespace anagram
-
-#endif  // ANAGRAM_H

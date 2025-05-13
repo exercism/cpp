@@ -1,5 +1,4 @@
-#if !defined(PERFECT_NUMBERS_H)
-#define PERFECT_NUMBERS_H
+#pragma once
 
 namespace perfect_numbers {
 enum class classification { deficient, perfect, abundant };
@@ -7,5 +6,3 @@ enum class classification { deficient, perfect, abundant };
 classification classify(int n);
 
 }  // namespace perfect_numbers
-
-#endif

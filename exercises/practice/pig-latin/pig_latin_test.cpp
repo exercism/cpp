@@ -91,6 +91,13 @@ TEST_CASE("y is treated like a vowel at the end of a consonant cluster",
           "[adc90017-1a12-4100-b595-e346105042c7]") {
     REQUIRE("ythmrhay" == pig_latin::translate("rhythm"));
 }
+// clang-format off
+TEST_CASE(
+    "first_letter_and_ay_are_moved_to_the_end_of_words_that_start_with_consonants_->_word_beginning_with_consonant_and_vowel_containing_qu",
+    "[e59dbbe8-ccee-4619-a8e9-ce017489bfc0]") {
+    REQUIRE("iquidlay" == pig_latin::translate("liquid"));
+}
+// clang-format on
 
 TEST_CASE("y as second letter in two letter word",
           "[29b4ca3d-efe5-4a95-9a54-8467f2e5e59a]") {

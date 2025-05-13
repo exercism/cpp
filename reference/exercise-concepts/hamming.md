@@ -9,8 +9,7 @@ Calculate the Hamming Distance between two strings.
 `hamming.h`
 
 ```cpp
-#ifndef HAMMING_H
-#define HAMMING_H
+#pragma once
 
 #include <cstddef>
 
@@ -18,8 +17,6 @@ namespace hamming
 {
     std::size_t compute(const std::string& s1, const std::string& s2);
 }
-
-#endif
 ```
 
 `hamming.cpp`
