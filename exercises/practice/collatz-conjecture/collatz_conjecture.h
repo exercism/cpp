@@ -1,8 +1,7 @@
-#if !defined(COLLATZ_CONJECTURE_H)
-#define COLLATZ_CONJECTURE_H
+#pragma once
 
 namespace collatz_conjecture {
 
-}  // namespace collatz_conjecture
+// TODO: add your solution here
 
-#endif // COLLATZ_CONJECTURE_H
+}  // namespace collatz_conjecture

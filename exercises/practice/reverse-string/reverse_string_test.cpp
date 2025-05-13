@@ -5,7 +5,6 @@
 #include "test/catch.hpp"
 #endif
 
-
 /*
 If property based testing tools are available, a good property to test is reversing a string twice: reverse(reverse(string)) == string
 */

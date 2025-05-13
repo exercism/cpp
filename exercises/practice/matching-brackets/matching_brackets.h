@@ -1,8 +1,7 @@
-#if !defined(MATCHING_BRACKETS_H)
-#define MATCHING_BRACKETS_H
+#pragma once
 
 namespace matching_brackets {
 
-}  // namespace matching_brackets
+// TODO: add your solution here
 
-#endif // MATCHING_BRACKETS_H
+}  // namespace matching_brackets

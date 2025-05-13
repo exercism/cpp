@@ -1,8 +1,7 @@
-#if !defined(ETL_H)
-#define ETL_H
+#pragma once
 
 namespace etl {
 
-}  // namespace etl
+// TODO: add your solution here
 
-#endif // ETL_H
+}  // namespace etl

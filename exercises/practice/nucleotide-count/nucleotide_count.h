@@ -1,8 +1,7 @@
-#if !defined(NUCLEOTIDE_COUNT_H)
-#define NUCLEOTIDE_COUNT_H
+#pragma once
 
 namespace nucleotide_count {
 
-}  // namespace nucleotide_count
+// TODO: add your solution here
 
-#endif // NUCLEOTIDE_COUNT_H
+}  // namespace nucleotide_count

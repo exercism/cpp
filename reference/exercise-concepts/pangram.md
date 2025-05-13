@@ -13,8 +13,7 @@ The alphabet used consists of ASCII letters a to z, inclusive, and is case insen
 `pangram.h`
 
 ```cpp
-#ifndef PANGRAM_H
-#define PANGRAM_H
+#pragma once
 
 #include <string>
 
@@ -23,8 +22,6 @@ namespace pangram {
 bool is_pangram(const std::string& s);
 
 } // namespace pangram
-
-#endif // PANGRAM_H
 ```
 
 `pangram.cpp`

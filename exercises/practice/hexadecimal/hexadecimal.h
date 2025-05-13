@@ -1,8 +1,7 @@
-#if !defined(HEXADECIMAL_H)
-#define HEXADECIMAL_H
+#pragma once
 
 namespace hexadecimal {
 
-}  // namespace hexadecimal
+// TODO: add your solution here
 
-#endif // HEXADECIMAL_H
+}  // namespace hexadecimal

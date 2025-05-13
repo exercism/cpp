@@ -1,13 +1,12 @@
-#include "raindrops.h"
 #include <sstream>
+
+#include "raindrops.h"
 
 using namespace std;
 
-namespace raindrops
-{
+namespace raindrops {
 
-string convert(int drops)
-{
+string convert(int drops) {
     const int pling_factor{3};
     const int plang_factor{5};
     const int plong_factor{7};
@@ -27,4 +26,4 @@ string convert(int drops)
     return result.str();
 }
 
-}
+}  // namespace raindrops

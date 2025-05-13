@@ -1,8 +1,7 @@
-#if !defined(SAY_H)
-#define SAY_H
+#pragma once
 
 namespace say {
 
-}  // namespace say
+// TODO: add your solution here
 
-#endif // SAY_H
+}  // namespace say

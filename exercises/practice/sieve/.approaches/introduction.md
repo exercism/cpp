@@ -11,13 +11,11 @@ Something to consider is to keep the number of allocations and iterations at a m
 
 **sieve.h**
 ```cpp
-#if !defined(SIEVE_H)
-#define SIEVE_H
+#pragma once
 #include <vector>
 namespace sieve {
     std::vector<int> primes(int);
 }  // namespace sieve
-#endif // SIEVE_H
 ```
 
 **sieve.cpp**

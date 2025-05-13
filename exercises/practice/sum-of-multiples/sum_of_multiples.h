@@ -1,8 +1,7 @@
-#if !defined(SUM_OF_MULTIPLES_H)
-#define SUM_OF_MULTIPLES_H
+#pragma once
 
 namespace sum_of_multiples {
 
-}  // namespace sum_of_multiples
+// TODO: add your solution here
 
-#endif // SUM_OF_MULTIPLES_H
+}  // namespace sum_of_multiples

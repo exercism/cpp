@@ -64,6 +64,20 @@ of the Microsoft Visual C++ compiler.
 
 You should be able to use other integrated IDE's such as JetBrains' CLion in a similar manner.
 
+### Installing Boost on Windows
+
+The `meetup` and `gigasecond` exercises depend on the [Boost][boost-website] libraries.
+The following steps describe how to set that up.
+
+1. Download the [prebuilt windows libraries][sourceforge-boost-binaries] for Boost.
+   - The exercises require a minimum Boost version of 1.58.
+   - You can find the version of MSVC by clicking "Modify" in the Visual Studio Installer.
+1. Extract the libraries to a local folder.
+1. Set the `BOOST_ROOT` environment variable to the folder where you installed the Boost libraries.
+1. If you had Visual Studio open while doing this, close it to make sure the value of `BOOST_ROOT` gets picked up.
+1. Start Visual Studio and open the folder containing the `gigasecond` or `meetup` exercise.
+1. The "Startup Item" should be `gigasecond.exe` or `meetup.exe` and you should get build errors in either `gigasecond_test.cpp` or `meetup_test.cpp` telling you to implement missing items, similar to the other exercises.
+
 ## Linux
 
 All recent Linux distribution releases have compatible C++14 compilers, you
@@ -86,3 +100,7 @@ to figure out how to install the minimum compiler version.
 MacOS users can install GCC with [Homebrew](http://brew.sh/) via
 `brew install gcc`.
 
+
+
+[boost-website]: https://www.boost.org/
+[sourceforge-boost-binaries]: https://sourceforge.net/projects/boost/files/boost-binaries/

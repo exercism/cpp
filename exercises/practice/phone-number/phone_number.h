@@ -1,8 +1,7 @@
-#if !defined(PHONE_NUMBER_H)
-#define PHONE_NUMBER_H
+#pragma once
 
 namespace phone_number {
 
-}  // namespace phone_number
+// TODO: add your solution here
 
-#endif // PHONE_NUMBER_H
+}  // namespace phone_number

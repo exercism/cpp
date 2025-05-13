@@ -2,8 +2,7 @@
 
 **reverse_string.h**
 ```cpp
-#ifndef REVERSE_STRING_H
-#define REVERSE_STRING_H
+#pragma once
 
 #include <string>
 
@@ -11,8 +10,6 @@ namespace reverse_string
 {
     std::string reverse_string(std::string_view str);
 }
-
-#endif // REVERSE_STRING_H
 ```
 
 **reverse_string.cpp**
@@ -42,7 +39,7 @@ void recursive_helper(std::string_view input, std::string& output)
 std::string reverse_string(std::string_view original)
 {
     std::string result;
-    helper(original, result);
+    recursive_helper(original, result);
     return result;
 }
 

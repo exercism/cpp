@@ -1,13 +1,9 @@
-#if !defined(TRINARY_H)
-#define TRINARY_H
+#pragma once
 
 #include <string>
 
-namespace trinary
-{
+namespace trinary {
 
 int to_decimal(std::string const &text);
 
 }
-
-#endif

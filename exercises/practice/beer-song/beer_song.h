@@ -1,8 +1,7 @@
-#if !defined(BEER_SONG_H)
-#define BEER_SONG_H
+#pragma once
 
 namespace beer_song {
 
-}  // namespace beer_song
+// TODO: add your solution here
 
-#endif // BEER_SONG_H
+}  // namespace beer_song

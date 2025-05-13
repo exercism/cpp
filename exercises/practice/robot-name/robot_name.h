@@ -1,8 +1,7 @@
-#if !defined(ROBOT_NAME_H)
-#define ROBOT_NAME_H
+#pragma once
 
 namespace robot_name {
 
-}  // namespace robot_name
+// TODO: add your solution here
 
-#endif // ROBOT_NAME_H
+}  // namespace robot_name

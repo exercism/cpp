@@ -1,8 +1,7 @@
-#if !defined(WORD_COUNT_H)
-#define WORD_COUNT_H
+#pragma once
 
 namespace word_count {
 
-}  // namespace word_count
+// TODO: add your solution here
 
-#endif // WORD_COUNT_H
+}  // namespace word_count

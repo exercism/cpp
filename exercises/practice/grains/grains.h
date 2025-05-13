@@ -1,8 +1,7 @@
-#if !defined(GRAINS_H)
-#define GRAINS_H
+#pragma once
 
 namespace grains {
 
-}  // namespace grains
+// TODO: add your solution here
 
-#endif // GRAINS_H
+}  // namespace grains

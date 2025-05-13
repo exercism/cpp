@@ -1,8 +1,7 @@
-#if !defined(ATBASH_CIPHER_H)
-#define ATBASH_CIPHER_H
+#pragma once
 
 namespace atbash_cipher {
 
-}  // namespace atbash_cipher
+// TODO: add your solution here
 
-#endif // ATBASH_CIPHER_H
+}  // namespace atbash_cipher

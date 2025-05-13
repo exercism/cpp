@@ -1,8 +1,7 @@
-#if !defined(CIRCULAR_BUFFER_H)
-#define CIRCULAR_BUFFER_H
+#pragma once
 
 namespace circular_buffer {
 
-}  // namespace circular_buffer
+// TODO: add your solution here
 
-#endif // CIRCULAR_BUFFER_H
+}  // namespace circular_buffer

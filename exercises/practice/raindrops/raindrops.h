@@ -1,8 +1,7 @@
-#if !defined(RAINDROPS_H)
-#define RAINDROPS_H
+#pragma once
 
 namespace raindrops {
 
-}  // namespace raindrops
+// TODO: add your solution here
 
-#endif // RAINDROPS_H
+}  // namespace raindrops

@@ -5,23 +5,33 @@
 #include "test/catch.hpp"
 #endif
 
+// About the REQUIRE_THAT macro:
+// If unsure about the syntax of this test see:
+// https://github.com/catchorg/Catch2/blob/devel/docs/comparing-floating-point-numbers.md#withinrel
+
 using namespace std;
 
-TEST_CASE("it's the hourly_rate times 8", "[task_1]") { REQUIRE(daily_rate(50) == 400.0); }
+TEST_CASE("it's the hourly_rate times 8", "[task_1]") {
+    REQUIRE_THAT(daily_rate(50), Catch::Matchers::WithinRel(400.0, 0.000001));
+}
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
 
-TEST_CASE("it always returns a float", "[task_1]") { REQUIRE(daily_rate(60) == 480.0); }
+TEST_CASE("it always returns a float", "[task_1]") {
+    REQUIRE_THAT(daily_rate(60), Catch::Matchers::WithinRel(480.0, 0.000001));
+}
 
-TEST_CASE("it does not round", "[task_1]") { REQUIRE(daily_rate(55.1) == 440.8); }
+TEST_CASE("it does not round", "[task_1]") {
+    REQUIRE_THAT(daily_rate(55.1), Catch::Matchers::WithinRel(440.8, 0.000001));
+}
 
-TEST_CASE("a discount of 10 percent leaves 90 percent of the original price", "[task_2]") {
-    REQUIRE(apply_discount(140.0, 10) == 126.0);
+TEST_CASE("a discount of 10 percent leaves 90 percent of the original price",
+          "[task_2]") {
+    REQUIRE_THAT(apply_discount(140.0, 10),
+                 Catch::Matchers::WithinRel(126.0, 0.000001));
 }
 
 TEST_CASE("it doesn't round", "[task_2]") {
-    // If unsure about the syntax of this test see:
-    // https://github.com/catchorg/Catch2/blob/devel/docs/comparing-floating-point-numbers.md#withinrel
     REQUIRE_THAT(apply_discount(111.11, 13.5),
                  Catch::Matchers::WithinRel(96.11015, 0.000001));
 }

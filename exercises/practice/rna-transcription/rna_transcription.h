@@ -1,8 +1,7 @@
-#if !defined(RNA_TRANSCRIPTION_H)
-#define RNA_TRANSCRIPTION_H
+#pragma once
 
 namespace rna_transcription {
 
-}  // namespace rna_transcription
+// TODO: add your solution here
 
-#endif // RNA_TRANSCRIPTION_H
+}  // namespace rna_transcription

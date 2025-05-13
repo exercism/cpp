@@ -1,7 +1,7 @@
 #include "knapsack.h"
 
-namespace knapsack
-{
+namespace knapsack {
 
-} // namespace knapsack
+// TODO: add your solution here
 
+}  // namespace knapsack

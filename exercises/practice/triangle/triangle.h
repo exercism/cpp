@@ -1,8 +1,7 @@
-#if !defined(TRIANGLE_H)
-#define TRIANGLE_H
+#pragma once
 
 namespace triangle {
 
-}  // namespace triangle
+// TODO: add your solution here
 
-#endif // TRIANGLE_H
+}  // namespace triangle

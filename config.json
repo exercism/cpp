@@ -196,6 +196,30 @@
           "references",
           "headers"
         ]
+      },
+      {
+        "slug": "power-of-troy",
+        "name": "Power of Troy",
+        "uuid": "9f5e64e5-2838-4237-9cc6-fef500aacd7b",
+        "concepts": [
+          "auto",
+          "smart-pointers"
+        ],
+        "prerequisites": [
+          "pointers"
+        ]
+      },
+      {
+        "slug": "speedywagon",
+        "name": "Speedywagon Foundation",
+        "uuid": "ed2148a5-674c-4660-a050-b11ab240b876",
+        "concepts": [
+          "pointers"
+        ],
+        "prerequisites": [
+          "classes",
+          "references"
+        ]
       }
     ],
     "practice": [
@@ -302,7 +326,7 @@
       },
       {
         "slug": "two-fer",
-        "name": "Two Fer",
+        "name": "Two-Fer",
         "uuid": "95a162a4-d825-4874-9e2f-014787cbdfb5",
         "practices": [],
         "prerequisites": [],
@@ -997,7 +1021,7 @@
       },
       {
         "slug": "isbn-verifier",
-        "name": "Isbn Verifier",
+        "name": "ISBN Verifier",
         "uuid": "5fcc6fd8-1dc7-4493-970a-731c7602b229",
         "practices": [],
         "prerequisites": [],
@@ -1010,7 +1034,7 @@
       },
       {
         "slug": "linked-list",
-        "name": "Linked List ",
+        "name": "Linked List",
         "uuid": "6f6c55dd-db6b-40ca-96f2-d9b7232dcbb0",
         "practices": [],
         "prerequisites": [],
@@ -1024,7 +1048,7 @@
       },
       {
         "slug": "simple-linked-list",
-        "name": "Simple linked list",
+        "name": "Simple Linked List",
         "uuid": "ffccabe9-9779-4914-9cff-c6f5696c8afe",
         "practices": [
           "pointers"
@@ -1213,11 +1237,11 @@
         "uuid": "8a7f6f8c-ff36-4afd-9ab3-6dbd355d0263",
         "practices": [],
         "prerequisites": [
-            "basics",
-            "namespaces",
-            "loops",
-            "numbers",
-            "strings"
+          "basics",
+          "namespaces",
+          "loops",
+          "numbers",
+          "strings"
         ],
         "difficulty": 4
       }

@@ -1,16 +1,13 @@
-#if !defined(GRADE_SCHOOL_H)
-#define GRADE_SCHOOL_H
+#pragma once
 
 #include <map>
 #include <string>
 #include <vector>
 
-namespace grade_school
-{
+namespace grade_school {
 
-class school
-{
-public:
+class school {
+   public:
     const std::map<int, std::vector<std::string>>& roster() const {
         return roster_;
     }
@@ -19,10 +16,8 @@ public:
 
     std::vector<std::string> grade(int grade) const;
 
-private:
+   private:
     std::map<int, std::vector<std::string>> roster_;
 };
 
-}
-
-#endif
+}  // namespace grade_school

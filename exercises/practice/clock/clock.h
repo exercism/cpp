@@ -1,8 +1,7 @@
-#if !defined(CLOCK_H)
-#define CLOCK_H
+#pragma once
 
 namespace date_independent {
 
-}  // namespace date_independent
+// TODO: add your solution here
 
-#endif // CLOCK_H
+}  // namespace date_independent

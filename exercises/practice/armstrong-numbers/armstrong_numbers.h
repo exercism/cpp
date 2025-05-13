@@ -1,8 +1,7 @@
-#if !defined(ARMSTRONG_NUMBERS_H)
-#define ARMSTRONG_NUMBERS_H
+#pragma once
 
 namespace armstrong_numbers {
 
-}  // namespace armstrong_numbers
+// TODO: add your solution here
 
-#endif // ARMSTRONG_NUMBERS_H
+}  // namespace armstrong_numbers

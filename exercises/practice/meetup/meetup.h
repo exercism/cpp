@@ -1,8 +1,7 @@
-#if !defined(MEETUP_H)
-#define MEETUP_H
+#pragma once
 
 namespace meetup {
 
-}  // namespace meetup
+// TODO: add your solution here
 
-#endif // MEETUP_H
+}  // namespace meetup

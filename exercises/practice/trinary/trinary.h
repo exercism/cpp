@@ -1,8 +1,7 @@
-#if !defined(TRINARY_H)
-#define TRINARY_H
+#pragma once
 
 namespace trinary {
 
-}  // namespace trinary
+// TODO: add your solution here
 
-#endif // TRINARY_H
+}  // namespace trinary

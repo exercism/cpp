@@ -1,13 +1,9 @@
-#if !defined(RAINDROPS_H)
-#define RAINDROPS_H
+#pragma once
 
 #include <string>
 
-namespace raindrops
-{
+namespace raindrops {
 
 std::string convert(int drops);
 
 }
-
-#endif

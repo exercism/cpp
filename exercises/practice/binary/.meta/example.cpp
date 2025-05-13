@@ -1,12 +1,10 @@
 #include "binary.h"
 
-namespace binary
-{
+namespace binary {
 
-int convert(std::string const& text)
-{
+int convert(std::string const& text) {
     int result = 0;
-    if (text.length() > sizeof(int)*8-1) {
+    if (text.length() > sizeof(int) * 8 - 1) {
         return 0;
     }
     for (const char x : text) {
@@ -20,4 +18,4 @@ int convert(std::string const& text)
     return result;
 }
 
-}
+}  // namespace binary

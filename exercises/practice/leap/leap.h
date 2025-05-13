@@ -1,8 +1,7 @@
-#if !defined(LEAP_H)
-#define LEAP_H
+#pragma once
 
 namespace leap {
 
-}  // namespace leap
+// TODO: add your solution here
 
-#endif // LEAP_H
+}  // namespace leap

@@ -1,8 +1,7 @@
-#if !defined(GIGASECOND_H)
-#define GIGASECOND_H
+#pragma once
 
 namespace gigasecond {
 
-}  // namespace gigasecond
+// TODO: add your solution here
 
-#endif // GIGASECOND_H
+}  // namespace gigasecond

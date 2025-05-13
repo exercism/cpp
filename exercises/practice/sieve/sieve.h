@@ -1,8 +1,7 @@
-#if !defined(SIEVE_H)
-#define SIEVE_H
+#pragma once
 
 namespace sieve {
 
-}  // namespace sieve
+// TODO: add your solution here
 
-#endif // SIEVE_H
+}  // namespace sieve

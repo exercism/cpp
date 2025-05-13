@@ -1,8 +1,7 @@
-#if !defined(PROTEIN_TRANSLATION_H)
-#define PROTEIN_TRANSLATION_H
+#pragma once
 
 namespace protein_translation {
 
-}  // namespace protein_translation
+// TODO: add your solution here
 
-#endif // PROTEIN_TRANSLATION_H
+}  // namespace protein_translation

@@ -1,8 +1,7 @@
-#if !defined(ROBOT_SIMULATOR_H)
-#define ROBOT_SIMULATOR_H
+#pragma once
 
 namespace robot_simulator {
 
-}  // namespace robot_simulator
+// TODO: add your solution here
 
-#endif // ROBOT_SIMULATOR_H
+}  // namespace robot_simulator

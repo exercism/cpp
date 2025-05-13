@@ -169,7 +169,7 @@ std::string reverse_string(std::string_view original)
     std::string result;
 
     // pass it to the recursive helper function
-    helper(original, result);
+    recursive_helper(original, result);
 
     // result now contains a reversed version of the string
     return result;

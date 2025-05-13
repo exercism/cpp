@@ -1,15 +1,10 @@
-#ifndef KNAPSACK_H
-#define KNAPSACK_H
+#pragma once
 
-namespace knapsack
-{
+namespace knapsack {
 
-struct Item
-{
+struct Item {
     int weight;
     int value;
 };
 
-} // namespace knapsack
-
-#endif // KNAPSACK_H
+}  // namespace knapsack

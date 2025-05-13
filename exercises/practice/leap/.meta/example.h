@@ -1,14 +1,9 @@
-#if !defined(LEAP_H)
-#define LEAP_H
+#pragma once
 
-namespace leap
-{
+namespace leap {
 
-inline bool is_leap_year(int year)
-{
+inline bool is_leap_year(int year) {
     return (year % 100) ? (year % 4 == 0) : (year % 400 == 0);
 }
 
-}
-
-#endif
+}  // namespace leap

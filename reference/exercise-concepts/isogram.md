@@ -20,8 +20,7 @@ The word `isograms`, however, is not an isogram, because the `s` repeats.
 `isogram.h`
 
 ```cpp
-#ifndef ISOGRAM_H
-#define ISOGRAM_H
+#pragma once
 
 #include <string>
 
@@ -30,8 +29,6 @@ namespace isogram {
 bool is_isogram(const std::string& word);
 
 } // namespace isogram
-
-#endif // ISOGRAM_H
 ```
 
 `isogram.cpp`

@@ -55,9 +55,12 @@ if(${EXERCISM_RUN_ALL_TESTS})
 endif()
 
 # Tell MSVC not to warn us about unchecked iterators in debug builds
+# Treat warnings as errors
+# Treat type conversion warnings C4244 and C4267 as level 4 warnings, i.e. ignore them in level 3
 if(${MSVC})
     set_target_properties(${exercise} PROPERTIES
-        COMPILE_DEFINITIONS_DEBUG _SCL_SECURE_NO_WARNINGS)
+        COMPILE_DEFINITIONS_DEBUG _SCL_SECURE_NO_WARNINGS
+        COMPILE_FLAGS "/WX /w44244 /w44267")
 endif()
 
 # Run the tests on every build

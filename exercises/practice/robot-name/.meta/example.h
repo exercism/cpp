@@ -1,24 +1,19 @@
-#if !defined(ROBOT_NAME_H)
-#define ROBOT_NAME_H
+#pragma once
 
 #include <string>
 
-namespace robot_name
-{
+namespace robot_name {
 
-class robot
-{
-public:
+class robot {
+   public:
     robot();
 
     std::string const &name() const { return name_; }
 
     void reset();
 
-private:
+   private:
     std::string name_;
 };
 
-}
-
-#endif
+}  // namespace robot_name

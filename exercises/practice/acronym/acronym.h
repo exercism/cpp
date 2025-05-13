@@ -1,8 +1,7 @@
-#if !defined(ACRONYM_H)
-#define ACRONYM_H
+#pragma once
 
 namespace acronym {
 
-}  // namespace acronym
+// TODO: add your solution here
 
-#endif // ACRONYM_H
+}  // namespace acronym

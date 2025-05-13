@@ -1,8 +1,7 @@
-#if !defined(DARTS_H)
-#define DARTS_H
+#pragma once
 
 namespace darts {
 
-} // namespace darts
+// TODO: add your solution here
 
-#endif //DARTS_H
+}  // namespace darts

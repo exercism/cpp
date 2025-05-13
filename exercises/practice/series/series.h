@@ -1,8 +1,7 @@
-#if !defined(SERIES_H)
-#define SERIES_H
+#pragma once
 
 namespace series {
 
-}  // namespace series
+// TODO: add your solution here
 
-#endif // SERIES_H
+}  // namespace series

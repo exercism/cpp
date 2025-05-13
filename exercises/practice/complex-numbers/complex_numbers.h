@@ -1,8 +1,7 @@
-#if !defined(COMPLEX_NUMBERS_H)
-#define COMPLEX_NUMBERS_H
+#pragma once
 
 namespace complex_numbers {
 
-}  // namespace complex_numbers
+// TODO: add your solution here
 
-#endif  // COMPLEX_NUMBERS_H
+}  // namespace complex_numbers

@@ -1,8 +1,7 @@
-#if !defined(SPACE_AGE_H)
-#define SPACE_AGE_H
+#pragma once
 
 namespace space_age {
 
-}  // namespace space_age
+// TODO: add your solution here
 
-#endif // SPACE_AGE_H
+}  // namespace space_age

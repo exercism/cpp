@@ -1,8 +1,7 @@
-#if !defined(PANGRAM_H)
-#define PANGRAM_H
+#pragma once
 
 namespace pangram {
 
-}  // namespace pangram
+// TODO: add your solution here
 
-#endif // PANGRAM_H
+}  // namespace pangram

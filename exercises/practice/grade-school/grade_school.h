@@ -1,8 +1,7 @@
-#if !defined(GRADE_SCHOOL_H)
-#define GRADE_SCHOOL_H
+#pragma once
 
 namespace grade_school {
 
-}  // namespace grade_school
+// TODO: add your solution here
 
-#endif // GRADE_SCHOOL_H
+}  // namespace grade_school

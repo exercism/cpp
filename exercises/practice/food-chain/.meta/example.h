@@ -1,15 +1,11 @@
-#if !defined(FOOD_CHAIN_H)
-#define FOOD_CHAIN_H
+#pragma once
 
 #include <string>
 
-namespace food_chain
-{
+namespace food_chain {
 
 std::string verse(unsigned which);
 std::string verses(unsigned begin, unsigned end);
 std::string sing();
 
-}
-
-#endif
+}  // namespace food_chain

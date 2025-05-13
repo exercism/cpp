@@ -1,15 +1,12 @@
-#if !defined(CRYPTO_SQUARE_H)
-#define CRYPTO_SQUARE_H
+#pragma once
 
 #include <string>
 #include <vector>
 
-namespace crypto_square
-{
+namespace crypto_square {
 
-class cipher
-{
-public:
+class cipher {
+   public:
     cipher(std::string const& text);
 
     std::string normalize_plain_text() const;
@@ -22,10 +19,8 @@ public:
 
     std::string normalized_cipher_text() const;
 
-private:
+   private:
     std::string const text_;
 };
 
-}
-
-#endif
+}  // namespace crypto_square

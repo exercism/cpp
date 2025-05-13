@@ -1,8 +1,7 @@
-#if !defined(SCRABBLE_SCORE_H)
-#define SCRABBLE_SCORE_H
+#pragma once
 
 namespace scrabble_score {
 
-}  // namespace scrabble_score
+// TODO: add your solution here
 
-#endif // SCRABBLE_SCORE_H
+}  // namespace scrabble_score

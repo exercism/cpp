@@ -1,8 +1,7 @@
-#if !defined(CRYPTO_SQUARE_H)
-#define CRYPTO_SQUARE_H
+#pragma once
 
 namespace crypto_square {
 
-}  // namespace crypto_square
+// TODO: add your solution here
 
-#endif // CRYPTO_SQUARE_H
+}  // namespace crypto_square

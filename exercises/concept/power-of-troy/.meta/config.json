@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "vaeng"
+  ],
+  "files": {
+    "solution": [
+      "power_of_troy.cpp",
+      "power_of_troy.h"
+    ],
+    "test": [
+      "power_of_troy_test.cpp"
+    ],
+    "exemplar": [
+      ".meta/exemplar.cpp",
+      ".meta/exemplar.h"
+    ]
+  },
+  "blurb": "Learn about smart pointers by using magic and artifacts in the world of Troy."
+}

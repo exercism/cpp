@@ -1,5 +1,4 @@
-#if !defined(SIMPLE_LINKED_LIST_H)
-#define SIMPLE_LINKED_LIST_H
+#pragma once
 
 #include <cstddef>
 
@@ -35,5 +34,3 @@ class List {
 };
 
 }  // namespace simple_linked_list
-
-#endif

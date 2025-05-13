@@ -1,8 +1,7 @@
-#if !defined(LUHN_H)
-#define LUHN_H
+#pragma once
 
 namespace luhn {
 
-}  // namespace luhn
+// TODO: add your solution here
 
-#endif // LUHN_H
+}  // namespace luhn

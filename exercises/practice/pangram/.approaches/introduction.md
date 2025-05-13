@@ -9,15 +9,12 @@ Another approach can use the [`algorithm.all_of()`][all_of] function.
 
 **pangram.h**
 ```cpp
-#if !defined(PANGRAM_H)
-#define PANGRAM_H
+#pragma once
 #include <string_view>
 
 namespace pangram {
     bool is_pangram(std::string_view phrase);
 }  // namespace pangram
-
-#endif // PANGRAM_H
 ```
 
 **pangram.cpp**
