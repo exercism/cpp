@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "marcelweikum"
+  ],
+  "files": {
+    "solution": [
+      "baffling_birthdays.cpp",
+      "baffling_birthdays.h"
+    ],
+    "test": [
+      "baffling_birthdays_test.cpp"
+    ],
+    "example": [
+      ".meta/example.cpp",
+      ".meta/example.h"
+    ]
+  },
+  "blurb": "Estimate the birthday paradox's probabilities.",
+  "source": "Erik Schierboom",
+  "source_url": "https://github.com/exercism/problem-specifications/pull/2539"
+}
