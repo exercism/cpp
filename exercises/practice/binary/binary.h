@@ -1,10 +1,7 @@
-#if !defined(BINARY_H)
-#define BINARY_H
+#pragma once
 
 namespace binary {
 
 // TODO: add your solution here
 
 }  // namespace binary
-
-#endif  // BINARY_H

@@ -22,16 +22,13 @@ The last place in a trinary number is the 1's place. The second to last is the 3
 `trinary.h`
 
 ```cpp
-#if !defined(TRINARY_H)
-#define TRINARY_H
+#pragma once
 #include <string>
 
 namespace trinary
 {
 unsigned int to_decimal(const std::string &s) noexcept;
 } // namespace trinary
-
-#endif // TRINARY_H
 ```
 
 `trinary.cpp`

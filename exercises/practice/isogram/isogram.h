@@ -1,10 +1,7 @@
-#if !defined(ISOGRAM_H)
-#define ISOGRAM_H
+#pragma once
 
 namespace isogram {
 
 // TODO: add your solution here
 
 }  // namespace isogram
-
-#endif  // ISOGRAM_H

@@ -21,10 +21,8 @@ for exercise_dir in "${exercises_dir}"/*; do
     header="$exercise_name.h"
     source="$exercise_name.cpp"
     if ! test -f "$header"; then
-        printf "#if !defined(${exercise_name^^}_H)\n" >> $header
-        printf "#define ${exercise_name^^}_H\n" >> $header
+        printf "#pragma once\n" >> $header
         printf "\nnamespace $exercise_name {\n\n}  // namespace $exercise_name\n" >> $header
-        printf "\n#endif // ${exercise_name^^}_H" >> $header
         git add $header
     fi
     if ! test -f "$source"; then

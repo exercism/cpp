@@ -1,5 +1,4 @@
-#if !defined(ACRONYM_H)
-#define ACRONYM_H
+#pragma once
 
 #include <string>
 
@@ -8,5 +7,3 @@ namespace acronym {
 std::string acronym(std::string const&);
 
 }
-
-#endif

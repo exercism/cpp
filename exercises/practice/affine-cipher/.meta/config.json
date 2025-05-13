@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "marcelweikum"
+  ],
+  "files": {
+    "solution": [
+      "affine_cipher.cpp",
+      "affine_cipher.h"
+    ],
+    "test": [
+      "affine_cipher_test.cpp"
+    ],
+    "example": [
+      ".meta/example.cpp",
+      ".meta/example.h"
+    ]
+  },
+  "blurb": "Create an implementation of the Affine cipher, an ancient encryption algorithm from the Middle East.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Affine_cipher"
+}

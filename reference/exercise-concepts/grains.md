@@ -18,8 +18,7 @@ Write code that shows:
 `grains.h`
 
 ```cpp
-#ifndef GRAINS_H
-#define GRAINS_H
+#pragma once
 
 #include <cstdint>
 
@@ -29,8 +28,6 @@ std::uint64_t square(std::uint8_t no);
 std::uint64_t total();
 
 }
-
-#endif
 ```
 
 `grains.cpp`
