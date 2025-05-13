@@ -11,8 +11,7 @@ Given "listen" and a list of candidates like "enlists" "google" "inlets" "banana
 `anagram.h`
 
 ```cpp
-#ifndef ANAGRAM_H
-#define ANAGRAM_H
+#pragma once
 
 #include <string>
 #include <vector>
@@ -28,8 +27,6 @@ private:
 };
 
 } // namespace anagram
-
-#endif // !ANAGRAM_H
 ```
 
 `anagram.cpp`

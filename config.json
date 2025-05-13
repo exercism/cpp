@@ -1249,11 +1249,7 @@
         "slug": "book-store",
         "name": "Book Store",
         "uuid": "dc699152-b327-4493-a485-810a61af69df",
-        "practices": [
-          "vector-arrays",
-          "maps",
-          "auto"
-        ],
+        "practices": [],
         "prerequisites": [
           "loops",
           "comparisons",
@@ -1261,6 +1257,40 @@
           "booleans"
         ],
         "difficulty": 8
+      },
+      {
+        "slug": "affine-cipher",
+        "name": "Affine Cipher",
+        "uuid": "61374c16-0a99-4616-9244-a38919eafbe1",
+        "practices": [
+          "math",
+          "exceptions"
+        ],
+        "prerequisites": [
+          "functions",
+          "comparisons",
+          "loops",
+          "booleans"
+        ],
+        "difficulty": 6
+      },
+      {
+        "slug": "alphametics",
+        "name": "Alphametics",
+        "uuid": "0c69f8bd-c99a-4cb2-b113-82deaf0915ee",
+        "practices": [
+          "auto",
+          "literals"
+        ],
+        "prerequisites": [
+          "includes",
+          "namespaces",
+          "if-statements",
+          "booleans",
+          "headers",
+          "comparisons"
+        ],
+        "difficulty": 6
       }
     ],
     "foregone": [

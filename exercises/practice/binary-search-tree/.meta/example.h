@@ -1,5 +1,4 @@
-#if !defined(_BINARY_SEARCH_TREE_H_)
-#define _BINARY_SEARCH_TREE_H_
+#pragma once
 
 #include <cstdint>
 #include <memory>
@@ -211,5 +210,3 @@ void binary_tree<T>::binary_tree_iter::advance_branch_iter(state next_state) {
 }
 
 }  // namespace binary_search_tree
-
-#endif  // _BINARY_SEARCH_TREE_H_

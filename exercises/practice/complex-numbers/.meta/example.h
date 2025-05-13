@@ -1,5 +1,4 @@
-#if !defined(COMPLEX_NUMBERS_H)
-#define COMPLEX_NUMBERS_H
+#pragma once
 #include <iostream>
 
 namespace complex_numbers {
@@ -34,5 +33,3 @@ Complex operator/(const Complex& complex, double scalar);
 Complex operator/(double scalar, const Complex& complex);
 
 }  // namespace complex_numbers
-
-#endif

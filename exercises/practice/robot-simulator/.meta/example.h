@@ -1,5 +1,4 @@
-#if !defined(ROBOT_SIMULATOR_H)
-#define ROBOT_SIMULATOR_H
+#pragma once
 #include <string>
 #include <utility>
 
@@ -29,5 +28,3 @@ class Robot {
 };
 
 }  // namespace robot_simulator
-
-#endif  // ROBOT_SIMULATOR

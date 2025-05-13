@@ -22,8 +22,7 @@ The rules of `raindrops` are that if a given number:
 `raindrops.h`
 
 ```cpp
-#if !defined(RAINDROPS_H)
-#define RAINDROPS_H
+#pragma once
 
 #include <string>
 
@@ -33,8 +32,6 @@ namespace raindrops
 std::string convert(int drops);
 
 }
-
-#endif
 ```
 
 `raindrops.cpp`

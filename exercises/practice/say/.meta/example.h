@@ -1,5 +1,4 @@
-#if !defined(SAY_H)
-#define SAY_H
+#pragma once
 
 #include <string>
 
@@ -8,5 +7,3 @@ namespace say {
 std::string in_english(unsigned long long number);
 
 }
-
-#endif

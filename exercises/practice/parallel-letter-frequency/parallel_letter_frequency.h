@@ -1,6 +1,3 @@
-#if !defined(PARALLEL_LETTER_FREQUENCY_H)
-#define PARALLEL_LETTER_FREQUENCY_H
+#pragma once
 
 namespace parallel_letter_frequency {}
-
-#endif

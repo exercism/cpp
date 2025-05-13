@@ -1,5 +1,4 @@
-#if !defined(CIRCULAR_BUFFER_H_)
-#define CIRCULAR_BUFFER_H_
+#pragma once
 
 #include <stdexcept>
 #include <vector>
@@ -56,5 +55,3 @@ void circular_buffer<ValueType>::push_back(ValueType item) {
 }
 
 }  // namespace circular_buffer
-
-#endif  // !CIRCULAR_BUFFER_H_
