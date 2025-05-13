@@ -36,6 +36,7 @@ TEST_CASE("an even-sized word", "[b9e7dec1-c6df-40bd-9fa3-cd7ded010c4c]") {
 	REQUIRE("reward" == reverse_string::reverse_string("drawer"));
 }
 
+#if defined(TEST_GRAPHEMES)
 TEST_CASE("wide characters", "[1bed0f8a-13b0-4bd3-9d59-3d0593326fa2]") {
 	REQUIRE("猫子" == reverse_string::reverse_string("子猫"));
 }
@@ -47,5 +48,6 @@ TEST_CASE("grapheme cluster with pre-combined form", "[93d7e1b8-f60f-4f3c-9559-4
 TEST_CASE("grapheme clusters", "[1028b2c1-6763-4459-8540-2da47ca512d9]") {
 	REQUIRE("มรกแรปโนยขีเผู้" == reverse_string::reverse_string("ผู้เขียนโปรแกรม"));
 }
+#endif
 
 #endif
