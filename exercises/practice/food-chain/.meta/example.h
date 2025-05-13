@@ -1,5 +1,4 @@
-#if !defined(FOOD_CHAIN_H)
-#define FOOD_CHAIN_H
+#pragma once
 
 #include <string>
 
@@ -10,5 +9,3 @@ std::string verses(unsigned begin, unsigned end);
 std::string sing();
 
 }  // namespace food_chain
-
-#endif

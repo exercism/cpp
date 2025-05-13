@@ -1,10 +1,7 @@
-#if !defined(ALLERGIES_H)
-#define ALLERGIES_H
+#pragma once
 
 namespace allergies {
 
 // TODO: add your solution here
 
 }  // namespace allergies
-
-#endif  // ALLERGIES_H

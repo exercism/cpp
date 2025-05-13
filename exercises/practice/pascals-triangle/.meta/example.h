@@ -1,5 +1,4 @@
-#if !defined(PASCALS_TRIANGLE_H)
-#define PASCALS_TRIANGLE_H
+#pragma once
 
 #include <cstddef>
 #include <vector>
@@ -11,5 +10,3 @@ using std::size_t;
 std::vector<std::vector<int>> generate_rows(size_t n);
 
 }  // namespace pascals_triangle
-
-#endif

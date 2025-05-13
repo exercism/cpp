@@ -1,10 +1,7 @@
-#if !defined(LUHN_H)
-#define LUHN_H
+#pragma once
 
 #include <string>
 
 namespace luhn {
 bool valid(std::string const&);
 }
-
-#endif  // LUHN_H

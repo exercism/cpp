@@ -1,5 +1,4 @@
-#ifndef KNAPSACK_H
-#define KNAPSACK_H
+#pragma once
 
 namespace knapsack {
 
@@ -9,5 +8,3 @@ struct Item {
 };
 
 }  // namespace knapsack
-
-#endif  // KNAPSACK_H

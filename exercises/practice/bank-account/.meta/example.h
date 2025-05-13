@@ -1,5 +1,4 @@
-#if !defined(BANK_ACCOUNT_H)
-#define BANK_ACCOUNT_H
+#pragma once
 
 #include <mutex>
 
@@ -21,4 +20,3 @@ class Bankaccount {
     std::mutex mutex_{};
 };
 }  // namespace Bankaccount
-#endif  // BANK_ACCOUNT_H

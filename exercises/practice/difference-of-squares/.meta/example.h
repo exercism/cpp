@@ -1,5 +1,4 @@
-#if !defined(DIFFERENCE_OF_SQUARES_H)
-#define DIFFERENCE_OF_SQUARES_H
+#pragma once
 
 namespace difference_of_squares {
 
@@ -8,5 +7,3 @@ int sum_of_squares(int n);
 int difference(int n);
 
 }  // namespace difference_of_squares
-
-#endif

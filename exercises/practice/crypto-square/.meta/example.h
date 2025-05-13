@@ -1,5 +1,4 @@
-#if !defined(CRYPTO_SQUARE_H)
-#define CRYPTO_SQUARE_H
+#pragma once
 
 #include <string>
 #include <vector>
@@ -25,5 +24,3 @@ class cipher {
 };
 
 }  // namespace crypto_square
-
-#endif

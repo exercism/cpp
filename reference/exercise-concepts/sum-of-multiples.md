@@ -15,8 +15,7 @@ The sum of these multiples is 78.
 `sum_of_multiples.h`
 
 ```cpp
-#if !defined(SUM_OF_MULTIPLES_H)
-#define SUM_OF_MULTIPLES_H
+#pragma once
 
 #include <initializer_list>
 
@@ -26,8 +25,6 @@ namespace sum_of_multiples
 int to(std::initializer_list<int> const& multiples, int num);
 
 }
-
-#endif
 ```
 
 `sum_of_multiples.cpp`

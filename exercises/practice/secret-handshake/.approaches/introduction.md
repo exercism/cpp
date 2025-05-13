@@ -8,16 +8,13 @@ Another general approach is to iterate once even if the actions are meant to be 
 
 **secret_handshake.h**
 ```cpp
-#if !defined(SECRET_HANDSHAKE_H)
-#define SECRET_HANDSHAKE_H
+#pragma once
 #include <vector>
 #include <string>
 
 namespace secret_handshake {
     std::vector<std::string> commands (unsigned int signal);
 }  // namespace secret_handshake
-
-#endif // SECRET_HANDSHAKE_H
 ```
 
 **secret_handshake.cpp**
@@ -46,16 +43,13 @@ For more information, check the [`if` statements with `reverse()` approach][appr
 
 **secret_handshake.h**
 ```cpp
-#if !defined(SECRET_HANDSHAKE_H)
-#define SECRET_HANDSHAKE_H
+#pragma once
 #include <vector>
 #include <string>
 
 namespace secret_handshake {
     std::vector<std::string> commands (unsigned int signal);
 }  // namespace secret_handshake
-
-#endif // SECRET_HANDSHAKE_H
 ```
 
 **secret_handshake.cpp**

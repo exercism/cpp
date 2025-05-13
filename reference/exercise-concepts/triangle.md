@@ -17,8 +17,7 @@ A _scalene_ triangle has all sides of different lengths.
 `triangle.h`
 
 ```cpp
-#if !defined(TRIANGLE_H)
-#define TRIANGLE_H
+#pragma once
 
 namespace triangle
 {
@@ -33,8 +32,6 @@ enum class flavor
 flavor kind(double a, double b, double c);
 
 }
-
-#endif
 ```
 
 `triangle.cpp`
