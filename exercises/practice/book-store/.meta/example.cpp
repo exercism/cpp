@@ -9,21 +9,19 @@
 
 namespace book_store {
 
-static const int PRICE_AFTER_DISCOUNT[6] = {0, 800, 1520, 2160, 2560, 3000};
+constexpr std::array price_after_discount = {0, 800, 1520, 2160, 2560, 3000};
 
-static int dfs(const std::array<int, 5>& state,
-               std::map<std::array<int, 5>, int>& memo) {
+int dfs(const std::array<int, 5>& state,
+        std::map<std::array<int, 5>, int>& memo) {
     auto it = memo.find(state);
     if (it != memo.end()) return it->second;
 
-    bool empty = true;
-    for (int c : state) {
-        if (c > 0) {
-            empty = false;
-            break;
-        }
+    const bool empty = std::all_of(state.cbegin(), state.cend(),
+                                   [](auto state) { return state == 0; });
+    if (empty) {
+        memo[state] = 0;
+        return 0;
     }
-    if (empty) return memo[state] = 0;
 
     int best = std::numeric_limits<int>::max();
 
@@ -43,15 +41,16 @@ static int dfs(const std::array<int, 5>& state,
                 ++k;
             }
         }
-        int cost = PRICE_AFTER_DISCOUNT[k] + dfs(next, memo);
+        int cost = price_after_discount[k] + dfs(next, memo);
         if (cost < best) best = cost;
     }
 
-    return memo[state] = best;
+    memo[state] = best;
+    return best;
 }
 
 int total(const std::vector<int>& basket) {
-    std::array<int, 5> counts = {0, 0, 0, 0, 0};
+    std::array<int, 5> counts{};
     for (int id : basket) {
         if (id < 1 || id > 5) {
             throw std::invalid_argument("book ID is out of range (1–5)");

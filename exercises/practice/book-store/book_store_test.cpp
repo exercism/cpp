@@ -76,14 +76,14 @@ TEST_CASE(
     REQUIRE(book_store::total(
                 {1, 1, 2, 2, 3, 3, 4, 5, 1, 1, 2, 2, 3, 3, 4, 5}) == 10240);
 }
-// clang-format off
 TEST_CASE(
+    // clang-format off
     "Check_that_groups_of_four_are_created_properly_even_when_there_are_more_groups_of_three_than_groups_of_five",
+    // clang-format on
     "[5260ddde-2703-4915-b45a-e54dbbac4303]") {
     REQUIRE(book_store::total({1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2,
                                2, 3, 3, 3, 3, 3, 3, 4, 4, 5, 5}) == 14560);
 }
-// clang-format on
 
 TEST_CASE(
     "One_group_of_one_and_four_is_cheaper_than_one_group_of_two_and_three",
@@ -91,13 +91,13 @@ TEST_CASE(
     REQUIRE(book_store::total({1, 1, 2, 3, 4}) == 3360);
 }
 
-// clang-format off
 TEST_CASE(
+    // clang-format off
     "One_group_of_one_and_two_plus_three_groups_of_four_is_cheaper_than_one_group_of_each_size",
+    // clang-format on
     "[cf868453-6484-4ae1-9dfc-f8ee85bbde01]") {
     REQUIRE(book_store::total({1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5}) ==
             10000);
 }
-// clang-format on
 
 #endif
