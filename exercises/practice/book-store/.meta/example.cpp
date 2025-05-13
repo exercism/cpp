@@ -2,8 +2,8 @@
 #include <limits>
 #include <map>
 #include <stdexcept>
-#include <string>
 #include <vector>
+#include <algorithm>
 
 #include "book_store.h"
 
