@@ -1,13 +1,11 @@
-#include "affine_cipher.h"
-
-#include <stdexcept>
 #include <cctype>
+#include <stdexcept>
+
+#include "affine_cipher.h"
 
 namespace affine_cipher {
 
-static int gcd(int a, int b) {
-    return b == 0 ? a : gcd(b, a % b);
-}
+static int gcd(int a, int b) { return b == 0 ? a : gcd(b, a % b); }
 
 static int mod(int x, int m) {
     int r = x % m;
@@ -19,8 +17,10 @@ static int modinv(int a, int m) {
     int r = m, newr = a;
     while (newr != 0) {
         int q = r / newr;
-        t -= q * newt; std::swap(t, newt);
-        r -= q * newr; std::swap(r, newr);
+        t -= q * newt;
+        std::swap(t, newt);
+        r -= q * newr;
+        std::swap(r, newr);
     }
     if (r != 1) throw std::invalid_argument("a and m must be coprime.");
     return t < 0 ? t + m : t;
@@ -62,4 +62,4 @@ std::string decode(const std::string& text, int a, int b) {
     return out;
 }
 
-} // namespace affine_cipher
+}  // namespace affine_cipher

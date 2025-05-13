@@ -24,29 +24,30 @@ TEST_CASE("encode_O_M_G", "[bc0c1244-b544-49dd-9777-13a770be1bad]") {
 }
 
 TEST_CASE("encode_mindblowingly", "[381a1a20-b74a-46ce-9277-3778625c9e27]") {
-    REQUIRE(affine_cipher::encode("mindblowingly", 11, 15) == "rzcwa gnxzc dgt");
+    REQUIRE(affine_cipher::encode("mindblowingly", 11, 15) ==
+            "rzcwa gnxzc dgt");
 }
 
 TEST_CASE("encode_numbers", "[6686f4e2-753b-47d4-9715-876fdc59029d]") {
-    REQUIRE(affine_cipher::encode("Testing,1 2 3, testing.", 3, 4) == "jqgjc rw123 jqgjc rw");
+    REQUIRE(affine_cipher::encode("Testing,1 2 3, testing.", 3, 4) ==
+            "jqgjc rw123 jqgjc rw");
 }
 
 TEST_CASE("encode_deep_thought", "[ae23d5bd-30a8-44b6-afbe-23c8c0c7faa3]") {
-    REQUIRE(affine_cipher::encode("Truth is fiction.", 5, 17) == "iynia fdqfb ifje");
+    REQUIRE(affine_cipher::encode("Truth is fiction.", 5, 17) ==
+            "iynia fdqfb ifje");
 }
 
 TEST_CASE("encode_all_the_letters", "[c93a8a4d-426c-42ef-9610-76ded6f7ef57]") {
     REQUIRE(affine_cipher::encode(
-        "The quick brown fox jumps over the lazy dog.",
-        17, 33
-    ) == "swxtj npvyk lruol iejdc blaxk swxmh qzglf");
+                "The quick brown fox jumps over the lazy dog.", 17, 33) ==
+            "swxtj npvyk lruol iejdc blaxk swxmh qzglf");
 }
 
-TEST_CASE("encode_with_a_not_coprime_to_m", "[0673638a-4375-40bd-871c-fb6a2c28effb]") {
-    REQUIRE_THROWS_AS(
-        affine_cipher::encode("This is a test.", 6, 17),
-        std::invalid_argument
-    );
+TEST_CASE("encode_with_a_not_coprime_to_m",
+          "[0673638a-4375-40bd-871c-fb6a2c28effb]") {
+    REQUIRE_THROWS_AS(affine_cipher::encode("This is a test.", 6, 17),
+                      std::invalid_argument);
 }
 
 TEST_CASE("decode_exercism", "[3f0ac7e2-ec0e-4a79-949e-95e414953438]") {
@@ -54,49 +55,37 @@ TEST_CASE("decode_exercism", "[3f0ac7e2-ec0e-4a79-949e-95e414953438]") {
 }
 
 TEST_CASE("decode_a_sentence", "[241ee64d-5a47-4092-a5d7-7939d259e077]") {
-    REQUIRE(
-        affine_cipher::decode(
-            "qdwju nqcro muwhn odqun oppmd aunwd o",
-            19, 16
-        ) == "anobstacleisoftenasteppingstone"
-    );
+    REQUIRE(affine_cipher::decode("qdwju nqcro muwhn odqun oppmd aunwd o", 19,
+                                  16) == "anobstacleisoftenasteppingstone");
 }
 
 TEST_CASE("decode_numbers", "[33fb16a1-765a-496f-907f-12e644837f5e]") {
-    REQUIRE(affine_cipher::decode("odpoz ub123 odpoz ub", 25, 7)
-            == "testing123testing");
+    REQUIRE(affine_cipher::decode("odpoz ub123 odpoz ub", 25, 7) ==
+            "testing123testing");
 }
 
 TEST_CASE("decode_all_the_letters", "[20bc9dce-c5ec-4db6-a3f1-845c776bcbf7]") {
-    REQUIRE(
-        affine_cipher::decode(
-            "swxtj npvyk lruol iejdc blaxk swxmh qzglf",
-            17, 33
-        ) == "thequickbrownfoxjumpsoverthelazydog"
-    );
+    REQUIRE(affine_cipher::decode("swxtj npvyk lruol iejdc blaxk swxmh qzglf",
+                                  17,
+                                  33) == "thequickbrownfoxjumpsoverthelazydog");
 }
 
-TEST_CASE("decode_with_no_spaces_in_input", "[623e78c0-922d-49c5-8702-227a3e8eaf81]") {
-    REQUIRE(
-        affine_cipher::decode(
-            "swxtjnpvyklruoliejdcblaxkswxmhqzglf",
-            17, 33
-        ) == "thequickbrownfoxjumpsoverthelazydog"
-    );
+TEST_CASE("decode_with_no_spaces_in_input",
+          "[623e78c0-922d-49c5-8702-227a3e8eaf81]") {
+    REQUIRE(affine_cipher::decode("swxtjnpvyklruoliejdcblaxkswxmhqzglf", 17,
+                                  33) == "thequickbrownfoxjumpsoverthelazydog");
 }
 
-TEST_CASE("decode_with_too_many_spaces", "[58fd5c2a-1fd9-4563-a80a-71cff200f26f]") {
-    REQUIRE(
-        affine_cipher::decode("vszzm    cly   yd cg    qdp", 15, 16)
-        == "jollygreengiant"
-    );
+TEST_CASE("decode_with_too_many_spaces",
+          "[58fd5c2a-1fd9-4563-a80a-71cff200f26f]") {
+    REQUIRE(affine_cipher::decode("vszzm    cly   yd cg    qdp", 15, 16) ==
+            "jollygreengiant");
 }
 
-TEST_CASE("decode_with_a_not_coprime_to_m", "[b004626f-c186-4af9-a3f4-58f74cdb86d5]") {
-    REQUIRE_THROWS_AS(
-        affine_cipher::decode("Test", 13, 5),
-        std::invalid_argument
-    );
+TEST_CASE("decode_with_a_not_coprime_to_m",
+          "[b004626f-c186-4af9-a3f4-58f74cdb86d5]") {
+    REQUIRE_THROWS_AS(affine_cipher::decode("Test", 13, 5),
+                      std::invalid_argument);
 }
 
 #endif
