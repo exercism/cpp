@@ -4,6 +4,6 @@
 
 namespace book_store {
 
-    int total(const std::vector<int>& basket);
+int total(const std::vector<int>& basket);
 
 }  // namespace book_store
