@@ -1,9 +1,9 @@
+#include <algorithm>
 #include <array>
 #include <limits>
 #include <map>
 #include <stdexcept>
 #include <vector>
-#include <algorithm>
 
 #include "book_store.h"
 
