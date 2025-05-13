@@ -1246,6 +1246,22 @@
         "difficulty": 4
       },
       {
+        "slug": "affine-cipher",
+        "name": "Affine Cipher",
+        "uuid": "61374c16-0a99-4616-9244-a38919eafbe1",
+        "practices": [
+          "math",
+          "exceptions"
+        ],
+        "prerequisites": [
+          "functions",
+          "comparisons",
+          "loops",
+          "booleans"
+        ],
+        "difficulty": 6
+      },
+      {
         "slug": "alphametics",
         "name": "Alphametics",
         "uuid": "0c69f8bd-c99a-4cb2-b113-82deaf0915ee",
