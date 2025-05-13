@@ -1,10 +1,10 @@
 #pragma once
 
-#include <vector>
 #include <string>
+#include <vector>
 
 namespace bottle_song {
 
-    std::vector<std::string> recite(int startBottles, int takeDown);
+std::vector<std::string> recite(int startBottles, int takeDown);
 
-} // namespace bottle_song
+}  // namespace bottle_song
