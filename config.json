@@ -1278,6 +1278,19 @@
           "comparisons"
         ],
         "difficulty": 6
+      },
+      {
+        "slug": "change",
+        "name": "Change",
+        "uuid": "e85b5b3e-0ac4-44c4-8b34-fb05b540dc26",
+        "practices": [],
+        "prerequisites": [
+          "exceptions",
+          "lists",
+          "numbers",
+          "loops"
+        ],
+        "difficulty": 5
       }
     ],
     "foregone": [
