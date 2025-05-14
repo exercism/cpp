@@ -1,8 +1,8 @@
-#include "connect.h"
-
-#include <vector>
-#include <string>
 #include <queue>
+#include <string>
+#include <vector>
+
+#include "connect.h"
 
 namespace connect {
 
@@ -25,7 +25,7 @@ std::string winner(const std::vector<std::string>& board) {
 
     auto bfs = [&](char player) {
         std::vector<std::vector<bool>> vis(n, std::vector<bool>(m, false));
-        std::queue<std::pair<int,int>> q;
+        std::queue<std::pair<int, int>> q;
 
         if (player == 'X') {
             for (int i = 0; i < n; ++i) {
@@ -44,7 +44,8 @@ std::string winner(const std::vector<std::string>& board) {
         }
 
         while (!q.empty()) {
-            auto [x, y] = q.front(); q.pop();
+            auto [x, y] = q.front();
+            q.pop();
             if ((player == 'X' && y == m - 1) ||
                 (player == 'O' && x == n - 1)) {
                 return true;
@@ -52,8 +53,8 @@ std::string winner(const std::vector<std::string>& board) {
             for (int d = 0; d < 6; ++d) {
                 int nx = x + dx[d];
                 int ny = y + dy[d];
-                if (nx >= 0 && nx < n && ny >= 0 && ny < m &&
-                    !vis[nx][ny] && grid[nx][ny] == player) {
+                if (nx >= 0 && nx < n && ny >= 0 && ny < m && !vis[nx][ny] &&
+                    grid[nx][ny] == player) {
                     vis[nx][ny] = true;
                     q.push({nx, ny});
                 }
