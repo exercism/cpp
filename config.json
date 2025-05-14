@@ -1278,6 +1278,14 @@
           "comparisons"
         ],
         "difficulty": 6
+      },
+      {
+        "slug": "bowling",
+        "name": "Bowling",
+        "uuid": "dcc2a799-eee4-4312-8132-7217cb9b4922",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
       }
     ],
     "foregone": [

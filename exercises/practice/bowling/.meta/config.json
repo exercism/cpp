@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "marcelweikum"
+  ],
+  "files": {
+    "solution": [
+      "bowling.cpp",
+      "bowling.h"
+    ],
+    "test": [
+      "bowling_test.cpp"
+    ],
+    "example": [
+      ".meta/example.cpp",
+      ".meta/example.h"
+    ]
+  },
+  "blurb": "Score a bowling game.",
+  "source": "The Bowling Game Kata from UncleBob",
+  "source_url": "https://web.archive.org/web/20221001111000/http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata"
+}
