@@ -1283,9 +1283,16 @@
         "slug": "bowling",
         "name": "Bowling",
         "uuid": "dcc2a799-eee4-4312-8132-7217cb9b4922",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 1
+        "practices": [
+          "classes"
+        ],
+        "prerequisites": [
+          "numbers",
+          "classes",
+          "exceptions",
+          "if-statements"
+        ],
+        "difficulty": 6
       }
     ],
     "foregone": [
