@@ -16,7 +16,7 @@ As this is an advanced exercise, there are no enum-related things that we should
 
 - `enums`
 - `switch`
-- 
+-
 ## Prerequisites
 
 This exercise's prerequisites Concepts are:

@@ -24,5 +24,3 @@
 
 [switch]: https://www.learncpp.com/cpp-tutorial/switch-statement-basics/
 [fallthrough]: https://www.learncpp.com/cpp-tutorial/switch-fallthrough-and-scoping/
-
-

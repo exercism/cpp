@@ -51,7 +51,7 @@ silverhand.cast_spell();
 silverhand.name = "Laeral";
 
 // damage is private:
-silverhand.damage = 500; 
+silverhand.damage = 500;
  // => Compilation error
 ```
 

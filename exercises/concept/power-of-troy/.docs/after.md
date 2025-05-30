@@ -6,7 +6,7 @@ They act as wrappers around raw pointers, adding additional functionality such a
 ## General Syntax
 
 Smart pointers are typically implemented as class templates in the C++ standard library.
-The two most commonly used smart pointers are `std::unique_ptr` and `std::shared_ptr`. 
+The two most commonly used smart pointers are `std::unique_ptr` and `std::shared_ptr`.
 
 ## Unique Pointers
 
@@ -82,7 +82,7 @@ auto your_flatmates_boyfriends_account = your_flatmates_account;
 ```
 
 Weak pointers are useful in scenarios where cyclic references need to be broken to prevent memory leaks.
-`std::weak_ptr` was designed to address the issue of cyclic ownership, also known as circular references, that can occur when using `std::shared_ptr`. 
+`std::weak_ptr` was designed to address the issue of cyclic ownership, also known as circular references, that can occur when using `std::shared_ptr`.
 In a cyclic ownership scenario, two or more `std::shared_ptr` objects are referencing each other, creating a cycle where none of the objects can be deleted because they have strong references to each other, leading to memory leaks.
 `std::weak_ptr` provides a solution to this problem by allowing weak references to shared objects without contributing to their reference count.
 This means that it can observe and access the shared object but doesn't prevent it from being deleted.

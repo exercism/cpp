@@ -88,4 +88,3 @@ jobs:
         cmake .
         cmake --build . -- test_hello-world
         cmake --build .
-

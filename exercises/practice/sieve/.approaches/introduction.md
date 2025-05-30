@@ -28,7 +28,7 @@ namespace sieve {
 		std::vector<bool> composite(limit + 1, false);
 		std::vector<int> primes;
 		primes.reserve(limit / 2);
-    
+
 		for (long long number = 2; number <= limit; number++) {
 			if (!composite[number]) {
 				primes.emplace_back(number);
