@@ -6,7 +6,7 @@ To set off the C++ journey we are starting with variables, function calls, and c
 
 Comments come in two flavors: single- and multi-line.
 Everything that comes after `//` on the same line is ignored by the compiler.
-Multi-line comments are also known as C-style comments. 
+Multi-line comments are also known as C-style comments.
 They are surrounded by `/*` and `*/`.
 Anything that comes between these will be ignored as well.
 
@@ -40,7 +40,7 @@ It cannot be stressed enough: avoid undefined behavior at all cost.
 
 ## Arithmetic Operations
 
-Arithmetic operators like `*`, `+`, or `-` can be part of an expression like `3 * 2` or `tomatoes + potatoes`. 
+Arithmetic operators like `*`, `+`, or `-` can be part of an expression like `3 * 2` or `tomatoes + potatoes`.
 
 ## Updating Variables
 
@@ -84,7 +84,7 @@ int total_fee(int vips, int adults, int kids) {
     */
     int standard_fee{30};
     int kids_discount{15};
-    
+
     int kids_total_fee = kids  * (standard_fee - kids_discount);
     int vips_total_fee = vips * vip_fee(standard_fee);
     int adult_total_fee = adults * standard_fee;

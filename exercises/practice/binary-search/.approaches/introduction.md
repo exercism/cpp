@@ -29,9 +29,9 @@ namespace binary_search {
             if (look == value) return mid;
             if (look < value) left = mid + 1;
             else right = mid;
-        }    
+        }
         throw std::domain_error("Value not found. No soup for you!");
-    } 
+    }
 }  // namespace binary_search
 ```
 
