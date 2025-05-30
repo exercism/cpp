@@ -1,5 +1,5 @@
 int action = 0, action_incr = 1, end = signals.size();
-if (signal & REVERSE) {action = actions.size() - 1; action_incr = -1; end = -1;}        
+if (signal & REVERSE) {action = actions.size() - 1; action_incr = -1; end = -1;}
 
 for (; action != end; action+=action_incr)
     if (signal & (1 << action))

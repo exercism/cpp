@@ -89,4 +89,3 @@ It is mostly presented as an interesting idea and unique way to think about the 
 [cppref-stringview-back]: https://en.cppreference.com/w/cpp/string/basic_string_view/back
 [cppref-string-removesuffix]: https://en.cppreference.com/w/cpp/string/basic_string_view/remove_suffix
 [cppref-string-pushback]: https://en.cppreference.com/w/cpp/string/basic_string/push_back
-

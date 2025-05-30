@@ -49,7 +49,7 @@ They act as wrappers around raw pointers, adding additional functionality such a
 ## General Syntax
 
 Smart pointers are typically implemented as class templates in the C++ standard library.
-The two most commonly used smart pointers are `std::unique_ptr` and `std::shared_ptr`. 
+The two most commonly used smart pointers are `std::unique_ptr` and `std::shared_ptr`.
 
 ## Unique Pointers
 

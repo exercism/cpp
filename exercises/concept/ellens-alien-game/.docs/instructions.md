@@ -36,7 +36,7 @@ Ellen wants to introduce shields at a later point, which would then report `fals
 
 ```cpp
 Alien alien {0, 0};
-alien.get_health(); 
+alien.get_health();
 // => 3 (Initial health value)
 
 alien.hit(); // Decrements health by 1 point.
@@ -80,7 +80,7 @@ alien.y_coordinate;
 ## 5. The `collision_detection` Function
 
 If the aliens can be hit by something, then they need to be able to detect when such a collision might occur.
-Ellen needs to know if two aliens occupy the same coordinates. 
+Ellen needs to know if two aliens occupy the same coordinates.
 The `collision_detection()` function takes another alien object as an argument and returns a `bool`.
 
 ```cpp

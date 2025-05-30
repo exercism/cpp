@@ -105,4 +105,3 @@ Therefore it is only presented as an interesting idea and to warn about linear r
 [cppref-stringview-removesuffix]: https://en.cppreference.com/w/cpp/string/basic_string_view/remove_suffix
 [wiki-stack-overflow]: https://en.wikipedia.org/wiki/Stack_overflow
 [wiki-tail-call]: https://en.wikipedia.org/wiki/Tail_call
-

@@ -36,7 +36,7 @@ Dereferencing a pointer is done using the _indirection operator_ (`*`) operator.
 ```cpp
 std::string opponent{"Solomon Lane"};
 // 'ethan' points to the address of the string opponent
-std::string* ethan{&opponent}; 
+std::string* ethan{&opponent};
 // Instead of ethan's, the opponent's name address is given to the passPort
 std::string passportName{*ethan};
 ```
@@ -54,7 +54,7 @@ int gateCode[] = {462, 753, 218, 611, 977};
 // 'ptr' points to the first element of 'gateCode'
 int* ptr{&gateCode[0]};
 // Accesses the third Stargate address through pointer arithmetic
-int dialedAddress{*(ptr + 2)}; 
+int dialedAddress{*(ptr + 2)};
 // Chevron encoded! Dialing Stargate address:
 openStarGate(dialedAddress);
 ```
@@ -89,7 +89,7 @@ dianaPrince->superpower = "Lasso of Truth";
 std::cout << "Wonder Woman, possesses the mighty " << dianaPrince->superpower;
 
 // Memory cleanup:
-delete dianaPrince; 
+delete dianaPrince;
 ```
 
 ## Pointers vs. references
@@ -119,7 +119,7 @@ darkMarkBearer = new std::string{"Bellatrix Lestrange"};
 // She has been defeated
 delete darkMarkBearer;
 // Reset pointer to null, symbolizing there is no more darkMarkBearer at the moment
-darkMarkBearer = nullptr; 
+darkMarkBearer = nullptr;
 ```
 
 A pointer should either hold the address of a valid object, or be set to `nullptr`.

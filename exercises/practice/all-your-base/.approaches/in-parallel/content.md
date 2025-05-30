@@ -13,7 +13,7 @@ A simple serial for-loop can be a lot faster for a small number than a [parallel
 
 ## Converting the `input_digits`
 
-### Numeric's `accumulate` 
+### Numeric's `accumulate`
 
 The for-loop with `*` and `+` can be written with the [`accumulate`][acuumulate-function] function from the [`numeric`][numeric-header] header.
 
@@ -94,10 +94,10 @@ unsigned int digit_limit{static_cast<unsigned int>(std::log(intermediate) / std:
 std::vector <unsigned int> output_digits(digit_limit);
 std::iota(output_digits.rbegin(), output_digits.rend(), 1);
 std::for_each(std::execution::par_unseq,
-                output_digits.begin(),   
-                output_digits.end(),    
+                output_digits.begin(),
+                output_digits.end(),
                 [&](unsigned int digit) {
-                output_digits[digit_limit - digit] = 
+                output_digits[digit_limit - digit] =
                     intermediate
                         / static_cast<unsigned int>(std::pow(output_base, digit - 1))
                         % output_base;
@@ -151,7 +151,7 @@ std::vector<unsigned int> convert(unsigned int input_base,
         output_digits.begin(),
         output_digits.end(),
         [&](unsigned int digit) {
-            output_digits[digit_limit - digit] = 
+            output_digits[digit_limit - digit] =
                 intermediate / static_cast<unsigned int>(std::pow(output_base, digit - 1)) % output_base;
     });
 
@@ -174,5 +174,5 @@ std::vector<unsigned int> convert(unsigned int input_base,
 [execution-policies]: https://en.cppreference.com/w/cpp/algorithm/execution_policy_tag_t
 [tbb]: https://github.com/oneapi-src/oneTBB
 [in-sequence]: https://exercism.org/tracks/cpp/exercises/all-your-base/approaches/in-sequence
-[for-loop]: https://en.cppreference.com/w/cpp/language/for 
+[for-loop]: https://en.cppreference.com/w/cpp/language/for
 [for-each]: https://en.cppreference.com/w/cpp/algorithm/for_each

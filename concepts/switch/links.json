@@ -2,7 +2,7 @@
     {
         "url": "https://en.cppreference.com/w/cpp/language/switch",
         "description": "C++ reference on switch statements"
-    }, 
+    },
     {
         "url": "https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#Res-break",
         "description": "CppCoreGuidelines' hints on switch statements"

@@ -4,7 +4,7 @@ Integers are whole numbers like `0`, `691`, or `-2`.
 Floating point numbers are numbers with a decimal point like `6.02214076`, `0.1`, or `-1.616`.
 
 ## Integers
-The following example shows the declaration and initialization of four different variables 
+The following example shows the declaration and initialization of four different variables
 
 ```cpp
 int m_morales{9241};              // base 10: 0-9
@@ -29,7 +29,7 @@ You can use an apostrophe to separate digits for easier readability.
 
 ## Floating-Point Numbers
 
-The floating-point literals come in two flavors. 
+The floating-point literals come in two flavors.
 In addition to the intuitive `0.0024` it is possible to use its scientific notation `2.4e-3`.
 The most common floating-point type is `double`.
 
@@ -66,9 +66,9 @@ These operators modify the current value of a variable by performing an operatio
 // we start with 0 people
 int people{};
 // we need 0 eggs
-int eggs{}; 
+int eggs{};
 // two people joined:
-people += 2; 
+people += 2;
 // people is now 2
 // let's add 3 eggs per person
 eggs += 3 * people;

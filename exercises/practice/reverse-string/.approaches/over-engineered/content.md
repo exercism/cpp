@@ -61,7 +61,7 @@ That is helpful in situations where either the result contains some error code t
 ## Overloading functions
 
 In C++ it is possible (and quite common) to define multiple different functions with the same name but different parameter (different number of parameter or different parameter types.)
-When an overloaded function is called the compiler collects all candidate with that name, trims the set of candidate to the *viable* ones, and then selects the best fit for the function call (see [cppreference.com][cppref-overload-resolution]).  
+When an overloaded function is called the compiler collects all candidate with that name, trims the set of candidate to the *viable* ones, and then selects the best fit for the function call (see [cppreference.com][cppref-overload-resolution]).
 
 Overloading function is often done if these functions perform the same task *conceptually* but in a slightly different way, depending on the arguments.
 
@@ -144,4 +144,3 @@ Therefore this "over-engineered approach" is not meant as the *best* approach, b
 [cppref-attributes]: https://en.cppreference.com/w/cpp/language/attributes
 [cppref-overload-resolution]: https://en.cppreference.com/w/cpp/language/overload_resolution
 [cppref-noexcept]: https://en.cppreference.com/w/cpp/language/noexcept_spec
-

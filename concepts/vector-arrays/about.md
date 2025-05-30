@@ -46,7 +46,7 @@ countdown.at(2);
 // => 1
 countdown[1] = 4;
 // countdown now contains 3, 4 and 1
-indie_rock.back() = "yeahs"; 
+indie_rock.back() = "yeahs";
 // indie_rock is now "yeah", "yeah", "yeahs"
 ```
 
@@ -55,12 +55,12 @@ indie_rock.back() = "yeahs";
 
 ### Vector modifiers
 
-As a `vector` is not fixed in size, it is possible to add or remove elements. 
+As a `vector` is not fixed in size, it is possible to add or remove elements.
 Two common functions for that purpose are `emplace_back` and `pop_back`.
 
 ```cpp
 std::vector<std::string> witches {"Holly", "Alyssa", "Shannen"};
-witches.pop_back(); 
+witches.pop_back();
 // Shannen is no longer with the witches
 witches.emplace_back("Rose");
 // Rose has joined the team
