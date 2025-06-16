@@ -12,10 +12,10 @@ Arrays also need a size.
 Look at these examples to see the two container types' initializations:
 
 ```cpp
-#include<array>
+#include <array>
 #include <string>
 
-// std::array variable_name<element_type, size> {list of elements}
+// std::array<element_type, size> variable_name {list of elements}
 std::array<std::string, 3> indie_rock {"yeah", "yeah", "yeah"};
 // indie_rock contains the elements "yeah" three times
 ```
@@ -24,10 +24,10 @@ Vectors usually need more space, as they allocate memory for further growth.
 You do not need to specify a size:
 
 ```cpp
-#include<vector>
+#include <vector>
 
-// std::vector variable_name<element_type> {list of elements}
-std::vector countdown<int> {3, 2, 1};
+// std::vector<element_type> variable_name {list of elements}
+std::vector<int> countdown {3, 2, 1};
 // my_vector contains the elements 3, 2 and 1
 ```
 

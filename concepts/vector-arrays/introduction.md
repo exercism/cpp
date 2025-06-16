@@ -15,7 +15,7 @@ Look at these examples to see the two container types' initializations:
 #include <array>
 #include <string>
 
-// std::array variable_name<element_type, size> {list of elements}
+// std::array<element_type, size> variable_name {list of elements}
 std::array<std::string, 3> indie_rock {"yeah", "yeah", "yeah"};
 // indie_rock contains the elements "yeah" three times
 ```
