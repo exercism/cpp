@@ -15,13 +15,13 @@ TEST_CASE("one_birthdate", "[716dcc2b-8fe4-4fc9-8c48-cbe70d8e6b67]") {
 TEST_CASE("two_birthdates_with_same_year_month_and_day",
           "[f7b3eb26-bcfc-4a1e-a2de-af07afc33f45]") {
     std::vector<std::string> birthdates{"2000-01-01", "2000-01-01"};
-    REQUIRE(baffling_birthdays::shared_birthday(birthdates) == true);
+    REQUIRE(baffling_birthdays::shared_birthday(birthdates));
 }
 
 TEST_CASE("two_birthdates_with_same_year_and_month_but_different_day",
           "[7193409a-6e16-4bcb-b4cc-9ffe55f79b25]") {
     std::vector<std::string> birthdates{"2012-05-09", "2012-05-17"};
-    REQUIRE(baffling_birthdays::shared_birthday(birthdates) == false);
+    REQUIRE_FALSE(baffling_birthdays::shared_birthday(birthdates));
 }
 
 TEST_CASE("two_birthdates_with_same_month_and_day_but_different_year",
