@@ -27,40 +27,40 @@ TEST_CASE("two_birthdates_with_same_year_and_month_but_different_day",
 TEST_CASE("two_birthdates_with_same_month_and_day_but_different_year",
           "[d04db648-121b-4b72-93e8-d7d2dced4495]") {
     std::vector<std::string> birthdates{"1999-10-23", "1988-10-23"};
-    REQUIRE(baffling_birthdays::shared_birthday(birthdates) == true);
+    REQUIRE(baffling_birthdays::shared_birthday(birthdates));
 }
 
 TEST_CASE("two_birthdates_with_same_year_but_different_month_and_day",
           "[3c8bd0f0-14c6-4d4c-975a-4c636bfdc233]") {
     std::vector<std::string> birthdates{"2007-12-19", "2007-04-27"};
-    REQUIRE(baffling_birthdays::shared_birthday(birthdates) == false);
+    REQUIRE_FALSE(baffling_birthdays::shared_birthday(birthdates));
 }
 
 TEST_CASE("two_birthdates_with_different_year_month_and_day",
           "[df5daba6-0879-4480-883c-e855c99cdaa3]") {
     std::vector<std::string> birthdates{"1997-08-04", "1963-11-23"};
-    REQUIRE(baffling_birthdays::shared_birthday(birthdates) == false);
+    REQUIRE_FALSE(baffling_birthdays::shared_birthday(birthdates));
 }
 
 TEST_CASE("multiple_birthdates_without_shared_birthday",
           "[0c17b220-cbb9-4bd7-872f-373044c7b406]") {
     std::vector<std::string> birthdates{"1966-07-29", "1977-02-12",
                                         "2001-12-25", "1980-11-10"};
-    REQUIRE(baffling_birthdays::shared_birthday(birthdates) == false);
+    REQUIRE_FALSE(baffling_birthdays::shared_birthday(birthdates));
 }
 
 TEST_CASE("multiple_birthdates_with_one_shared_birthday",
           "[966d6b0b-5c0a-4b8c-bc2d-64939ada49f8]") {
     std::vector<std::string> birthdates{"1966-07-29", "1977-02-12",
                                         "2001-07-29", "1980-11-10"};
-    REQUIRE(baffling_birthdays::shared_birthday(birthdates) == true);
+    REQUIRE(baffling_birthdays::shared_birthday(birthdates));
 }
 
 TEST_CASE("multiple_birthdates_with_more_than_one_shared_birthday",
           "[b7937d28-403b-4500-acce-4d9fe3a9620d]") {
     std::vector<std::string> birthdates{
         "1966-07-29", "1977-02-12", "2001-12-25", "1980-07-29", "2019-02-12"};
-    REQUIRE(baffling_birthdays::shared_birthday(birthdates) == true);
+    REQUIRE(baffling_birthdays::shared_birthday(birthdates));
 }
 
 TEST_CASE("generate_requested_number_of_birthdates",
