@@ -7,7 +7,7 @@
 
 TEST_CASE("one_birthdate", "[716dcc2b-8fe4-4fc9-8c48-cbe70d8e6b67]") {
     std::vector<std::string> birthdates{"2000-01-01"};
-    REQUIRE(baffling_birthdays::shared_birthday(birthdates) == false);
+    REQUIRE_FALSE(baffling_birthdays::shared_birthday(birthdates));
 }
 
 #if defined(EXERCISM_RUN_ALL_TESTS)
