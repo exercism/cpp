@@ -1,25 +1,17 @@
 #pragma once
 
-#include <iomanip>
-#include <sstream>
+#include <boost/date_time/gregorian/gregorian.hpp>
 #include <string>
-#include <unordered_set>
 #include <vector>
 
 namespace baffling_birthdays {
 
-struct Date {
-    int year;
-    int month;
-    int day;
-};
+using Date = boost::gregorian::date;
 
 Date parse_date(const std::string& iso);
 
-std::string to_string(const Date& d);
-
 bool shared_birthday(const std::vector<Date>& dates);
-std::vector<Date> random_birthdates_dates(std::size_t group_size);
+std::vector<Date> random_birthdates(std::size_t group_size);
 
 double estimated_probability_of_shared_birthday(std::size_t group_size);
 
@@ -32,11 +24,12 @@ inline bool shared_birthday(const std::vector<std::string>& birthdates) {
     return shared_birthday(dates);
 }
 
-inline std::vector<std::string> random_birthdates(std::size_t group_size) {
-    auto dates = random_birthdates_dates(group_size);
+inline std::vector<std::string> random_birthdates_str(std::size_t group_size) {
+    auto dates = random_birthdates(group_size);
     std::vector<std::string> out;
     out.reserve(group_size);
-    for (auto const& d : dates) out.push_back(to_string(d));
+    for (auto const& d : dates)
+        out.push_back(boost::gregorian::to_iso_extended_string(d));
     return out;
 }
 
