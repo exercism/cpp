@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "alienx5499"
+  ],
+  "files": {
+    "solution": [
+      "twelve_days.cpp",
+      "twelve_days.h"
+    ],
+    "test": [
+      "twelve_days_test.cpp"
+    ],
+    "example": [
+      ".meta/example.cpp",
+      ".meta/example.h"
+    ]
+  },
+  "blurb": "Output the lyrics to 'The Twelve Days of Christmas'.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/The_Twelve_Days_of_Christmas_(song)"
+}

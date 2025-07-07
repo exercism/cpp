@@ -1278,6 +1278,14 @@
           "comparisons"
         ],
         "difficulty": 6
+      },
+      {
+        "slug": "twelve-days",
+        "name": "Twelve Days",
+        "uuid": "0daec3e8-a0d1-49e8-9de5-0ad73f9c3243",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
       }
     ],
     "foregone": [
