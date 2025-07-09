@@ -41,12 +41,13 @@ std::vector<std::string> annotate(const std::vector<std::string>& garden) {
                 annotated += '*';
             } else {
                 int score_number = score(garden, row, column);
-                char score_char =
-                    (score_number == 0) ? ' ' : char(score_number) + '0';
+                char score_char = (score_number == 0)
+                                      ? ' '
+                                      : static_cast<char>(score_number) + '0';
                 annotated += score_char;
             }
         }
-        annotation.emplace_back(annotated);
+        annotation.push_back(std::move(annotated));
     }
     return annotation;
 }
