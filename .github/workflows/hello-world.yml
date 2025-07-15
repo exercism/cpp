@@ -19,7 +19,7 @@ on:
 jobs:
   hello-world-fails:
     name: Hello World Fails
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
     - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
     - name: Check Hello World Fails
