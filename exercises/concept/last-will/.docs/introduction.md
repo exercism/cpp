@@ -2,7 +2,7 @@
 
 ## Namespaces
 
-An important method for code organization are namespaces.
+An important method for code organization is the use of namespaces.
 Two functions might have a naming collision, which can be resolved by putting them in different namespaces.
 Namespaces can be nested, which might help to structure big code bases.
 Access to the namespaces is done via the scope-resolution operator `::`.
