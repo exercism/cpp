@@ -6,5 +6,5 @@ on:
     - cron: '0 0 15 * *'
 
 jobs:
-  call-gha-workflow:
+  configlet-sync:
     uses: exercism/github-actions/.github/workflows/configlet-sync.yml@main
