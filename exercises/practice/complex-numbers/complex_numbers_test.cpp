@@ -25,7 +25,8 @@ using complex_numbers::Complex;
 static const double eps = 0.005;
 
 // Helper function for comparing Complex numbers with approximate float values.
-static void require_approx_equal(const Complex& lhs, const Complex& rhs) {
+[[maybe_unused]] static void require_approx_equal(const Complex& lhs,
+                                                  const Complex& rhs) {
     REQUIRE_THAT(lhs.real(), Catch::Matchers::WithinAbs(rhs.real(), eps));
     REQUIRE_THAT(lhs.imag(), Catch::Matchers::WithinAbs(rhs.imag(), eps));
 }
