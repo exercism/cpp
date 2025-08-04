@@ -1,6 +1,7 @@
 #include "complex_numbers.h"
 
 #include <cmath>
+#include <sstream>
 
 #ifdef EXERCISM_TEST_SUITE
 #include <catch2/catch.hpp>
@@ -24,11 +25,33 @@ using complex_numbers::Complex;
 // epsilon for float values near 0.
 static const double eps = 0.005;
 
-// Helper function for comparing Complex numbers with approximate float values.
-[[maybe_unused]] static void require_approx_equal(const Complex& lhs,
-                                                  const Complex& rhs) {
-    REQUIRE_THAT(lhs.real(), Catch::Matchers::WithinAbs(rhs.real(), eps));
-    REQUIRE_THAT(lhs.imag(), Catch::Matchers::WithinAbs(rhs.imag(), eps));
+// Custom Catch2 matcher for approximate equality of Complex numbers
+class ComplexApproxMatcher : public Catch::MatcherBase<Complex> {
+   public:
+    ComplexApproxMatcher(const Complex& expected, double epsilon = eps)
+        : expected(expected), epsilon(epsilon) {}
+
+    bool match(const Complex& actual) const override {
+        return std::abs(actual.real() - expected.real()) <= epsilon &&
+               std::abs(actual.imag() - expected.imag()) <= epsilon;
+    }
+
+    std::string describe() const override {
+        std::ostringstream ss;
+        ss << "is approximately equal to (" << expected.real() << ", "
+           << expected.imag() << "i) with epsilon " << epsilon;
+        return ss.str();
+    }
+
+   private:
+    Complex expected;
+    double epsilon;
+};
+
+// Helper function to create the matcher
+inline ComplexApproxMatcher ApproxEquals(const Complex& expected,
+                                         double epsilon = eps) {
+    return ComplexApproxMatcher(expected, epsilon);
 }
 
 TEST_CASE("Real part -> Real part of a purely real number",
@@ -79,7 +102,7 @@ TEST_CASE("Imaginary unit", "[a39b7fd6-6527-492f-8c34-609d2c913879]") {
     const Complex c1{0.0, 1.0};
     const Complex c2{0.0, 1.0};
 
-    require_approx_equal(Complex(-1.0, 0.0), c1 * c2);
+    REQUIRE_THAT(c1 * c2, ApproxEquals(Complex(-1.0, 0.0)));
 }
 
 TEST_CASE("Arithmetic -> Addition -> Add purely real numbers",
@@ -87,7 +110,7 @@ TEST_CASE("Arithmetic -> Addition -> Add purely real numbers",
     const Complex c1{1.0, 0.0};
     const Complex c2{2.0, 0.0};
 
-    require_approx_equal(Complex(3.0, 0.0), c1 + c2);
+    REQUIRE_THAT(c1 + c2, ApproxEquals(Complex(3.0, 0.0)));
 }
 
 TEST_CASE("Arithmetic -> Addition -> Add purely imaginary numbers",
@@ -95,7 +118,7 @@ TEST_CASE("Arithmetic -> Addition -> Add purely imaginary numbers",
     const Complex c1{0.0, 1.0};
     const Complex c2{0.0, 2.0};
 
-    require_approx_equal(Complex(0.0, 3.0), c1 + c2);
+    REQUIRE_THAT(c1 + c2, ApproxEquals(Complex(0.0, 3.0)));
 }
 
 TEST_CASE("Arithmetic -> Addition -> Add numbers with real and imaginary part",
@@ -103,7 +126,7 @@ TEST_CASE("Arithmetic -> Addition -> Add numbers with real and imaginary part",
     const Complex c1{1.0, 2.0};
     const Complex c2{3.0, 4.0};
 
-    require_approx_equal(Complex(4.0, 6.0), c1 + c2);
+    REQUIRE_THAT(c1 + c2, ApproxEquals(Complex(4.0, 6.0)));
 }
 
 TEST_CASE("Arithmetic -> Subtraction -> Subtract purely real numbers",
@@ -111,7 +134,7 @@ TEST_CASE("Arithmetic -> Subtraction -> Subtract purely real numbers",
     const Complex c1{1.0, 0.0};
     const Complex c2{2.0, 0.0};
 
-    require_approx_equal(Complex(-1.0, 0.0), c1 - c2);
+    REQUIRE_THAT(c1 - c2, ApproxEquals(Complex(-1.0, 0.0)));
 }
 
 TEST_CASE("Arithmetic -> Subtraction -> Subtract purely imaginary numbers",
@@ -119,7 +142,7 @@ TEST_CASE("Arithmetic -> Subtraction -> Subtract purely imaginary numbers",
     const Complex c1{0.0, 1.0};
     const Complex c2{0.0, 2.0};
 
-    require_approx_equal(Complex(0.0, -1.0), c1 - c2);
+    REQUIRE_THAT(c1 - c2, ApproxEquals(Complex(0.0, -1.0)));
 }
 
 TEST_CASE(
@@ -130,7 +153,7 @@ TEST_CASE(
     const Complex c1{1.0, 2.0};
     const Complex c2{3.0, 4.0};
 
-    require_approx_equal(Complex(-2.0, -2.0), c1 - c2);
+    REQUIRE_THAT(c1 - c2, ApproxEquals(Complex(-2.0, -2.0)));
 }
 
 TEST_CASE("Arithmetic -> Multiplication -> Multiply purely real numbers",
@@ -138,7 +161,7 @@ TEST_CASE("Arithmetic -> Multiplication -> Multiply purely real numbers",
     const Complex c1{1.0, 0.0};
     const Complex c2{2.0, 0.0};
 
-    require_approx_equal(Complex(2.0, 0.0), c1 * c2);
+    REQUIRE_THAT(c1 * c2, ApproxEquals(Complex(2.0, 0.0)));
 }
 
 TEST_CASE("Arithmetic -> Multiplication -> Multiply purely imaginary numbers",
@@ -146,7 +169,7 @@ TEST_CASE("Arithmetic -> Multiplication -> Multiply purely imaginary numbers",
     const Complex c1{0.0, 1.0};
     const Complex c2{0.0, 2.0};
 
-    require_approx_equal(Complex(-2.0, 0.0), c1 * c2);
+    REQUIRE_THAT(c1 * c2, ApproxEquals(Complex(-2.0, 0.0)));
 }
 
 TEST_CASE(
@@ -157,7 +180,7 @@ TEST_CASE(
     const Complex c1{1.0, 2.0};
     const Complex c2{3.0, 4.0};
 
-    require_approx_equal(Complex(-5.0, 10.0), c1 * c2);
+    REQUIRE_THAT(c1 * c2, ApproxEquals(Complex(-5.0, 10.0)));
 }
 
 TEST_CASE("Arithmetic -> Division -> Divide purely real numbers",
@@ -165,7 +188,7 @@ TEST_CASE("Arithmetic -> Division -> Divide purely real numbers",
     const Complex c1{1.0, 0.0};
     const Complex c2{2.0, 0.0};
 
-    require_approx_equal(Complex(0.5, 0.0), c1 / c2);
+    REQUIRE_THAT(c1 / c2, ApproxEquals(Complex(0.5, 0.0)));
 }
 
 TEST_CASE("Arithmetic -> Division -> Divide purely imaginary numbers",
@@ -173,7 +196,7 @@ TEST_CASE("Arithmetic -> Division -> Divide purely imaginary numbers",
     const Complex c1{0.0, 1.0};
     const Complex c2{0.0, 2.0};
 
-    require_approx_equal(Complex(0.5, 0.0), c1 / c2);
+    REQUIRE_THAT(c1 / c2, ApproxEquals(Complex(0.5, 0.0)));
 }
 
 TEST_CASE(
@@ -182,7 +205,7 @@ TEST_CASE(
     const Complex c1{1.0, 2.0};
     const Complex c2{3.0, 4.0};
 
-    require_approx_equal(Complex(0.44, 0.08), c1 / c2);
+    REQUIRE_THAT(c1 / c2, ApproxEquals(Complex(0.44, 0.08)));
 }
 
 TEST_CASE("Absolute value -> Absolute value of a positive purely real number",
@@ -231,14 +254,14 @@ TEST_CASE("Complex conjugate -> Conjugate a purely real number",
           "[fb2d0792-e55a-4484-9443-df1eddfc84a2]") {
     const Complex c{5.0, 0.0};
 
-    require_approx_equal(Complex(5.0, 0.0), c.conj());
+    REQUIRE_THAT(c.conj(), ApproxEquals(Complex(5.0, 0.0)));
 }
 
 TEST_CASE("Complex conjugate -> Conjugate a purely imaginary number",
           "[e37fe7ac-a968-4694-a460-66cb605f8691]") {
     const Complex c{0.0, 5.0};
 
-    require_approx_equal(Complex(0.0, -5.0), c.conj());
+    REQUIRE_THAT(c.conj(), ApproxEquals(Complex(0.0, -5.0)));
 }
 
 TEST_CASE(
@@ -246,28 +269,28 @@ TEST_CASE(
     "[f7704498-d0be-4192-aaf5-a1f3a7f43e68]") {
     const Complex c{1.0, 1.0};
 
-    require_approx_equal(Complex(1.0, -1.0), c.conj());
+    REQUIRE_THAT(c.conj(), ApproxEquals(Complex(1.0, -1.0)));
 }
 
 TEST_CASE("Complex exponential function -> Euler's identity/formula",
           "[6d96d4c6-2edb-445b-94a2-7de6d4caaf60]") {
     const Complex c{0.0, M_PI};
 
-    require_approx_equal(Complex(-1.0, 0.0), c.exp());
+    REQUIRE_THAT(c.exp(), ApproxEquals(Complex(-1.0, 0.0)));
 }
 
 TEST_CASE("Complex exponential function -> Exponential of 0",
           "[2d2c05a0-4038-4427-a24d-72f6624aa45f]") {
     const Complex c{0.0, 0.0};
 
-    require_approx_equal(Complex(1.0, 0.0), c.exp());
+    REQUIRE_THAT(c.exp(), ApproxEquals(Complex(1.0, 0.0)));
 }
 
 TEST_CASE("Complex exponential function -> Exponential of a purely real number",
           "[ed87f1bd-b187-45d6-8ece-7e331232c809]") {
     const Complex c{1.0, 0.0};
 
-    require_approx_equal(Complex(M_E, 0.0), c.exp());
+    REQUIRE_THAT(c.exp(), ApproxEquals(Complex(M_E, 0.0)));
 }
 
 // Extra Credit
@@ -278,7 +301,7 @@ TEST_CASE(
     "[08eedacc-5a95-44fc-8789-1547b27a8702]") {
     const Complex c{std::log(2.0), M_PI};
 
-    require_approx_equal(Complex(-2.0, 0.0), c.exp());
+    REQUIRE_THAT(c.exp(), ApproxEquals(Complex(-2.0, 0.0)));
 }
 
 TEST_CASE(
@@ -288,7 +311,7 @@ TEST_CASE(
     "[d2de4375-7537-479a-aa0e-d474f4f09859]") {
     const Complex c{std::log(2.0) / 2.0, M_PI / 4.0};
 
-    require_approx_equal(Complex(1.0, 1.0), c.exp());
+    REQUIRE_THAT(c.exp(), ApproxEquals(Complex(1.0, 1.0)));
 }
 
 TEST_CASE(
@@ -298,7 +321,7 @@ TEST_CASE(
     "[06d793bf-73bd-4b02-b015-3030b2c952ec]") {
     const Complex c{1.0, 2.0};
 
-    require_approx_equal(Complex(6.0, 2.0), c + 5.0);
+    REQUIRE_THAT(c + 5.0, ApproxEquals(Complex(6.0, 2.0)));
 }
 
 TEST_CASE(
@@ -308,7 +331,7 @@ TEST_CASE(
     "[d77dbbdf-b8df-43f6-a58d-3acb96765328]") {
     const Complex c{1.0, 2.0};
 
-    require_approx_equal(Complex(6.0, 2.0), 5.0 + c);
+    REQUIRE_THAT(5.0 + c, ApproxEquals(Complex(6.0, 2.0)));
 }
 
 TEST_CASE(
@@ -318,7 +341,7 @@ TEST_CASE(
     "[20432c8e-8960-4c40-ba83-c9d910ff0a0f]") {
     const Complex c{5.0, 7.0};
 
-    require_approx_equal(Complex(1.0, 7.0), c - 4.0);
+    REQUIRE_THAT(c - 4.0, ApproxEquals(Complex(1.0, 7.0)));
 }
 
 TEST_CASE(
@@ -328,7 +351,7 @@ TEST_CASE(
     "[b4b38c85-e1bf-437d-b04d-49bba6e55000]") {
     const Complex c{5.0, 7.0};
 
-    require_approx_equal(Complex(-1.0, -7.0), 4.0 - c);
+    REQUIRE_THAT(4.0 - c, ApproxEquals(Complex(-1.0, -7.0)));
 }
 
 TEST_CASE(
@@ -338,7 +361,7 @@ TEST_CASE(
     "[dabe1c8c-b8f4-44dd-879d-37d77c4d06bd]") {
     const Complex c{2.0, 5.0};
 
-    require_approx_equal(Complex(10.0, 25.0), c * 5.0);
+    REQUIRE_THAT(c * 5.0, ApproxEquals(Complex(10.0, 25.0)));
 }
 
 TEST_CASE(
@@ -348,7 +371,7 @@ TEST_CASE(
     "[6c81b8c8-9851-46f0-9de5-d96d314c3a28]") {
     const Complex c{2.0, 5.0};
 
-    require_approx_equal(Complex(10.0, 25.0), 5.0 * c);
+    REQUIRE_THAT(5.0 * c, ApproxEquals(Complex(10.0, 25.0)));
 }
 
 TEST_CASE(
@@ -358,7 +381,7 @@ TEST_CASE(
     "[8a400f75-710e-4d0c-bcb4-5e5a00c78aa0]") {
     const Complex c{10.0, 100.0};
 
-    require_approx_equal(Complex(1.0, 10.0), c / 10.0);
+    REQUIRE_THAT(c / 10.0, ApproxEquals(Complex(1.0, 10.0)));
 }
 
 TEST_CASE(
@@ -368,7 +391,7 @@ TEST_CASE(
     "[9a867d1b-d736-4c41-a41e-90bd148e9d5e]") {
     const Complex c{1.0, 1.0};
 
-    require_approx_equal(Complex(2.5, -2.5), 5.0 / c);
+    REQUIRE_THAT(5.0 / c, ApproxEquals(Complex(2.5, -2.5)));
 }
 
 #endif
