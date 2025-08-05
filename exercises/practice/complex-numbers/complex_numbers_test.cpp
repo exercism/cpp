@@ -51,7 +51,7 @@ class ComplexApproxMatcher : public Catch::MatcherBase<Complex> {
 // Helper function to create the matcher
 inline ComplexApproxMatcher ComplexWithinAbs(const Complex& expected,
                                              double epsilon) {
-    return ComplexApproxMatcher(expected, epsilon);
+    return ComplexApproxMatcher{expected, epsilon};
 }
 
 TEST_CASE("Real part -> Real part of a purely real number",
