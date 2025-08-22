@@ -1287,6 +1287,22 @@
           "comparisons"
         ],
         "difficulty": 6
+      },
+      {
+        "slug": "bottle-song",
+        "name": "Bottle Song",
+        "uuid": "ed066c62-3a6a-480b-b72a-d1ae33369cd7",
+        "practices": [
+          "switch",
+          "loops",
+          "if-statements"
+        ],
+        "prerequisites": [
+          "strings",
+          "numbers",
+          "loops"
+        ],
+        "difficulty": 3
       }
     ],
     "foregone": [
