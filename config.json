@@ -1287,6 +1287,21 @@
           "comparisons"
         ],
         "difficulty": 6
+      },
+      {
+        "slug": "connect",
+        "name": "Connect",
+        "uuid": "86ba61cc-f88b-46b3-af2c-8ae304892cad",
+        "practices": [
+          "if-statements"
+        ],
+        "prerequisites": [
+          "strings",
+          "vector-arrays",
+          "if-statements",
+          "loops"
+        ],
+        "difficulty": 7
       }
     ],
     "foregone": [
