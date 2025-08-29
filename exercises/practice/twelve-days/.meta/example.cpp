@@ -1,16 +1,16 @@
 #include "twelve_days.h"
-#include <vector>
+#include <array>
 #include <string>
 
 namespace twelve_days {
 
 std::string verse(int day) {
-    const std::vector<std::string> ordinals = {
+    const std::array<std::string, 13> ordinals = {
         "", "first", "second", "third", "fourth", "fifth", "sixth",
         "seventh", "eighth", "ninth", "tenth", "eleventh", "twelfth"
     };
     
-    const std::vector<std::string> gifts = {
+    const std::array<std::string, 13> gifts = {
         "", "a Partridge in a Pear Tree", "two Turtle Doves", "three French Hens",
         "four Calling Birds", "five Gold Rings", "six Geese-a-Laying",
         "seven Swans-a-Swimming", "eight Maids-a-Milking", "nine Ladies Dancing",
