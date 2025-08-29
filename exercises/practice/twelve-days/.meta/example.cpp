@@ -17,7 +17,7 @@ std::string verse(int day) {
         "ten Lords-a-Leaping", "eleven Pipers Piping", "twelve Drummers Drumming"
     };
     
-    std::string result = "On the " + ordinals[day] + " day of Christmas my true love gave to me: ";
+    auto result = std::string{"On the "} + ordinals[day] + " day of Christmas my true love gave to me: ";
     
     for (int i = day; i >= 1; --i) {
         if (i == day) {
