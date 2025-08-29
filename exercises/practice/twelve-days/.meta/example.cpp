@@ -23,9 +23,11 @@ std::string verse(int day) {
         if (i == day) {
             result += gifts[i];
         } else if (i == 1) {
-            result += ", and " + gifts[i];
+            result += ", and ";
+            result += gifts[i];
         } else {
-            result += ", " + gifts[i];
+            result += ", ";
+            result += gifts[i];
         }
     }
     
