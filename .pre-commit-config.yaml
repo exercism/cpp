@@ -1,4 +1,4 @@
-exclude: 'test/(catch.hpp|tests-main.cpp)'
+exclude: 'test/(catch(_amalgamated)?.[ch]pp|tests-main.cpp)'
 
 repos:
 -   repo: https://github.com/pre-commit/mirrors-clang-format
