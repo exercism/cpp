@@ -64,4 +64,4 @@ if(${MSVC})
 endif()
 
 # Run the tests on every build
-add_custom_target(test_${exercise} ALL DEPENDS ${exercise} COMMAND ${exercise}) 
+add_custom_target(test_${exercise} ALL DEPENDS ${exercise} COMMAND ${exercise})
