@@ -6,23 +6,23 @@
 namespace twelve_days {
 
 std::string recite(int start_day, int end_day) {
-    constexpr std::array<const char*, 13> ordinals = {
+    constexpr std::array ordinals = {
         "",        "first",  "second", "third", "fourth",   "fifth",  "sixth",
         "seventh", "eighth", "ninth",  "tenth", "eleventh", "twelfth"};
 
-    constexpr std::array<const char*, 13> gifts = {"",
-                                                   "a Partridge in a Pear Tree",
-                                                   "two Turtle Doves",
-                                                   "three French Hens",
-                                                   "four Calling Birds",
-                                                   "five Gold Rings",
-                                                   "six Geese-a-Laying",
-                                                   "seven Swans-a-Swimming",
-                                                   "eight Maids-a-Milking",
-                                                   "nine Ladies Dancing",
-                                                   "ten Lords-a-Leaping",
-                                                   "eleven Pipers Piping",
-                                                   "twelve Drummers Drumming"};
+    constexpr std::array gifts = {"",
+                                  "a Partridge in a Pear Tree",
+                                  "two Turtle Doves",
+                                  "three French Hens",
+                                  "four Calling Birds",
+                                  "five Gold Rings",
+                                  "six Geese-a-Laying",
+                                  "seven Swans-a-Swimming",
+                                  "eight Maids-a-Milking",
+                                  "nine Ladies Dancing",
+                                  "ten Lords-a-Leaping",
+                                  "eleven Pipers Piping",
+                                  "twelve Drummers Drumming"};
 
     if (start_day == end_day) {
         // Single verse case
