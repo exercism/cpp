@@ -34,7 +34,7 @@ This approach starts be defining a [`bitset`][bitset] to keep track of the used 
 
 A [range-based `for` loop][ranged-for] iterates over all of the characters in the input phrase [`string_view`][stringview].
 Each character is tested by the [`isalpha()`][isalpha] function to see if it is considered an alphabetic character according to the currently installed C locale.
-If the currently installed locale is not suitable for the English alphabet, then [`std::locale::classic()`][locale-classic] can be passed to the [`isalpha()`][isalpha-locale] function defined in [&lt;locale&gt;][locale], like so: 
+If the currently installed locale is not suitable for the English alphabet, then [`std::locale::classic()`][locale-classic] can be passed to the [`isalpha()`][isalpha-locale] function defined in [&lt;locale&gt;][locale], like so:
 
 ```cpp
 #include <bitset>

@@ -1,6 +1,6 @@
 # About
 
-A `string` in C++ is a mutable object that represents text as a sequence of characters (letters, digits, punctuation, etc.). 
+A `string` in C++ is a mutable object that represents text as a sequence of characters (letters, digits, punctuation, etc.).
 Strings are manipulated by calling the string's methods.
 
 ## Strings Library
@@ -32,7 +32,7 @@ Later in the syllabus, you will learn more about member functions and the connec
 ```cpp
 std::string qualification{"awesome"};
 // 1st argument: from the index to the end of the string:
-std::string who_is_awesome = qualification.substr(5); 
+std::string who_is_awesome = qualification.substr(5);
 // => "me"
 
 // 2nd optional argument for the length:

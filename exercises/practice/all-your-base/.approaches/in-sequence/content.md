@@ -75,7 +75,7 @@ When you need both the remainder and the quotient from a division operation, you
 
 ```cpp
 std::vector <unsigned int> output_digits{};
-std::ldiv_t v{intermediate, 0};        
+std::ldiv_t v{intermediate, 0};
 while (v.quot > 0) {
     v = std::div(v.quot, output_base);
     output_digits.emplace_back(v.rem);
@@ -107,19 +107,19 @@ std::vector<unsigned int> convert(unsigned int input_base,
         throw std::invalid_argument("Bases must be at least 2");
     unsigned int intermediate = 0;
     for (unsigned int d : input_digits) {
-            if (d >= input_base) 
+            if (d >= input_base)
                 throw std::invalid_argument("Digits cannot be bigger than the base");
         intermediate = intermediate * input_base + d;
     }
     std::vector <unsigned int> output_digits{};
-    std::ldiv_t v{intermediate, 0};        
+    std::ldiv_t v{intermediate, 0};
     while (v.quot > 0) {
         v = std::div(v.quot, output_base);
         output_digits.emplace_back(v.rem);
     }
-    
+
     std::reverse(output_digits.begin(), output_digits.end());
-    
+
     return output_digits;
 }
 ```
@@ -129,7 +129,7 @@ std::vector<unsigned int> convert(unsigned int input_base,
 [pow-function]: https://en.cppreference.com/w/cpp/numeric/math/pow
 [reverse-string]: https://exercism.org/tracks/cpp/exercises/reverse-string/dig_deeper
 [parallel-computing]: https://en.wikipedia.org/wiki/Parallel_computing
-[while-loop]: https://en.cppreference.com/w/cpp/language/while 
-[for-loop]: https://en.cppreference.com/w/cpp/language/for 
+[while-loop]: https://en.cppreference.com/w/cpp/language/while
+[for-loop]: https://en.cppreference.com/w/cpp/language/for
 [algorithm-header]: https://en.cppreference.com/w/cpp/algorithm
 [div-function]: https://en.cppreference.com/w/cpp/numeric/math/div

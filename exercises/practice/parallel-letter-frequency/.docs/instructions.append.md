@@ -1,5 +1,5 @@
 # Instructions append
- 
+
 ## Additional Notes for C++ Implementation
 
 There are several ways how to achieve parallelism in C++.

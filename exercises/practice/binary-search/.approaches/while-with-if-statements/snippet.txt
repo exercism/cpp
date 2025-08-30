@@ -4,5 +4,5 @@ while (left < right) {
     if (look == value) return mid;
     if (look < value) left = mid + 1;
     else right = mid;
-}    
+}
 throw std::domain_error("Value not found.");

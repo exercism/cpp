@@ -377,7 +377,7 @@ TEST_CASE(
 TEST_CASE(
     // clang-format off
     "Operations between real numbers and complex numbers -> Divide complex number by real number",
-    // clang-format on 
+    // clang-format on
     "[8a400f75-710e-4d0c-bcb4-5e5a00c78aa0]") {
     const Complex c{10.0, 100.0};
 
