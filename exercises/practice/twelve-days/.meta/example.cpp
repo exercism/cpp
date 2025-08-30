@@ -12,23 +12,21 @@ std::string verse(int day) {
         "seventh", "eighth", "ninth",  "tenth", "eleventh", "twelfth"};
 
     constexpr std::array gifts = {"",
-                                "a Partridge in a Pear Tree",
-                                "two Turtle Doves",
-                                "three French Hens",
-                                "four Calling Birds",
-                                "five Gold Rings",
-                                "six Geese-a-Laying",
-                                "seven Swans-a-Swimming",
-                                "eight Maids-a-Milking",
-                                "nine Ladies Dancing",
-                                "ten Lords-a-Leaping",
-                                "eleven Pipers Piping",
-                                "twelve Drummers Drumming"};
+                                  "a Partridge in a Pear Tree",
+                                  "two Turtle Doves",
+                                  "three French Hens",
+                                  "four Calling Birds",
+                                  "five Gold Rings",
+                                  "six Geese-a-Laying",
+                                  "seven Swans-a-Swimming",
+                                  "eight Maids-a-Milking",
+                                  "nine Ladies Dancing",
+                                  "ten Lords-a-Leaping",
+                                  "eleven Pipers Piping",
+                                  "twelve Drummers Drumming"};
 
-    auto result = std::string{"On the "} +
-                    ordinals[day] +
-                    " day of Christmas my true love gave to me: " +
-                    gifts[day];
+    auto result = std::string{"On the "} + ordinals[day] +
+                  " day of Christmas my true love gave to me: " + gifts[day];
 
     for (int i = day - 1; i >= 1; --i) {
         if (i == 1) {
@@ -38,10 +36,10 @@ std::string verse(int day) {
         }
         result += gifts[i];
     }
-    
+
     return result + ".\n";
 }
-}
+}  // namespace
 
 std::string recite(int start_day, int end_day) {
     std::string result{};
@@ -51,7 +49,7 @@ std::string recite(int start_day, int end_day) {
         }
         result += verse(i);
     }
-    return result;    
+    return result;
 }
 
 }  // namespace twelve_days
