@@ -1,0 +1,6 @@
+{
+  "blurb": "Range-based loops in C++ provide a concise and readable way to iterate over elements in a container, eliminating index management and reducing errors.",
+  "authors": [
+    "vaeng"
+  ]
+}
