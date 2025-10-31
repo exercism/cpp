@@ -72,10 +72,18 @@ namespace robots {
 ```cpp
 // A file named robot_flower.cpp
 #include "robot_flower.h"
-robots::Flower::Flower(std::string name, int size) {this->name = "Robotica " + name; this->size = size;}
-void robots::Flower::start_next_day() {if (!needs_water) ++size; needs_water = true;}
-std::string robots::Flower::get_name() {return name;}
-int robots::Flower::get_size() {return size;}
+robots::Flower::Flower(std::string name, int size) {
+    this->name = "Robotica " + name; this->size = size;
+}
+void robots::Flower::start_next_day() {
+    if (!needs_water) ++size; needs_water = true;
+}
+std::string robots::Flower::get_name() {
+    return name;
+}
+int robots::Flower::get_size() {
+    return size;
+}
 ```
 
 When the header is used as an API overview, that is where a person would look for information like default values.
