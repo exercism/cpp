@@ -73,10 +73,12 @@ namespace robots {
 // A file named robot_flower.cpp
 #include "robot_flower.h"
 robots::Flower::Flower(std::string name, int size) {
-    this->name = "Robotica " + name; this->size = size;
+    this->name = "Robotica " + name;
+    this->size = size;
 }
 void robots::Flower::start_next_day() {
-    if (!needs_water) ++size; needs_water = true;
+    if (!needs_water) ++size;
+    needs_water = true;
 }
 std::string robots::Flower::get_name() {
     return name;
