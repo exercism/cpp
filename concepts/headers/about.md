@@ -124,13 +124,9 @@ class Flower {
         this->name = "Robotica " + name;
         this->size = size;
     }
-
     void give_water() { needs_water = false; }
-
     std::string get_name() { return name; }
-
     int get_size() { return size; }
-
     void start_next_day() {
         if (!needs_water) ++size;
         needs_water = true;

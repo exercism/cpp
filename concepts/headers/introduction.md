@@ -132,7 +132,9 @@ class Flower {
     std::string get_name() { return name; }
     int get_size() { return size; }
     void start_next_day() {
-        if (!needs_water) ++size;
+        if (!needs_water) {
+            ++size;
+        }
         needs_water = true;
     }
 };
