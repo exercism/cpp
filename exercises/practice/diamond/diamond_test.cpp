@@ -29,6 +29,7 @@ TEST_CASE("Degenerate case with a single 'A' row",
     REQUIRE(diamond::rows('A') == expected);
 }
 
+#if defined(EXERCISM_RUN_ALL_TESTS)
 TEST_CASE("Degenerate case with no row containing 3 distinct groups of spaces",
           "[bd6a6d78-9302-42e9-8f60-ac1461e9abae]") {
     std::vector<std::string> expected{" A ", "B B", " A "};
@@ -106,5 +107,4 @@ TEST_CASE("Largest possible diamond",
         "                         A                         "};
     REQUIRE(diamond::rows('Z') == expected);
 }
-#if defined(EXERCISM_RUN_ALL_TESTS)
 #endif
