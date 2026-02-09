@@ -38,7 +38,7 @@ You even got one of the enumerations: `BetaHydri`.
 Prepare the source and header files with your discovered information.
 You need two namespaces: `heaven` and `star_map`.
 The `heaven` namespace has a class `Vessel`, which can be called with two or three arguments.
-The `System` enum is to be placed in the `star_map` namespace and has an `EpsilonEridani` enumeration.
+The `System` enum is to be placed in the `star_map` namespace and has an `BetaHydri` enumeration.
 Keep an eye out for other enumerations, so that you can constantly update the `System` enum.
 
 ## 2. Find more details
