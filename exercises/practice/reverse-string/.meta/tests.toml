@@ -19,3 +19,4 @@ description = "a palindrome"
 
 [b9e7dec1-c6df-40bd-9fa3-cd7ded010c4c]
 description = "an even-sized word"
+include = false

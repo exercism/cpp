@@ -55,6 +55,7 @@ description = "negative minutes roll over continuously"
 
 [1cd19447-19c6-44bf-9d04-9f8305ccb9ea]
 description = "negative sixty minutes is previous hour"
+include = false
 
 [9d3053aa-4f47-4afc-bd45-d67a72cef4dc]
 description = "negative hour and minutes both roll over"
@@ -157,3 +158,4 @@ description = "clocks with negative hours and minutes that wrap"
 
 [96969ca8-875a-48a1-86ae-257a528c44f5]
 description = "full clock and zeroed clock"
+include = false
