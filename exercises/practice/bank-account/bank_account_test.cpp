@@ -150,12 +150,16 @@ TEST_CASE("Can handle concurrent transactions",
 
     std::vector<std::thread> vec_of_threads;
 
-    for (int i = 0; i < 1000; ++i) {
+    for (int i = 0; i < 10; ++i) {
         vec_of_threads.push_back(std::thread([&]() {
             using namespace std::chrono_literals;
-            account.deposit(1);
-            std::this_thread::sleep_for(5ms);
-            account.withdraw(1);
+            for (int j{0}; j < 100; ++j) {
+              account.deposit(1);
+              std::this_thread::sleep_for(1ms);
+            }
+            for (int j{0}; j < 100; ++j) {
+              account.withdraw(1);
+            }
         }));
     }
 
