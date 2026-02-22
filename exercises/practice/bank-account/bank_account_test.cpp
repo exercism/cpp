@@ -60,7 +60,7 @@ TEST_CASE("Can do multiple operations sequentially",
     REQUIRE(account.balance() == 20);
 }
 
-TEST_CASE("annot check balance of closed account",
+TEST_CASE("Cannot check balance of closed account",
           "[f9facfaa-d824-486e-8381-48832c4bbffd]") {
     Bankaccount::Bankaccount account{};
     account.open();
