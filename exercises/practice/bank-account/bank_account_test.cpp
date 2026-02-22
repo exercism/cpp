@@ -154,11 +154,11 @@ TEST_CASE("Can handle concurrent transactions",
         vec_of_threads.push_back(std::thread([&]() {
             using namespace std::chrono_literals;
             for (int j{0}; j < 100; ++j) {
-              account.deposit(1);
-              std::this_thread::sleep_for(1ms);
+                account.deposit(1);
+                std::this_thread::sleep_for(1ms);
             }
             for (int j{0}; j < 100; ++j) {
-              account.withdraw(1);
+                account.withdraw(1);
             }
         }));
     }
