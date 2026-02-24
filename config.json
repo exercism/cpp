@@ -1401,6 +1401,11 @@
       "uuid": "5de475cc-5321-476f-bd19-a82b60284f5a",
       "slug": "literals",
       "name": "Literals"
+    },
+    {
+      "uuid": "6ae189b1-2195-4514-abb5-bd270ba5b7c4",
+      "slug": "ranged-loops",
+      "name": "Range-based For Loops"
     }
   ],
   "key_features": [
