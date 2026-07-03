@@ -41,8 +41,7 @@ int& savings{main_acc};
 
 // try to reseat savings to use main account
 savings = side_acc;
-// savings and main_acc are now -20
-// as this uses the **value** of side_acc
+// => compiler error, references binding once set can not be changed
 savings += 20;
 // savings and main_acc are now 0, side_acc is stil -20
 
