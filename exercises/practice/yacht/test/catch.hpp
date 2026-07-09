@@ -3175,8 +3175,8 @@ namespace Detail {
 } // end namespace Detail
 
 namespace literals {
-    Detail::Approx operator "" _a(long double val);
-    Detail::Approx operator "" _a(unsigned long long val);
+    Detail::Approx operator ""_a(long double val);
+    Detail::Approx operator ""_a(unsigned long long val);
 } // end namespace literals
 
 template<>
@@ -7911,10 +7911,10 @@ namespace Detail {
 } // end namespace Detail
 
 namespace literals {
-    Detail::Approx operator "" _a(long double val) {
+    Detail::Approx operator ""_a(long double val) {
         return Detail::Approx(val);
     }
-    Detail::Approx operator "" _a(unsigned long long val) {
+    Detail::Approx operator ""_a(unsigned long long val) {
         return Detail::Approx(val);
     }
 } // end namespace literals
