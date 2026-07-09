@@ -11,10 +11,10 @@ on:
 jobs:
   linux-min:
     name: Linux Min Config
-    runs-on: ubuntu-26.04
+    runs-on: ubuntu-22.04
     strategy:
       matrix:
-        compiler: [clang++-20, g++-15]
+        compiler: [clang++-15, g++-12]
     steps:
     - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
     - name: Install Dependencies
