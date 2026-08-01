@@ -16,7 +16,7 @@ jobs:
       matrix:
         compiler: [clang++-15, g++-12]
     steps:
-    - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
     - name: Install Dependencies
       # Boost must be installed only because the CMake version (3.12) can't
       # detect the installed Boost version (1.69)
@@ -37,7 +37,7 @@ jobs:
       matrix:
         compiler: [clang++, g++]
     steps:
-    - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
     - name: Install Dependencies
       # Boost must be installed only because the CMake version (3.12) can't
       # detect the installed Boost version (1.69)
@@ -64,7 +64,7 @@ jobs:
     needs: [linux-min]
     runs-on: windows-2022
     steps:
-    - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
     - name: Run Tests
       shell: powershell
       # Delete the exercises that require Boost to avoid issues with Windows setup.
@@ -80,7 +80,7 @@ jobs:
     needs: [linux-min]
     runs-on: macOS-latest
     steps:
-    - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
     - name: Install Boost
       run: brew install boost
     - name: Run Tests
