@@ -1,7 +1,13 @@
-#pragma once
+#ifndef RAINDROPS_H
+#define RAINDROPS_H
+
+#include <string>
 
 namespace raindrops {
 
-// TODO: add your solution here
+    // Declaration of the convert function
+    std::string convert(int number);
 
 }  // namespace raindrops
+
+#endif // RAINDROPS_H
