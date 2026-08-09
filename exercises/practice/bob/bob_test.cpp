@@ -78,6 +78,11 @@ TEST_CASE("statement_containing_question_mark",
     REQUIRE("Whatever." == bob::hey("Ending with ? means a question."));
 }
 
+TEST_CASE("shouting_a_statement_containing_a_question_mark",
+          "[3c954328-86fb-4c71-8961-e18d6a5e2517]") {
+    REQUIRE("Whoa, chill out!" == bob::hey("DO LIONS EAT PEOPLE? AHHHHH."));
+}
+
 TEST_CASE("non_letters_with_question",
           "[9bfc677d-ea3a-45f2-be44-35bc8fa3753e]") {
     REQUIRE("Sure." == bob::hey(":) ?"));
