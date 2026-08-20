@@ -115,7 +115,7 @@ The repetition in those calls can be avoided with default arguments.
 ```cpp
 void record_new_horse_birth(string name, int weight, string color="brown-ish", string dam="Alruccaba", string sire="Poseidon");
 
-record_new_horse_birth("Urban Sea", 130); // color will be brown, dam "Alruccabam", sire "Poseidon"
+record_new_horse_birth("Urban Sea", 130); // color will be brown, dam "Alruccaba", sire "Poseidon"
 record_new_horse_birth("Highclere", 175, "off-white", "Fall Aspen");   // sire will be "Poseidon"
 ```
 
