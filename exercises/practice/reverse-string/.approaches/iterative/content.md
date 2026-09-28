@@ -127,4 +127,3 @@ Check out the [Direct Construction][approach-direct-construction] approach.
 [cppref-string-pushback]: https://en.cppreference.com/w/cpp/string/basic_string/push_back
 [cppref-string-operator-plus-equal]: https://en.cppreference.com/w/cpp/string/basic_string/operator%2B%3D
 [approach-direct-construction]: https://exercism.org/tracks/cpp/exercises/reverse-string/approaches/direct-construction
-

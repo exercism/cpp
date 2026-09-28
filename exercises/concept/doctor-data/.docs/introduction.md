@@ -10,7 +10,7 @@ The header file will tell you _what_ a codebase has to offer without going into 
 The most common file extension for header files is `.h`.
 Some projects use `.hpp` or skip the extension completely.
 
-The definitions are located in a separate `.cpp` file. 
+The definitions are located in a separate `.cpp` file.
 To reunite the parts, the source file starts by _including_ the respective header file.
 
 If you want to write a library called "quick_math" that offers a function "super_root" that you want to use often, the files would look like this:
@@ -81,7 +81,7 @@ int robots::Flower::get_size() {return size;}
 When the header is used as an API overview, that is where a person would look for information like default values.
 The `size` parameter's default of the constructor is therefore handled in the header and not in the implementation.
 The definitions in the source file are prefixed with the namespace `robots` and the class type `Flower`.
- 
+
 Another layout option is a _header only_ library, that does not have a `.cpp` file at all:
 
 ```cpp

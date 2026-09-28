@@ -56,10 +56,10 @@ std::vector <unsigned int> output_digits(digit_limit);
 std::iota(output_digits.rbegin(), output_digits.rend(), 1);
 std::for_each(
     std::execution::par_unseq,
-    output_digits.begin(),   
-    output_digits.end(),    
+    output_digits.begin(),
+    output_digits.end(),
     [&](unsigned int digit) {
-        output_digits[digit_limit - digit] = 
+        output_digits[digit_limit - digit] =
             intermediate
                 / static_cast<unsigned int>(std::pow(output_base, digit - 1))
                 % output_base;

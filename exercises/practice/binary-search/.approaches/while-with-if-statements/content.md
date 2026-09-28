@@ -1,4 +1,4 @@
-# 
+#
 ## Approach: `while` loop with `if` statements
 
 **binary_search.h**
@@ -25,9 +25,9 @@ namespace binary_search {
             if (look == value) return mid;
             if (look < value) left = mid + 1;
             else right = mid;
-        }    
+        }
         throw std::domain_error("Value not found. No soup for you!");
-    } 
+    }
 }  // namespace binary_search
 ```
 
@@ -69,4 +69,3 @@ The loop exits and a [std::domain_error][domain-error] is returned from the func
 [if]: https://en.cppreference.com/w/cpp/language/if
 [domain-error]: https://en.cppreference.com/w/cpp/error/domain_error
 [mid-bug]: https://ai.googleblog.com/2006/06/extra-extra-read-all-about-it-nearly.html
-

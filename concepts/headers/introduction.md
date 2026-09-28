@@ -10,7 +10,7 @@ The header file will tell you _what_ a codebase has to offer without going into 
 The most common file extension for header files is `.h`.
 Some projects use `.hpp` or skip the extension completely.
 
-The definitions are located in a separate `.cpp` file. 
+The definitions are located in a separate `.cpp` file.
 To reunite the parts, the source file starts by _including_ the respective header file.
 
 If you want to write a library called "quick_math" that offers a function "super_root" that you want to use often, the files would look like this:
@@ -18,17 +18,24 @@ If you want to write a library called "quick_math" that offers a function "super
 ```cpp
 // A file named quick_math.h
 #pragma once
+
 namespace quick_math {
-    double super_root(double x, int n);
-}
+
+double super_root(double x, int n);
+
+}  // namespace quick_math
 ```
 
 ```cpp
 // A file named quick_math.cpp
-#include "quick_math.h"
 #include <cmath>
+
+#include "quick_math.h"
+
 double quick_math::super_root(double x, int n) {
-    while(n) { x = std::sqrt(x), --n;}
+    while (n) {
+        x = std::sqrt(x), --n;
+    }
     return x;
 }
 ```
@@ -51,57 +58,88 @@ One possible layout is to keep all the implementation details in the source file
 // A file named robot_flower.h
 #if !defined(ROBOT_FLOWER_H)
 #define ROBOT_FLOWER_H
+
 #include <string>
+
 namespace robots {
-    class Flower {
-        private:
-            bool needs_water{};
-            int size{};
-            std::string name{};
-        public:
-            Flower(std::string name, int size = 0);
-            void give_water();
-            std::string get_name();
-            int get_size();
-            void start_next_day();
-    };
-}
+
+class Flower {
+   private:
+    bool needs_water{};
+    int size{};
+    std::string name{};
+
+   public:
+    Flower(std::string name, int size = 0);
+    void give_water();
+    std::string get_name();
+    int get_size();
+    void start_next_day();
+};
+
+}  // namespace robots
+
 #endif
 ```
 
 ```cpp
 // A file named robot_flower.cpp
 #include "robot_flower.h"
-robots::Flower::Flower(std::string name, int size) {this->name = "Robotica " + name; this->size = size;}
-void robots::Flower::start_next_day() {if (!needs_water) ++size; needs_water = true;}
-std::string robots::Flower::get_name() {return name;}
-int robots::Flower::get_size() {return size;}
+
+robots::Flower::Flower(std::string name, int size) {
+    this->name = "Robotica " + name;
+    this->size = size;
+}
+
+void robots::Flower::start_next_day() {
+    if (!needs_water) {
+        ++size;
+    }
+    needs_water = true;
+}
+
+std::string robots::Flower::get_name() { return name; }
+
+int robots::Flower::get_size() { return size; }
 ```
 
 When the header is used as an API overview, that is where a person would look for information like default values.
 The `size` parameter's default of the constructor is therefore handled in the header and not in the implementation.
 The definitions in the source file are prefixed with the namespace `robots` and the class type `Flower`.
- 
+
 Another layout option is a _header only_ library, that does not have a `.cpp` file at all:
 
 ```cpp
 // A file named robot_flower.h
 #pragma once
+
 #include <string>
+
 namespace robots {
-    class Flower {
-        private:
-            bool needs_water{};
-            int size{};
-            std::string name{};
-        public:
-            Flower(std::string name, int size = 0) {this->name = "Robotica " + name; this->size = size;}
-            void give_water() {needs_water = false;}
-            std::string get_name() {return name;}
-            int get_size() {return size;}
-            void start_next_day() {if (!needs_water) ++size; needs_water = true;}
-    };
-}
+
+class Flower {
+   private:
+    bool needs_water{};
+    int size{};
+    std::string name{};
+
+   public:
+    Flower(std::string name, int size = 0) {
+        this->name = "Robotica " + name;
+        this->size = size;
+    }
+    void give_water() { needs_water = false; }
+    std::string get_name() { return name; }
+    int get_size() { return size; }
+    void start_next_day() {
+        if (!needs_water) {
+            ++size;
+        }
+        needs_water = true;
+    }
+};
+
+}  // namespace robots
 ```
 
 Projects might use combinations of these layouts and there is a lot of discussion as to what might be the best fit for each use case.

@@ -1,0 +1,10 @@
+name: Run Configlet Sync
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 15 * *'
+
+jobs:
+  configlet-sync:
+    uses: exercism/github-actions/.github/workflows/configlet-sync.yml@main

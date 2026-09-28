@@ -71,4 +71,3 @@ This is a great approach, it is concise and easy to read (once you know about th
 
 [cppref-stringview]: https://en.cppreference.com/w/cpp/string/basic_string_view
 [cppref-string-ctor]: https://en.cppreference.com/w/cpp/string/basic_string/basic_string
-

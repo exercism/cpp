@@ -51,7 +51,7 @@ std::string reverse_string(std::string str)
 
 The function takes its argument "by value" (`std::string`).
 That means the parameter `str` gets constructed from the argument that the caller passes to the function, and it gets destructed at the end of the function.
-Any modifications of the parameter will not be visible outside of the function and will not affect the argument of the caller.  
+Any modifications of the parameter will not be visible outside of the function and will not affect the argument of the caller.
 We do that because the function needs a "working copy" of the string, it will reverse and return that parameter without creating an additional instance of `std::string`.
 
 ## Handling an empty string as a special case
@@ -88,4 +88,3 @@ Check out the [Using the standard library][approach-using-the-standard-lib] appr
 
 [cppref-swap]: https://en.cppreference.com/w/cpp/algorithm/swap
 [approach-using-the-standard-lib]: https://exercism.org/tracks/cpp/exercises/reverse-string/approaches/using-the-standard-lib
-

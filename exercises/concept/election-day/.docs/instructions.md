@@ -22,7 +22,7 @@ struct ElectionResult {
 };
 ```
 
-As all members in the `struct` are public, you don't need to write a `constructor` to initialize an `ElectionResult` object. 
+As all members in the `struct` are public, you don't need to write a `constructor` to initialize an `ElectionResult` object.
 You can use an `initializer list` instead:
 
 ```cpp
@@ -53,12 +53,12 @@ vote_count(burr);
 // => 1804
 ```
 
-## 3. Vote counting and Presidency 
+## 3. Vote counting and Presidency
 
 The school handed in their votes and it is now time to check the results for the winner.
 
 Create a function `determine_result` that receives a reference to a final count and returns a reference to the `ElectionResult` of the new president.
-It should also change the name of the winner by prefixing it with "President". 
+It should also change the name of the winner by prefixing it with "President".
 The final count is given in the form of a `reference` to `std::vector<ElectionResult>`, a vector with `ElectionResults` of all the participating candidates.
 
 ```cpp

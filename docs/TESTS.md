@@ -74,8 +74,8 @@ $ make
 This example shows creating empty files for the implementation before
 running CMake.
 
-Simply type `make` in the build directory to compile the tests. This should 
-generate compile time errors. Once the errors are fixed, `make` will build and 
+Simply type `make` in the build directory to compile the tests. This should
+generate compile time errors. Once the errors are fixed, `make` will build and
 run the tests.
 
 ### Windows with Visual Studio
@@ -98,7 +98,7 @@ $ cmake -G Xcode ..
 ```
 
 This example generates the XCode files so that you can open the project in XCode.
-With the project opened in XCode you may need to add another target. 
+With the project opened in XCode you may need to add another target.
 For a new target go to File -> New -> Target from the menu, _OS X \ Application \ Command Line Tool_ -> Next _C++_ as the language and provide a target name. Run the code using the target.
 
 If your terminal throws an `Xcode x.x not supported` error, it is highly likely that Xcode is not installed on your machine or that your version is out of date.

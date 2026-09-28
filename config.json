@@ -1132,12 +1132,21 @@
         "difficulty": 3
       },
       {
+        "slug": "flower-field",
+        "name": "Flower Field",
+        "uuid": "d17d040b-b214-4079-ad3e-b518f776aeeb",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "minesweeper",
         "name": "Minesweeper",
         "uuid": "3753a72a-78b7-429f-b79a-f68d55a00387",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 5
+        "difficulty": 5,
+        "status": "deprecated"
       },
       {
         "slug": "sublist",
@@ -1278,6 +1287,14 @@
           "comparisons"
         ],
         "difficulty": 6
+      },
+      {
+        "slug": "twelve-days",
+        "name": "Twelve Days",
+        "uuid": "0daec3e8-a0d1-49e8-9de5-0ad73f9c3243",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
       }
     ],
     "foregone": [

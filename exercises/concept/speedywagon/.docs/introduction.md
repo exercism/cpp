@@ -36,7 +36,7 @@ Dereferencing a pointer is done using the _indirection operator_ (`*`) operator.
 ```cpp
 std::string opponent{"Solomon Lane"};
 // 'ethan' points to the address of the string opponent
-std::string* ethan{&opponent}; 
+std::string* ethan{&opponent};
 // Instead of ethan's, the opponent's name address is given to the passPort
 std::string passportName{*ethan};
 ```
@@ -54,7 +54,7 @@ int gateCode[] = {462, 753, 218, 611, 977};
 // 'ptr' points to the first element of 'gateCode'
 int* ptr{&gateCode[0]};
 // Accesses the third Stargate address through pointer arithmetic
-int dialedAddress{*(ptr + 2)}; 
+int dialedAddress{*(ptr + 2)};
 // Chevron encoded! Dialing Stargate address:
 openStarGate(dialedAddress);
 ```
@@ -63,6 +63,8 @@ openStarGate(dialedAddress);
 Pointer arithmetic in C++ can easily lead to __undefined behavior__ if not handled carefully.
 Undefined behavior can manifest in unexpected program outcomes, crashes, or even security vulnerabilities.
 One infamous example of the consequences of undefined behavior occurred in the [explosion of the Ariane 5 rocket][ariane-flight-v88] in 1996, where a software exception caused by the conversion of a 64-bit floating-point number to a 16-bit signed integer led to a catastrophic failure.
+
+[ariane-flight-v88]: https://en.wikipedia.org/wiki/Ariane_flight_V88
 ~~~~
 
 ## Accessing member variables

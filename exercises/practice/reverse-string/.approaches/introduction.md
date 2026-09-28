@@ -178,7 +178,7 @@ std::string reverse_string(std::string_view original)
 
 This approach builds the reversed string by using linear recursion.
 It creates an empty string and passes that as an "output parameter" to the recursive helper function.
-That helper function removes the last character from the input, appends it to the output, and calls itself recursively.  
+That helper function removes the last character from the input, appends it to the output, and calls itself recursively.
 Be careful: That is only safe if you know what you are doing.
 
 For more information check out the [Linear Recursion][approach-linear-recursion] approach.
@@ -248,4 +248,3 @@ For more information check out the [Over-Engineered][approach-over-engineered] a
 [approach-linear-recursion]: https://exercism.org/tracks/cpp/exercises/reverse-string/approaches/linear-recursion
 [approach-divide-and-conquer]: https://exercism.org/tracks/cpp/exercises/reverse-string/approaches/divide-and-conquer
 [approach-over-engineered]: https://exercism.org/tracks/cpp/exercises/reverse-string/approaches/over-engineered
-

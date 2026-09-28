@@ -1,9 +1,19 @@
-exclude: 'test/(catch.hpp|tests-main.cpp)'
+exclude: |
+    (?x)^(
+        (.*/)?test/(catch(_amalgamated)?.[ch]pp|tests-main.cpp)|
+        .github/CODEOWNERS
+    )$
 
 repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+    -   id: check-yaml
+    -   id: check-added-large-files
 -   repo: https://github.com/pre-commit/mirrors-clang-format
     rev: v18.1.2
     hooks:
     -   id: clang-format
         exclude_types: [json]
-

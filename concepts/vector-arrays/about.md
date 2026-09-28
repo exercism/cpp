@@ -12,10 +12,10 @@ Arrays also need a size.
 Look at these examples to see the two container types' initializations:
 
 ```cpp
-#include<array>
+#include <array>
 #include <string>
 
-// std::array variable_name<element_type, size> {list of elements}
+// std::array<element_type, size> variable_name {list of elements}
 std::array<std::string, 3> indie_rock {"yeah", "yeah", "yeah"};
 // indie_rock contains the elements "yeah" three times
 ```
@@ -24,10 +24,10 @@ Vectors usually need more space, as they allocate memory for further growth.
 You do not need to specify a size:
 
 ```cpp
-#include<vector>
+#include <vector>
 
-// std::vector variable_name<element_type> {list of elements}
-std::vector countdown<int> {3, 2, 1};
+// std::vector<element_type> variable_name {list of elements}
+std::vector<int> countdown {3, 2, 1};
 // my_vector contains the elements 3, 2 and 1
 ```
 
@@ -46,7 +46,7 @@ countdown.at(2);
 // => 1
 countdown[1] = 4;
 // countdown now contains 3, 4 and 1
-indie_rock.back() = "yeahs"; 
+indie_rock.back() = "yeahs";
 // indie_rock is now "yeah", "yeah", "yeahs"
 ```
 
@@ -55,12 +55,12 @@ indie_rock.back() = "yeahs";
 
 ### Vector modifiers
 
-As a `vector` is not fixed in size, it is possible to add or remove elements. 
+As a `vector` is not fixed in size, it is possible to add or remove elements.
 Two common functions for that purpose are `emplace_back` and `pop_back`.
 
 ```cpp
 std::vector<std::string> witches {"Holly", "Alyssa", "Shannen"};
-witches.pop_back(); 
+witches.pop_back();
 // Shannen is no longer with the witches
 witches.emplace_back("Rose");
 // Rose has joined the team

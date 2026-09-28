@@ -1,0 +1,22 @@
+{
+  "authors": [
+    "vaeng"
+  ],
+  "contributors": [
+    "BNAndras"
+  ],
+  "files": {
+    "solution": [
+      "flower_field.cpp",
+      "flower_field.h"
+    ],
+    "test": [
+      "flower_field_test.cpp"
+    ],
+    "example": [
+      ".meta/example.cpp",
+      ".meta/example.h"
+    ]
+  },
+  "blurb": "Mark all the flowers in a garden."
+}

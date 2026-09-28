@@ -91,4 +91,3 @@ Therefore it is mostly presented as an interesting idea.
 [wiki-divide-and-conquer]: https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm
 [wiki-quasilinear-time]: https://en.wikipedia.org/wiki/Time_complexity#Quasilinear_time
 [approach-linear-recursion]: https://exercism.org/tracks/cpp/exercises/reverse-string/approaches/linear-recursion
-

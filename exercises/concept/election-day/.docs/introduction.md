@@ -54,8 +54,8 @@ int& future_budget;
 
 ### `void`
 
-With the power of `references` you might not need to return a value from a function at all. 
-`void` is used as a return type in this scenario. 
+With the power of `references` you might not need to return a value from a function at all.
+`void` is used as a return type in this scenario.
 
 ```cpp
 void increase_power(int& level) {

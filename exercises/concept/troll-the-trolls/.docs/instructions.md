@@ -3,7 +3,7 @@
 Your friend Helma made a small online game that rapidly gained popularity.
 It is called _HellMath_.
 The small community attracted some trolls who make the game and the forums pretty unpleasant.
-Helma has asked you to work on a new permission system to separate troublemakers. 
+Helma has asked you to work on a new permission system to separate troublemakers.
 
 The forum supports three different actions:
 

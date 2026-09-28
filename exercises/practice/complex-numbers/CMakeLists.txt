@@ -17,11 +17,7 @@ else()
     set(exercise_cpp "")
 endif()
 
-# Use the common Catch library?
-if(EXERCISM_COMMON_CATCH)
-    # For Exercism track development only
-    add_executable(${exercise} ${file}_test.cpp ${exercise_cpp} ${file}.h $<TARGET_OBJECTS:catchlib>)
-elseif(EXERCISM_TEST_SUITE)
+if(EXERCISM_TEST_SUITE)
     # The Exercism test suite is being run, the Docker image already
     # includes a pre-built version of Catch.
     find_package(Catch2 REQUIRED)
@@ -32,7 +28,11 @@ elseif(EXERCISM_TEST_SUITE)
     target_compile_definitions(${exercise} PRIVATE EXERCISM_TEST_SUITE)
 else()
     # Build executable from sources and headers
-    add_executable(${exercise} ${file}_test.cpp ${exercise_cpp} ${file}.h test/tests-main.cpp)
+    # Other exercises have a third case where we use a local Catch2 copy from `test/`,
+    # which then only needs to be built once and not individually for each exercise.
+    # However, for complex-numbers we currently use a different version of Catch2 and
+    # therefore always build the version local to the exercise.
+    add_executable(${exercise} ${file}_test.cpp ${exercise_cpp} ${file}.h test/catch_amalgamated.cpp test/tests-main.cpp)
 endif()
 
 set_target_properties(${exercise} PROPERTIES

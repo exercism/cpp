@@ -11,7 +11,7 @@ During compilation, the line with the directive is replaced by the content of th
 Namespaces are kept as they are in the original file after includes.
 
 ## The Standard Library
- 
+
 The standard library offers many common functions, algorithms, and data structures.
 The standard library uses the `std` namespace.
 
