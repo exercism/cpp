@@ -49,6 +49,12 @@ TEST_CASE("Large abundant number is classified correctly",
             perfect_numbers::classify(33550335));
 }
 
+TEST_CASE("Perfect square abundant number is classified correctly",
+          "[05f15b93-849c-45e9-9c7d-1ea131ef7d10]") {
+    REQUIRE(perfect_numbers::classification::abundant ==
+            perfect_numbers::classify(196));
+}
+
 TEST_CASE("Smallest prime deficient number is classified correctly",
           "[e610fdc7-2b6e-43c3-a51c-b70fb37413ba]") {
     REQUIRE(perfect_numbers::classification::deficient ==
