@@ -7,6 +7,12 @@ using namespace std;
 namespace grade_school {
 
 void school::add(string const& name, int grade) {
+    if (students_.find(name) != students_.end()) {
+        return;
+    }
+
+    students_.insert(name);
+
     vector<string>& grade_roster = roster_[grade];
     auto it = lower_bound(grade_roster.begin(), grade_roster.end(), name);
     grade_roster.insert(it, name);

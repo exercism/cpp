@@ -1,6 +1,7 @@
 #pragma once
 
 #include <map>
+#include <set>
 #include <string>
 #include <vector>
 
@@ -18,6 +19,7 @@ class school {
 
    private:
     std::map<int, std::vector<std::string>> roster_;
+    std::set<std::string> students_;
 };
 
 }  // namespace grade_school
