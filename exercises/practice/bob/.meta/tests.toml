@@ -51,6 +51,9 @@ description = "shouting with special characters"
 [e6793c1c-43bd-4b8d-bc11-499aea73925f]
 description = "shouting with no exclamation mark"
 
+[3c954328-86fb-4c71-8961-e18d6a5e2517]
+description = "shouting a statement containing a question mark"
+
 [aa8097cc-c548-4951-8856-14a404dd236a]
 description = "statement containing question mark"
 
