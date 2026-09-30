@@ -97,7 +97,7 @@ student_ranking(student_scores, student_names)
 Although a "perfect" score of 100 is rare on an exam, it is interesting to know if at least one student has achieved it.
 
 Create the function `perfect_score()` with parameters `student_scores` and `student_names`.
-The lists are the same as in task 5.
+The lists are the same as in task 4.
 The function should `return` _the first_ `<name>` (as a string) of the student who scored 100 on the exam.
 
 If no 100 scores are found, an empty string `""` should be returned.
