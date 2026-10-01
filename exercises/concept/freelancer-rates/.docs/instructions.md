@@ -39,7 +39,7 @@ The returned value should always be of type `double`, not rounded in any way.
 ## 3. Calculate the monthly rate, given an hourly rate and a discount
 
 Implement a `monthly_rate` function to calculate the discounted monthly rate.
-It should have two parameters, an hourly rate and the discount in percent.
+It takes two parameters, an hourly rate and the discount in percent.
 
 ```cpp
 monthly_rate(77, 10.5)
