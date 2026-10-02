@@ -1255,6 +1255,19 @@
         "difficulty": 4
       },
       {
+        "slug": "book-store",
+        "name": "Book Store",
+        "uuid": "dc699152-b327-4493-a485-810a61af69df",
+        "practices": [],
+        "prerequisites": [
+          "loops",
+          "comparisons",
+          "if-statements",
+          "booleans"
+        ],
+        "difficulty": 8
+      },
+      {
         "slug": "affine-cipher",
         "name": "Affine Cipher",
         "uuid": "61374c16-0a99-4616-9244-a38919eafbe1",
