@@ -67,7 +67,7 @@ Using `std::make_shared()` promotes cleaner, safer, and more efficient code when
 ~~~~exercism/advanced
 ## Weak Pointers
 
-`std::weak_ptr` is a companion class to `std::shared_ptr` that provides a non-owning "weak" reference to an object managed by a shared pointer.
+`std::weak_ptr` is a companion class to `std::shared_ptr` that provides a non-owning reference to an object managed by a shared pointer.
 
 ```cpp
 // Creating a shared pointer
@@ -76,16 +76,20 @@ auto your_account = std::make_shared<std::string>("secret_subscription_password"
 auto your_flatmates_account = your_account;
 
 // Creating a weak pointer from the shared pointer
-auto your_flatmates_boyfriends_account = your_flatmates_account;
-// if your_account and your_flatmates_account are deleted, there is no more reference to the shared pointer.
-// your_flatmates_boyfriends_account will be a null pointer and cannot use the associated object any longer.
+std::weak_ptr<std::string> your_flatmates_boyfriends_account = your_flatmates_account;
+
+your_account.reset();
+your_flatmates_account.reset();
+
+// A weak pointer does not keep the object alive. `lock()` returns an empty
+// shared pointer once the managed object has been destroyed.
+if (auto account = your_flatmates_boyfriends_account.lock()) {
+    // Use *account while it is valid.
+}
 ```
 
-Weak pointers are useful in scenarios where cyclic references need to be broken to prevent memory leaks.
-`std::weak_ptr` was designed to address the issue of cyclic ownership, also known as circular references, that can occur when using `std::shared_ptr`.
-In a cyclic ownership scenario, two or more `std::shared_ptr` objects are referencing each other, creating a cycle where none of the objects can be deleted because they have strong references to each other, leading to memory leaks.
-`std::weak_ptr` provides a solution to this problem by allowing weak references to shared objects without contributing to their reference count.
-This means that it can observe and access the shared object but doesn't prevent it from being deleted.
+Weak pointers are useful for breaking cyclic references and preventing memory leaks. A cycle of `std::shared_ptr` objects keeps every object in the cycle alive because each one contributes to another object's reference count.
+`std::weak_ptr` observes a shared object without contributing to the shared ownership count, so it does not prevent the object from being destroyed. After the managed object has been destroyed, the `std::weak_ptr` remains an object but is expired rather than null. To access the object safely, call `lock()`, which returns a `std::shared_ptr` if the object still exists or an empty `std::shared_ptr` if it has expired.
 ~~~~
 
 ## Usage advice
