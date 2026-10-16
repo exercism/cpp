@@ -194,9 +194,9 @@ std::string reverse_string(std::string_view original)
         return std::string{original};
 
     // "divide and conquer" by reversing the two halfs of the string separately
-    auto half_size = size(str) / 2;
-    return reverse_string(original.substr(half_size) +
-           reverse_string(original.substr(0, half_size);
+    auto half_size = size(original) / 2;
+    return reverse_string(original.substr(half_size)) +
+           reverse_string(original.substr(0, half_size));
 }
 ```
 
