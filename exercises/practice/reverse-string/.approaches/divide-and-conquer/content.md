@@ -27,12 +27,12 @@ std::string reverse_string(std::string_view original)
         return std::string{original};
 
     // "divide and conquer" by reversing the two halfs of the string separately
-    auto half_size = size(str) / 2;
-    return reverse_string(original.substr(half_size) +
-           reverse_string(original.substr(0, half_size);
+    auto half_size = size(original) / 2;
+    return reverse_string(original.substr(half_size)) +
+           reverse_string(original.substr(0, half_size));
 }
 
-} // namespace reverse_string;
+} // namespace reverse_string
 ```
 
 ## The type of the parameter
@@ -75,7 +75,7 @@ We divide the problem into smaller problems, then we "conquer" (solve) them inde
 
 Calculating the `half_size` and splitting the string into two parts takes constant time (due to the `std::string_view`).
 Each recursive function call handles one half of the string.
-Combining the two reversed half at the end takes linear time.
+Combining the two reversed halves at the end takes linear time.
 Therefore the runtime complexity of this implementation is O(n log n), it is "linearithmic" (see the [Wikipedia][wiki-quasilinear-time]).
 
 Note that in contrast to the [Linear Recursion][approach-linear-recursion] this approach is safe.

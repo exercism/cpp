@@ -48,7 +48,7 @@ std::string reverse_string(const char *str)
     return reverse_string(std::string_view{str});
 }
 
-} // namespace reverse_string;
+} // namespace reverse_string
 ```
 
 ## The `[[nodiscard]]` attribute
@@ -60,10 +60,10 @@ That is helpful in situations where either the result contains some error code t
 
 ## Overloading functions
 
-In C++ it is possible (and quite common) to define multiple different functions with the same name but different parameter (different number of parameter or different parameter types.)
-When an overloaded function is called the compiler collects all candidate with that name, trims the set of candidate to the *viable* ones, and then selects the best fit for the function call (see [cppreference.com][cppref-overload-resolution]).
+In C++ it is possible (and quite common) to define multiple functions with the same name but different parameters (different number of parameters or different parameter types.)
+When an overloaded function is called the compiler collects all candidates with that name, trims the set of candidates to the *viable* ones, and then selects the best fit for the function call (see [cppreference.com][cppref-overload-resolution]).
 
-Overloading function is often done if these functions perform the same task *conceptually* but in a slightly different way, depending on the arguments.
+Overloading functions is often done if these functions perform the same task *conceptually* but in a slightly different way, depending on the arguments.
 
 ## Handling a `std::string` rvalue
 
@@ -80,7 +80,7 @@ In that case the program does not have to allocate memory for the reversed versi
 
 The first overload (that takes an rvalue reference) does not allocate any memory dynamically, we know for sure that no exceptions can occur.
 With `noexcept` that can be formally specified (see [cppreference.com][cppref-noexcept].)
-That can allows the compiler to generate better instructions when the function is called.
+That can allow the compiler to generate better instructions when the function is called.
 
 ## Calling `std::reverse`
 

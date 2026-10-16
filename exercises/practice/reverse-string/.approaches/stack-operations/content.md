@@ -38,7 +38,7 @@ std::string reverse_string(std::string_view original)
     return result;
 }
 
-} // namespace reverse_string;
+} // namespace reverse_string
 ```
 
 ## The type of the parameter
@@ -68,7 +68,7 @@ In programming and computer science "stack" is a term for a container that suppo
 - You can *pop* the top-most (i.e. most recently pushed) item off the stack.
 - You can *peek* at the top-most item (without popping it off the stack).
 
-`std::string_view` have the member functions `back` (see [cppreference.com][cppref-stringview-back]) and `remove_suffix` (see [cppreference.com][cppref-string-removesuffix]).
+`std::string_view` have the member functions `back` (see [cppreference.com][cppref-stringview-back]) and `remove_suffix` (see [cppreference.com][cppref-stringview-removesuffix]).
 `std::string` has the member function `push_back` (see [cppreference.com][cppref-string-pushback]).
 They let use use the two strings like stacks.
 
@@ -87,5 +87,5 @@ It is mostly presented as an interesting idea and unique way to think about the 
 [cppref-stringview]: https://en.cppreference.com/w/cpp/string/basic_string_view
 [wiki-stack]: https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
 [cppref-stringview-back]: https://en.cppreference.com/w/cpp/string/basic_string_view/back
-[cppref-string-removesuffix]: https://en.cppreference.com/w/cpp/string/basic_string_view/remove_suffix
+[cppref-stringview-removesuffix]: https://en.cppreference.com/w/cpp/string/basic_string_view/remove_suffix
 [cppref-string-pushback]: https://en.cppreference.com/w/cpp/string/basic_string/push_back

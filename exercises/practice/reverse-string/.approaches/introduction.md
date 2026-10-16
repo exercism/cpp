@@ -155,7 +155,7 @@ void recursive_helper(std::string_view input, std::string& output)
         return;
 
     // append the last character of the input to the output
-    output.append(input.back());
+    output.push_back(input.back());
     // and remove that last character from the input
     input.remove_suffix(1);
 
@@ -194,9 +194,9 @@ std::string reverse_string(std::string_view original)
         return std::string{original};
 
     // "divide and conquer" by reversing the two halfs of the string separately
-    auto half_size = size(str) / 2;
-    return reverse_string(original.substr(half_size) +
-           reverse_string(original.substr(0, half_size);
+    auto half_size = size(original) / 2;
+    return reverse_string(original.substr(half_size)) +
+           reverse_string(original.substr(0, half_size));
 }
 ```
 
