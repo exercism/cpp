@@ -44,7 +44,7 @@ std::string reverse_string(std::string str)
     return str;
 }
 
-} // namespace reverse_string;
+} // namespace reverse_string
 ```
 
 ## The type of the parameter

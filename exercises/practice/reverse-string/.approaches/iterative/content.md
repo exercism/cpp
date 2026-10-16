@@ -38,7 +38,7 @@ std::string reverse_string(const std::string& original)
     return result;
 }
 
-} // namespace reverse_string;
+} // namespace reverse_string
 ```
 
 ## The type of the parameter
@@ -47,7 +47,7 @@ The function takes its argument "by reference to const" (`const std::string&`).
 That avoids creating an unnecessary copy which can be comparatively expensive for a `std::string`.
 This is a best practice and widely recommended if a copy is expensive and the function does not need a "working copy" that it can modify (see the [C++ Core Guidelines][cgl-by-value-by-const-ref].)
 
-Alternatively you could use a `std::string_view`.
+Alternatively we could use a `std::string_view`.
 That type was added to C++17, it is an immutable view of a string, it is cheap to construct and to copy (see [cppreference.com][cppref-stringview].)
 
 ## Constructing an empty `std::string`
@@ -116,7 +116,7 @@ for (std::size_t i = 0, rindex = size(original) - 1; i < size(original); ++i, --
 This is a valid approach, it produces a correct result and is reasonably efficient.
 
 But most experts recommend not doing things "manually" if there are better alternatives.
-You could consider using the `std::string` class to construct the reversed string directly.
+We could consider using the `std::string` class to construct the reversed string directly.
 That would shorten the code, would be concise, easy to read, idiomatic, and very efficient.
 Check out the [Direct Construction][approach-direct-construction] approach.
 

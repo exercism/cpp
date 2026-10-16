@@ -43,7 +43,7 @@ std::string reverse_string(std::string_view original)
     return result;
 }
 
-} // namespace reverse_string;
+} // namespace reverse_string
 ```
 
 ## The types of the parameters

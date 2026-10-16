@@ -27,7 +27,7 @@ std::string reverse_string(std::string_view original)
     return std::string(rbegin(original), rend(original));
 }
 
-} // namespace reverse_string;
+} // namespace reverse_string
 ```
 
 ## The type of the parameter
