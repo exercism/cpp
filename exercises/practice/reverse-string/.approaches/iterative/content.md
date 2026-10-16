@@ -31,7 +31,7 @@ std::string reverse_string(const std::string& original)
         std::size_t rindex = size(original) - i - 1;
 
         // (4) append each character (starting from the end)
-        result.append(original[rindex]);
+        result.push_back(original[rindex]);
     }
 
     // result now contains a reversed version of the string
@@ -84,8 +84,8 @@ for (auto rit = rbegin(original); rit != rend(original); ++rit)
 
 ## Appending to the result
 
-The solution above uses the member function `append` (see [cppreference.com][cppref-string-append].)
-There are other equivalent member function like `push_back()` (see [cppreference.com][cppref-string-pushback]) or the operator `+=` (see [cppreference.com][cppref-string-operator-plus-equal].)
+The solution above uses the member function `push_back` (see [cppreference.com][cppref-string-pushback].)
+Alternatives include the operator `+=` (see [cppreference.com][cppref-string-operator-plus-equal]) or the member function `append()` (with the count of `1` as an additional argument, see [cppreference.com][cppref-string-append].)
 Either one is fine, chosing one is a matter of personal preferences.
 
 ## Variation: With assignments

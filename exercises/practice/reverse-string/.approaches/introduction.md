@@ -155,7 +155,7 @@ void recursive_helper(std::string_view input, std::string& output)
         return;
 
     // append the last character of the input to the output
-    output.append(input.back());
+    output.push_back(input.back());
     // and remove that last character from the input
     input.remove_suffix(1);
 
