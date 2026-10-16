@@ -29,7 +29,7 @@ std::string reverse_string(const std::string& original)
         std::size_t rindex = size(original) - i - 1;
 
         // append each character (starting with the last one)
-        result.append(original[rindex]);
+        result.push_back(original[rindex]);
     }
 
     // result now contains a reversed version of the string
