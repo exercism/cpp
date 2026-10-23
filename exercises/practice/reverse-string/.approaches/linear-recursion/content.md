@@ -28,7 +28,7 @@ void recursive_helper(std::string_view input, std::string& output)
         return;
 
     // (4) append the last character of the input to the output
-    output.append(input.back());
+    output.push_back(input.back());
     // and "remove" the last character from the input
     input.remove_suffix(1);
 
@@ -43,7 +43,7 @@ std::string reverse_string(std::string_view original)
     return result;
 }
 
-} // namespace reverse_string;
+} // namespace reverse_string
 ```
 
 ## The types of the parameters
@@ -66,8 +66,8 @@ In that case nothing needs to be done.
 
 `std::string_view` has the member function `back` that returns the last character (see [cppreference.com][cppref-stringview-back]).
 
-`std::string` has the member function `append` that appends something to the string (see [cppreference.com][cppref-string-append]).
-There are equivalent member functions like `push_back` (see [cppreference.com][cppref-string-pushback]) or the operator `+=` (see [cppreference.com][cppref-string-operator-plus-assign]).
+`std::string` has the member function `push_back` that appends a character to the string (see [cppreference.com][cppref-string-pushback]).
+There are equivalent member functions like `append` (with the count as an additional argument, see [cppreference.com][cppref-string-append]) or the operator `+=` (see [cppreference.com][cppref-string-operator-plus-assign]).
 In this case they do exactly the same.
 
 `std::string_view` has the member function `remove_suffix` that *conceptually* removes some characteas from the end of the `std::string_view`.
