@@ -14,7 +14,7 @@ Discounts are modeled as fractional numbers representing percentages, for exampl
 
 ## 1. Calculate the daily rate given an hourly rate
 
-Implement a function called `daily_rate` to calculate the daily rate given an hourly rate as a parameter.
+Implement a function called `daily_rate` to calculate the daily rate given an hourly rate as an argument.
 The contract defines that a day has 8 billable hours.
 
 ```cpp
@@ -27,7 +27,7 @@ The returned daily rate should be of type `double`.
 ## 2. Calculate a discounted price
 
 Implement a function `apply_discount` to calculate the price after a discount.
-It should accept two parameters: the original price and the discount rate in percent.
+It should accept two arguments: the original price and the discount rate in percent.
 
 ```cpp
 apply_discount(150, 10)
