@@ -591,10 +591,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 7,
-        "topics": [
-          "strings",
-          "text_formatting"
-        ]
+        "status": "deprecated"
       },
       {
         "slug": "atbash-cipher",
