@@ -1,0 +1,13 @@
+std::string most_common_word(const std::string& text) {
+    std::map<std::string, int> counts;
+    std::string word, best;
+    std::istringstream words(text);
+    while (words >> word) {
+        for (char& c : word) c = std::tolower(c);
+        counts[word]++;
+        if (counts[word] > counts[best]) {
+            best = word;
+        }
+    }
+    return std::format("\"{}\" appears {} times", best, counts[best]);
+}
