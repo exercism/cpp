@@ -1,0 +1,17 @@
+{
+  "authors": [],
+  "files": {
+    "solution": [
+      "connect.cpp",
+      "connect.h"
+    ],
+    "test": [
+      "connect_test.cpp"
+    ],
+    "example": [
+      ".meta/example.cpp",
+      ".meta/example.h"
+    ]
+  },
+  "blurb": "Compute the result for a game of Hex / Polygon."
+}
