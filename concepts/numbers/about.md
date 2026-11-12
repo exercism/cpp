@@ -8,7 +8,7 @@ The following example shows the declaration and initialization of four different
 
 ```cpp
 int m_morales{9241};              // base 10: 0-9
-int a_apaec{0x24CD};              // base 16: 0-9 and A-F
+int a_apaec{0x2419};              // base 16: 0-9 and A-F
 int m_gargan{0b10010000011001};   // base  2: 0-1
 int b_reilly{022031};             // base  8: 0-7
                                   // Leading with a 0 not the letter o.
