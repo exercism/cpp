@@ -88,3 +88,21 @@ jobs:
         cmake .
         cmake --build . -- test_hello-world
         cmake --build .
+
+  tests:
+    name: Tests
+    needs: [linux-min, linux-latest, windows, mac]
+    if: always()
+    runs-on: ubuntu-26.04
+    steps:
+    - name: Check that every configuration passed
+      env:
+        LINUX_MIN_RESULT: ${{ needs.linux-min.result }}
+        LINUX_LATEST_RESULT: ${{ needs.linux-latest.result }}
+        WINDOWS_RESULT: ${{ needs.windows.result }}
+        MAC_RESULT: ${{ needs.mac.result }}
+      run: |
+        if [[ "$LINUX_MIN_RESULT" != "success" || "$LINUX_LATEST_RESULT" != "success" || "$WINDOWS_RESULT" != "success" || "$MAC_RESULT" != "success" ]]; then
+          echo "The exercise tests failed on at least one configuration."
+          exit 1
+        fi
