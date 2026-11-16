@@ -591,10 +591,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 7,
-        "topics": [
-          "strings",
-          "text_formatting"
-        ]
+        "status": "deprecated"
       },
       {
         "slug": "atbash-cipher",
@@ -1294,6 +1291,22 @@
         "uuid": "0daec3e8-a0d1-49e8-9de5-0ad73f9c3243",
         "practices": [],
         "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "bottle-song",
+        "name": "Bottle Song",
+        "uuid": "ed066c62-3a6a-480b-b72a-d1ae33369cd7",
+        "practices": [
+          "switch",
+          "loops",
+          "if-statements"
+        ],
+        "prerequisites": [
+          "strings",
+          "numbers",
+          "loops"
+        ],
         "difficulty": 3
       }
     ],

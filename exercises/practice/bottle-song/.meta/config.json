@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "marcelweikum"
+  ],
+  "files": {
+    "solution": [
+      "bottle_song.cpp",
+      "bottle_song.h"
+    ],
+    "test": [
+      "bottle_song_test.cpp"
+    ],
+    "example": [
+      ".meta/example.cpp",
+      ".meta/example.h"
+    ]
+  },
+  "blurb": "Produce the lyrics to the popular children's repetitive song: Ten Green Bottles.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Ten_Green_Bottles"
+}
