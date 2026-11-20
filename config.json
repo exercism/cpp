@@ -1230,7 +1230,8 @@
         "uuid": "0a029212-bc55-4559-b3c6-2c26bec0d560",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 6
+        "difficulty": 6,
+        "status": "deprecated"
       },
       {
         "slug": "pig-latin",
