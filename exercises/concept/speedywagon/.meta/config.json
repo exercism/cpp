@@ -16,5 +16,6 @@
     ]
   },
   "forked_from": [],
+  "icon": "factory-sensors",
   "blurb": "Learn about pointers by writing wrappers for an old library."
 }

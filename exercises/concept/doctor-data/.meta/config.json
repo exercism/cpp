@@ -15,5 +15,6 @@
       ".meta/exemplar.cpp"
     ]
   },
+  "icon": "file-sniffer",
   "blurb": "Learn about header files by recovering data."
 }
