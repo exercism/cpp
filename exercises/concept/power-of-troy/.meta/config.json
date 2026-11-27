@@ -15,5 +15,6 @@
       ".meta/exemplar.h"
     ]
   },
+  "icon": "wizards-and-warriors",
   "blurb": "Learn about smart pointers by using magic and artifacts in the world of Troy."
 }
